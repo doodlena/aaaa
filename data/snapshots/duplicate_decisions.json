@@ -892,6 +892,17 @@
  },
  {
   "record": [
+   "hrsa-health-centers",
+   "073755ab2247f9e7"
+  ],
+  "decision": "merged",
+  "target": [
+   "pwc-cmn-support-services",
+   "07a1d794-5e11-417b-947e-1de234e1fb3d"
+  ]
+ },
+ {
+  "record": [
    "cafb-get-help",
    "16840-MOMK-01"
   ],
@@ -1420,6 +1431,17 @@
  },
  {
   "record": [
+   "ai-manual-files",
+   "846acc623b5dc495"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-support-services",
+   "va08svc-arlington-dhs-economic-independence"
+  ]
+ },
+ {
+  "record": [
    "samhsa-treatment",
    "c21961797758ec76"
   ],
@@ -1504,6 +1526,281 @@
   "target": [
    "va08-gap-research",
    "va08gap-ccda-counseling-st-charles-borromeo"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-alexandria-health-dept-mark-center"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-support-services",
+   "va08svc-alexandria-health-department-del-pepper"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-alexandria-health-dept-mark-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-alexandria-dchs-behavioral-health"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-alexandria-health-dept-mark-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "8a6388d253e6f055"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-alexandria-health-dept-mark-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-web-research",
+   "va08-alive-dchs-mark-center"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-alexandria-health-dept-mark-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-alexandria-dchs-benefits-customer-service"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-neighborhood-health-casey"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-neighborhood-health-casey"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-arlington-public-health-sequoia"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "587091e7af43e0bd"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-arlington-public-health-sequoia"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-neighborhood-health-sequoia-1"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-arlington-public-health-sequoia"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-arlington-wic"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-arlington-public-health-sequoia"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-support-services",
+   "va08svc-arlington-public-health-clinics"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-loudoun-health-dept-leesburg"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nova-support-services",
+   "nova-svc-loudoun-health-leesburg-clinic"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-loudoun-health-dept-leesburg"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "9747cf17aa61b9a0"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-loudoun-health-dept-leesburg"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "058e97776fa5560e"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-fairfax-annandale-phc"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-annandale-public-health-center-wic"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-fairfax-annandale-phc"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-dfs-annandale"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-fairfax-annandale-phc"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-vcw-annandale-center"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-fairfax-annandale-phc"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-gap-research",
+   "va08gap-vita-vcw-annandale"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-fairfax-mount-vernon-phc"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-mount-vernon-public-health-center"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-fairfax-mount-vernon-phc"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-dfs-hyland"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-fairfax-mount-vernon-phc"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-vcw-alexandria-center"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-fairfax-mount-vernon-phc"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-gap-research",
+   "va08gap-vita-hyland-government-center"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-fairfax-herndon-reston-phc"
+  ],
+  "decision": "merged",
+  "target": [
+   "nova-support-services",
+   "nova-svc-fairfax-herndon-reston-phc"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-fairfax-herndon-reston-phc"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nova-support-services",
+   "nova-svc-fairfax-csb-reston-northwest"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-healthworks-leesburg"
+  ],
+  "decision": "merged",
+  "target": [
+   "hrsa-health-centers",
+   "c696d27172a4fa71"
+  ]
+ },
+ {
+  "record": [
+   "nova-reproductive-health",
+   "nova-rh-healthworks-sully-herndon"
+  ],
+  "decision": "merged",
+  "target": [
+   "hrsa-health-centers",
+   "6de52720913c87de"
   ]
  }
 ]

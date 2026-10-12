@@ -1004,19 +1004,6 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
-    },
-    {
-     "frequency": null,
-     "schedules": [],
-     "food_types": [
-      "pantry_staples"
-     ],
-     "description": "Blessings Box with nonperishable food, available any time of day",
-     "eligibility": [],
-     "service_type": "walk_up",
-     "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
     }
    ],
    "languages": [],

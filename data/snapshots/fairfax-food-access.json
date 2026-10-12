@@ -3626,23 +3626,6 @@
     {
      "frequency": null,
      "schedules": [],
-     "food_types": [
-      "baby_formula",
-      "infant_food",
-      "general_groceries",
-      "pantry_staples",
-      "other_special_diet"
-     ],
-     "description": "Home delivery of groceries",
-     "eligibility": [],
-     "service_type": "pantry_pickup",
-     "offering_status": "unconfirmed",
-     "appointment_required": "required",
-     "registration_required": "unknown"
-    },
-    {
-     "frequency": null,
-     "schedules": [],
      "food_types": [],
      "description": null,
      "eligibility": [],
@@ -3729,19 +3712,6 @@
    "address1": "12011 GOVERNMENT CENTER PKWY",
    "address2": null,
    "services": [
-    {
-     "frequency": null,
-     "schedules": [],
-     "food_types": [
-      "prepared_meals"
-     ],
-     "description": "Home Delivered Meals are provided to homebound adults, ages 60+ or adults with a disability, who are unable to prepare their own meals and have no able-bodied caregivers in the home.",
-     "eligibility": [],
-     "service_type": "pantry_pickup",
-     "offering_status": "unconfirmed",
-     "appointment_required": "required",
-     "registration_required": "unknown"
-    },
     {
      "frequency": null,
      "schedules": [],

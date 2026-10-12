@@ -173,13 +173,63 @@ def resource_calendar(location_id: int, db: Session = Depends(get_db)):
                     headers={"Content-Disposition": f'attachment; filename="lantern-{loc.id}.ics"'})
 
 
+enrich_limiter = RateLimiter(15, 3600)
+
+
+def _missing_fields(d: dict) -> list[str]:
+    m = []
+    el = d.get("eligibility") or {}
+    if any(v == "unknown" for v in el.values()):
+        m += ["WHAT_TO_BRING", "ID_REQUIRED", "ELIGIBILITY"]
+    if not d.get("has_distribution_schedule") and not (d.get("schedules") or {}).get("operating_hours"):
+        m += ["HOURS", "DATES"]
+    elif not d.get("upcoming_windows"):
+        m.append("DATES")
+    if not d.get("service_types") or not d.get("food_types") and any(s in d.get("service_types", []) for s in ("pantry_pickup", "walk_up")):
+        m.append("SERVICES")
+    if not d.get("languages"):
+        m.append("LANGUAGES")
+    if not d.get("phone"):
+        m.append("PHONE")
+    return list(dict.fromkeys(m)) or ["WHAT_TO_BRING"]
+
+
+@router.get("/resources/{location_id}/ai-info")
+def resource_ai_info(location_id: int, db: Session = Depends(get_db)):
+    """Cached AI-found info for a listing (free to read). 'status' is 'ready' or 'none'."""
+    load_location(db, location_id)
+    hit = ai.enrich_cached(location_id)
+    return {"status": "ready", **hit} if hit else {"status": "none", "available": ai.enabled()}
+
+
+@router.post("/resources/{location_id}/ai-info")
+def resource_ai_info_generate(location_id: int, request: Request, db: Session = Depends(get_db)):
+    """Look up missing info for this listing with AI web search (cached 30 days; rate-limited; budget-capped)."""
+    if not ai.enabled():
+        raise HTTPException(404, "AI is not enabled")
+    loc = load_location(db, location_id)
+    hit = ai.enrich_cached(location_id)
+    if hit:
+        return {"status": "ready", **hit}
+    if not enrich_limiter.allow(f"enrich:{request.client.host if request.client else '-'}"):
+        raise HTTPException(429, "Too many AI lookups right now. Please try again later.")
+    d = detail_with_live(db, loc, None)
+    info = {"name": loc.name, "organization": loc.organization.name, "address": ", ".join(x for x in (loc.address1, loc.city, loc.state, loc.zip) if x),
+            "website": loc.website or loc.organization.website, "phone": loc.phone}
+    try:
+        out = ai.enrich_listing(location_id, info, _missing_fields(d))
+    except ai.AIUnavailable as e:
+        raise HTTPException(503, str(e)) from None
+    return {"status": "ready", **out}
+
+
 @router.get("/meta/features")
 def meta_features():
     s = get_settings()
     on = ai.enabled()
     return {"app_name": s.app_name, "demo_mode": s.show_synthetic,
             "oauth": {"enabled": oauth.enabled(), "provider": oauth.provider_name()},
-            "ai": {"search": on, "announcement_drafts": on, "structure_suggestions": on,
+            "ai": {"search": on, "listing_lookup": on, "announcement_drafts": on, "structure_suggestions": on,
                    "translation": on and s.translation_provider == "claude", "model": ai.model() if on else None}}
 
 

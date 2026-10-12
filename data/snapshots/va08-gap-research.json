@@ -1276,62 +1276,6 @@
    "wheelchair_accessible": "unknown"
   },
   {
-   "lat": 38.885788,
-   "lon": -77.1716,
-   "zip": "22046",
-   "city": "Falls Church",
-   "email": "tbrowand@fallschurchva.gov",
-   "notes": "Social activities, recreation programs and trips for older adults age 50+ (bingo, bridge, canasta, art open studios, military history forum, foreign-language conversation groups). NO congregate meal program is listed: the 'Lunch Bunch' meets the second Friday of every month at Noon and participants pay for their own lunch at local restaurants. Front desk 703-248-5027 (TTY 711); Senior Center Coordinator 703-248-5020. Membership year shown on page: Sept 1, 2025 to Aug 31, 2026.",
-   "phone": "703-248-5027",
-   "state": "VA",
-   "website": "https://www.fallschurchva.gov/611/Senior-Center",
-   "address1": "223 Little Falls St.",
-   "address2": null,
-   "services": [
-    {
-     "frequency": null,
-     "schedules": [],
-     "food_types": [],
-     "description": "Senior center social, educational and recreation programs for adults 50+ (no meal program listed).",
-     "eligibility": [],
-     "service_type": "other",
-     "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
-    }
-   ],
-   "languages": [],
-   "schedules": [],
-   "source_url": "https://www.fallschurchva.gov/611/Senior-Center",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Programs for older adults age 50+.",
-     "requirement_type": "age"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Must join the Senior Center as a member; free for City of Falls Church residents, $12 per person for non-City residents.",
-     "requirement_type": "registration"
-    }
-   ],
-   "external_id": "va08gap-falls-church-city-senior-center",
-   "location_name": "Falls Church Senior Center",
-   "parking_notes": null,
-   "transit_notes": null,
-   "geocode_source": "census_geocoder",
-   "raw_hours_text": null,
-   "jurisdiction_id": "falls-church-city",
-   "operating_status": "unknown",
-   "registration_url": null,
-   "organization_name": "City of Falls Church Recreation & Parks",
-   "organization_website": "https://www.fallschurchva.gov/",
-   "raw_eligibility_text": "To participate in any Senior Center programs, you must officially join the Senior Center as a member. Please call the Front Desk at 703-248-5027 (TTY 711) to register. Free for City of Falls Church residents and $12 per person for non-City residents",
-   "wheelchair_accessible": "unknown"
-  },
-  {
    "lat": 38.877794,
    "lon": -77.206174,
    "zip": "22043",

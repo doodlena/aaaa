@@ -1,0 +1,16 @@
+id: nova-reproductive-health
+name: "Northern Virginia sexual & reproductive health (family planning, STI testing, prenatal care) — AI-assisted research (cited)"
+owner: Lantern project research (each record cites its own source page)
+url: file://data/sources/nova_reproductive_health.json
+adapter: structured_json
+retrieval: file
+formats: [json]
+jurisdictions: [arlington-county, alexandria-city, falls-church-city, fairfax-county, fairfax-city, loudoun-county, prince-william-county, manassas-city, manassas-park-city]
+enabled: true
+store_raw: true
+publication: permitted_with_attribution
+verified_on: "2026-10-12"
+known_limitations:
+  - "AI-assisted research of pages fetched on the retrieval date; each record cites source_url. Not verified."
+  - "Blocked sites were skipped, not circumvented; see the matching research log in docs/pilot_research/."
+refresh: null

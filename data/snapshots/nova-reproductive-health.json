@@ -1,0 +1,3602 @@
+{
+ "_notice": "Snapshot of normalized records imported from source 'nova-reproductive-health' (Northern Virginia sexual & reproductive health (family planning, STI testing, prenatal care) — AI-assisted research (cited)). Unverified candidates; see config/sources/ for attribution and terms.",
+ "source_id": "nova-reproductive-health",
+ "records": [
+  {
+   "lat": 38.830441,
+   "lon": -77.116305,
+   "zip": "22311",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Listed as a Title X family planning clinic in the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov; record https://api.reproductivehealthservices.gov/v1/clinics/65d1c86a-a563-4c9f-a003-c78ae34b0d6f). The OPA record lists birth control (patch, pill, ring, shot, LAM, female and male condoms, emergency contraception, fertility awareness methods, implants, copper and hormonal IUDs, spermicide), pregnancy testing and counseling, achieving pregnancy and basic infertility services, breast/cervical cancer screening, HPV vaccine, STD testing for chlamydia, gonorrhea, syphilis, hepatitis B/C, and HIV testing. City page: free condoms, lubricant and emergency contraceptive available for pick-up at the main office ('Call ahead to ensure the clinic is open'). What to bring may include insurance cards, picture ID, proof of income and proof of address ('Ask what you should bring when you call').",
+   "phone": "703-746-4888",
+   "state": "VA",
+   "website": null,
+   "address1": "4850 Mark Center Drive",
+   "address2": "Fourth Floor",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Sexual Health Care & Family Planning: family planning education and counseling; birth control (pill, IUD, implant, NuvaRing, shot); PrEP (pill only); breast cancer and cervical cancer screenings; STI treatment and DoxyPEP. Same-day appointments available on request for STI testing (no symptoms), pregnancy testing, and emergency contraceptive (Plan B / 'Morning After' Pill).",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Pregnancy and postpartum support: the sexual and reproductive health clinic 'provides some services for postpartum care as well as pregnancy testing and family planning.' Separate babycarE home-visiting program for Medicaid-eligible City of Alexandria residents (call 703.746.4988).",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/health-department/program/clinical-services",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Sliding fee scale. You will not be turned away based on your ability to pay.",
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Call 703.746.4888 for appointments; ask about same-day appointments for STI testing, pregnancy testing and emergency contraceptive.",
+     "requirement_type": "appointment"
+    }
+   ],
+   "external_id": "nova-rh-alexandria-health-dept-mark-center",
+   "location_name": "Alexandria Health Department Main Office - Del Pepper Community Resource Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '4850 MARK CENTER DR, ALEXANDRIA, VA, 22311'",
+   "raw_hours_text": "Hours: Schedules vary. Call 703.746.4888 for appointments.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Alexandria Health Department",
+   "organization_website": "https://www.alexandriava.gov/health-department/program/clinical-services",
+   "raw_eligibility_text": "AHD welcomes people of all gender identities and sexual orientations. Cost : Sliding fee scale. You will not be turned away based on your ability to pay.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.82138,
+   "lon": -77.103737,
+   "zip": "22304",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Services from https://neighborhoodhealthva.org/service/obstetrics-gynecology/ and https://neighborhoodhealthva.org/service/prenatal-care/ (prenatal page: 'Spanish-speaking providers and staff work at all three of our prenatal clinics, and free interpretation is available in other languages'; 'Do I need a referral to get prenatal care? No.'; what to bring: photo ID, insurance or Medicaid card, medication list, date of last period). Listed as a Title X family planning clinic in the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov; record https://api.reproductivehealthservices.gov/v1/clinics/142d504e-4e22-4f4d-86e1-e288fe55a58e). (OPA lists only 'Birth Control Shot' for this site.) Site services per locations page: Family & Internal Medicine, Pediatrics, Women's Health, Prenatal and Postpartum Care, Behavioral Health, HIV Care, Pharmacy Services.",
+   "phone": "703-535-5568",
+   "state": "VA",
+   "website": null,
+   "address1": "1200 North Howard Street",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:45",
+       "closes": "19:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:45",
+       "closes": "19:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "19:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "12:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Prenatal and postpartum care: regular provider visits; blood pressure, weight and health checks; on-site lab work; screening for gestational diabetes, anemia and high blood pressure; referrals for ultrasounds and specialist care; nutrition/medication advice; depression and anxiety screening; help applying for Medicaid at no cost; breastfeeding support; postpartum visits. Deliveries with partners Inova Alexandria Hospital and Virginia Hospital Center.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:45",
+       "closes": "19:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:45",
+       "closes": "19:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "19:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "12:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Obstetrics & Gynecology (organization-wide list): annual check ups; Pap smears; prenatal care; mammogram referrals; HPV vaccination; family planning counseling; oral contraceptive pills; IUD placement and removal; Nexplanon insertion and removal; Depo-Provera; endometrial biopsies; colposcopies. Site lists 'Women's Health'. HIV Care listed at this site.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "schedules": [],
+   "source_url": "https://neighborhoodhealthva.org/our-locations/",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Do I need a referral to get prenatal care? No. You can call 703-535-5568 and book directly, whether or not you have been a Neighborhood Health patient before.",
+     "requirement_type": "referral"
+    }
+   ],
+   "external_id": "nova-rh-neighborhood-health-casey",
+   "location_name": "Neighborhood Health @ Casey Health Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '1200 N HOWARD ST, ALEXANDRIA, VA, 22304'",
+   "raw_hours_text": "Monday & Tuesday: 7:45 am – 7 pm Wednesday: 8 am – 7 pm Thursday & Friday: 8 am – 5 pm Saturday: 8 am – 12 pm",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Neighborhood Health",
+   "organization_website": "https://neighborhoodhealthva.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.873049,
+   "lon": -77.082689,
+   "zip": "22204",
+   "city": "Arlington",
+   "email": null,
+   "notes": "Title X family planning clinic per the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov). OPA facility info: 'ART Bus accessible, free parking in garage, language interpretation services'; special access: 'Extended or Weekend Hours', 'Teen Clinic/Hours Available'. OPA lists hours as unknown. arlingtonva.us and health.arlingtonva.us returned HTTP 403, so nothing was confirmed on the county site. Census matched '2100 S WASHINGTON BLVD' (within about 60 m of OPA's coordinates).",
+   "phone": "703-228-1200",
+   "state": "VA",
+   "website": "https://health.arlingtonva.us/public-health/health-clinics-services/family-planning/",
+   "address1": "2100 Washington Blvd",
+   "address2": "2 FL Sequoia Plaza",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Per OPA Title X listing: birth control (shot, pill, patch, ring, male and female condoms, hormonal implants, emergency contraception, fertility awareness-based methods, copper and hormonal IUDs, breastfeeding/LAM); cervical and breast cancer screening, HPV vaccine; HIV testing; pregnancy testing and counseling, achieving pregnancy services, basic infertility services; STD testing/treatment/vaccines (chlamydia, syphilis, gonorrhea, hepatitis B screening and vaccine, hepatitis C testing); preventive screenings.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://api.reproductivehealthservices.gov/v1/clinics/c44d68d4-bf8c-4315-a3c4-ddb3568476ff",
+   "eligibility": [],
+   "external_id": "nova-rh-arlington-public-health-sequoia",
+   "location_name": "Arlington County Public Health/Community Health Services (Sequoia Plaza)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '2100 S WASHINGTON BLVD, ARLINGTON, VA, 22204'",
+   "raw_hours_text": null,
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington County Public Health Division",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 39.114409,
+   "lon": -77.541622,
+   "zip": "20176",
+   "city": "Leesburg",
+   "email": null,
+   "notes": "Pages: https://www.loudoun.gov/1551/Family-Planning-Maternity-Care, https://www.loudoun.gov/6126/Maternity-Care, https://www.loudoun.gov/1576/Sexually-Transmitted-Infections, https://www.loudoun.gov/1539/AIDS-HIV. Listed as a Title X family planning clinic in the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov; record https://api.reproductivehealthservices.gov/v1/clinics/e523cae5-4f46-4b6b-a0fb-6ff818b30ee9). OPA lists Tuesday hours as 13:00-17:00 (county page: M-F 8:30-5, 'Hours vary by service') and special access 'Same Day Appointment/Walk-Ins Accepted', 'Teen Clinic/Hours Available'. Prenatal care itself is by referral (incl. Inova Cares for Women).",
+   "phone": "703-777-0236",
+   "state": "VA",
+   "website": null,
+   "address1": "102 Heritage Way NE",
+   "address2": "Suite 100",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Family planning: wellness exams with Pap tests, breast exams, STI screening, and testicular exams; pregnancy tests; pregnancy prevention and birth control options: abstinence education, pills, rings, IUDs, injections, and condoms. By appointment only.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "STI services: confidential STI testing and diagnosis (gonorrhea, chlamydia, HIV, syphilis, hepatitis B, hepatitis C, herpes, and Mpox, as indicated); education on STI prevention and risk reduction; treatment for most STIs; free condoms. HIV: confidential HIV testing and counseling; referral to HIV/AIDS care incl. Inova Juniper Program. By appointment only.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Maternity care: free or reduced cost maternity care services to low income, uninsured women who qualify: pregnancy tests; education and counseling; referrals to local medical providers for care, including Inova Cares for Women for prenatal care for those meeting eligibility requirements. Appointments are preferred.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.loudoun.gov/1258/Health-Clinics",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "All family planning services are by appointment only. All STI services are by appointment only. Call 703-777-0236.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Services offered may have age or income restrictions. Fees will be based on a sliding scale according to income. Maternity care is for low income, uninsured women who qualify.",
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Services offered may have age or income restrictions.",
+     "requirement_type": "age"
+    }
+   ],
+   "external_id": "nova-rh-loudoun-health-dept-leesburg",
+   "location_name": "Loudoun County Health Department - Leesburg Clinic (Shenandoah Building)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '102 HERITAGE WAY NE, LEESBURG, VA, 20176'",
+   "raw_hours_text": "Medical Clinic (Suite 100) Phone: 703-777-0236 Hours: M-F, 8:30 a.m. - 5:00 p.m.* *Hours vary by service.",
+   "jurisdiction_id": "loudoun-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Loudoun County Health Department",
+   "organization_website": "https://www.loudoun.gov/health",
+   "raw_eligibility_text": "Appointments are required for services at the Health Department clinics. Services may have age or income restrictions. The Health Department offers an income eligibility screening to determine a sliding scale discount for services. Laboratory costs, immunizations and medications are not eligible for discount.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.832288,
+   "lon": -77.208035,
+   "zip": "22003",
+   "city": "Annandale",
+   "email": "Annandale.Office@fairfaxcounty.gov",
+   "notes": "TTY 711. STI program details from https://www.fairfaxcounty.gov/health/sexually-transmitted-infections. STI Treatment/Consult (doctor or nurse practitioner onsite) per STI page: Monday 8 a.m.-12 p.m., 1 p.m.-4 p.m. The STI page's treatment table is read column-by-weekday from flattened HTML; confirm. This site is not listed as a Title X clinic in the OPA locator.",
+   "phone": "703-246-7100",
+   "state": "VA",
+   "website": null,
+   "address1": "7611 Little River Turnpike",
+   "address2": "Suite 400E (East Wing)",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "STI services at all four public health centers: sexual health education and counseling; free condoms; testing for STIs such as HIV, syphilis, chlamydia, gonorrhea, trichomonas and other STIs based on symptoms and testing capability; treatment if you test positive; extra medication for partners exposed to chlamydia or gonorrhea; starting DoxyPEP; referral for PrEP; vaccines for hepatitis A, hepatitis B and HPV (small fee for uninsured adults). Walk-in STI testing: Mon 8-4, Tue 10-6, Wed 8-4, Thu 8-4, Fri 8-12 (must walk in at least an hour before clinic closure). STI treatment availability varies by location.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Pregnancy testing and maternity services (walk-in hours offered for pregnancy testing and maternity intake services); HIV testing.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/health/clinics/annandale-district-office",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Walk-in service hours (no appointment necessary); appointments (including same-day) strongly encouraged; call 703-246-7100.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Clinic walk-in service is limited and is on a first-come first-served basis.",
+     "requirement_type": "first_come_first_served"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Sliding scale fee (based on your income eligibility) which may reduce or eliminate costs; some insurance plans accepted.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-fairfax-annandale-phc",
+   "location_name": "Annandale Public Health Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '7611 LITTLE RIVER TPKE, ANNANDALE, VA, 22003'",
+   "raw_hours_text": "Business Hours: Mon 8 a.m.-4:30 p.m.; Tue 8 a.m.-6:30 p.m.; Wed 8 a.m.-4:30 p.m.; Thu 8 a.m.-4:30 p.m.; Fri 8 a.m.-4:30 p.m. Walk-in hours for STI testing (no appointment necessary): Mon 8 a.m.-4 p.m.; Tue 10 a.m.-6 p.m.; Wed 8 a.m.-4 p.m.; Thu 8 a.m.-4 p.m.; Fri 8 a.m.-12 p.m. All Health Department locations will open at 10 a.m. on the second Thursday of each month to accommodate staff learning development.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Fairfax County Health Department",
+   "organization_website": "https://www.fairfaxcounty.gov/health/",
+   "raw_eligibility_text": "Fees and eligibility vary by service. Clinic walk-in service is limited and is on a first-come first-served basis. All clinic services are also available by appointment. Some insurance plans are accepted. For those without or choosing not to use their health insurance, we offer a sliding scale fee (based on your income eligibility) which may reduce or eliminate costs to you.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.730962,
+   "lon": -77.104623,
+   "zip": "22309",
+   "city": "Alexandria",
+   "email": "MtVernon.Office@fairfaxcounty.gov",
+   "notes": "TTY 711. STI program details from https://www.fairfaxcounty.gov/health/sexually-transmitted-infections. STI Treatment/Consult (doctor or nurse practitioner onsite) per STI page: Friday 8 a.m.-12 p.m. The STI page's treatment table is read column-by-weekday from flattened HTML; confirm. This site is not listed as a Title X clinic in the OPA locator.",
+   "phone": "703-246-7100",
+   "state": "VA",
+   "website": null,
+   "address1": "8350 Richmond Highway",
+   "address2": "Suite 233",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "STI services at all four public health centers: sexual health education and counseling; free condoms; testing for STIs such as HIV, syphilis, chlamydia, gonorrhea, trichomonas and other STIs based on symptoms and testing capability; treatment if you test positive; extra medication for partners exposed to chlamydia or gonorrhea; starting DoxyPEP; referral for PrEP; vaccines for hepatitis A, hepatitis B and HPV (small fee for uninsured adults). Walk-in STI testing: Mon 8-4, Tue 10-6, Wed 8-4, Thu 8-4, Fri 8-12 (must walk in at least an hour before clinic closure). STI treatment availability varies by location.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Pregnancy testing and maternity services (walk-in hours offered for pregnancy testing and maternity intake services); HIV testing.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/health/clinics/mount-vernon-district-office",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Walk-in service hours (no appointment necessary); appointments (including same-day) strongly encouraged; call 703-246-7100.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Clinic walk-in service is limited and is on a first-come first-served basis.",
+     "requirement_type": "first_come_first_served"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Sliding scale fee (based on your income eligibility) which may reduce or eliminate costs; some insurance plans accepted.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-fairfax-mount-vernon-phc",
+   "location_name": "Mount Vernon Public Health Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '8350 RICHMOND HWY, ALEXANDRIA, VA, 22309'",
+   "raw_hours_text": "Business Hours: Mon 8 a.m.-4:30 p.m.; Tue 8 a.m.-6:30 p.m.; Wed 8 a.m.-4:30 p.m.; Thu 8 a.m.-4:30 p.m.; Fri 8 a.m.-4:30 p.m. Walk-in hours for STI testing (no appointment necessary): Mon 8 a.m.-4 p.m.; Tue 10 a.m.-6 p.m.; Wed 8 a.m.-4 p.m.; Thu 8 a.m.-4 p.m.; Fri 8 a.m.-12 p.m. All Health Department locations will open at 10 a.m. on the second Thursday of each month to accommodate staff learning development.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Fairfax County Health Department",
+   "organization_website": "https://www.fairfaxcounty.gov/health/",
+   "raw_eligibility_text": "Fees and eligibility vary by service. Clinic walk-in service is limited and is on a first-come first-served basis. All clinic services are also available by appointment. Some insurance plans are accepted. For those without or choosing not to use their health insurance, we offer a sliding scale fee (based on your income eligibility) which may reduce or eliminate costs to you.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.963545,
+   "lon": -77.359397,
+   "zip": "20190-3310",
+   "city": "Reston",
+   "email": "HerndonReston.Office@fairfaxcounty.gov",
+   "notes": "TTY 711. STI program details from https://www.fairfaxcounty.gov/health/sexually-transmitted-infections. STI Treatment/Consult (doctor or nurse practitioner onsite) per STI page: Tuesday 10 a.m.-1 p.m., 2 p.m.-6 p.m. (only 2nd & 4th Tuesday of each month) and Thursday 8 a.m.-12 p.m., 1 p.m.-4 p.m. The STI page's treatment table is read column-by-weekday from flattened HTML; confirm. This site is not listed as a Title X clinic in the OPA locator.",
+   "phone": "703-246-7100",
+   "state": "VA",
+   "website": null,
+   "address1": "1850 Cameron Glen Drive",
+   "address2": "Suite 100",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "STI services at all four public health centers: sexual health education and counseling; free condoms; testing for STIs such as HIV, syphilis, chlamydia, gonorrhea, trichomonas and other STIs based on symptoms and testing capability; treatment if you test positive; extra medication for partners exposed to chlamydia or gonorrhea; starting DoxyPEP; referral for PrEP; vaccines for hepatitis A, hepatitis B and HPV (small fee for uninsured adults). Walk-in STI testing: Mon 8-4, Tue 10-6, Wed 8-4, Thu 8-4, Fri 8-12 (must walk in at least an hour before clinic closure). STI treatment availability varies by location.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Pregnancy testing and maternity services (walk-in hours offered for pregnancy testing and maternity intake services); HIV testing.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/health/clinics/herndon-reston-district-office",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Walk-in service hours (no appointment necessary); appointments (including same-day) strongly encouraged; call 703-246-7100.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Clinic walk-in service is limited and is on a first-come first-served basis.",
+     "requirement_type": "first_come_first_served"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Sliding scale fee (based on your income eligibility) which may reduce or eliminate costs; some insurance plans accepted.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-fairfax-herndon-reston-phc",
+   "location_name": "Herndon-Reston Public Health Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '1850 CAMERON GLEN DR, RESTON, VA, 20190'",
+   "raw_hours_text": "Business Hours: Mon 8 a.m.-4:30 p.m.; Tue 8 a.m.-6:30 p.m.; Wed 8 a.m.-4:30 p.m.; Thu 8 a.m.-4:30 p.m.; Fri 8 a.m.-4:30 p.m. Walk-in hours for STI testing (no appointment necessary): Mon 8 a.m.-4 p.m.; Tue 10 a.m.-6 p.m.; Wed 8 a.m.-4 p.m.; Thu 8 a.m.-4 p.m.; Fri 8 a.m.-12 p.m. All Health Department locations will open at 10 a.m. on the second Thursday of each month to accommodate staff learning development.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Fairfax County Health Department",
+   "organization_website": "https://www.fairfaxcounty.gov/health/",
+   "raw_eligibility_text": "Fees and eligibility vary by service. Clinic walk-in service is limited and is on a first-come first-served basis. All clinic services are also available by appointment. Some insurance plans are accepted. For those without or choosing not to use their health insurance, we offer a sliding scale fee (based on your income eligibility) which may reduce or eliminate costs to you.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.964389,
+   "lon": -77.397871,
+   "zip": "20170",
+   "city": "Herndon",
+   "email": null,
+   "notes": "Hours condensed from the site's 'Hours of Operation' table (Medical column); holiday closures listed on the page. 'Patients needing same day appointments are encouraged to call our office.' Sliding fee program: https://hwnova.org/for-patients/sliding-fee-discount-program/ (not fetched). Not listed in the OPA Title X locator.",
+   "phone": "(703) 443-2000",
+   "state": "VA",
+   "website": null,
+   "address1": "1141 Elden Street",
+   "address2": "Third Floor",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "20:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "HealthWorks medical services (organization-wide list, site-level availability not stated): adult medicine incl. reproductive health, sexually transmitted diseases, family planning; women's health incl. well-woman exams, breast exams, family planning, pregnancy testing, procedures such as colposcopy and IUD placement, sexually transmitted infections treatment; adolescent gynecology. Source: https://hwnova.org/service/medical-services/",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://hwnova.org/locations/herndon-location/",
+   "eligibility": [],
+   "external_id": "nova-rh-healthworks-herndon",
+   "location_name": "HealthWorks Herndon Location",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '1141 ELDEN ST, HERNDON, VA, 20170'",
+   "raw_hours_text": "Medical: Monday 8:00 am – 8:00 pm; Tuesday–Friday 8:00 am – 5:00 pm; Saturday CLOSED; Sunday CLOSED. Closed everyday for lunch from 1:00 – 2:00 pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "HealthWorks for Northern Virginia",
+   "organization_website": "https://hwnova.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 39.109034,
+   "lon": -77.541621,
+   "zip": "20176",
+   "city": "Leesburg",
+   "email": null,
+   "notes": "Hours condensed from the site's 'Hours of Operation' table (Medical column); holiday closures listed on the page. 'Patients needing same day appointments are encouraged to call our office.' Sliding fee program: https://hwnova.org/for-patients/sliding-fee-discount-program/ (not fetched). Not listed in the OPA Title X locator.",
+   "phone": "(703) 443-2000",
+   "state": "VA",
+   "website": null,
+   "address1": "163 Fort Evans Road NE",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "20:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "HealthWorks medical services (organization-wide list, site-level availability not stated): adult medicine incl. reproductive health, sexually transmitted diseases, family planning; women's health incl. well-woman exams, breast exams, family planning, pregnancy testing, procedures such as colposcopy and IUD placement, sexually transmitted infections treatment; adolescent gynecology. Source: https://hwnova.org/service/medical-services/",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://hwnova.org/locations/leesburg-location/",
+   "eligibility": [],
+   "external_id": "nova-rh-healthworks-leesburg",
+   "location_name": "HealthWorks Leesburg Location",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '163 FORT EVANS RD NE, LEESBURG, VA, 20176'",
+   "raw_hours_text": "Medical: Monday–Wednesday 8:00am – 5:00pm; Thursday 8:00am – 8:00pm; Friday 8:00am – 5:00pm; Saturday CLOSED; Sunday CLOSED. Closed everyday for lunch from 1:00 – 2:00 pm",
+   "jurisdiction_id": "loudoun-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "HealthWorks for Northern Virginia",
+   "organization_website": "https://hwnova.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.916993,
+   "lon": -77.422722,
+   "zip": "20171",
+   "city": "Herndon",
+   "email": null,
+   "notes": "Hours condensed from the site's 'Hours of Operation' table (Medical column); holiday closures listed on the page. 'Patients needing same day appointments are encouraged to call our office.' Sliding fee program: https://hwnova.org/for-patients/sliding-fee-discount-program/ (not fetched). Not listed in the OPA Title X locator.",
+   "phone": "(703) 443-2000",
+   "state": "VA",
+   "website": null,
+   "address1": "13800 Wall Road",
+   "address2": "Suite 055",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "20:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "HealthWorks medical services (organization-wide list, site-level availability not stated): adult medicine incl. reproductive health, sexually transmitted diseases, family planning; women's health incl. well-woman exams, breast exams, family planning, pregnancy testing, procedures such as colposcopy and IUD placement, sexually transmitted infections treatment; adolescent gynecology. Source: https://hwnova.org/service/medical-services/",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://hwnova.org/locations/sully-herndon/",
+   "eligibility": [],
+   "external_id": "nova-rh-healthworks-sully-herndon",
+   "location_name": "HealthWorks Sully (Herndon) Location",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '13800 WALL RD, HERNDON, VA, 20171'",
+   "raw_hours_text": "Medical: Monday 8:00 am – 5:00 pm; Tuesday 8:00 am – 8:00 pm; Wednesday–Friday 8:00 am – 5:00 pm; Saturday CLOSED; Sunday CLOSED. Closed everyday for lunch from 1:00 – 2:00 pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "HealthWorks for Northern Virginia",
+   "organization_website": "https://hwnova.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.825517,
+   "lon": -77.085556,
+   "zip": "22302",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Listed as a Title X family planning clinic in the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov; record https://api.reproductivehealthservices.gov/v1/clinics/ab897d83-5a1b-4ac3-9850-ee96536bccba). OPA lists birth control (patch, pill, ring, shot, LAM, female/male condoms, emergency contraception), pregnancy testing and counseling, breast/cervical cancer screening, HPV vaccine, chlamydia/gonorrhea/syphilis testing and HIV testing; OPA facility note: 'Alexandria residents ages 12-19 years old can also attend Teen Wellness Center for full services.' '*' and '**' footnote text on the city page was not captured. Phone from the OPA record.",
+   "phone": "703-746-4776",
+   "state": "VA",
+   "website": null,
+   "address1": "3330 King Street",
+   "address2": "Door 3",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Teen Wellness Center: accessible and confidential health services including sports physicals, mental health screenings, and sexual health care for teens 12-19. Cost: Free.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/health-department/program/clinical-services",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Teens 12-19 years old.",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Living in the City of Alexandria.",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Cost: Free.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-alexandria-teen-wellness-king-st",
+   "location_name": "Alexandria Health Department Teen Wellness Center - King Street (Alexandria City High School)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '3330 KING ST, ALEXANDRIA, VA, 22302'",
+   "raw_hours_text": "Monday, Tuesday, Wednesday, Friday from 9 a.m. - 1 p.m. and 2 - 5 p.m. Thursdays 1 - 5 p.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Alexandria Health Department",
+   "organization_website": "https://www.alexandriava.gov/health-department/program/clinical-services",
+   "raw_eligibility_text": "Accessible and confidential* health services including sports physicals, mental health screenings, and sexual health care to any teen (12-19 years old) living in the City of Alexandria. Cost: Free",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.827291,
+   "lon": -77.092156,
+   "zip": "22302",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Listed as a Title X family planning clinic in the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov; record https://api.reproductivehealthservices.gov/v1/clinics/95d986e4-7dbd-4838-aa88-ab5d627a0745). OPA lists female/male condoms, emergency contraception, pregnancy testing and counseling, chlamydia/gonorrhea/syphilis testing and HIV testing; OPA facility note: 'Serving only Minnie Howard Students, Alexandria residents ages 12-19 years old can also attend Teen Wellness Center for full services.' OPA lists phone 570-458-6730, which was not confirmed on the city page, so it is omitted. '*' and '**' footnote text on the city page was not captured.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "3701 W Braddock Rd.",
+   "address2": "Door 31, Suite 1206",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Teen Wellness Center: accessible and confidential health services including sports physicals, mental health screenings, and sexual health care for teens 12-19. Cost: Free.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/health-department/program/clinical-services",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Teens 12-19 years old.",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Living in the City of Alexandria.",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Cost: Free.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-alexandria-teen-wellness-minnie-howard",
+   "location_name": "Alexandria Health Department Teen Wellness Center - Minnie Howard Campus",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '3701 W BRADDOCK RD, ALEXANDRIA, VA, 22302'",
+   "raw_hours_text": "Monday, Tuesday, Wednesday, Friday from 9 a.m. - 1 p.m. and 2 - 5 p.m. Thursdays 1 - 5 p.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Alexandria Health Department",
+   "organization_website": "https://www.alexandriava.gov/health-department/program/clinical-services",
+   "raw_eligibility_text": "Accessible and confidential* health services including sports physicals, mental health screenings, and sexual health care to any teen (12-19 years old) living in the City of Alexandria. Cost: Free",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.830441,
+   "lon": -77.116305,
+   "zip": "22311",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Services from https://neighborhoodhealthva.org/service/obstetrics-gynecology/ and https://neighborhoodhealthva.org/service/prenatal-care/ (prenatal page: 'Spanish-speaking providers and staff work at all three of our prenatal clinics, and free interpretation is available in other languages'; 'Do I need a referral to get prenatal care? No.'; what to bring: photo ID, insurance or Medicaid card, medication list, date of last period). Listed as a Title X family planning clinic in the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov; record https://api.reproductivehealthservices.gov/v1/clinics/85952503-fb2a-4ffc-8143-44edc5faf581). OPA lists address2 'Suite 4206' (Neighborhood Health lists '3rd Floor') and services: birth control (patch, pill, ring, shot, LAM, emergency contraception, fertility awareness, implants, copper/hormonal IUDs), pregnancy testing and counseling, achieving pregnancy and basic infertility services, cancer screening, HPV vaccine. Site services per locations page: Family Medicine, Pediatrics, Women's Health, Behavioral Health, Dental Care, Prenatal and Postpartum Care, HIV Care.",
+   "phone": "703-535-5568",
+   "state": "VA",
+   "website": null,
+   "address1": "4850 Mark Center Drive",
+   "address2": "3rd Floor",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Prenatal and postpartum care: regular provider visits; blood pressure, weight and health checks; on-site lab work; screening for gestational diabetes, anemia and high blood pressure; referrals for ultrasounds and specialist care; nutrition/medication advice; depression and anxiety screening; help applying for Medicaid at no cost; breastfeeding support; postpartum visits. Deliveries with partners Inova Alexandria Hospital and Virginia Hospital Center.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Obstetrics & Gynecology (organization-wide list): annual check ups; Pap smears; prenatal care; mammogram referrals; HPV vaccination; family planning counseling; oral contraceptive pills; IUD placement and removal; Nexplanon insertion and removal; Depo-Provera; endometrial biopsies; colposcopies. Site lists 'Women's Health'. HIV Care listed at this site.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "schedules": [],
+   "source_url": "https://neighborhoodhealthva.org/our-locations/",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Do I need a referral to get prenatal care? No.",
+     "requirement_type": "referral"
+    }
+   ],
+   "external_id": "nova-rh-neighborhood-health-mark-center",
+   "location_name": "Neighborhood Health @ Mark Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '4850 MARK CENTER DR, ALEXANDRIA, VA, 22311'",
+   "raw_hours_text": "Monday – Friday: 8 am – 4:30 pm",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Neighborhood Health",
+   "organization_website": "https://neighborhoodhealthva.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8376056,
+   "lon": -77.0834841,
+   "zip": "22302",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Services from https://neighborhoodhealthva.org/service/obstetrics-gynecology/ and https://neighborhoodhealthva.org/service/prenatal-care/ (prenatal page: 'Spanish-speaking providers and staff work at all three of our prenatal clinics, and free interpretation is available in other languages'; 'Do I need a referral to get prenatal care? No.'; what to bring: photo ID, insurance or Medicaid card, medication list, date of last period). Listed as a Title X family planning clinic in the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov; record https://api.reproductivehealthservices.gov/v1/clinics/1f05ac1e-af51-40fc-80a7-c074d025ee86). OPA lists the street number as '125 Martha Custis Dr' (Neighborhood Health: '1225 Martha Custis Dr., Suite C1'); the Census geocoder matched neither, so OPA's coordinates are used. OPA services: full birth control method list incl. IUDs, implants and emergency contraception; HIV testing and PrEP; pregnancy testing and counseling; STD testing (chlamydia, syphilis, gonorrhea, hepatitis B/C). Site services per locations page: Adult Medicine, Pediatrics, Women's Health, Prenatal and Postpartum Care.",
+   "phone": "703-535-5568",
+   "state": "VA",
+   "website": null,
+   "address1": "1225 Martha Custis Dr.",
+   "address2": "Suite C1",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "19:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Prenatal and postpartum care: regular provider visits; blood pressure, weight and health checks; on-site lab work; screening for gestational diabetes, anemia and high blood pressure; referrals for ultrasounds and specialist care; nutrition/medication advice; depression and anxiety screening; help applying for Medicaid at no cost; breastfeeding support; postpartum visits. Deliveries with partners Inova Alexandria Hospital and Virginia Hospital Center.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "19:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Obstetrics & Gynecology (organization-wide list): annual check ups; Pap smears; prenatal care; mammogram referrals; HPV vaccination; family planning counseling; oral contraceptive pills; IUD placement and removal; Nexplanon insertion and removal; Depo-Provera; endometrial biopsies; colposcopies. Site lists 'Women's Health'.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "schedules": [],
+   "source_url": "https://neighborhoodhealthva.org/our-locations/",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Do I need a referral to get prenatal care? No.",
+     "requirement_type": "referral"
+    }
+   ],
+   "external_id": "nova-rh-neighborhood-health-martha-custis",
+   "location_name": "Neighborhood Health @ Martha Custis Drive",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "source-provided coordinates (HHS OPA clinic locator record); Census geocoder returned no match",
+   "raw_hours_text": "Monday, Tuesday, Wednesday, & Friday: 8 am – 4:30 pm Thursday: 8 am – 7 pm",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Neighborhood Health",
+   "organization_website": "https://neighborhoodhealthva.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.773524,
+   "lon": -77.080917,
+   "zip": "22306",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Listed as a Title X family planning clinic in the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov; record https://api.reproductivehealthservices.gov/v1/clinics/1eb33900-4ce7-4579-9853-bf25305b9bfe). (OPA lists only 'Hormonal Implants' for this site.) Site services per locations page: Family Medicine, Pediatrics, Women's Health, Vision Care, Dental Care, Behavioral Health, Pharmacy Services. Prenatal care is not listed for this site (prenatal page: prenatal care at three Alexandria clinics: Casey, Mark Center, Martha Custis). Located in Fairfax County despite the Alexandria mailing address.",
+   "phone": "703-535-5568",
+   "state": "VA",
+   "website": null,
+   "address1": "6677 Richmond Hwy",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "19:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "19:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "12:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Obstetrics & Gynecology (organization-wide list): annual check ups; Pap smears; prenatal care; mammogram referrals; HPV vaccination; family planning counseling; oral contraceptive pills; IUD placement and removal; Nexplanon insertion and removal; Depo-Provera; endometrial biopsies; colposcopies. Site lists 'Women's Health'.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://neighborhoodhealthva.org/our-locations/",
+   "eligibility": [],
+   "external_id": "nova-rh-neighborhood-health-richmond-highway",
+   "location_name": "Neighborhood Health @ Richmond Highway",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '6677 RICHMOND HWY, ALEXANDRIA, VA, 22306'",
+   "raw_hours_text": "Monday – Tuesday: 8am-7pm Wednesday-Friday: 8am-4:30pm Saturday 8am-12pm Sunday: Closed",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Neighborhood Health",
+   "organization_website": "https://neighborhoodhealthva.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.776613,
+   "lon": -77.178555,
+   "zip": "22150",
+   "city": "Springfield",
+   "email": "FranconiaSpringfield.Office@fairfaxcounty.gov",
+   "notes": "TTY 711. STI program details from https://www.fairfaxcounty.gov/health/sexually-transmitted-infections. STI Treatment/Consult (doctor or nurse practitioner onsite) per STI page: Wednesday 8 a.m.-12 p.m., 1 p.m.-4 p.m. The STI page's treatment table is read column-by-weekday from flattened HTML; confirm. This site is not listed as a Title X clinic in the OPA locator.",
+   "phone": "703-246-7100",
+   "state": "VA",
+   "website": null,
+   "address1": "6564 Loisdale Court",
+   "address2": "4th Floor",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "STI services at all four public health centers: sexual health education and counseling; free condoms; testing for STIs such as HIV, syphilis, chlamydia, gonorrhea, trichomonas and other STIs based on symptoms and testing capability; treatment if you test positive; extra medication for partners exposed to chlamydia or gonorrhea; starting DoxyPEP; referral for PrEP; vaccines for hepatitis A, hepatitis B and HPV (small fee for uninsured adults). Walk-in STI testing: Mon 8-4, Tue 10-6, Wed 8-4, Thu 8-4, Fri 8-12 (must walk in at least an hour before clinic closure). STI treatment availability varies by location.",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Pregnancy testing and maternity services (walk-in hours offered for pregnancy testing and maternity intake services); HIV testing.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/health/clinics/franconia-springfield-public-health-center",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Walk-in service hours (no appointment necessary); appointments (including same-day) strongly encouraged; call 703-246-7100.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Clinic walk-in service is limited and is on a first-come first-served basis.",
+     "requirement_type": "first_come_first_served"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Sliding scale fee (based on your income eligibility) which may reduce or eliminate costs; some insurance plans accepted.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-fairfax-franconia-springfield-phc",
+   "location_name": "Franconia-Springfield Public Health Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '6564 LOISDALE CT, SPRINGFIELD, VA, 22150'",
+   "raw_hours_text": "Business Hours: Mon 8 a.m.-4:30 p.m.; Tue 8 a.m.-6:30 p.m.; Wed 8 a.m.-4:30 p.m.; Thu 8 a.m.-4:30 p.m.; Fri 8 a.m.-4:30 p.m. Walk-in hours for STI testing (no appointment necessary): Mon 8 a.m.-4 p.m.; Tue 10 a.m.-6 p.m.; Wed 8 a.m.-4 p.m.; Thu 8 a.m.-4 p.m.; Fri 8 a.m.-12 p.m. All Health Department locations will open at 10 a.m. on the second Thursday of each month to accommodate staff learning development.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Fairfax County Health Department",
+   "organization_website": "https://www.fairfaxcounty.gov/health/",
+   "raw_eligibility_text": "Fees and eligibility vary by service. Clinic walk-in service is limited and is on a first-come first-served basis. All clinic services are also available by appointment. Some insurance plans are accepted. For those without or choosing not to use their health insurance, we offer a sliding scale fee (based on your income eligibility) which may reduce or eliminate costs to you.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.751803,
+   "lon": -77.477393,
+   "zip": "20110",
+   "city": "Manassas",
+   "email": "PWHD@vdh.virginia.gov",
+   "notes": "Sources: https://www.vdh.virginia.gov/prince-william/services-programs/sti/, https://www.vdh.virginia.gov/prince-william/services-programs/preventive-health-services/, https://www.vdh.virginia.gov/prince-william/contact/ (business hours Monday - Friday 8:00 a.m. until 4:30 p.m.; 'PWHD offices are closed on all state holidays'). Not listed in the OPA Title X locator. Located in Prince William County (per locality polygon) despite the Manassas mailing address.",
+   "phone": "703-792-6300",
+   "state": "VA",
+   "website": null,
+   "address1": "9301 Lee Avenue",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "STI clinics: confidential detection, screening and treatment of STIs; HIV and syphilis testing, counseling and education; STI education, information and referral; risk reduction counseling. HIV PrEP available in Prince William Health District (call 703-792-6301).",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Family Planning services at both the Manassas and Woodbridge clinics (Women's Health & Teen Wellness Services).",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.vdh.virginia.gov/prince-william/clinical-services/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Same-day and scheduled appointments available Monday - Friday; call between 8 a.m. - 4:30 p.m.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Please bring your health insurance information and proof of household income for the services you receive, if applicable.",
+     "requirement_type": "income_documentation"
+    }
+   ],
+   "external_id": "nova-rh-pwhd-manassas",
+   "location_name": "Prince William Health District - Manassas Clinic",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '9301 LEE AVE, MANASSAS, VA, 20110'",
+   "raw_hours_text": "Same-day and scheduled appointments for clinical services are available Monday - Friday. Please call our clinics between 8 a.m. - 4:30 p.m. to schedule an appointment or to check availability.",
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Virginia Department of Health - Prince William Health District",
+   "organization_website": "https://www.vdh.virginia.gov/prince-william/",
+   "raw_eligibility_text": "Please bring your health insurance information and proof of household income for the services you receive, if applicable.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.665501,
+   "lon": -77.330931,
+   "zip": "22192",
+   "city": "Woodbridge",
+   "email": "PWHD@vdh.virginia.gov",
+   "notes": "Sources: https://www.vdh.virginia.gov/prince-william/services-programs/sti/, https://www.vdh.virginia.gov/prince-william/services-programs/preventive-health-services/, https://www.vdh.virginia.gov/prince-william/contact/ (business hours Monday - Friday 8:00 a.m. until 4:30 p.m.; 'PWHD offices are closed on all state holidays'). Not listed in the OPA Title X locator. Suite shown as 'Suite 10' on the clinical-services page and 'Suite 101' on the contact page (https://www.vdh.virginia.gov/prince-william/contact/).",
+   "phone": "703-792-7300",
+   "state": "VA",
+   "website": null,
+   "address1": "4001 Prince William Parkway",
+   "address2": "Suite 101",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "STI clinics: confidential detection, screening and treatment of STIs; HIV and syphilis testing, counseling and education; STI education, information and referral; risk reduction counseling. HIV PrEP available in Prince William Health District (call 703-792-6301).",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Family Planning services at both the Manassas and Woodbridge clinics (Women's Health & Teen Wellness Services).",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.vdh.virginia.gov/prince-william/clinical-services/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Same-day and scheduled appointments available Monday - Friday; call between 8 a.m. - 4:30 p.m.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Please bring your health insurance information and proof of household income for the services you receive, if applicable.",
+     "requirement_type": "income_documentation"
+    }
+   ],
+   "external_id": "nova-rh-pwhd-woodbridge",
+   "location_name": "Prince William Health District - Woodbridge Clinic",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '4001 PRINCE WILLIAM PKWY, WOODBRIDGE, VA, 22192'",
+   "raw_hours_text": "Same-day and scheduled appointments for clinical services are available Monday - Friday. Please call our clinics between 8 a.m. - 4:30 p.m. to schedule an appointment or to check availability.",
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Virginia Department of Health - Prince William Health District",
+   "organization_website": "https://www.vdh.virginia.gov/prince-william/",
+   "raw_eligibility_text": "Please bring your health insurance information and proof of household income for the services you receive, if applicable.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.743711,
+   "lon": -77.450362,
+   "zip": "20110",
+   "city": "Manassas",
+   "email": "outreach@lunerahealth.org",
+   "notes": "Page title on lunerahealth.org: 'Lunera Health (formerly GPW Health Center)'. Located in Prince William County (per locality polygon). Women's Care Team listed at this site. Site services: Family Medicine, OBGYN, Pediatrics, Behavioral Health, Dental, Pharmacy. Hours shown on the site were inconsistent across page sections, so none are recorded. Not listed in the OPA Title X locator.",
+   "phone": "703-680-7950",
+   "state": "VA",
+   "website": null,
+   "address1": "9705 Liberia Ave",
+   "address2": "Unit 201",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "OB/GYN: well women care, prenatal care, post-partum, reproductive health; diagnosing and treating normal and high risk pregnancy complications; pregnancy testing, STI testing, routine or annual examinations; fertility options and contraception. Source: https://lunerahealth.org/service/obstetrics-gynecology/",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "STI: HIV PrEP (can start same day as STI testing), HIV PEP, STI screening. Source: https://lunerahealth.org/service/sti/ (site-level availability not stated).",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://lunerahealth.org/location/manassas/",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Services to all members of our community, regardless of age, income or insurance status.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-lunera-manassas",
+   "location_name": "Lunera Health - Manassas",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '9705 LIBERIA AVE, MANASSAS, VA, 20110'",
+   "raw_hours_text": null,
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Lunera Health (formerly GPW Health Center)",
+   "organization_website": "https://lunerahealth.org/",
+   "raw_eligibility_text": "The Center serves Prince William County and the Cities of Manassas and Manassas Park in Northern Virginia. We provide Medical, Pediatric, Dental, OB/GYN and Behavioral Health services to all members of our community, regardless of age, income or insurance status.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.686736,
+   "lon": -77.314055,
+   "zip": "22192",
+   "city": "Woodbridge",
+   "email": "outreach@lunerahealth.org",
+   "notes": "Page title on lunerahealth.org: 'Lunera Health (formerly GPW Health Center)'. Women's Care Team (incl. Chief of OB-GYN) listed at this site; page text: services include 'family medicine, women's health, pediatrics, and chronic disease management'. Hours shown on the site were inconsistent across page sections, so none are recorded. Not listed in the OPA Title X locator.",
+   "phone": "703-680-7950",
+   "state": "VA",
+   "website": null,
+   "address1": "3350 Commission Ct",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "OB/GYN: well women care, prenatal care, post-partum, reproductive health; diagnosing and treating normal and high risk pregnancy complications; pregnancy testing, STI testing, routine or annual examinations; fertility options and contraception. Source: https://lunerahealth.org/service/obstetrics-gynecology/",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "STI: HIV PrEP (can start same day as STI testing), HIV PEP, STI screening. Source: https://lunerahealth.org/service/sti/ (site-level availability not stated).",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://lunerahealth.org/location/woodbridge/",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Services to all members of our community, regardless of age, income or insurance status.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-lunera-woodbridge",
+   "location_name": "Lunera Health - Woodbridge",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '3350 COMMISSION CT, WOODBRIDGE, VA, 22192'",
+   "raw_hours_text": null,
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Lunera Health (formerly GPW Health Center)",
+   "organization_website": "https://lunerahealth.org/",
+   "raw_eligibility_text": "The Center serves Prince William County and the Cities of Manassas and Manassas Park in Northern Virginia. We provide Medical, Pediatric, Dental, OB/GYN and Behavioral Health services to all members of our community, regardless of age, income or insurance status.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.567412,
+   "lon": -77.326645,
+   "zip": "22026",
+   "city": "Dumfries",
+   "email": "outreach@lunerahealth.org",
+   "notes": "Page title on lunerahealth.org: 'Lunera Health (formerly GPW Health Center)'. Women's Care Team listed at this site. Site services: Family Medicine, OBGYN, Pediatrics, Behavioral Health, Dental. Hours shown on the site were inconsistent across page sections, so none are recorded. Not listed in the OPA Title X locator.",
+   "phone": "703-680-7950",
+   "state": "VA",
+   "website": null,
+   "address1": "17739 Main St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "OB/GYN: well women care, prenatal care, post-partum, reproductive health; diagnosing and treating normal and high risk pregnancy complications; pregnancy testing, STI testing, routine or annual examinations; fertility options and contraception. Source: https://lunerahealth.org/service/obstetrics-gynecology/",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "STI: HIV PrEP (can start same day as STI testing), HIV PEP, STI screening. Source: https://lunerahealth.org/service/sti/ (site-level availability not stated).",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://lunerahealth.org/location/dumfries/",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Services to all members of our community, regardless of age, income or insurance status.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-lunera-dumfries",
+   "location_name": "Lunera Health - Dumfries",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '17739 MAIN ST, DUMFRIES, VA, 22026'",
+   "raw_hours_text": null,
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Lunera Health (formerly GPW Health Center)",
+   "organization_website": "https://lunerahealth.org/",
+   "raw_eligibility_text": "The Center serves Prince William County and the Cities of Manassas and Manassas Park in Northern Virginia. We provide Medical, Pediatric, Dental, OB/GYN and Behavioral Health services to all members of our community, regardless of age, income or insurance status.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.968234,
+   "lon": -77.342544,
+   "zip": "20190",
+   "city": "Reston",
+   "email": null,
+   "notes": "Hours condensed from the site's 'Hours of Operation' table (Medical column); holiday closures listed on the page. 'Patients needing same day appointments are encouraged to call our office.' Sliding fee program: https://hwnova.org/for-patients/sliding-fee-discount-program/ (not fetched). Not listed in the OPA Title X locator.",
+   "phone": "(703) 443-2000",
+   "state": "VA",
+   "website": null,
+   "address1": "11484 Washington Plaza West",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "20:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "HealthWorks medical services (organization-wide list, site-level availability not stated): adult medicine incl. reproductive health, sexually transmitted diseases, family planning; women's health incl. well-woman exams, breast exams, family planning, pregnancy testing, procedures such as colposcopy and IUD placement, sexually transmitted infections treatment; adolescent gynecology. Source: https://hwnova.org/service/medical-services/",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://hwnova.org/locations/reston-location/",
+   "eligibility": [],
+   "external_id": "nova-rh-healthworks-reston",
+   "location_name": "HealthWorks Reston Location",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '11484 WASHINGTON PLZ W, RESTON, VA, 20190'",
+   "raw_hours_text": "Medical: Monday–Tuesday 8:00 am – 5:00 pm; Wednesday 8:00 am – 8:00 pm; Thursday–Friday 8:00 am – 5:00 pm; Saturday CLOSED; Sunday CLOSED. Closed everyday for lunch from 1:00 – 2:00 pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "HealthWorks for Northern Virginia",
+   "organization_website": "https://hwnova.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 39.025845,
+   "lon": -77.408509,
+   "zip": "20166",
+   "city": "Sterling",
+   "email": null,
+   "notes": "Hours condensed from the site's 'Hours of Operation' table (Medical column); holiday closures listed on the page. 'Patients needing same day appointments are encouraged to call our office.' Sliding fee program: https://hwnova.org/for-patients/sliding-fee-discount-program/ (not fetched). Not listed in the OPA Title X locator.",
+   "phone": "(703) 443-2000",
+   "state": "VA",
+   "website": null,
+   "address1": "21641 Ridgetop Cir",
+   "address2": "#107",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "HealthWorks medical services (organization-wide list, site-level availability not stated): adult medicine incl. reproductive health, sexually transmitted diseases, family planning; women's health incl. well-woman exams, breast exams, family planning, pregnancy testing, procedures such as colposcopy and IUD placement, sexually transmitted infections treatment; adolescent gynecology. Source: https://hwnova.org/service/medical-services/",
+     "eligibility": [],
+     "service_type": "reproductive_health",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://hwnova.org/locations/sterling/",
+   "eligibility": [],
+   "external_id": "nova-rh-healthworks-sterling",
+   "location_name": "HealthWorks Sterling Location",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '21641 RIDGETOP CIR, STERLING, VA, 20166'",
+   "raw_hours_text": "Medical: Monday–Friday 8:00 am – 5:00 pm; Saturday CLOSED; Sunday CLOSED. Closed everyday for lunch from 1:00 – 2:00 pm",
+   "jurisdiction_id": "loudoun-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "HealthWorks for Northern Virginia",
+   "organization_website": "https://hwnova.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.842799,
+   "lon": -77.10934,
+   "zip": "22302",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient registration and appointment scheduling, call 703-531-3000.'",
+   "phone": "703-531-3000",
+   "state": "VA",
+   "website": null,
+   "address1": "4700 King St",
+   "address2": "Ste 150",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Comprehensive outpatient obstetrical services and gynecological care, nonstress testing, at little to no cost; LEEP and colposcopy; support services incl. radiology, laboratory, genetic testing, diabetes management, case management, social work, family planning and nutritional counseling. In collaboration with the City of Alexandria Health Department.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.inova.org/our-services/inova-cares-for-women",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Uninsured and low-income patients with household income up to 400 percent of the U.S. Federal Poverty Guidelines.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-inova-cares-women-alexandria",
+   "location_name": "Inova Cares for Women - Alexandria",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '4700 KING ST, ALEXANDRIA, VA, 22302'",
+   "raw_hours_text": null,
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Inova Cares for Women",
+   "organization_website": "https://www.inova.org/our-services/inova-cares-for-women",
+   "raw_eligibility_text": "Serving the needs of our community with prenatal and gynecologic care for uninsured or low-income individuals in Northern Virginia. Serving uninsured and low-income patients with household income up to 400 percent of the U.S. Federal Poverty Guidelines.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.872564,
+   "lon": -77.159231,
+   "zip": "22042",
+   "city": "Falls Church",
+   "email": null,
+   "notes": "Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient registration and appointment scheduling, call 703-531-3000.' Located in Fairfax County (per locality polygon) despite the Falls Church mailing address. Some specialty services may require travel to this location.",
+   "phone": "703-531-3000",
+   "state": "VA",
+   "website": null,
+   "address1": "6400 Arlington Blvd",
+   "address2": "Ste 210",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Comprehensive outpatient obstetrical services and gynecological care, non-stress testing, LEEP and colposcopy at little to no cost; specialty gynecological care (maternal fetal medicine, Gyn/Onc, Uro/Gyn); support services incl. radiology, laboratory, genetic testing, diabetes management, case management, social work, family planning and nutritional counseling.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.inova.org/our-services/inova-cares-for-women",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-inova-cares-women-falls-church",
+   "location_name": "Inova Cares for Women - Falls Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '6400 ARLINGTON BLVD, FALLS CHURCH, VA, 22042'",
+   "raw_hours_text": null,
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Inova Cares for Women",
+   "organization_website": "https://www.inova.org/our-services/inova-cares-for-women",
+   "raw_eligibility_text": "Serving the needs of our community with prenatal and gynecologic care for uninsured or low-income individuals in Northern Virginia. Serving uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.963116,
+   "lon": -77.371505,
+   "zip": "20170",
+   "city": "Herndon",
+   "email": null,
+   "notes": "Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient registration and appointment scheduling, call 703-531-3000.'",
+   "phone": "703-531-3000",
+   "state": "VA",
+   "website": null,
+   "address1": "365 Herndon Pkwy",
+   "address2": "Ste 105",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Comprehensive outpatient obstetrical services and gynecological care, non-stress testing, LEEP and colposcopy at little to no cost; specialty gynecological care (maternal fetal medicine, Gyn/Onc, Uro/Gyn); support services incl. radiology, laboratory, genetic testing, diabetes management, case management, social work, family planning and nutritional counseling.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.inova.org/our-services/inova-cares-for-women",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-inova-cares-women-herndon",
+   "location_name": "Inova Cares for Women - Herndon",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '365 HERNDON PKWY, HERNDON, VA, 20170'",
+   "raw_hours_text": null,
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Inova Cares for Women",
+   "organization_website": "https://www.inova.org/our-services/inova-cares-for-women",
+   "raw_eligibility_text": "Serving the needs of our community with prenatal and gynecologic care for uninsured or low-income individuals in Northern Virginia. Serving uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7365,
+   "lon": -77.0768,
+   "zip": "22306",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient registration and appointment scheduling, call 703-531-3000.'",
+   "phone": "703-531-3000",
+   "state": "VA",
+   "website": null,
+   "address1": "8101 Hinson Farm Rd",
+   "address2": "Ste 415",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Comprehensive outpatient obstetrical services and gynecological care, non-stress testing, LEEP and colposcopy at little to no cost; specialty gynecological care (maternal fetal medicine, Gyn/Onc, Uro/Gyn); support services incl. radiology, laboratory, genetic testing, diabetes management, case management, social work, family planning and nutritional counseling.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.inova.org/our-services/inova-cares-for-women",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "nova-rh-inova-cares-women-mount-vernon",
+   "location_name": "Inova Cares for Women - Mount Vernon",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "source-provided coordinates (inova.org location data); Census geocoder returned no match",
+   "raw_hours_text": null,
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Inova Cares for Women",
+   "organization_website": "https://www.inova.org/our-services/inova-cares-for-women",
+   "raw_eligibility_text": "Serving the needs of our community with prenatal and gynecologic care for uninsured or low-income individuals in Northern Virginia. Serving uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 39.077003,
+   "lon": -77.477909,
+   "zip": "20176",
+   "city": "Leesburg",
+   "email": null,
+   "notes": "Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient registration and appointment scheduling, call 703-531-3000.' Loudoun contact number on page: 703-858-8100. The Loudoun County Health Department refers to Inova Cares for Women for prenatal care.",
+   "phone": "703-858-8100",
+   "state": "VA",
+   "website": null,
+   "address1": "44055 Riverside Pkwy",
+   "address2": "Ste 234",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Comprehensive obstetric care (Inova Clinic for Women - Lansdowne, on the Inova Loudoun Hospital Lansdowne campus) by board-certified OB-GYN physicians and midwives who are bilingual (English/Spanish); prenatal education classes. In collaboration with the Loudoun County Health Department and HealthWorks for Northern Virginia.",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "schedules": [],
+   "source_url": "https://www.inova.org/our-services/inova-cares-for-women",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "County residents who are uninsured, have limited resources, or are insured by Medicaid. Certain eligibility information is required.",
+     "requirement_type": "other"
+    }
+   ],
+   "external_id": "nova-rh-inova-cares-women-loudoun",
+   "location_name": "Inova Cares for Women - Loudoun",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '44055 RIVERSIDE PKWY, LEESBURG, VA, 20176'",
+   "raw_hours_text": null,
+   "jurisdiction_id": "loudoun-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Inova Cares for Women",
+   "organization_website": "https://www.inova.org/our-services/inova-cares-for-women",
+   "raw_eligibility_text": "Serving the needs of our community with prenatal and gynecologic care for uninsured or low-income individuals in Northern Virginia. Provides comprehensive obstetric care to county residents who are uninsured, have limited resources, or are insured by Medicaid. Certain eligibility information is required.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.580645,
+   "lon": -77.328054,
+   "zip": "22025",
+   "city": "Dumfries",
+   "email": null,
+   "notes": "Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient registration and appointment scheduling, call 703-531-3000.' Census matched '3800 PETTLER PARK DR'. Fax 703-221-8381.",
+   "phone": "703-531-3000",
+   "state": "VA",
+   "website": null,
+   "address1": "3800 Fettler Park Dr",
+   "address2": "Ste 301",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Comprehensive outpatient obstetrical services and gynecological care (Fettler Park clinic, Dumfries; page says it 'will open ... on January 6, 2026').",
+     "eligibility": [],
+     "service_type": "prenatal_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.inova.org/our-services/inova-cares-for-women",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Women with primary Virginia Medicaid eligibility or Inova financial assistance eligibility.",
+     "requirement_type": "other"
+    }
+   ],
+   "external_id": "nova-rh-inova-cares-women-fettler-park",
+   "location_name": "Inova Cares for Women - Fettler Park",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "US Census geocoder (Public_AR_Current); matched '3800 PETTLER PARK DR, DUMFRIES, VA, 22025'",
+   "raw_hours_text": null,
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Inova Cares for Women",
+   "organization_website": "https://www.inova.org/our-services/inova-cares-for-women",
+   "raw_eligibility_text": "Serving the needs of our community with prenatal and gynecologic care for uninsured or low-income individuals in Northern Virginia. Inova Cares for Women accepts appointments for women with primary Virginia Medicaid eligibility or Inova financial assistance eligibility.",
+   "wheelchair_accessible": "unknown"
+  }
+ ]
+}

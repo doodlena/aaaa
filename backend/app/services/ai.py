@@ -105,7 +105,7 @@ ALLOWED_MODELS = ("claude-sonnet-5-5", "claude-opus-5-5", "claude-haiku-5-5")
 PRICES = {"claude-haiku-5-5": (0.10, 0.50), "claude-sonnet-5-5": (2.0, 10.0), "claude-opus-5-5": (4.0, 20.0)}
 WEB_SEARCH_USD = 0.01
 # Cost routing: high-volume/simple features use the cheap "fast" model; page extraction uses the admin-chosen model.
-FEATURE_TIER = {"search": "fast", "announcement": "fast", "structure": "fast", "translate": "fast", "duplicate": "fast",
+FEATURE_TIER = {"typecheck": "fast", "enrich": "fast", "relevance": "fast", "search": "fast", "announcement": "fast", "structure": "fast", "translate": "fast", "duplicate": "fast",
                 "discover": "fast", "extract": "careful"}
 
 
@@ -517,3 +517,147 @@ def compare_records(a: dict, b: dict) -> DuplicateOpinion:
                   "'different_places' if they are separate services. Give at most 3 reasons of under 15 words each.",
                   f"Record A:\n{json.dumps(a, sort_keys=True, default=str)[:3000]}\n\nRecord B:\n"
                   f"{json.dumps(b, sort_keys=True, default=str)[:3000]}", max_tokens=1500)
+
+
+class RelevanceVerdict(BaseModel):
+    index: int
+    keep: bool = Field(description="True if people can come here to RECEIVE a service in the directory's scope (see instructions). "
+                                   "False for sports/recreation/youth enrichment, religious instruction or worship programs, "
+                                   "awareness-only campaigns, trainings aimed at professionals or organizations, fundraising, "
+                                   "product sales, or housing/rental listings.")
+    reason: str = Field(description="Under 12 words")
+
+
+class RelevanceBatch(BaseModel):
+    verdicts: list[RelevanceVerdict]
+
+
+def classify_relevance(items: list[dict]) -> list[RelevanceVerdict]:
+    """Batch relevance check for imported listings (cheap model, cached per batch)."""
+    import json
+
+    lines = "\n".join(f"[{i}] {json.dumps(x, ensure_ascii=False, default=str)[:600]}" for i, x in enumerate(items))
+    out: RelevanceBatch = _parse(
+        "relevance", RelevanceBatch,
+        "You review listings for a directory that helps people with low income find help. IN SCOPE (keep): food, meals, "
+        "health/dental/prescription care, mental health counseling or treatment, crisis help, substance use treatment, peer "
+        "support and support groups, benefits enrollment, housing/shelter/utility help, financial assistance, free tax prep, "
+        "clothing, legal aid or immigration legal services, job training and employment help, English (ESL) and adult literacy "
+        "classes, parenting/family support services, childcare, victim services, transportation help, pet support. OUT OF "
+        "SCOPE (remove): sports, recreation centers, youth enrichment/after-school activity programs, religious education or "
+        "worship, awareness/prevention-education-only campaigns, trainings for professionals or organizations, business "
+        "consulting, fundraising, selling products, rental/real-estate listings. Return one verdict per index.",
+        f"Listings:\n{lines}", max_tokens=4000)
+    return out.verdicts
+
+
+# --- Per-listing "find missing info" (web search with citations, cached per listing) -----------------------------
+
+ENRICH_FIELDS = {
+    "WHAT_TO_BRING": "what to bring (documents, ID, bags)",
+    "ID_REQUIRED": "whether photo ID or proof of address is required",
+    "ELIGIBILITY": "who can use it (residency, income, age, referral, appointment)",
+    "HOURS": "days and hours when the service is offered",
+    "DATES": "specific upcoming dates of distributions or events (with times), only if published",
+    "SERVICES": "what is offered there",
+    "LANGUAGES": "languages spoken",
+    "PHONE": "phone number",
+}
+ENRICH_TTL_DAYS = 30
+
+
+def enrich_cached(location_id: int) -> dict | None:
+    from datetime import UTC, datetime, timedelta
+
+    from app.db import session_factory
+    from app.models import AICache
+
+    with session_factory()() as db:
+        row = db.get(AICache, f"enrich:{location_id}")
+        if row and row.created_at > datetime.now(UTC) - timedelta(days=ENRICH_TTL_DAYS):
+            return row.output
+    return None
+
+
+def enrich_listing(location_id: int, info: dict, missing: list[str]) -> dict:
+    """Search the web for missing facts about one listing. Keeps only answers backed by a citation (url + quoted text).
+    Cached for 30 days per listing, so each listing is looked up at most once a month no matter how many visitors ask."""
+    import anthropic
+
+    hit = enrich_cached(location_id)
+    if hit is not None:
+        _record("enrich", model("enrich"), None, cached=True)
+        return hit
+    try:
+        _check_budget()
+    except BudgetExceeded as e:
+        raise AIUnavailable(str(e)) from e
+    fields = [f for f in missing if f in ENRICH_FIELDS] or ["WHAT_TO_BRING"]
+    model_id = model("enrich")
+    try:
+        resp = _get_client().messages.create(
+            model=model_id, max_tokens=1200,
+            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 2}],
+            system="Find facts about ONE assistance provider from its own website or official sources. Answer ONLY with lines "
+                   "'FIELD: value' for these fields: " + ", ".join(f"{f} ({ENRICH_FIELDS[f]})" for f in fields) +
+                   ". Omit any field no source states. Never guess. " + GUARD,
+            messages=[{"role": "user", "content": "Provider: " + " | ".join(f"{k}: {v}" for k, v in info.items() if v)}])
+    except (anthropic.APIConnectionError, anthropic.RateLimitError, anthropic.APIStatusError) as e:
+        raise AIUnavailable("AI lookup is unavailable right now") from e
+    searches = getattr(getattr(resp.usage, "server_tool_use", None), "web_search_requests", 0) or 0
+    _record("enrich", model_id, resp.usage, web_searches=searches)
+    # Walk text blocks in order; attach each block's citations to the FIELD most recently opened.
+    found: dict[str, dict] = {}
+    current = None
+    for b in resp.content:
+        if getattr(b, "type", "") != "text":
+            continue
+        for part in re.split(r"(?m)^\s*(?=[A-Z_]{4,}:)", b.text):
+            m = re.match(r"([A-Z_]{4,}):\s*(.*)", part, re.S)
+            if m and m.group(1) in fields:
+                current = m.group(1)
+                found.setdefault(current, {"field": current.lower(), "value": "", "sources": []})
+                part = m.group(2)
+            if current:
+                found[current]["value"] = (found[current]["value"] + " " + part.strip()).strip()
+        for c in getattr(b, "citations", None) or []:
+            if current and getattr(c, "url", None):
+                src = {"url": c.url, "title": (getattr(c, "title", "") or "")[:120], "quote": (getattr(c, "cited_text", "") or "")[:300]}
+                if src not in found[current]["sources"]:
+                    found[current]["sources"].append(src)
+    out = {"fields": [{**v, "value": re.sub(r"\s+", " ", v["value"])[:600]} for v in found.values() if v["sources"] and v["value"]],
+           "generated_at": __import__("datetime").datetime.now(__import__("datetime").UTC).isoformat(), "model": model_id,
+           "notice": "Found by AI from the linked sources. Not verified by Lantern — confirm with the provider."}
+    from app.db import session_factory
+    from app.models import AICache
+
+    with session_factory()() as db:
+        row = db.get(AICache, f"enrich:{location_id}") or AICache(key=f"enrich:{location_id}", feature="enrich", model=model_id)
+        row.output, row.created_at = out, __import__("datetime").datetime.now(__import__("datetime").UTC)
+        db.add(row)
+        db.commit()
+    return out
+
+
+class TypeCheck(BaseModel):
+    index: int
+    wrong_types: list[ServiceType] = Field(description="Assigned types that this place clearly does NOT provide, per its name/description")
+    reason: str = Field(description="Under 12 words")
+
+
+class TypeCheckBatch(BaseModel):
+    checks: list[TypeCheck]
+
+
+def check_service_types(items: list[dict]) -> list[TypeCheck]:
+    """Conservative category audit: may only flag assigned types as wrong; never proposes new ones."""
+    import json
+
+    lines = "\n".join(f"[{i}] {json.dumps(x, ensure_ascii=False, default=str)[:700]}" for i, x in enumerate(items))
+    out: TypeCheckBatch = _parse(
+        "typecheck", TypeCheckBatch,
+        "Each listing has assigned service types. Flag ONLY types the listing clearly does not provide (e.g. 'job_training' "
+        "for an addiction recovery education program, 'health_clinic' for a youth sports program, 'esl_classes' for a food "
+        "pantry). If a type is plausible or the description is too short to tell, do not flag it. Return one check per index.",
+        f"Listings:\n{lines}", max_tokens=4000)
+    return out.checks

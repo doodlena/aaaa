@@ -1,0 +1,164 @@
+{
+  "run_id": 29,
+  "source": {
+    "id": "nova-reproductive-health",
+    "name": "Northern Virginia sexual & reproductive health (family planning, STI testing, prenatal care) \u2014 AI-assisted research (cited)",
+    "url": "file://data/sources/nova_reproductive_health.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "AI-assisted research of pages fetched on the retrieval date; each record cites source_url. Not verified.",
+      "Blocked sites were skipped, not circumvented; see the matching research log in docs/pilot_research/."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T16:03:11.976605-04:00",
+  "finished_at": "2026-10-12T20:03:12.271302+00:00",
+  "counts": {
+    "discovered": 29,
+    "inserted": 11,
+    "updated": 8,
+    "unchanged": 10,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 490,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {
+      "auto_linked": 8
+    }
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "nova-rh-alexandria-health-dept-mark-center",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-rh-neighborhood-health-casey",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-arlington-public-health-sequoia",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-rh-loudoun-health-dept-leesburg",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-fairfax-mount-vernon-phc",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-fairfax-herndon-reston-phc",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-neighborhood-health-richmond-highway",
+      "status": "linked",
+      "location_id": 194,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-fairfax-annandale-phc",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-lunera-manassas",
+      "status": "linked",
+      "location_id": 242,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-rh-lunera-woodbridge",
+      "status": "linked",
+      "location_id": 261,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-rh-lunera-dumfries",
+      "status": "linked",
+      "location_id": 258,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-rh-healthworks-herndon",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-healthworks-leesburg",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-healthworks-reston",
+      "status": "linked",
+      "location_id": 485,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-healthworks-sterling",
+      "status": "linked",
+      "location_id": 264,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-healthworks-sully-herndon",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

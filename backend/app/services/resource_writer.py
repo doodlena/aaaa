@@ -21,7 +21,7 @@ def set_coords(loc: Location, lat: float | None, lon: float | None, source: str 
         loc.geocode_source = None
         return
     loc.geom = from_shape(Point(lon, lat), srid=4326)
-    loc.geocode_source = source
+    loc.geocode_source = (source or "")[:64] or None  # free-text labels from research files can be long
 
 
 def coords_of(loc: Location) -> dict | None:

@@ -408,6 +408,138 @@ def cmd_ai_resolve_duplicates(a):
     print(json.dumps(counts))
 
 
+def _rebuild_from_linked(db, loc) -> None:
+    from app.ingestion.candidate import CandidateResource
+    from app.ingestion.pipeline import _apply_unverified
+    from app.models import SourceRecord
+
+    rest = db.scalars(select(SourceRecord).where(SourceRecord.location_id == loc.id, SourceRecord.status == "linked")
+                      .order_by(SourceRecord.id)).all()
+    if rest:
+        db.flush()
+        _apply_unverified(db, loc, CandidateResource(**rest[0].normalized), rest[0])
+
+
+def cmd_rebuild_rejected(_a):
+    """Rebuild unverified listings that have rejected source records, so rejected services disappear."""
+    from app.models import Location, SourceRecord
+
+    with _db() as db:
+        ids = set(db.scalars(select(SourceRecord.location_id).where(SourceRecord.status == "rejected", SourceRecord.location_id.isnot(None))).all())
+        n = 0
+        for lid in ids:
+            loc = db.get(Location, lid)
+            if loc.last_verified_at is None and loc.review_status != "rejected":
+                _rebuild_from_linked(db, loc)
+                n += 1
+        db.commit()
+    print(f"rebuilt {n} listings")
+
+
+def cmd_ai_check_categories(a):
+    """(AI) Remove service categories that a listing clearly does not offer (never adds categories)."""
+    from app.models import Location, SourceRecord
+    from app.services import ai
+
+    if not ai.enabled():
+        sys.exit("AI is not enabled (Admin → AI settings)")
+    with _db() as db:
+        recs = db.scalars(select(SourceRecord).where(SourceRecord.status == "linked", SourceRecord.is_synthetic.is_(False))
+                          .order_by(SourceRecord.id)).all()
+        touched, changes = set(), []
+        for start in range(0, len(recs), 25):
+            batch = recs[start:start + 25]
+            items = []
+            for r in batch:
+                n = r.normalized or {}
+                items.append({"name": n.get("location_name") or n.get("organization_name"), "organization": n.get("organization_name"),
+                              "assigned_types": [s.get("service_type") for s in n.get("services", [])],
+                              "description": " ".join(filter(None, [s.get("description") for s in n.get("services", [])] + [n.get("notes")]))[:500]})
+            try:
+                checks = ai.check_service_types(items)
+            except ai.AIUnavailable as e:
+                print(f"stopped: {e}")
+                break
+            for c in checks:
+                if not c.wrong_types or not 0 <= c.index < len(batch):
+                    continue
+                rec = batch[c.index]
+                n = dict(rec.normalized)
+                before = [s.get("service_type") for s in n.get("services", [])]
+                kept = [s for s in n.get("services", []) if s.get("service_type") not in set(c.wrong_types)]
+                if len(kept) == len(before):
+                    continue
+                if not kept:  # nothing left that fits: hide this record rather than guess a category
+                    rec.status = "rejected"
+                else:
+                    n["services"] = kept
+                    rec.normalized = n
+                changes.append((items[c.index]["name"], sorted(set(before) - {s.get("service_type") for s in kept}), c.reason))
+                if rec.location_id:
+                    touched.add(rec.location_id)
+            db.commit()
+        for lid in touched:
+            loc = db.get(Location, lid)
+            if loc.last_verified_at is None and loc.review_status != "rejected":
+                others = db.scalar(select(SourceRecord.id).where(SourceRecord.location_id == lid, SourceRecord.status == "linked").limit(1))
+                if others:
+                    _rebuild_from_linked(db, loc)
+                else:
+                    loc.review_status, loc.published = "rejected", False
+        db.commit()
+    for name, removed, why in changes:
+        print(f"{name}: removed {', '.join(removed)} — {why}")
+    print(f"{len(changes)} records corrected")
+
+
+def cmd_ai_relevance(a):
+    """(AI) Remove imported listings that are not direct-assistance services (e.g. sports or enrichment programs that a
+    broad source category swept in). Rejected source records are hidden and excluded from the shared snapshot."""
+    from app.ingestion.verification.workflow import audit
+    from app.models import Location, SourceRecord
+    from app.services import ai
+
+    if not ai.enabled():
+        sys.exit("AI is not enabled (Admin → AI settings)")
+    with _db() as db:
+        recs = db.scalars(select(SourceRecord).where(SourceRecord.source_id == a.source, SourceRecord.status.in_(("linked", "duplicate_candidate")))
+                          .order_by(SourceRecord.id)).all()
+        removed = []
+        for start in range(0, len(recs), 25):
+            batch = recs[start:start + 25]
+            items = [{"name": (r.normalized or {}).get("location_name") or (r.normalized or {}).get("organization_name"),
+                      "organization": (r.normalized or {}).get("organization_name"),
+                      "services": [s.get("service_type") for s in (r.normalized or {}).get("services", [])],
+                      "description": " ".join(filter(None, [s.get("description") for s in (r.normalized or {}).get("services", [])]))[:400]}
+                     for r in batch]
+            try:
+                verdicts = ai.classify_relevance(items)
+            except ai.AIUnavailable as e:
+                print(f"stopped: {e}")
+                break
+            for v in verdicts:
+                if v.keep or not 0 <= v.index < len(batch):
+                    continue
+                rec = batch[v.index]
+                rec.status = "rejected"
+                removed.append((items[v.index]["name"], v.reason))
+                if rec.location_id:
+                    loc = db.get(Location, rec.location_id)
+                    others = db.scalar(select(SourceRecord.id).where(SourceRecord.location_id == loc.id, SourceRecord.id != rec.id,
+                                                                     SourceRecord.status == "linked").limit(1))
+                    if not others and loc.last_verified_at is None:
+                        loc.review_status = "rejected"
+                        loc.published = False
+                    elif others and loc.last_verified_at is None:
+                        _rebuild_from_linked(db, loc)  # drop services that came only from the rejected record
+                    audit(db, None, "location", loc.id, "ai_relevance_rejected_record", None,
+                          {"source_record": rec.id, "reason": v.reason}, label="ai:relevance")
+            db.commit()
+    for n, why in removed:
+        print(f"removed: {n} — {why}")
+    print(f"{len(removed)} of {len(recs)} records removed as not direct assistance")
+
+
 def cmd_export_snapshot(_a):
     """Write every imported record from republishable sources to data/snapshots/ (committed), so a fresh database
     can be rebuilt without re-scraping. Sources whose terms need permission (publication != permitted_with_attribution)
@@ -423,7 +555,7 @@ def cmd_export_snapshot(_a):
         for sid, cfg in sorted(configs.items(), key=lambda kv: order.get(kv[0], 10**6)):
             if cfg.is_synthetic or cfg.publication != "permitted_with_attribution":
                 continue
-            recs = db.scalars(select(SourceRecord).where(SourceRecord.source_id == sid, SourceRecord.status != "invalid")
+            recs = db.scalars(select(SourceRecord).where(SourceRecord.source_id == sid, SourceRecord.status.notin_(("invalid", "rejected")))
                               .order_by(SourceRecord.id)).all()
             if not recs:
                 continue
@@ -625,6 +757,11 @@ def main(argv=None):
     dsc.add_argument("--searches", type=int, default=2, help="max web searches (each ~1 cent)")
     dsc.set_defaults(fn=cmd_ai_discover)
     sub.add_parser("ai-usage", help="(AI) spend by feature and this month's total vs budget").set_defaults(fn=cmd_ai_usage)
+    sub.add_parser("ai-check-categories", help="(AI) remove categories a listing clearly does not offer (never adds)").set_defaults(fn=cmd_ai_check_categories)
+    sub.add_parser("rebuild-rejected", help="remove services that came only from rejected source records").set_defaults(fn=cmd_rebuild_rejected)
+    rl = sub.add_parser("ai-relevance", help="(AI) remove imported listings that are not direct-assistance services")
+    rl.add_argument("--source", required=True)
+    rl.set_defaults(fn=cmd_ai_relevance)
     rd = sub.add_parser("ai-resolve-duplicates", help="(AI) triage pending duplicate candidates; 'unsure' stays for a person")
     rd.add_argument("--reviewer-email", required=True)
     rd.add_argument("--limit", type=int, default=500)

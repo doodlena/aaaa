@@ -109,32 +109,10 @@
      "frequency": null,
      "schedules": [],
      "food_types": [],
-     "description": "Child Care Subsidy for lower-income families participating in an approved activity (working or attending school). Apply in person or call 703-228-1350 to schedule an appointment. Page notes a waitlist for subsidized care.",
-     "eligibility": [],
-     "service_type": "childcare",
-     "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
-    },
-    {
-     "frequency": null,
-     "schedules": [],
-     "food_types": [],
      "description": "Homelessness/at-risk of homelessness: contact the DHS Community Assistance Bureau at 703-228-1300. Shelter access is through the Centralized Access System at DHS – 2100 Washington Blvd 1st Fl.",
      "eligibility": [],
      "service_type": "housing_assistance",
      "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
-    },
-    {
-     "frequency": null,
-     "schedules": [],
-     "food_types": [],
-     "description": "Arlington Employment Center (listed under Economic Independence, 1st Floor): job opportunities, workshops and classes. Phone 703-228-1400.",
-     "eligibility": [],
-     "service_type": "job_training",
-     "offering_status": "unconfirmed",
      "appointment_required": "unknown",
      "registration_required": "unknown"
     }

@@ -261,3 +261,12 @@ def test_flagged_verified_listing_stays_public_as_needs_recheck(db, imported, ad
     never = db.scalar(select(Location).where(Location.name.like("%Birch%")))
     apply_action(db, never, admin, "flag")
     assert client.get(f"/api/resources/{never.id}").status_code == 404  # never verified => never public
+
+
+def test_long_geocode_source_label_does_not_break_import(db, tmp_path):
+    f = tmp_path / "g.json"
+    f.write_text(json.dumps({"records": [{"external_id": "g1", "organization_name": "[TEST] Clinic", "address1": "1 A St", "zip": "22204",
+                                          "lat": 38.86, "lon": -77.1, "geocode_source": "US Census geocoder (Public_AR_Current); " + "x" * 120}]}))
+    cfg = SourceConfig(id="syn-g", name="g", url="file://g", adapter="structured_json", jurisdictions=["arlington-county"], is_synthetic=True)
+    run = run_source(db, cfg, Fetcher(fixtures={"file://g": f}))
+    assert run.counts["inserted"] == 1 and run.counts["rejected"] == 0

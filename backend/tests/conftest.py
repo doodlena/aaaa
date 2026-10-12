@@ -51,7 +51,7 @@ def clean(migrated_db, tmp_path, monkeypatch):
     login_limiter.reset()
     from app.api import provider, public
 
-    for lim in (public.report_limiter, public.ai_search_limiter, provider.ai_limiter):
+    for lim in (public.report_limiter, public.ai_search_limiter, public.enrich_limiter, provider.ai_limiter):
         lim.reset()
     with session_factory()() as db:
         sync_jurisdictions(db)

@@ -211,17 +211,6 @@
      "offering_status": "unconfirmed",
      "appointment_required": "unknown",
      "registration_required": "unknown"
-    },
-    {
-     "frequency": null,
-     "schedules": [],
-     "food_types": [],
-     "description": null,
-     "eligibility": [],
-     "service_type": "home_delivery",
-     "offering_status": "unconfirmed",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
     }
    ],
    "languages": [],

@@ -1,0 +1,204 @@
+{
+  "run_id": 28,
+  "source": {
+    "id": "nova-reproductive-health",
+    "name": "Northern Virginia sexual & reproductive health (family planning, STI testing, prenatal care) \u2014 AI-assisted research (cited)",
+    "url": "file://data/sources/nova_reproductive_health.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "AI-assisted research of pages fetched on the retrieval date; each record cites source_url. Not verified.",
+      "Blocked sites were skipped, not circumvented; see the matching research log in docs/pilot_research/."
+    ]
+  },
+  "status": "partial",
+  "started_at": "2026-10-12T16:00:06.376647-04:00",
+  "finished_at": "2026-10-12T20:00:06.567089+00:00",
+  "counts": {
+    "discovered": 29,
+    "inserted": 0,
+    "updated": 0,
+    "unchanged": 0,
+    "rejected": 19,
+    "duplicate_candidates": 10,
+    "conflicts": 0,
+    "needs_review": 494,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-alexandria-teen-wellness-king-st",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET address1=%(address1)s::VARCHAR, address2=%(address2)s::VARCHAR, city=%(city)s::VARCHAR, zip=%(zip)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, jurisdiction_id=%(jurisdiction_id)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, notes=%(notes)s::VARCHAR, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'address1': '3330 King Street', 'address2': 'Door 3', 'city': 'Alexandria', 'zip': '22302', 'normalized_address': '3330 king st 22302', 'jurisdiction_id': 'alexandria-city', 'geom': 'SRID=4326;POINT (-77.085556 38.825517)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '3330 KING ST, ALEXANDRIA, VA, 22302'\", 'phone': '(703) 746-4776', 'notes': \"Listed as a Title X family planning clinic in the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov; record https://api.reproductivehealthservices.gov/v ... (344 characters truncated) ... old can also attend Teen Wellness Center for full services.' '*' and '**' footnote text on the city page was not captured. Phone from the OPA record.\", 'locations_id': 533}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-alexandria-teen-wellness-minnie-howard",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET address1=%(address1)s::VARCHAR, address2=%(address2)s::VARCHAR, city=%(city)s::VARCHAR, zip=%(zip)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, jurisdiction_id=%(jurisdiction_id)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, notes=%(notes)s::VARCHAR, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'address1': '3701 W Braddock Rd.', 'address2': 'Door 31, Suite 1206', 'city': 'Alexandria', 'zip': '22302', 'normalized_address': '3701 w braddock rd 22302', 'jurisdiction_id': 'alexandria-city', 'geom': 'SRID=4326;POINT (-77.092156 38.827291)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '3701 W BRADDOCK RD, ALEXANDRIA, VA, 22302'\", 'notes': \"Listed as a Title X family planning clinic in the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov; record https://api.reproductivehealthservices.gov/v ... (351 characters truncated) ... A lists phone 570-458-6730, which was not confirmed on the city page, so it is omitted. '*' and '**' footnote text on the city page was not captured.\", 'locations_id': 534}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-neighborhood-health-mark-center",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET name=%(name)s::VARCHAR, address1=%(address1)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, languages=%(languages)s::VARCHAR(8)[], notes=%(notes)s::VARCHAR, last_seen_at=%(last_seen_at)s::TIMESTAMP WITH TIME ZONE, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'name': 'Neighborhood Health @ Mark Center', 'address1': '4850 Mark Center Drive', 'geom': 'SRID=4326;POINT (-77.116305 38.830441)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '4850 MARK CENTER DR, ALEXANDRIA, VA, 22311'\", 'languages': ['English', 'Spanish'], 'notes': \"Services from https://neighborhoodhealthva.org/service/obstetrics-gynecology/ and https://neighborhoodhealthva.org/service/prenatal-care/ (prenatal p ... (812 characters truncated) ... ite services per locations page: Family Medicine, Pediatrics, Women's Health, Behavioral Health, Dental Care, Prenatal and Postpartum Care, HIV Care.\", 'last_seen_at': datetime.datetime(2026, 10, 12, 20, 0, 6, 440830, tzinfo=datetime.timezone.utc), 'locations_id': 192}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-neighborhood-health-martha-custis",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET address1=%(address1)s::VARCHAR, address2=%(address2)s::VARCHAR, city=%(city)s::VARCHAR, zip=%(zip)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, jurisdiction_id=%(jurisdiction_id)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, languages=%(languages)s::VARCHAR(8)[], notes=%(notes)s::VARCHAR, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'address1': '1225 Martha Custis Dr.', 'address2': 'Suite C1', 'city': 'Alexandria', 'zip': '22302', 'normalized_address': '1225 martha custis dr 22302', 'jurisdiction_id': 'alexandria-city', 'geom': 'SRID=4326;POINT (-77.0834841 38.8376056)', 'geocode_source': 'source-provided coordinates (HHS OPA clinic locator record); Census geocoder returned no match', 'phone': '(703) 535-5568', 'languages': ['English', 'Spanish'], 'notes': \"Services from https://neighborhoodhealthva.org/service/obstetrics-gynecology/ and https://neighborhoodhealthva.org/service/prenatal-care/ (prenatal p ... (835 characters truncated) ... dia, syphilis, gonorrhea, hepatitis B/C). Site services per locations page: Adult Medicine, Pediatrics, Women's Health, Prenatal and Postpartum Care.\", 'locations_id': 535}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-neighborhood-health-richmond-highway",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET name=%(name)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, notes=%(notes)s::VARCHAR, last_seen_at=%(last_seen_at)s::TIMESTAMP WITH TIME ZONE, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'name': 'Neighborhood Health @ Richmond Highway', 'geom': 'SRID=4326;POINT (-77.080917 38.773524)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '6677 RICHMOND HWY, ALEXANDRIA, VA, 22306'\", 'notes': \"Listed as a Title X family planning clinic in the HHS OPA clinic locator (opa-fpclinicdb.hhs.gov; record https://api.reproductivehealthservices.gov/v ... (297 characters truncated) ... age: prenatal care at three Alexandria clinics: Casey, Mark Center, Martha Custis). Located in Fairfax County despite the Alexandria mailing address.\", 'last_seen_at': datetime.datetime(2026, 10, 12, 20, 0, 6, 451197, tzinfo=datetime.timezone.utc), 'locations_id': 194}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-fairfax-franconia-springfield-phc",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET geocode_source=%(geocode_source)s::VARCHAR, notes=%(notes)s::VARCHAR, last_seen_at=%(last_seen_at)s::TIMESTAMP WITH TIME ZONE, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'geocode_source': \"US Census geocoder (Public_AR_Current); matched '6564 LOISDALE CT, SPRINGFIELD, VA, 22150'\", 'notes': \"TTY 711. STI program details from https://www.fairfaxcounty.gov/health/sexually-transmitted-infections. STI Treatment/Consult (doctor or nurse practi ... (70 characters truncated) ... he STI page's treatment table is read column-by-weekday from flattened HTML; confirm. This site is not listed as a Title X clinic in the OPA locator.\", 'last_seen_at': datetime.datetime(2026, 10, 12, 20, 0, 6, 486409, tzinfo=datetime.timezone.utc), 'locations_id': 381}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-pwhd-manassas",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET address1=%(address1)s::VARCHAR, city=%(city)s::VARCHAR, zip=%(zip)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, jurisdiction_id=%(jurisdiction_id)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, email=%(email)s::VARCHAR, notes=%(notes)s::VARCHAR, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'address1': '9301 Lee Avenue', 'city': 'Manassas', 'zip': '20110', 'normalized_address': '9301 lee ave 20110', 'jurisdiction_id': 'prince-william-county', 'geom': 'SRID=4326;POINT (-77.477393 38.751803)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '9301 LEE AVE, MANASSAS, VA, 20110'\", 'phone': '(703) 792-6300', 'email': 'PWHD@vdh.virginia.gov', 'notes': \"Sources: https://www.vdh.virginia.gov/prince-william/services-programs/sti/, https://www.vdh.virginia.gov/prince-william/services-programs/preventive ... (164 characters truncated) ... tate holidays'). Not listed in the OPA Title X locator. Located in Prince William County (per locality polygon) despite the Manassas mailing address.\", 'locations_id': 536}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-pwhd-woodbridge",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET address1=%(address1)s::VARCHAR, address2=%(address2)s::VARCHAR, city=%(city)s::VARCHAR, zip=%(zip)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, jurisdiction_id=%(jurisdiction_id)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, email=%(email)s::VARCHAR, notes=%(notes)s::VARCHAR, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'address1': '4001 Prince William Parkway', 'address2': 'Suite 101', 'city': 'Woodbridge', 'zip': '22192', 'normalized_address': '4001 prince william pkwy 22192', 'jurisdiction_id': 'prince-william-county', 'geom': 'SRID=4326;POINT (-77.330931 38.665501)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '4001 PRINCE WILLIAM PKWY, WOODBRIDGE, VA, 22192'\", 'phone': '(703) 792-7300', 'email': 'PWHD@vdh.virginia.gov', 'notes': \"Sources: https://www.vdh.virginia.gov/prince-william/services-programs/sti/, https://www.vdh.virginia.gov/prince-william/services-programs/preventive ... (218 characters truncated) ... . Suite shown as 'Suite 10' on the clinical-services page and 'Suite 101' on the contact page (https://www.vdh.virginia.gov/prince-william/contact/).\", 'locations_id': 537}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-lunera-manassas",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET name=%(name)s::VARCHAR, address2=%(address2)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, email=%(email)s::VARCHAR, notes=%(notes)s::VARCHAR, last_seen_at=%(last_seen_at)s::TIMESTAMP WITH TIME ZONE, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'name': 'Lunera Health - Manassas', 'address2': 'Unit 201', 'geom': 'SRID=4326;POINT (-77.450362 38.743711)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '9705 LIBERIA AVE, MANASSAS, VA, 20110'\", 'phone': '(703) 680-7950', 'email': 'outreach@lunerahealth.org', 'notes': \"Page title on lunerahealth.org: 'Lunera Health (formerly GPW Health Center)'. Located in Prince William County (per locality polygon). Women's Care T ... (88 characters truncated) ... ealth, Dental, Pharmacy. Hours shown on the site were inconsistent across page sections, so none are recorded. Not listed in the OPA Title X locator.\", 'last_seen_at': datetime.datetime(2026, 10, 12, 20, 0, 6, 501626, tzinfo=datetime.timezone.utc), 'locations_id': 242}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-lunera-woodbridge",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, email=%(email)s::VARCHAR, notes=%(notes)s::VARCHAR, last_seen_at=%(last_seen_at)s::TIMESTAMP WITH TIME ZONE, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'geom': 'SRID=4326;POINT (-77.314055 38.686736)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '3350 COMMISSION CT, WOODBRIDGE, VA, 22192'\", 'email': 'outreach@lunerahealth.org', 'notes': \"Page title on lunerahealth.org: 'Lunera Health (formerly GPW Health Center)'. Women's Care Team (incl. Chief of OB-GYN) listed at this site; page tex ... (74 characters truncated) ... nic disease management'. Hours shown on the site were inconsistent across page sections, so none are recorded. Not listed in the OPA Title X locator.\", 'last_seen_at': datetime.datetime(2026, 10, 12, 20, 0, 6, 505863, tzinfo=datetime.timezone.utc), 'locations_id': 261}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-lunera-dumfries",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, email=%(email)s::VARCHAR, notes=%(notes)s::VARCHAR, last_seen_at=%(last_seen_at)s::TIMESTAMP WITH TIME ZONE, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'geom': 'SRID=4326;POINT (-77.326645 38.567412)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '17739 MAIN ST, DUMFRIES, VA, 22026'\", 'email': 'outreach@lunerahealth.org', 'notes': \"Page title on lunerahealth.org: 'Lunera Health (formerly GPW Health Center)'. Women's Care Team listed at this site. Site services: Family Medicine,  ... (21 characters truncated) ... havioral Health, Dental. Hours shown on the site were inconsistent across page sections, so none are recorded. Not listed in the OPA Title X locator.\", 'last_seen_at': datetime.datetime(2026, 10, 12, 20, 0, 6, 511250, tzinfo=datetime.timezone.utc), 'locations_id': 258}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-healthworks-reston",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET name=%(name)s::VARCHAR, address1=%(address1)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, notes=%(notes)s::VARCHAR, last_seen_at=%(last_seen_at)s::TIMESTAMP WITH TIME ZONE, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'name': 'HealthWorks Reston Location', 'address1': '11484 Washington Plaza West', 'normalized_address': '11484 washington plaza w 20190', 'geom': 'SRID=4326;POINT (-77.342544 38.968234)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '11484 WASHINGTON PLZ W, RESTON, VA, 20190'\", 'notes': \"Hours condensed from the site's 'Hours of Operation' table (Medical column); holiday closures listed on the page. 'Patients needing same day appointm ... (28 characters truncated) ... our office.' Sliding fee program: https://hwnova.org/for-patients/sliding-fee-discount-program/ (not fetched). Not listed in the OPA Title X locator.\", 'last_seen_at': datetime.datetime(2026, 10, 12, 20, 0, 6, 524807, tzinfo=datetime.timezone.utc), 'locations_id': 485}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-healthworks-sterling",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET name=%(name)s::VARCHAR, address2=%(address2)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, notes=%(notes)s::VARCHAR, last_seen_at=%(last_seen_at)s::TIMESTAMP WITH TIME ZONE, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'name': 'HealthWorks Sterling Location', 'address2': '#107', 'geom': 'SRID=4326;POINT (-77.408509 39.025845)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '21641 RIDGETOP CIR, STERLING, VA, 20166'\", 'phone': '(703) 443-2000', 'notes': \"Hours condensed from the site's 'Hours of Operation' table (Medical column); holiday closures listed on the page. 'Patients needing same day appointm ... (28 characters truncated) ... our office.' Sliding fee program: https://hwnova.org/for-patients/sliding-fee-discount-program/ (not fetched). Not listed in the OPA Title X locator.\", 'last_seen_at': datetime.datetime(2026, 10, 12, 20, 0, 6, 529608, tzinfo=datetime.timezone.utc), 'locations_id': 264}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-inova-cares-women-alexandria",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET address1=%(address1)s::VARCHAR, address2=%(address2)s::VARCHAR, city=%(city)s::VARCHAR, zip=%(zip)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, jurisdiction_id=%(jurisdiction_id)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, notes=%(notes)s::VARCHAR, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'address1': '4700 King St', 'address2': 'Ste 150', 'city': 'Alexandria', 'zip': '22302', 'normalized_address': '4700 king st 22302', 'jurisdiction_id': 'alexandria-city', 'geom': 'SRID=4326;POINT (-77.10934 38.842799)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '4700 KING ST, ALEXANDRIA, VA, 22302'\", 'phone': '(703) 531-3000', 'notes': \"Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient registration and appointment scheduling, call 703-531-3000.'\", 'locations_id': 538}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-inova-cares-women-falls-church",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET address1=%(address1)s::VARCHAR, address2=%(address2)s::VARCHAR, city=%(city)s::VARCHAR, zip=%(zip)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, jurisdiction_id=%(jurisdiction_id)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, notes=%(notes)s::VARCHAR, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'address1': '6400 Arlington Blvd', 'address2': 'Ste 210', 'city': 'Falls Church', 'zip': '22042', 'normalized_address': '6400 arlington blvd 22042', 'jurisdiction_id': 'fairfax-county', 'geom': 'SRID=4326;POINT (-77.159231 38.872564)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '6400 ARLINGTON BLVD, FALLS CHURCH, VA, 22042'\", 'phone': '(703) 531-3000', 'notes': \"Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient regist ... (57 characters truncated) ... cated in Fairfax County (per locality polygon) despite the Falls Church mailing address. Some specialty services may require travel to this location.\", 'locations_id': 539}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-inova-cares-women-herndon",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET address1=%(address1)s::VARCHAR, address2=%(address2)s::VARCHAR, city=%(city)s::VARCHAR, zip=%(zip)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, jurisdiction_id=%(jurisdiction_id)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, notes=%(notes)s::VARCHAR, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'address1': '365 Herndon Pkwy', 'address2': 'Ste 105', 'city': 'Herndon', 'zip': '20170', 'normalized_address': '365 herndon pkwy 20170', 'jurisdiction_id': 'fairfax-county', 'geom': 'SRID=4326;POINT (-77.371505 38.963116)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '365 HERNDON PKWY, HERNDON, VA, 20170'\", 'phone': '(703) 531-3000', 'notes': \"Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient registration and appointment scheduling, call 703-531-3000.'\", 'locations_id': 540}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-inova-cares-women-mount-vernon",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET address1=%(address1)s::VARCHAR, address2=%(address2)s::VARCHAR, city=%(city)s::VARCHAR, zip=%(zip)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, jurisdiction_id=%(jurisdiction_id)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, notes=%(notes)s::VARCHAR, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'address1': '8101 Hinson Farm Rd', 'address2': 'Ste 415', 'city': 'Alexandria', 'zip': '22306', 'normalized_address': '8101 hinson farm rd 22306', 'jurisdiction_id': 'fairfax-county', 'geom': 'SRID=4326;POINT (-77.0768 38.7365)', 'geocode_source': 'source-provided coordinates (inova.org location data); Census geocoder returned no match', 'phone': '(703) 531-3000', 'notes': \"Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient registration and appointment scheduling, call 703-531-3000.'\", 'locations_id': 541}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-inova-cares-women-loudoun",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET address1=%(address1)s::VARCHAR, address2=%(address2)s::VARCHAR, city=%(city)s::VARCHAR, zip=%(zip)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, jurisdiction_id=%(jurisdiction_id)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, languages=%(languages)s::VARCHAR(8)[], notes=%(notes)s::VARCHAR, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'address1': '44055 Riverside Pkwy', 'address2': 'Ste 234', 'city': 'Leesburg', 'zip': '20176', 'normalized_address': '44055 riverside pkwy 20176', 'jurisdiction_id': 'loudoun-county', 'geom': 'SRID=4326;POINT (-77.477909 39.077003)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '44055 RIVERSIDE PKWY, LEESBURG, VA, 20176'\", 'phone': '(703) 858-8100', 'languages': ['English', 'Spanish'], 'notes': \"Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient regist ... (39 characters truncated) ...  703-531-3000.' Loudoun contact number on page: 703-858-8100. The Loudoun County Health Department refers to Inova Cares for Women for prenatal care.\", 'locations_id': 542}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    },
+    {
+      "stage": "stage",
+      "external_id": "nova-rh-inova-cares-women-fettler-park",
+      "error": "DataError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n(psycopg.errors.StringDataRightTruncation) value too long for type character varying(64)\n[SQL: UPDATE locations SET address1=%(address1)s::VARCHAR, address2=%(address2)s::VARCHAR, city=%(city)s::VARCHAR, zip=%(zip)s::VARCHAR, normalized_address=%(normalized_address)s::VARCHAR, jurisdiction_id=%(jurisdiction_id)s::VARCHAR, geom=ST_GeogFromText(%(geom)s), geocode_source=%(geocode_source)s::VARCHAR, phone=%(phone)s::VARCHAR, notes=%(notes)s::VARCHAR, updated_at=now() WHERE locations.id = %(locations_id)s::INTEGER]\n[parameters: {'address1': '3800 Fettler Park Dr', 'address2': 'Ste 301', 'city': 'Dumfries', 'zip': '22025', 'normalized_address': '3800 fettler park dr 22025', 'jurisdiction_id': 'prince-william-county', 'geom': 'SRID=4326;POINT (-77.328054 38.580645)', 'geocode_source': \"US Census geocoder (Public_AR_Current); matched '3800 PETTLER PARK DR, DUMFRIES, VA, 22025'\", 'phone': '(703) 531-3000', 'notes': \"Hours and address come from the structured location data embedded in the Inova Cares for Women page (no verbatim hours text). 'For new patient registration and appointment scheduling, call 703-531-3000.' Census matched '3800 PETTLER PARK DR'. Fax 703-221-8381.\", 'locations_id': 543}]\n(Background on this error at: https://sqlalche.me/e/21/9h9h)"
+    }
+  ],
+  "records_requiring_review": [
+    {
+      "external_id": "nova-rh-alexandria-health-dept-mark-center",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-rh-neighborhood-health-casey",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-arlington-public-health-sequoia",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-rh-loudoun-health-dept-leesburg",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-fairfax-annandale-phc",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-fairfax-mount-vernon-phc",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-fairfax-herndon-reston-phc",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-healthworks-herndon",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-healthworks-leesburg",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-healthworks-sully-herndon",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

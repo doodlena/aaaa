@@ -1,10 +1,10 @@
 {
- "exported_at": "2026-10-12T19:27:28.556364+00:00",
+ "exported_at": "2026-10-12T20:05:48.671182+00:00",
  "sources": [
   {
    "source_id": "cafb-get-help",
    "file": "cafb-get-help.json",
-   "records": 102,
+   "records": 98,
    "order": 0
   },
   {
@@ -16,7 +16,7 @@
   {
    "source_id": "manassas-food-resources",
    "file": "manassas-food-resources.json",
-   "records": 18,
+   "records": 17,
    "order": 2
   },
   {
@@ -46,7 +46,7 @@
   {
    "source_id": "pwc-cmn-support-services",
    "file": "pwc-cmn-support-services.json",
-   "records": 130,
+   "records": 93,
    "order": 7
   },
   {
@@ -82,13 +82,13 @@
   {
    "source_id": "nova-support-services",
    "file": "nova-support-services.json",
-   "records": 39,
+   "records": 28,
    "order": 13
   },
   {
    "source_id": "va08-gap-research",
    "file": "va08-gap-research.json",
-   "records": 28,
+   "records": 27,
    "order": 14
   },
   {
@@ -96,6 +96,12 @@
    "file": "ai-manual-files.json",
    "records": 36,
    "order": 15
+  },
+  {
+   "source_id": "nova-reproductive-health",
+   "file": "nova-reproductive-health.json",
+   "records": 29,
+   "order": 16
   }
  ]
 }
