@@ -1321,7 +1321,7 @@
     "label": "Zona",
     "none": "Cerca del lugar que busqué",
     "title": "Ayuda en {{area}}",
-    "homeLink": "Explorar todo el 8.º Distrito de Virginia",
+    "homeLink": "Explorar todos los recursos disponibles",
     "mapNote_one": "El mapa muestra {{count}} lugar en {{area}}. La lista los muestra por páginas.",
     "mapNote_other": "El mapa muestra los {{count}} lugares en {{area}}. La lista los muestra por páginas."
   }

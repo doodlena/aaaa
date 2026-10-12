@@ -43,10 +43,9 @@ describe('needs chooser', () => {
     expect(href(/^Benefits help/).searchParams.get('service_group')).toBe('benefits');
     expect(href(/^Legal and immigration/).searchParams.get('service_group')).toBe('legal');
     expect(href(/^Hot meals/).searchParams.get('service_group')).toBe('community_meal');
-    // district link
-    const district = new URL(screen.getByRole('link', { name: "Explore all of Virginia's 8th District" }).getAttribute('href')!, 'http://x');
-    expect(district.searchParams.get('area')).toBe('va-08');
-    expect(district.searchParams.get('bbox')).toBe('-77.24,38.6,-77.03,38.97');
+    const browse = new URL(screen.getByRole('link', { name: 'Explore all available resources' }).getAttribute('href')!, 'http://x');
+    expect(browse.pathname).toBe('/find');
+    expect(browse.search).toBe('');
   });
 
   it('every need maps to a known group and keeps the searched place', () => {

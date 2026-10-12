@@ -1321,7 +1321,7 @@
     "label": "Area",
     "none": "Near the place I searched",
     "title": "Help in {{area}}",
-    "homeLink": "Explore all of Virginia's 8th District",
+    "homeLink": "Explore all available resources",
     "mapNote_one": "The map shows {{count}} place in {{area}}. The list shows them a page at a time.",
     "mapNote_other": "The map shows all {{count}} places in {{area}}. The list shows them a page at a time."
   }

@@ -6,10 +6,7 @@ import { Icon } from '../components/Icon';
 import { NeedsChooser } from '../components/NeedsChooser';
 import { SearchForm } from '../components/SearchForm';
 import { TodayShelves } from '../components/TodayShelves';
-import { areaFilters, DEFAULT_FILTERS, filtersToURL } from '../lib/filters';
 import { useDocumentTitle, useMeta } from '../state/meta';
-
-const DISTRICT_URL = `/find?${filtersToURL({ ...DEFAULT_FILTERS, ...areaFilters('va-08') }).toString()}`;
 
 export function HomePage() {
   const { t } = useTranslation();
@@ -31,7 +28,7 @@ export function HomePage() {
           <p className="needs__lead">{t('needs.lead')}</p>
           <NeedsChooser variant="home" headingId="needs-title" />
           <p className="needs__area">
-            <Link to={DISTRICT_URL} className="area-link">
+            <Link to="/find" className="area-link">
               <Icon name="map" />
               {t('area.homeLink')}
             </Link>
