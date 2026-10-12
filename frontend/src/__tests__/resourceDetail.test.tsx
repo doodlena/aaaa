@@ -112,3 +112,17 @@ describe('Resource detail', () => {
     expect(await screen.findByRole('alert')).toHaveTextContent('could not find this listing');
   });
 });
+
+describe('where the information comes from', () => {
+  it('names the source and last-checked date, and says it is not yet confirmed with the provider', async () => {
+    const body = detail({
+      verification_label: 'source_reported',
+      sources: [{ source_id: 'cafb', name: 'Capital Area Food Bank', url: 'https://example.org', last_seen_at: '2026-10-12T12:00:00Z', is_synthetic: false }],
+    } as Partial<ResourceDetail>);
+    mockFetch([{ path: '/api/resources/5', body }, { path: '/api/resources/5/visit-plan', body: { checklist: [], suggestions: [], next_windows: [] } }]);
+    renderApp(<ResourcePage />, { route: '/resource/5', path: '/resource/:id' });
+    const p = await screen.findByTestId('provenance');
+    expect(p).toHaveTextContent('Information from Capital Area Food Bank, last checked');
+    expect(p).toHaveTextContent('Not yet confirmed with the provider');
+  });
+});

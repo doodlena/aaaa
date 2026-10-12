@@ -522,7 +522,9 @@
     "staleExplain": "This listing has not been re-checked recently. Some details may be out of date.",
     "stockSeeToday": "Today's items are listed in “Today at this location”, as posted by the provider.",
     "typicalNotToday": "This is what the provider usually offers, not today's stock.",
-    "sourceReportedExplain": "Information comes from the sources listed below. Hours and services can change, so call ahead if you can."
+    "sourceReportedExplain": "Information comes from the sources listed below. Hours and services can change, so call ahead if you can.",
+    "provenance": "Information from {{sources}}, last checked {{date}}.",
+    "notConfirmed": "Not yet confirmed with the provider: call to confirm before you go."
   },
   "auth": {
     "signInTitle": "Sign in",

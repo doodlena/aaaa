@@ -522,7 +522,9 @@
     "staleExplain": "Esta información no se ha vuelto a revisar recientemente. Algunos datos podrían no estar al día.",
     "stockSeeToday": "Los artículos de hoy aparecen en «Hoy en este lugar», tal como los publicó el proveedor.",
     "typicalNotToday": "Esto es lo que el proveedor suele ofrecer, no las existencias de hoy.",
-    "sourceReportedExplain": "La información proviene de las fuentes indicadas abajo. Los horarios y servicios pueden cambiar; llame antes si puede."
+    "sourceReportedExplain": "La información proviene de las fuentes indicadas abajo. Los horarios y servicios pueden cambiar; llame antes si puede.",
+    "provenance": "Información de {{sources}}, revisada por última vez el {{date}}.",
+    "notConfirmed": "Aún no confirmada con el proveedor: llame para confirmar antes de ir."
   },
   "auth": {
     "signInTitle": "Iniciar sesión",

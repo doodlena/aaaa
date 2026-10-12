@@ -554,6 +554,21 @@ def cmd_apply_audit(a):
                     n["location_name"] = f["new_value"]
                 elif field == "phone" and f.get("new_value"):
                     n["phone"] = f["new_value"]
+                elif field == "eligibility" and f.get("eligibility_set"):
+                    from app.vocab import ELIGIBILITY_TYPES
+
+                    have = {e["requirement_type"]: e for e in n.get("eligibility", [])}
+                    for e in f["eligibility_set"]:
+                        if e["requirement_type"] not in ELIGIBILITY_TYPES:
+                            continue
+                        if e["status"] == "unknown":
+                            have.pop(e["requirement_type"], None)
+                        else:
+                            have[e["requirement_type"]] = {"requirement_type": e["requirement_type"], "status": e["status"],
+                                                           "details": e.get("details"), "values": {}}
+                    n["eligibility"] = list(have.values()) if i == 0 else []
+                    for sv in n.get("services", []):
+                        sv["eligibility"] = []
                 elif field == "eligibility" and f.get("new_value"):
                     from app.ingestion.normalization.text import eligibility_from_text
 

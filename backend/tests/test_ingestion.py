@@ -336,3 +336,21 @@ def test_load_data_if_changed_skips_an_already_loaded_snapshot(db, tmp_path, mon
     assert "already loaded" not in capsys.readouterr().out
     cli.main(["load-data", "--if-changed"])
     assert "already loaded; skipping" in capsys.readouterr().out
+
+
+def test_apply_audit_structured_eligibility(db, imported, tmp_path):
+    import json as _json
+
+    from app.cli import main
+    from app.models import EligibilityRequirement
+
+    loc = db.scalars(select(Location).where(Location.is_synthetic.is_(True)).order_by(Location.id)).first()
+    f = tmp_path / "f.json"
+    f.write_text(_json.dumps([{"listing_id": loc.id, "listing_name": loc.name, "field": "eligibility", "current": "",
+                               "eligibility_set": [{"requirement_type": "photo_id", "status": "required", "details": "Bring ID"},
+                                                   {"requirement_type": "not_a_code", "status": "required"}],
+                               "evidence_url": "u", "evidence_quote": "q", "reason": "r", "confidence": "high"}]))
+    main(["apply-audit", str(f), "--date", "t", "--out", str(tmp_path)])
+    db.expire_all()
+    els = {e.requirement_type: e.status for e in db.scalars(select(EligibilityRequirement).where(EligibilityRequirement.location_id == loc.id)).all()}
+    assert els.get("photo_id") == "required" and "not_a_code" not in els

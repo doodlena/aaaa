@@ -256,7 +256,19 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
         {r.operating_status === 'permanently_closed' && <p className="notice notice--alert">{t('detail.permanentlyClosed')}</p>}
         <p className="notice">
           <Icon name="info" />
-          <span>{t('detail.callAhead')}</span>
+          <span>
+            {t('detail.callAhead')}
+            {r.sources?.length > 0 && (
+              <span className="notice__provenance" data-testid="provenance">
+                {' '}
+                {t('detail.provenance', {
+                  sources: Array.from(new Set(r.sources.map((s) => s.name))).join(', '),
+                  date: formatDate(r.sources.map((s) => s.last_seen_at).sort().at(-1)!, lang, { dateStyle: 'medium' }),
+                })}
+                {r.verification_label === 'source_reported' && <> {t('detail.notConfirmed')}</>}
+              </span>
+            )}
+          </span>
         </p>
       </header>
 

@@ -522,7 +522,9 @@
     "staleExplain": "这个条目最近没有重新核查。部分内容可能已过时。",
     "stockSeeToday": "今天的物品列在“这个地点的今日情况”中，由服务机构发布。",
     "typicalNotToday": "这是服务机构通常提供的内容，不是今天的库存。",
-    "sourceReportedExplain": "信息来自下方列出的来源。时间和服务可能变化，如可能请先致电确认。"
+    "sourceReportedExplain": "信息来自下方列出的来源。时间和服务可能变化，如可能请先致电确认。",
+    "provenance": "信息来源：{{sources}}，最后核对于 {{date}}。",
+    "notConfirmed": "尚未与服务机构确认：前往前请致电确认。"
   },
   "auth": {
     "signInTitle": "登录",
