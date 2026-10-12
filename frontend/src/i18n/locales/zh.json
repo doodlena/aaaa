@@ -685,7 +685,8 @@
     "pending": "待处理",
     "accepted": "已接受",
     "merged": "已合并",
-    "distinct": "不重复"
+    "distinct": "不重复",
+    "on_hold": "暂缓：需要电话确认"
   },
   "admin": {
     "navLabel": "管理栏目",

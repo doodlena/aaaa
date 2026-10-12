@@ -685,7 +685,8 @@
     "pending": "대기 중",
     "accepted": "수락됨",
     "merged": "병합됨",
-    "distinct": "별개 항목"
+    "distinct": "별개 항목",
+    "on_hold": "보류: 전화 확인 필요"
   },
   "admin": {
     "navLabel": "관리 메뉴",

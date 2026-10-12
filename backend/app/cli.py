@@ -597,6 +597,46 @@ def cmd_apply_audit(a):
         print("  skipped:", x["listing_id"], x["field"], x["skip"])
 
 
+def cmd_hold_unconfirmed(a):
+    """Put listings on hold (hidden from the public, listed in Admin) from a JSON list of {id, reason}."""
+    from app.ingestion.verification.workflow import audit
+    from app.models import Location
+
+    items = json.loads(Path(a.file).read_text())
+    n = 0
+    with _db() as db:
+        for it in items:
+            loc = db.get(Location, it["id"])
+            if not loc or loc.last_verified_at is not None or loc.review_status not in ("candidate", "needs_review"):
+                continue
+            before = loc.review_status
+            loc.review_status = "on_hold"
+            audit(db, None, "location", loc.id, "on_hold", {"review_status": before},
+                  {"review_status": "on_hold", "reason": it.get("reason")}, label="recheck:unconfirmable")
+            n += 1
+        db.commit()
+    print(f"put {n} listings on hold")
+
+
+def _apply_holds(db) -> int:
+    """Replay committed holds (data/snapshots/held_listings.json, keyed by stable source-record keys)."""
+    from app.models import Location, SourceRecord
+
+    path = SNAPSHOT_DIR / "held_listings.json"
+    if not path.exists():
+        return 0
+    keys = {tuple(k) for k in json.loads(path.read_text())}
+    n = 0
+    for r in db.scalars(select(SourceRecord).where(SourceRecord.status == "linked", SourceRecord.location_id.isnot(None))).all():
+        if (r.source_id, r.external_id) in keys:
+            loc = db.get(Location, r.location_id)
+            if loc and loc.last_verified_at is None and loc.review_status in ("candidate", "needs_review"):
+                loc.review_status = "on_hold"
+                n += 1
+    db.commit()
+    return n
+
+
 def cmd_rebuild_rejected(_a):
     """Rebuild unverified listings that have rejected source records, so rejected services disappear."""
     from app.models import Location, SourceRecord
@@ -818,6 +858,17 @@ def cmd_export_snapshot(_a):
         rejected = sorted([r.source_id, r.external_id] for r in db.scalars(select(SourceRecord).where(
             SourceRecord.status == "rejected", SourceRecord.is_synthetic.is_(False))).all())
     (SNAPSHOT_DIR / "rejected_records.json").write_text(json.dumps(rejected, indent=1))
+    # Listings on hold, keyed by one of their source records, so every database built from the snapshot hides them too.
+    with _db() as db:
+        from app.models import Location
+
+        held = []
+        for loc in db.scalars(select(Location).where(Location.review_status == "on_hold")).all():
+            r = db.scalars(select(SourceRecord).where(SourceRecord.location_id == loc.id, SourceRecord.status == "linked")
+                           .order_by(SourceRecord.id)).first()
+            if r:
+                held.append([r.source_id, r.external_id])
+    (SNAPSHOT_DIR / "held_listings.json").write_text(json.dumps(sorted(held), indent=1))
     (SNAPSHOT_DIR / "manifest.json").write_text(json.dumps({"exported_at": datetime.now(UTC).isoformat(), "sources": manifest}, indent=1))
     print(f"exported {sum(m['records'] for m in manifest)} records from {len(manifest)} sources to {SNAPSHOT_DIR}")
 
@@ -917,6 +968,7 @@ def cmd_load_data(a):
         db.add(row)
         db.commit()
         print(f"rejected records replayed: {_apply_rejections(db)} listings rebuilt")
+        print(f"held listings replayed: {_apply_holds(db)}")
         for cfg in configs.values():
             if cfg.retracted:
                 print(f"{cfg.id}: retracted — {_retract(db, cfg.id)} listings rebuilt without it")
@@ -1042,6 +1094,9 @@ def main(argv=None):
     aa.add_argument("--date", required=True)
     aa.add_argument("--out", help="log directory (default data/audit)")
     aa.set_defaults(fn=cmd_apply_audit)
+    hu = sub.add_parser("hold-unconfirmed", help="hide listings no source can confirm (JSON list of {id, reason})")
+    hu.add_argument("file")
+    hu.set_defaults(fn=cmd_hold_unconfirmed)
     rs = sub.add_parser("retract-source", help="withdraw a source's data (reject its records, rebuild listings)")
     rs.add_argument("source_id")
     rs.set_defaults(fn=cmd_retract_source)

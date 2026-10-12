@@ -685,7 +685,8 @@
     "pending": "Pendiente",
     "accepted": "Aceptado",
     "merged": "Fusionado",
-    "distinct": "Distinto"
+    "distinct": "Distinto",
+    "on_hold": "En espera: necesita una llamada"
   },
   "admin": {
     "navLabel": "Secciones de administración",

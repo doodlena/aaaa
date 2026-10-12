@@ -4,7 +4,8 @@ Codes are stable identifiers; human labels live in the frontend i18n catalogs (e
 """
 
 # Review / publication lifecycle of a location (see docs/verification/VERIFICATION_GUIDE.md)
-REVIEW_STATUSES = ("candidate", "needs_review", "verified", "stale", "rejected")
+# on_hold: no current evidence anywhere and no confirmable phone; hidden from the public until someone confirms it by phone
+REVIEW_STATUSES = ("candidate", "needs_review", "verified", "stale", "rejected", "on_hold")
 PUBLIC_REVIEW_STATUSES = ("verified", "stale")
 OPERATING_STATUSES = ("open", "temporarily_closed", "permanently_closed", "unknown")
 

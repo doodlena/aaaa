@@ -685,7 +685,8 @@
     "pending": "Đang chờ",
     "accepted": "Đã chấp nhận",
     "merged": "Đã gộp",
-    "distinct": "Riêng biệt"
+    "distinct": "Riêng biệt",
+    "on_hold": "Tạm ẩn: cần gọi điện xác nhận"
   },
   "admin": {
     "navLabel": "Các mục quản trị",

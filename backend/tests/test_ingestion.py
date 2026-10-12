@@ -354,3 +354,28 @@ def test_apply_audit_structured_eligibility(db, imported, tmp_path):
     db.expire_all()
     els = {e.requirement_type: e.status for e in db.scalars(select(EligibilityRequirement).where(EligibilityRequirement.location_id == loc.id)).all()}
     assert els.get("photo_id") == "required" and "not_a_code" not in els
+
+
+def test_hold_hides_listing_publicly_and_is_replayed_from_snapshot(db, imported, tmp_path, monkeypatch, client):
+    import json as _json
+
+    from app import cli
+    from app.geospatial.search import public_visibility
+    from app.models import SourceRecord
+
+    loc = db.scalars(select(Location).where(Location.is_synthetic.is_(True)).order_by(Location.id)).first()
+    f = tmp_path / "h.json"
+    f.write_text(_json.dumps([{"id": loc.id, "reason": "no evidence anywhere"}]))
+    cli.main(["hold-unconfirmed", str(f)])
+    db.expire_all()
+    assert db.get(Location, loc.id).review_status == "on_hold"
+    assert db.scalar(select(Location.id).where(public_visibility(), Location.id == loc.id)) is None
+    # replay: put it back, then a committed held_listings.json re-holds it
+    db.get(Location, loc.id).review_status = "candidate"
+    db.commit()
+    rec = db.scalars(select(SourceRecord).where(SourceRecord.location_id == loc.id).order_by(SourceRecord.id)).first()
+    (tmp_path / "held_listings.json").write_text(_json.dumps([[rec.source_id, rec.external_id]]))
+    monkeypatch.setattr(cli, "SNAPSHOT_DIR", tmp_path)
+    assert cli._apply_holds(db) == 1
+    db.expire_all()
+    assert db.get(Location, loc.id).review_status == "on_hold"

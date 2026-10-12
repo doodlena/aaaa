@@ -7,7 +7,7 @@ import { ErrorMessage, Loading } from '../../components/Status';
 import { useAsync } from '../../lib/useAsync';
 import { StatusPill, When } from './shared';
 
-const STATUSES = ['candidate', 'needs_review', 'verified', 'stale', 'rejected'] as const;
+const STATUSES = ['candidate', 'needs_review', 'on_hold', 'verified', 'stale', 'rejected'] as const;
 const PAGE_SIZE = 25;
 
 export function AdminQueue() {
