@@ -5,7 +5,7 @@
  *   are cached (network-first, cache fallback) so a saved / recently viewed pantry's visit card opens offline.
  * - Never cached: /api/admin, /api/provider, /api/auth, /api/me, search, reports, AI, any non-GET request.
  */
-const VERSION = 'os-v1';
+const VERSION = 'os-v2';
 const SHELL = `${VERSION}-shell`;
 const DATA = `${VERSION}-data`;
 const SHELL_URLS = ['/', '/index.html', '/manifest.webmanifest', '/favicon.svg'];
