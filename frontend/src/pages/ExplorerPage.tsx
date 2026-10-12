@@ -119,6 +119,11 @@ export default function ExplorerPage() {
     },
     [sp, setSp, store],
   );
+  // Desktop: clicking a map pin opens that place in the left panel (works for every pin, not just this page's cards).
+  useEffect(() => {
+    if (!narrow && sel.origin === 'map' && sel.id !== null && sel.id !== viewId) open(sel.id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sel.id, sel.origin, sel.seq, narrow]);
   const toggleBar = () =>
     setBarOpen((open) => {
       try {
