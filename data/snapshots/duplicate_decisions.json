@@ -2033,5 +2033,93 @@
    "nova-food-research",
    "nova-food-tol-dinner-purcellville"
   ]
+ },
+ {
+  "record": [
+   "ai-listing-lookup",
+   "lookup-15"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "22207-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-listing-lookup",
+   "lookup-15"
+  ],
+  "decision": "distinct",
+  "target": [
+   "fairfax-food-access",
+   "c30bf32e-7ab2-407a-8f11-fe29e2fe01f6"
+  ]
+ },
+ {
+  "record": [
+   "ai-listing-lookup",
+   "lookup-31"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "19261-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-listing-lookup",
+   "lookup-31"
+  ],
+  "decision": "distinct",
+  "target": [
+   "fairfax-food-access",
+   "7a753305-8db0-4d06-8adb-8adabda71555"
+  ]
+ },
+ {
+  "record": [
+   "ai-listing-lookup",
+   "lookup-52"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "16245-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-listing-lookup",
+   "lookup-52"
+  ],
+  "decision": "distinct",
+  "target": [
+   "fairfax-food-access",
+   "2b618ec9-e880-43b5-8935-4f155403adeb"
+  ]
+ },
+ {
+  "record": [
+   "ai-listing-lookup",
+   "lookup-155"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-web-research",
+   "va08-christ-house-evening-meal"
+  ]
+ },
+ {
+  "record": [
+   "ai-listing-lookup",
+   "lookup-155"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nvrc-homeless-shelters",
+   "nvrc-26"
+  ]
  }
 ]

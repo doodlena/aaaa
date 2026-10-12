@@ -1,0 +1,1251 @@
+{
+ "_notice": "Hours/eligibility from a per-listing AI web lookup. Every value is backed by a quote from the cited page (source_url). Unverified.",
+ "records": [
+  {
+   "external_id": "lookup-15",
+   "source_url": "https://www.burkeumc.org/co-op",
+   "organization_name": "Burke United Methodist Church",
+   "location_name": "Burke United Methodist Church",
+   "address1": "6200 Burke Centre Parkway",
+   "address2": null,
+   "city": "Burke",
+   "zip": "22015",
+   "lat": 38.78409,
+   "lon": -77.280702,
+   "geocode_source": "existing listing",
+   "phone": "(703) 250-6100",
+   "services": [
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "We serve neighbors who live in Burke, Springfield, or Fairfax (city).",
+     "values": {}
+    },
+    {
+     "requirement_type": "zip_restriction",
+     "status": "not_required",
+     "details": "We do not serve other areas in Fairfax County (such as Annandale).",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: - We serve neighbors who live in Burke, Springfield, or Fairfax (city).\n"
+  },
+  {
+   "external_id": "lookup-17",
+   "source_url": "https://victorytempleva.org/pantry/",
+   "organization_name": "The Redeemed Christian Church of God - Victory Temple",
+   "location_name": "The Redeemed Christian Church of God - Victory Temple",
+   "address1": "7218 Lockport Place",
+   "address2": null,
+   "city": "Lorton",
+   "zip": "22079",
+   "lat": 38.715851,
+   "lon": -77.192476,
+   "geocode_source": "existing listing",
+   "phone": "(804) 625-9423",
+   "services": [
+    {
+     "service_type": "delivery_qualifying",
+     "description": null,
+     "food_types": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 5,
+       "opens": "10:00",
+       "closes": "12:00",
+       "week_of_month": 2,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 5,
+       "opens": "10:00",
+       "closes": "12:00",
+       "week_of_month": 4,
+       "appointment_only": false,
+       "notes": null
+      }
+     ]
+    },
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": [],
+   "notes": "AI web lookup, cited: ###### Set Reminder\nThe pantry is open to the community on the Second and Fourth Saturdays of every month from 10:00 am to 12:00 pm.  | # Food Pantry\n## The Victory Temple Food Pantry is in partnership with the Capital Area Food Bank to meet the needs of members of our church and the l"
+  },
+  {
+   "external_id": "lookup-24",
+   "source_url": "https://facetscares.org/contact-us/",
+   "organization_name": "FACETS",
+   "location_name": "FACETS",
+   "address1": "10700 Page Avenue",
+   "address2": "Suite 160",
+   "city": "Fairfax",
+   "zip": "22030",
+   "lat": 38.845158,
+   "lon": -77.316094,
+   "geocode_source": "existing listing",
+   "phone": null,
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "Fairfax County",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: # Contact Us\n## FACETS is based in Fairfax, Virginia, and we work with neighbors in need throughout Fairfax County.\n"
+  },
+  {
+   "external_id": "lookup-31",
+   "source_url": "https://www.findhelp.org/provider/st.-anthony-of-padua-catholic-church--falls-church-va/6693754826129408?postal=22040",
+   "organization_name": "St. Anthony of Padua Catholic Church",
+   "location_name": "St. Anthony of Padua Catholic Church",
+   "address1": "3305 Glen Carlyn Road",
+   "address2": null,
+   "city": "Falls Church",
+   "zip": "22041",
+   "lat": 38.856953,
+   "lon": -77.139053,
+   "geocode_source": "existing listing",
+   "phone": "(703) 628-5564",
+   "services": [
+    {
+     "service_type": "drive_through",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "not_required",
+     "details": "all ages",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: This program provides:- Food to meet basic nutritional needs... Main Services\n  - food pantry\n  Serving\n  - anyone in need\n  - all ages\n  - individual"
+  },
+  {
+   "external_id": "lookup-39",
+   "source_url": "https://www.messiahumc.org/community-mission-opportunities",
+   "organization_name": "Messiah UMC",
+   "location_name": "Messiah UMC",
+   "address1": "6215 Rolling Rd",
+   "address2": null,
+   "city": "Springfield",
+   "zip": "22152",
+   "lat": 38.782626,
+   "lon": -77.234289,
+   "geocode_source": "existing listing",
+   "phone": "(703) 569-9862",
+   "services": [
+    {
+     "service_type": "drive_through",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "residency",
+     "status": "required",
+     "details": "children living in Springfield, Virginia",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: The mission of the Weekend Backpack Program is to assist in combating food insecurity for children living in Springfield, Virginia, by providing a gal"
+  },
+  {
+   "external_id": "lookup-45",
+   "source_url": "https://www.cofumc.org/food-pantry",
+   "organization_name": "Grains of Hope",
+   "location_name": "Grains of Hope",
+   "address1": "13224 Franklin Farm Rd",
+   "address2": null,
+   "city": "Herndon",
+   "zip": "20171",
+   "lat": 38.908063,
+   "lon": -77.403707,
+   "geocode_source": "existing listing",
+   "phone": "(571) 232-8819",
+   "services": [
+    {
+     "service_type": "drive_through",
+     "description": null,
+     "food_types": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "16:00",
+       "closes": "18:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ]
+    },
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Anyone in need of food can pick up at our touchless, drive-by pickup each Tuesday from 4:00PM to 6:00PM at Community of Faith UMC (13224 Franklin Farm"
+  },
+  {
+   "external_id": "lookup-52",
+   "source_url": "https://www.wfcmva.org/contact-us",
+   "organization_name": "WFCM Food Pantry",
+   "location_name": "WFCM Food Pantry",
+   "address1": "4511 Daly Dr",
+   "address2": "Suite J",
+   "city": "Chantilly",
+   "zip": "20151",
+   "lat": 38.883824,
+   "lon": -77.443052,
+   "geocode_source": "existing listing",
+   "phone": "(571) 599-2877",
+   "services": [
+    {
+     "service_type": "delivery_qualifying",
+     "description": null,
+     "food_types": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "10:30",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "10:30",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "10:30",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "10:30",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "10:30",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ]
+    },
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "Clients served by appointment only",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Clients served by appointment only: Chantilly Free Food Market: Monday-Friday 10:30 am-2 pm. "
+  },
+  {
+   "external_id": "lookup-59",
+   "source_url": "https://tryparkway.com/food-pantry/",
+   "organization_name": "Parkway Church",
+   "location_name": "Parkway Church",
+   "address1": "3713 Pennington Lane",
+   "address2": null,
+   "city": "Woodbridge",
+   "zip": "22192",
+   "lat": 38.662095,
+   "lon": -77.324551,
+   "geocode_source": "existing listing",
+   "phone": "(703) 590-5199",
+   "services": [
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 5,
+       "opens": "10:00",
+       "closes": "11:00",
+       "week_of_month": 4,
+       "appointment_only": false,
+       "notes": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "required",
+     "details": "Residents are required to provide a valid ID and proof of a current address to receive assistance.",
+     "values": {}
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "required",
+     "details": "Residents are required to provide a valid ID and proof of a current address to receive assistance.",
+     "values": {}
+    },
+    {
+     "requirement_type": "residency",
+     "status": "required",
+     "details": "Residents are required to provide a valid ID and proof of a current address to receive assistance.",
+     "values": {}
+    },
+    {
+     "requirement_type": "registration",
+     "status": "not_required",
+     "details": "No pre-registration required",
+     "values": {}
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "not_required",
+     "details": "Walk-ins are welcome!",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: **\n\n- Please bring a **valid ID** and **proof of residency** (if available).  | - **No pre-registration required**\n- **Walk-ins are welcome!"
+  },
+  {
+   "external_id": "lookup-66",
+   "source_url": "https://www.sacredheartmanassas.org/food-pantry",
+   "organization_name": "Sacred Heart Catholic Church",
+   "location_name": "Sacred Heart Catholic Church",
+   "address1": "12975 Purcell Road",
+   "address2": null,
+   "city": "Manassas",
+   "zip": "20112",
+   "lat": 38.673688,
+   "lon": -77.397482,
+   "geocode_source": "existing listing",
+   "phone": "(703) 590-0030",
+   "services": [
+    {
+     "service_type": "appointment_distribution",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "clothing",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "drive_through",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "open to anyone in need",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: We are a drive-through pantry open to anyone in need. "
+  },
+  {
+   "external_id": "lookup-75",
+   "source_url": "https://ebenezerbc.org/connect/outreach-ministries/missionary-ministry",
+   "organization_name": "Ebenezer Baptist Church",
+   "location_name": "Ebenezer Baptist Church",
+   "address1": "13020 Telegraph Road",
+   "address2": null,
+   "city": "Woodbridge",
+   "zip": "22192",
+   "lat": 38.669589,
+   "lon": -77.284592,
+   "geocode_source": "existing listing",
+   "phone": "(703) 221-3323",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "10:45",
+       "closes": "12:45",
+       "week_of_month": 4,
+       "appointment_only": false,
+       "notes": null
+      }
+     ]
+    },
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "Please call the pantry director to schedule an appointment.",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "Ebenezer Baptist Church doesn’t have any requirements",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: We perform food distribution on the **4th Friday of every month from 10:45am to 12:45pm** at the Ebenezer Baptist Church Family Life Center, located a"
+  },
+  {
+   "external_id": "lookup-83",
+   "source_url": "https://www.bruu.org/food-pantryusda-food-distribution/",
+   "organization_name": "Bull Run Unitarian Universalists",
+   "location_name": "Bull Run Unitarian",
+   "address1": "9350 Main St",
+   "address2": null,
+   "city": "Manassas",
+   "zip": "20110",
+   "lat": 38.751518,
+   "lon": -77.472735,
+   "geocode_source": "existing listing",
+   "phone": "(703) 361-6269",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "09:30",
+       "closes": "14:30",
+       "week_of_month": 2,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "09:30",
+       "closes": "14:30",
+       "week_of_month": 4,
+       "appointment_only": false,
+       "notes": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "household_size",
+     "status": "required",
+     "details": "How many family members are living in your house?",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: The only question we ask is “How many family members are living in your house?”  | Although we encourage participation from anyone who is needy, including BRUU members, the majority of our clientele is currently Latino. "
+  },
+  {
+   "external_id": "lookup-115",
+   "source_url": "https://www.pwccfoundation.org/programs",
+   "organization_name": "Prince William County Community Foundation",
+   "location_name": "Prince William County Community Foundation",
+   "address1": "P.O. Box 5148",
+   "address2": null,
+   "city": "Woodbridge",
+   "zip": "22194",
+   "lat": 38.631762,
+   "lon": -77.267822,
+   "geocode_source": "existing listing",
+   "phone": "(800) 455-4773",
+   "services": [
+    {
+     "service_type": "mobile_pantry",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "The Micro-Grant for Educators program is open to educators in Prince William County, Manassas City, and Manassas Park.",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: The Prince William County Community Foundation provides scholarships to high school seniors attending a Prince William County Public School that demon"
+  },
+  {
+   "external_id": "lookup-121",
+   "source_url": "https://humanityfirstusa.org/portfolio/manassas-food-pantry/",
+   "organization_name": "Humanity First USA – Manassas Food Distribution",
+   "location_name": "Humanity First USA – Manassas Food Distribution",
+   "address1": "Masroor Mosque 5640 Hoadly Rd",
+   "address2": null,
+   "city": "Manassas",
+   "zip": "20112",
+   "lat": 38.675993,
+   "lon": -77.374144,
+   "geocode_source": "existing listing",
+   "phone": "(703) 303-2130",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "income",
+     "status": "not_required",
+     "details": "There is a suggested income threshold",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: # Manassas, Virginia\n\nFood Distribution\n\n# Location\n\nMasroor Mosque, 5640 Hoadly Road, Manassas, VA 20112\n\n# Schedule\n\nMonthly on the fourth Saturday, | ### Frequently Asked Questions\n\n\n\nThe Humanity First Manassas food pantry is intended for people in need. There is a suggested income threshold, but t"
+  },
+  {
+   "external_id": "lookup-126",
+   "source_url": "https://www.findhelp.org/our-lady-queen-of-peace--arlington-va--food-pantry/5827434549084160?postal=22201",
+   "organization_name": "Our Lady Queen of Peace Church",
+   "location_name": "Our Lady Queen of Peace",
+   "address1": "2700 19th Street S.",
+   "address2": null,
+   "city": "Arlington",
+   "zip": "22204",
+   "lat": 38.854391,
+   "lon": -77.082884,
+   "geocode_source": "existing listing",
+   "phone": "(703) 979-5580",
+   "services": [
+    {
+     "service_type": "clothing",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "delivery_qualifying",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "Anyone can access this program.",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: available\n\nWebsite: Program's Website\n\n\n\nFacebook: Program's Facebook\n\nTwitter: Program's Twitter\n\nEligibility:\n\nAnyone can access this program.\n\n"
+  },
+  {
+   "external_id": "lookup-130",
+   "source_url": "https://motheroflightcenter.org/about",
+   "organization_name": "Mother of Light Center",
+   "location_name": "Mother of Light Center",
+   "address1": "421 Clifford Ave",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22305",
+   "lat": 38.831961,
+   "lon": -77.051974,
+   "geocode_source": "existing listing",
+   "phone": "(703) 508-5289",
+   "services": [
+    {
+     "service_type": "delivery_qualifying",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "Our services are available to all who seek our help, irrespective of their religious affiliations.",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Our services are available to all who seek our help, irrespective of their religious affiliations.\n\n"
+  },
+  {
+   "external_id": "lookup-155",
+   "source_url": "https://ccda.net/find-help/food/alexandria-food-pantry/",
+   "organization_name": "Catholic Charities of the Diocese of Arlington",
+   "location_name": "Christ House Evening Meal",
+   "address1": "131 S West St",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22314",
+   "lat": 38.80568,
+   "lon": -77.05478,
+   "geocode_source": "existing listing",
+   "phone": "(703) 549-8644",
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "income",
+     "status": "required",
+     "details": "Homeless and low-income individuals are welcome",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Homeless and low-income individuals are welcome to enjoy a nutritious dinner and the companionship of their neighbors at no cost. "
+  },
+  {
+   "external_id": "lookup-157",
+   "source_url": "http://wsumc.com/mission-and-ministry/open-table/",
+   "organization_name": "Open Table (shared breakfast ministry)",
+   "location_name": "Open Table Breakfast - Washington Street United Methodist",
+   "address1": "109 S Washington St",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22314",
+   "lat": 38.804926,
+   "lon": -77.047069,
+   "geocode_source": "existing listing",
+   "phone": null,
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": null,
+     "food_types": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "06:00",
+       "closes": "08:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "06:00",
+       "closes": "08:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Open Table is held each Monday and Friday morning at Washington Street UMC from 6:00-8:00am. "
+  },
+  {
+   "external_id": "lookup-160",
+   "source_url": "https://opmh.org/involved/partnerships/",
+   "organization_name": "Open Table (shared breakfast ministry)",
+   "location_name": "Open Table Breakfast - Old Presbyterian Meeting House",
+   "address1": "323 S Fairfax St",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22314",
+   "lat": 38.80195,
+   "lon": -77.043176,
+   "geocode_source": "existing listing",
+   "phone": null,
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": null,
+     "food_types": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "06:00",
+       "closes": "08:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "for anyone in the community",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Open Table is just that, an open table for anyone in the community seeking breakfast and fellowship on Thursday mornings. "
+  },
+  {
+   "external_id": "lookup-176",
+   "source_url": "https://www.unitedcommunity.org/programs/",
+   "organization_name": "United Community",
+   "location_name": "Community Mobile Market - Mount Vernon Woods Elementary School",
+   "address1": "4015 Fielding St",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22309",
+   "lat": 38.743595,
+   "lon": -77.100231,
+   "geocode_source": "existing listing",
+   "phone": "(571) 255-8958",
+   "services": [
+    {
+     "service_type": "mobile_pantry",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "residency",
+     "status": "required",
+     "details": "United Community serves neighbors across Fairfax County, VA.",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: ### Mount Vernon Woods Elementary School\n### Where You Can Find Food Assistance\n\n#### Current Market Sites\n\n- 4015 Fielding St., Alexandria, VA 22309\n | United Community serves neighbors across Fairfax County, VA. Intake is simple; we’ll walk with you every step of the way.\n\n"
+  },
+  {
+   "external_id": "lookup-179",
+   "source_url": "https://fcswecare.org/programs/",
+   "organization_name": "Falls Church Community Service Council (FCS)",
+   "location_name": "FCS Food Pantry at Knox Presbyterian Church",
+   "address1": "7416 Arlington Blvd",
+   "address2": null,
+   "city": "Falls Church",
+   "zip": "22042",
+   "lat": 38.866385,
+   "lon": -77.200303,
+   "geocode_source": "existing listing",
+   "phone": "(703) 237-2562",
+   "services": [
+    {
+     "service_type": "delivery_qualifying",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "referral",
+     "status": "required",
+     "details": "Clients are referred to FCS through social services agencies",
+     "values": {}
+    },
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "social services agencies in Fairfax County and Falls Church City",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Clients are referred to FCS through social services agencies in Fairfax County and Falls Church City.\n\n"
+  },
+  {
+   "external_id": "lookup-356",
+   "source_url": "https://www.tolministries.org/food-pantry/",
+   "organization_name": "Tree of Life Ministries",
+   "location_name": "Tree of Life Eastern Loudoun Pantry",
+   "address1": "45189 Research Place",
+   "address2": "Bldg A",
+   "city": "Ashburn",
+   "zip": null,
+   "lat": 39.05175,
+   "lon": -77.436618,
+   "geocode_source": "existing listing",
+   "phone": "(540) 441-7920",
+   "services": [
+    {
+     "service_type": "home_delivery",
+     "description": null,
+     "food_types": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "09:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "09:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "09:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "09:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "09:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "09:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "09:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "09:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "09:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "09:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ]
+    },
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "Serving All of Loudoun + Northern Fauquier and Clarke Counties",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: ### WESTERN LOUDOUN PANTRY\n**Mon - Fri 9AM - 2PM**\n\n### EASTERN LOUDOUN PANTRY\n45189 Research Place, Bldg A, Ashburn\n\n**Mon - Fri 9am - 2pm**\n\nTo hold | ***\n\n## Details\n- Date: November 23, 2025\n- Time: 1:00 pm - 3:00 pm\n- Event Category: Food\n\n## Venue\n- Tree of Life Center – Eastern Loudoun\n- 45189 R | ### Food Pantry\n#### Serving All of Loudoun + Northern Fauquier and Clarke Counties\nTree of Life's Food Pantries provide free groceries to those in ne"
+  },
+  {
+   "external_id": "lookup-357",
+   "source_url": "https://www.tolministries.org/event/community-dinner-leesburg-5/2026-10-27/",
+   "organization_name": "Tree of Life Ministries",
+   "location_name": "Crossroads Baptist Church (Tree of Life Community Dinner)",
+   "address1": "850 Edwards Ferry Rd NE",
+   "address2": null,
+   "city": "Leesburg",
+   "zip": "20176",
+   "lat": 39.113656,
+   "lon": -77.543679,
+   "geocode_source": "existing listing",
+   "phone": "(540) 441-7920",
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": null,
+     "food_types": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "18:00",
+       "closes": "19:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "registration",
+     "status": "not_required",
+     "details": "No registration is required, and everyone is welcome!",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Tree of Life Ministries hosts a FREE community dinner every Tuesday evening at Crossroads Baptist Church in Leesburg, Virginia.  | August 31, 2026\n\nEvent Series: Community Dinner LEESBURG\n\n# Community Dinner LEESBURG\nOctober 27 @ 6:00 pm - 7:00 pm\n\n No registration is required, an | No registration is required, and everyone is welcome!\n\n"
+  },
+  {
+   "external_id": "lookup-362",
+   "source_url": "https://www.roundhillumc.org/food-pantry",
+   "organization_name": "Round Hill United Methodist Church",
+   "location_name": "Round Hill UMC Food Pantry and Blessings Box",
+   "address1": "11 W. Loudoun Street",
+   "address2": null,
+   "city": "Round Hill",
+   "zip": "20141",
+   "lat": 39.132327,
+   "lon": -77.770717,
+   "geocode_source": "existing listing",
+   "phone": "(540) 338-4445",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "registration",
+     "status": "required",
+     "details": "We have a list of regular clients who receive a monthly order form by email or text",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: We have a list of regular clients who receive a monthly order form by email or text, and then return the form the week before our monthly distribution | Our food pantry is a free, client choice pantry. "
+  },
+  {
+   "external_id": "lookup-374",
+   "source_url": "https://www.stjamesleesburg.org/grace-to-go",
+   "organization_name": "St. James' Episcopal Church (Grace to Go)",
+   "location_name": "Grace to Go meal distribution - Leesburg Apartments",
+   "address1": "75 Plaza Street",
+   "address2": null,
+   "city": "Leesburg",
+   "zip": null,
+   "lat": 39.105588,
+   "lon": -77.5523,
+   "geocode_source": "existing listing",
+   "phone": null,
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "anyone in the Leesburg community",
+     "values": {}
+    },
+    {
+     "requirement_type": "first_come_first_served",
+     "status": "required",
+     "details": "first-come, first served basis",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Meals are distributed every Sunday at 4 pm at the Leesburg Apartments at 75 Plaza Street.\n | # Grace to Go\n- The meals are available to anyone in the Leesburg community on a first-come, first served basis. "
+  },
+  {
+   "external_id": "lookup-415",
+   "source_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "organization_name": "Food For Others",
+   "location_name": "Food for Others Neighborhood Site – Hollywood (Wexford Manor Apartments)",
+   "address1": "2802 Hollywood Road",
+   "address2": null,
+   "city": "Falls Church",
+   "zip": "22043",
+   "lat": 38.877794,
+   "lon": -77.206174,
+   "geocode_source": "existing listing",
+   "phone": "(703) 207-9173",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "household_size",
+     "status": "required",
+     "details": "How many people are in your household?",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: The only question that is asked is, “How many people are in your household?” "
+  },
+  {
+   "external_id": "lookup-417",
+   "source_url": "https://foodforothers.org/get-help/",
+   "organization_name": "Food For Others",
+   "location_name": "Food for Others Neighborhood Site – Willston (Seven Corners)",
+   "address1": "6134 Willston Dr",
+   "address2": null,
+   "city": "Falls Church",
+   "zip": "22044",
+   "lat": 38.871346,
+   "lon": -77.147991,
+   "geocode_source": "existing listing",
+   "phone": "(703) 207-9173",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "referral",
+     "status": "not_required",
+     "details": "No referral is necessary",
+     "values": {}
+    },
+    {
+     "requirement_type": "household_size",
+     "status": "required",
+     "details": "How many people are in your household?",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "Families don’t need to do anything to qualify for this program.",
+     "values": {}
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "not_required",
+     "details": "You do not need to schedule an appointment to receive food.",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Willston: In front of Building #6134 Willston Garden Apartments, off Willston Drive and west of John Marshall Drive, Falls Church.\n\n | **No referral is necessary, the only question clients will be asked is, “How many people are in your household? | Neighborhood Sites: Families don’t need to do anything to qualify for this program. They can simply show up at the times the sites are listed. "
+  },
+  {
+   "external_id": "lookup-442",
+   "source_url": "https://hoffmanboston.apsva.us/",
+   "organization_name": "Hoffman-Boston Elementary School",
+   "location_name": "Hoffman-Boston Elementary School",
+   "address1": "1415 S. Queen Street",
+   "address2": null,
+   "city": "Arlington",
+   "zip": null,
+   "lat": 38.86149,
+   "lon": -77.072541,
+   "geocode_source": "existing listing",
+   "phone": null,
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "14:00",
+       "closes": "16:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [],
+   "schedules": [],
+   "notes": "AI web lookup, cited: ## News & Updates\nFresh fruit, vegetables and other food on share table\n\n### Share Table at Hoffman-Boston\n\nEvery Monday from 2PM - 4PM\n\nSUN; Summer n"
+  }
+ ]
+}
