@@ -1,5 +1,5 @@
 id: va08-support-services
-name: VA-08 support services (mental health, benefits, health, housing, legal…) — research of official sources (cited)
+name: Inner Northern Virginia support services (mental health, benefits, health, housing, legal…) — research of official sources (cited)
 owner: Lantern project research (each record cites its own source page)
 url: file://data/sources/va08_support_services.json
 adapter: structured_json

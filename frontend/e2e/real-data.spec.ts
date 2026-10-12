@@ -53,26 +53,4 @@ test.describe('real data (read-only)', () => {
     await expect(page.getByText(/Food filters are hidden/)).toBeVisible();
   });
 
-  test("R4: Explore all of Virginia's 8th District searches by area + bbox and paginates", async ({ page }) => {
-    await page.goto('/');
-    const searches: URL[] = [];
-    page.on('request', (r) => {
-      if (r.url().includes('/api/resources/search')) searches.push(new URL(r.url()));
-    });
-    await page.getByRole('link', { name: "Explore all of Virginia's 8th District" }).click();
-    await expect(page).toHaveURL(/area=va-08/);
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText(/^Help in Virginia's 8th Congressional District/);
-    await expect(page.locator('.results__count')).toContainText(/places? match/);
-    await expect(page.getByLabel('Area')).toHaveValue('va-08');
-    expect(searches.some((u) => u.searchParams.get('area') === 'va-08' && u.searchParams.get('bbox') === '-77.24,38.6,-77.03,38.97')).toBe(true);
-    // the map gets the whole district (page_size=100); the list is paginated
-    expect(searches.some((u) => u.searchParams.get('area') === 'va-08' && u.searchParams.get('page_size') === '100')).toBe(true);
-    await expect(page.locator('.explorer__area-note')).toContainText(/The map shows (all )?\d+ place/);
-    const total = Number((await page.locator('.results__count').textContent())?.match(/\d+/)?.[0] || 0);
-    if (total > 25) {
-      const pager = page.getByRole('navigation', { name: 'Result pages' });
-      await pager.getByRole('button', { name: 'Next' }).click();
-      await expect(page).toHaveURL(/page=2/);
-    }
-  });
 });

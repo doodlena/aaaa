@@ -30,7 +30,7 @@ export function HomePage() {
           <p className="needs__area">
             <Link to="/find" className="area-link">
               <Icon name="map" />
-              {t('area.homeLink')}
+              {t('home.browseAll')}
             </Link>
           </p>
         </div>

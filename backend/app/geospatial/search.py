@@ -7,12 +7,12 @@ and tri-state eligibility evaluation, which need recurrence logic and must keep 
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
 
-from geoalchemy2 import Geography, Geometry
+from geoalchemy2 import Geography
 from sqlalchemy import and_, cast, exists, func, or_, select
 from sqlalchemy.orm import Session, selectinload
 
 from app.config import get_settings
-from app.models import DistributionEvent, Jurisdiction, Location, Service, ServiceCategory, ServiceFoodType, Source, SourceRecord, CoverageArea
+from app.models import DistributionEvent, Jurisdiction, Location, Service, ServiceCategory, ServiceFoodType, Source, SourceRecord
 from app.services.presenter import eligibility_state, summary
 from app.services.schedule import TZ, windows_on
 from app.vocab import FOOD_TYPES, PUBLIC_REVIEW_STATUSES, SERVICE_TYPES
@@ -35,10 +35,9 @@ ELIGIBILITY_FILTERS = {
 class SearchParams:
     lat: float | None = None
     lon: float | None = None
-    radius_km: float = 10.0
+    radius_km: float = 16.09  # 10 miles
     bbox: tuple[float, float, float, float] | None = None  # min_lon, min_lat, max_lon, max_lat
     jurisdiction: str | None = None
-    area: str | None = None  # coverage area id, e.g. "va-08"
     food_groups: list[str] = field(default_factory=list)
     food_types: list[str] = field(default_factory=list)
     service_groups: list[str] = field(default_factory=list)
@@ -130,9 +129,6 @@ def search(db: Session, p: SearchParams, now: datetime | None = None) -> dict:
         conds.append(func.ST_Intersects(Location.geom, cast(func.ST_MakeEnvelope(*p.bbox, 4326), Geography)))
     if p.jurisdiction:
         conds.append(Location.jurisdiction_id == p.jurisdiction)
-    if p.area:
-        conds.append(exists(select(1).where(CoverageArea.id == p.area,
-                                            func.ST_Intersects(CoverageArea.boundary, cast(Location.geom, Geometry)))))
     # Each selected food group / service group must be offered (AND across selections, any code within a group),
     # unless need_match="any" makes the selected needs alternatives.
     food = [_food_filter([c for c, grp in FOOD_TYPES.items() if grp == g]) for g in p.food_groups]

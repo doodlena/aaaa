@@ -366,15 +366,7 @@ export interface QualityReport {
   metrics: Record<string, number | Record<string, number> | null>;
 }
 
-// ---------- Lantern: coverage areas, AI settings ----------
-export interface CoverageArea {
-  id: string;
-  name: string;
-  kind?: string;
-  localities: string[];
-  public_resources: number;
-  source?: string | null;
-}
+// ---------- Lantern: AI settings ----------
 export type AIKeySource = 'none' | 'environment' | 'admin';
 export interface AISettings {
   enabled: boolean;

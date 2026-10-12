@@ -1,5 +1,5 @@
 id: va08-gap-research
-name: "VA-08 gaps (clothing, transport, DV offices, Falls Church, more mental health & pantries) — AI-assisted research (cited)"
+name: "Inner Northern Virginia additions (clothing, transport, DV offices, Falls Church, more mental health & pantries) — AI-assisted research (cited)"
 owner: Lantern project research (each record cites its own source page)
 url: file://data/sources/va08_gap_research.json
 adapter: structured_json

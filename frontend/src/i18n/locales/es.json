@@ -95,7 +95,8 @@
     "findLead": "Escriba una dirección o código postal para ver horarios, qué llevar e indicaciones para todo tipo de ayuda cercana.",
     "liveLegend": "Las actualizaciones en vivo las publica el propio proveedor y muestran cuánto queda: tres barras = mucho, dos = algo, una = poco.",
     "pantryTitle": "¿Dirige una despensa de alimentos o un programa de ayuda?",
-    "pantryBody": "Publique el estado de hoy y lo que hay en sus estantes en menos de un minuto para que las familias lo vean de inmediato."
+    "pantryBody": "Publique el estado de hoy y lo que hay en sus estantes en menos de un minuto para que las familias lo vean de inmediato.",
+    "browseAll": "Explore todos los recursos disponibles"
   },
   "verification": {
     "verified": "Verificado",
@@ -1317,13 +1318,5 @@
     "call988": "Llamar al 988",
     "text988": "Enviar texto al 988",
     "call911": "Llamar al 911"
-  },
-  "area": {
-    "label": "Zona",
-    "none": "Cerca del lugar que busqué",
-    "title": "Ayuda en {{area}}",
-    "homeLink": "Explore todos los recursos disponibles",
-    "mapNote_one": "El mapa muestra {{count}} lugar en {{area}}. La lista los muestra por páginas.",
-    "mapNote_other": "El mapa muestra los {{count}} lugares en {{area}}. La lista los muestra por páginas."
   }
 }

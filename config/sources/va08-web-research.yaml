@@ -1,5 +1,5 @@
 id: va08-web-research
-name: VA-08 food assistance — AI-assisted web research (cited)
+name: Inner Northern Virginia food assistance — AI-assisted web research (cited)
 owner: Lantern project research (each record cites its own source page)
 url: file://data/sources/va08_web_research.json
 adapter: structured_json

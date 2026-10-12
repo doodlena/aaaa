@@ -95,7 +95,8 @@
     "findLead": "Nhập địa chỉ hoặc mã ZIP để xem giờ mở cửa, những thứ cần mang theo và đường đi đến mọi loại trợ giúp gần đó.",
     "liveLegend": "Cập nhật trực tiếp do chính nơi cung cấp đăng và cho biết còn lại bao nhiêu: ba vạch = nhiều, hai vạch = còn một ít, một vạch = sắp hết.",
     "pantryTitle": "Bạn điều hành điểm phát thực phẩm hoặc chương trình trợ giúp?",
-    "pantryBody": "Đăng tình trạng hôm nay và những gì đang có trên kệ trong chưa đầy một phút để các gia đình thấy ngay."
+    "pantryBody": "Đăng tình trạng hôm nay và những gì đang có trên kệ trong chưa đầy một phút để các gia đình thấy ngay.",
+    "browseAll": "Khám phá tất cả nguồn trợ giúp hiện có"
   },
   "verification": {
     "verified": "Đã xác minh",
@@ -1317,13 +1318,5 @@
     "call988": "Gọi 988",
     "text988": "Nhắn tin 988",
     "call911": "Gọi 911"
-  },
-  "area": {
-    "label": "Khu vực",
-    "none": "Gần nơi tôi đã tìm",
-    "title": "Trợ giúp ở {{area}}",
-    "homeLink": "Khám phá tất cả nguồn trợ giúp hiện có",
-    "mapNote_one": "Bản đồ hiển thị {{count}} địa điểm ở {{area}}. Danh sách hiển thị từng trang một.",
-    "mapNote_other": "Bản đồ hiển thị tất cả {{count}} địa điểm ở {{area}}. Danh sách hiển thị từng trang một."
   }
 }

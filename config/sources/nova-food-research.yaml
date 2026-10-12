@@ -1,5 +1,5 @@
 id: nova-food-research
-name: "Northern Virginia food assistance outside VA-08 — AI-assisted research (cited)"
+name: "Northern Virginia food assistance (Loudoun, western Fairfax, Prince William) — AI-assisted research (cited)"
 owner: Lantern project research (each record cites its own source page)
 url: file://data/sources/nova_food_research.json
 adapter: structured_json

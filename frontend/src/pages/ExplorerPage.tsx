@@ -13,7 +13,6 @@ import { SearchForm } from '../components/SearchForm';
 import { ErrorMessage, Loading } from '../components/Status';
 import {
   activeFilterCount,
-  areaFilters,
   buildSearchQuery,
   offersCrisisServices,
   DEFAULT_FILTERS,
@@ -26,28 +25,12 @@ import {
 } from '../lib/filters';
 import { formatAddress } from '../lib/format';
 import { toggleNeedPatch } from '../lib/needs';
-import type { SearchResponse } from '../api/types';
 import { useAsync } from '../lib/useAsync';
 import { useMediaQuery } from '../lib/useMediaQuery';
 import { createSelectionStore, useSelection } from '../state/selection';
 
 const MapView = lazy(() => import('../components/MapView'));
 export const PAGE_SIZE = 25;
-/** Area views show every listing on the map: fetch up to this many (in pages of 100, the API maximum). */
-const AREA_MAP_MAX = 500;
-
-/** All confirmed + uncertain results for an area (map only; the list stays paginated). */
-async function fetchAllForMap(f: Filters, signal: AbortSignal): Promise<SearchResponse> {
-  const first = await api.search(buildSearchQuery({ ...f, page: 1 }, 100), signal);
-  const items = [...first.items];
-  for (let page = 2; items.length < first.total && items.length < AREA_MAP_MAX; page++) {
-    const next = await api.search(buildSearchQuery({ ...f, page }, 100), signal);
-    if (!next.items.length) break;
-    items.push(...next.items);
-  }
-  return { ...first, items };
-}
-
 export default function ExplorerPage() {
   const { t } = useTranslation();
   const [sp, setSp] = useSearchParams();
@@ -61,12 +44,6 @@ export default function ExplorerPage() {
   const viewId = Number(sp.get('view')) || null;
   const query = buildSearchQuery(filters, PAGE_SIZE);
   const { data, error, loading, reload } = useAsync((signal) => api.search(query, signal), [query]);
-  // Area view: the map shows the whole district, not just the current list page.
-  const mapQuery = filters.area ? buildSearchQuery({ ...filters, page: 1 }, 100) : '';
-  const areaMap = useAsync(
-    (signal) => (filters.area ? fetchAllForMap(filters, signal) : Promise.resolve(null)),
-    [mapQuery],
-  );
   const store = useMemo(() => createSelectionStore(), []);
   const sel = useSelection(store);
   const narrow = useMediaQuery('(max-width: 899px)');
@@ -121,26 +98,23 @@ export default function ExplorerPage() {
 
   const jurisdictions = useAsync(() => api.jurisdictions(), []);
   const jurisdictionName = (Array.isArray(jurisdictions.data) ? jurisdictions.data : []).find((j) => j.id === filters.jurisdiction)?.name || filters.jurisdiction;
-  const areas = useAsync(() => api.coverageAreas(), []);
-  const areaList = Array.isArray(areas.data) ? areas.data : [];
-  const areaName = filters.area ? areaList.find((a) => a.id === filters.area)?.name || filters.area : '';
 
   const nFilters = activeFilterCount(filters);
   const center = filters.lat !== null && filters.lon !== null ? { lat: filters.lat, lon: filters.lon } : null;
   const selected = data && sel.id !== null ? [...data.items, ...data.uncertain].find((r) => r.id === sel.id) : undefined;
-  const placeLabel = areaName || (filters.bbox ? t('explorer.thisArea') : filters.label || jurisdictionName);
+  const placeLabel = filters.bbox ? t('explorer.thisArea') : filters.label || jurisdictionName;
   const showCrisis =
     filters.service_groups.includes('mental_health') ||
     !!data?.items.some((r) => offersCrisisServices(r.service_types)) ||
     !!data?.uncertain.some((r) => offersCrisisServices(r.service_types));
-  const mapItems = filters.area && areaMap.data ? areaMap.data.items : data?.items || [];
-  const mapOffset = filters.area && areaMap.data ? 1 : data ? (data.page - 1) * data.page_size + 1 : 1;
+  const mapItems = data?.items || [];
+  const mapOffset = data ? (data.page - 1) * data.page_size + 1 : 1;
 
   return (
     <div className={`explorer ${narrow ? `explorer--${mobileView}` : ''}`}>
       <div className="explorer__bar">
         <h1 className="explorer__title">
-          {areaName ? t('area.title', { area: areaName }) : placeLabel ? t('explorer.titleNear', { place: placeLabel }) : t('explorer.title')}
+          {placeLabel ? t('explorer.titleNear', { place: placeLabel }) : t('explorer.title')}
         </h1>
         <SearchForm compact />
         <AISearch compact />
@@ -156,23 +130,6 @@ export default function ExplorerPage() {
               ))}
             </select>
           </div>
-          {areaList.length > 0 && (
-            <div className="field field--inline">
-              <label htmlFor="area">{t('area.label')}</label>
-              <select
-                id="area"
-                value={filters.area}
-                onChange={(e) => update(e.target.value ? areaFilters(e.target.value) : { area: '', bbox: null })}
-              >
-                <option value="">{t('area.none')}</option>
-                {areaList.map((a) => (
-                  <option key={a.id} value={a.id}>
-                    {a.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-          )}
           <div className="field field--inline">
             <label htmlFor="sort">{t('explorer.sort')}</label>
             <select id="sort" value={filters.sort} onChange={(e) => update({ sort: e.target.value })}>
@@ -183,7 +140,7 @@ export default function ExplorerPage() {
               ))}
             </select>
           </div>
-          {filters.bbox && !filters.area && (
+          {filters.bbox && (
             <button type="button" className="btn btn--ghost btn--sm" onClick={() => update({ bbox: null })}>
               {t('explorer.backToRadius')}
             </button>
@@ -218,11 +175,6 @@ export default function ExplorerPage() {
         <div className="explorer__crisis">
           <CrisisCallout compact />
         </div>
-      )}
-      {filters.area && areaMap.data && (
-        <p className="explorer__area-note" role="status">
-          {t('area.mapNote', { count: areaMap.data.items.length, area: areaName })}
-        </p>
       )}
 
       <div className="explorer__body">
@@ -288,7 +240,7 @@ export default function ExplorerPage() {
               center={center}
               radiusKm={filters.bbox ? null : filters.radius_km}
               store={store}
-              onSearchArea={(bbox) => update({ bbox, area: '' })}
+              onSearchArea={(bbox) => update({ bbox })}
             />
           </Suspense>
           {narrow && mobileView === 'map' && selected && (

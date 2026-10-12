@@ -33,7 +33,7 @@ export const NEEDS: Need[] = [
   { id: 'pets', icon: 'paw', service_group: 'pets', food: false },
 ];
 
-/** Filters patch for a need: replaces the need-related filters, keeps place/area. Non-food needs drop food filters. */
+/** Filters patch for a need: replaces the need-related filters, keeps the place. Non-food needs drop food filters. */
 export function needPatch(need: Need): Partial<Filters> {
   return {
     food_groups: need.food_group ? [need.food_group] : [],

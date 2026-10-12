@@ -95,7 +95,8 @@
     "findLead": "Type an address or ZIP code to see hours, what to bring and directions for every kind of help nearby.",
     "liveLegend": "Live updates are posted by the provider itself and show how much is left: three bars = plenty, two = some, one = low.",
     "pantryTitle": "Run a food pantry or help program?",
-    "pantryBody": "Post today's status and what's on your shelves in under a minute so families can see it right away."
+    "pantryBody": "Post today's status and what's on your shelves in under a minute so families can see it right away.",
+    "browseAll": "Explore all available resources"
   },
   "verification": {
     "verified": "Verified",
@@ -1317,13 +1318,5 @@
     "call988": "Call 988",
     "text988": "Text 988",
     "call911": "Call 911"
-  },
-  "area": {
-    "label": "Area",
-    "none": "Near the place I searched",
-    "title": "Help in {{area}}",
-    "homeLink": "Explore all available resources",
-    "mapNote_one": "The map shows {{count}} place in {{area}}. The list shows them a page at a time.",
-    "mapNote_other": "The map shows all {{count}} places in {{area}}. The list shows them a page at a time."
   }
 }

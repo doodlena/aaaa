@@ -1,5 +1,5 @@
 id: nova-support-services
-name: "Northern Virginia support services outside VA-08 — AI-assisted research (cited)"
+name: "Northern Virginia support services (Fairfax, Loudoun, Prince William) — AI-assisted research (cited)"
 owner: Lantern project research (each record cites its own source page)
 url: file://data/sources/nova_support_services.json
 adapter: structured_json

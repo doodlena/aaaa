@@ -269,7 +269,7 @@ describe('i18n catalogs', () => {
     Object.entries(o).flatMap(([k, v]) => (v && typeof v === 'object' ? flat(v as Record<string, unknown>, `${p}${k}.`) : [`${p}${k}`]));
   it('en and es have identical keys, including every live/needs/crisis namespace', () => {
     expect(flat(es).sort()).toEqual(flat(en).sort());
-    for (const ns of ['live', 'today', 'feed', 'reports', 'visit', 'ai', 'portal', 'offline', 'time', 'needs', 'crisis', 'area']) expect(en).toHaveProperty(ns);
+    for (const ns of ['live', 'today', 'feed', 'reports', 'visit', 'ai', 'portal', 'offline', 'time', 'needs', 'crisis']) expect(en).toHaveProperty(ns);
   });
   it('no old brand strings remain and no value is empty', () => {
     const values = (o: Record<string, unknown>): string[] => Object.values(o).flatMap((v) => (v && typeof v === 'object' ? values(v as Record<string, unknown>) : [String(v)]));

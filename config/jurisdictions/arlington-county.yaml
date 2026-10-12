@@ -2,7 +2,7 @@ id: arlington-county
 name: Arlington County
 kind: county
 county_fips: "013"
-status: expansion       # activated 2026-10-12 to pre-populate VA-08 (config/coverage/va-08.yaml)
+status: expansion       # activated 2026-10-12
 boundary: {source: tigerweb, geoid: "51013"}
 school_divisions: [{vdoe_number: 7, name: Arlington County Public Schools, slug: arlington}]
 center: [38.8816, -77.1043]

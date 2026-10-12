@@ -5,12 +5,7 @@ import type { AISettings, User } from '../api/types';
 import en from '../i18n/locales/en.json';
 import es from '../i18n/locales/es.json';
 import {
-  AREA_BBOX,
-  areaFilters,
-  buildSearchQuery,
   DEFAULT_FILTERS,
-  filtersFromURL,
-  filtersToURL,
   FOOD_GROUPS,
   SERVICE_GROUPS,
   SERVICE_TYPES,
@@ -64,7 +59,6 @@ describe('needs chooser', () => {
   it('explorer chips are multi-select: needs add up and the search asks for places offering any of them', async () => {
     const { calls } = mockFetch([
       { path: '/api/resources/search', body: searchResponse() },
-      { path: '/api/coverage-areas', body: [] },
     ]);
     renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099&food_group=groceries', path: '/find' });
     await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' });
@@ -95,7 +89,6 @@ describe('needs chooser', () => {
   it('hides food filters once no food need is selected', async () => {
     const { calls } = mockFetch([
       { path: '/api/resources/search', body: searchResponse() },
-      { path: '/api/coverage-areas', body: [] },
     ]);
     renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099&food_group=groceries', path: '/find' });
     await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' });
@@ -116,7 +109,6 @@ describe('988 crisis callout', () => {
   it('appears in the explorer when Mental health is selected, with tel/sms links and no close button', async () => {
     mockFetch([
       { path: '/api/resources/search', body: searchResponse({ items: [] , total: 0}) },
-      { path: '/api/coverage-areas', body: [] },
     ]);
     renderApp(<ExplorerPage />, { route: '/find?service_group=mental_health', path: '/find' });
     const callout = await screen.findByTestId('crisis-callout');
@@ -130,7 +122,6 @@ describe('988 crisis callout', () => {
   it('is absent for other needs, and appears on a listing that offers crisis services', async () => {
     mockFetch([
       { path: '/api/resources/search', body: searchResponse() },
-      { path: '/api/coverage-areas', body: [] },
     ]);
     const { unmount } = renderApp(<ExplorerPage />, { route: '/find?service_group=legal', path: '/find' });
     await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' });
@@ -152,49 +143,9 @@ describe('988 crisis callout', () => {
   it('explorer shows the callout when a result offers mental health services', async () => {
     mockFetch([
       { path: '/api/resources/search', body: searchResponse({ items: [summary({ service_types: ['mental_health_counseling'] })] }) },
-      { path: '/api/coverage-areas', body: [] },
     ]);
     renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099', path: '/find' });
     expect(await screen.findByTestId('crisis-callout')).toBeInTheDocument();
-  });
-});
-
-describe('area view (Virginia 8th District)', () => {
-  it('areaFilters builds area=va-08 + bbox and round-trips through the URL', () => {
-    const f = { ...DEFAULT_FILTERS, lat: 1, lon: 2, ...areaFilters('va-08') };
-    const q = new URLSearchParams(buildSearchQuery(f, 25));
-    expect(q.get('area')).toBe('va-08');
-    expect(q.get('bbox')).toBe(AREA_BBOX['va-08'].join(','));
-    expect(q.get('lat')).toBeNull();
-    expect(q.get('sort')).toBe('name');
-    expect(filtersFromURL(filtersToURL(f)).area).toBe('va-08');
-    expect(filtersFromURL(new URLSearchParams('area=BAD id')).area).toBe('');
-  });
-
-  it('explorer: picking the district searches with area + bbox, paginates the list, and loads all pins for the map', async () => {
-    const page = (n: number) => Array.from({ length: n }, (_, i) => summary({ id: 100 + i, name: `Place ${i}` }));
-    const { calls } = mockFetch([
-      {
-        path: '/api/resources/search',
-        body: (url: URL) =>
-          url.searchParams.get('page_size') === '100'
-            ? searchResponse({ items: page(48), total: 48, page_size: 100 })
-            : searchResponse({ items: page(25), total: 48, page_size: 25 }),
-      },
-      { path: '/api/coverage-areas', body: [{ id: 'va-08', name: "Virginia's 8th Congressional District", localities: [], public_resources: 48 }] },
-    ]);
-    renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099', path: '/find' });
-    const select = await screen.findByLabelText('Area');
-    await screen.findByRole('option', { name: "Virginia's 8th Congressional District" });
-    await userEvent.selectOptions(select, 'va-08');
-    await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('area=va-08'));
-    await waitFor(() =>
-      expect(searchCalls(calls).some((p) => p.get('area') === 'va-08' && p.get('bbox') === '-77.24,38.6,-77.03,38.97' && p.get('page_size') === '25')).toBe(true),
-    );
-    expect(searchCalls(calls).some((p) => p.get('area') === 'va-08' && p.get('page_size') === '100')).toBe(true);
-    expect(await screen.findByRole('heading', { level: 1, name: "Help in Virginia's 8th Congressional District" })).toBeInTheDocument();
-    expect(await screen.findByText(/The map shows all 48 places/)).toBeInTheDocument();
-    expect(screen.getByRole('navigation', { name: 'Result pages' })).toBeInTheDocument();
   });
 });
 
@@ -270,7 +221,7 @@ describe('admin AI settings', () => {
 });
 
 describe('catalogs cover every new code', () => {
-  it('en and es label every service type, service group, need and the crisis/area/AI strings', () => {
+  it('en and es label every service type, service group, need and the crisis/AI strings', () => {
     for (const cat of [en, es] as Record<string, Record<string, unknown>>[]) {
       for (const code of Object.keys(SERVICE_TYPES)) expect(cat.serviceType).toHaveProperty(code);
       for (const g of SERVICE_GROUPS) expect(cat.serviceGroup).toHaveProperty(g);

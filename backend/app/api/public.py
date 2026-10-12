@@ -73,10 +73,9 @@ def search_resources(
     db: Session = Depends(get_db),
     lat: float | None = Query(None, ge=-90, le=90),
     lon: float | None = Query(None, ge=-180, le=180),
-    radius_km: float = Query(10, gt=0),
+    radius_km: float = Query(16.09, gt=0, description="Default is 10 miles"),
     bbox: str | None = Query(None, description="min_lon,min_lat,max_lon,max_lat (viewport search)"),
     jurisdiction: str | None = None,
-    area: str | None = Query(None, max_length=64, description="Coverage area id, e.g. va-08"),
     food_group: CSV = None,
     food_type: CSV = None,
     service_group: CSV = None,
@@ -113,7 +112,7 @@ def search_resources(
         if bad:
             raise HTTPException(422, f"unknown {name}: {bad}")
     params = SearchParams(
-        lat=lat, lon=lon, radius_km=radius_km, bbox=box, jurisdiction=jurisdiction, area=area, food_groups=fg, food_types=_split(food_type),
+        lat=lat, lon=lon, radius_km=radius_km, bbox=box, jurisdiction=jurisdiction, food_groups=fg, food_types=_split(food_type),
         service_groups=sg, service_types=_split(service_type), need_match=need_match, on_date=date_, open_today=open_today,
         upcoming_days=upcoming_days, eligibility=el, wheelchair=wheelchair, live_open=live_open, live_food_groups=lfg,
         language=language, sort=sort,
@@ -249,23 +248,6 @@ def jurisdictions(db: Session = Depends(get_db)):
          "center": (j.config or {}).get("center")}
         for j in rows if j.status != "disabled"
     ]
-
-
-@router.get("/coverage-areas")
-def coverage_areas(db: Session = Depends(get_db)):
-    from geoalchemy2 import Geometry
-    from sqlalchemy import cast
-
-    from app.models import CoverageArea
-
-    rows = db.scalars(select(CoverageArea).order_by(CoverageArea.name)).all()
-    out = []
-    for a in rows:
-        n = db.scalar(select(func.count()).select_from(Location).where(
-            public_visibility(), func.ST_Intersects(a.boundary, cast(Location.geom, Geometry))))
-        out.append({"id": a.id, "name": a.name, "kind": a.kind, "localities": (a.config or {}).get("localities", []),
-                    "public_resources": n, "source": a.source})
-    return out
 
 
 @router.get("/meta/verification")

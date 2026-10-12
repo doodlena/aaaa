@@ -99,11 +99,6 @@ export const CRISIS_SERVICE_TYPES = Object.keys(SERVICE_TYPES).filter((k) => SER
 export const offersCrisisServices = (serviceTypes: readonly string[] | null | undefined) =>
   (serviceTypes || []).some((s) => CRISIS_SERVICE_TYPES.includes(s));
 
-/** Coverage areas the explorer can show as a whole (GET /api/coverage-areas). bbox = min_lon,min_lat,max_lon,max_lat. */
-export const AREA_BBOX: Record<string, [number, number, number, number]> = {
-  'va-08': [-77.24, 38.6, -77.03, 38.97],
-};
-
 /**
  * Food filters (type of food, "on the shelf today") only make sense for food needs: hide them when every selected
  * need is a non-food one (e.g. Legal & immigration).
@@ -139,8 +134,6 @@ export interface Filters {
   radius_km: number;
   bbox: [number, number, number, number] | null;
   jurisdiction: string;
-  /** Coverage area id (e.g. va-08); always paired with that area's bbox. */
-  area: string;
   food_groups: string[];
   service_groups: string[];
   eligibility: string[];
@@ -160,10 +153,9 @@ export const DEFAULT_FILTERS: Filters = {
   lat: null,
   lon: null,
   label: '',
-  radius_km: milesToKm(5),
+  radius_km: milesToKm(10),
   bbox: null,
   jurisdiction: '',
-  area: '',
   food_groups: [],
   service_groups: [],
   eligibility: [],
@@ -207,7 +199,6 @@ export function filtersFromURL(sp: URLSearchParams): Filters {
     radius_km: radius && radius > 0 && radius <= 80 ? radius : DEFAULT_FILTERS.radius_km,
     bbox,
     jurisdiction: sp.get('jurisdiction') || '',
-    area: /^[a-z0-9-]{1,64}$/.test(sp.get('area') || '') ? (sp.get('area') as string) : '',
     food_groups: list(sp.get('food_group'), FOOD_GROUPS),
     service_groups: list(sp.get('service_group'), SERVICE_GROUPS),
     eligibility: list(sp.get('eligibility'), ELIGIBILITY_FILTERS),
@@ -233,7 +224,6 @@ export function filtersToURL(f: Filters): URLSearchParams {
   if (f.radius_km !== DEFAULT_FILTERS.radius_km) sp.set('radius_km', String(f.radius_km));
   if (f.bbox) sp.set('bbox', f.bbox.map(round).join(','));
   if (f.jurisdiction) sp.set('jurisdiction', f.jurisdiction);
-  if (f.area) sp.set('area', f.area);
   if (f.food_groups.length) sp.set('food_group', f.food_groups.join(','));
   if (f.service_groups.length) sp.set('service_group', f.service_groups.join(','));
   if (f.eligibility.length) sp.set('eligibility', f.eligibility.join(','));
@@ -258,7 +248,6 @@ export function buildSearchQuery(f: Filters, pageSize = 50): string {
   }
   if (f.bbox) sp.set('bbox', f.bbox.join(','));
   if (f.jurisdiction) sp.set('jurisdiction', f.jurisdiction);
-  if (f.area) sp.set('area', f.area);
   if (f.food_groups.length) sp.set('food_group', f.food_groups.join(','));
   if (f.service_groups.length) sp.set('service_group', f.service_groups.join(','));
   // Several needs are alternatives: show places that offer any of them (food groups together count as one need).
@@ -292,11 +281,6 @@ export function activeFilterCount(f: Filters): number {
     (f.live_open ? 1 : 0) +
     f.live_food_groups.length
   );
-}
-
-/** Filters for showing a whole coverage area (e.g. Virginia's 8th District): area id + its bbox, no radius. */
-export function areaFilters(area: string): Partial<Filters> {
-  return { area, bbox: AREA_BBOX[area] ?? null, lat: null, lon: null, label: '', jurisdiction: '', sort: 'name', page: 1 };
 }
 
 export function applyPreferences(f: Filters, p: SavedPreferences | undefined | null): Filters {

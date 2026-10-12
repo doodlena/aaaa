@@ -81,9 +81,11 @@ permission or direct provider verification before publication. Eligibility docum
 - OpenStreetMap coverage of NoVA pantries is very sparse (3 features). The adapter exists but is not enabled.
 - UI languages: English and Spanish are bundled; Chinese (Simplified), Vietnamese and Korean sit behind the "+" button
   in the language switcher and load on demand (`frontend/src/i18n/index.ts`). The three new catalogs were machine-written
-  and have not been reviewed by native speakers. They cover the public site only: admin and pantry-portal screens fall
-  back to English. Right-to-left languages (Arabic, Urdu, Farsi) are not supported yet (layout uses physical left/right,
+  and have not been reviewed by native speakers. All five catalogs have identical keys, including the admin and
+  pantry-portal screens (`language.test.tsx` enforces this). Right-to-left languages (Arabic, Urdu, Farsi) are not supported yet (layout uses physical left/right,
   and Arabic needs extra plural forms).
+- "What do you need?" chips in the explorer are multi-select. Several needs are sent with `need_match=any`, so results
+  are places that offer any of them (selected food groups together count as one need). The API default stays `all`.
 - No automated accessibility audit (axe) has been run. WCAG practices were applied and checked by hand.
 - Development environment notes: the Homebrew `node` 26.5 binary is broken (missing `libsimdjson`), so `/usr/local/bin`
   node 22 was used, with `npm_config_cache` pointed at a writable directory.
