@@ -1,0 +1,43 @@
+id: pwc-cmn-support-services
+name: Prince William County — Community Mobilization Network resource locations (non-food services)
+owner: Prince William County
+url: https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523
+adapter: pwc_cmn_resources
+retrieval: http
+formats: [arcgis-geojson]
+jurisdictions: [prince-william-county, manassas-city, manassas-park-city]
+enabled: true
+min_seconds_between_requests: 3
+cache_ttl_hours: 24
+store_raw: true
+publication: permitted_with_attribution
+verified_on: "2026-10-12"
+options:
+  query_url: https://services2.arcgis.com/0Q7l03Ls62VG0fy4/arcgis/rest/services/CMN_Public_Resource_Locations/FeatureServer/0/query
+  where: "Service_Category IN ('Mental Health Services','Counseling','Physical Health Services','Housing','Employment Services','Financial Assistance','Language Services','Immigration Services','Legal Services','Utilities','Peer Support Services','Substance Use Services','Transportation','Clothing Assistance','Health Insurance Enrollment Assistance','Crisis Intervention & Emergency Services','Pharmacy','Victim Services','Education & Training','Family Support & Resource Navigation')"
+  category_map:
+    Mental Health Services: mental_health_counseling
+    Counseling: mental_health_counseling
+    Peer Support Services: support_groups
+    Substance Use Services: substance_use_treatment
+    Crisis Intervention & Emergency Services: crisis_support
+    Physical Health Services: health_clinic
+    Pharmacy: prescription_help
+    Health Insurance Enrollment Assistance: medicaid_enrollment_help
+    Housing: housing_assistance
+    Utilities: utility_assistance
+    Financial Assistance: financial_assistance
+    Employment Services: job_training
+    Education & Training: job_training
+    Language Services: esl_classes
+    Immigration Services: immigration_legal_help
+    Legal Services: legal_aid
+    Transportation: transportation_help
+    Clothing Assistance: clothing
+    Victim Services: domestic_violence_support
+    Family Support & Resource Navigation: other
+known_limitations:
+  - "One service type per record, mapped from the county's Service_Category; descriptions kept verbatim."
+  - "Hotlines, faith-based, athletic, animal and other non-assistance categories are not imported."
+terms_notes: "Same county layer and disclaimer as pwc-cmn-resources (no reuse restriction stated). Attribute Prince William County."
+refresh: "0 5 * * 1"

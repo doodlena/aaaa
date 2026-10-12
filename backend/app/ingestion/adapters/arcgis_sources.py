@@ -207,8 +207,15 @@ class PWCCommunityMobilization(ScopedArcGIS):
         access = clean_text(d.get("How_to_Access_Services"))
         hours = clean_text(d.get("Hours_of_Service"), keep_lines=True)
         sched = [CandidateSchedule(**r) for r in parse_schedule_text(hours)]
-        codes = match_keywords(desc, SERVICE_KEYWORDS) or ["pantry_pickup"]
-        foods = food_types_from_text(desc)
+        cmap = self.config.options.get("category_map")
+        if cmap:
+            code = cmap.get(clean_text(d.get("Service_Category")) or "")
+            if not code:
+                raise ValueError(f"category not mapped: {d.get('Service_Category')}")
+            codes = [code]
+        else:
+            codes = match_keywords(desc, SERVICE_KEYWORDS) or ["pantry_pickup"]
+        foods = food_types_from_text(desc) if not cmap else []
         services = []
         for i, c in enumerate(dict.fromkeys(codes)):
             if c == "home_delivery":

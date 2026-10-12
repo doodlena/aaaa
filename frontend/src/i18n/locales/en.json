@@ -231,7 +231,8 @@
     "legal": "Legal and immigration",
     "work_learning": "Jobs and English classes",
     "family": "Family and children",
-    "transportation": "Transportation"
+    "transportation": "Transportation",
+    "pets": "Pets"
   },
   "serviceType": {
     "pantry_pickup": "Food pantry pickup",
@@ -275,7 +276,11 @@
     "esl_classes": "English classes (ESL)",
     "childcare": "Childcare",
     "domestic_violence_support": "Domestic violence support",
-    "transportation_help": "Help with transportation"
+    "transportation_help": "Help with transportation",
+    "pet_food": "Pet food",
+    "veterinary_care": "Low-cost or free vet care",
+    "pet_friendly_shelter": "Pet-friendly shelter",
+    "pet_supplies": "Pet supplies"
   },
   "offering": {
     "regular": "Regular",
@@ -1285,6 +1290,10 @@
     "transportation": {
       "label": "Transportation",
       "hint": "Rides to appointments"
+    },
+    "pets": {
+      "label": "Pets",
+      "hint": "Pet food, low-cost vet care"
     }
   },
   "crisis": {

@@ -221,6 +221,9 @@ SERVICE_KEYWORDS = {
     "legal_aid": [r"\blegal aid\b", r"\blegal services\b"],
     "esl_classes": [r"\besl\b", r"\benglish classes\b"],
     "job_training": [r"\bjob training\b", r"\bemployment services\b"],
+    "pet_food": [r"\bpet food\b", r"\b(dog|cat) food\b"],
+    "veterinary_care": [r"\b(low[- ]cost|free) (vet|veterinary)\b", r"\bveterinary (care|clinic)\b"],
+    "pet_friendly_shelter": [r"\bpet[- ]friendly shelter\b", r"\bshelter (that )?accepts? pets\b"],
 }
 
 

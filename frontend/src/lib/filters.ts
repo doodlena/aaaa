@@ -26,6 +26,7 @@ export const SERVICE_GROUPS = [
   'work_learning',
   'family',
   'transportation',
+  'pets',
   'other',
 ] as const;
 /** Service groups that are about food (vocab.py FOOD_SERVICE_GROUPS + non_food supplies handed out by pantries). */
@@ -87,6 +88,10 @@ export const SERVICE_TYPES: Record<string, string> = {
   childcare: 'family',
   domestic_violence_support: 'family',
   transportation_help: 'transportation',
+  pet_food: 'pets',
+  veterinary_care: 'pets',
+  pet_friendly_shelter: 'pets',
+  pet_supplies: 'pets',
   other: 'other',
 };
 /** Service types that should always show the 988 / 911 crisis callout. */

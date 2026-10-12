@@ -231,7 +231,8 @@
     "legal": "Ayuda legal e inmigración",
     "work_learning": "Empleo y clases de inglés",
     "family": "Familia y niños",
-    "transportation": "Transporte"
+    "transportation": "Transporte",
+    "pets": "Mascotas"
   },
   "serviceType": {
     "pantry_pickup": "Recogida en despensa",
@@ -275,7 +276,11 @@
     "esl_classes": "Clases de inglés (ESL)",
     "childcare": "Cuidado infantil",
     "domestic_violence_support": "Apoyo por violencia doméstica",
-    "transportation_help": "Ayuda con transporte"
+    "transportation_help": "Ayuda con transporte",
+    "pet_food": "Comida para mascotas",
+    "veterinary_care": "Atención veterinaria gratuita o de bajo costo",
+    "pet_friendly_shelter": "Albergue que acepta mascotas",
+    "pet_supplies": "Artículos para mascotas"
   },
   "offering": {
     "regular": "Regular",
@@ -1285,6 +1290,10 @@
     "transportation": {
       "label": "Transporte",
       "hint": "Viajes a citas"
+    },
+    "pets": {
+      "label": "Mascotas",
+      "hint": "Comida para mascotas, veterinario de bajo costo"
     }
   },
   "crisis": {

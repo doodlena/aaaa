@@ -103,6 +103,10 @@ SERVICE_TYPES = {
     "childcare": "family",
     "domestic_violence_support": "family",
     "transportation_help": "transportation",
+    "pet_food": "pets",
+    "veterinary_care": "pets",
+    "pet_friendly_shelter": "pets",
+    "pet_supplies": "pets",
     "other": "other",
 }
 FOOD_SERVICE_GROUPS = ("pantry", "walk_up", "drive_through", "mobile", "community_meal", "delivery", "emergency", "school",

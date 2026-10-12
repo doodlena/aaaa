@@ -30,6 +30,7 @@ export const NEEDS: Need[] = [
   { id: 'work_learning', icon: 'book', service_group: 'work_learning', food: false },
   { id: 'family', icon: 'family', service_group: 'family', food: false },
   { id: 'transportation', icon: 'bus', service_group: 'transportation', food: false },
+  { id: 'pets', icon: 'paw', service_group: 'pets', food: false },
 ];
 
 /** Filters patch for a need: replaces the need-related filters, keeps place/area. Non-food needs drop food filters. */

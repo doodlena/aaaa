@@ -231,7 +231,8 @@
     "legal": "Pháp lý và di trú",
     "work_learning": "Việc làm và lớp tiếng Anh",
     "family": "Gia đình và trẻ em",
-    "transportation": "Đi lại"
+    "transportation": "Đi lại",
+    "pets": "Thú cưng"
   },
   "serviceType": {
     "pantry_pickup": "Nhận thực phẩm tại điểm phát",
@@ -275,7 +276,11 @@
     "esl_classes": "Lớp tiếng Anh (ESL)",
     "childcare": "Giữ trẻ",
     "domestic_violence_support": "Hỗ trợ nạn nhân bạo lực gia đình",
-    "transportation_help": "Trợ giúp đi lại"
+    "transportation_help": "Trợ giúp đi lại",
+    "pet_food": "Thức ăn cho thú cưng",
+    "veterinary_care": "Chăm sóc thú y miễn phí hoặc giá rẻ",
+    "pet_friendly_shelter": "Nơi tạm trú cho phép mang thú cưng",
+    "pet_supplies": "Đồ dùng cho thú cưng"
   },
   "offering": {
     "regular": "Thường xuyên",
@@ -778,6 +783,10 @@
     "transportation": {
       "label": "Đi lại",
       "hint": "Đưa đón đến các cuộc hẹn"
+    },
+    "pets": {
+      "label": "Thú cưng",
+      "hint": "Thức ăn thú cưng, thú y giá rẻ"
     }
   },
   "crisis": {

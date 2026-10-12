@@ -35,7 +35,7 @@ describe('needs chooser', () => {
     renderApp(<HomePage />);
     const nav = screen.getByRole('navigation', { name: 'What do you need?' });
     const links = within(nav).getAllByRole('link');
-    expect(links).toHaveLength(13);
+    expect(links).toHaveLength(14);
     const href = (name: RegExp) => new URL(within(nav).getByRole('link', { name }).getAttribute('href')!, 'http://x');
     expect(href(/^Mental health and crisis/).searchParams.get('service_group')).toBe('mental_health');
     expect(href(/^Food/).searchParams.get('food_group')).toBe('groceries');

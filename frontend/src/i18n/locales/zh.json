@@ -231,7 +231,8 @@
     "legal": "法律和移民",
     "work_learning": "工作和英语课程",
     "family": "家庭和儿童",
-    "transportation": "交通"
+    "transportation": "交通",
+    "pets": "宠物"
   },
   "serviceType": {
     "pantry_pickup": "到发放站领取食物",
@@ -275,7 +276,11 @@
     "esl_classes": "英语课程（ESL）",
     "childcare": "托儿服务",
     "domestic_violence_support": "家庭暴力支持",
-    "transportation_help": "交通帮助"
+    "transportation_help": "交通帮助",
+    "pet_food": "宠物食品",
+    "veterinary_care": "免费或低价兽医服务",
+    "pet_friendly_shelter": "可携带宠物的庇护所",
+    "pet_supplies": "宠物用品"
   },
   "offering": {
     "regular": "常规",
@@ -778,6 +783,10 @@
     "transportation": {
       "label": "交通",
       "hint": "接送前往预约"
+    },
+    "pets": {
+      "label": "宠物",
+      "hint": "宠物食品、低价兽医"
     }
   },
   "crisis": {

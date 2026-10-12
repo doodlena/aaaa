@@ -231,7 +231,8 @@
     "legal": "법률 및 이민",
     "work_learning": "일자리와 영어 수업",
     "family": "가족과 아동",
-    "transportation": "교통"
+    "transportation": "교통",
+    "pets": "반려동물"
   },
   "serviceType": {
     "pantry_pickup": "팬트리 방문 수령",
@@ -275,7 +276,11 @@
     "esl_classes": "영어 수업(ESL)",
     "childcare": "보육",
     "domestic_violence_support": "가정 폭력 피해 지원",
-    "transportation_help": "교통 지원"
+    "transportation_help": "교통 지원",
+    "pet_food": "반려동물 사료",
+    "veterinary_care": "무료 또는 저렴한 동물 진료",
+    "pet_friendly_shelter": "반려동물 동반 가능 쉼터",
+    "pet_supplies": "반려동물 용품"
   },
   "offering": {
     "regular": "정기",
@@ -778,6 +783,10 @@
     "transportation": {
       "label": "교통",
       "hint": "예약 장소까지 차량 지원"
+    },
+    "pets": {
+      "label": "반려동물",
+      "hint": "반려동물 사료, 저렴한 동물병원"
     }
   },
   "crisis": {
