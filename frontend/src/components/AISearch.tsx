@@ -43,7 +43,7 @@ export function filtersFromAI(res: AISearchResult, base: Filters): Filters {
  * Optional "Describe what you need" box. Rendered only when the server enables AI search (features.ai.search).
  * Only the typed words are sent; the result is shown as normal, editable filters plus the AI's explanation.
  */
-export function AISearch({ compact = false }: { compact?: boolean }) {
+export function AISearch({ compact = false, hero = false }: { compact?: boolean; hero?: boolean }) {
   const ai = useAI();
   const { t, i18n } = useTranslation();
   const id = useId();
@@ -53,14 +53,14 @@ export function AISearch({ compact = false }: { compact?: boolean }) {
   const [q, setQ] = useState('');
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
-  const [open, setOpen] = useState(!compact);
+  const [open, setOpen] = useState(true);
   if (!ai.search) return null;
 
   const carried = (location.state as AIState | null) || null;
 
-  const onSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    const text = q.trim();
+  const onSubmit = async (e: FormEvent | null, override?: string) => {
+    e?.preventDefault();
+    const text = (override ?? q).trim();
     if (text.length < 3) {
       setMsg(t('ai.search.tooShort'));
       return;
@@ -82,7 +82,15 @@ export function AISearch({ compact = false }: { compact?: boolean }) {
   };
 
   return (
-    <div className={`aisearch ${compact ? 'aisearch--compact' : ''}`} data-testid="ai-search">
+    <div className={`aisearch ${compact ? 'aisearch--compact' : ''} ${hero ? 'aisearch--hero' : ''}`} data-testid="ai-search">
+      {hero && (
+        <div className="aisearch__hero-head">
+          <h2 className="aisearch__hero-title">
+            <Icon name="sparkle" size={22} /> {t('ai.search.heroTitle')} <span className="ai-badge">AI</span>
+          </h2>
+          <p className="aisearch__hero-lead">{t('ai.search.heroLead')}</p>
+        </div>
+      )}
       {carried?.aiExplanation && (
         <div className="aisearch__result" role="status">
           <Icon name="sparkle" size={16} />
@@ -101,7 +109,7 @@ export function AISearch({ compact = false }: { compact?: boolean }) {
         <form className="aisearch__form" onSubmit={onSubmit} aria-label={t('ai.search.label')}>
           <label htmlFor={`${id}-q`} className="aisearch__label">
             <Icon name="sparkle" size={16} />
-            {t('ai.search.label')} <span className="muted">({t('common.optional')})</span>
+            {hero ? t('ai.search.heroLabel') : t('ai.search.label')} {!hero && <span className="ai-badge">AI</span>}
           </label>
           <div className="search__row">
             <input
@@ -117,6 +125,15 @@ export function AISearch({ compact = false }: { compact?: boolean }) {
               {busy ? t('ai.search.working') : t('ai.search.submit')}
             </button>
           </div>
+          {hero && (
+            <div className="aisearch__examples" aria-label={t('ai.search.examplesLabel')}>
+              {(t('ai.search.examples', { returnObjects: true }) as string[]).map((ex) => (
+                <button key={ex} type="button" className="chip-btn" disabled={busy} onClick={() => { setQ(ex); void onSubmit(null, ex); }}>
+                  {ex}
+                </button>
+              ))}
+            </div>
+          )}
           <p id={`${id}-privacy`} className="aisearch__privacy">
             {t('ai.search.privacy')}
           </p>

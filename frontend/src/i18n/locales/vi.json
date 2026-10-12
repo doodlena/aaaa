@@ -602,7 +602,16 @@
     "reportsInfo": "Bất kỳ ai cũng có thể báo cáo vấn đề của một mục. Báo cáo được gửi đến điểm phát và người duyệt của chúng tôi; nếu có nhiều báo cáo tương tự, mục đó sẽ được đưa trở lại để xem xét.",
     "privacy5": "Báo cáo vấn đề chỉ lưu những gì bạn đã chọn và viết. Không lưu tên, tài khoản hay vị trí.",
     "privacy6": "Các tính năng AI, khi được bật, chỉ nhận những chữ bạn gõ. Vị trí và tài khoản của bạn không bao giờ được gửi đi.",
-    "labelReported": "Được nhập từ một danh sách công khai (xem phần Nguồn). Người duyệt của Lantern chưa kiểm tra — hãy gọi điện trước khi đi."
+    "labelReported": "Được nhập từ một danh sách công khai (xem phần Nguồn). Người duyệt của Lantern chưa kiểm tra — hãy gọi điện trước khi đi.",
+    "aiTitle": "How Lantern uses AI",
+    "aiLead": "Lantern uses Claude AI (by Anthropic) to make help easier to find and to keep listings up to date. AI never publishes anything on its own.",
+    "aiItems": [
+      "Ask Lantern AI: describe what you need in your own words (any language) and it builds the search for you.",
+      "Finding resources: AI reads official pages and flyers and turns them into listings. Every name, address, hour and requirement must appear word-for-word in the source, or it is thrown away.",
+      "For pantries: paste a Facebook post or flyer and AI fills in today's status or event for staff to check and post.",
+      "For reviewers: AI suggests structured hours and requirements, and helps spot duplicate listings. A person approves every change."
+    ],
+    "aiSafety": "Privacy: only the words you type (or public provider text) are sent to the AI. Never your location, name, or account."
   },
   "reviewStatus": {
     "candidate": "Ứng viên",
@@ -1076,7 +1085,18 @@
       "working": "Đang suy nghĩ…",
       "privacy": "Chỉ những chữ bạn gõ được gửi đến dịch vụ AI. Không gửi vị trí hay tài khoản của bạn.",
       "tooShort": "Hãy gõ vài từ về điều bạn cần.",
-      "rateLimited": "Hiện có quá nhiều lượt tìm bằng AI. Vui lòng dùng tìm kiếm thông thường và bộ lọc."
+      "rateLimited": "Hiện có quá nhiều lượt tìm bằng AI. Vui lòng dùng tìm kiếm thông thường và bộ lọc.",
+      "heroTitle": "Hỏi Lantern AI",
+      "heroLead": "Mô tả điều bạn cần bằng lời của bạn, bằng bất kỳ ngôn ngữ nào. Lantern sẽ tìm trong danh sách thật, có nguồn.",
+      "heroLabel": "Nhập câu hỏi của bạn",
+      "examplesLabel": "Thử một ví dụ",
+      "examples": [
+        "Thực phẩm miễn phí gần 22204 thứ Bảy, không cần giấy tờ",
+        "Người để nói chuyện về lo âu ở Arlington",
+        "Thức ăn cho chó ở Fairfax",
+        "Hỗ trợ trả tiền điện",
+        "Bữa ăn nóng tối nay ở Alexandria"
+      ]
     },
     "draft": {
       "title": "Dán thông báo của bạn",

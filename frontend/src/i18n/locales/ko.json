@@ -602,7 +602,16 @@
     "reportsInfo": "누구나 항목의 문제를 신고할 수 있습니다. 신고는 팬트리와 저희 검토자에게 전달되며, 비슷한 신고가 여러 건 들어오면 해당 항목은 다시 검토됩니다.",
     "privacy5": "문제 신고에는 선택하고 작성하신 내용만 저장됩니다. 이름, 계정, 위치는 저장되지 않습니다.",
     "privacy6": "AI 기능이 켜져 있을 때는 입력하신 글자만 전달됩니다. 위치와 계정은 절대 전송되지 않습니다.",
-    "labelReported": "공개 목록에서 가져왔습니다(출처 참조). Lantern 검토자가 아직 확인하지 않았습니다 — 가기 전에 전화하세요."
+    "labelReported": "공개 목록에서 가져왔습니다(출처 참조). Lantern 검토자가 아직 확인하지 않았습니다 — 가기 전에 전화하세요.",
+    "aiTitle": "How Lantern uses AI",
+    "aiLead": "Lantern uses Claude AI (by Anthropic) to make help easier to find and to keep listings up to date. AI never publishes anything on its own.",
+    "aiItems": [
+      "Ask Lantern AI: describe what you need in your own words (any language) and it builds the search for you.",
+      "Finding resources: AI reads official pages and flyers and turns them into listings. Every name, address, hour and requirement must appear word-for-word in the source, or it is thrown away.",
+      "For pantries: paste a Facebook post or flyer and AI fills in today's status or event for staff to check and post.",
+      "For reviewers: AI suggests structured hours and requirements, and helps spot duplicate listings. A person approves every change."
+    ],
+    "aiSafety": "Privacy: only the words you type (or public provider text) are sent to the AI. Never your location, name, or account."
   },
   "reviewStatus": {
     "candidate": "후보",
@@ -1076,7 +1085,18 @@
       "working": "생각하는 중…",
       "privacy": "입력하신 글자만 AI 서비스로 전송됩니다. 위치나 계정은 전송되지 않습니다.",
       "tooShort": "필요한 것을 몇 단어로 입력하세요.",
-      "rateLimited": "지금은 AI 검색이 너무 많습니다. 일반 검색과 필터를 이용해 주세요."
+      "rateLimited": "지금은 AI 검색이 너무 많습니다. 일반 검색과 필터를 이용해 주세요.",
+      "heroTitle": "Lantern AI에게 물어보세요",
+      "heroLead": "필요한 것을 어떤 언어로든 자유롭게 설명하세요. Lantern이 실제 출처가 있는 목록에서 찾아 드립니다.",
+      "heroLabel": "질문을 입력하세요",
+      "examplesLabel": "예시",
+      "examples": [
+        "토요일 22204 근처 무료 식료품, 신분증 없이",
+        "알링턴에서 불안에 대해 상담할 곳",
+        "페어팩스에서 강아지 사료",
+        "전기 요금 지원",
+        "오늘 저녁 알렉산드리아에서 따뜻한 식사"
+      ]
     },
     "draft": {
       "title": "공지 내용 붙여넣기",

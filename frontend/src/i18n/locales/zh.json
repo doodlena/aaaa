@@ -602,7 +602,16 @@
     "reportsInfo": "任何人都可以报告条目的问题。报告会发送给发放站和我们的审核员；如果收到多份类似的报告，该条目会被送回重新审核。",
     "privacy5": "问题报告只保存您选择和填写的内容。不保存姓名、账户或位置。",
     "privacy6": "AI 功能开启时，只会收到您输入的文字。您的位置和账户绝不会被发送。",
-    "labelReported": "从公开名单导入（见“来源”）。Lantern 审核员尚未核查——出发前请先打电话。"
+    "labelReported": "从公开名单导入（见“来源”）。Lantern 审核员尚未核查——出发前请先打电话。",
+    "aiTitle": "How Lantern uses AI",
+    "aiLead": "Lantern uses Claude AI (by Anthropic) to make help easier to find and to keep listings up to date. AI never publishes anything on its own.",
+    "aiItems": [
+      "Ask Lantern AI: describe what you need in your own words (any language) and it builds the search for you.",
+      "Finding resources: AI reads official pages and flyers and turns them into listings. Every name, address, hour and requirement must appear word-for-word in the source, or it is thrown away.",
+      "For pantries: paste a Facebook post or flyer and AI fills in today's status or event for staff to check and post.",
+      "For reviewers: AI suggests structured hours and requirements, and helps spot duplicate listings. A person approves every change."
+    ],
+    "aiSafety": "Privacy: only the words you type (or public provider text) are sent to the AI. Never your location, name, or account."
   },
   "reviewStatus": {
     "candidate": "候选",
@@ -1076,7 +1085,18 @@
       "working": "正在思考…",
       "privacy": "只有您输入的文字会发送给 AI 服务。不包括您的位置或账户。",
       "tooShort": "请用几个词描述您需要什么。",
-      "rateLimited": "目前 AI 搜索次数过多。请使用常规搜索和筛选。"
+      "rateLimited": "目前 AI 搜索次数过多。请使用常规搜索和筛选。",
+      "heroTitle": "问问 Lantern AI",
+      "heroLead": "用任何语言、用您自己的话描述需求。Lantern 会在有来源的真实名录中为您查找。",
+      "heroLabel": "输入您的问题",
+      "examplesLabel": "试试示例",
+      "examples": [
+        "周六22204附近免费食品，不需证件",
+        "阿灵顿有人可以聊聊焦虑",
+        "费尔法克斯的狗粮",
+        "帮助支付电费",
+        "今晚亚历山德里亚的热饭"
+      ]
     },
     "draft": {
       "title": "粘贴您的公告",

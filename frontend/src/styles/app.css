@@ -3567,3 +3567,20 @@ form.is-ai-drafted select {
     font-size: var(--fs-sm);
   }
 }
+
+/* --- Ask Lantern AI (hero) ----------------------------------------------------------------------------------------- */
+.ai-badge { display: inline-block; font: 700 11px/1 var(--font); letter-spacing: .06em; padding: 3px 6px; border-radius: 4px;
+  background: var(--mint, #7fd8b1); color: var(--ink, #10203d); vertical-align: middle; margin-left: 6px; }
+.aisearch--hero { margin-top: 20px; padding: 18px 20px; border-radius: 14px; background: rgba(255,255,255,.07);
+  border: 1px solid rgba(127,216,177,.45); max-width: 760px; }
+.aisearch--hero .aisearch__hero-title { display: flex; align-items: center; gap: 8px; margin: 0 0 4px; font-size: 1.35rem; color: #fff; }
+.aisearch--hero .aisearch__hero-lead { margin: 0 0 12px; color: rgba(255,255,255,.85); }
+.aisearch--hero .aisearch__label { color: #fff; }
+.aisearch--hero input { font-size: 1.05rem; padding: 14px; }
+.aisearch--hero .btn { background: var(--mint, #7fd8b1); color: var(--ink, #10203d); border-color: transparent; font-weight: 700; }
+.aisearch--hero .aisearch__privacy { color: rgba(255,255,255,.75); }
+.aisearch__examples { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.chip-btn { border: 1px solid rgba(127,216,177,.6); background: transparent; color: #fff; border-radius: 999px; padding: 6px 12px;
+  font: inherit; font-size: .9rem; cursor: pointer; min-height: 36px; }
+.chip-btn:hover, .chip-btn:focus-visible { background: rgba(127,216,177,.18); }
+.aisearch--compact .chip-btn { color: inherit; }

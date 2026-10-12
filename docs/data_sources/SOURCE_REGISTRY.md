@@ -42,3 +42,15 @@ submission). The published facts are then the provider's own, not a copy of the 
 The SHA-256 of every downloaded file is recorded in `data/research/raw/manifest.json` (raw files are git-ignored and
 re-downloadable). A small committed extract, `data/research/acs_2024_5yr_nova.json`, keeps the ACS step reproducible
 offline.
+
+## Publication decision (2026-10-12)
+
+The project owner chose to publish the Capital Area Food Bank (`cafb-get-help`) and Fairfax County
+(`fairfax-food-access`) listings, including in the committed snapshot (`data/snapshots/`), so families can find these
+resources. Before that decision, the original terms were recorded as follows:
+- **CAFB:** public ArcGIS item with no license.
+- **Fairfax County:** copyright notice; reproduction authorized for internal or personal use only.
+
+Every listing shows attribution and a link to its source. If either data owner objects, set
+`publication: permission_required` in its config. Then run `lantern export-snapshot` and commit: the records leave
+the public site and the snapshot. Asking both organizations for written permission is still recommended.

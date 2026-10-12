@@ -1,0 +1,4338 @@
+{
+ "_notice": "Snapshot of normalized records imported from source 'fairfax-food-access' (Fairfax County — Emergency Food Access Providers). Unverified candidates; see config/sources/ for attribution and terms.",
+ "source_id": "fairfax-food-access",
+ "records": [
+  {
+   "lat": 38.9667561971401,
+   "lon": -77.3534166334859,
+   "zip": "20190",
+   "city": "Reston",
+   "email": null,
+   "notes": "Please telephone the church office first. When you arrive at the church go through the front doors and wait in the entry hall.",
+   "phone": "(703) 437-6530",
+   "state": "VA",
+   "website": "https://www.stannes-reston.org",
+   "address1": "1700 WAINWRIGHT DR",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:30",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": 3,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "We provide groceries, fresh produce, food incidentals and diapers",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "694700a8-4a9c-41da-8d28-7d89b3ea5ce0",
+   "location_name": "St. Anne's Church, Reston",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Food distribution is the third Thursday of each month, from 11:30 am - 1:00 pm. At other days or times, please call the church office to make an appointment to pick up groceries. Every Tuesday between 11 a.m. and 1 p.m. pre-packaged bag of non-perishable food items is available by coming to the church and asking to be directed to the Food Pantry.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "St. Anne's of Reston Food Pantry",
+   "organization_website": "https://www.stannes-reston.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.968535465638,
+   "lon": -77.3425324807581,
+   "zip": "20190",
+   "city": "Reston",
+   "email": null,
+   "notes": "We are located in suite 120",
+   "phone": "(571) 323-1400",
+   "state": "VA",
+   "website": "https://www.cornerstonesva.org",
+   "address1": "11484 WASHINGTON PLZ W",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "16:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 5,
+       "week_of_month": 1,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet",
+      "emergency_food_packages"
+     ],
+     "description": "The Assistance Services And Pantry Program (ASAPP) provides vulnerable families and individuals with the supports they need to develop and maintain self-sufficiency. Program services include emergency food assistance, information and referrals, financial assistance for utilities, referrals to used clothing, holiday food and gifts. Cornerstones food pantry also manages the SNAP at Market program at the Reston Farmers Market.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "home_delivery",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "9bb5eb1e-a3d7-4271-8402-c0b8cacc981a",
+   "location_name": "Cornerstones, Assistance Services and Pantry Program",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Monday thru Thursday 8:30 am - 4:30 pm, Friday 8:30 am -1:00 pm, and First Saturday of each month 9:00 am - 1:00 pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Cornerstones, Inc.",
+   "organization_website": "https://www.cornerstonesva.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8606144389406,
+   "lon": -77.3326129174451,
+   "zip": "22030",
+   "city": "Fairfax",
+   "email": null,
+   "notes": "Suite 200, scheduled appointments only",
+   "phone": "(703) 273-8829",
+   "state": "VA",
+   "website": "https://britepaths.org",
+   "address1": "3959 PENDER DR",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "general_groceries",
+      "emergency_food_packages"
+     ],
+     "description": "Emergency Food Support - Britepaths takes referrals from local nonprofits, school social workers, and CSP to provide a $400 grocery gift card to families in a temporary crisis one time per fiscal year.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "27c3553b-9d68-486f-8ff4-410acfd0e0da",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "M - F 10 am - 2 pm or by appointment",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Britepaths",
+   "organization_website": "https://britepaths.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.883824054562,
+   "lon": -77.4430522031325,
+   "zip": "20151",
+   "city": "Chantilly",
+   "email": null,
+   "notes": "WFCM's Chantilly Free Food Market is located in Suite J at 4511 Daly Drive.",
+   "phone": "(703) 988-9656",
+   "state": "VA",
+   "website": "https://wfcmva.org",
+   "address1": "4511 DALY DR",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "14:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "14:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "14:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:30",
+       "closes": "19:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:30",
+       "closes": "19:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:30",
+       "closes": "19:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "14:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "14:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "14:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "prepared_meals",
+      "other_special_diet"
+     ],
+     "description": "Groceries, Diapers/Toiletries, Emergency assistance",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "home_delivery",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es",
+    "ko"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "2b618ec9-e880-43b5-8935-4f155403adeb",
+   "location_name": "Chantilly Free Food Market",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Monday, Tuesday, Thursday 10:30am - 2pm and 4:30pm - 7pm / Wednesday, Friday 10:30am - 2pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Western Fairfax Christian Ministries",
+   "organization_website": "https://wfcmva.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8382244896302,
+   "lon": -77.4347590643104,
+   "zip": "20121",
+   "city": "Centreville",
+   "email": null,
+   "notes": "Behind LIDL in Centreville Square 2; next to Girl Scout shop.",
+   "phone": "(703) 988-9656",
+   "state": "VA",
+   "website": "https://wfcmva.org",
+   "address1": "5948 CENTREVILLE CREST LN",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "15:00",
+       "closes": "19:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "14:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "14:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:30",
+       "closes": "19:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:30",
+       "closes": "19:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "prepared_meals",
+      "other_special_diet"
+     ],
+     "description": "Groceries, Diapers/toiletries, Emergency Assistance",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "4bf86b13-8072-4e14-8fc9-70e8bd790b05",
+   "location_name": "Centreville Free Food Market",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Monday 3:00pm - 7:00pm, Tuesday/Wednesday 10:30am - 2pm and 4:30pm - 7pm.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Western Fairfax Christian Ministries",
+   "organization_website": "https://wfcmva.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.968470505887,
+   "lon": -77.3391687391922,
+   "zip": "20190",
+   "city": "Reston",
+   "email": null,
+   "notes": "Our food pantry entrance is around the building where the playgrounds are. Please line up accordingly.",
+   "phone": "(833) 829-0756",
+   "state": "VA",
+   "website": "https://tzuchi.us/events/reston-va-food-pantry",
+   "address1": "1516 MOORINGS DR",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "11:00",
+       "weekday": 5,
+       "week_of_month": 1,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "11:00",
+       "weekday": 5,
+       "week_of_month": 3,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "We provide fresh, nutritious produce and dry goods to those in need.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es",
+    "zh"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "a22e59b7-dc01-43ca-8a63-39c3ab38975a",
+   "location_name": "Tzu Chi Food Pantry- Reston, VA",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Every First and Third Saturday of the Month from 10-11 AM",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Buddhist Tzu Chi Foundation Greater Washington DC Region",
+   "organization_website": "https://tzuchi.us/events/reston-va-food-pantry",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7801330999974,
+   "lon": -77.2776014999948,
+   "zip": "22015",
+   "city": "Burke",
+   "email": null,
+   "notes": null,
+   "phone": "(703) 455-7500",
+   "state": "VA",
+   "website": "https://www.abidingpresence.net/needhelp",
+   "address1": "6304 LEE CHAPEL RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "10:30",
+       "weekday": 5,
+       "week_of_month": 2,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "10:30",
+       "weekday": 5,
+       "week_of_month": 4,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet",
+      "meat",
+      "dairy",
+      "eggs",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "The Food Pantry offers fresh produce, meat, eggs, dairy and other groceries twice a month.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es",
+    "vi"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "1f4f6037-9bdf-44ae-803a-f82914b99e3e",
+   "location_name": "Abiding Presence Lutheran Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Twice a month on Second and Fourth Saturday from 8am-10:30am",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Abiding Presence Food Pantry",
+   "organization_website": "https://www.abidingpresence.net/needhelp",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8368938625017,
+   "lon": -77.2442309452401,
+   "zip": "22003",
+   "city": "Annandale",
+   "email": null,
+   "notes": "Go to the left of the church entrance to Door #2.",
+   "phone": "(703) 978-3500",
+   "state": "VA",
+   "website": "https://www.stmatthewsumc.org",
+   "address1": "8617 LITTLE RIVER TPKE",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "18:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "10:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples"
+     ],
+     "description": "groceries including non-perishables and perishables as available, diapers the first 2 weeks of the month and feminine hygiene products the following 2 weeks.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "d208937d-f1ef-4044-8267-60c40e8109a1",
+   "location_name": "Ken Jackson Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Monday 5-6:30 pm, Friday 9-10:30 am",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "St. Matthew's UMC",
+   "organization_website": "https://www.stmatthewsumc.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8267458085075,
+   "lon": -77.2130674483276,
+   "zip": "22003",
+   "city": "Annandale",
+   "email": null,
+   "notes": "Entrance at back of church building",
+   "phone": "(703) 256-8330",
+   "state": "VA",
+   "website": "https://annandalechurch.com",
+   "address1": "7901 HERITAGE DR",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples"
+     ],
+     "description": "Groceries weekly. Infant & adult diapers, feminine hygiene products, children's clothing once a month.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "9baf0509-422e-45cf-87ba-045ec090a090",
+   "location_name": "Annandale UMC Mission Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "4 p.m.-6:30 p.m.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Annandale United Methodist Church",
+   "organization_website": "https://annandalechurch.com",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7540579020254,
+   "lon": -77.0851326403711,
+   "zip": "22306",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Located between Service Master and Public Storage.",
+   "phone": "(703) 768-7106",
+   "state": "VA",
+   "website": "https://www.unitedcommunity.org/",
+   "address1": "7511 FORDSON RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "15:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "15:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet"
+     ],
+     "description": "Food assistance, diaper assistance, utility assistance, prescription/medication assistance, and dental referrals",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "home_delivery",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "6aeea443-55d2-47e7-8203-803a46f9bfeb",
+   "location_name": "Cynthia Hall Community Market",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Monday: 10am-1pm, Tuesday: 12pm-3pm, Wednesday 2pm-5pm, Thursday 12pm-3pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "United Community",
+   "organization_website": "https://www.unitedcommunity.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.6983020319829,
+   "lon": -77.2140667371268,
+   "zip": "22079",
+   "city": "Lorton",
+   "email": null,
+   "notes": null,
+   "phone": "(703) 339-5161",
+   "state": "VA",
+   "website": "https://www.lortonaction.org",
+   "address1": "9520 RICHMOND HWY",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:00",
+       "closes": "19:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "12:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet"
+     ],
+     "description": "Food, rent and utility assistance, vehicle repair assistance, programs and workshops",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "home_delivery",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "0fba99ad-9161-4a15-819a-f99e517d3523",
+   "location_name": "Lorton Community Action Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Food Distributions are Tuesdays 4pm-7pm; Wednesdays 11am-5pm; Thursdays 10am-12pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Lorton Community Action Center",
+   "organization_website": "https://www.lortonaction.org",
+   "raw_eligibility_text": "Contact client services to register - 703-339-5161",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8997207530287,
+   "lon": -77.4429238761936,
+   "zip": "20151",
+   "city": "Chantilly",
+   "email": null,
+   "notes": "From Route 28 take the 50 West exit for Winchester,VA. Then take the 1st right at the light.",
+   "phone": "(703) 378-6880",
+   "state": "VA",
+   "website": "https://www.chantillybaptist.org",
+   "address1": "14312 CHANTILLY BAPTIST LN",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:30",
+       "closes": "15:30",
+       "weekday": 1,
+       "week_of_month": 4,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "pantry_staples",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Fresh produce, non-perishable food items, protein",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "e1744ec9-2b8f-44f0-8d90-c16efda56757",
+   "location_name": "CBC Blesses Mobile Market",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "4th Tuesday of each month from 1:30-3:30pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Chantilly Baptist Church",
+   "organization_website": "https://www.chantillybaptist.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7776413926711,
+   "lon": -77.1923809112867,
+   "zip": "22150",
+   "city": "Springfield",
+   "email": null,
+   "notes": "Enter via the second entrance. Clients park at the first parking lot. Ring bell at door 2. Donors drive around the building and stop at door 6.",
+   "phone": "(703) 569-9160",
+   "state": "VA",
+   "website": "https://www.echo-inc.org",
+   "address1": "7205 OLD KEENE MILL RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "12:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "12:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "12:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "12:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "12:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "19:00",
+       "closes": "21:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "19:00",
+       "closes": "21:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet"
+     ],
+     "description": "Food, clothing, household items, limited financial assitance for housing, utilities or other vital expenses, school supplies, NOVA scholarships, holiday meals and gifts for children.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "f574823d-9609-4dc1-81f4-70e0c14190b5",
+   "location_name": "ECHO",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Monday thru Friday 9:30 am-12:30 pm. Tuesday and Thursday 7pm-9pm. First Saturday of the month 9:30 am -noon.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "ECHO, Inc.",
+   "organization_website": "https://www.echo-inc.org",
+   "raw_eligibility_text": "Portions of 22150 (west of I-95) and 22312",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8704815734486,
+   "lon": -77.1485775043909,
+   "zip": "22044",
+   "city": "Falls Church",
+   "email": null,
+   "notes": null,
+   "phone": "(703) 239-3575",
+   "state": "VA",
+   "website": "https://comunidadva.org",
+   "address1": "6131 WILLSTON DR",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "10:00",
+       "weekday": 5,
+       "week_of_month": 3,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Fresh produce",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "e7a2b88b-f31e-427f-8a0a-6dbd6876cea2",
+   "location_name": "Willston Multicultural Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "3rd Saturday of each month from 8:00-10:00am",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Comunidad",
+   "organization_website": "https://comunidadva.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8047094497838,
+   "lon": -77.1671488681629,
+   "zip": "22312",
+   "city": "Alexandria",
+   "email": null,
+   "notes": null,
+   "phone": "(571) 575-3707",
+   "state": "VA",
+   "website": null,
+   "address1": "5515 CHEROKEE AVE",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "12:00",
+       "weekday": 5,
+       "week_of_month": 4,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Fresh produce",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "da837fdc-c517-4530-8b13-4ea975b26df7",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "4th Saturday of each month from 10:00am-12:00pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Maranatha Springfield Church",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8532817824034,
+   "lon": -77.1362968427711,
+   "zip": "22041",
+   "city": "Falls Church",
+   "email": null,
+   "notes": "Located in the parking lot",
+   "phone": "(703) 820-5131",
+   "state": "VA",
+   "website": "https://www.capitalareafoodbank.org",
+   "address1": "3400 CHARLES ST",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": 2,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "pantry_staples",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Free fresh produce with occasional dry goods",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "de222610-c45b-4d15-8370-45f24afe4cdb",
+   "location_name": "CAFB Mobile Market",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "2nd Friday of the month from11:00am-1:00pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Culmore United Methodist Church",
+   "organization_website": "https://www.capitalareafoodbank.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8741797948575,
+   "lon": -77.173338065465,
+   "zip": "22042",
+   "city": "Falls Church",
+   "email": null,
+   "notes": "Enter through the main entrance and ask reception for room location",
+   "phone": "(703) 534-3387",
+   "state": "VA",
+   "website": "https://www.capitalareafoodbank.org",
+   "address1": "2855 ANNANDALE RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "14:00",
+       "weekday": 0,
+       "week_of_month": 2,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "pantry_staples",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Free fresh produce with occasional dry goods",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es",
+    "vi"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "34f0c749-3cdd-4104-8d36-7d4aa7d4e26c",
+   "location_name": "CAFB Mobile Market",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "2nd Monday of the month from 1:00-2:00pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "James Lee Community Center",
+   "organization_website": "https://www.capitalareafoodbank.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8364612162731,
+   "lon": -77.203813300182,
+   "zip": "22003",
+   "city": "Annandale",
+   "email": null,
+   "notes": "Distribution occurs in the back of the parking lot",
+   "phone": "(703) 772-3132",
+   "state": "VA",
+   "website": "https://www.capitalareafoodbank.org",
+   "address1": "4100 WADSWORTH CT, APT 1-204",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "11:00",
+       "weekday": 3,
+       "week_of_month": 1,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "pantry_staples",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Free fresh produce with occasional dry goods",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "d2aabb48-e4ef-4553-8b48-55ba2b5d5c49",
+   "location_name": "Fairmont Gardens Apartments",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "1st Thursday of the month from 9:00-11:00am",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Legal Aid Justice Center",
+   "organization_website": "https://www.capitalareafoodbank.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8512756874773,
+   "lon": -77.1429930728675,
+   "zip": "22041",
+   "city": "Falls Church",
+   "email": null,
+   "notes": "Distribution occurs in the parking lot",
+   "phone": "(703) 778-3450",
+   "state": "VA",
+   "website": "https://www.capitalareafoodbank.org",
+   "address1": "6101 KNOLLWOOD DR",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "11:00",
+       "weekday": 0,
+       "week_of_month": 1,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "pantry_staples",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Free fresh produce with occasional dry goods",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "59631d58-4a1e-407f-892e-a45460b26827",
+   "location_name": "Culmore Community Library",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "First Monday of the month from 9:00am-11:00am",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Legal Aid Justice Center",
+   "organization_website": "https://www.capitalareafoodbank.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8711097970923,
+   "lon": -77.2377459505723,
+   "zip": "22031",
+   "city": "Fairfax",
+   "email": null,
+   "notes": "The entrance labeled My Market is at the far end of the building from Prosperity Avenue.",
+   "phone": "(703) 207-9173",
+   "state": "VA",
+   "website": "https://foodforothers.org",
+   "address1": "2942 PROSPERITY AVE",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples"
+     ],
+     "description": "Groceries",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "No",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "80672fb8-4a28-4db3-8ce3-2aed706ddd0d",
+   "location_name": "My Market - USDA Program",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Monday - Friday 9:30 am - 5 pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8711097970923,
+   "lon": -77.2377459505723,
+   "zip": "22031",
+   "city": "Fairfax",
+   "email": null,
+   "notes": "My Market is located at the far end of the building from Prosperity Avenue.",
+   "phone": "(703) 207-9173",
+   "state": "VA",
+   "website": "https://foodforothers.org",
+   "address1": "2942 PROSPERITY AVE",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples"
+     ],
+     "description": "Groceries",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "No",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "22f07ac0-93a5-43dd-8962-ec9055de1a7e",
+   "location_name": "My Market - Emergency Referral Program",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Monday - Friday 9:30 am - 5 pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8578341197479,
+   "lon": -77.1419067667501,
+   "zip": "22041",
+   "city": "Falls Church",
+   "email": null,
+   "notes": "Big gray building with plenty of parking in the back",
+   "phone": "(703) 538-2190",
+   "state": "VA",
+   "website": "https://www.bpsos.org",
+   "address1": "6066 LEESBURG PIKE",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "16:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet"
+     ],
+     "description": "Free food distribution",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "vi"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "No",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "19ada7b4-9663-4c21-83e9-dfa2c1432f09",
+   "location_name": "Boat People SOS, Inc.",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Every other Friday, from 2pm to 4pm.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Boat People SOS, Inc.",
+   "organization_website": "https://www.bpsos.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7743955006691,
+   "lon": -77.2835618524244,
+   "zip": "22015",
+   "city": "Burke",
+   "email": null,
+   "notes": "On location at The Foundry Church",
+   "phone": "(703) 455-7041",
+   "state": "VA",
+   "website": "https://www.thefoundrychurch.com",
+   "address1": "9800 OLD KEENE MILL RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "09:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "prepared_meals",
+      "other_special_diet"
+     ],
+     "description": "Weekly distribution of groceries to supplement local needs",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "1644fbcb-4191-4c92-8ea3-1ace75da694b",
+   "location_name": "The Foundry Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Thursday 8:30am-9:30am. Closed Thanksgiving. See website for additional information",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "The Foundry Church",
+   "organization_website": "https://www.thefoundrychurch.com",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7416979999987,
+   "lon": -77.0915899999974,
+   "zip": "22306",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "We operate in the parking lot of the Community Center.",
+   "phone": "(571) 384-8845",
+   "state": "VA",
+   "website": "https://www.arcadiafood.org",
+   "address1": "7950 AUDUBON AVE",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "13:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Farmers' Market Food",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "8c6e2f82-bd06-4168-86a0-290fb597937c",
+   "location_name": "Hybla Valley Community Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Saturday 11am - 1pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arcadia Center for Sustainable Food & Agriculture",
+   "organization_website": "https://www.arcadiafood.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7515816173789,
+   "lon": -77.0822007467407,
+   "zip": "22306",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "The building has big sign board Saying ICNA Relief",
+   "phone": "(866) 354-0102",
+   "state": "VA",
+   "website": "https://icnarelief.org",
+   "address1": "2912 WOODLAWN TRL",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "16:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet",
+      "meat",
+      "halal"
+     ],
+     "description": "Groceries, Halal Meat, Diappers, Financial Help, Free basic health services, Behavioral Health Counselling, Back To School Supplies,",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "home_delivery",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "ar",
+    "fa",
+    "ur"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "58520489-d6b5-4c29-82a7-4458a4e909a1",
+   "location_name": "ICNA Relief office Alexandria",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Thursdays, 10:00 am - 4:00 pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "ICNA Relief USA Programs Inc",
+   "organization_website": "https://icnarelief.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8644368695412,
+   "lon": -77.2484229988042,
+   "zip": "22031",
+   "city": "Fairfax",
+   "email": null,
+   "notes": "Church",
+   "phone": "(202) 415-9757",
+   "state": "VA",
+   "website": "https://www.foodjusticedmv.org/",
+   "address1": "3110 CHICHESTER LN",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "11:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet",
+      "culturally_specific",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Groceries; culturally appropriate pantry staples, fresh produce, diapers, formula, menstrual products",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "home_delivery",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "55cbbd93-d63e-4e82-839c-1400afa6b3f4",
+   "location_name": "Fairfax Circle Church - 3110 Chichester Ln",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Tuesdays from 9:30-11:30am",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Food Justice DMV",
+   "organization_website": "https://www.foodjusticedmv.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.856748799998,
+   "lon": -77.1377954999961,
+   "zip": "22041",
+   "city": "Falls Church",
+   "email": null,
+   "notes": "3305 Glen Carlyn Rd, Falls Church VA 22041",
+   "phone": "(703) 820-7111",
+   "state": "VA",
+   "website": "https://www.stanthonyparish.org",
+   "address1": "3303 GLEN CARLYN RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples"
+     ],
+     "description": "Groceries",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "No",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "7a753305-8db0-4d06-8adb-8adabda71555",
+   "location_name": "St Anthony Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "10:00 am-1:00 pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "St. Anthony Church",
+   "organization_website": "https://www.stanthonyparish.org",
+   "raw_eligibility_text": "Walk-in only Wednesdays",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7234186655061,
+   "lon": -77.118070670208,
+   "zip": "22309",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Half mile from Fairfax County Government Center in Alexandria off Richmond Hwy",
+   "phone": "(571) 481-1896",
+   "state": "VA",
+   "website": null,
+   "address1": "8631A ENGLESIDE OFFICE PARK",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "05:30",
+       "closes": "14:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "14:00",
+       "weekday": 6,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries"
+     ],
+     "description": "Food Provision",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "home_delivery",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "No",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "3d179d23-127a-40e7-8073-cefe44c0960d",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Saturdays 5:30am to 2pm, Sundays 1pm to 2pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Royal Missionary Baptist Church",
+   "organization_website": null,
+   "raw_eligibility_text": "No",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.9080630517117,
+   "lon": -77.4037072981686,
+   "zip": "20171",
+   "city": "Herndon",
+   "email": null,
+   "notes": "We share a driveway with Kindercare. Line up in your car and pull forward as directed.",
+   "phone": "(703) 620-1977",
+   "state": "VA",
+   "website": "https://www.cofumc.org/food-pantry",
+   "address1": "13224 FRANKLIN FARM RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:00",
+       "closes": "18:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet",
+      "meat",
+      "frozen_foods",
+      "bread",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Frozen meat, refrigerated items (salads, sandwiches, etc.), produce, bread, and non-perishable items all prepackaged in a box and distributed curbside",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "32fc8d66-2509-4115-8ee5-8f52bc98324e",
+   "location_name": "Community of Faith United Methodist Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Tuesday 4:00-6:00 p.m.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Community of Faith Food Pantry",
+   "organization_website": "https://www.cofumc.org/food-pantry",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7820880761274,
+   "lon": -77.1444713776647,
+   "zip": "22310",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "On the grounds of the Franconia United Methodist Church",
+   "phone": "(703) 971-1991",
+   "state": "VA",
+   "website": "https://koinoniacares.org",
+   "address1": "6037 FRANCONIA RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "12:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "12:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "12:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "12:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "12:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "prepared_meals",
+      "other_special_diet"
+     ],
+     "description": "groceries",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Must live in service area",
+     "requirement_type": "residency"
+    }
+   ],
+   "external_id": "d5857022-ea5f-448b-82b7-9bdab65dd91d",
+   "location_name": "The Koinonia Foundation",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Monday 9am-12:30pm, 4pm-7:30pm, Tuesday 9am-12:30pm, Wednesday 9am-12:30pm, Thursday 9am-12pm, 1pm-4:30pm, Friday 9am-12:30pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "The Koinonia Foundation",
+   "organization_website": "https://koinoniacares.org",
+   "raw_eligibility_text": "Must live in service area",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8224943395795,
+   "lon": -77.3162663622343,
+   "zip": "22030",
+   "city": "Fairfax",
+   "email": null,
+   "notes": "Door 1",
+   "phone": "(703) 385-8700",
+   "state": "VA",
+   "website": null,
+   "address1": "4915 OX RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "15:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "15:00",
+       "weekday": 0,
+       "week_of_month": 4,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet"
+     ],
+     "description": "Social Services, Emergency Assistance, Food Distribution, After School Program",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "bbe64ca1-302f-47ae-8599-659c5a0473a4",
+   "location_name": "Fairfax Salvation Army",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Wed 9am-3pm; 4th Monday 12-3pm drive thru dist.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Salvation Army Fairfax",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.9365200000031,
+   "lon": -77.1748920000013,
+   "zip": "22101",
+   "city": "Mclean",
+   "email": null,
+   "notes": "Entrance number 8",
+   "phone": "(703) 229-1414",
+   "state": "VA",
+   "website": "https://www.shareofmclean.org/",
+   "address1": "1367 CHAIN BRIDGE RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet"
+     ],
+     "description": "Groceries, emergency assistance, clothing room, and furniture",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es",
+    "fa"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "672795e6-490e-4ad0-8c62-40301c5388e3",
+   "location_name": "McLean Baptist Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "9:30am-12:00pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Share of McLean",
+   "organization_website": "https://www.shareofmclean.org/",
+   "raw_eligibility_text": "Part of 22043 is eligible. Call for more info",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8195374350785,
+   "lon": -77.4457145917765,
+   "zip": "20121",
+   "city": "Centreville",
+   "email": null,
+   "notes": "Saturday location- back parking lot",
+   "phone": "(703) 830-8769",
+   "state": "VA",
+   "website": "https://Www.mountolive-church.org",
+   "address1": "6600 OLD CENTREVILLE RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "14:00",
+       "weekday": 1,
+       "week_of_month": 2,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "09:45",
+       "weekday": 1,
+       "week_of_month": 2,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Bagged groceries, protect, and produce",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "No",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "36b92e65-765b-4b25-80b4-0b0077cff382",
+   "location_name": "Mount Olive Baptist Church. Centreville",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "2nd Tuesday 1-2pm. 3rd Saturday 9-9:45am",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Mount Olive Baptist Church",
+   "organization_website": "https://Www.mountolive-church.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.9427507448067,
+   "lon": -77.4169679595687,
+   "zip": "20171",
+   "city": "Herndon",
+   "email": null,
+   "notes": "Follow volunteer instructions to enter the drive up line in the top parking lot.",
+   "phone": "(703) 793-0026",
+   "state": "VA",
+   "website": "https://florisumc.org",
+   "address1": "13600 FRYING PAN RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "pantry_staples",
+      "other_special_diet",
+      "general_groceries"
+     ],
+     "description": "Groceries",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "No",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "c581979d-078d-4c77-8463-1c8c4004e987",
+   "location_name": "Floris UMC",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "1st Saturday of the month; 8-9 a.m.; will not operate July 2025",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Floris UMC",
+   "organization_website": "https://florisumc.org",
+   "raw_eligibility_text": "Some food avail for those not meeting income req",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7840900098811,
+   "lon": -77.2807016117835,
+   "zip": "22015",
+   "city": "Burke",
+   "email": null,
+   "notes": "The Co-op entrance has a green awning and is located along the side of the church.",
+   "phone": "(703) 250-6100",
+   "state": "VA",
+   "website": "https://www.burkeumc.org/co-op",
+   "address1": "6200 BURKE CENTRE PKWY",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "14:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:00",
+       "closes": "19:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "10:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples"
+     ],
+     "description": "Food Pantry, emergency assistance, school supplies, holiday gifts",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Must reside in Fairfax, Burke, or Springfield",
+     "requirement_type": "residency"
+    }
+   ],
+   "external_id": "c30bf32e-7ab2-407a-8f11-fe29e2fe01f6",
+   "location_name": "Burke Gives Back Community Co-op",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Tuesday 1:00-2:00pm; Thursday 6:00-7:00pm; Saturday 9:00-10:00am",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Burke United Methodist Church",
+   "organization_website": "https://www.burkeumc.org/co-op",
+   "raw_eligibility_text": "Must reside in Fairfax, Burke, or Springfield",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.9417363418913,
+   "lon": -77.3656599118188,
+   "zip": "20191",
+   "city": "Reston",
+   "email": null,
+   "notes": "The distribution happens in the parking lot in front of the community center.",
+   "phone": "(202) 984-2912",
+   "state": "VA",
+   "website": "https://www.capitalareafoodbank.org/",
+   "address1": "12125 PINECREST RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "10:30",
+       "weekday": 5,
+       "week_of_month": 2,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Free fresh produce with occasional dry/canned goods",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es",
+    "ko",
+    "vi",
+    "zh"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "52bf8dd0-55e1-4bab-82ff-8aab67449cc0",
+   "location_name": "Cathy Hudgins Community Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Second Saturday of the month from 8:30 - 10:30am",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Capital Area Food Bank",
+   "organization_website": "https://www.capitalareafoodbank.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.9849525964735,
+   "lon": -77.3763087007081,
+   "zip": "20170",
+   "city": "Herndon",
+   "email": null,
+   "notes": "We deliver food and do not provide it onsite. We deliver to Herndon (20170/20171) and Sterling (east of Rte. 28)",
+   "phone": "(703) 437-1776",
+   "state": "VA",
+   "website": "https://www.linkagainsthunger.org",
+   "address1": "701 BENNETT ST",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet"
+     ],
+     "description": "Home delivery of groceries",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "home_delivery",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "ar",
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "93ec460c-da41-4ee1-8682-a4be5bd44b2e",
+   "location_name": "LINK Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "We deliver to clients from 1pm - 6 pm.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "LINK Incorporated",
+   "organization_website": "https://www.linkagainsthunger.org",
+   "raw_eligibility_text": "We also serve Sterling, VA",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8552684610954,
+   "lon": -77.3625338810295,
+   "zip": "22035",
+   "city": "Fairfax",
+   "email": null,
+   "notes": "No pickup at this location; must pre-enroll by calling 703-324-5409.",
+   "phone": "(703) 324-5409",
+   "state": "VA",
+   "website": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
+   "address1": "12011 GOVERNMENT CENTER PKWY",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "prepared_meals"
+     ],
+     "description": "Home Delivered Meals are provided to homebound adults, ages 60+ or adults with a disability, who are unable to prepare their own meals and have no able-bodied caregivers in the home.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "home_delivery",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es",
+    "ko",
+    "ur",
+    "vi"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "42ed5b4b-ad2d-4172-89de-890c82f9fa8c",
+   "location_name": "Fairfax County Home Delivered Meals",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "8am-4:30pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Fairfax County Home Delivered Meals",
+   "organization_website": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7340375588893,
+   "lon": -77.1016002898564,
+   "zip": "22309",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Located on the corner of Russell Rd and Main St off off Richmond Highway. Across the street from the Aldi's.",
+   "phone": "(703) 360-1976",
+   "state": "VA",
+   "website": "https://www.risinghopeumc.org",
+   "address1": "8220 RUSSELL RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "prepared_meals",
+      "other_special_diet"
+     ],
+     "description": "homeless services, lunch program, free food market, emergency assistance",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "3a804c69-523b-46f0-8ef2-e68c38633289",
+   "location_name": "Rising Hope Mission Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "1:30 pm - 4:30 pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Rising Hope Mission",
+   "organization_website": "https://www.risinghopeumc.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.9080630517123,
+   "lon": -77.4037072981699,
+   "zip": "20171",
+   "city": "Herndon",
+   "email": null,
+   "notes": "We share a driveway with Kindercare. At distribution remain in your vehicle and a box of food will be placed in your trunk or on your seat.",
+   "phone": "(703) 620-1977",
+   "state": "VA",
+   "website": "https://www.cofumc.org/food-pantry",
+   "address1": "13224 FRANKLIN FARM RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "pantry_staples",
+      "general_groceries",
+      "meat",
+      "frozen_foods",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Groceries including fresh produce, refrigerated items, frozen meat",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "f4920907-5638-4b69-86cb-76c8d8602891",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "4:00-6:00 p.m.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Grains of Hope",
+   "organization_website": "https://www.cofumc.org/food-pantry",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8098214048925,
+   "lon": -77.2628194080932,
+   "zip": "22015",
+   "city": "Burke",
+   "email": null,
+   "notes": "Distribution occurs in church parking lot",
+   "phone": "(703) 978-8724",
+   "state": "VA",
+   "website": "https://www.ststephensfairfax.org/get-involved/food-clothing-donations/",
+   "address1": "9203 BRADDOCK RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "pantry_staples",
+      "other_special_diet"
+     ],
+     "description": "twice monthly distribution. Grace Ministries - 4th Sat of the month. Free distribution of food and diapers and also clothing 7 AM.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "ar",
+    "es",
+    "ko"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "2e67ee5a-25b7-47ef-8a6b-13a331a6ed9c",
+   "location_name": "Same as above",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "4th Saturday of the month from 7:00 am until food is gone and 1st Friday of the month from 5:00pm until food is gone",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "St Stephens United Methodist Church",
+   "organization_website": "https://www.ststephensfairfax.org/get-involved/food-clothing-donations/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7780688278268,
+   "lon": -77.1642652420148,
+   "zip": "22150",
+   "city": "Springfield",
+   "email": null,
+   "notes": null,
+   "phone": "(973) 464-5262",
+   "state": "VA",
+   "website": "https://www.thejourneynova.org",
+   "address1": "6427 FRANCONIA RD",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "13:00",
+       "weekday": 5,
+       "week_of_month": 2,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Fresh produce, free of charge. There are no income restrictions or other qualifications",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "e433a0b0-44fe-40aa-87a0-beaebab7f813",
+   "location_name": "The Journey",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Second Saturday of the month, 11am-1pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "The Journey",
+   "organization_website": "https://www.thejourneynova.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8557887251907,
+   "lon": -77.1412940690779,
+   "zip": "22041",
+   "city": "Falls Church",
+   "email": null,
+   "notes": "You can easily find our office by looking for the green tent at the entrance. You will also see a sign with the name Culmore Family Resource Center at the entrance.",
+   "phone": "(703) 379-5217",
+   "state": "VA",
+   "website": "https://second-story.org/",
+   "address1": "3304 CULMORE CT",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "14:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "14:00",
+       "weekday": 3,
+       "week_of_month": 1,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "baby_formula",
+      "infant_food",
+      "general_groceries",
+      "pantry_staples",
+      "other_special_diet"
+     ],
+     "description": "Our food distribution takes place every Thursday from 1:00 p.m. to 2:00 p.m. In addition, on the first Thursday of each month, we also have a pet food distribution during the same hours, from 1:00 p.m. to 2:00 p.m. At the same location, we have a community clothing bazaar open Monday through Friday from 10:00 a.m. to 6:00 p.m.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "5842b469-dafc-4de4-8ef1-adb86cef0fd1",
+   "location_name": "Food Distribution",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Our food distribution takes place every Thursday from 1:00 p.m. to 2:00 p.m. In addition, on the first Thursday of each month, we also have a pet food distribution during the same hours, from 1:00 p.m. to 2:00 p.m.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Second Story",
+   "organization_website": "https://second-story.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8386382203696,
+   "lon": -77.2580574812573,
+   "zip": "22031",
+   "city": "Fairfax",
+   "email": null,
+   "notes": "Go to back parking lot-Door 8 and ring bell",
+   "phone": "(703) 978-3934",
+   "state": "VA",
+   "website": "https://www.providencechurch.org",
+   "address1": "9019 LITTLE RIVER TPKE",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples"
+     ],
+     "description": "Two bags of groceries are provided",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "f6cd6150-2804-40a1-88db-280e31fdcb51",
+   "location_name": "Providence Presbyterian Church-Door 8 back parking lot",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "12-2 pm Wednesday and 6pm to 7:30pm Thursday",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Providence Presbyterian Church",
+   "organization_website": "https://www.providencechurch.org",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8726932978276,
+   "lon": -77.423088126985,
+   "zip": null,
+   "city": "Null",
+   "email": null,
+   "notes": "Please enter through the West parking lot to line up behind other cars",
+   "phone": "(703) 378-7646",
+   "state": "VA",
+   "website": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
+   "address1": null,
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "11:00",
+       "weekday": 5,
+       "week_of_month": 3,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "pantry_staples",
+      "general_groceries"
+     ],
+     "description": "groceries, baby items, adult personal hygiene items",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": null,
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {
+      "zips": []
+     },
+     "details": "Yes",
+     "requirement_type": "zip_restriction"
+    }
+   ],
+   "external_id": "4ab94922-e75e-44d1-8b95-7c882be73f2c",
+   "location_name": "St. Vincent de Paul Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "fairfax_county",
+   "raw_hours_text": "Third Saturday of the month, 9-11 AM",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Society of St. Vincent de Paul, St. Timothy Conference",
+   "organization_website": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  }
+ ]
+}

@@ -602,7 +602,16 @@
     "reportsInfo": "Cualquier persona puede reportar un problema con un lugar. Los reportes llegan a la despensa y a nuestro equipo; varios reportes parecidos devuelven el lugar a revisión.",
     "privacy5": "Los reportes de problemas guardan solo lo que usted eligió y escribió. No se guarda ningún nombre, cuenta ni ubicación.",
     "privacy6": "Las funciones de IA, cuando están activadas, reciben solo las palabras que usted escribe. Nunca se envían su ubicación ni su cuenta.",
-    "labelReported": "Importado de una lista pública (ver Fuentes). Un revisor de Lantern aún no lo ha comprobado: llame antes de ir."
+    "labelReported": "Importado de una lista pública (ver Fuentes). Un revisor de Lantern aún no lo ha comprobado: llame antes de ir.",
+    "aiTitle": "Cómo usa Lantern la IA",
+    "aiLead": "Lantern usa la IA Claude (de Anthropic) para que la ayuda sea más fácil de encontrar y para mantener la información al día. La IA nunca publica nada por sí sola.",
+    "aiItems": [
+      "Pregúntele a Lantern AI: describa lo que necesita con sus propias palabras (en cualquier idioma) y la búsqueda se arma sola.",
+      "Encontrar recursos: la IA lee páginas y volantes oficiales y los convierte en fichas. Cada nombre, dirección, horario y requisito debe aparecer textualmente en la fuente; si no, se descarta.",
+      "Para despensas: pegue una publicación o volante y la IA llena el estado del día o el evento para que el personal lo revise y publique.",
+      "Para revisores: la IA sugiere horarios y requisitos estructurados y ayuda a detectar fichas duplicadas. Una persona aprueba cada cambio."
+    ],
+    "aiSafety": "Privacidad: solo se envían a la IA las palabras que usted escribe (o texto público de los proveedores). Nunca su ubicación, nombre ni cuenta."
   },
   "reviewStatus": {
     "candidate": "Candidato",
@@ -1076,7 +1085,18 @@
       "working": "Pensando…",
       "privacy": "Solo se envían a un servicio de IA las palabras que escribe. No su ubicación ni su cuenta.",
       "tooShort": "Escriba unas palabras sobre lo que necesita.",
-      "rateLimited": "Hay demasiadas búsquedas con IA en este momento. Use la búsqueda y los filtros habituales."
+      "rateLimited": "Hay demasiadas búsquedas con IA en este momento. Use la búsqueda y los filtros habituales.",
+      "heroTitle": "Pregúntele a Lantern AI",
+      "heroLead": "Describa lo que necesita con sus propias palabras, en cualquier idioma. Lantern lo convierte en una búsqueda de lugares reales y con fuentes.",
+      "heroLabel": "Escriba su pregunta",
+      "examplesLabel": "Pruebe un ejemplo",
+      "examples": [
+        "Comida gratis cerca de 22204 el sábado, sin identificación",
+        "Alguien con quien hablar sobre ansiedad en Arlington",
+        "Comida para mi perro en Fairfax",
+        "Ayuda para pagar la luz",
+        "Una comida caliente esta noche en Alexandria"
+      ]
     },
     "draft": {
       "title": "Pegue su anuncio",

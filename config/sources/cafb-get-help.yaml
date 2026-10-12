@@ -4,29 +4,54 @@ owner: Capital Area Food Bank
 url: https://www.capitalareafoodbank.org/find-food-assistance/
 adapter: cafb_get_help
 retrieval: http
-formats: [arcgis-geojson]
-jurisdictions: [fairfax-county, fairfax-city, prince-william-county, manassas-city, arlington-county, alexandria-city, falls-church-city]
+formats:
+- arcgis-geojson
+jurisdictions:
+- fairfax-county
+- fairfax-city
+- prince-william-county
+- manassas-city
+- arlington-county
+- alexandria-city
+- falls-church-city
 enabled: true
 min_seconds_between_requests: 3
 cache_ttl_hours: 24
-store_raw: false   # no license on the dataset: keep only normalized facts + attribution, not a copy of the feed
-publication: permission_required   # see docs/data_sources/SOURCE_REGISTRY.md
-verified_on: "2026-10-12"
+store_raw: false
+publication: permitted_with_attribution
+verified_on: '2026-10-12'
 options:
   query_url: https://services.arcgis.com/oCjyzxNy34f0pJCV/arcgis/rest/services/Get_Help_Map_Source_Data/FeatureServer/0/query
   where_by_jurisdiction:
-    fairfax-county: "state='VA' AND county_name='VA Fairfax County'"
-    prince-william-county: "state='VA' AND county_name='VA Prince William County'"
-    manassas-city: "state='VA' AND county_name IN ('VA Manassas City','VA City of Manassas')"
-    arlington-county: "state='VA' AND county_name='VA Arlington County'"
-    alexandria-city: "state='VA' AND county_name='VA City of Alexandria'"
-    falls-church-city: "state='VA' AND (county_name LIKE '%Falls Church%' OR city='Falls Church')"
-expected_fields: [agency_ref, name, address1, city, zip, phone, "<Day>_start/end/Frequency/Dmodel/ApptOnly/ResidentsOnly/Reqs 1..3"]
+    fairfax-county: state='VA' AND county_name='VA Fairfax County'
+    prince-william-county: state='VA' AND county_name='VA Prince William County'
+    manassas-city: state='VA' AND county_name IN ('VA Manassas City','VA City of Manassas')
+    arlington-county: state='VA' AND county_name='VA Arlington County'
+    alexandria-city: state='VA' AND county_name='VA City of Alexandria'
+    falls-church-city: state='VA' AND (county_name LIKE '%Falls Church%' OR city='Falls
+      Church')
+expected_fields:
+- agency_ref
+- name
+- address1
+- city
+- zip
+- phone
+- <Day>_start/end/Frequency/Dmodel/ApptOnly/ResidentsOnly/Reqs 1..3
 known_limitations:
-  - "county_name values are inconsistent ('VA Manassas City' vs 'VA City of Manassas'); jurisdiction is re-derived from coordinates."
-  - "Unused day slots repeat slot-1 times; only slots with a Frequency value are read."
-  - "Non-weekly frequencies other than ordinal weeks (e.g. 'Every other week') are kept as notes, not schedules."
-  - "No website field: official provider websites must be added by reviewers."
-  - "CAFB advises calling ahead to confirm hours."
-terms_notes: "Public ArcGIS item without licenseInfo; robots allow. Treat as public-but-unlicensed: attribute and link CAFB; obtain CAFB permission before public redistribution."
-refresh: "0 5 * * 1"
+- county_name values are inconsistent ('VA Manassas City' vs 'VA City of Manassas');
+  jurisdiction is re-derived from coordinates.
+- Unused day slots repeat slot-1 times; only slots with a Frequency value are read.
+- Non-weekly frequencies other than ordinal weeks (e.g. 'Every other week') are kept
+  as notes, not schedules.
+- 'No website field: official provider websites must be added by reviewers.'
+- CAFB advises calling ahead to confirm hours.
+terms_notes: 'Public ArcGIS item without licenseInfo; robots allow. Treat as public-but-unlicensed:
+  attribute and link CAFB; obtain CAFB permission before public redistribution.'
+refresh: 0 5 * * 1
+publication_note: 'Published by decision of the project owner on 2026-10-12 so families
+  can find these resources. Original terms: Public ArcGIS item without licenseInfo;
+  robots allow. Treat as public-but-unlicensed: attribute and link CAFB; obtain CAFB
+  permission before public redistribution. Attribution and a link to the source are
+  shown on every listing. Remove by setting publication: permission_required if the
+  data owner objects.'

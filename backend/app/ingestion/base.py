@@ -46,6 +46,7 @@ class SourceConfig(BaseModel):
     # permitted_with_attribution | permission_required | not_assessed. Listings backed only by
     # permission_required/not_assessed sources can be published only after direct verification with the provider.
     publication: str = "not_assessed"
+    publication_note: str | None = None  # why/when the publication status was set (e.g. owner decision)
     is_synthetic: bool = False
     verified_on: str | None = None  # date a human confirmed URL/terms
 

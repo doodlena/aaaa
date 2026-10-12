@@ -20,6 +20,7 @@ export function HomePage() {
             {t('app.tagline')}
           </h1>
           <p className="lead-band__lede">{t('home.lede', { app: appName })}</p>
+          <AISearch hero />
         </div>
         <div className="lead-band__needs">
           <h2 id="needs-title" className="needs__title">
@@ -43,7 +44,6 @@ export function HomePage() {
           </h2>
           <p className="muted">{t('home.findLead')}</p>
           <SearchForm />
-          <AISearch />
         </div>
       </section>
 

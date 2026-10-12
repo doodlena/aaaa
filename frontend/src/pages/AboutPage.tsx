@@ -17,6 +17,17 @@ export function AboutPage() {
       <h2>{t('about.whatTitle')}</h2>
       <p>{t('about.what')}</p>
 
+      <h2 id="ai">
+        {t('about.aiTitle')} <span className="ai-badge">AI</span>
+      </h2>
+      <p>{t('about.aiLead')}</p>
+      <ul>
+        {(t('about.aiItems', { returnObjects: true }) as string[]).map((x) => (
+          <li key={x}>{x}</li>
+        ))}
+      </ul>
+      <p className="muted">{t('about.aiSafety')}</p>
+
       <h2>{t('about.sourcesTitle')}</h2>
       <p>{t('about.sourcesIntro')}</p>
       {meta ? (

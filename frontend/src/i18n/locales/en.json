@@ -602,7 +602,16 @@
     "reportsInfo": "Anyone can report a problem with a listing. Reports go to the pantry and to our reviewers; several similar reports send the listing back for review.",
     "privacy5": "Problem reports store only what you chose and wrote. No name, account or location is stored.",
     "privacy6": "AI features, when turned on, receive only the words you type. Your location and account are never sent.",
-    "labelReported": "Imported from a public list (see Sources). A Lantern reviewer has not checked it yet — call before you go."
+    "labelReported": "Imported from a public list (see Sources). A Lantern reviewer has not checked it yet — call before you go.",
+    "aiTitle": "How Lantern uses AI",
+    "aiLead": "Lantern uses Claude AI (by Anthropic) to make help easier to find and to keep listings up to date. AI never publishes anything on its own.",
+    "aiItems": [
+      "Ask Lantern AI: describe what you need in your own words (any language) and it builds the search for you.",
+      "Finding resources: AI reads official pages and flyers and turns them into listings. Every name, address, hour and requirement must appear word-for-word in the source, or it is thrown away.",
+      "For pantries: paste a Facebook post or flyer and AI fills in today's status or event for staff to check and post.",
+      "For reviewers: AI suggests structured hours and requirements, and helps spot duplicate listings. A person approves every change."
+    ],
+    "aiSafety": "Privacy: only the words you type (or public provider text) are sent to the AI. Never your location, name, or account."
   },
   "reviewStatus": {
     "candidate": "Candidate",
@@ -1076,7 +1085,18 @@
       "working": "Thinking…",
       "privacy": "Only the words you type are sent to an AI service. Not your location or account.",
       "tooShort": "Type a few words about what you need.",
-      "rateLimited": "Too many AI searches right now. Please use the regular search and filters."
+      "rateLimited": "Too many AI searches right now. Please use the regular search and filters.",
+      "heroTitle": "Ask Lantern AI",
+      "heroLead": "Describe what you need in your own words, in any language. Lantern turns it into a search of real, cited listings.",
+      "heroLabel": "Type your question",
+      "examplesLabel": "Try an example",
+      "examples": [
+        "Free groceries near 22204 on Saturday, no ID",
+        "Someone to talk to about anxiety in Arlington",
+        "Pet food for my dog in Fairfax",
+        "Help paying my electric bill",
+        "Hot meal tonight in Alexandria"
+      ]
     },
     "draft": {
       "title": "Paste your announcement",
