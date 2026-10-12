@@ -24,6 +24,17 @@ Unknown information is always shown as unknown and never as "no requirement".
 
 ## Quick start (local)
 
+With Node 20+, Python 3.11+, and Docker running, one command sets everything up and starts it:
+
+```bash
+npm start            # http://localhost:5173 (first run installs dependencies and creates the database)
+npm run demo         # the same, plus fictional [TEST] listings so the map is not empty
+```
+
+`npm run foodaccess -- <command>` runs the `foodaccess` CLI, `npm run db:stop` stops the database container, and
+Ctrl+C stops the servers. If a PostGIS database is already listening on the configured port, it is used instead of
+Docker. The manual steps are:
+
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -e "backend[dev]"
 cp .env.example .env                       # point FOODACCESS_DATABASE_URL at a PostGIS database

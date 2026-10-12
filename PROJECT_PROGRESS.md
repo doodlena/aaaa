@@ -94,6 +94,11 @@ permission or direct provider verification before publication. Eligibility docum
 
 ## How to resume
 
+`npm start` at the repository root does all of the following in one step (`scripts/dev.mjs`: venv, `npm ci`, a Docker
+PostGIS container when no database is listening, `bootstrap`, API + Vite). Executed 2026-10-12 on Linux with Node 24,
+Python 3.14, and Docker 29: clean first run, `npm run demo` (8 synthetic listings visible), relaunch, and Ctrl+C
+shutdown. **Not executed on macOS or Windows.** 6 `node --test` unit tests pass (`npm test`). The manual equivalent:
+
 ```bash
 /opt/homebrew/opt/postgresql@17/bin/pg_ctl -D /opt/homebrew/var/postgresql@17 -o "-p 5433" start
 cd backend && ../.venv/bin/uvicorn app.main:app --port 8000 --reload

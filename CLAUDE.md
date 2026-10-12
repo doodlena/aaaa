@@ -4,6 +4,7 @@ Start with `PROJECT_PROGRESS.md` (status, decisions, how to resume). Architectur
 
 ## Commands
 
+- Everything at once: `npm start` at the repo root (`scripts/dev.mjs`; `npm run demo` adds synthetic data; `npm test` tests the launcher).
 - Postgres + PostGIS for development: port **5433**, databases `foodaccess` (dev) and `foodaccess_test` (pytest drops and re-migrates it).
 - Backend: `cd backend && ../.venv/bin/pytest`, `../.venv/bin/uvicorn app.main:app --port 8000 --reload`, `../.venv/bin/foodaccess --help`
 - Frontend: `cd frontend && npm test`, `npm run build`, `npx playwright test` (needs the API on :8000 with `foodaccess demo` data)
