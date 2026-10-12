@@ -18,7 +18,8 @@
     "home": "{{app}} home"
   },
   "lang": {
-    "label": "Language"
+    "label": "Language",
+    "more": "More languages"
   },
   "demo": {
     "banner": "Demo data: listings marked [TEST] are fictional."

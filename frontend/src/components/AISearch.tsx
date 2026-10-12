@@ -5,6 +5,7 @@ import { api, ApiError } from '../api/client';
 import type { AISearchResult } from '../api/types';
 import { DEFAULT_FILTERS, ELIGIBILITY_FILTERS, filtersFromURL, filtersToURL, FOOD_GROUPS, SERVICE_GROUPS, type Filters } from '../lib/filters';
 import { useAI } from '../state/meta';
+import { isSupported } from '../i18n';
 import { Icon } from './Icon';
 import { errorKey } from './Status';
 
@@ -67,7 +68,7 @@ export function AISearch({ compact = false }: { compact?: boolean }) {
     setBusy(true);
     setMsg(null);
     try {
-      const res = await api.aiSearch(text, i18n.language === 'es' ? 'es' : 'en');
+      const res = await api.aiSearch(text, isSupported(i18n.language) ? i18n.language : 'en');
       const base = location.pathname === '/find' ? filtersFromURL(sp) : { ...DEFAULT_FILTERS };
       const next = filtersFromAI(res, base);
       if (next.lat === null && !next.jurisdiction && next.sort === 'distance') next.sort = 'name';

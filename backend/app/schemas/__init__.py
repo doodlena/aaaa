@@ -6,7 +6,7 @@ from pydantic import BaseModel, EmailStr, Field, field_validator
 
 from app.vocab import ELIGIBILITY_TYPES, OFFERING_STATUSES, OPERATING_STATUSES, TRISTATE, VERIFICATION_METHODS, YES_NO_UNKNOWN
 
-Lang = Literal["en", "es"]
+Lang = Literal["en", "es", "zh", "vi", "ko"]  # keep in sync with frontend/src/i18n/index.ts
 
 
 class Address(BaseModel):

@@ -18,7 +18,8 @@
     "home": "Inicio de {{app}}"
   },
   "lang": {
-    "label": "Idioma"
+    "label": "Idioma",
+    "more": "Más idiomas"
   },
   "demo": {
     "banner": "Datos de demostración: los lugares marcados con [TEST] son ficticios."

@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState, t
 import { useTranslation } from 'react-i18next';
 import { api } from '../api/client';
 import type { User } from '../api/types';
-import { isSupported, persistLanguage, type LangCode } from '../i18n';
+import { isSupported, setLanguage, type LangCode } from '../i18n';
 
 interface AuthValue {
   user: User | null;
@@ -37,8 +37,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const adoptAccountLanguage = useCallback(
     (u: User) => {
       if (isSupported(u.preferred_language) && u.preferred_language !== i18n.language) {
-        void i18n.changeLanguage(u.preferred_language);
-        persistLanguage(u.preferred_language);
+        void setLanguage(u.preferred_language);
       }
     },
     [i18n],
@@ -73,8 +72,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const changeLanguage = useCallback(
     async (code: LangCode) => {
-      await i18n.changeLanguage(code);
-      persistLanguage(code);
+      await setLanguage(code);
       if (user && user.preferred_language !== code) {
         try {
           const updated = await api.updatePreferences({ preferred_language: code });
@@ -84,7 +82,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
       }
     },
-    [i18n, user],
+    [user],
   );
 
   const value = useMemo(

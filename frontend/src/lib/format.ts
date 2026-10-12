@@ -1,6 +1,6 @@
 /** Locale-aware formatting helpers. Dates from the API are local (America/New_York) calendar dates. */
 
-const localeOf = (lang: string) => (lang === 'es' ? 'es-US' : 'en-US');
+import { localeOf } from '../i18n';
 
 export function parseDate(d: string): Date {
   // 'YYYY-MM-DD' → local date at noon (avoids timezone day shifts)

@@ -2,6 +2,7 @@ import { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 import type { ResourceSummary } from '../api/types';
+import { localeOf } from '../i18n';
 import { formatAddress, formatDate, formatDistance, formatTimeRange, parseDate, telHref } from '../lib/format';
 import { MatchReasons, OperatingBadge, SyntheticBadge, VerificationBadge, WarningList } from './Badges';
 import { Icon } from './Icon';
@@ -19,7 +20,7 @@ export function DateStub({ item }: { item: ResourceSummary }) {
     );
   }
   const d = parseDate(nd.date);
-  const loc = i18n.language === 'es' ? 'es-US' : 'en-US';
+  const loc = localeOf(i18n.language);
   return (
     <div className="stub" aria-hidden="true">
       <span className="stub__month">{new Intl.DateTimeFormat(loc, { month: 'short' }).format(d)}</span>
