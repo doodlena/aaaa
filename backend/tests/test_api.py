@@ -191,6 +191,9 @@ def test_preferences_reject_sensitive_keys_and_delete_account(client, db):
     assert client.patch("/api/me/preferences", json={"preferences": {"income": 100}}).status_code == 422
     r = client.patch("/api/me/preferences", json={"preferred_language": "es", "preferences": {"radius_km": 5}})
     assert r.json()["preferences"] == {"radius_km": 5}
+    for lang in ("zh", "vi", "ko"):
+        assert client.patch("/api/me/preferences", json={"preferred_language": lang}).json()["preferred_language"] == lang
+    assert client.patch("/api/me/preferences", json={"preferred_language": "xx"}).status_code == 422
     assert client.request("DELETE", "/api/me", json={"password": "wrong"}).status_code == 401
     assert client.request("DELETE", "/api/me", json={"password": USER_PW}).status_code == 204
     assert client.post("/api/auth/login", json={"email": "u@example.org", "password": USER_PW}).status_code == 401
