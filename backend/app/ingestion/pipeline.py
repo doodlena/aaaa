@@ -177,7 +177,9 @@ def _merged_structures(db: Session, loc: Location, c: CandidateResource, rec: So
                 by_type[d["service_type"]] = d
                 continue
             cur["food_types"] = list(dict.fromkeys(cur["food_types"] + d["food_types"]))
-            cur["schedules"] += [x for x in d["schedules"] if x not in cur["schedules"]]
+            skey = lambda x: (x.get("kind", "distribution"), x["weekday"], x["opens"], x["closes"], x.get("week_of_month"))  # noqa: E731
+            have = {skey(x) for x in cur["schedules"]}
+            cur["schedules"] += [x for x in d["schedules"] if skey(x) not in have]
             cur["eligibility"] = _merge_elig(cur["eligibility"] + d["eligibility"])
             cur["description"] = cur["description"] or d["description"]
     schedules = []

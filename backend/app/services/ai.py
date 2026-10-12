@@ -105,7 +105,7 @@ ALLOWED_MODELS = ("claude-sonnet-5-5", "claude-opus-5-5", "claude-haiku-5-5")
 PRICES = {"claude-haiku-5-5": (0.10, 0.50), "claude-sonnet-5-5": (2.0, 10.0), "claude-opus-5-5": (4.0, 20.0)}
 WEB_SEARCH_USD = 0.01
 # Cost routing: high-volume/simple features use the cheap "fast" model; page extraction uses the admin-chosen model.
-FEATURE_TIER = {"typecheck": "fast", "enrich": "fast", "relevance": "fast", "search": "fast", "announcement": "fast", "structure": "fast", "translate": "fast", "duplicate": "fast",
+FEATURE_TIER = {"site_extract": "fast", "typecheck": "fast", "enrich": "fast", "relevance": "fast", "search": "fast", "announcement": "fast", "structure": "fast", "translate": "fast", "duplicate": "fast",
                 "discover": "fast", "extract": "careful"}
 
 
@@ -414,13 +414,13 @@ def _digits(s: str | None) -> str:
     return re.sub(r"\D", "", s or "")
 
 
-def extract_places(text: str, url: str) -> list[dict]:
+def extract_places(text: str, url: str, feature: str = "extract") -> list[dict]:
     """Extract assistance locations from one page's text. Every kept field is checked against the page text in code:
     names, addresses, hours and requirements must appear verbatim; services need a supporting quote. Unchanged pages
     hit the cache (no cost)."""
     text = text[:30000]  # bound cost per page (~8k tokens)
     out: PageExtraction = _parse(
-        "extract", PageExtraction,
+        feature, PageExtraction,
         "List every physical location on this page where people can get help (food, health, mental health, housing, "
         "benefits, legal, clothing, pets, etc.). Copy names, addresses, hours and requirements exactly as written. Skip "
         "hotlines without an address and confidential shelter addresses. Use only service types the page states.",

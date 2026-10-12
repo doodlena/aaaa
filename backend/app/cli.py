@@ -540,6 +540,39 @@ def cmd_ai_relevance(a):
     print(f"{len(removed)} of {len(recs)} records removed as not direct assistance")
 
 
+def cmd_ai_enrich_sites(a):
+    """(AI) Add hours/eligibility/what-to-bring from providers' own websites to listings missing them."""
+    from app.ingestion.base import Fetcher, load_source_configs
+    from app.ingestion.pipeline import run_source
+    from app.research.enrich_sites import enrich
+    from app.services import ai
+
+    if not ai.enabled():
+        sys.exit("AI is not enabled (Admin → AI settings)")
+    with _db() as db:
+        stats = enrich(db, limit=a.limit, jurisdiction=a.jurisdiction)
+        print(json.dumps(stats))
+        run = run_source(db, load_source_configs()["ai-website-enrichment"], Fetcher())
+        print(f"import: {run.status} {json.dumps({k: v for k, v in run.counts.items() if v and k != 'extra'})}")
+        # Each record was built FROM one listing (external_id site-<id>), so link it to that listing directly.
+        from app.ingestion.pipeline import attach_record_to_location
+        from app.models import DuplicateCandidate, Location, SourceRecord
+
+        linked = 0
+        for rec in db.scalars(select(SourceRecord).where(SourceRecord.source_id == "ai-website-enrichment",
+                                                         SourceRecord.status == "duplicate_candidate")).all():
+            loc = db.get(Location, int(rec.external_id.split("-", 1)[1]))
+            if not loc:
+                continue
+            for d in db.scalars(select(DuplicateCandidate).where(DuplicateCandidate.source_record_id == rec.id,
+                                                                 DuplicateCandidate.status == "pending")).all():
+                d.status = "merged" if d.location_id == loc.id else "distinct"
+            attach_record_to_location(db, rec, loc, actor_label="ai:site-enrichment")
+            linked += 1
+        db.commit()
+        print(f"linked {linked} records directly to their listings")
+
+
 def cmd_export_snapshot(_a):
     """Write every imported record from republishable sources to data/snapshots/ (committed), so a fresh database
     can be rebuilt without re-scraping. Sources whose terms need permission (publication != permitted_with_attribution)
@@ -757,6 +790,10 @@ def main(argv=None):
     dsc.add_argument("--searches", type=int, default=2, help="max web searches (each ~1 cent)")
     dsc.set_defaults(fn=cmd_ai_discover)
     sub.add_parser("ai-usage", help="(AI) spend by feature and this month's total vs budget").set_defaults(fn=cmd_ai_usage)
+    es = sub.add_parser("ai-enrich-sites", help="(AI) fill hours/eligibility/what-to-bring from providers' own websites")
+    es.add_argument("--limit", type=int, default=50)
+    es.add_argument("--jurisdiction")
+    es.set_defaults(fn=cmd_ai_enrich_sites)
     sub.add_parser("ai-check-categories", help="(AI) remove categories a listing clearly does not offer (never adds)").set_defaults(fn=cmd_ai_check_categories)
     sub.add_parser("rebuild-rejected", help="remove services that came only from rejected source records").set_defaults(fn=cmd_rebuild_rejected)
     rl = sub.add_parser("ai-relevance", help="(AI) remove imported listings that are not direct-assistance services")

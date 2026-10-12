@@ -1,0 +1,168 @@
+"""Fill in hours, eligibility, what-to-bring and food details for listings from each provider's OWN website.
+
+- Pages are fetched politely (robots.txt, rate limit, HTTP cache); blocked sites are skipped.
+- AI (cheap model) extracts places from the page text; every kept value must appear verbatim on the page.
+- Only details are added to a listing's EXISTING categories — this never adds new service categories.
+- Results are written to data/sources/ai_website_enrichment.json and imported like any other cited source, so they
+  merge into the listing with field provenance and the page linked as the source.
+"""
+import json
+import re
+from urllib.parse import urljoin, urlparse
+
+from bs4 import BeautifulSoup
+from rapidfuzz import fuzz
+from sqlalchemy import select
+
+from app.config import REPO_ROOT
+from app.ingestion.adapters.ai_extract import page_text
+from app.ingestion.base import Fetcher, FetchError, SourceConfig
+from app.ingestion.normalization.text import normalize_address, normalize_name, normalize_url
+from app.models import EligibilityRequirement, Location, Schedule
+from app.services import ai
+
+OUT = REPO_ROOT / "data" / "sources" / "ai_website_enrichment.json"
+KEYWORDS = re.compile(r"food|pantry|meal|hours|eligib|services|get[- ]help|assistance|programs|clinic|what to bring|visit", re.I)
+POLITE = SourceConfig(id="ai-website-enrichment", name="Provider websites", url="https://example.org", adapter="structured_json",
+                      jurisdictions=["*"], min_seconds_between_requests=2.0, cache_ttl_hours=24 * 14)
+GENERIC_DOMAINS = ("inova.org", "facebook.com", "instagram.com", "fairfaxcounty.gov", "arlingtonva.us", "pwcva.gov", "loudoun.gov",
+                   "alexandriava.gov", "vdh.virginia.gov", "findtreatment.gov", "data.hrsa.gov")
+
+
+def _links(html: str, base: str) -> list[str]:
+    soup = BeautifulSoup(html, "lxml")
+    host = urlparse(base).netloc
+    out = []
+    for a in soup.find_all("a", href=True):
+        u = urljoin(base, a["href"]).split("#")[0]
+        if urlparse(u).netloc == host and u != base and KEYWORDS.search((a.get_text(" ") or "") + " " + u):
+            out.append(u)
+    return list(dict.fromkeys(out))[:2]
+
+
+def _match(places: list[dict], loc: Location) -> dict | None:
+    want_addr = normalize_address(loc.address1, loc.zip) or ""
+    num = (re.match(r"\d+", want_addr) or [None])[0] if want_addr else None
+    best, score = None, 0.0
+    for p in places:
+        s = fuzz.token_set_ratio(normalize_name(p.get("location_name") or p["organization_name"]), normalize_name(loc.name)) / 100
+        a = normalize_address(p.get("address1"), p.get("zip")) or ""
+        if num and a.startswith(num + " "):
+            s += 0.6
+        elif a and num and not a.startswith(num + " "):
+            s -= 0.5  # a different street address on the page: that's another site
+        if s > score:
+            best, score = p, s
+    if best and (score >= 0.9 or (len(places) == 1 and score >= 0.5)):
+        return best
+    return None
+
+
+def enrich(db, limit: int = 50, jurisdiction: str | None = None) -> dict:
+    existing = json.loads(OUT.read_text())["records"] if OUT.exists() else []
+    by_id = {r["external_id"]: r for r in existing}
+    q = select(Location).where(Location.is_synthetic.is_(False), Location.merged_into_id.is_(None),
+                               Location.review_status.in_(("candidate", "needs_review")), Location.last_verified_at.is_(None))
+    if jurisdiction:
+        q = q.where(Location.jurisdiction_id == jurisdiction)
+    fetcher = Fetcher()
+    stats = {"checked": 0, "enriched": 0, "no_site": 0, "blocked": 0, "no_match": 0, "already": 0}
+    for loc in db.scalars(q.order_by(Location.id)).all():
+        if stats["checked"] >= limit:
+            break
+        has_sched = db.scalar(select(Schedule.id).where(Schedule.location_id == loc.id).limit(1))
+        has_elig = db.scalar(select(EligibilityRequirement.id).where(EligibilityRequirement.location_id == loc.id,
+                                                                     EligibilityRequirement.status != "unknown").limit(1))
+        if has_sched and has_elig:
+            continue
+        if f"site-{loc.id}" in by_id:
+            stats["already"] += 1
+            continue
+        site = normalize_url(loc.website or loc.organization.website)
+        if not site or any(d in site for d in GENERIC_DOMAINS):
+            stats["no_site"] += 1
+            continue
+        stats["checked"] += 1
+        try:
+            home = fetcher.get(site, POLITE)
+        except FetchError:
+            stats["blocked"] += 1
+            continue
+        pages = [home]
+        for u in _links(home.text(), home.url):
+            try:
+                pages.append(fetcher.get(u, POLITE))
+            except FetchError:
+                pass
+        hit = None
+        for doc in pages:
+            try:
+                text = page_text(doc)
+                if len(text) < 200:
+                    continue
+                places = ai.extract_places(text, doc.url, feature="site_extract")
+            except ai.AIUnavailable as e:
+                stats["stopped"] = str(e)
+                return _save(by_id, stats)
+            except Exception:  # unreadable page
+                continue
+            m = _match(places, loc)
+            if m and (m.get("hours_text") or m.get("eligibility_text") or m.get("food_types")):
+                hit = (m, doc.url)
+                break
+        if not hit:
+            stats["no_match"] += 1
+            continue
+        m, url = hit
+        types = sorted({s.service_type for s in loc.services}) or ["other"]
+        food_ok = {"pantry_pickup", "walk_up", "drive_through", "mobile_pantry", "community_meal", "emergency_food",
+                   "senior_meals", "kids_meals", "school_based", "delivery_qualifying", "home_delivery"}
+        by_id[f"site-{loc.id}"] = {
+            "external_id": f"site-{loc.id}", "source_url": url, "organization_name": loc.organization.name,
+            "location_name": loc.name, "address1": loc.address1, "address2": loc.address2, "city": loc.city, "zip": loc.zip,
+            "lat": _coord(loc)[0], "lon": _coord(loc)[1], "geocode_source": "existing listing", "phone": loc.phone,
+            "raw_hours_text": m.get("hours_text"), "raw_eligibility_text": m.get("eligibility_text"),
+            "notes": "From the provider's website (AI-extracted, verbatim-checked): " + " | ".join(m.get("evidence") or [])[:500],
+            # existing categories only; details attach to them
+            "service_types": types, "food_types": [f for f in (m.get("food_types") or [])] if set(types) & food_ok else [],
+            "description": m.get("description"),
+        }
+        stats["enriched"] += 1
+    return _save(by_id, stats)
+
+
+def _coord(loc: Location):
+    from app.services.resource_writer import coords_of
+
+    c = coords_of(loc) or {}
+    return c.get("lat"), c.get("lon")
+
+
+def _save(by_id: dict, stats: dict) -> dict:
+    from app.ingestion.candidate import CandidateEligibility, CandidateResource, CandidateSchedule, CandidateService
+    from app.ingestion.normalization.text import clean_text, eligibility_from_text, parse_schedule_text
+
+    records = []
+    for r in by_id.values():
+        if "services" in r:  # already in final shape
+            records.append(r)
+            continue
+        hours = clean_text(r.get("raw_hours_text"), keep_lines=True)
+        sched = parse_schedule_text(hours)
+        food_ok = {"pantry_pickup", "walk_up", "drive_through", "mobile_pantry", "community_meal", "emergency_food", "senior_meals",
+                   "kids_meals", "school_based", "delivery_qualifying", "home_delivery"}
+        services = []
+        for i, t in enumerate(r["service_types"]):
+            services.append(CandidateService(service_type=t, description=r.get("description") if i == 0 else None,
+                                             food_types=r["food_types"] if t in food_ok else [],
+                                             schedules=[CandidateSchedule(**x) for x in sched] if i == 0 and t in food_ok else []).model_dump())
+        elig = [CandidateEligibility(requirement_type=k, status=v, details=clean_text(r.get("raw_eligibility_text"))).model_dump()
+                for k, v in eligibility_from_text(r.get("raw_eligibility_text")).items()]
+        loc_sched = [] if set(r["service_types"]) & food_ok else [CandidateSchedule(**{**x, "kind": "operating_hours"}).model_dump() for x in sched]
+        rec = {k: v for k, v in r.items() if k not in ("service_types", "food_types", "description")}
+        rec.update({"services": services, "eligibility": elig, "schedules": loc_sched})
+        CandidateResource(**rec)  # validate
+        records.append(rec)
+    OUT.write_text(json.dumps({"_notice": "Details extracted with AI from each provider's own website; every value appears verbatim "
+                                          "on the cited page (source_url). Unverified.", "records": records}, indent=1, ensure_ascii=False))
+    return stats
