@@ -1,0 +1,2 @@
+[console_scripts]
+foodaccess = app.cli:main

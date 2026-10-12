@@ -1,0 +1,594 @@
+{
+  "generated_at": "2026-10-12T15:03:19.314427+00:00",
+  "config": {
+    "pilot_size": 3,
+    "candidates": [
+      7,
+      29,
+      53,
+      75,
+      101,
+      109,
+      143,
+      144
+    ],
+    "factors": {
+      "title_i_schools": {
+        "weight": 0.2,
+        "field": "title_i_schools",
+        "label": "Number of Title I schools (2025-26)"
+      },
+      "title_i_share": {
+        "weight": 0.2,
+        "field": "title_i_share",
+        "label": "Share of schools designated Title I"
+      },
+      "fr_eligible_pct": {
+        "weight": 0.1,
+        "field": "fr_eligible_pct",
+        "label": "Free/reduced-price meal eligible share of NSLP membership (2025-26)"
+      },
+      "acs_below_185pct_fpl_pct": {
+        "weight": 0.15,
+        "field": "acs_below_185pct_fpl_pct",
+        "label": "Residents below 185% of poverty line (ACS 2020-24)"
+      },
+      "acs_snap_household_pct": {
+        "weight": 0.1,
+        "field": "acs_snap_household_pct",
+        "label": "Households receiving SNAP (ACS 2020-24)"
+      },
+      "food_data_listings": {
+        "weight": 0.15,
+        "field": "food_data_listings",
+        "label": "Listings in the best current structured food-resource source"
+      },
+      "verification_sources": {
+        "weight": 0.1,
+        "field": "verification_sources",
+        "label": "Independent current structured sources (enables cross-checking)"
+      }
+    },
+    "food_data_evidence": {
+      "7": {
+        "food_data_listings": 9,
+        "verification_sources": 1,
+        "notes": "CAFB feed 9 sites; AFAC HTML page (5 sites) curatable; arlingtonva.us blocked (403) during research"
+      },
+      "29": {
+        "food_data_listings": 50,
+        "verification_sources": 2,
+        "notes": "CAFB feed 50; Fairfax County Emergency Food Access layer 45 (public display needs county permission)"
+      },
+      "53": {
+        "food_data_listings": null,
+        "verification_sources": null,
+        "notes": "Not researched in this pass (outside CAFB feed coverage)"
+      },
+      "75": {
+        "food_data_listings": 25,
+        "verification_sources": 2,
+        "notes": "CAFB feed 25; PWC Community Mobilization Network layer 16 food sites (updated 2026-09); 2022 layer stale, excluded"
+      },
+      "101": {
+        "food_data_listings": 14,
+        "verification_sources": 1,
+        "notes": "CAFB feed 14; city directory is a 2024 PDF only"
+      },
+      "109": {
+        "food_data_listings": null,
+        "verification_sources": null,
+        "notes": "Not researched in this pass"
+      },
+      "143": {
+        "food_data_listings": 18,
+        "verification_sources": 2,
+        "notes": "City of Manassas food layer 18 (updated 2024-08); CAFB feed 6"
+      },
+      "144": {
+        "food_data_listings": 0,
+        "verification_sources": 0,
+        "notes": "No Manassas Park sites in CAFB feed; no city layer found"
+      }
+    }
+  },
+  "ranking": [
+    {
+      "division_number": 75,
+      "division_name": "Prince William County Public Schools",
+      "jurisdictions": [
+        "prince-william-county"
+      ],
+      "score": 0.657,
+      "weight_coverage": 1.0,
+      "factors": {
+        "title_i_schools": {
+          "value": 39,
+          "normalized": 0.76,
+          "weight": 0.2
+        },
+        "title_i_share": {
+          "value": 0.402,
+          "normalized": 0.618,
+          "weight": 0.2
+        },
+        "fr_eligible_pct": {
+          "value": 55.1,
+          "normalized": 0.622,
+          "weight": 0.1
+        },
+        "acs_below_185pct_fpl_pct": {
+          "value": 15.5,
+          "normalized": 0.625,
+          "weight": 0.15
+        },
+        "acs_snap_household_pct": {
+          "value": 5.8,
+          "normalized": 0.5,
+          "weight": 0.1
+        },
+        "food_data_listings": {
+          "value": 25,
+          "normalized": 0.5,
+          "weight": 0.15
+        },
+        "verification_sources": {
+          "value": 2,
+          "normalized": 1.0,
+          "weight": 0.1
+        }
+      },
+      "missing_factors": [],
+      "evidence_notes": "CAFB feed 25; PWC Community Mobilization Network layer 16 food sites (updated 2026-09); 2022 layer stale, excluded",
+      "rank": 1
+    },
+    {
+      "division_number": 143,
+      "division_name": "Manassas City Public Schools",
+      "jurisdictions": [
+        "manassas-city"
+      ],
+      "score": 0.652,
+      "weight_coverage": 1.0,
+      "factors": {
+        "title_i_schools": {
+          "value": 5,
+          "normalized": 0.08,
+          "weight": 0.2
+        },
+        "title_i_share": {
+          "value": 0.556,
+          "normalized": 1.0,
+          "weight": 0.2
+        },
+        "fr_eligible_pct": {
+          "value": 78.5,
+          "normalized": 0.957,
+          "weight": 0.1
+        },
+        "acs_below_185pct_fpl_pct": {
+          "value": 18.4,
+          "normalized": 0.867,
+          "weight": 0.15
+        },
+        "acs_snap_household_pct": {
+          "value": 6.3,
+          "normalized": 0.558,
+          "weight": 0.1
+        },
+        "food_data_listings": {
+          "value": 18,
+          "normalized": 0.36,
+          "weight": 0.15
+        },
+        "verification_sources": {
+          "value": 2,
+          "normalized": 1.0,
+          "weight": 0.1
+        }
+      },
+      "missing_factors": [],
+      "evidence_notes": "City of Manassas food layer 18 (updated 2024-08); CAFB feed 6",
+      "rank": 2
+    },
+    {
+      "division_number": 29,
+      "division_name": "Fairfax County Public Schools",
+      "jurisdictions": [
+        "fairfax-county",
+        "fairfax-city"
+      ],
+      "score": 0.634,
+      "weight_coverage": 1.0,
+      "factors": {
+        "title_i_schools": {
+          "value": 51,
+          "normalized": 1.0,
+          "weight": 0.2
+        },
+        "title_i_share": {
+          "value": 0.267,
+          "normalized": 0.283,
+          "weight": 0.2
+        },
+        "fr_eligible_pct": {
+          "value": 36.6,
+          "normalized": 0.357,
+          "weight": 0.1
+        },
+        "acs_below_185pct_fpl_pct": {
+          "value": 12.7,
+          "normalized": 0.392,
+          "weight": 0.15
+        },
+        "acs_snap_household_pct": {
+          "value": 4.3,
+          "normalized": 0.326,
+          "weight": 0.1
+        },
+        "food_data_listings": {
+          "value": 50,
+          "normalized": 1.0,
+          "weight": 0.15
+        },
+        "verification_sources": {
+          "value": 2,
+          "normalized": 1.0,
+          "weight": 0.1
+        }
+      },
+      "missing_factors": [],
+      "evidence_notes": "CAFB feed 50; Fairfax County Emergency Food Access layer 45 (public display needs county permission)",
+      "rank": 3
+    },
+    {
+      "division_number": 101,
+      "division_name": "Alexandria City Public Schools",
+      "jurisdictions": [
+        "alexandria-city"
+      ],
+      "score": 0.543,
+      "weight_coverage": 1.0,
+      "factors": {
+        "title_i_schools": {
+          "value": 9,
+          "normalized": 0.16,
+          "weight": 0.2
+        },
+        "title_i_share": {
+          "value": 0.529,
+          "normalized": 0.933,
+          "weight": 0.2
+        },
+        "fr_eligible_pct": {
+          "value": 69.7,
+          "normalized": 0.831,
+          "weight": 0.1
+        },
+        "acs_below_185pct_fpl_pct": {
+          "value": 16.6,
+          "normalized": 0.717,
+          "weight": 0.15
+        },
+        "acs_snap_household_pct": {
+          "value": 5.1,
+          "normalized": 0.419,
+          "weight": 0.1
+        },
+        "food_data_listings": {
+          "value": 14,
+          "normalized": 0.28,
+          "weight": 0.15
+        },
+        "verification_sources": {
+          "value": 1,
+          "normalized": 0.5,
+          "weight": 0.1
+        }
+      },
+      "missing_factors": [],
+      "evidence_notes": "CAFB feed 14; city directory is a 2024 PDF only",
+      "rank": 4
+    },
+    {
+      "division_number": 144,
+      "division_name": "Manassas Park City Public Schools",
+      "jurisdictions": [
+        "manassas-park-city"
+      ],
+      "score": 0.526,
+      "weight_coverage": 1.0,
+      "factors": {
+        "title_i_schools": {
+          "value": 2,
+          "normalized": 0.02,
+          "weight": 0.2
+        },
+        "title_i_share": {
+          "value": 0.5,
+          "normalized": 0.861,
+          "weight": 0.2
+        },
+        "fr_eligible_pct": {
+          "value": 81.5,
+          "normalized": 1.0,
+          "weight": 0.1
+        },
+        "acs_below_185pct_fpl_pct": {
+          "value": 20.0,
+          "normalized": 1.0,
+          "weight": 0.15
+        },
+        "acs_snap_household_pct": {
+          "value": 10.1,
+          "normalized": 1.0,
+          "weight": 0.1
+        },
+        "food_data_listings": {
+          "value": 0,
+          "normalized": 0.0,
+          "weight": 0.15
+        },
+        "verification_sources": {
+          "value": 0,
+          "normalized": 0.0,
+          "weight": 0.1
+        }
+      },
+      "missing_factors": [],
+      "evidence_notes": "No Manassas Park sites in CAFB feed; no city layer found",
+      "rank": 5
+    },
+    {
+      "division_number": 7,
+      "division_name": "Arlington County Public Schools",
+      "jurisdictions": [
+        "arlington-county"
+      ],
+      "score": 0.251,
+      "weight_coverage": 1.0,
+      "factors": {
+        "title_i_schools": {
+          "value": 7,
+          "normalized": 0.12,
+          "weight": 0.2
+        },
+        "title_i_share": {
+          "value": 0.194,
+          "normalized": 0.102,
+          "weight": 0.2
+        },
+        "fr_eligible_pct": {
+          "value": 31.0,
+          "normalized": 0.277,
+          "weight": 0.1
+        },
+        "acs_below_185pct_fpl_pct": {
+          "value": 13.8,
+          "normalized": 0.483,
+          "weight": 0.15
+        },
+        "acs_snap_household_pct": {
+          "value": 4.0,
+          "normalized": 0.291,
+          "weight": 0.1
+        },
+        "food_data_listings": {
+          "value": 9,
+          "normalized": 0.18,
+          "weight": 0.15
+        },
+        "verification_sources": {
+          "value": 1,
+          "normalized": 0.5,
+          "weight": 0.1
+        }
+      },
+      "missing_factors": [],
+      "evidence_notes": "CAFB feed 9 sites; AFAC HTML page (5 sites) curatable; arlingtonva.us blocked (403) during research",
+      "rank": 6
+    },
+    {
+      "division_number": 53,
+      "division_name": "Loudoun County Public Schools",
+      "jurisdictions": [
+        "loudoun-county"
+      ],
+      "score": 0.145,
+      "weight_coverage": 0.75,
+      "factors": {
+        "title_i_schools": {
+          "value": 15,
+          "normalized": 0.28,
+          "weight": 0.2
+        },
+        "title_i_share": {
+          "value": 0.153,
+          "normalized": 0.0,
+          "weight": 0.2
+        },
+        "fr_eligible_pct": {
+          "value": 27.5,
+          "normalized": 0.226,
+          "weight": 0.1
+        },
+        "acs_below_185pct_fpl_pct": {
+          "value": 8.8,
+          "normalized": 0.067,
+          "weight": 0.15
+        },
+        "acs_snap_household_pct": {
+          "value": 3.2,
+          "normalized": 0.198,
+          "weight": 0.1
+        }
+      },
+      "missing_factors": [
+        "food_data_listings",
+        "verification_sources"
+      ],
+      "evidence_notes": "Not researched in this pass (outside CAFB feed coverage)",
+      "rank": 7
+    },
+    {
+      "division_number": 109,
+      "division_name": "Falls Church City Public Schools",
+      "jurisdictions": [
+        "falls-church-city"
+      ],
+      "score": 0.031,
+      "weight_coverage": 0.75,
+      "factors": {
+        "title_i_schools": {
+          "value": 1,
+          "normalized": 0.0,
+          "weight": 0.2
+        },
+        "title_i_share": {
+          "value": 0.2,
+          "normalized": 0.117,
+          "weight": 0.2
+        },
+        "fr_eligible_pct": {
+          "value": 11.7,
+          "normalized": 0.0,
+          "weight": 0.1
+        },
+        "acs_below_185pct_fpl_pct": {
+          "value": 8.0,
+          "normalized": 0.0,
+          "weight": 0.15
+        },
+        "acs_snap_household_pct": {
+          "value": 1.5,
+          "normalized": 0.0,
+          "weight": 0.1
+        }
+      },
+      "missing_factors": [
+        "food_data_listings",
+        "verification_sources"
+      ],
+      "evidence_notes": "Not researched in this pass",
+      "rank": 8
+    }
+  ],
+  "recommended_divisions": [
+    75,
+    143,
+    29
+  ],
+  "recommended_jurisdictions": [
+    "fairfax-city",
+    "fairfax-county",
+    "manassas-city",
+    "prince-william-county"
+  ],
+  "sensitivity_equal_weights": [
+    {
+      "division_number": 143,
+      "division_name": "Manassas City Public Schools",
+      "score": 0.689,
+      "rank": 1
+    },
+    {
+      "division_number": 75,
+      "division_name": "Prince William County Public Schools",
+      "score": 0.661,
+      "rank": 2
+    },
+    {
+      "division_number": 29,
+      "division_name": "Fairfax County Public Schools",
+      "score": 0.622,
+      "rank": 3
+    },
+    {
+      "division_number": 144,
+      "division_name": "Manassas Park City Public Schools",
+      "score": 0.554,
+      "rank": 4
+    },
+    {
+      "division_number": 101,
+      "division_name": "Alexandria City Public Schools",
+      "score": 0.548,
+      "rank": 5
+    },
+    {
+      "division_number": 7,
+      "division_name": "Arlington County Public Schools",
+      "score": 0.279,
+      "rank": 6
+    },
+    {
+      "division_number": 53,
+      "division_name": "Loudoun County Public Schools",
+      "score": 0.154,
+      "rank": 7
+    },
+    {
+      "division_number": 109,
+      "division_name": "Falls Church City Public Schools",
+      "score": 0.023,
+      "rank": 8
+    }
+  ],
+  "rule": "Top `pilot_size` divisions by score among those with \u226580% of factor weight available.",
+  "sources": [
+    {
+      "dataset": "VDOE 2025-2026 Title I Schools",
+      "key": "title_i_2025_26",
+      "official_url": "https://www.doe.virginia.gov/home/showpublisheddocument/64871/638917252795170000",
+      "retrieved_from": "https://web.archive.org/web/20251129015802id_/https://www.doe.virginia.gov/home/showpublisheddocument/64871/638917252795170000",
+      "is_archive_copy": true,
+      "retrieved_at": "2026-10-12T15:02:00.712561+00:00",
+      "sha256": "2e763fcafa7ac079fde4c6e7b65008d19558c6f32fe460e7b226585b9aa86f78",
+      "bytes": 54440,
+      "failed_attempts": [
+        {
+          "url": "https://www.doe.virginia.gov/home/showpublisheddocument/64871/638917252795170000",
+          "status": 403
+        }
+      ]
+    },
+    {
+      "dataset": "VDOE School Nutrition \u2014 Free and Reduced Eligibility Report by School, 2025-2026 (as of Oct 31, 2025)",
+      "key": "free_reduced_by_school_2025_26",
+      "official_url": "https://www.doe.virginia.gov/home/showpublisheddocument/76094/639081364709900000",
+      "retrieved_from": "https://web.archive.org/web/20260421191352id_/https://www.doe.virginia.gov/home/showpublisheddocument/76094/639081364709900000",
+      "is_archive_copy": true,
+      "retrieved_at": "2026-10-12T15:02:04.335601+00:00",
+      "sha256": "36f377d16c891d6752f3ed1b24c0b5e6426694193477737794ccfb3e26318aa7",
+      "bytes": 261418,
+      "failed_attempts": [
+        {
+          "url": "https://www.doe.virginia.gov/home/showpublisheddocument/76094/639081364709900000",
+          "status": 403
+        }
+      ]
+    },
+    {
+      "dataset": "U.S. Census Bureau ACS 2020-2024 5-year Summary File (tables B22003 SNAP, C17002 ratio of income to poverty) (b22003)",
+      "key": "acs5_2024_b22003",
+      "official_url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b22003.dat",
+      "retrieved_from": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b22003.dat",
+      "is_archive_copy": false,
+      "retrieved_at": "2026-10-12T15:02:08.346662+00:00",
+      "sha256": "03c3c8f329c7223bd9c570a3b9874c6b626585482fce33f665b5a8f43f2b117c",
+      "bytes": 21065711,
+      "failed_attempts": []
+    },
+    {
+      "dataset": "U.S. Census Bureau ACS 2020-2024 5-year Summary File (tables B22003 SNAP, C17002 ratio of income to poverty) (c17002)",
+      "key": "acs5_2024_c17002",
+      "official_url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-c17002.dat",
+      "retrieved_from": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-c17002.dat",
+      "is_archive_copy": false,
+      "retrieved_at": "2026-10-12T15:02:13.495532+00:00",
+      "sha256": "dc3dc675113683ec3ff2a0e29a840f43e03268151d7f14b922658d7306da5187",
+      "bytes": 42027042,
+      "failed_attempts": []
+    }
+  ]
+}

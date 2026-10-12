@@ -1,0 +1,10 @@
+id: manassas-city
+name: City of Manassas
+kind: city
+county_fips: "683"
+status: planned
+boundary: {source: tigerweb, geoid: "51683"}
+school_divisions: [{vdoe_number: 143, name: Manassas City Public Schools, slug: manassas}]
+center: [38.7509, -77.4753]
+sources: []
+refresh: "0 6 * * 1"

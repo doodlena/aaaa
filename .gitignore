@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+data/cache/
+data/research/raw/
+node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+.DS_Store
+graphify-out/

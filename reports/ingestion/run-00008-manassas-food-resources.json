@@ -1,0 +1,199 @@
+{
+  "run_id": 8,
+  "source": {
+    "id": "manassas-food-resources",
+    "name": "City of Manassas \u2014 Manassas Area Food Resources",
+    "url": "https://www.arcgis.com/home/item.html?id=782d5f553535425091446bb904b3759b",
+    "adapter": "arcgis_feature_layer",
+    "is_synthetic": false,
+    "known_limitations": [
+      "Last edited 2024-08; may be stale.",
+      "Comments mix food hours with other services (e.g. thrift); non-food lines are ignored and the raw text is kept for review.",
+      "No service description: listed sites are assumed to be pantry pickup *candidates* until verified."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T11:07:33.386828-04:00",
+  "finished_at": "2026-10-12T15:07:33.416358+00:00",
+  "counts": {
+    "discovered": 18,
+    "inserted": 0,
+    "updated": 0,
+    "unchanged": 18,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 113,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "26",
+      "status": "linked",
+      "location_id": 66,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "1",
+      "status": "linked",
+      "location_id": 69,
+      "issues": []
+    },
+    {
+      "external_id": "2",
+      "status": "linked",
+      "location_id": 104,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "5",
+      "status": "linked",
+      "location_id": 106,
+      "issues": []
+    },
+    {
+      "external_id": "6",
+      "status": "linked",
+      "location_id": 107,
+      "issues": []
+    },
+    {
+      "external_id": "7",
+      "status": "linked",
+      "location_id": 108,
+      "issues": []
+    },
+    {
+      "external_id": "8",
+      "status": "linked",
+      "location_id": 109,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "15",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "17",
+      "status": "linked",
+      "location_id": 110,
+      "issues": []
+    },
+    {
+      "external_id": "19",
+      "status": "linked",
+      "location_id": 83,
+      "issues": []
+    },
+    {
+      "external_id": "20",
+      "status": "linked",
+      "location_id": 111,
+      "issues": []
+    },
+    {
+      "external_id": "23",
+      "status": "linked",
+      "location_id": 112,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "24",
+      "status": "linked",
+      "location_id": 71,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "25",
+      "status": "linked",
+      "location_id": 113,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "27",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "28",
+      "status": "linked",
+      "location_id": 114,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "3",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "4",
+      "status": "linked",
+      "location_id": 105,
+      "issues": []
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

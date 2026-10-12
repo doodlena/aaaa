@@ -1,0 +1,10 @@
+id: manassas-park-city
+name: City of Manassas Park
+kind: city
+county_fips: "685"
+status: planned
+boundary: {source: tigerweb, geoid: "51685"}
+school_divisions: [{vdoe_number: 144, name: Manassas Park City Public Schools, slug: manassas-park}]
+center: [38.7840, -77.4697]
+sources: []
+refresh: "0 6 * * 1"

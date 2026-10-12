@@ -1,0 +1,10 @@
+id: prince-william-county
+name: Prince William County
+kind: county
+county_fips: "153"
+status: planned
+boundary: {source: tigerweb, geoid: "51153"}
+school_divisions: [{vdoe_number: 75, name: Prince William County Public Schools, slug: prince-william}]
+center: [38.7024, -77.4100]
+sources: []
+refresh: "0 6 * * 1"

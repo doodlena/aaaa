@@ -1,0 +1,89 @@
+{
+  "provenance": {
+    "b22003": {
+      "key": "acs5_2024_b22003",
+      "official_url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b22003.dat",
+      "retrieved_from": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b22003.dat",
+      "is_archive_copy": false,
+      "retrieved_at": "2026-10-12T15:02:08.346662+00:00",
+      "sha256": "03c3c8f329c7223bd9c570a3b9874c6b626585482fce33f665b5a8f43f2b117c",
+      "bytes": 21065711,
+      "failed_attempts": []
+    },
+    "c17002": {
+      "key": "acs5_2024_c17002",
+      "official_url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-c17002.dat",
+      "retrieved_from": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-c17002.dat",
+      "is_archive_copy": false,
+      "retrieved_at": "2026-10-12T15:02:13.495532+00:00",
+      "sha256": "dc3dc675113683ec3ff2a0e29a840f43e03268151d7f14b922658d7306da5187",
+      "bytes": 42027042,
+      "failed_attempts": []
+    }
+  },
+  "values": {
+    "013": {
+      "households": 112027.0,
+      "snap_households": 4480.0,
+      "pov_universe": 233425.0,
+      "below_poverty": 17249.0,
+      "below_185pct": 32189.0
+    },
+    "059": {
+      "households": 414101.0,
+      "snap_households": 17970.0,
+      "pov_universe": 1136737.0,
+      "below_poverty": 67523.0,
+      "below_185pct": 143686.0
+    },
+    "107": {
+      "households": 143032.0,
+      "snap_households": 4541.0,
+      "pov_universe": 430965.0,
+      "below_poverty": 18249.0,
+      "below_185pct": 37750.0
+    },
+    "153": {
+      "households": 156798.0,
+      "snap_households": 9124.0,
+      "pov_universe": 483038.0,
+      "below_poverty": 29884.0,
+      "below_185pct": 74637.0
+    },
+    "510": {
+      "households": 76096.0,
+      "snap_households": 3899.0,
+      "pov_universe": 155379.0,
+      "below_poverty": 12336.0,
+      "below_185pct": 25771.0
+    },
+    "600": {
+      "households": 9155.0,
+      "snap_households": 286.0,
+      "pov_universe": 24306.0,
+      "below_poverty": 2211.0,
+      "below_185pct": 3658.0
+    },
+    "610": {
+      "households": 6273.0,
+      "snap_households": 97.0,
+      "pov_universe": 14605.0,
+      "below_poverty": 587.0,
+      "below_185pct": 1168.0
+    },
+    "683": {
+      "households": 14203.0,
+      "snap_households": 899.0,
+      "pov_universe": 42539.0,
+      "below_poverty": 3293.0,
+      "below_185pct": 7834.0
+    },
+    "685": {
+      "households": 5193.0,
+      "snap_households": 525.0,
+      "pov_universe": 16798.0,
+      "below_poverty": 860.0,
+      "below_185pct": 3363.0
+    }
+  }
+}

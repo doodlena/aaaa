@@ -1,0 +1,11 @@
+id: fairfax-county
+name: Fairfax County
+kind: county
+county_fips: "059"
+status: planned
+boundary: {source: tigerweb, geoid: "51059"}
+# FCPS also serves the City of Fairfax (contract) — the division maps to two local governments.
+school_divisions: [{vdoe_number: 29, name: Fairfax County Public Schools, slug: fairfax-county}]
+center: [38.8462, -77.3064]
+sources: []
+refresh: "0 6 * * 1"

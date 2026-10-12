@@ -1,0 +1,72 @@
+[
+ {
+  "div_num": "101",
+  "division": "Alexandria Public Schools",
+  "section": "ELEMENTARY",
+  "name": "Charles Barrett Elementary",
+  "addr": [
+   "Street address:",
+   "1115 Martha Custis Dr",
+   "Alexandria, VA  22302",
+   "703-824-6960"
+  ],
+  "grades": "PK-5",
+  "type": "Elementary"
+ },
+ {
+  "div_num": "101",
+  "division": "Alexandria Public Schools",
+  "section": "ELEMENTARY",
+  "name": "Cora Kelly School for Math Science and Technology",
+  "addr": [
+   "Street address:",
+   "3600 Commonwealth Ave",
+   "Alexandria, VA  22305",
+   "703-706-4420"
+  ],
+  "grades": "PK-5",
+  "type": "Elementary"
+ },
+ {
+  "div_num": "101",
+  "division": "Alexandria Public Schools",
+  "section": "ELEMENTARY",
+  "name": "Douglas MacArthur Elementary",
+  "addr": [
+   "Street address:",
+   "1101 Janneys Ln",
+   "Alexandria, VA  22302",
+   "703-461-4190"
+  ],
+  "grades": "KG-5",
+  "type": "Elementary"
+ },
+ {
+  "div_num": "101",
+  "division": "Alexandria Public Schools",
+  "section": "ELEMENTARY",
+  "name": "Ferdinand T. Day Elementary",
+  "addr": [
+   "Street address:",
+   "1701 N Beauregard Street",
+   "Alexandria, VA  22311",
+   "703-619-8125"
+  ],
+  "grades": "KG-5",
+  "type": "Elementary"
+ },
+ {
+  "div_num": "101",
+  "division": "Alexandria Public Schools",
+  "section": "ELEMENTARY",
+  "name": "George Mason Elementary",
+  "addr": [
+   "Street address:",
+   "2601 Cameron Mills Rd",
+   "Alexandria, VA  22302",
+   "703-706-4470"
+  ],
+  "grades": "KG-5",
+  "type": "Elementary"
+ }
+]

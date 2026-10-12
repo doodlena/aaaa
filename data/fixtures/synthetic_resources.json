@@ -1,0 +1,159 @@
+{
+  "_notice": "SYNTHETIC TEST DATA. Every organization, address, phone number and schedule in this file is fictional. Used only for automated tests and local demos. Never publish as real food assistance.",
+  "records": [
+    {
+      "external_id": "syn-001",
+      "source_url": "https://example.org/synthetic/syn-001",
+      "organization_name": "[TEST] Maple Community Pantry",
+      "organization_website": "https://example.org/maple",
+      "location_name": "[TEST] Maple Community Pantry — Main Site",
+      "address1": "100 Synthetic Test Rd",
+      "city": "Arlington", "zip": "22204",
+      "lat": 38.8600, "lon": -77.0990, "geocode_source": "synthetic",
+      "phone": "(555) 010-0001",
+      "languages": ["en", "es"],
+      "wheelchair_accessible": "yes",
+      "parking_notes": "Free lot behind building (fictional).",
+      "transit_notes": "Fictional bus route 99 stops at the corner.",
+      "notes": "Synthetic record for testing.",
+      "eligibility": [
+        {"requirement_type": "photo_id", "status": "not_required", "details": "No ID needed (synthetic)."},
+        {"requirement_type": "income_documentation", "status": "not_required"},
+        {"requirement_type": "residency", "status": "required", "details": "Arlington residents (synthetic).", "values": {"jurisdictions": ["arlington-county"]}}
+      ],
+      "services": [
+        {"service_type": "pantry_pickup", "description": "Weekly groceries, fresh produce, dairy and eggs.",
+         "food_types": ["general_groceries", "fresh_fruits", "fresh_vegetables", "dairy", "eggs"], "offering_status": "regular",
+         "appointment_required": "not_required",
+         "schedules": [{"weekday": 1, "opens": "10:00", "closes": "13:00"}, {"weekday": 3, "opens": "17:00", "closes": "19:00"}]},
+        {"service_type": "diapers", "description": "Diapers when available.", "offering_status": "regular"}
+      ],
+      "schedules": [{"kind": "operating_hours", "weekday": 0, "opens": "09:00", "closes": "17:00"},
+                    {"kind": "operating_hours", "weekday": 1, "opens": "09:00", "closes": "17:00"},
+                    {"kind": "operating_hours", "weekday": 2, "opens": "09:00", "closes": "17:00"},
+                    {"kind": "operating_hours", "weekday": 3, "opens": "09:00", "closes": "17:00"},
+                    {"kind": "operating_hours", "weekday": 4, "opens": "09:00", "closes": "17:00"}]
+    },
+    {
+      "external_id": "syn-002",
+      "source_url": "https://example.org/synthetic/syn-002",
+      "organization_name": "[TEST] Riverbend Food Share",
+      "location_name": "[TEST] Riverbend Food Share",
+      "address1": "200 Placeholder Ave",
+      "city": "Arlington", "zip": "22201",
+      "lat": 38.8850, "lon": -77.0950, "geocode_source": "synthetic",
+      "phone": "(555) 010-0002",
+      "languages": ["en"],
+      "eligibility": [
+        {"requirement_type": "photo_id", "status": "required", "details": "Photo ID required (synthetic)."},
+        {"requirement_type": "proof_of_address", "status": "required"}
+      ],
+      "services": [
+        {"service_type": "drive_through", "description": "Drive-through boxes of produce and meat.",
+         "food_types": ["fresh_vegetables", "meat", "poultry"], "offering_status": "regular",
+         "schedules": [{"weekday": 5, "opens": "09:00", "closes": "11:00", "week_of_month": 2}]}
+      ]
+    },
+    {
+      "external_id": "syn-003",
+      "source_url": "https://example.org/synthetic/syn-003",
+      "organization_name": "[TEST] Oak Street Community Kitchen",
+      "location_name": "[TEST] Oak Street Community Kitchen",
+      "address1": "300 Example Blvd",
+      "city": "Alexandria", "zip": "22314",
+      "lat": 38.8060, "lon": -77.0560, "geocode_source": "synthetic",
+      "phone": "(555) 010-0003",
+      "languages": ["en", "es", "am"],
+      "wheelchair_accessible": "yes",
+      "services": [
+        {"service_type": "community_meal", "description": "Hot dinner served daily.", "food_types": ["prepared_meals", "community_meals"],
+         "offering_status": "regular", "appointment_required": "not_required",
+         "schedules": [{"weekday": 0, "opens": "17:30", "closes": "19:00"}, {"weekday": 1, "opens": "17:30", "closes": "19:00"},
+                       {"weekday": 2, "opens": "17:30", "closes": "19:00"}, {"weekday": 3, "opens": "17:30", "closes": "19:00"},
+                       {"weekday": 4, "opens": "17:30", "closes": "19:00"}, {"weekday": 5, "opens": "17:30", "closes": "19:00"},
+                       {"weekday": 6, "opens": "17:30", "closes": "19:00"}],
+         "eligibility": [{"requirement_type": "photo_id", "status": "not_required"}, {"requirement_type": "residency", "status": "not_required"}]}
+      ]
+    },
+    {
+      "external_id": "syn-004",
+      "source_url": "https://example.org/synthetic/syn-004",
+      "organization_name": "[TEST] Cedar Family Services",
+      "organization_website": "https://example.org/cedar",
+      "location_name": "[TEST] Cedar Family Services — Annandale",
+      "address1": "400 Sample Pkwy",
+      "city": "Annandale", "zip": "22003",
+      "lat": 38.8300, "lon": -77.2000, "geocode_source": "synthetic",
+      "phone": "(555) 010-0004",
+      "languages": ["en", "es", "ko"],
+      "services": [
+        {"service_type": "pantry_pickup", "description": "Groceries by appointment; halal options available.",
+         "food_types": ["general_groceries", "pantry_staples", "halal", "baby_formula", "infant_food"], "offering_status": "regular",
+         "appointment_required": "required",
+         "schedules": [{"weekday": 2, "opens": "10:00", "closes": "14:00", "appointment_only": true}]}
+      ],
+      "eligibility": [{"requirement_type": "appointment", "status": "required"}, {"requirement_type": "referral", "status": "not_required"}]
+    },
+    {
+      "external_id": "syn-005",
+      "source_url": "https://example.org/synthetic/syn-005",
+      "organization_name": "[TEST] Cedar Family Services",
+      "organization_website": "https://example.org/cedar",
+      "location_name": "[TEST] Cedar Family Services — Springfield",
+      "address1": "500 Imaginary Ln",
+      "city": "Springfield", "zip": "22150",
+      "lat": 38.7800, "lon": -77.1800, "geocode_source": "synthetic",
+      "languages": ["en"],
+      "services": [
+        {"service_type": "mobile_pantry", "description": "Mobile market with fresh produce, last Saturday monthly.",
+         "food_types": ["fresh_fruits", "fresh_vegetables", "bread"], "offering_status": "regular",
+         "schedules": [{"weekday": 5, "opens": "08:00", "closes": "10:00", "week_of_month": -1}]}
+      ]
+    },
+    {
+      "external_id": "syn-006",
+      "source_url": "https://example.org/synthetic/syn-006",
+      "organization_name": "[TEST] Willow Mutual Aid",
+      "location_name": "[TEST] Willow Mutual Aid",
+      "address1": "600 Fictional Ct",
+      "city": "Woodbridge", "zip": "22191",
+      "lat": 38.6580, "lon": -77.2700, "geocode_source": "synthetic",
+      "languages": ["en", "es"],
+      "services": [
+        {"service_type": "walk_up", "description": "Walk-up pantry. Produce, frozen meat, bread.",
+         "food_types": ["fresh_vegetables", "frozen_foods", "meat", "bread"], "offering_status": "regular",
+         "schedules": [{"weekday": 3, "opens": "15:00", "closes": "18:00"}]},
+        {"service_type": "school_based", "description": "Weekend food bags for students (synthetic).", "offering_status": "seasonal",
+         "eligibility": [{"requirement_type": "student_affiliation", "status": "required", "details": "Enrolled students (synthetic)."}]}
+      ]
+    },
+    {
+      "external_id": "syn-007",
+      "source_url": "https://example.org/synthetic/syn-007",
+      "organization_name": "[TEST] Birch Hill Church Pantry",
+      "location_name": "[TEST] Birch Hill Church Pantry",
+      "address1": "700 Notreal St",
+      "city": "Manassas", "zip": "20109",
+      "lat": 38.7900, "lon": -77.5300, "geocode_source": "synthetic",
+      "services": [
+        {"service_type": "pantry_pickup", "description": "Food pantry. Details unconfirmed.", "offering_status": "unconfirmed"}
+      ]
+    },
+    {
+      "external_id": "syn-008",
+      "source_url": "https://example.org/synthetic/syn-008",
+      "organization_name": "[TEST] Aspen Home Delivery Program",
+      "location_name": "[TEST] Aspen Home Delivery Program",
+      "address1": "800 Testcase Dr",
+      "city": "Dale City", "zip": "22193",
+      "lat": 38.6400, "lon": -77.3300, "geocode_source": "synthetic",
+      "services": [
+        {"service_type": "delivery_qualifying", "description": "Home delivery for homebound seniors.",
+         "food_types": ["emergency_food_packages", "pantry_staples"], "offering_status": "regular",
+         "registration_required": "required",
+         "eligibility": [{"requirement_type": "age", "status": "required", "values": {"min_age": 60}},
+                         {"requirement_type": "registration", "status": "required"}]}
+      ]
+    }
+  ]
+}

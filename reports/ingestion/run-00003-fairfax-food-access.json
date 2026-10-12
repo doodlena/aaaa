@@ -1,0 +1,261 @@
+{
+  "run_id": 3,
+  "source": {
+    "id": "fairfax-food-access",
+    "name": "Fairfax County \u2014 Emergency Food Access Providers",
+    "url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+    "adapter": "fairfax_food_access",
+    "is_synthetic": false,
+    "known_limitations": [
+      "Survey123 layer that accepts edits \u2014 the adapter only issues read (query) requests.",
+      "Hours are free text; only unambiguous phrases are converted to schedules.",
+      "KOSHER_HALAL is a single yes/no; stored as 'other special diet' pending reviewer detail."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T11:07:22.118595-04:00",
+  "finished_at": "2026-10-12T15:07:22.805469+00:00",
+  "counts": {
+    "discovered": 45,
+    "inserted": 17,
+    "updated": 12,
+    "unchanged": 0,
+    "rejected": 0,
+    "duplicate_candidates": 16,
+    "conflicts": 0,
+    "needs_review": 95,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {
+      "auto_linked": 12
+    }
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "694700a8-4a9c-41da-8d28-7d89b3ea5ce0",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "9bb5eb1e-a3d7-4271-8402-c0b8cacc981a",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "27c3553b-9d68-486f-8ff4-410acfd0e0da",
+      "status": "linked",
+      "location_id": 87,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "d208937d-f1ef-4044-8267-60c40e8109a1",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "9baf0509-422e-45cf-87ba-045ec090a090",
+      "status": "linked",
+      "location_id": 26,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "6aeea443-55d2-47e7-8203-803a46f9bfeb",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "0fba99ad-9161-4a15-819a-f99e517d3523",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "da837fdc-c517-4530-8b13-4ea975b26df7",
+      "status": "linked",
+      "location_id": 25,
+      "issues": []
+    },
+    {
+      "external_id": "34f0c749-3cdd-4104-8d36-7d4aa7d4e26c",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "22f07ac0-93a5-43dd-8962-ec9055de1a7e",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "58520489-d6b5-4c29-82a7-4458a4e909a1",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "7a753305-8db0-4d06-8adb-8adabda71555",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "3d179d23-127a-40e7-8073-cefe44c0960d",
+      "status": "linked",
+      "location_id": 43,
+      "issues": []
+    },
+    {
+      "external_id": "d5857022-ea5f-448b-82b7-9bdab65dd91d",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "bbe64ca1-302f-47ae-8599-659c5a0473a4",
+      "status": "linked",
+      "location_id": 47,
+      "issues": []
+    },
+    {
+      "external_id": "672795e6-490e-4ad0-8c62-40301c5388e3",
+      "status": "linked",
+      "location_id": 98,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "36b92e65-765b-4b25-80b4-0b0077cff382",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "c581979d-078d-4c77-8463-1c8c4004e987",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "c30bf32e-7ab2-407a-8f11-fe29e2fe01f6",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "52bf8dd0-55e1-4bab-82ff-8aab67449cc0",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "93ec460c-da41-4ee1-8682-a4be5bd44b2e",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "42ed5b4b-ad2d-4172-89de-890c82f9fa8c",
+      "status": "linked",
+      "location_id": 99,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "3a804c69-523b-46f0-8ef2-e68c38633289",
+      "status": "linked",
+      "location_id": 30,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "f4920907-5638-4b69-86cb-76c8d8602891",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "2e67ee5a-25b7-47ef-8a6b-13a331a6ed9c",
+      "status": "linked",
+      "location_id": 100,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "f6cd6150-2804-40a1-88db-280e31fdcb51",
+      "status": "linked",
+      "location_id": 102,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

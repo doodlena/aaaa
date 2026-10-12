@@ -1,0 +1,9 @@
+# Active pilot jurisdictions. Changing this list (no code change) changes ingestion scope and the public coverage
+# notice. Selected by `foodaccess pilot-report` on 2026-10-12 — see reports/pilot_research/PILOT_SELECTION_REPORT.md.
+# Divisions: Prince William County (75), Manassas City (143), Fairfax County (29). Fairfax County Public Schools also
+# serves the City of Fairfax, so both local governments are included. Same top three under equal-weight sensitivity.
+# Evidence caveat: VDOE files were obtained from Internet Archive copies of the official URLs (VDOE returned 403).
+selection_status: evidence-based
+selected_on: "2026-10-12"
+pilot_divisions: [75, 143, 29]
+pilot_jurisdictions: [prince-william-county, manassas-city, fairfax-county, fairfax-city]

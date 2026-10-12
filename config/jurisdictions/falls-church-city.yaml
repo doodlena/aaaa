@@ -1,0 +1,10 @@
+id: falls-church-city
+name: City of Falls Church
+kind: city
+county_fips: "610"
+status: planned
+boundary: {source: tigerweb, geoid: "51610"}
+school_divisions: [{vdoe_number: 109, name: Falls Church City Public Schools, slug: falls-church}]
+center: [38.8823, -77.1711]
+sources: []
+refresh: "0 6 * * 1"

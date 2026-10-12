@@ -1,0 +1,525 @@
+{
+  "generated_at": "2026-10-12T15:33:42.535958+00:00",
+  "pilot_jurisdictions": [
+    "fairfax-city",
+    "fairfax-county",
+    "manassas-city",
+    "prince-william-county"
+  ],
+  "pilot_divisions": [
+    75,
+    143,
+    29
+  ],
+  "selection_rule": "Top `pilot_size` divisions by score among those with \u226580% of factor weight available.",
+  "sources_researched": 10,
+  "sources_integrated": [
+    "cafb-get-help",
+    "fairfax-food-access",
+    "manassas-food-resources",
+    "pwc-cmn-resources"
+  ],
+  "runs": {
+    "cafb-get-help": {
+      "runs": 2,
+      "succeeded": 2,
+      "partial": 0,
+      "failed": 0,
+      "first_run_discovered": 81,
+      "last_counts": {
+        "gone": 0,
+        "extra": {},
+        "updated": 0,
+        "inserted": 0,
+        "rejected": 0,
+        "conflicts": 0,
+        "unchanged": 80,
+        "discovered": 81,
+        "fetch_errors": 0,
+        "needs_review": 113,
+        "out_of_scope": 1,
+        "parse_errors": 0,
+        "duplicate_candidates": 0
+      }
+    },
+    "fairfax-food-access": {
+      "runs": 2,
+      "succeeded": 2,
+      "partial": 0,
+      "failed": 0,
+      "first_run_discovered": 45,
+      "last_counts": {
+        "gone": 0,
+        "extra": {},
+        "updated": 0,
+        "inserted": 0,
+        "rejected": 0,
+        "conflicts": 0,
+        "unchanged": 45,
+        "discovered": 45,
+        "fetch_errors": 0,
+        "needs_review": 113,
+        "out_of_scope": 0,
+        "parse_errors": 0,
+        "duplicate_candidates": 0
+      }
+    },
+    "manassas-food-resources": {
+      "runs": 2,
+      "succeeded": 2,
+      "partial": 0,
+      "failed": 0,
+      "first_run_discovered": 18,
+      "last_counts": {
+        "gone": 0,
+        "extra": {},
+        "updated": 0,
+        "inserted": 0,
+        "rejected": 0,
+        "conflicts": 0,
+        "unchanged": 18,
+        "discovered": 18,
+        "fetch_errors": 0,
+        "needs_review": 113,
+        "out_of_scope": 0,
+        "parse_errors": 0,
+        "duplicate_candidates": 0
+      }
+    },
+    "pwc-cmn-resources": {
+      "runs": 2,
+      "succeeded": 2,
+      "partial": 0,
+      "failed": 0,
+      "first_run_discovered": 16,
+      "last_counts": {
+        "gone": 0,
+        "extra": {},
+        "updated": 0,
+        "inserted": 0,
+        "rejected": 0,
+        "conflicts": 0,
+        "unchanged": 13,
+        "discovered": 16,
+        "fetch_errors": 0,
+        "needs_review": 113,
+        "out_of_scope": 3,
+        "parse_errors": 0,
+        "duplicate_candidates": 0
+      }
+    }
+  },
+  "real_data": {
+    "raw_source_records": 156,
+    "candidate_locations": 113,
+    "verified_or_stale": 0,
+    "published": 0,
+    "by_review_status": {
+      "candidate": 113
+    }
+  },
+  "synthetic_fixtures": {
+    "locations": 8,
+    "published": 8
+  },
+  "overall_metrics": {
+    "locations_total": 113,
+    "by_review_status": {
+      "candidate": 113
+    },
+    "published": 0,
+    "published_without_verification_record": 0,
+    "published_without_source": 0,
+    "valid_address_pct": 97.3,
+    "valid_coordinates_pct": 100.0,
+    "with_service_types_pct": 97.3,
+    "with_food_types_pct": 77.0,
+    "with_distribution_schedule_pct": 78.8,
+    "with_documented_eligibility_pct": 37.2,
+    "with_official_website_pct": 32.7,
+    "with_source_attribution_pct": 100.0,
+    "with_verification_timestamp_pct": 0.0,
+    "stale": 0,
+    "pending_conflicts": 0,
+    "locations_with_conflicting_source_values": 17,
+    "pending_duplicates": 27,
+    "source_records_by_source": {
+      "cafb-get-help": 80,
+      "manassas-food-resources": 18,
+      "fairfax-food-access": 45,
+      "pwc-cmn-resources": 13
+    },
+    "source_records_by_status": {
+      "duplicate_candidate": 23,
+      "linked": 133
+    },
+    "ingestion_runs_by_status": {
+      "succeeded": 9
+    },
+    "organizations": 109
+  },
+  "per_jurisdiction": {
+    "fairfax-city": {
+      "locations_total": 0,
+      "by_review_status": {},
+      "published": 0,
+      "published_without_verification_record": 0,
+      "published_without_source": 0,
+      "valid_address_pct": null,
+      "valid_coordinates_pct": null,
+      "with_service_types_pct": null,
+      "with_food_types_pct": null,
+      "with_distribution_schedule_pct": null,
+      "with_documented_eligibility_pct": null,
+      "with_official_website_pct": null,
+      "with_source_attribution_pct": null,
+      "with_verification_timestamp_pct": null,
+      "stale": 0,
+      "pending_conflicts": 0,
+      "locations_with_conflicting_source_values": 0,
+      "pending_duplicates": 27,
+      "source_records_by_source": {
+        "cafb-get-help": 80,
+        "manassas-food-resources": 18,
+        "fairfax-food-access": 45,
+        "pwc-cmn-resources": 13
+      },
+      "source_records_by_status": {
+        "duplicate_candidate": 23,
+        "linked": 133
+      },
+      "ingestion_runs_by_status": {
+        "succeeded": 9
+      },
+      "organizations": 109
+    },
+    "fairfax-county": {
+      "locations_total": 65,
+      "by_review_status": {
+        "candidate": 65
+      },
+      "published": 0,
+      "published_without_verification_record": 0,
+      "published_without_source": 0,
+      "valid_address_pct": 96.9,
+      "valid_coordinates_pct": 100.0,
+      "with_service_types_pct": 96.9,
+      "with_food_types_pct": 92.3,
+      "with_distribution_schedule_pct": 86.2,
+      "with_documented_eligibility_pct": 44.6,
+      "with_official_website_pct": 43.1,
+      "with_source_attribution_pct": 100.0,
+      "with_verification_timestamp_pct": 0.0,
+      "stale": 0,
+      "pending_conflicts": 0,
+      "locations_with_conflicting_source_values": 11,
+      "pending_duplicates": 27,
+      "source_records_by_source": {
+        "cafb-get-help": 80,
+        "manassas-food-resources": 18,
+        "fairfax-food-access": 45,
+        "pwc-cmn-resources": 13
+      },
+      "source_records_by_status": {
+        "duplicate_candidate": 23,
+        "linked": 133
+      },
+      "ingestion_runs_by_status": {
+        "succeeded": 9
+      },
+      "organizations": 109
+    },
+    "manassas-city": {
+      "locations_total": 13,
+      "by_review_status": {
+        "candidate": 13
+      },
+      "published": 0,
+      "published_without_verification_record": 0,
+      "published_without_source": 0,
+      "valid_address_pct": 100.0,
+      "valid_coordinates_pct": 100.0,
+      "with_service_types_pct": 100.0,
+      "with_food_types_pct": 53.8,
+      "with_distribution_schedule_pct": 76.9,
+      "with_documented_eligibility_pct": 15.4,
+      "with_official_website_pct": 7.7,
+      "with_source_attribution_pct": 100.0,
+      "with_verification_timestamp_pct": 0.0,
+      "stale": 0,
+      "pending_conflicts": 0,
+      "locations_with_conflicting_source_values": 2,
+      "pending_duplicates": 27,
+      "source_records_by_source": {
+        "cafb-get-help": 80,
+        "manassas-food-resources": 18,
+        "fairfax-food-access": 45,
+        "pwc-cmn-resources": 13
+      },
+      "source_records_by_status": {
+        "duplicate_candidate": 23,
+        "linked": 133
+      },
+      "ingestion_runs_by_status": {
+        "succeeded": 9
+      },
+      "organizations": 109
+    },
+    "prince-william-county": {
+      "locations_total": 35,
+      "by_review_status": {
+        "candidate": 35
+      },
+      "published": 0,
+      "published_without_verification_record": 0,
+      "published_without_source": 0,
+      "valid_address_pct": 97.1,
+      "valid_coordinates_pct": 100.0,
+      "with_service_types_pct": 97.1,
+      "with_food_types_pct": 57.1,
+      "with_distribution_schedule_pct": 65.7,
+      "with_documented_eligibility_pct": 31.4,
+      "with_official_website_pct": 22.9,
+      "with_source_attribution_pct": 100.0,
+      "with_verification_timestamp_pct": 0.0,
+      "stale": 0,
+      "pending_conflicts": 0,
+      "locations_with_conflicting_source_values": 4,
+      "pending_duplicates": 27,
+      "source_records_by_source": {
+        "cafb-get-help": 80,
+        "manassas-food-resources": 18,
+        "fairfax-food-access": 45,
+        "pwc-cmn-resources": 13
+      },
+      "source_records_by_status": {
+        "duplicate_candidate": 23,
+        "linked": 133
+      },
+      "ingestion_runs_by_status": {
+        "succeeded": 9
+      },
+      "organizations": 109
+    }
+  },
+  "per_source": {
+    "cafb-get-help": {
+      "records": 80,
+      "by_status": {
+        "linked": 79,
+        "duplicate_candidate": 1
+      },
+      "with_coordinates_pct": 100.0,
+      "with_parsed_schedule_pct": 91.2,
+      "with_unparsed_hours_text_only_pct": 5.0,
+      "with_food_types_pct": 93.8,
+      "with_eligibility_pct": 0.0,
+      "with_official_website_pct": 0.0,
+      "with_phone_pct": 83.8,
+      "validation_errors": 0
+    },
+    "fairfax-food-access": {
+      "records": 45,
+      "by_status": {
+        "linked": 29,
+        "duplicate_candidate": 16
+      },
+      "with_coordinates_pct": 100.0,
+      "with_parsed_schedule_pct": 75.6,
+      "with_unparsed_hours_text_only_pct": 24.4,
+      "with_food_types_pct": 97.8,
+      "with_eligibility_pct": 100.0,
+      "with_official_website_pct": 93.3,
+      "with_phone_pct": 100.0,
+      "validation_errors": 0
+    },
+    "manassas-food-resources": {
+      "records": 18,
+      "by_status": {
+        "linked": 15,
+        "duplicate_candidate": 3
+      },
+      "with_coordinates_pct": 100.0,
+      "with_parsed_schedule_pct": 50.0,
+      "with_unparsed_hours_text_only_pct": 22.2,
+      "with_food_types_pct": 0.0,
+      "with_eligibility_pct": 16.7,
+      "with_official_website_pct": 0.0,
+      "with_phone_pct": 77.8,
+      "validation_errors": 0
+    },
+    "pwc-cmn-resources": {
+      "records": 13,
+      "by_status": {
+        "linked": 10,
+        "duplicate_candidate": 3
+      },
+      "with_coordinates_pct": 100.0,
+      "with_parsed_schedule_pct": 61.5,
+      "with_unparsed_hours_text_only_pct": 38.5,
+      "with_food_types_pct": 53.8,
+      "with_eligibility_pct": 100.0,
+      "with_official_website_pct": 92.3,
+      "with_phone_pct": 100.0,
+      "validation_errors": 0
+    }
+  },
+  "geo_checks": {
+    "locations_checked": 113,
+    "jurisdiction_mismatches": [],
+    "max_relative_difference_postgis_vs_haversine": 0.0024,
+    "note": "PostGIS uses the WGS84 spheroid; haversine a sphere \u2014 differences up to ~0.5% are expected."
+  },
+  "quality_targets": {
+    "valid_coordinates_pct": {
+      "target": 95,
+      "actual": 100.0,
+      "met": true
+    },
+    "valid_address_pct": {
+      "target": 90,
+      "actual": 97.3,
+      "met": true
+    },
+    "with_source_attribution_pct": {
+      "target": 100,
+      "actual": 100.0,
+      "met": true
+    },
+    "with_distribution_schedule_pct": {
+      "target": 60,
+      "actual": 78.8,
+      "met": true
+    },
+    "with_service_types_pct": {
+      "target": 90,
+      "actual": 97.3,
+      "met": true
+    },
+    "with_documented_eligibility_pct": {
+      "target": 50,
+      "actual": 37.2,
+      "met": false
+    },
+    "with_official_website_pct": {
+      "target": 50,
+      "actual": 32.7,
+      "met": false
+    }
+  },
+  "acceptance": [
+    {
+      "criterion": "All published verified listings have an attributable manual verification record",
+      "tests": [
+        "test_verification_requires_method_and_records_reviewer",
+        "test_admin_review_approve_publish"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "All public listings have source attribution",
+      "tests": [
+        "test_admin_review_approve_publish"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "Unknown requirements are not interpreted as unrestricted",
+      "tests": [
+        "test_no_id_filter_excludes_unknown_and_required",
+        "test_detail_has_structured_sections_and_unknowns"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "Imported records do not automatically overwrite verified fields",
+      "tests": [
+        "test_changes_to_verified_record_become_proposals_not_overwrites"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "Re-running an unchanged import does not create duplicates",
+      "tests": [
+        "test_reimport_is_idempotent"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "Nearby searches use correct spatial calculations",
+      "tests": [
+        "test_radius_search_distance_order_and_postgis_distance",
+        "test_border_search_crosses_jurisdictions",
+        "test_viewport_search"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "Filters correctly handle unknown and missing information",
+      "tests": [
+        "test_no_id_filter_excludes_unknown_and_required",
+        "test_date_filter_uses_distribution_schedule"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "Guest search works without authentication",
+      "tests": [
+        "test_radius_search_distance_order_and_postgis_distance"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "Registered favorites persist",
+      "tests": [
+        "test_favorites_flow_requires_csrf"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "Administrator endpoints are protected",
+      "tests": [
+        "test_admin_routes_protected"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "Synthetic test records cannot be mistaken for published real resources",
+      "tests": [
+        "test_unpublished_detail_404_and_synthetic_hidden_when_disabled",
+        "test_import_creates_unpublished_candidates_with_provenance"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "Map and list results remain synchronized",
+      "tests": [
+        "list \u2194 map synchronisation > list \"Show on map\" selects with origin=list and the map pans to it",
+        "list \u2194 map synchronisation > marker click selects with origin=map, highlights the card and scrolls it into view"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "English and Spanish interface translations function",
+      "tests": [
+        "language switching > switches UI text to Spanish and remembers the choice",
+        "language switching > has complete, matching English and Spanish catalogs"
+      ],
+      "result": "pass"
+    },
+    {
+      "criterion": "Restricted-license sources are not republished without direct provider verification",
+      "tests": [
+        "test_restricted_source_needs_direct_verification_to_publish"
+      ],
+      "result": "pass"
+    }
+  ],
+  "ready_for_expansion": false,
+  "per_jurisdiction_verification_threshold_met": {
+    "fairfax-city": false,
+    "fairfax-county": false,
+    "manassas-city": false,
+    "prince-william-county": false
+  }
+}

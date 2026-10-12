@@ -1,0 +1,10 @@
+id: loudoun-county
+name: Loudoun County
+kind: county
+county_fips: "107"
+status: planned
+boundary: {source: tigerweb, geoid: "51107"}
+school_divisions: [{vdoe_number: 53, name: Loudoun County Public Schools, slug: loudoun}]
+center: [39.0768, -77.6536]
+sources: []
+refresh: "0 6 * * 1"

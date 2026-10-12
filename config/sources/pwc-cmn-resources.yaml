@@ -1,0 +1,23 @@
+id: pwc-cmn-resources
+name: Prince William County — Community Mobilization Network resource locations (Food Assistance)
+owner: Prince William County
+url: https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523
+adapter: pwc_cmn_resources
+retrieval: http
+formats: [arcgis-geojson]
+jurisdictions: [prince-william-county, manassas-city, manassas-park-city]
+enabled: true
+min_seconds_between_requests: 3
+cache_ttl_hours: 24
+store_raw: true
+publication: permitted_with_attribution
+verified_on: "2026-10-12"
+options:
+  query_url: https://services2.arcgis.com/0Q7l03Ls62VG0fy4/arcgis/rest/services/CMN_Public_Resource_Locations/FeatureServer/0/query
+  where: "Service_Category='Food Assistance'"
+expected_fields: [Organization_Name, Address, Phone_Number, Website___Social_Media, Service_Description, Hours_of_Service, How_to_Access_Services, Photo_ID_Required]
+known_limitations:
+  - "Address is a single string; city is parsed from comma position."
+  - "Phone field can hold several numbers; the first is used."
+terms_notes: "licenseInfo links the PWC disclaimer (accuracy not guaranteed); no reuse restriction stated. Attribute Prince William County."
+refresh: "0 5 * * 1"

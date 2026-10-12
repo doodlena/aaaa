@@ -1,0 +1,10 @@
+id: arlington-county
+name: Arlington County
+kind: county
+county_fips: "013"
+status: planned          # pilot | expansion | planned | disabled  (set by config/pilot_selection.yaml results)
+boundary: {source: tigerweb, geoid: "51013"}
+school_divisions: [{vdoe_number: 7, name: Arlington County Public Schools, slug: arlington}]
+center: [38.8816, -77.1043]
+sources: []              # source ids from config/sources/ enabled for this jurisdiction
+refresh: "0 6 * * 1"     # cron (weekly, Monday 06:00)

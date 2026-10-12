@@ -1,0 +1,183 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-12T14:51:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 367141197,
+  "lat": 38.9328594,
+  "lon": -77.0368238,
+  "tags": {
+    "addr:state": "DC",
+    "amenity": "social_facility",
+    "ele": "61",
+    "gnis:feature_id": "2457456",
+    "name": "Canaan Baptist Church Coalition for the Homeless",
+    "social_facility": "food_bank",
+    "source": "USGS Geonames"
+  }
+},
+{
+  "type": "node",
+  "id": 367141203,
+  "lat": 38.9103000,
+  "lon": -77.0217000,
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1525",
+    "addr:postcode": "20001",
+    "addr:state": "DC",
+    "addr:street": "7th Street Northwest",
+    "amenity": "social_facility",
+    "ele": "25",
+    "name": "Bread for the City",
+    "opening_hours": "Mo-Th 09:00-17:00; Fr 09:00-12:00",
+    "phone": "+1-202-265-2400",
+    "social_facility": "food_bank",
+    "website": "https://breadforthecity.org/"
+  }
+},
+{
+  "type": "node",
+  "id": 4842101994,
+  "lat": 38.8311989,
+  "lon": -77.0081116,
+  "tags": {
+    "addr:housenumber": "4001",
+    "addr:street": "South CapitoL Street Southwest",
+    "amenity": "social_facility",
+    "name": "Congress Heights Service Center (food stamps)",
+    "operator": "DHS",
+    "owner": "state",
+    "social_facility": "food_bank",
+    "social_facility:for": "underprivileged"
+  }
+},
+{
+  "type": "node",
+  "id": 8249870137,
+  "lat": 38.9932957,
+  "lon": -77.0186324,
+  "tags": {
+    "amenity": "social_facility",
+    "description": "Miniature Food Pantry",
+    "email": "ThayerPantry@gmail.com",
+    "name": "Thayer Little Free Pantry",
+    "social_facility": "food_bank"
+  }
+},
+{
+  "type": "node",
+  "id": 10298717235,
+  "lat": 38.8436381,
+  "lon": -77.0893666,
+  "tags": {
+    "amenity": "social_facility",
+    "name": "Arlington Food Assistance Center",
+    "social_facility": "food_bank"
+  }
+},
+{
+  "type": "node",
+  "id": 12972073938,
+  "lat": 38.9459421,
+  "lon": -77.0652515,
+  "tags": {
+    "amenity": "social_facility",
+    "name": "NW Community Food",
+    "opening_hours": "Su 13:00-15:00",
+    "social_facility": "food_bank",
+    "website": "https://nwcommunityfood.net"
+  }
+},
+{
+  "type": "node",
+  "id": 13418250627,
+  "lat": 38.8378387,
+  "lon": -77.4340970,
+  "tags": {
+    "addr:housenumber": "5948",
+    "addr:street": "Centreville Crest Lane",
+    "amenity": "social_facility",
+    "check_date": "2025-12-30",
+    "name": "Western Fairfax Christian Ministries",
+    "social_facility": "food_bank"
+  }
+},
+{
+  "type": "way",
+  "id": 295092024,
+  "center": {
+    "lat": 38.8662243,
+    "lon": -76.9811022
+  },
+  "tags": {
+    "addr:city": "Washington",
+    "addr:housenumber": "1700",
+    "addr:postcode": "20020-4706",
+    "addr:state": "DC",
+    "addr:street": "Good Hope Road Southeast",
+    "building": "yes",
+    "building:levels": "2",
+    "dcgis:gis_id": "38594",
+    "description": "The Lion of Anacostia (One people community Building)",
+    "name": "Bread for the City",
+    "opening_hours": "Mo-Th 09:00-17:00; Fr 09:00-12:00",
+    "phone": "+1-202-561-8587",
+    "social_facility": "food_bank",
+    "website": "https://breadforthecity.org/"
+  }
+},
+{
+  "type": "way",
+  "id": 406961120,
+  "center": {
+    "lat": 38.8541906,
+    "lon": -77.0827658
+  },
+  "tags": {
+    "amenity": "social_facility",
+    "building": "office",
+    "social_facility": "food_bank"
+  }
+},
+{
+  "type": "way",
+  "id": 455490666,
+  "center": {
+    "lat": 38.9479910,
+    "lon": -76.9997701
+  },
+  "tags": {
+    "amenity": "social_facility",
+    "building": "industrial",
+    "name": "Capital Area Food Bank",
+    "social_facility": "food_bank",
+    "website": "https://www.capitalareafoodbank.org/",
+    "wikidata": "Q5035458"
+  }
+},
+{
+  "type": "way",
+  "id": 615541562,
+  "center": {
+    "lat": 38.9481667,
+    "lon": -76.9688986
+  },
+  "tags": {
+    "amenity": "social_facility",
+    "building": "yes",
+    "height": "13.6670933919",
+    "roof:shape": "gabled",
+    "social_facility": "food_bank",
+    "source": "M-NCPPC"
+  }
+}
+
+  ]
+}

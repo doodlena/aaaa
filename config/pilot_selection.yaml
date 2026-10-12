@@ -1,0 +1,24 @@
+# Pilot prioritization — transparent, configurable. Edit weights/candidates and re-run `foodaccess pilot-report`.
+# Weights are relative (renormalized to sum to 1 over the factors available for each division).
+pilot_size: 3
+candidates: [7, 29, 53, 75, 101, 109, 143, 144]   # VDOE division numbers (all Northern Virginia divisions)
+factors:
+  title_i_schools:            {weight: 0.20, field: title_i_schools, label: "Number of Title I schools (2025-26)"}
+  title_i_share:              {weight: 0.20, field: title_i_share, label: "Share of schools designated Title I"}
+  fr_eligible_pct:            {weight: 0.10, field: fr_eligible_pct, label: "Free/reduced-price meal eligible share of NSLP membership (2025-26)"}
+  acs_below_185pct_fpl_pct:   {weight: 0.15, field: acs_below_185pct_fpl_pct, label: "Residents below 185% of poverty line (ACS 2020-24)"}
+  acs_snap_household_pct:     {weight: 0.10, field: acs_snap_household_pct, label: "Households receiving SNAP (ACS 2020-24)"}
+  food_data_listings:         {weight: 0.15, field: food_data_listings, label: "Listings in the best current structured food-resource source"}
+  verification_sources:       {weight: 0.10, field: verification_sources, label: "Independent current structured sources (enables cross-checking)"}
+# Food-data availability evidence (from docs/pilot_research/SOURCE_DISCOVERY.md, fetched 2026-10-12). Per
+# division: listings in the best *current* (updated within ~2 years) structured source, and the number of
+# independent current structured sources. null = not researched -> factor excluded and flagged, never guessed.
+food_data_evidence:
+  7:   {food_data_listings: 9,  verification_sources: 1, notes: "CAFB feed 9 sites; AFAC HTML page (5 sites) curatable; arlingtonva.us blocked (403) during research"}
+  29:  {food_data_listings: 50, verification_sources: 2, notes: "CAFB feed 50; Fairfax County Emergency Food Access layer 45 (public display needs county permission)"}
+  53:  {food_data_listings: null, verification_sources: null, notes: "Not researched in this pass (outside CAFB feed coverage)"}
+  75:  {food_data_listings: 25, verification_sources: 2, notes: "CAFB feed 25; PWC Community Mobilization Network layer 16 food sites (updated 2026-09); 2022 layer stale, excluded"}
+  101: {food_data_listings: 14, verification_sources: 1, notes: "CAFB feed 14; city directory is a 2024 PDF only"}
+  109: {food_data_listings: null, verification_sources: null, notes: "Not researched in this pass"}
+  143: {food_data_listings: 18, verification_sources: 2, notes: "City of Manassas food layer 18 (updated 2024-08); CAFB feed 6"}
+  144: {food_data_listings: 0,  verification_sources: 0, notes: "No Manassas Park sites in CAFB feed; no city layer found"}

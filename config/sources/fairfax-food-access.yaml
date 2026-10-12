@@ -1,0 +1,24 @@
+id: fairfax-food-access
+name: Fairfax County — Emergency Food Access Providers
+owner: Fairfax County Neighborhood and Community Services
+url: https://www.fairfaxcounty.gov/neighborhood-community-services/food-access
+adapter: fairfax_food_access
+retrieval: http
+formats: [arcgis-geojson]
+jurisdictions: [fairfax-county, fairfax-city]
+enabled: true
+min_seconds_between_requests: 3
+cache_ttl_hours: 24
+store_raw: false
+publication: permission_required
+verified_on: "2026-10-12"
+options:
+  query_url: https://services1.arcgis.com/ioennV6PpG5Xodq0/arcgis/rest/services/service_28906b317c7e44cab3c60a88f8dc6dc3_form/FeatureServer/0/query
+  where: "1=1"
+expected_fields: [FOOD_ORGANIZATION, FOOD_PROVIDER_SITE_NAME, SERVICE, FOOD_PROVIDER_SITE_ADDRESS, OPERATIONAL_HOURS_DETAIL, TYPES_OF_FOODS, IDENTIFICATION_REQUIREMENTS, INCOME_REQUIREMENTS, ACCEPT_WALK_INS]
+known_limitations:
+  - "Survey123 layer that accepts edits — the adapter only issues read (query) requests."
+  - "Hours are free text; only unambiguous phrases are converted to schedules."
+  - "KOSHER_HALAL is a single yes/no; stored as 'other special diet' pending reviewer detail."
+terms_notes: "County map disclaimer: copyright Fairfax County; reproduction authorized for internal or personal use. Public display requires county permission."
+refresh: "0 5 * * 1"

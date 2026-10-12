@@ -1,0 +1,10 @@
+id: fairfax-city
+name: City of Fairfax
+kind: city
+county_fips: "600"
+status: planned
+boundary: {source: tigerweb, geoid: "51600"}
+school_divisions: [{vdoe_number: 29, name: Fairfax County Public Schools, slug: fairfax-county}]
+center: [38.8462, -77.3064]
+sources: []
+refresh: "0 6 * * 1"

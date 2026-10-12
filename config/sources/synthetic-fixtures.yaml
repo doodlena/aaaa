@@ -1,0 +1,16 @@
+# SYNTHETIC TEST DATA — fictional organizations used only for automated tests and local demos.
+# Never enabled for real ingestion runs (run_all skips is_synthetic sources unless named explicitly) and never
+# publishable in production (enforced in the verification workflow).
+id: synthetic-fixtures
+name: "Synthetic fixtures (test data — not real resources)"
+owner: Project test suite
+url: file://data/fixtures/synthetic_resources.json
+adapter: structured_json
+retrieval: file
+formats: [json]
+jurisdictions: [arlington-county, fairfax-county, prince-william-county, alexandria-city]
+enabled: true
+is_synthetic: true
+store_raw: true
+respect_robots: false
+known_limitations: ["Entirely fictional. Exists to exercise the pipeline, search, and UI."]

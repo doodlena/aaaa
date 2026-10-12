@@ -1,0 +1,31 @@
+id: manassas-food-resources
+name: City of Manassas — Manassas Area Food Resources
+owner: City of Manassas
+url: https://www.arcgis.com/home/item.html?id=782d5f553535425091446bb904b3759b
+adapter: arcgis_feature_layer
+retrieval: http
+formats: [arcgis-geojson]
+jurisdictions: [manassas-city, prince-william-county, manassas-park-city]
+enabled: true
+min_seconds_between_requests: 3
+request_urls:
+  - "https://services1.arcgis.com/3wpOgOChiWXPeFWB/arcgis/rest/services/Food_Resources_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson"
+store_raw: true
+publication: permitted_with_attribution
+verified_on: "2026-10-12"
+options:
+  id_field: ObjectID
+  default_service_type: pantry_pickup
+field_mappings:
+  organization_name: USER_Name
+  address1: USER_ADDRESS
+  city: USER_CITY
+  zip: USER_ZIP
+  phone: PhoneNumber
+  hours_text: Comments
+known_limitations:
+  - "Last edited 2024-08; may be stale."
+  - "Comments mix food hours with other services (e.g. thrift); non-food lines are ignored and the raw text is kept for review."
+  - "No service description: listed sites are assumed to be pantry pickup *candidates* until verified."
+terms_notes: "City licenseInfo: reference purposes only, no accuracy guarantee."
+refresh: "0 5 * * 1"

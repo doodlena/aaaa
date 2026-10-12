@@ -1,0 +1,114 @@
+{
+  "run_id": 9,
+  "source": {
+    "id": "pwc-cmn-resources",
+    "name": "Prince William County \u2014 Community Mobilization Network resource locations (Food Assistance)",
+    "url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+    "adapter": "pwc_cmn_resources",
+    "is_synthetic": false,
+    "known_limitations": [
+      "Address is a single string; city is parsed from comma position.",
+      "Phone field can hold several numbers; the first is used."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T11:07:33.419265-04:00",
+  "finished_at": "2026-10-12T15:07:33.448354+00:00",
+  "counts": {
+    "discovered": 16,
+    "inserted": 0,
+    "updated": 0,
+    "unchanged": 13,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 113,
+    "out_of_scope": 3,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "abcdc406-4e66-4172-ab5a-c9767c52acf7",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "bd1fad9e-d839-4306-9f6f-046093ca9b17",
+      "status": "linked",
+      "location_id": 117,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "5d2661cd-db00-4c38-b50f-cccd1429daf2",
+      "status": "linked",
+      "location_id": 115,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "af2c10e0-5d87-4053-a282-62a2d3eb3d53",
+      "status": "linked",
+      "location_id": 118,
+      "issues": []
+    },
+    {
+      "external_id": "946371c3-425e-4a4a-97bb-bf2524153283",
+      "status": "linked",
+      "location_id": 120,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "a045f19d-4164-40cc-b8fd-c0b35c63329a",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "9475ef13-57f7-4d7f-9527-c9b2c375bb77",
+      "status": "linked",
+      "location_id": 121,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "bfa69a9a-b9a6-43ac-ab9a-0787dd1b35f6",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

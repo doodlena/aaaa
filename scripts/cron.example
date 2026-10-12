@@ -1,0 +1,11 @@
+# Example crontab for the Northern Virginia Food Access Platform (all commands idempotent).
+# Adjust paths. Logs contain no user data.
+FOODACCESS_DIR=/opt/nova-food-access/backend
+BIN=/opt/nova-food-access/.venv/bin/foodaccess
+# Weekly refresh of all enabled sources for active (pilot/expansion) jurisdictions
+0 5 * * 1  cd $FOODACCESS_DIR && $BIN ingest >> /var/log/foodaccess/ingest.log 2>&1
+30 5 * * 1 cd $FOODACCESS_DIR && $BIN dedupe >> /var/log/foodaccess/ingest.log 2>&1
+# Daily freshness labelling
+15 4 * * *  cd $FOODACCESS_DIR && $BIN mark-stale >> /var/log/foodaccess/maintenance.log 2>&1
+# Weekly quality report
+0 6 * * 1  cd $FOODACCESS_DIR && $BIN quality-report >> /var/log/foodaccess/quality.log 2>&1

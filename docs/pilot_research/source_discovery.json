@@ -1,0 +1,752 @@
+{
+  "retrieved": "2026-10-12",
+  "notes": "All URLs below were fetched on 2026-10-12. www.doe.virginia.gov returns HTTP 403 (Akamai 'Access Denied') to curl and WebFetch from this environment, including robots.txt; VDOE files were therefore retrieved via Internet Archive (web.archive.org) id_ snapshots of the exact VDOE URLs. A production ingester must either run from a network VDOE does not block, or download manually.",
+  "title_i": {
+    "status": "CONFIRMED (via Wayback copy; VDOE origin blocked 403)",
+    "landing_page": "https://www.doe.virginia.gov/programs-services/federal-programs/essa/title-i/title-i-part-a-improving-basic-programs-operated-by-local-educational-agencies",
+    "landing_page_snapshot": "https://web.archive.org/web/20260309232855/https://www.doe.virginia.gov/programs-services/federal-programs/essa/title-i/title-i-part-a-improving-basic-programs-operated-by-local-educational-agencies",
+    "url": "https://www.doe.virginia.gov/home/showpublisheddocument/64871/638917252795170000",
+    "link_text": "2025-2026 Title I Schools",
+    "retrieved_from": "https://web.archive.org/web/20251129015802id_/https://www.doe.virginia.gov/home/showpublisheddocument/64871/638917252795170000",
+    "prior_years": {
+      "2024-2025": "https://www.doe.virginia.gov/home/showpublisheddocument/55829/638567181101070000",
+      "2023-2024": "https://www.doe.virginia.gov/home/showpublisheddocument/53521/638471542088130000"
+    },
+    "newer_year_note": "A web-search summary claimed a 2026-2027 file exists on the landing page; NOT verified (latest successful snapshot is 2026-03-09 and lists 2025-2026 as newest).",
+    "format": "xlsx",
+    "sheet": "DATA",
+    "other_sheets": [
+      "SQL (the extraction query text)"
+    ],
+    "header_row": 1,
+    "columns": [
+      "DIVISION NAME",
+      "DIVISION NUMBER",
+      "SCHOOL NAME",
+      "SCHOOL NUMBER",
+      "GRADE SPAN SERVED",
+      "SCHOOL TYPE",
+      "FOCUS AREA"
+    ],
+    "column_types": {
+      "DIVISION NUMBER": "int (no zero padding, e.g. 29)",
+      "SCHOOL NUMBER": "int (no zero padding; 1 blank for Virginia School for the Deaf and Blind)"
+    },
+    "focus_area_values": {
+      "Title I - Schoolwide": 777,
+      "Title I - Targeted Assistance": 28
+    },
+    "school_type_values": [
+      "Elementary",
+      "Middle",
+      "High",
+      "Combined"
+    ],
+    "school_year": "2025-2026 (NOT a column; only in link text/filename. SQL sheet filters beg_sch_yr = :beg_sch_yr)",
+    "row_count_total": 805,
+    "nova_counts": {
+      "Fairfax County Public Schools (29)": 51,
+      "Arlington County Public Schools (7)": 7,
+      "Prince William County Public Schools (75)": 39,
+      "Alexandria City Public Schools (101)": 9,
+      "Manassas City Public Schools (143)": 5,
+      "Manassas Park City Public Schools (144)": 2,
+      "Falls Church City Public Schools (109)": 1,
+      "Loudoun County Public Schools (53)": 15
+    },
+    "nova_focus_area": "All NoVA rows are Schoolwide except Falls Church (1 Targeted Assistance)",
+    "join_key": "(DIVISION NUMBER, SCHOOL NUMBER) as ints == int(Div. No.), int(School No.) in the VDOE NSLP F/R report; 49/51 Fairfax, 38/39 PWC, all others 100% matched (unmatched: Glasgow Middle 101, Mason Crest Elementary 453, Leesylvania Elementary 83)"
+  },
+  "directory": {
+    "status": "PARTIAL. VDOE CSV located but not downloadable here; va-doeapp.com HTML directory CONFIRMED; NCES EDGE ArcGIS CONFIRMED as machine-readable alternative",
+    "vdoe_csv": {
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/79158/639259469639685164",
+      "link_text": "School List with Principal Contact Information (CSV) - Updated September 25, 2026",
+      "found_on": "https://web.archive.org/web/20261001231927/https://www.doe.virginia.gov/about-vdoe/virginia-school-directories",
+      "downloaded": false,
+      "reason": "origin 403; no Wayback capture of this document id"
+    },
+    "va_doeapp_html": {
+      "url": "https://www.va-doeapp.com/PublicSchoolsByDivisions.aspx?w=true",
+      "owner": "VDOE",
+      "format": "HTML table (~740 KB, one page, all divisions)",
+      "robots": "no robots.txt (404) => allowed",
+      "fields": [
+        "division name",
+        "division number (3-digit, in <a name='029'> anchor)",
+        "section heading (ELEMENTARY/MIDDLE/HIGH/PRESCHOOL/VIRTUAL/CHARTER/ALTERNATIVE/SPECIAL EDUCATION/GOVERNORS/OTHER)",
+        "school name",
+        "street address lines",
+        "city/state/zip",
+        "phone",
+        "principal",
+        "grades",
+        "type (Elementary/Middle/High/Prekindergarten/Other/Secondary)"
+      ],
+      "missing": "NO school number -> cannot key-join to Title I without name matching",
+      "total_rows": 1863,
+      "divisions": 131,
+      "nova_counts_all_sections": {
+        "029 Fairfax": 200,
+        "007 Arlington": 36,
+        "075 Prince William": 96,
+        "101 Alexandria": 18,
+        "143 Manassas": 10,
+        "144 Manassas Park": 4,
+        "109 Falls Church": 5,
+        "053 Loudoun": 98
+      },
+      "nova_section_breakdown": {
+        "029": {
+          "ELEMENTARY": 141,
+          "MIDDLE": 24,
+          "HIGH": 25,
+          "GOVERNORS": 1,
+          "SPECIAL EDUCATION": 2,
+          "ALTERNATIVE": 3,
+          "PRESCHOOL": 4
+        },
+        "007": {
+          "ELEMENTARY": 25,
+          "MIDDLE": 6,
+          "HIGH": 4,
+          "PRESCHOOL": 1
+        },
+        "075": {
+          "ELEMENTARY": 65,
+          "MIDDLE": 17,
+          "HIGH": 13,
+          "PRESCHOOL": 1
+        },
+        "101": {
+          "ELEMENTARY": 14,
+          "MIDDLE": 2,
+          "HIGH": 1,
+          "PRESCHOOL": 1
+        },
+        "143": {
+          "ELEMENTARY": 5,
+          "MIDDLE": 3,
+          "HIGH": 1,
+          "VIRTUAL": 1
+        },
+        "144": {
+          "ELEMENTARY": 2,
+          "MIDDLE": 1,
+          "HIGH": 1
+        },
+        "109": {
+          "ELEMENTARY": 2,
+          "MIDDLE": 1,
+          "HIGH": 1,
+          "PRESCHOOL": 1
+        },
+        "053": {
+          "ELEMENTARY": 60,
+          "MIDDLE": 18,
+          "HIGH": 17,
+          "ALTERNATIVE": 1,
+          "CHARTER": 2
+        }
+      }
+    },
+    "nces_edge": {
+      "layer": "https://nces.ed.gov/opengis/rest/services/K12_School_Locations/EDGE_ADMINDATA_PUBLICSCH_2425/MapServer/1",
+      "query_url": "https://nces.ed.gov/opengis/rest/services/K12_School_Locations/EDGE_ADMINDATA_PUBLICSCH_2425/MapServer/1/query?where=LSTATE%3D%27VA%27%20AND%20ST_LEAID%20IN%20(%27VA-029%27,%27VA-007%27,%27VA-075%27,%27VA-101%27,%27VA-143%27,%27VA-144%27,%27VA-109%27,%27VA-053%27)&outFields=*&f=geojson",
+      "school_year": "2024-25",
+      "max_record_count": 2000,
+      "fields_key": [
+        "NCESSCH",
+        "SURVYEAR",
+        "LEAID",
+        "ST_LEAID (e.g. VA-029 = VDOE division 029)",
+        "LEA_NAME",
+        "SCH_NAME",
+        "LSTREET1",
+        "LCITY",
+        "LZIP",
+        "SCHOOL_TYPE_TEXT",
+        "SY_STATUS_TEXT",
+        "CHARTER_TEXT",
+        "VIRTUAL",
+        "SCHOOL_LEVEL",
+        "NMCNTY",
+        "CNTY (5-digit FIPS)",
+        "TOTFRL",
+        "FRELCH",
+        "REDLCH",
+        "DIRECTCERT",
+        "TOTAL",
+        "LATCOD",
+        "LONCOD"
+      ],
+      "missing": "no state school number (ST_SCHID) in this layer -> join to VDOE by name/address or via CCD directory file",
+      "nova_counts": {
+        "VA-029 Fairfax": 223,
+        "VA-007 Arlington": 42,
+        "VA-075 Prince William": 98,
+        "VA-101 Alexandria": 19,
+        "VA-143 Manassas": 10,
+        "VA-144 Manassas Park": 4,
+        "VA-109 Falls Church": 5,
+        "VA-053 Loudoun": 102
+      },
+      "caveat": "negative sentinel values (e.g. -2) for suppressed/not-applicable counts; filter before summing. Separate LEA 'Transition Support Resource Ctr/Fairfax' (VA-405) exists."
+    },
+    "total_schools_recommendation": "Use the VDOE NSLP Free/Reduced Eligibility report (by school) rows as the denominator: one row per NSLP-participating public school with (Div. No., School No.) keys identical to Title I. NoVA counts 2025-26: Fairfax 191, Arlington 36, PWC 97, Alexandria 17, Manassas 9, Manassas Park 4, Falls Church 5, Loudoun 98. Exclude PRESCHOOL/VIRTUAL/GOVERNORS/ALTERNATIVE/SPECIAL EDUCATION entries if using the va-doeapp HTML."
+  },
+  "meal_eligibility": {
+    "status": "CONFIRMED (via Wayback copy)",
+    "landing_page": "https://www.doe.virginia.gov/programs-services/school-operations-support-services/school-nutrition/program-statistics-reports",
+    "frl_by_school": {
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/76094/639081364709900000",
+      "retrieved_from": "https://web.archive.org/web/20260421191352id_/https://www.doe.virginia.gov/home/showpublisheddocument/76094/639081364709900000",
+      "format": "xlsx (print-layout report)",
+      "sheet": "2025-2026 Free-Red School",
+      "school_year": "2025-2026 (as of Oct 31 2025; published Jan 31 2026)",
+      "layout": "title rows 1-7; then per division: a '<DDD>-<Division name>' row, a header row, data rows, a TOTALS row. Notes start ~row 2400.",
+      "columns": [
+        "Div. No.",
+        "School No.",
+        "School Name",
+        "CEP*",
+        "School Type",
+        "Low Grade",
+        "High Grade",
+        "SNP Memb",
+        "FREE Elig",
+        "FREE %",
+        "RED Elig",
+        "RED %",
+        "TOTAL F/R Elig",
+        "TOTAL F/R %"
+      ],
+      "keys": "Div. No. and School No. are zero-padded strings ('029','0020')",
+      "cep_flag": "'X' in CEP* column = school operates under CEP; free counts for CEP schools are computed (ISP x 1.6 x membership)",
+      "parse_rule": "keep rows where col A is 3-digit and col B is digits",
+      "rows": 1893,
+      "nova": {
+        "Fairfax 029": {
+          "schools": 191,
+          "cep": 48
+        },
+        "Arlington 007": {
+          "schools": 36,
+          "cep": 10
+        },
+        "Prince William 075": {
+          "schools": 97,
+          "cep": 69
+        },
+        "Alexandria 101": {
+          "schools": 17,
+          "cep": 10
+        },
+        "Manassas 143": {
+          "schools": 9,
+          "cep": 9
+        },
+        "Manassas Park 144": {
+          "schools": 4,
+          "cep": 4
+        },
+        "Falls Church 109": {
+          "schools": 5,
+          "cep": 0
+        },
+        "Loudoun 053": {
+          "schools": 98,
+          "cep": 11
+        }
+      }
+    },
+    "frl_by_division": {
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/76096/639081365046200000",
+      "format": "xlsx",
+      "note": "located and archived, not inspected"
+    },
+    "cep_isp": {
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/62774/638874780859400000",
+      "link_text": "April 1, 2025 Report of LEAs and Schools Eligible and Near Eligible to Participate in CEP",
+      "retrieved_from": "https://web.archive.org/web/20260415002001id_/https://www.doe.virginia.gov/home/showpublisheddocument/62774/638874780859400000",
+      "format": "xlsx",
+      "sheets": [
+        "LEA-wide Notification Report",
+        "School Notification Report"
+      ],
+      "header_row": 5,
+      "school_columns": [
+        "LEA ID",
+        "LEA Name",
+        "School ID",
+        "School Name",
+        "Identified Student Percentage (ISP)",
+        "Eligible to Participate",
+        "Near Eligible to Participate",
+        "Currently Participating",
+        "Participating as an Individual Site (I=Individual)",
+        "Participating as Part of a Group of Schools (G=Group)",
+        "Participating as Part of an Entire Division (D=Divisionwide)",
+        "Student Enrollment in Near- Eligible, Eligible, and Participating CEP Schools",
+        "Comments"
+      ],
+      "school_rows": 1890,
+      "data_year": "2024-2025 (as of April 1 2025, revised 7-1-2025)",
+      "quirk": "empty cells contain literal text 'cell intentionally blank' (sometimes with leading space)"
+    }
+  },
+  "census": {
+    "status": "API data endpoint BLOCKED without key; metadata CONFIRMED; values CONFIRMED via ACS Summary File",
+    "api_test_url": "https://api.census.gov/data/2024/acs/acs5/subject?get=NAME,S1701_C03_001E,S2201_C04_002E&for=county:013,059,153,510,683,685,610,107,600&in=state:51",
+    "api_result": "HTTP 302 -> https://api.census.gov/data/missing_key.html for 2024 and 2023 (and even /data/2020/dec/pl). A free API key (&key=...) is now required.",
+    "latest_acs5": "2024 (subject.json present; 2025 acs5/acs1 return 404)",
+    "variables": {
+      "S1701_C03_001E": "Estimate!!Percent below poverty level!!Population for whom poverty status is determined",
+      "S2201_C04_001E": "Estimate!!Percent households receiving food stamps/SNAP!!Households  (USE THIS for overall SNAP %)",
+      "S2201_C04_002E": "Estimate!!Percent households receiving food stamps/SNAP!!Households!!With one or more people in the household 60 years and over  (NOT overall SNAP %; seniors subgroup)",
+      "S2201_C03_001E": "Estimate!!Households receiving food stamps/SNAP!!Households",
+      "S2201_C01_001E": "Estimate!!Total!!Households",
+      "S1701_C01_001E": "Estimate!!Total!!Population for whom poverty status is determined",
+      "S1701_C02_001E": "Estimate!!Below poverty level!!Population for whom poverty status is determined"
+    },
+    "variable_meta_url_pattern": "https://api.census.gov/data/2024/acs/acs5/subject/variables/{VAR}.json",
+    "recommended_api_url_with_key": "https://api.census.gov/data/2024/acs/acs5/subject?get=NAME,S1701_C03_001E,S2201_C04_001E&for=county:013,059,107,153,510,600,610,683,685&in=state:51&key=YOUR_KEY",
+    "no_key_alternative": {
+      "b22003": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b22003.dat",
+      "c17002": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-c17002.dat",
+      "table_shells": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/documentation/ACS20245YR_Table_Shells.txt",
+      "format": "pipe-delimited, header row, GEO_ID like 0500000US51059; all US geographies (b22003 ~21 MB, c17002 ~42 MB)",
+      "formulas": {
+        "snap_pct": "B22003_E002 / B22003_E001",
+        "poverty_pct": "(C17002_E002 + C17002_E003) / C17002_E001",
+        "below_185pct_fpl": "sum(C17002_E002..E006) / C17002_E001"
+      }
+    },
+    "values_2024_acs5": {
+      "013": {
+        "name": "Arlington County",
+        "households": 112027,
+        "snap_households": 4480,
+        "snap_pct": 4.0,
+        "pov_universe": 233425,
+        "below_poverty": 17249,
+        "poverty_pct": 7.4,
+        "below_185pct": 32189,
+        "below_185_pct": 13.8
+      },
+      "059": {
+        "name": "Fairfax County",
+        "households": 414101,
+        "snap_households": 17970,
+        "snap_pct": 4.3,
+        "pov_universe": 1136737,
+        "below_poverty": 67523,
+        "poverty_pct": 5.9,
+        "below_185pct": 143686,
+        "below_185_pct": 12.6
+      },
+      "107": {
+        "name": "Loudoun County",
+        "households": 143032,
+        "snap_households": 4541,
+        "snap_pct": 3.2,
+        "pov_universe": 430965,
+        "below_poverty": 18249,
+        "poverty_pct": 4.2,
+        "below_185pct": 37750,
+        "below_185_pct": 8.8
+      },
+      "153": {
+        "name": "Prince William County",
+        "households": 156798,
+        "snap_households": 9124,
+        "snap_pct": 5.8,
+        "pov_universe": 483038,
+        "below_poverty": 29884,
+        "poverty_pct": 6.2,
+        "below_185pct": 74637,
+        "below_185_pct": 15.5
+      },
+      "510": {
+        "name": "Alexandria city",
+        "households": 76096,
+        "snap_households": 3899,
+        "snap_pct": 5.1,
+        "pov_universe": 155379,
+        "below_poverty": 12336,
+        "poverty_pct": 7.9,
+        "below_185pct": 25771,
+        "below_185_pct": 16.6
+      },
+      "600": {
+        "name": "Fairfax city",
+        "households": 9155,
+        "snap_households": 286,
+        "snap_pct": 3.1,
+        "pov_universe": 24306,
+        "below_poverty": 2211,
+        "poverty_pct": 9.1,
+        "below_185pct": 3658,
+        "below_185_pct": 15.0
+      },
+      "610": {
+        "name": "Falls Church city",
+        "households": 6273,
+        "snap_households": 97,
+        "snap_pct": 1.5,
+        "pov_universe": 14605,
+        "below_poverty": 587,
+        "poverty_pct": 4.0,
+        "below_185pct": 1168,
+        "below_185_pct": 8.0
+      },
+      "683": {
+        "name": "Manassas city",
+        "households": 14203,
+        "snap_households": 899,
+        "snap_pct": 6.3,
+        "pov_universe": 42539,
+        "below_poverty": 3293,
+        "poverty_pct": 7.7,
+        "below_185pct": 7834,
+        "below_185_pct": 18.4
+      },
+      "685": {
+        "name": "Manassas Park city",
+        "households": 5193,
+        "snap_households": 525,
+        "snap_pct": 10.1,
+        "pov_universe": 16798,
+        "below_poverty": 860,
+        "poverty_pct": 5.1,
+        "below_185pct": 3363,
+        "below_185_pct": 20.0
+      }
+    },
+    "mapping_caveats": [
+      "Fairfax County Public Schools (div 029) serves Fairfax County (51059) and, by contract, Fairfax City (51600) students; Fairfax City has its own FIPS but no separately operated school system in the Title I/FRL lists (general knowledge, not verified this session).",
+      "Falls Church City (51610) has its own division (109); Manassas (51683) div 143; Manassas Park (51685) div 144; Alexandria (51510) div 101.",
+      "ACS county values are residence-based; school F/R counts are enrollment-based. Do not mix numerators/denominators across them.",
+      "The town of Herndon/Vienna etc. are inside Fairfax County, not separate FIPS."
+    ]
+  },
+  "food_sources": [
+    {
+      "id": "cafb_get_help",
+      "name": "Capital Area Food Bank - Get Help Map 2026 (Get_Help_Map_Source_Data)",
+      "owner": "Capital Area Food Bank (ArcGIS Online user cafbgis1)",
+      "jurisdiction": "DC, suburban MD, NoVA (Fairfax, Arlington, Alexandria, Prince William, Manassas)",
+      "url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+      "app_url": "https://experience.arcgis.com/experience/d60aa14515d24ac494b37a42aa3dec9c",
+      "format": "ArcGIS FeatureServer (point, WGS84 GeoJSON available)",
+      "query_url": "https://services.arcgis.com/oCjyzxNy34f0pJCV/arcgis/rest/services/Get_Help_Map_Source_Data/FeatureServer/0/query?where=state%3D%27VA%27&outFields=*&f=geojson",
+      "robots_ok": true,
+      "robots_notes": "capitalareafoodbank.org robots: Disallow: (empty) => all allowed; services.arcgis.com has no robots.txt (403 Invalid URL); item is public",
+      "terms_notes": "No licenseInfo on the ArcGIS item; no terms-of-use page found on CAFB site (/terms-of-use 404); only privacy policy + footer copyright. Treat as public-but-unlicensed: attribute CAFB, link back, ask CAFB for permission before redistribution. CAFB asks users to call ahead to verify hours.",
+      "fields": [
+        "agency_ref",
+        "name",
+        "address1",
+        "address2",
+        "city",
+        "state",
+        "county_name",
+        "zip",
+        "phone",
+        "email",
+        "latitude",
+        "longitude",
+        "<Day>_Hours",
+        "<Day>_start1..3",
+        "<Day>_end1..3",
+        "<Day>_Frequency1..3",
+        "<Day>_TEFAP1..3",
+        "<Day>_Choice1..3",
+        "<Day>_JIT1..3",
+        "<Day>_FoodFormat1..3",
+        "<Day>_Dmodel1..3",
+        "<Day>_ApptOnly1..3",
+        "<Day>_ResidentsOnly1..3",
+        "<Day>_Reqs1..3",
+        "<Day>_Notes1..3",
+        "FID"
+      ],
+      "est_count": {
+        "total": 329,
+        "VA Fairfax County": 50,
+        "VA Prince William County": 25,
+        "VA City of Alexandria": 14,
+        "VA Arlington County": 9,
+        "VA Manassas City + VA City of Manassas": 6,
+        "VA Outside CAFB Service Area": 2,
+        "Loudoun/Manassas Park": 0
+      },
+      "last_edit": "editingInfo.lastEditDate 1790601292224 (2026-09)",
+      "difficulty": "low",
+      "sample": "(removed from repo: dataset unlicensed — schema reproduced synthetically in backend/tests/fixtures/cafb_schema_synthetic.geojson)",
+      "notes": "Best single regional feed. Wide schema (~290 cols, 7 days x 3 slots). Inconsistent county_name values ('VA Manassas City' vs 'VA City of Manassas'). Notes fields contain '0' for empty. Some rows have no day schedule."
+    },
+    {
+      "id": "fairfax_food_access",
+      "name": "Fairfax County Emergency Food Access Providers (Food Access Site Survey - Locator View)",
+      "owner": "Fairfax County NCS / GIS (ArcGIS user FairfaxCounty)",
+      "jurisdiction": "Fairfax County",
+      "url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+      "app_url": "https://experience.arcgis.com/experience/497a2d92adb8497ea07b7277fde3e6e4",
+      "format": "ArcGIS FeatureServer (Survey123-backed point layer)",
+      "query_url": "https://services1.arcgis.com/ioennV6PpG5Xodq0/arcgis/rest/services/service_28906b317c7e44cab3c60a88f8dc6dc3_form/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson",
+      "robots_ok": true,
+      "robots_notes": "fairfaxcounty.gov robots disallows only /core/, /profiles/, /admin/, /search/, /user/... ; food-access page allowed",
+      "terms_notes": "Item licenseInfo points to https://www.fairfaxcounty.gov/maps/disclaimer: 'Copyright by Fairfax County... all rights are reserved'; 'Authorization to reproduce material for internal or personal use ... is granted'; no warranty. Public redistribution in an app needs county permission.",
+      "fields": [
+        "FOOD_ORGANIZATION",
+        "FOOD_PROVIDER_SITE_NAME",
+        "SERVICE",
+        "FOOD_PROVIDER_SITE_ADDRESS",
+        "FOOD_PROVIDER_SITE_CITY",
+        "FOOD_PROVIDER_SITE_STATE",
+        "FOOD_PROVIDER_SITE_ZIP",
+        "LOCATION_DESCRIPTION",
+        "FOOD_PROVIDER_SITE_PHONE",
+        "FOOD_PROVIDER_WEBSITE",
+        "FOOD_PROVIDER_LANGUAGES_SPOKEN",
+        "FOOD_PROVIDER_DAYS",
+        "OPERATIONAL_HOURS_DETAIL",
+        "DISTRIBUTION_MODEL",
+        "TYPES_OF_FOODS",
+        "PREPARED_MEALS",
+        "GROCERY_ITEMS",
+        "PERISHABLE_FOOD",
+        "KOSHER_HALAL",
+        "DELIVERY",
+        "PICKUP",
+        "ACCEPT_WALK_INS",
+        "ELIGIBILITY_REQUIREMENTS",
+        "INCOME_REQUIREMENTS",
+        "IDENTIFICATION_REQUIREMENTS",
+        "LIVING_ZIP",
+        "HHS_REGION",
+        "REGION_ALL_ZIP",
+        "ELIGIBILITY_REQUIREMENTS_DETAIL",
+        "ACCEPTING_DONATIONS",
+        "DONATION_TYPES",
+        "..."
+      ],
+      "est_count": 45,
+      "last_edit": "2026-08 (lastEditDate 1787233287482)",
+      "difficulty": "low",
+      "sample": "(removed from repo: county reuse restricted — schema reproduced synthetically in backend/tests/fixtures/fairfax_schema_synthetic.geojson)",
+      "notes": "Richest eligibility/hours schema of any source. Layer capabilities include Create/Editing (it is a survey form layer) - only ever issue read queries. Hours are free text."
+    },
+    {
+      "id": "pwc_cmn_resources",
+      "name": "Prince William County Community Mobilization Network - Public Resource Locations",
+      "owner": "Prince William County (jwu@pwcgov.org)",
+      "jurisdiction": "Prince William County (+ Manassas/Manassas Park area)",
+      "url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+      "format": "ArcGIS FeatureServer",
+      "query_url": "https://services2.arcgis.com/0Q7l03Ls62VG0fy4/arcgis/rest/services/CMN_Public_Resource_Locations/FeatureServer/0/query?where=Service_Category%3D%27Food%20Assistance%27&outFields=*&f=geojson",
+      "robots_ok": true,
+      "robots_notes": "ArcGIS REST host has no robots.txt",
+      "terms_notes": "licenseInfo links to https://www.pwcva.gov/disclaimer: accuracy not guaranteed, no liability, not a legal description; no reuse restriction stated.",
+      "fields": [
+        "Organization_Name",
+        "Email",
+        "Phone_Number",
+        "Address (single string)",
+        "Website___Social_Media",
+        "Service_Category",
+        "Service_Description",
+        "Hours_of_Service",
+        "How_to_Access_Services",
+        "Photo_ID_Required",
+        "FID",
+        "GlobalID"
+      ],
+      "est_count": {
+        "total": 241,
+        "Food Assistance": 16
+      },
+      "last_edit": "2026-09-15",
+      "difficulty": "low",
+      "sample": "samples/pwc_cmn_food_first3.geojson",
+      "notes": "Current (Sept 2026). Address is one string (needs parsing). Includes ACTS Hunger Prevention Center."
+    },
+    {
+      "id": "pwc_food_distribution_2022",
+      "name": "Prince William County Food Distribution Sites (2022)",
+      "owner": "Prince William County (dmarchionna@pwcgov.org)",
+      "jurisdiction": "Prince William County, Manassas, Manassas Park",
+      "url": "https://www.arcgis.com/home/item.html?id=92fd9d9b155545a8944a578fb4a0e69c",
+      "format": "ArcGIS FeatureServer",
+      "query_url": "https://services2.arcgis.com/0Q7l03Ls62VG0fy4/arcgis/rest/services/Food_Distribution_Sites/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson",
+      "robots_ok": true,
+      "terms_notes": "No licenseInfo; PWC disclaimer applies",
+      "fields": [
+        "USER_CATEG",
+        "USER_NAME_",
+        "USER_ADDRE",
+        "USER_CITY_",
+        "USER_STATE",
+        "USER_ZIP_C",
+        "USER_PHONE",
+        "USER_DISTR (hours)",
+        "USER_REQUI (requirements)",
+        "USER_WEBSI"
+      ],
+      "est_count": 31,
+      "last_edit": "2022-09-06",
+      "difficulty": "low",
+      "sample": "samples/pwc_food_distribution_sites_2022_first3.geojson",
+      "notes": "STALE (2022). Use only as a cross-check / seed list."
+    },
+    {
+      "id": "manassas_food_resources",
+      "name": "City of Manassas - Manassas Area Food Resources (Food_Resources_WFL1)",
+      "owner": "City of Manassas (Mmontgomery_COM / zgao@com)",
+      "jurisdiction": "Manassas City area",
+      "url": "https://www.arcgis.com/home/item.html?id=782d5f553535425091446bb904b3759b",
+      "format": "ArcGIS FeatureServer",
+      "query_url": "https://services1.arcgis.com/3wpOgOChiWXPeFWB/arcgis/rest/services/Food_Resources_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson",
+      "robots_ok": true,
+      "terms_notes": "licenseInfo: 'This map is intended for reference purposes only. The City of Manassas does not provide any guarantee of the accuracy or completeness...'",
+      "fields": [
+        "USER_Name",
+        "USER_ADDRESS",
+        "USER_CITY",
+        "USER_STATE",
+        "USER_ZIP",
+        "Place_addr",
+        "Comments (hours text)",
+        "Hours",
+        "PhoneNumber",
+        "Status"
+      ],
+      "est_count": 18,
+      "last_edit": "2024-08-05",
+      "difficulty": "low",
+      "sample": "samples/manassas_food_resources_first3.geojson",
+      "notes": "Hours mostly in Comments; Hours/PhoneNumber often null."
+    },
+    {
+      "id": "afac_get_groceries",
+      "name": "Arlington Food Assistance Center - Get Groceries",
+      "owner": "Arlington Food Assistance Center (AFAC)",
+      "jurisdiction": "Arlington County",
+      "url": "https://afac.org/get-groceries/",
+      "format": "HTML (WordPress + FacetWP map; lat/lng in hidden .location-data spans)",
+      "query_url": null,
+      "robots_ok": true,
+      "robots_notes": "afac.org robots: Disallow: (empty)",
+      "terms_notes": "No terms reviewed beyond robots; small static list - simplest to curate manually with attribution.",
+      "fields": [
+        "name (h3.ml-h3)",
+        "address parts (span.address-part)",
+        "lat",
+        "lng",
+        "hours (.map-location-hours)"
+      ],
+      "est_count": 5,
+      "difficulty": "low (CSS selectors) but tiny",
+      "sample": "(removed from repo: third-party web page content)",
+      "notes": "5 public distribution sites (HQ, Arlington Mill CC, Gilliam Place, Clarendon UMC, Westover at Fisher House). Referral required; Arlington residents only. Also lists apartment-community pickup sites (text only)."
+    },
+    {
+      "id": "fairfax_food_pdfs",
+      "name": "Fairfax County food resources PDFs",
+      "owner": "Fairfax County Health Dept / Food Council",
+      "jurisdiction": "Fairfax County",
+      "url": "https://www.fairfaxcounty.gov/health/sites/health/files/assets/documents/pdf/food-resources-web.pdf",
+      "format": "PDF",
+      "query_url": null,
+      "robots_ok": true,
+      "terms_notes": "county copyright",
+      "fields": "not parsed",
+      "est_count": null,
+      "last_modified": "2023-07-13 (food-resources-web.pdf, 351,863 bytes); food council PDF https://www.fairfaxcounty.gov/food-council/sites/food-council/files/assets/documents/pdf/fairfax-food-resources.pdf last-modified 2019-03-05",
+      "difficulty": "high",
+      "notes": "Stale; prefer the FeatureServer."
+    },
+    {
+      "id": "alexandria_food_directory_pdf",
+      "name": "Alexandria Food Resource Directory (May 2024)",
+      "owner": "City of Alexandria",
+      "jurisdiction": "Alexandria City",
+      "url": "https://www.alexandriava.gov/sites/default/files/2024-05/alexandria_food_directory.pdf",
+      "format": "PDF",
+      "query_url": null,
+      "robots_ok": true,
+      "robots_notes": "alexandriava.gov robots only disallows Drupal system paths and media/oembed",
+      "terms_notes": "not reviewed",
+      "fields": "not parsed (per search snippet: name, address, days/times, sign-up requirements)",
+      "est_count": null,
+      "last_modified": "2024-05-01 (242,700 bytes)",
+      "difficulty": "high (PDF table extraction)",
+      "notes": "No Alexandria ArcGIS food layer found. CAFB feed has 14 Alexandria sites - use that first."
+    },
+    {
+      "id": "dc_opendata_cafb_2015",
+      "name": "DC Open Data - Capital Area Food Bank Emergency Food Providers (2015 data)",
+      "owner": "DC Office of Planning (data from CAFB)",
+      "jurisdiction": "DC/MD/VA",
+      "url": "https://catalog.data.gov/dataset/capital-area-food-bank-emergency-food-provider",
+      "format": "ArcGIS MapServer / GeoJSON / CSV",
+      "query_url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Public_Safety_WebMercator/MapServer/26/query?where=STATE%3D%27VA%27&outFields=*&f=geojson",
+      "robots_ok": true,
+      "terms_notes": "CC BY 4.0 (per data.gov listing)",
+      "fields": [
+        "AGENCY_REF",
+        "AGENCY_NAM",
+        "ADDRESS",
+        "CITY",
+        "STATE",
+        "ZIPCODE",
+        "PROGRAM",
+        "LATITUDE",
+        "LONGITUDE",
+        "..."
+      ],
+      "est_count": {
+        "total": 691,
+        "VA": 169
+      },
+      "difficulty": "low",
+      "sample": "samples/dc_opendata_cafb_emergency_food_providers_2015_first3.geojson",
+      "notes": "Clearly licensed but based on 2015 data - historical only."
+    },
+    {
+      "id": "arlington_county_site",
+      "name": "Arlington County DHS food assistance pages / 2025 food brochure PDF",
+      "owner": "Arlington County",
+      "jurisdiction": "Arlington County",
+      "url": "https://www.arlingtonva.us/files/sharedassets/public/v/4/departments/documents/dhs/food-security/2025-food-brochure-english.pdf",
+      "format": "PDF",
+      "query_url": null,
+      "robots_ok": null,
+      "terms_notes": "BLOCKED: arlingtonva.us (incl. robots.txt) returns 403 Akamai Access Denied from this environment",
+      "est_count": null,
+      "difficulty": "blocked",
+      "notes": "No Arlington County ArcGIS food layer found via ArcGIS Online search."
+    }
+  ],
+  "osm": {
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "query": "[out:json][timeout:60];(nwr[\"social_facility\"=\"food_bank\"](38.40,-77.70,39.10,-76.95);nwr[\"amenity\"=\"food_bank\"](38.40,-77.70,39.10,-76.95);nwr[\"social_facility:for\"~\"food\"](38.40,-77.70,39.10,-76.95););out center tags;",
+    "status": "CONFIRMED HTTP 200",
+    "results_total_bbox": 11,
+    "results_nova": {
+      "Arlington": 2,
+      "Fairfax County": 1,
+      "others": 0
+    },
+    "nova_elements": [
+      "node 10298717235 Arlington Food Assistance Center (38.8436,-77.0894)",
+      "way 406961120 unnamed social_facility=food_bank (38.8542,-77.0828, approx. Arlington/Alexandria border - not reverse-geocoded)",
+      "node 13418250627 Western Fairfax Christian Ministries (38.8378,-77.4341)"
+    ],
+    "notes": "All matches use amenity=social_facility + social_facility=food_bank (one DC way uses only social_facility=food_bank). amenity=food_bank and social_facility:for~food returned nothing distinct. A broader name~'pantry|food bank' regex query timed out (HTTP 504). OSM coverage of NoVA food pantries is very sparse - not usable as a primary source.",
+    "license": "ODbL (attribution + share-alike for derived databases)",
+    "usage_policy": "Per wiki.openstreetmap.org/wiki/Overpass_API: <10,000 queries/day and <1 GB/day is safe; for regular use divide by 100; send identifying User-Agent/Referer; no parallel scripts; commercial use should self-host; back off 30 s after 429/406.",
+    "sample": "samples/osm_overpass_foodbank_nova_bbox.json"
+  }
+}
