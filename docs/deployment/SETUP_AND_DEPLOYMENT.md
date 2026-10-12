@@ -5,7 +5,24 @@
 Python 3.11+, Node 20+ (tested with Node 26), and PostgreSQL 15+ with PostGIS 3. `NULLS NOT DISTINCT` requires
 PG15+. Development used PostgreSQL 17 and PostGIS 3.6. Everything is free and open source.
 
-## Local development (no Docker)
+## Local development (one command)
+
+`npm start` from the repository root runs `scripts/dev.mjs` (Node standard library only, no extra packages). It:
+
+1. creates `.venv` and installs the backend when `backend/pyproject.toml` changed, and runs `npm ci` in `frontend/`
+   when the lockfile changed;
+2. uses the database in `FOODACCESS_DATABASE_URL` (environment or `.env`, default `localhost:5433`) if something is
+   listening there. Otherwise it starts a Docker container, `foodaccess-dev-db` (`postgis/postgis:17-3.5`, data in the
+   `foodaccess-dev-pgdata` volume, published on `127.0.0.1` only), and writes `.env` from `.env.example` if there is none;
+3. runs `foodaccess bootstrap`, then the API on :8000 and Vite on :5173, and opens the browser (`-- --no-open` skips that).
+
+`npm run demo` also creates `demo-admin@example.org` with a new random password (printed each run), loads the
+synthetic `[TEST]` fixtures, and sets `FOODACCESS_SHOW_SYNTHETIC=true` for that run only. `npm run foodaccess -- <command>`
+runs the CLI against the same database, `npm run db:stop` stops the container, and `npm test` runs the launcher's
+unit tests. The container's fixed credentials are for local development only; set `FOODACCESS_DEV_DB_IMAGE` to use
+another PostGIS image. The backend test suite still expects `FOODACCESS_TEST_DATABASE_URL` (see Tests).
+
+## Local development (manual, no Docker)
 
 ```bash
 # Database (macOS/Homebrew example; any PostGIS works)

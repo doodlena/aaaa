@@ -1,0 +1,18 @@
+{
+  "name": "nova-food-access",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local launcher for the Northern Virginia Food Access Platform (API + web app).",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node scripts/dev.mjs",
+    "dev": "node scripts/dev.mjs",
+    "demo": "node scripts/dev.mjs --demo",
+    "foodaccess": "node scripts/dev.mjs cli",
+    "db:stop": "docker stop foodaccess-dev-db",
+    "test": "node --test scripts/dev.test.mjs"
+  }
+}
