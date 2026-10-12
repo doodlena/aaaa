@@ -1,7 +1,7 @@
 {
   "app": {
     "region": "Northern Virginia",
-    "tagline": "Help that lights the way — food, health and support near you"
+    "tagline": "One place to find food, health and support near you"
   },
   "nav": {
     "skip": "Skip to main content",
@@ -25,7 +25,7 @@
     "banner": "Demo data: listings marked [TEST] are fictional."
   },
   "footer": {
-    "disclaimer": "Live updates come from the providers themselves and expire on their own. Information can still change: contact the provider before you go. This site is free and does not collect personal data for advertising.",
+    "disclaimer": "Live updates come from the support profiders, but information can still change. This site does not collect personal data for advertising or any other usage.",
     "about": "About this site",
     "privacy": "Privacy",
     "mapCredit": "Maps: OpenFreeMap and © OpenStreetMap contributors.",
@@ -70,7 +70,7 @@
     "tooShort": "Enter at least 3 characters, such as a 5-digit ZIP code.",
     "noMatch": "We could not find that place. Check the spelling or try a ZIP code.",
     "providersDown": "Address search is not available right now. Try a ZIP code or choose your county or city below.",
-    "chooseOne": "We found more than one place. Choose yours:",
+    "chooseOne": "We found more than one place! Choose yours:",
     "useLocation": "Use my location",
     "locating": "Finding your location…",
     "locationNote": "Your browser will ask for permission. Your location is used only for this search and is never saved.",
@@ -83,28 +83,28 @@
   },
   "home": {
     "legendTitle": "How to read a listing",
-    "legendLead": "Every requirement, like needing an ID, is shown one of three ways:",
+    "legendLead": "Every requirement (ex: needing an ID) is shown one of three ways:",
     "legend": {
       "not_required": "The organization confirmed you do not need this.",
       "required": "The organization says you need this.",
       "unknown": "We do not know yet. Call before you go. It does not mean there is no requirement."
     },
     "learnMore": "Learn where our information comes from",
-    "lede": "{{app}} brings together free help in Northern Virginia — food pantries and meals, benefits, health care, housing, legal help and more — with live updates posted by the providers themselves.",
+    "lede": "{{app}} helps you find free support in Northern Virginia. This includes service like food pantries and meals, benefits, healthcare, housing, legal help, and more. Live availability updates are posted by the providers themselves.",
     "findTitle": "Search near an address",
     "findLead": "Type an address or ZIP code to see hours, what to bring and directions for every kind of help nearby.",
-    "liveLegend": "Live updates are posted by the provider itself and show how much is left: three bars = plenty, two = some, one = low. The word is always written next to the bars.",
+    "liveLegend": "Live updates are posted by the provider itself and show how much is left: three bars = plenty, two = some, one = low.",
     "pantryTitle": "Run a food pantry or help program?",
-    "pantryBody": "Post today's status and what's on your shelves in under a minute. Families see it right away, labelled as posted by you, and it expires on its own."
+    "pantryBody": "Post today's status and what's on your shelves in under a minute so families can see it right away."
   },
   "verification": {
     "verified": "Verified",
     "stale": "Needs re-check",
     "lastVerified": "Last verified {{date}}",
-    "source_reported": "From a public list — not yet verified"
+    "source_reported": "From a public lis; not yet verified"
   },
   "badges": {
-    "synthetic": "Test data — not a real resource"
+    "synthetic": "Test data; not a real resource"
   },
   "operating": {
     "open": "Open",
