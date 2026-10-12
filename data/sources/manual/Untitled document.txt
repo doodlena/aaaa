@@ -1,0 +1,269 @@
+﻿Loudoun Hunger Relief — Data Extraction for Your Food Access App
+ Loudoun Hunger Relief | Loudoun Cares 
+
+Loudoun Hunger Relief
+Food assistance organization · Loudoun County, Virginia
+Website research: October 12, 2026
+I reviewed the Get Help page and related official pages, including locations, appointment registration, eligibility requirements, and programs.
+The most important finding: Loudoun Hunger Relief should be represented as one organization with multiple locations and several distinct services, each with its own eligibility rules, schedule, and access requirements.
+1. Basic organization information
+Field
+	Information
+	Organization
+	Loudoun Hunger Relief (LHR)
+	Type
+	Nonprofit food pantry
+	Primary service area
+	Loudoun County, Virginia
+	Cost of food assistance
+	Free
+	Main address
+	750 Miller Drive, Suite 110, Leesburg, VA 20175
+	Phone
+	(703) 777-5911
+	Email
+	info@loudounhunger.org
+	Website
+	loudounhunger.org
+	Application
+	New member application
+	Appointment booking
+	Appointment portal
+	Languages explicitly supported
+	English; Spanish-speaking assistance
+	Geographic coverage
+	Loudoun County, with separate eligibility for USDA food
+	LHR distributes supplemental groceries and emergency food. Its website also describes nutrition education, home delivery for eligible individuals, school-related food support, and other assistance programs.
+
+Loudoun Hunger Relief
++2
+2. Food pantry locations and operating schedules
+The official homepage currently lists two pantry locations.
+ Renovated Loudoun Hunger Relief Site Distributes Food, Dignity | Leesburg, VA Patch 
+
+Leesburg Pantry
+750 Miller Drive, Suite 110, Leesburg, VA 20175
+Services: In-person market shopping, curbside pickup, emergency food boxes, and related assistance.
+Regular market appointments are required; limited walk-in access for new visitors is advertised.
+Day
+	Appointment hours
+	Monday
+	No regular appointments listed
+	Tuesday
+	1:00–3:20 PM
+	Wednesday
+	8:30–11:20 AM
+	Thursday
+	1:00–3:30 PM; 5:00–6:40 PM
+	Friday
+	8:30–10:30 AM; 12:00–2:20 PM
+	Saturday
+	9:00–11:20 AM
+	Sunday
+	No hours listed
+	Walk-in exception: New visitors may walk in on Fridays, 8:30–10:30 AM or 12:00–2:20 PM.
+ Loudoun Hunger Relief | Loudoun Cares 
+
+Sterling Pantry
+18 Export Drive, Sterling, VA 20164
+Located next to Women Giving Back.
+Services: In-person market shopping; additional services and events may be offered.
+Regular appointments are required, with designated walk-in periods.
+Day
+	Appointment hours
+	Monday
+	12:00–2:40 PM
+	Tuesday
+	9:00–11:40 AM; 1:30–3:30 PM; 4:00–6:00 PM
+	Wednesday
+	No hours listed
+	Thursday
+	10:00 AM–12:40 PM
+	Friday
+	8:30–10:30 AM
+	Saturday
+	No hours listed
+	Sunday
+	No hours listed
+	Walk-in exception: Tuesdays, 1:30–3:30 PM and 4:00–6:00 PM.
+Source: Official homepage appointment schedule.
+
+Emergency Groceries for Loudoun
+These are published appointment windows, not live appointment availability.
+Important closure: The homepage explicitly announces that Loudoun Hunger Relief is closed on Monday, October 12, 2026. Your app should store this as a date-specific closure instead of permanently changing Monday's recurring schedule.
+
+Emergency Groceries for Loudoun
+3. Eligibility requirements
+This is especially important for your proposed eligibility-matching feature because regular pantry services and USDA/TEFAP emergency food have different rules.
+Requirement
+	Regular LHR pantry
+	USDA / TEFAP food
+	Loudoun County residency
+	Required
+	Not required
+	Virginia residency
+	Satisfied by Loudoun residency
+	Required
+	Photo identification
+	Required for adult household documentation
+	Not required
+	Proof of Loudoun address
+	Required
+	Not required
+	Household information
+	Required for registration
+	USDA-specific questions required
+	Income information
+	Income level requested
+	Income and benefits questions used to assess eligibility
+	Appointment
+	Regular in-market visits require one
+	Confirm directly; not clearly specified
+	Visit frequency
+	Up to 2/month, no more than 1/week
+	Up to 1/week across participating Virginia pantries
+	Accepted documents for regular pantry assistance
+Adults aged 18+: Photo identification showing a Loudoun County address, or photo identification plus current official mail showing their Loudoun address. The requirements document specifies recent proof, generally within three months.
+Children under 18: Photo identification with a Loudoun address or current school documentation such as registration records, report cards, or ParentVUE records.
+Children below school age: A birth certificate identifying a parent, accompanied by the parent's proof of address.
+LHR says residents must speak with its Community Cares team to register and provide documentation for household members. The separate TEFAP pathway does not require the same ID or Loudoun residency documentation.
+
+Loudoun Hunger Relief
++1
+App implementation: Do not create one organization-wide ID_required = true filter. Attach each requirement to the applicable program, or families eligible for TEFAP could incorrectly be excluded.
+4. Registration and appointment process
+LHR uses an external system called SmartChoice. Their website describes the following workflow.
+
+Loudoun Hunger Relief
++2
+1. Apply for assistance. New members complete the online application. Existing members do not need to apply again.
+2. Receive a Shopper ID and PIN. LHR asks applicants to allow two business days after submitting their application.
+3. Schedule an appointment. Members use their ID and PIN on the appointment page to select a location and time.
+4. Attend the appointment. Members receive email and text confirmations and follow the instructions for their selected appointment type.
+5. Return for future visits. Regular members can schedule two visits per month, but never more than once per week.
+Appointment-specific instructions
+Method
+	Instructions
+	In-person market
+	Arrive no more than 5 minutes early, park in a non-curbside space, and bring your appointment barcode/reminder. Shopping is intended to take approximately 12–15 minutes.
+	Curbside
+	Select groceries using the online wish list, park in a numbered curbside space, and text your name and parking spot number to (571) 440-7681.
+	Walk-in
+	Available during the specific walk-in windows listed earlier. Registration requirements may still apply.
+	Emergency box
+	If experiencing an immediate food emergency, contact LHR or visit the Leesburg pantry during its operating hours.
+	The curbside text number is only for announcing arrival, not general questions.
+The dedicated appointment page currently identifies curbside booking specifically for Leesburg, even though the general Get Help page describes curbside more broadly. I would mark Sterling curbside availability as needing confirmation.
+Phone assistance: Monday–Friday, 8:30 AM–4:00 PM. People who need help registering, have no email, or cannot retrieve their Shopper ID/PIN can call (703) 777-5911.
+
+Loudoun Hunger Relief
++2
+5. Complete service catalog
+This information comes primarily from the official Programs page and Get Help page.
+Service
+	Details
+	App classification
+	Free grocery market
+	Supplemental food and groceries selected by eligible members
+	Food pantry
+	Emergency food boxes
+	Prepackaged assistance for immediate food needs
+	Emergency food
+	USDA/TEFAP
+	Prepacked USDA food with separate eligibility requirements
+	Government food assistance
+	Fresh produce
+	Fresh fruits and vegetables distributed through the pantry and Produce Hub
+	Fresh produce
+	Home delivery
+	Weekly grocery deliveries for eligible homebound seniors and people with disabilities, through Loudoun Volunteer Caregivers
+	Food delivery
+	School weekend food
+	Supports the Loudoun Education Foundation Backpack Coalition's weekend food program
+	School food assistance
+	Extended care
+	Additional support for people experiencing severe or prolonged hardship, generally involving caseworkers
+	Long-term assistance
+	Housing transition support
+	Grocery restocking and 12 weeks of intensive food support for families leaving homeless shelters
+	Transitional assistance
+	Unhoused adults
+	Food suited to limited cooking and storage options; the Programs page describes more frequent access
+	Homelessness support
+	Pet food
+	Cat and dog food through the Loudoun Pet Pantry program
+	Pet supplies
+	Nutrition education
+	Budget shopping, cooking, food preparation, and nutritional guidance
+	Nutrition education
+	Benefits referrals
+	Assistance understanding or connecting with SNAP, WIC, and USDA eligibility
+	Benefits assistance
+	
+Loudoun Hunger Relief
++1
+Some programs should not automatically become separate map markers. For example, the Backpack Coalition and home-delivery programs are services, but the website does not establish a public walk-in location for each program.
+Food categories confirmed as typical offerings
+The organization's website identifies these types of food:
+* Fresh fruits and vegetables.
+* Milk and eggs.
+* Proteins.
+* Perishable and nonperishable groceries.
+* Pantry staples.
+* Prepackaged emergency boxes.
+* USDA food for eligible participants.
+* Dietary accommodations when available.
+LHR reports that at least half of its distributed food is fresh or whole food, and its About page describes a free-choice grocery market.
+
+Emergency Groceries for Loudoun
++1
+Do not mark individual items as currently in stock. The organization states that donated grocery selections vary and specific foods are not guaranteed. For your app, these should be tagged as typically offered, not currently available.
+
+loudounhunger.org
+6. Community assistance events
+This is especially interesting for your project's proposed Help Beyond Food feature.
+LHR publishes an events calendar containing additional services hosted at its locations.
+Upcoming events listed for October 2026
+Date
+	Time
+	Service at Leesburg
+	Oct 13
+	12:30–3 PM
+	Crossroads Jobs: employment counseling and placement
+	Oct 15
+	1–3:30 PM
+	Loudoun County Information and Referral
+	Oct 20
+	12:45–3:30 PM
+	Department of Family Services: SNAP and health benefits assistance
+	Oct 21
+	1–3 PM
+	Area Agency on Aging: services and referrals for older adults
+	Oct 28
+	8:30–11:30 AM
+	Inova community health workers: healthcare information
+	These are scheduled partner visits, not food distribution appointments.
+
+Loudoun Hunger Relief
+For your app, I recommend attaching each event to its host pantry with its own date, time, category, and source URL. That would allow someone searching for food assistance to discover a relevant benefits or employment support event at the same location.
+7. Important verification issues
+Several details need attention before publishing an approved listing.
+Issue
+	Recommended handling
+	General page says both locations are appointment-only, but homepage advertises walk-in periods
+	Store walk-in exceptions separately from regular appointment rules
+	Curbside availability at Sterling is unclear
+	Mark unknown; confirm directly
+	An older requirements PDF says visits are permitted once weekly
+	Use the newer two-per-month rule while flagging the discrepancy
+	Mobile markets are mentioned without a complete current schedule on the reviewed pages
+	Do not publish additional mobile pins until current locations/times are confirmed
+	The Programs page describes special daily access for unhoused adults
+	Store as a separate service with special conditions; confirm current availability
+	Provider stocks vary
+	Avoid live-inventory claims
+	Some programs operate through partners
+	Do not assume each service is offered at both pantry sites
+	Business hours, donation hours, and distribution hours differ
+	Store as separate schedule types
+	The older PDF is useful as a supplemental source, but the newer homepage and registration pages provide more detailed current scheduling rules.
