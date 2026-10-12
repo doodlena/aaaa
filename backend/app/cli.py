@@ -318,6 +318,55 @@ def cmd_ai_suggest(a):
 SNAPSHOT_DIR = REPO_ROOT / "data" / "snapshots"
 
 
+def cmd_ai_resolve_duplicates(a):
+    """AI-assisted bulk triage of pending duplicate candidates (cheap model, cached). 'same_place' -> merge,
+    'different_places' -> keep separate (creates the listing), 'unsure' -> left for a person. Every decision is
+    recorded under the named admin with an 'AI-assisted' note in the audit log."""
+    from app.ingestion.verification.workflow import decide_duplicate
+    from app.models import DuplicateCandidate, Location, SourceRecord, User
+    from app.services import ai
+
+    if not ai.enabled():
+        sys.exit("AI is not enabled (Admin → AI settings)")
+    counts = {"same_place": 0, "different_places": 0, "unsure": 0, "error": 0}
+    with _db() as db:
+        admin = db.scalar(select(User).where(User.email == a.reviewer_email.lower(), User.role == "admin"))
+        if not admin:
+            sys.exit("reviewer must be an existing admin")
+        pending = db.scalars(select(DuplicateCandidate).where(DuplicateCandidate.status == "pending").order_by(DuplicateCandidate.id)).all()
+        for d in pending[: a.limit]:
+            db.refresh(d)
+            if d.status != "pending":
+                continue
+            loc = db.get(Location, d.location_id)
+            rec = db.get(SourceRecord, d.source_record_id) if d.source_record_id else None
+            other = db.get(Location, d.other_location_id) if d.other_location_id else None
+            A = {"name": loc.name, "organization": loc.organization.name, "address": loc.address1, "zip": loc.zip, "phone": loc.phone,
+                 "services": sorted({s.service_type for s in loc.services})}
+            if rec:
+                n = rec.normalized or {}
+                B = {"name": n.get("location_name") or n.get("organization_name"), "organization": n.get("organization_name"),
+                     "address": n.get("address1"), "zip": n.get("zip"), "phone": n.get("phone"),
+                     "services": sorted({x.get("service_type") for x in n.get("services", [])})}
+            else:
+                B = {"name": other.name, "organization": other.organization.name, "address": other.address1, "zip": other.zip,
+                     "phone": other.phone, "services": sorted({s.service_type for s in other.services})}
+            try:
+                op = ai.compare_records(A, B)
+            except ai.AIUnavailable as e:
+                counts["error"] += 1
+                if "budget" in str(e).lower():
+                    print(f"stopped: {e}")
+                    break
+                continue  # leave this pair for a person
+            counts[op.verdict] += 1
+            if op.verdict == "unsure":
+                continue
+            decide_duplicate(db, d, admin, merge=op.verdict == "same_place",
+                             notes="AI-assisted (" + op.verdict + "): " + "; ".join(op.reasons)[:500])
+    print(json.dumps(counts))
+
+
 def cmd_export_snapshot(_a):
     """Write every imported record from republishable sources to data/snapshots/ (committed), so a fresh database
     can be rebuilt without re-scraping. Sources whose terms need permission (publication != permitted_with_attribution)
@@ -342,8 +391,55 @@ def cmd_export_snapshot(_a):
                                        "Unverified candidates; see config/sources/ for attribution and terms.",
                                        "source_id": sid, "records": [r.normalized for r in recs]}, indent=1, ensure_ascii=False, default=str))
             manifest.append({"source_id": sid, "file": out.name, "records": len(recs), "order": len(manifest)})
+    # Reviewer duplicate decisions, keyed by stable (source_id, external_id), so a rebuilt database reaches the same places.
+    from app.models import DuplicateCandidate
+
+    decisions = []
+    with _db() as db:
+        for d in db.scalars(select(DuplicateCandidate).where(DuplicateCandidate.status.in_(("merged", "distinct")),
+                                                            DuplicateCandidate.source_record_id.isnot(None))).all():
+            rec = db.get(SourceRecord, d.source_record_id)
+            target = db.scalar(select(SourceRecord).where(SourceRecord.location_id == d.location_id, SourceRecord.id != rec.id)
+                               .order_by(SourceRecord.id).limit(1)) if rec else None
+            if rec and target and not rec.is_synthetic:
+                decisions.append({"record": [rec.source_id, rec.external_id], "decision": d.status,
+                                  "target": [target.source_id, target.external_id]})
+    (SNAPSHOT_DIR / "duplicate_decisions.json").write_text(json.dumps(decisions, indent=1))
     (SNAPSHOT_DIR / "manifest.json").write_text(json.dumps({"exported_at": datetime.now(UTC).isoformat(), "sources": manifest}, indent=1))
     print(f"exported {sum(m['records'] for m in manifest)} records from {len(manifest)} sources to {SNAPSHOT_DIR}")
+
+
+def _apply_duplicate_decisions(db) -> None:
+    """Replay committed reviewer decisions on pending duplicate candidates (matched by stable source keys)."""
+    from app.ingestion.verification.workflow import decide_duplicate
+    from app.models import DuplicateCandidate, SourceRecord, User
+
+    path = SNAPSHOT_DIR / "duplicate_decisions.json"
+    if not path.exists():
+        return
+    actor = db.scalar(select(User).where(User.role == "admin").order_by(User.id).limit(1))
+    if actor is None:  # decisions must be attributable; create a system reviewer account without a usable password
+        from app.auth.security import hash_password
+        import secrets as _s
+
+        actor = User(email="snapshot-loader@lantern.invalid", password_hash=hash_password(_s.token_urlsafe(32)), role="admin", preferences={})
+        db.add(actor)
+        db.flush()
+    key = lambda r: (r.source_id, r.external_id)  # noqa: E731
+    recs = {key(r): r for r in db.scalars(select(SourceRecord)).all()}
+    applied = 0
+    for d in json.loads(path.read_text()):
+        rec, target = recs.get(tuple(d["record"])), recs.get(tuple(d["target"]))
+        if not rec or not target or target.location_id is None:
+            continue
+        pend = db.scalars(select(DuplicateCandidate).where(DuplicateCandidate.source_record_id == rec.id,
+                                                           DuplicateCandidate.status == "pending")).all()
+        match = next((p for p in pend if p.location_id == target.location_id), None)
+        if match is None:
+            continue
+        decide_duplicate(db, match, actor, merge=d["decision"] == "merged", notes="Replayed reviewer decision from data/snapshots")
+        applied += 1
+    print(f"replayed {applied} duplicate decisions")
 
 
 def cmd_load_data(a):
@@ -370,6 +466,7 @@ def cmd_load_data(a):
             sync_source_row(db, cfg)  # keep the real adapter/config on the source row
             db.commit()
             print(f"{cfg.id}: {run.status} {run.counts.get('inserted')} new, {run.counts.get('unchanged')} unchanged")
+        _apply_duplicate_decisions(db)
         if a.live_restricted:
             for cfg in configs.values():
                 if cfg.enabled and not cfg.is_synthetic and cfg.publication != "permitted_with_attribution":
@@ -473,6 +570,10 @@ def main(argv=None):
     dsc.add_argument("--searches", type=int, default=2, help="max web searches (each ~1 cent)")
     dsc.set_defaults(fn=cmd_ai_discover)
     sub.add_parser("ai-usage", help="(AI) spend by feature and this month's total vs budget").set_defaults(fn=cmd_ai_usage)
+    rd = sub.add_parser("ai-resolve-duplicates", help="(AI) triage pending duplicate candidates; 'unsure' stays for a person")
+    rd.add_argument("--reviewer-email", required=True)
+    rd.add_argument("--limit", type=int, default=500)
+    rd.set_defaults(fn=cmd_ai_resolve_duplicates)
     sub.add_parser("export-snapshot", help="write imported republishable records to data/snapshots/ (commit these)").set_defaults(fn=cmd_export_snapshot)
     ld = sub.add_parser("load-data", help="rebuild listings from data/snapshots/ (no scraping needed)")
     ld.add_argument("--if-empty", action="store_true", help="only load when the database has no real listings yet")

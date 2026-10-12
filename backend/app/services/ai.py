@@ -12,7 +12,7 @@ import logging
 import re
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ValidationError
 
 from app.config import get_settings
 from app.geospatial.search import ELIGIBILITY_FILTERS
@@ -316,6 +316,9 @@ def _parse(feature: str, schema, system: str, user: str, max_tokens: int = 2000,
             messages=[{"role": "user", "content": user}],
             output_format=schema,
         )
+    except ValidationError as e:  # truncated/malformed structured output
+        log.warning("Claude output did not match the schema for %s", feature)
+        raise AIUnavailable("The AI assistant returned an incomplete answer") from e
     except api_errors as e:  # network / rate limit / API error: callers fall back to manual entry
         log.warning("Claude request failed: %s", type(e).__name__)
         raise AIUnavailable("The AI assistant is unavailable right now") from e
@@ -511,6 +514,6 @@ def compare_records(a: dict, b: dict) -> DuplicateOpinion:
     return _parse("duplicate", DuplicateOpinion,
                   "Two records from a community-resource directory may describe the same physical location and program. "
                   "Compare names, addresses, phones and services. Different programs in the same building are "
-                  "'different_places' if they are separate services. Give short reasons.",
+                  "'different_places' if they are separate services. Give at most 3 reasons of under 15 words each.",
                   f"Record A:\n{json.dumps(a, sort_keys=True, default=str)[:3000]}\n\nRecord B:\n"
-                  f"{json.dumps(b, sort_keys=True, default=str)[:3000]}", max_tokens=600)
+                  f"{json.dumps(b, sort_keys=True, default=str)[:3000]}", max_tokens=1500)

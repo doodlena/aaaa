@@ -1082,7 +1082,7 @@
   "ai": {
     "search": {
       "label": "Describa lo que necesita",
-      "placeholder": "p. ej.: verduras frescas cerca de 22204 el sábado, sin identificación",
+      "placeholder": "p. ej., comida cerca de 22204 el sábado",
       "submit": "Buscar",
       "working": "Pensando…",
       "privacy": "Solo se envían a un servicio de IA las palabras que escribe. No su ubicación ni su cuenta.",

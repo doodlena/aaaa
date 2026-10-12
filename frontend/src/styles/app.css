@@ -3362,9 +3362,8 @@ form.is-ai-drafted select {
   margin: 0;
   padding: 2px 2px var(--sp-2);
   display: flex;
+  flex-wrap: wrap; /* wrap instead of running off the edge */
   gap: var(--sp-2);
-  overflow-x: auto;
-  scrollbar-width: thin;
 }
 .need-chip {
   display: inline-flex;
@@ -3641,3 +3640,10 @@ form.is-ai-drafted select {
   font: inherit; font-size: .9rem; cursor: pointer; min-height: 36px; }
 .chip-btn:hover, .chip-btn:focus-visible { background: rgba(127,216,177,.18); }
 .aisearch--compact .chip-btn { color: inherit; }
+
+/* Find help: let the AI box use the available width so its text isn't cut off. */
+.aisearch--compact { flex: 1 1 420px; min-width: 0; }
+.aisearch--compact .search__row { display: flex; gap: var(--sp-2); }
+.aisearch--compact .search__row input { flex: 1 1 auto; min-width: 0; width: 100%; }
+.need-chip { max-width: 100%; }
+.need-chip span { overflow-wrap: anywhere; }

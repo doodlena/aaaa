@@ -1082,7 +1082,7 @@
   "ai": {
     "search": {
       "label": "Mô tả điều bạn cần",
-      "placeholder": "ví dụ: rau tươi gần 22204 vào thứ Bảy, không cần giấy tờ",
+      "placeholder": "vd: thực phẩm gần 22204 thứ Bảy",
       "submit": "Tìm",
       "working": "Đang suy nghĩ…",
       "privacy": "Chỉ những chữ bạn gõ được gửi đến dịch vụ AI. Không gửi vị trí hay tài khoản của bạn.",

@@ -1,0 +1,1509 @@
+[
+ {
+  "record": [
+   "fairfax-food-access",
+   "d208937d-f1ef-4044-8267-60c40e8109a1"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "22633-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "fairfax-food-access",
+   "9bb5eb1e-a3d7-4271-8402-c0b8cacc981a"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "14895-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "fairfax-food-access",
+   "0fba99ad-9161-4a15-819a-f99e517d3523"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "14065-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "fairfax-food-access",
+   "34f0c749-3cdd-4104-8d36-7d4aa7d4e26c"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "22181-MOMK-01"
+  ]
+ },
+ {
+  "record": [
+   "fairfax-food-access",
+   "34f0c749-3cdd-4104-8d36-7d4aa7d4e26c"
+  ],
+  "decision": "distinct",
+  "target": [
+   "fairfax-food-access",
+   "de222610-c45b-4d15-8370-45f24afe4cdb"
+  ]
+ },
+ {
+  "record": [
+   "fairfax-food-access",
+   "7a753305-8db0-4d06-8adb-8adabda71555"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "19261-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "fairfax-food-access",
+   "36b92e65-765b-4b25-80b4-0b0077cff382"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "22288-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "fairfax-food-access",
+   "c581979d-078d-4c77-8463-1c8c4004e987"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "19200-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "fairfax-food-access",
+   "c30bf32e-7ab2-407a-8f11-fe29e2fe01f6"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "22207-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "fairfax-food-access",
+   "52bf8dd0-55e1-4bab-82ff-8aab67449cc0"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "18134-COMK-01"
+  ]
+ },
+ {
+  "record": [
+   "fairfax-food-access",
+   "93ec460c-da41-4ee1-8682-a4be5bd44b2e"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "16850-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "manassas-food-resources",
+   "15"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "19262-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-resources",
+   "bfa69a9a-b9a6-43ac-ab9a-0787dd1b35f6"
+  ],
+  "decision": "merged",
+  "target": [
+   "manassas-food-resources",
+   "2"
+  ]
+ },
+ {
+  "record": [
+   "cafb-get-help",
+   "14570-PART-02"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "14570-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "va08-web-research",
+   "va08-lfp-charles-houston-rec"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-web-research",
+   "va08-charles-houston-senior-center"
+  ]
+ },
+ {
+  "record": [
+   "va08-web-research",
+   "va08-culmore-umc-food-ministry"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "19652-MOMK-01"
+  ]
+ },
+ {
+  "record": [
+   "va08-support-services",
+   "va08svc-arlington-wic"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-arlington-dhs-economic-independence"
+  ]
+ },
+ {
+  "record": [
+   "va08-support-services",
+   "va08svc-arlington-public-health-clinics"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-arlington-dhs-economic-independence"
+  ]
+ },
+ {
+  "record": [
+   "va08-support-services",
+   "va08svc-alexandria-dchs-behavioral-health"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-alexandria-dchs-benefits-customer-service"
+  ]
+ },
+ {
+  "record": [
+   "va08-support-services",
+   "va08svc-alexandria-workforce-development-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-alexandria-dchs-benefits-customer-service"
+  ]
+ },
+ {
+  "record": [
+   "va08-support-services",
+   "va08svc-alexandria-health-department-del-pepper"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-alexandria-dchs-benefits-customer-service"
+  ]
+ },
+ {
+  "record": [
+   "va08-support-services",
+   "va08svc-alexandria-health-department-del-pepper"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-web-research",
+   "va08-alive-dchs-mark-center"
+  ]
+ },
+ {
+  "record": [
+   "va08-support-services",
+   "va08svc-fairfax-annandale-public-health-center-wic"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-dfs-annandale"
+  ]
+ },
+ {
+  "record": [
+   "va08-support-services",
+   "va08svc-fairfax-vcw-alexandria-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-dfs-hyland"
+  ]
+ },
+ {
+  "record": [
+   "va08-support-services",
+   "va08svc-fairfax-vcw-annandale-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-dfs-annandale"
+  ]
+ },
+ {
+  "record": [
+   "va08-support-services",
+   "va08svc-united-community-hyland"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-dfs-hyland"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "4964c629-d834-463b-8c85-4ade5f7a232d"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "9219cdab-3cfc-4281-b5bc-28a57423de8b"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "5bac6d57-3d7a-42d6-9ad3-88d98a9c4fd7"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "9219cdab-3cfc-4281-b5bc-28a57423de8b"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "1ca09167-8207-4fd8-8dc3-8f5ea251c350"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "14590-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "bd3829c5-b4c5-40d2-adf7-afd0a6d7fadb"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "a029825f-14d2-407c-b759-209c224dfa71"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "45e53665-187b-44d5-8530-760d65729610"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "a029825f-14d2-407c-b759-209c224dfa71"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "22b507e6-68c0-4d1b-bbe6-dbd8a393de80"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "a029825f-14d2-407c-b759-209c224dfa71"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "11df2785-e8b5-445c-86e0-70988fcbda02"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "a029825f-14d2-407c-b759-209c224dfa71"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "bbc7ebb3-f1a8-4017-88d2-516436c71263"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "a029825f-14d2-407c-b759-209c224dfa71"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "66fad462-1e09-440d-b83f-fc549d12bb25"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "a029825f-14d2-407c-b759-209c224dfa71"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "11969c70-1677-40b8-8a48-c5941333a183"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "23204-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "03977c9f-ff45-4003-b141-315bc0cd46ea"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "16475-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "66359f8e-8e33-431b-886b-d64853aa0717"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "16475-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "2756234b-f501-47c1-af82-fde407254643"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "16475-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "fab2b4e0-11b9-4239-a64f-c57cf55b65e7"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "16475-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "f8ef3560-3b0e-4634-a195-df763c1fa544"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "16475-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "2e0db46d-38bb-4973-bd3c-5714da503498"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "16475-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "hrsa-health-centers",
+   "ce0d22bda775d318"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-support-services",
+   "va08svc-neighborhood-health-annandale-dental"
+  ]
+ },
+ {
+  "record": [
+   "hrsa-health-centers",
+   "f5bc2b9fd0e0bc25"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-support-services",
+   "va08svc-neighborhood-health-gartlan"
+  ]
+ },
+ {
+  "record": [
+   "hrsa-health-centers",
+   "f5bc2b9fd0e0bc25"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-csb-gartlan-center"
+  ]
+ },
+ {
+  "record": [
+   "hrsa-health-centers",
+   "7219ebe267d643ce"
+  ],
+  "decision": "distinct",
+  "target": [
+   "hrsa-health-centers",
+   "6fa7f7e85265530a"
+  ]
+ },
+ {
+  "record": [
+   "hrsa-health-centers",
+   "41b5270dcc31e71d"
+  ],
+  "decision": "distinct",
+  "target": [
+   "fairfax-food-access",
+   "a22e59b7-dc01-43ca-8a63-39c3ab38975a"
+  ]
+ },
+ {
+  "record": [
+   "nvrc-homeless-shelters",
+   "nvrc-2"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-alexandria-dchs-benefits-customer-service"
+  ]
+ },
+ {
+  "record": [
+   "nvrc-homeless-shelters",
+   "nvrc-19"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-support-services",
+   "va08svc-baileys-shelter-supportive-housing"
+  ]
+ },
+ {
+  "record": [
+   "nvrc-homeless-shelters",
+   "nvrc-20"
+  ],
+  "decision": "distinct",
+  "target": [
+   "hrsa-health-centers",
+   "11991a9323e0176d"
+  ]
+ },
+ {
+  "record": [
+   "nvrc-homeless-shelters",
+   "nvrc-20"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "16475-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "nvrc-homeless-shelters",
+   "nvrc-22"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-support-services",
+   "va08svc-arlington-homeless-services-center"
+  ]
+ },
+ {
+  "record": [
+   "nvrc-homeless-shelters",
+   "nvrc-26"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-web-research",
+   "va08-christ-house-evening-meal"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "e606558aaa8ff90a"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "e8e63b88a1ee37eb"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "add251be348bcfb5"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "ce1f10ac217f9337"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "57d077c159c388e2"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "ce1f10ac217f9337"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "7c48dfc1f53b1b91"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "e8e63b88a1ee37eb"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "737aa186160cfbbf"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "e8e63b88a1ee37eb"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "1385c9bcbd75fc59"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "d6ab7274-3e94-4938-b014-1aceba34125b"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "b29d43558604e1f3"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "44567e54-2b0d-4e45-bcbd-59e699006317"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "b29d43558604e1f3"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "d6ab7274-3e94-4938-b014-1aceba34125b"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "a2161032d1644b7c"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "44567e54-2b0d-4e45-bcbd-59e699006317"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "a2161032d1644b7c"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "d6ab7274-3e94-4938-b014-1aceba34125b"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "ccd48195a1097e76"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "9219cdab-3cfc-4281-b5bc-28a57423de8b"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "cdc2922d59ae6591"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "e8e63b88a1ee37eb"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "8a6388d253e6f055"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-web-research",
+   "va08-alive-dchs-mark-center"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "8a6388d253e6f055"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-alexandria-dchs-benefits-customer-service"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "c21961797758ec76"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-web-research",
+   "va08-alive-dchs-mark-center"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "cf5035189b165901"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "a46cd26ff21e36b3"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "bdc1ecb6cd82c777"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "a46cd26ff21e36b3"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "2e56b28f30a99159"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "e1b44e7e615bf7f1"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "ef4393f17a1626d2"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-dfs-hyland"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "467b8d0c882ee70a"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-dfs-hyland"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "5974677125abbea2"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "e1b44e7e615bf7f1"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "28def5da3c323052"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "8cf04cf0c55a4e93"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "28def5da3c323052"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "0c8b85b6-c154-477f-9556-a24a9a0e3648"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "22fbcb4bed12b60a"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "0c8b85b6-c154-477f-9556-a24a9a0e3648"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "058e97776fa5560e"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "3bb53892fedfb548"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "9747cf17aa61b9a0"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "3bb53892fedfb548"
+  ]
+ },
+ {
+  "record": [
+   "nova-food-research",
+   "nova-food-wfcm-chantilly"
+  ],
+  "decision": "merged",
+  "target": [
+   "fairfax-food-access",
+   "2b618ec9-e880-43b5-8935-4f155403adeb"
+  ]
+ },
+ {
+  "record": [
+   "nova-food-research",
+   "nova-food-wfcm-chantilly"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "16245-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "cafb-get-help",
+   "16840-MOMK-01"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "19652-MOMK-01"
+  ]
+ },
+ {
+  "record": [
+   "fairfax-food-access",
+   "6aeea443-55d2-47e7-8203-803a46f9bfeb"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "15830-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "manassas-food-resources",
+   "27"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "23204-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "va08-web-research",
+   "va08-culmore-umc-food-ministry"
+  ],
+  "decision": "merged",
+  "target": [
+   "fairfax-food-access",
+   "de222610-c45b-4d15-8370-45f24afe4cdb"
+  ]
+ },
+ {
+  "record": [
+   "va08-support-services",
+   "va08svc-fairfax-mount-vernon-public-health-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-dfs-hyland"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "bd130a55-4202-4472-9a8a-1e211e714077"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "a029825f-14d2-407c-b759-209c224dfa71"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "5234f2b6-1123-4b74-9f2a-3a7bf238e208"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "16475-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "pwc-cmn-support-services",
+   "0be9825d-3678-4b03-866d-540069551488"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "16475-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "hrsa-health-centers",
+   "feab3461b6832985"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-support-services",
+   "va08svc-neighborhood-health-casey"
+  ]
+ },
+ {
+  "record": [
+   "nvrc-homeless-shelters",
+   "nvrc-24"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-support-services",
+   "va08svc-alexandria-community-shelter"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "369120f09d7337a1"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "e8e63b88a1ee37eb"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "b8f1bf14ef625488"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "9219cdab-3cfc-4281-b5bc-28a57423de8b"
+  ]
+ },
+ {
+  "record": [
+   "nova-food-research",
+   "nova-food-tol-dinner-sterling"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nova-pet-support",
+   "nova-pet-loudoun-mobile-pet-pantry-sterling-cc"
+  ]
+ },
+ {
+  "record": [
+   "nova-food-research",
+   "nova-food-cornerstones-asapp-reston"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "14895-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-fairfax-dfs-pennino"
+  ],
+  "decision": "merged",
+  "target": [
+   "fairfax-food-access",
+   "42ed5b4b-ad2d-4172-89de-890c82f9fa8c"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-fairfax-dsvs-pennino"
+  ],
+  "decision": "distinct",
+  "target": [
+   "fairfax-food-access",
+   "42ed5b4b-ad2d-4172-89de-890c82f9fa8c"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-fairfax-csb-sharon-bulova-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "hrsa-health-centers",
+   "636e953c5d8fb872"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-fairfax-csb-sharon-bulova-center"
+  ],
+  "decision": "merged",
+  "target": [
+   "samhsa-treatment",
+   "15b1753b7986189e"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-fairfax-herndon-reston-phc"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nova-support-services",
+   "nova-svc-fairfax-csb-reston-northwest"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-fairfax-wic-sully-healthworks"
+  ],
+  "decision": "distinct",
+  "target": [
+   "hrsa-health-centers",
+   "6de52720913c87de"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-fairfax-employment-resource-center-pennino"
+  ],
+  "decision": "distinct",
+  "target": [
+   "fairfax-food-access",
+   "42ed5b4b-ad2d-4172-89de-890c82f9fa8c"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-loudoun-dfs-sterling"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "3bb53892fedfb548"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-loudoun-mhsads-sterling"
+  ],
+  "decision": "distinct",
+  "target": [
+   "hrsa-health-centers",
+   "9be39ceb49551197"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-fairfax-lorton-senior-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nova-food-research",
+   "nova-food-lcac-lorton-pantry"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-fairfax-sully-senior-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "hrsa-health-centers",
+   "6de52720913c87de"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-fairfax-human-services-mobility-management"
+  ],
+  "decision": "distinct",
+  "target": [
+   "fairfax-food-access",
+   "42ed5b4b-ad2d-4172-89de-890c82f9fa8c"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-wfcm-chantilly-client-services"
+  ],
+  "decision": "distinct",
+  "target": [
+   "fairfax-food-access",
+   "2b618ec9-e880-43b5-8935-4f155403adeb"
+  ]
+ },
+ {
+  "record": [
+   "va08-gap-research",
+   "va08gap-alexandria-dot-paratransit"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nvrc-homeless-shelters",
+   "nvrc-3"
+  ]
+ },
+ {
+  "record": [
+   "va08-gap-research",
+   "va08gap-eec-esl-culmore-umc"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "19652-MOMK-01"
+  ]
+ },
+ {
+  "record": [
+   "va08-gap-research",
+   "va08gap-eec-esl-rising-hope"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "19240-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "va08-gap-research",
+   "va08gap-vita-hyland-government-center"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-dfs-hyland"
+  ]
+ },
+ {
+  "record": [
+   "va08-gap-research",
+   "va08gap-vita-vcw-annandale"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-fairfax-dfs-annandale"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "b72a1b14a6501062"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "19507-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "9768a8e4a57d7db1"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "19071-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "520b22a89bc26aa2"
+  ],
+  "decision": "merged",
+  "target": [
+   "nova-food-research",
+   "nova-food-streetlight-woodbridge"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "846acc623b5dc495"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-arlington-behavioral-healthcare"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "846acc623b5dc495"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-neighborhood-health-sequoia-1"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "6740b9b31feb10a4"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "18134-COMK-02"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "f25941ed73efe59d"
+  ],
+  "decision": "merged",
+  "target": [
+   "afac-get-groceries",
+   "156856f529b62df3"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "1a0e7c680a273b5b"
+  ],
+  "decision": "merged",
+  "target": [
+   "afac-get-groceries",
+   "33c5599fe659d9ad"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "37081c4ce8465f44"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-web-research",
+   "va08-afac-gates-of-ballston"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "59f901579312fef5"
+  ],
+  "decision": "merged",
+  "target": [
+   "afac-get-groceries",
+   "e5a008270d8e2b7f"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "661e9a6191ff604b"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "14500-PART-03"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "366ffeac96634990"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "18134-COMK-02"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "95476d9719341d11"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "22694-MOMK-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "602582e30616fa24"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "21930-MOMK-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "edbf5229a8d2da68"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "19304-MOMK-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "cc51730b35795571"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "22118-MOMK-01"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "c21961797758ec76"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-alexandria-dchs-benefits-customer-service"
+  ]
+ },
+ {
+  "record": [
+   "samhsa-treatment",
+   "22fbcb4bed12b60a"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "8cf04cf0c55a4e93"
+  ]
+ },
+ {
+  "record": [
+   "nova-food-research",
+   "nova-food-freedom-community-pantry"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "19757-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "nova-food-research",
+   "nova-food-tol-dinner-purcellville"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nova-food-research",
+   "nova-food-tol-western-loudoun-pantry"
+  ]
+ },
+ {
+  "record": [
+   "nova-support-services",
+   "nova-svc-loudoun-mhsads-sterling"
+  ],
+  "decision": "merged",
+  "target": [
+   "samhsa-treatment",
+   "3bb53892fedfb548"
+  ]
+ },
+ {
+  "record": [
+   "va08-gap-research",
+   "va08gap-ffx-james-lee-senior-center"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "22181-MOMK-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "966e3cdd73d80b8e"
+  ],
+  "decision": "merged",
+  "target": [
+   "afac-get-groceries",
+   "f2ac23425659dd94"
+  ]
+ },
+ {
+  "record": [
+   "ai-manual-files",
+   "7ee51df7addd7331"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-gap-research",
+   "va08gap-ccda-counseling-st-charles-borromeo"
+  ]
+ }
+]

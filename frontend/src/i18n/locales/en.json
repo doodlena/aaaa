@@ -1082,7 +1082,7 @@
   "ai": {
     "search": {
       "label": "Describe what you need",
-      "placeholder": "e.g. fresh vegetables near 22204 on Saturday, no ID",
+      "placeholder": "e.g. groceries near 22204 on Saturday",
       "submit": "Find",
       "working": "Thinking…",
       "privacy": "Only the words you type are sent to an AI service. Not your location or account.",
