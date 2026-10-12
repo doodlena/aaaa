@@ -6,7 +6,7 @@ import pytest
 from sqlalchemy import select
 
 from app.config import get_settings
-from app.models import ChangeProposal, Location, ShelfUpdate
+from app.models import SourceRecord, ChangeProposal, Location, ShelfUpdate
 from app.services import ai
 from app.services.schedule import TZ
 from tests.conftest import USER_PW, login, make_user
@@ -267,8 +267,15 @@ def test_ai_structure_suggestions_drop_unquoted_facts():
 
 def test_ai_suggestions_become_reviewable_proposals(admin_client, db, imported, ai_on):
     birch = _loc(db, "Birch")
+    from sqlalchemy.orm.attributes import flag_modified
+
+    rec = db.scalar(select(SourceRecord).where(SourceRecord.location_id == birch.id))
+    rec.normalized = {**rec.normalized, "raw_hours_text": "Food pantry: Wednesdays 10am-12pm"}
+    flag_modified(rec, "normalized")
+    db.commit()
     fake = FakeClaude({"StructureSuggestion": {"distribution_schedules": [
-        {"weekday": 2, "opens": "10:00", "closes": "12:00", "week_of_month": None, "evidence": "Food pantry"}], "eligibility": []}})
+        {"weekday": 2, "opens": "10:00", "closes": "12:00", "week_of_month": None, "evidence": "Wednesdays 10am-12pm"}],
+        "eligibility": []}})
     ai.set_client(fake)
     r = admin_client.post(f"/api/admin/resources/{birch.id}/ai-suggestions")
     assert r.status_code == 200 and r.json()["created_proposals"] == ["schedules"]

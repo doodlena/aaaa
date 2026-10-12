@@ -1085,7 +1085,7 @@
     {
      "requirement_type": "registration",
      "status": "required",
-     "details": "We have a list of regular clients who receive a monthly order form by email or text",
+     "details": "We have a list of regular clients who receive a monthly order form by email or text, and then return the form the week before our monthly distribution",
      "values": {}
     }
    ],
@@ -1117,13 +1117,13 @@
     {
      "requirement_type": "service_area",
      "status": "required",
-     "details": "anyone in the Leesburg community",
+     "details": "The meals are available to anyone in the Leesburg community",
      "values": {}
     },
     {
      "requirement_type": "first_come_first_served",
      "status": "required",
-     "details": "first-come, first served basis",
+     "details": "on a first-come, first served basis",
      "values": {}
     }
    ],
@@ -1191,9 +1191,9 @@
      "values": {}
     },
     {
-     "requirement_type": "household_size",
-     "status": "required",
-     "details": "How many people are in your household?",
+     "requirement_type": "appointment",
+     "status": "not_required",
+     "details": "You do not need to schedule an appointment to receive food.",
      "values": {}
     },
     {
@@ -1203,9 +1203,9 @@
      "values": {}
     },
     {
-     "requirement_type": "appointment",
-     "status": "not_required",
-     "details": "You do not need to schedule an appointment to receive food.",
+     "requirement_type": "household_size",
+     "status": "required",
+     "details": "How many people are in your household?",
      "values": {}
     }
    ],
@@ -1246,6 +1246,1352 @@
    "eligibility": [],
    "schedules": [],
    "notes": "AI web lookup, cited: ## News & Updates\nFresh fruit, vegetables and other food on share table\n\n### Share Table at Hoffman-Boston\n\nEvery Monday from 2PM - 4PM\n\nSUN; Summer n"
+  },
+  {
+   "external_id": "lookup-201",
+   "source_url": "https://carpentersshelter.org/residential-emergency-shelters/",
+   "organization_name": "Carpenter's Shelter",
+   "location_name": "Carpenter's Shelter",
+   "address1": "930 N Henry St",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22314",
+   "lat": 38.815508,
+   "lon": -77.049418,
+   "geocode_source": "existing listing",
+   "phone": "(703) 746-5700",
+   "services": [
+    {
+     "service_type": "other",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "shelter",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "referral",
+     "status": "required",
+     "details": "Individuals and families seeking shelter must be referred from the Homeless Services Assessment Center",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "complete an intake assessment",
+     "values": {}
+    },
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "single adults and families experiencing homelessness in the City of Alexandria",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Individuals and families seeking shelter must be referred from the Homeless Services Assessment Center and complete an intake assessment.\n\n"
+  },
+  {
+   "external_id": "lookup-207",
+   "source_url": "https://www.fairfaxcounty.gov/community-services-board/prevention/gartlan-primary-care",
+   "organization_name": "Fairfax-Falls Church Community Services Board",
+   "location_name": "Gartlan Center",
+   "address1": "8119 Holland Road",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22306",
+   "lat": 38.741799,
+   "lon": -77.078142,
+   "geocode_source": "existing listing",
+   "phone": "(703) 360-6910",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "other",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "support_groups",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "Currently receive services through the Fairfax-Falls Church Community Ser",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: To be eligible for primary care services at the Gartlan Clinic, you must:\n\n- Currently receive services through the Fairfax-Falls Church Community Ser"
+  },
+  {
+   "external_id": "lookup-209",
+   "source_url": "https://www.newhopehousing.org/our-services/shelters/baileys-shelter-supportive-housing/",
+   "organization_name": "Fairfax County Office to Prevent and End Homelessness",
+   "location_name": "Bailey's Crossroads Shelter and Supportive Housing",
+   "address1": "5914 Seminary Rd",
+   "address2": null,
+   "city": "Falls Church",
+   "zip": "22041",
+   "lat": 38.849146,
+   "lon": -77.12914,
+   "geocode_source": "existing listing",
+   "phone": "(703) 820-7621",
+   "services": [
+    {
+     "service_type": "shelter",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Shelter is available for adults only.",
+     "values": {}
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 5,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 6,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ],
+   "notes": "AI web lookup, cited: Falls Church, VA 22041\n\n## Hours\n\nBailey’s Shelter & Supportive Housing is open 24 hours a day, 7 days a week.\n\n | ## Eligibility\nShelter is available for adults only.\n\n"
+  },
+  {
+   "external_id": "lookup-233",
+   "source_url": "https://haymarketchurch.org/socialdistanceconnection/",
+   "organization_name": "Haymarket Church",
+   "location_name": "Haymarket Church",
+   "address1": "15000 Washington St. Ste 206",
+   "address2": null,
+   "city": null,
+   "zip": "15000",
+   "lat": 38.812658,
+   "lon": -77.636567,
+   "geocode_source": "existing listing",
+   "phone": "(703) 688-2546",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "If you are in need assistance due to the financial impacts of COVID-19",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: So, **we have launched a COVID-19 Response Fund.** Money from this fund will be used to help folks who are facing financial hardships due to the econo"
+  },
+  {
+   "external_id": "lookup-239",
+   "source_url": "https://www.justice4all.org/get-help/",
+   "organization_name": "Legal Aid Justice Center (LAJC) – Northern Virginia",
+   "location_name": "Legal Aid Justice Center (LAJC) – Northern Virginia",
+   "address1": "6402 Arlington Blvd",
+   "address2": null,
+   "city": "#1130",
+   "zip": "22042",
+   "lat": 38.873551,
+   "lon": -77.16014,
+   "geocode_source": "existing listing",
+   "phone": "(703) 778-3450",
+   "services": [
+    {
+     "service_type": "immigration_legal_help",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "legal_aid",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "Alexandria, Arlington, Fairfax, Falls Church, Herndon, Loudoun, Prince William, and Stafford.",
+     "values": {}
+    },
+    {
+     "requirement_type": "residency",
+     "status": "required",
+     "details": "Where you live and where your issue took place",
+     "values": {}
+    },
+    {
+     "requirement_type": "income",
+     "status": "required",
+     "details": "Income is based on household income and can be affected by medical expenses, work expenses, and other factors.",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "We accept clients of **all immigration statuses**",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: ## WHO IS ELIGIBLE FOR LAJC SERVICES\nIn order for us to determine whether we can help you, you must be screened for eligibility.\n\n"
+  },
+  {
+   "external_id": "lookup-243",
+   "source_url": "https://ccda.net/find-help/food/sterling-food-pantry/",
+   "organization_name": "Catholic Charities of the Diocese of Arlington",
+   "location_name": "Catholic Charities Diocese of Arlington",
+   "address1": "200 N Glebe Rd #250",
+   "address2": null,
+   "city": "Arlington",
+   "zip": "22203",
+   "lat": 38.872144,
+   "lon": -77.10364,
+   "geocode_source": "existing listing",
+   "phone": "(703) 841-2830",
+   "services": [
+    {
+     "service_type": "financial_assistance",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "health_clinic",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "immigration_legal_help",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "job_training",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "legal_aid",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "mental_health_counseling",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "utility_assistance",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "required",
+     "details": "Picture ID and Proof of current address required at every visit.",
+     "values": {}
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "required",
+     "details": "Picture ID and Proof of current address required at every visit.",
+     "values": {}
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "By appointment only",
+     "values": {}
+    },
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "Clients are eligible to receive food once every 30 days.",
+     "values": {}
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "10:00",
+     "closes": "14:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "10:00",
+     "closes": "14:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "10:00",
+     "closes": "12:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "10:00",
+     "closes": "14:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ],
+   "notes": "AI web lookup, cited: Picture ID and Proof of current address required at every visit.\n\n | By appointment only: Daytime hours: Monday, Tuesday, Thursday: 10 a.m. – 2 p.m. Wednesday: 10 a.m. – 12 p.m. Evening hours: Tuesday and Wednesday, 5:1"
+  },
+  {
+   "external_id": "lookup-251",
+   "source_url": "https://novascriptscentral.org/dollar5-meds",
+   "organization_name": "NOVA ScriptsCentral",
+   "location_name": "NOVA ScriptsCentral",
+   "address1": "6400 Arlington Blvd Ste 120",
+   "address2": null,
+   "city": "Falls Church",
+   "zip": "22042",
+   "lat": 38.872841,
+   "lon": -77.160103,
+   "geocode_source": "existing listing",
+   "phone": "(703) 532-0269",
+   "services": [
+    {
+     "service_type": "health_clinic",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "prescription_help",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "you must be a patient at one of our 16 partner safety-net clinics in Northern Virginia",
+     "values": {}
+    },
+    {
+     "requirement_type": "income",
+     "status": "required",
+     "details": "have an income 300% below the federal pover",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "You must be uninsured.",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "We only accept applications from patients that belong to one of our partner clinics.",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: To be eligible, you must be a patient at one of our 16 partner safety-net clinics in Northern Virginia and have an income 300% below the federal pover"
+  },
+  {
+   "external_id": "lookup-262",
+   "source_url": "https://neighborhoodhealthva.org/for-patients/faq/",
+   "organization_name": "Neighborhood Health at Arlington CSB",
+   "location_name": "Neighborhood Health at Arlington CSB",
+   "address1": "2120 Washington Blvd",
+   "address2": null,
+   "city": "Arlington",
+   "zip": "22204",
+   "lat": 38.873839,
+   "lon": -77.084466,
+   "geocode_source": "existing listing",
+   "phone": "(703) 535-5568",
+   "services": [
+    {
+     "service_type": "health_clinic",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "Patients without insurance or who need discounts because of high co-pays and deductibles should first make an appointment",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "Patients need to renew eligibility annually or earlier if there is a change in income.",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: **Neighborhood Health**\n\nHours: depends on location\n\n**Arlington Site:**\n\nSequoia Plaza\n\n2100 Washington Blvd, Arlington, VA 22204\n\n**Arlington Pediat | Neighborhood Health offers primary medical care services including Family Medicine, Internal Medicine, Pediatrics, Obstetrics ...\n\n# FAQ\nFor patients "
+  },
+  {
+   "external_id": "lookup-274",
+   "source_url": "https://www.newhopehousing.org/our-services/shelters/mondloch-house/",
+   "organization_name": "Mondloch House I",
+   "location_name": "Mondloch House I",
+   "address1": "3510 Lockheed Blvd",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22306",
+   "lat": 38.760257,
+   "lon": -77.092245,
+   "geocode_source": "existing listing",
+   "phone": "(703) 768-3400",
+   "services": [
+    {
+     "service_type": "shelter",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Shelter is available for adults only.",
+     "values": {}
+    },
+    {
+     "requirement_type": "referral",
+     "status": "required",
+     "details": "All guests must be made by referral through the Fairfax County Community Services Board.",
+     "values": {}
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 5,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 6,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ],
+   "notes": "AI web lookup, cited: Alexandria, VA 22306\n\n## Hours\n\nMondloch House is open 24 hours a day, 7 days a week.\n\n | Eligibility Shelter is available for adults only.\n\n"
+  },
+  {
+   "external_id": "lookup-277",
+   "source_url": "https://search.211virginia.org/search/28a9ce80-477b-52fb-8857-21792fcaf65e?entry=search_card",
+   "organization_name": "Hebron/Bethel Emergency Shelter",
+   "location_name": "Hebron/Bethel Emergency Shelter",
+   "address1": "20684 Ashburn Rd",
+   "address2": null,
+   "city": "Ashburn",
+   "zip": "20684",
+   "lat": 39.045253,
+   "lon": -77.486608,
+   "geocode_source": "existing listing",
+   "phone": "(703) 724-1555",
+   "services": [
+    {
+     "service_type": "shelter",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "you must successfully pass a background check",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "you must successfully pass a background check and a drug test",
+     "values": {}
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 5,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 6,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ],
+   "notes": "AI web lookup, cited: #### Hours\nShelter Operates: 24/7\n\n(703) 724-0588\n\n#### Website\n\nhttps://www.goodshepherdnova.org\n\n#### Fees\n\n#### Service area\n\nLoudoun, VA\n\nProvides | … The Good Shepherd is a Christian non-profit organization providing help and hope for the homeless and those in need through emergency and transition"
+  },
+  {
+   "external_id": "lookup-280",
+   "source_url": "https://thestreetlight.org/what_we_do/",
+   "organization_name": "Supportive Shelter",
+   "location_name": "Supportive Shelter",
+   "address1": "14730 Potomac Mills Rd",
+   "address2": null,
+   "city": "Woodbridge",
+   "zip": "14730",
+   "lat": 38.629057,
+   "lon": -77.295418,
+   "geocode_source": "existing listing",
+   "phone": "(703) 792-3366",
+   "services": [
+    {
+     "service_type": "shelter",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "referral",
+     "status": "required",
+     "details": "To be referred to the program, contact the CES Hotline at (703) 792-3366 (TTY: 711).",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: It offers 8-beds to medically fragile and disabled homeless adults with wrap-around supportive services, case management, and nursing support.\n\n"
+  },
+  {
+   "external_id": "lookup-281",
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/coordinated-services-planning",
+   "organization_name": "Fairfax County Coordinated Services Planning",
+   "location_name": "Fairfax County Coordinated Services Planning",
+   "address1": "12011 Government Center Pkwy",
+   "address2": null,
+   "city": "FAIRFAX",
+   "zip": "12011",
+   "lat": 38.854638,
+   "lon": -77.361514,
+   "geocode_source": "existing listing",
+   "phone": "(703) 222-0880",
+   "services": [
+    {
+     "service_type": "shelter",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "residency",
+     "status": "required",
+     "details": "Fairfax County Residents",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "Some services are based on eligibility guidelines and availability.",
+     "values": {}
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "08:00",
+     "closes": "16:30",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "08:00",
+     "closes": "16:30",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "08:00",
+     "closes": "16:30",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "08:00",
+     "closes": "16:30",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "08:00",
+     "closes": "16:30",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ],
+   "notes": "AI web lookup, cited: # Coordinated Services Planning\n#### Alert:\nCONTACT INFORMATION: Hours: 8 AM - 4:30 PM, M-F\n\n703-222-0880 TTY 711\n\nNCS@fairfaxcounty.gov\n\n12011 Govern | Some services are based on eligibility\n\nguidelines and availability.\n\n"
+  },
+  {
+   "external_id": "lookup-284",
+   "source_url": "https://centerfordiscovery.com/locations/fairfax/",
+   "organization_name": "Center for Discovery Fairfax",
+   "location_name": "Center for Discovery Fairfax",
+   "address1": "5343 Summit Drive",
+   "address2": null,
+   "city": "Fairfax",
+   "zip": "22030",
+   "lat": 38.837143,
+   "lon": -77.387056,
+   "geocode_source": "existing listing",
+   "phone": "(855) 818-2029",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "individuals of all genders ages 10 to 17",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Center For Discovery, Fairfax is one of the top residential eating disorder treatment providers for individuals of all genders ages 10 to 17.\n\n"
+  },
+  {
+   "external_id": "lookup-285",
+   "source_url": "https://www.careclinicmd.com/our-locations/",
+   "organization_name": "Care Clinic",
+   "location_name": "Care Clinic",
+   "address1": "4017 Williamsburg Court",
+   "address2": "Suite 100",
+   "city": "Fairfax",
+   "zip": "22032",
+   "lat": 38.841785,
+   "lon": -77.281792,
+   "geocode_source": "existing listing",
+   "phone": "(844) 782-6963",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "09:00",
+     "closes": "19:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "09:00",
+     "closes": "17:30",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "17:30",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "09:00",
+     "closes": "19:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "09:00",
+     "closes": "17:30",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ],
+   "notes": "AI web lookup, cited: # Our Locations\n## Locations\n4017 Williamsburg Court, Suite 200 Fairfax, VA 22032\n\n(571) 418-8141\n\nSTATEWIDE: TELEMEDICINE ALSO AVAILABLE\n\n### Office "
+  },
+  {
+   "external_id": "lookup-289",
+   "source_url": "https://discoverymood.com/locations/fairfax-station/",
+   "organization_name": "Discovery Mood and Anxiety Program Fairfax Station",
+   "location_name": "Discovery Mood and Anxiety Program Fairfax Station",
+   "address1": "10416 Burke Lake Road",
+   "address2": null,
+   "city": "Fairfax Station",
+   "zip": "22039",
+   "lat": 38.772537,
+   "lon": -77.305481,
+   "geocode_source": "existing listing",
+   "phone": "(877) 514-4723",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "We offer treatment for female adolescents ages 11-17.",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "residential mental health care for adolescent girls (10-18)",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Discovery Mood & Anxiety in Fairfax Station offers residential mental health care for adolescent girls (10-18). "
+  },
+  {
+   "external_id": "lookup-291",
+   "source_url": "https://connectionshs.com/chantilly",
+   "organization_name": "Connections Chantilly",
+   "location_name": "Connections Chantilly",
+   "address1": "14554 Lee Road",
+   "address2": null,
+   "city": "Chantilly",
+   "zip": "20151",
+   "lat": 38.890662,
+   "lon": -77.454753,
+   "geocode_source": "existing listing",
+   "phone": "(703) 543-9948",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "appointment",
+     "status": "not_required",
+     "details": "Just walk in.",
+     "values": {}
+    },
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "The center provides care and focused treatment to adults experiencing a mental health crisis",
+     "values": {}
+    },
+    {
+     "requirement_type": "benefit_documentation",
+     "status": "not_required",
+     "details": "care will always be provided to anyone experiencing a behavioral health crisis, regardless of insurance.",
+     "values": {}
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 5,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 6,
+     "opens": "00:00",
+     "closes": "23:59",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ],
+   "notes": "AI web lookup, cited: ### 14554 Lee Road Chantilly, Virginia 20151\n###### where to find us\n\n### (703) 543-9948\n\nEvery day, 24 hours a day, seven days a week. | Core to Connections is that care will always be provided to anyone experiencing a behavioral health crisis, regardless of insurance. "
+  },
+  {
+   "external_id": "lookup-304",
+   "source_url": "https://calvarycounseling.com/faq/",
+   "organization_name": "Calvary Counseling Center",
+   "location_name": "Calvary Counseling Center",
+   "address1": "9300 Forest Point Circle",
+   "address2": "Suite 103",
+   "city": "Manassas",
+   "zip": "20110",
+   "lat": 38.765749,
+   "lon": -77.479319,
+   "geocode_source": "existing listing",
+   "phone": "(703) 530-9800",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "registration",
+     "status": "required",
+     "details": "Clients must submit forms online",
+     "values": {}
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "call the office at [703]530-9800 to schedule an appointment",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Clients must submit forms online and then call the office at [703]530-9800 to schedule an appointment.\n\n"
+  },
+  {
+   "external_id": "lookup-309",
+   "source_url": "https://www.sandstonecare.com/locations/alexandria-treatment-center/",
+   "organization_name": "Sandstone Care Alexandria",
+   "location_name": "Sandstone Care Alexandria",
+   "address1": "5400 Shawnee Road",
+   "address2": "Suite 101",
+   "city": "Alexandria",
+   "zip": "22312",
+   "lat": 38.805789,
+   "lon": -77.167653,
+   "geocode_source": "existing listing",
+   "phone": "(571) 556-7505",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "We provide residential treatment centers (RTCs) for teens (13-17) and young adults (18-35)",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: ## Sandstone Care Alexandria Outpatient Center\n- **Address:** 5400 Shawnee Rd Suite #101, Alexandria, VA, 22312\n- **Phone:** (571) 556-7505\n- **Hours: | We provide residential treatment centers (RTCs) for teens (13-17) and young adults (18-35), treating mental health challenges including anxiety, depre"
+  },
+  {
+   "external_id": "lookup-320",
+   "source_url": "https://drgoldberg.org/sterling-office/",
+   "organization_name": "Dr Goldberg and Associates LLC Sterling Office",
+   "location_name": "Dr Goldberg and Associates LLC Sterling Office",
+   "address1": "46090 Lake Center Plaza",
+   "address2": "Suite 101",
+   "city": "Sterling",
+   "zip": "20165",
+   "lat": 39.033924,
+   "lon": -77.405022,
+   "geocode_source": "existing listing",
+   "phone": "(703) 935-0058",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "Providing Psychological Services to residents of Northern Virginia, the District of Columbia and Maryland",
+     "values": {}
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "In-person and telehealth appointments available.",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: *Providing Psychological Services to residents of Northern Virginia, the District of Columbia and Maryland*\n\n- Nazanin Hagjoo\n  - Dr. Francisca Okwuko"
+  },
+  {
+   "external_id": "lookup-323",
+   "source_url": "https://www.natcaptreatment.org/admissions/where-to-start",
+   "organization_name": "National Capital Trt and Recovery Phoenix Prog Mens Residential Center",
+   "location_name": "National Capital Treatment and Recover Phase II Mens Residential",
+   "address1": "521 North Quincy Street",
+   "address2": null,
+   "city": "Arlington",
+   "zip": "22203",
+   "lat": 38.876978,
+   "lon": -77.107615,
+   "geocode_source": "existing listing",
+   "phone": "(703) 841-0703",
+   "services": [
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "required",
+     "details": "bring your insurance card and a valid picture ID",
+     "values": {}
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "A virtual assessment may be scheduled for anyone unable to travel to the Assessment Center.",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: ** When you arrive for your assessment, please bring your insurance card and a valid picture ID.  | National Capital Treatment & Recovery\n\n# PHOENIX PROGRAM\n## Intensive Residential Program for Men\n\nThe Phoenix Program offers medically monitored and "
+  },
+  {
+   "external_id": "lookup-347",
+   "source_url": "https://hsfc.org/outreach/ani-meals-program/",
+   "organization_name": "Humane Society of Fairfax County",
+   "location_name": "Humane Society of Fairfax County main office",
+   "address1": "4057 Chain Bridge Road",
+   "address2": null,
+   "city": "Fairfax",
+   "zip": "22030",
+   "lat": 38.844726,
+   "lon": -77.307395,
+   "geocode_source": "existing listing",
+   "phone": "(703) 385-7387",
+   "services": [
+    {
+     "service_type": "pet_food",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    },
+    {
+     "service_type": "pet_supplies",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "people in Fairfax County and surrounding areas",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "Determination of eligibility will be on a case-by-case basis, with input from the Board of Directors.",
+     "values": {}
+    },
+    {
+     "requirement_type": "registration",
+     "status": "required",
+     "details": "participants must be pre-registered before receiving assistance",
+     "values": {}
+    }
+   ],
+   "schedules": [],
+   "notes": "AI web lookup, cited: Ani-Meals provides food and pet care items to people in Fairfax County and surrounding areas.\n\n"
+  },
+  {
+   "external_id": "lookup-404",
+   "source_url": "https://www.cathedralstm.org/ministries/english-second-language-esl/",
+   "organization_name": "Cathedral of Saint Thomas More",
+   "location_name": "Cathedral of Saint Thomas More – ESL Classes (School Cafeteria)",
+   "address1": "3901 Cathedral Lane",
+   "address2": null,
+   "city": "Arlington",
+   "zip": "22203",
+   "lat": 38.870718,
+   "lon": -77.102704,
+   "geocode_source": "existing listing",
+   "phone": "(703) 525-1300",
+   "services": [
+    {
+     "service_type": "esl_classes",
+     "description": null,
+     "food_types": [],
+     "schedules": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "18:50",
+     "closes": "19:50",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "19:00",
+     "closes": "20:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ],
+   "notes": "AI web lookup, cited: These free classes meet Wednesdays from 6:50 to 7:50 pm (during Religious Education classes) and Thursdays 7:00-8:00pm in 80 N. Glebe.\n\n"
   }
  ]
 }

@@ -87,3 +87,23 @@ def json_dumps(x):
     import json
 
     return json.dumps(x)
+
+
+def test_parser_gives_each_time_range_its_own_days():
+    from app.ingestion.normalization.text import parse_schedule_text as p
+
+    got = lambda t: sorted((x["weekday"], x["opens"], x["closes"], x["week_of_month"]) for x in p(t))  # noqa: E731
+    assert got("Tuesday 1-2 PM Thursday 6-7 PM Saturday 9-10 AM") == [(1, "13:00", "14:00", None), (3, "18:00", "19:00", None),
+                                                                       (5, "09:00", "10:00", None)]
+    assert got("2nd Tuesday 1-2pm. 3rd Saturday 9-9:45am") == [(1, "13:00", "14:00", 2), (5, "09:00", "09:45", 3)]
+    assert got("Monday, Tuesday, Wednesday, & Friday: 8 am – 4:30 pm Thursday: 8 am – 7 pm") == [
+        (0, "08:00", "16:30", None), (1, "08:00", "16:30", None), (2, "08:00", "16:30", None), (3, "08:00", "19:00", None),
+        (4, "08:00", "16:30", None)]
+
+
+def test_ai_hours_must_be_stated_in_the_quote():
+    assert not ai._hours_stated("Open Table is held on Thursday mornings.", 3, "06:00", "08:00")  # times invented
+    assert ai._hours_stated("each Monday and Friday morning from 6:00-8:00am", 0, "06:00", "08:00")
+    assert ai._hours_stated("Hours: 8 AM - 4:30 PM, M-F", 2, "08:00", "16:30")
+    assert not ai._hours_stated("Monday - Friday 9:00 AM - 5:00 PM", 5, "09:00", "17:00")  # Saturday not stated
+    assert ai._hours_stated("open 24 hours a day, 7 days a week", 6, "00:00", "23:59")

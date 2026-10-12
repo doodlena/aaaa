@@ -442,6 +442,32 @@ def _rebuild_from_linked(db, loc) -> None:
         _apply_unverified(db, loc, CandidateResource(**rest[0].normalized), rest[0])
 
 
+def _retract(db, source_id: str) -> int:
+    """Reject every record from a withdrawn source and rebuild the unverified listings it touched."""
+    from app.models import Location, SourceRecord
+
+    recs = db.scalars(select(SourceRecord).where(SourceRecord.source_id == source_id,
+                                                 SourceRecord.status.notin_(("rejected", "invalid")))).all()
+    touched = {r.location_id for r in recs if r.location_id}
+    for r in recs:
+        r.status = "rejected"
+    db.flush()
+    n = 0
+    for lid in touched:
+        loc = db.get(Location, lid)
+        if loc and loc.last_verified_at is None and loc.review_status != "rejected":
+            _rebuild_from_linked(db, loc)
+            n += 1
+    db.commit()
+    return n
+
+
+def cmd_retract_source(a):
+    """Withdraw a source's data everywhere: reject its records and rebuild affected unverified listings."""
+    with _db() as db:
+        print(f"{a.source_id}: {_retract(db, a.source_id)} listings rebuilt")
+
+
 def cmd_rebuild_rejected(_a):
     """Rebuild unverified listings that have rejected source records, so rejected services disappear."""
     from app.models import Location, SourceRecord
@@ -720,6 +746,9 @@ def cmd_load_data(a):
             db.commit()
             print(f"{cfg.id}: {run.status} {run.counts.get('inserted')} new, {run.counts.get('unchanged')} unchanged")
         _apply_duplicate_decisions(db)
+        for cfg in configs.values():
+            if cfg.retracted:
+                print(f"{cfg.id}: retracted — {_retract(db, cfg.id)} listings rebuilt without it")
         if a.live_restricted:
             for cfg in configs.values():
                 if cfg.enabled and not cfg.is_synthetic and cfg.publication != "permitted_with_attribution":
@@ -837,6 +866,9 @@ def main(argv=None):
     dsc.add_argument("--searches", type=int, default=2, help="max web searches (each ~1 cent)")
     dsc.set_defaults(fn=cmd_ai_discover)
     sub.add_parser("ai-usage", help="(AI) spend by feature and this month's total vs budget").set_defaults(fn=cmd_ai_usage)
+    rs = sub.add_parser("retract-source", help="withdraw a source's data (reject its records, rebuild listings)")
+    rs.add_argument("source_id")
+    rs.set_defaults(fn=cmd_retract_source)
     lm = sub.add_parser("ai-lookup-missing", help="(AI) cited web lookup for listings missing hours/eligibility")
     lm.add_argument("--limit", type=int, default=50)
     lm.add_argument("--all", action="store_true", help="include non-food services (default: food listings only)")

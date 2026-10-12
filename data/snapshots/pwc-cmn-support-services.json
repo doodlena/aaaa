@@ -59,34 +59,7 @@
        "notes": null,
        "opens": "08:00",
        "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 3,
+       "weekday": 4,
        "week_of_month": null,
        "appointment_only": false
       },
@@ -218,34 +191,7 @@
        "notes": null,
        "opens": "08:00",
        "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 3,
+       "weekday": 4,
        "week_of_month": null,
        "appointment_only": false
       },
@@ -2275,25 +2221,7 @@
        "notes": null,
        "opens": "09:00",
        "closes": "13:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "13:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "13:00",
-       "weekday": 3,
+       "weekday": 2,
        "week_of_month": null,
        "appointment_only": false
       },
@@ -2312,15 +2240,6 @@
        "opens": "08:00",
        "closes": "15:00",
        "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "15:00",
-       "weekday": 3,
        "week_of_month": null,
        "appointment_only": false
       }
@@ -2545,7 +2464,7 @@
        "notes": null,
        "opens": "13:30",
        "closes": "17:00",
-       "weekday": 5,
+       "weekday": 6,
        "week_of_month": null,
        "appointment_only": false
       }
@@ -4058,43 +3977,7 @@
        "notes": null,
        "opens": "08:00",
        "closes": "13:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "13:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "13:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "13:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "13:00",
-       "weekday": 4,
+       "weekday": 5,
        "week_of_month": null,
        "appointment_only": false
       }
@@ -6489,34 +6372,7 @@
        "notes": null,
        "opens": "08:00",
        "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 3,
+       "weekday": 4,
        "week_of_month": null,
        "appointment_only": false
       }

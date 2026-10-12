@@ -347,6 +347,38 @@ def _in_text(evidence: str, text: str) -> bool:
     return bool(evidence.strip()) and norm(evidence) in norm(text)
 
 
+_DAY_NAMES = ("mon", "tue", "wed", "thu", "fri", "sat", "sun")
+_ALL_DAYS = re.compile(r"\b(daily|every ?day|7 days|seven days|24/7|24 hours)\b", re.I)
+
+
+def _hour_forms(hhmm: str) -> set[str]:
+    h, m = int(hhmm[:2]), int(hhmm[3:])
+    if (h, m) in ((0, 0), (23, 59)):
+        return {"24"}  # all-day: must be stated as 24 hours / 24/7
+    h12 = h % 12 or 12
+    forms = {f"{h12}:{m:02d}", f"{h:02d}:{m:02d}", f"{h}:{m:02d}"} if m else {str(h12), f"{h12}:00", f"{h:02d}:00", f"{h}:00"}
+    if h == 12 and m == 0:
+        forms.add("noon")
+    return forms
+
+
+def _hours_stated(evidence: str, weekday: int, opens: str, closes: str) -> bool:
+    """The quote itself must state the times (and the day, a day range or 'daily'), so the model can't fill them in."""
+    ev = evidence.lower()
+    nums = set(re.findall(r"\d{1,2}(?::\d{2})?", ev)) | ({"noon"} if "noon" in ev else set()) | ({"24"} if "24" in ev else set())
+    if not (_hour_forms(opens) & nums and _hour_forms(closes) & nums):
+        return False
+    if _ALL_DAYS.search(ev):
+        return True
+    names = [i for i, d in enumerate(_DAY_NAMES) if re.search(rf"\b{d}", ev)]
+    if weekday in names:
+        return True
+    # a range like "Monday - Friday" / "M-F" covering the day
+    if len(names) >= 2 and re.search(r"(-|–|through|thru|to)", ev) and min(names) <= weekday <= max(names):
+        return True
+    return bool(re.search(r"\bm\s*-\s*f\b", ev)) and weekday <= 4
+
+
 def suggest_structure(text: str, hours: str = "distribution") -> StructureSuggestion:
     """Reviewer aid: structured schedule/eligibility suggestions from free text, each backed by a verbatim quote.
     hours="distribution" extracts food distribution times only; hours="operating" extracts a service's regular open hours."""
@@ -359,7 +391,8 @@ def suggest_structure(text: str, hours: str = "distribution") -> StructureSugges
         f"Text:\n<<<\n{text[:6000]}\n>>>",
     )
     out.distribution_schedules = [s for s in out.distribution_schedules
-                                  if _in_text(s.evidence, text) and 0 <= s.weekday <= 6
+                                  if _in_text(s.evidence, text) and _hours_stated(s.evidence, s.weekday, s.opens, s.closes)
+                                  and 0 <= s.weekday <= 6
                                   and re.fullmatch(r"\d{2}:\d{2}", s.opens) and re.fullmatch(r"\d{2}:\d{2}", s.closes)
                                   and s.opens < s.closes]
     out.eligibility = [e for e in out.eligibility if _in_text(e.evidence, text)]

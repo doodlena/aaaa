@@ -29,6 +29,9 @@ class SourceConfig(BaseModel):
     adapter: str
     jurisdictions: list[str]  # geographic coverage (jurisdiction registry ids)
     enabled: bool = True
+    # Withdrawn data: every record from this source is rejected wherever `load-data`/`retract-source` runs.
+    retracted: bool = False
+    retracted_reason: str | None = None
     retrieval: str = "http"  # http | file
     formats: list[str] = Field(default_factory=lambda: ["html"])
     request_urls: list[str] = Field(default_factory=list)  # defaults to [url]

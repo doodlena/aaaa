@@ -28,6 +28,9 @@ def _write(bind, user_id, column, value):
 def upgrade() -> None:
     from app.services.secrets import is_sealed, seal
 
+    # Idempotent: a database may already have this change under an earlier numbering (see 0012).
+    if 'saved_places' in {c['name'] for c in sa.inspect(op.get_bind()).get_columns('users')}:
+        return
     op.add_column('users', sa.Column('saved_places', JSONB, server_default='[]', nullable=False))
     bind = op.get_bind()
     saved: dict[int, list] = {}

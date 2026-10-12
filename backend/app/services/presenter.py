@@ -159,8 +159,8 @@ def detail(loc: Location, sources: list[dict], translations: dict, now: datetime
         ],
         "eligibility_details": [_elig(e) for e in loc.eligibility],
         "schedules": {
-            "distribution": [_sched(s) for s in loc.schedules if s.kind == "distribution"],
-            "operating_hours": [_sched(s) for s in loc.schedules if s.kind == "operating_hours"],
+            "distribution": _unique_scheds(loc.schedules, "distribution"),
+            "operating_hours": _unique_scheds(loc.schedules, "operating_hours"),
         },
         "upcoming_windows": windows,
         "exceptions": [
@@ -203,3 +203,15 @@ def _getting_there(lat, lon):
     from app.research.transit import getting_there
 
     return getting_there(lat, lon)
+
+
+def _unique_scheds(schedules, kind: str) -> list[dict]:
+    """One row per (day, time, week) — the same hours reported by two sources or two services show once."""
+    out, seen = [], set()
+    for s in sorted((x for x in schedules if x.kind == kind), key=lambda x: (x.weekday, x.opens, x.closes)):
+        d = _sched(s)
+        k = (d["weekday"], d["opens"], d["closes"], d.get("week_of_month"))
+        if k not in seen:
+            seen.add(k)
+            out.append(d)
+    return out

@@ -141,17 +141,27 @@ def parse_schedule_text(text: str | None) -> list[dict]:
         ranges = list(_RANGE.finditer(seg))
         if not ranges:
             continue
-        day_part = seg[: ranges[0].start()]
-        span = re.search(rf"\b({_DAY_RE})s?\b\s*(?:-|–|through|thru|to)\s*\b({_DAY_RE})s?\b", day_part)
-        if span:
-            a, b = _DAYS[span.group(1)], _DAYS[span.group(2)]
-            days = list(range(a, b + 1)) if a <= b else []
-        else:
-            days = [_DAYS[m] for m in re.findall(rf"\b({_DAY_RE})s?\b", day_part)]
-        if not days:
-            continue
-        ords = [_ORDINAL[o] for o in re.findall(r"\b(1st|2nd|3rd|4th|5th|first|second|third|fourth|fifth|last)\b", day_part)]
+        def days_in(part: str) -> tuple[list[int], list]:
+            span = re.search(rf"\b({_DAY_RE})s?\b\s*(?:-|–|through|thru|to)\s*\b({_DAY_RE})s?\b", part)
+            if span:
+                a, b = _DAYS[span.group(1)], _DAYS[span.group(2)]
+                ds = list(range(a, b + 1)) if a <= b else []
+            else:
+                ds = [_DAYS[m] for m in re.findall(rf"\b({_DAY_RE})s?\b", part)]
+            os_ = [_ORDINAL[o] for o in re.findall(r"\b(1st|2nd|3rd|4th|5th|first|second|third|fourth|fifth|last)\b", part)]
+            return ds, os_
+
+        # Each time range belongs to the days written just before it ("Tue 1-2 PM Thu 6-7 PM"); a range with no
+        # days of its own shares the previous range's days ("Mon & Thu 9-11am, 1-3pm").
+        days, ords = [], []
+        prev_end = 0
         for rng in ranges:
+            d_here, o_here = days_in(seg[prev_end: rng.start()])
+            if d_here:
+                days, ords = d_here, o_here
+            prev_end = rng.end()
+            if not days:
+                continue
             h1, m1, a1, h2, m2, a2 = rng.groups()
             if not a2 and not a1:
                 continue
@@ -163,8 +173,9 @@ def parse_schedule_text(text: str | None) -> list[dict]:
                 continue
             for d in dict.fromkeys(days):
                 for w in ords or [None]:
-                    rules.append({"weekday": d, "opens": opens.strftime("%H:%M"), "closes": closes.strftime("%H:%M"),
-                                  "week_of_month": w})
+                    rule = {"weekday": d, "opens": opens.strftime("%H:%M"), "closes": closes.strftime("%H:%M"), "week_of_month": w}
+                    if rule not in rules:
+                        rules.append(rule)
     return rules
 
 

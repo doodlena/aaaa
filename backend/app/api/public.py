@@ -44,7 +44,8 @@ def load_location(db: Session, location_id: int, public: bool = True) -> Locatio
 
 def location_sources(db: Session, location_id: int) -> list[dict]:
     rows = db.execute(
-        select(SourceRecord, Source).join(Source).where(SourceRecord.location_id == location_id)
+        select(SourceRecord, Source).join(Source).where(SourceRecord.location_id == location_id,
+                                                        SourceRecord.status.notin_(("rejected", "invalid")))
     ).all()
     return [
         {"source_id": s.id, "name": s.name, "url": r.source_url or s.url, "last_seen_at": r.last_seen_at.isoformat(),

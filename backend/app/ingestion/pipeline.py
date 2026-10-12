@@ -182,9 +182,14 @@ def _merged_structures(db: Session, loc: Location, c: CandidateResource, rec: So
             cur["schedules"] += [x for x in d["schedules"] if skey(x) not in have]
             cur["eligibility"] = _merge_elig(cur["eligibility"] + d["eligibility"])
             cur["description"] = cur["description"] or d["description"]
-    schedules = []
+    schedules, seen = [], set()
     for cand in cands:
-        schedules += [x.model_dump() for x in cand.schedules if x.model_dump() not in schedules]
+        for x in cand.schedules:
+            d = x.model_dump()
+            k = (d["kind"], d["weekday"], d["opens"], d["closes"], d["week_of_month"])
+            if k not in seen:
+                seen.add(k)
+                schedules.append(d)
     eligibility = _merge_elig([e.model_dump() for cand in cands for e in cand.eligibility])
     return list(by_type.values()), schedules, eligibility
 

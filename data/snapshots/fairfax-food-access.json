@@ -420,7 +420,7 @@
        "notes": null,
        "opens": "10:30",
        "closes": "14:00",
-       "weekday": 0,
+       "weekday": 2,
        "week_of_month": null,
        "appointment_only": false
       },
@@ -429,16 +429,7 @@
        "notes": null,
        "opens": "10:30",
        "closes": "14:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:30",
-       "closes": "14:00",
-       "weekday": 3,
+       "weekday": 4,
        "week_of_month": null,
        "appointment_only": false
       }
@@ -3277,8 +3268,8 @@
        "notes": null,
        "opens": "09:00",
        "closes": "09:45",
-       "weekday": 1,
-       "week_of_month": 2,
+       "weekday": 5,
+       "week_of_month": 3,
        "appointment_only": false
       }
      ],
