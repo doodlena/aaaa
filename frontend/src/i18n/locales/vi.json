@@ -312,7 +312,7 @@
     "resultsCount_other": "{{count}} địa điểm phù hợp với tìm kiếm của bạn",
     "uncertainCount_one": "{{count}} nơi khác có thể phù hợp",
     "uncertainCount_other": "{{count}} nơi khác có thể phù hợp",
-    "coverage": "Chúng tôi vẫn đang bổ sung các nguồn trợ giúp ở khu vực này. Có thể còn những nơi trợ giúp thực phẩm gần đây chưa được liệt kê.",
+    "coverage": "Chúng tôi vẫn đang bổ sung các nguồn trợ giúp ở khu vực này. Có thể còn những nơi trợ giúp gần đây chưa được liệt kê.",
     "truncated": "Có nhiều kết quả. Hãy phóng to hoặc thêm bộ lọc để xem tất cả.",
     "confirmedListLabel": "Các địa điểm phù hợp",
     "empty": "Không tìm thấy địa điểm nào ở đây",
@@ -581,7 +581,8 @@
     "live": "Nhân viên điểm phát đã được duyệt có thể đăng tình trạng hôm nay (mở cửa, hạn chế, hết thực phẩm, đóng cửa) và những gì có trên kệ. Mỗi bài đăng đều ghi “Do điểm phát đăng” kèm thời gian, và tự biến mất khi hết hạn. Chúng tôi xác nhận từng nhân viên với điểm phát trước khi họ được đăng.",
     "reportsInfo": "Bất kỳ ai cũng có thể báo cáo vấn đề của một mục. Báo cáo được gửi đến điểm phát và người duyệt của chúng tôi; nếu có nhiều báo cáo tương tự, mục đó sẽ được đưa trở lại để xem xét.",
     "privacy5": "Báo cáo vấn đề chỉ lưu những gì bạn đã chọn và viết. Không lưu tên, tài khoản hay vị trí.",
-    "privacy6": "Các tính năng AI, khi được bật, chỉ nhận những chữ bạn gõ. Vị trí và tài khoản của bạn không bao giờ được gửi đi."
+    "privacy6": "Các tính năng AI, khi được bật, chỉ nhận những chữ bạn gõ. Vị trí và tài khoản của bạn không bao giờ được gửi đi.",
+    "labelReported": "Được nhập từ một danh sách công khai (xem phần Nguồn). Người duyệt của Lantern chưa kiểm tra — hãy gọi điện trước khi đi."
   },
   "reviewStatus": {
     "candidate": "Ứng viên",

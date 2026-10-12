@@ -78,6 +78,11 @@ permission or direct provider verification before publication. Eligibility docum
 - Loudoun, Falls Church, Arlington, Alexandria, and Manassas Park have no ingestion yet (planned status). Food-source
   research for Loudoun and Falls Church has not been done.
 - OpenStreetMap coverage of NoVA pantries is very sparse (3 features). The adapter exists but is not enabled.
+- UI languages: English and Spanish are bundled; Chinese (Simplified), Vietnamese and Korean sit behind the "+" button
+  in the language switcher and load on demand (`frontend/src/i18n/index.ts`). The three new catalogs were machine-written
+  and have not been reviewed by native speakers. They cover the public site only: admin and pantry-portal screens fall
+  back to English. Right-to-left languages (Arabic, Urdu, Farsi) are not supported yet (layout uses physical left/right,
+  and Arabic needs extra plural forms).
 - No automated accessibility audit (axe) has been run. WCAG practices were applied and checked by hand.
 - Development environment notes: the Homebrew `node` 26.5 binary is broken (missing `libsimdjson`), so `/usr/local/bin`
   node 22 was used, with `npm_config_cache` pointed at a writable directory.
@@ -112,5 +117,5 @@ cd backend && ../.venv/bin/pytest && ../.venv/bin/foodaccess evaluate-pilot
    republication permission.
 2. Resolve the 27 duplicate candidates. Add official websites and eligibility during verification.
 3. Run `docker compose up` on a server, put TLS in front, set `COOKIE_SECURE=true` and a contact `HTTP_USER_AGENT`.
-4. Add an axe accessibility check to Playwright. Get a native-speaker review of the Spanish catalog.
+4. Add an axe accessibility check to Playwright. Get a native-speaker review of the Spanish, Chinese, Vietnamese and Korean catalogs.
 5. Expansion: Alexandria (add CAFB `where_by_jurisdiction`), then Arlington (curate AFAC sites), then the others.
