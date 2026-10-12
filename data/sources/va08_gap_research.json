@@ -445,7 +445,7 @@
     "English",
     "Spanish"
    ],
-   "notes": "Parish location listed under 'Our Locations (North Region)'. Outpatient counseling for individuals, couples, parent-child relationships and families (anxiety, depression, grief and loss, marital/premarital, parenting, healing from abuse); in-person at listed parishes and by telehealth. Faith-integrated, available to people of all faiths. North Region intake 703-687-8987 (bilingual English/Spanish). Psychological assessments on a sliding scale (psych.testing@ccda.net). The page does not state counseling fees or office hours at this parish.",
+   "notes": "Parish location listed under 'Our Locations (North Region)'. Outpatient counseling for individuals, couples, parent-child relationships and families (anxiety, depression, grief and loss, marital/premarital, parenting, healing from abuse); in-person at listed parishes and by telehealth. Faith-integrated, available to people of all faiths. North Region intake 703-687-8987 (bilingual English/Spanish). Psychological assessments on a sliding scale (psych.testing@ccda.net). The page does not state counseling fees or office hours at this parish. GEOCODE CAUTION: the Census geocoder matched this address to '8710 OLD MOUNT VERNON RD, ALEXANDRIA, VA, 22309' (a different street name); verify the pin before publishing.",
    "services": [
     {
      "service_type": "mental_health_counseling",
@@ -926,6 +926,129 @@
     }
    ],
    "needs_primary_confirmation": false
+  },
+  {
+   "external_id": "va08gap-falls-church-city-senior-center",
+   "source_url": "https://www.fallschurchva.gov/611/Senior-Center",
+   "organization_name": "City of Falls Church Recreation & Parks",
+   "organization_website": "https://www.fallschurchva.gov/",
+   "location_name": "Falls Church Senior Center",
+   "address1": "223 Little Falls St.",
+   "city": "Falls Church",
+   "state": "VA",
+   "zip": "22046",
+   "lat": 38.885788,
+   "lon": -77.1716,
+   "geocode_source": "census_geocoder",
+   "phone": "703-248-5027",
+   "email": "tbrowand@fallschurchva.gov",
+   "website": "https://www.fallschurchva.gov/611/Senior-Center",
+   "notes": "Social activities, recreation programs and trips for older adults age 50+ (bingo, bridge, canasta, art open studios, military history forum, foreign-language conversation groups). NO congregate meal program is listed: the 'Lunch Bunch' meets the second Friday of every month at Noon and participants pay for their own lunch at local restaurants. Front desk 703-248-5027 (TTY 711); Senior Center Coordinator 703-248-5020. Membership year shown on page: Sept 1, 2025 to Aug 31, 2026.",
+   "raw_eligibility_text": "To participate in any Senior Center programs, you must officially join the Senior Center as a member. Please call the Front Desk at 703-248-5027 (TTY 711) to register. Free for City of Falls Church residents and $12 per person for non-City residents",
+   "services": [
+    {
+     "service_type": "other",
+     "description": "Senior center social, educational and recreation programs for adults 50+ (no meal program listed).",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Programs for older adults age 50+."
+    },
+    {
+     "requirement_type": "registration",
+     "status": "required",
+     "details": "Must join the Senior Center as a member; free for City of Falls Church residents, $12 per person for non-City residents."
+    }
+   ],
+   "needs_primary_confirmation": false
+  },
+  {
+   "external_id": "va08gap-ffo-hollywood",
+   "source_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org/",
+   "location_name": "Food for Others Neighborhood Site – Hollywood (Wexford Manor Apartments)",
+   "address1": "2802 Hollywood Road",
+   "city": "Falls Church",
+   "state": "VA",
+   "zip": "22043",
+   "lat": 38.877794,
+   "lon": -77.206174,
+   "geocode_source": "census_geocoder",
+   "phone": "703-207-9173",
+   "email": "info@foodforothers.org",
+   "website": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "notes": "Parking lot of Wexford Manor Apartments. Outdoor neighborhood distribution of supplemental food; bring your own grocery bags. Only a start time is published (no end time), so no structured schedule. Closed whenever Fairfax County Government is closed; 2026 holiday closures listed on page. Food for Others main office/market is at 2938 Prosperity Ave, Fairfax (outside VA-08). ZIP not given on the page; taken from the Census geocoder match.",
+   "raw_hours_text": "Falls Church : Wednesday, Friday ... Hollywood (Fairfax County): 2802 Hollywood Road, parking lot of Wexford Manor Apartments, south of Savannah Street, Falls Church . 6:30pm",
+   "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, “How many people are in your household?” Please bring your own grocery bags.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Neighborhood site distribution of supplemental food; the only question asked is household size.",
+     "offering_status": "regular"
+    }
+   ],
+   "needs_primary_confirmation": true
+  },
+  {
+   "external_id": "va08gap-ffo-patrick-henry",
+   "source_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org/",
+   "location_name": "Food for Others Neighborhood Site – Patrick Henry (Seven Corners)",
+   "address1": "6195 Greenwood Dr",
+   "city": "Falls Church",
+   "state": "VA",
+   "zip": "22044",
+   "lat": 38.866158,
+   "lon": -77.149525,
+   "geocode_source": "census_geocoder",
+   "phone": "703-207-9173",
+   "email": "info@foodforothers.org",
+   "website": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "notes": "Site is on Greenwood Drive near Building #6195; geocoded to 6195 Greenwood Dr (approximate). Outdoor neighborhood distribution of supplemental food; bring your own grocery bags. Only a start time is published (no end time), so no structured schedule. Closed whenever Fairfax County Government is closed; 2026 holiday closures listed on page. Food for Others main office/market is at 2938 Prosperity Ave, Fairfax (outside VA-08). ZIP not given on the page; taken from the Census geocoder match.",
+   "raw_hours_text": "Seven Corners: Tuesday, Thursday ... Patrick Henry: Greenwood Drive, west of Patrick Henry Drive near Building #6195, Falls Church . 6:30pm",
+   "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, “How many people are in your household?” Please bring your own grocery bags.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Neighborhood site distribution of supplemental food; the only question asked is household size.",
+     "offering_status": "regular"
+    }
+   ],
+   "needs_primary_confirmation": true
+  },
+  {
+   "external_id": "va08gap-ffo-willston",
+   "source_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org/",
+   "location_name": "Food for Others Neighborhood Site – Willston (Seven Corners)",
+   "address1": "6134 Willston Dr",
+   "city": "Falls Church",
+   "state": "VA",
+   "zip": "22044",
+   "lat": 38.871346,
+   "lon": -77.147991,
+   "geocode_source": "census_geocoder",
+   "phone": "703-207-9173",
+   "email": "info@foodforothers.org",
+   "website": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "notes": "Site is in front of Building #6134 Willston Garden Apartments; geocoded to 6134 Willston Dr. Outdoor neighborhood distribution of supplemental food; bring your own grocery bags. Only a start time is published (no end time), so no structured schedule. Closed whenever Fairfax County Government is closed; 2026 holiday closures listed on page. Food for Others main office/market is at 2938 Prosperity Ave, Fairfax (outside VA-08). ZIP not given on the page; taken from the Census geocoder match.",
+   "raw_hours_text": "Seven Corners: Tuesday, Thursday ... Willston: In front of Building #6134 Willston Garden Apartments, off Willston Drive and west of John Marshall Drive, Falls Church . 6:00pm",
+   "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, “How many people are in your household?” Please bring your own grocery bags.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Neighborhood site distribution of supplemental food; the only question asked is household size.",
+     "offering_status": "regular"
+    }
+   ],
+   "needs_primary_confirmation": true
   },
   {
    "external_id": "va08gap-ffx-baileys-senior-center",
