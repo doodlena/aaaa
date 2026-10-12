@@ -2,8 +2,9 @@
 # Start command for Render (see render.yaml). Runs from /app/backend inside the image built by backend/Dockerfile.
 set -e
 foodaccess bootstrap
-# A new database starts empty: rebuild the listings from the committed snapshots (skipped once listings exist).
-foodaccess load-data --if-empty
+# Load the committed snapshots whenever they change (a new database, or a push with corrected data). Idempotent: replays
+# reviewer rejections and withdrawn sources and never overwrites verified listings.
+foodaccess load-data --if-changed
 # Render's free plan has no shell. Set both variables to create (or reset) an administrator on start, then remove them.
 if [ -n "$FOODACCESS_ADMIN_EMAIL" ] && [ -n "$FOODACCESS_ADMIN_PASSWORD" ]; then
   foodaccess create-admin --email "$FOODACCESS_ADMIN_EMAIL"

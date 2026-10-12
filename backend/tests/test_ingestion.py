@@ -323,3 +323,16 @@ def test_rebuild_keeps_fields_from_still_accepted_sources(db, imported):
     _rebuild_from_linked(db, loc)
     db.flush()
     assert (loc.name, loc.address1, loc.phone) == before
+
+
+def test_load_data_if_changed_skips_an_already_loaded_snapshot(db, tmp_path, monkeypatch, capsys):
+    import json as _json
+
+    from app import cli
+
+    (tmp_path / "manifest.json").write_text(_json.dumps({"exported_at": "2026-01-01T00:00:00", "sources": []}))
+    monkeypatch.setattr(cli, "SNAPSHOT_DIR", tmp_path)
+    cli.main(["load-data", "--if-changed"])
+    assert "already loaded" not in capsys.readouterr().out
+    cli.main(["load-data", "--if-changed"])
+    assert "already loaded; skipping" in capsys.readouterr().out

@@ -880,6 +880,13 @@ def cmd_load_data(a):
         if a.if_empty and db.scalar(select(Location.id).where(Location.is_synthetic.is_(False)).limit(1)):
             print("database already has real listings; skipping (use without --if-empty to refresh)")
             return
+        from app.models import AppSetting
+
+        stamp = str(man.get("exported_at") or "")
+        loaded = db.get(AppSetting, "snapshot_loaded_at")
+        if getattr(a, "if_changed", False) and loaded is not None and loaded.value == stamp:
+            print(f"snapshot {stamp} already loaded; skipping")
+            return
         for m in sorted(man["sources"], key=lambda m: m["order"]):
             cfg = configs.get(m["source_id"])
             if not cfg:
@@ -890,6 +897,10 @@ def cmd_load_data(a):
             db.commit()
             print(f"{cfg.id}: {run.status} {run.counts.get('inserted')} new, {run.counts.get('unchanged')} unchanged")
         _apply_duplicate_decisions(db)
+        row = db.get(AppSetting, "snapshot_loaded_at") or AppSetting(key="snapshot_loaded_at", is_secret=False)
+        row.value = stamp
+        db.add(row)
+        db.commit()
         print(f"rejected records replayed: {_apply_rejections(db)} listings rebuilt")
         for cfg in configs.values():
             if cfg.retracted:
@@ -1039,6 +1050,7 @@ def main(argv=None):
     sub.add_parser("export-snapshot", help="write imported republishable records to data/snapshots/ (commit these)").set_defaults(fn=cmd_export_snapshot)
     ld = sub.add_parser("load-data", help="rebuild listings from data/snapshots/ (no scraping needed)")
     ld.add_argument("--if-empty", action="store_true", help="only load when the database has no real listings yet")
+    ld.add_argument("--if-changed", action="store_true", help="only load when the committed snapshot is newer than the last load")
     ld.add_argument("--live-restricted", action="store_true", help="also fetch permission-required sources live (local review only)")
     ld.set_defaults(fn=cmd_load_data)
     ais = sub.add_parser("ai-suggest", help="(optional, Claude) queue AI-structured hours suggestions for review")
