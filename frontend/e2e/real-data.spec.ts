@@ -70,4 +70,21 @@ test.describe('real data (read-only)', () => {
     expect(share).toBeGreaterThanOrEqual(0.75);
     expect(await page.evaluate(() => document.documentElement.scrollHeight <= innerHeight)).toBe(true);
   });
+
+  test('R6: "Search by name" keeps its button beside the box at every width, and never pushes the page sideways', async ({ page }) => {
+    for (const width of [1920, 1366, 1024, 768, 390, 320]) {
+      await page.setViewportSize({ width, height: 800 });
+      await page.goto('/find?lat=38.86&lon=-77.1&q=church'); // q set: the "Clear" button is showing too
+      const box = page.locator('#name-q');
+      await expect(box).toBeVisible();
+      const m = await page.evaluate(() => {
+        const input = document.querySelector('#name-q')!.getBoundingClientRect();
+        const button = document.querySelector('.name-search button[type=submit]')!.getBoundingClientRect();
+        return { offset: Math.abs(input.top + input.height / 2 - (button.top + button.height / 2)), after: button.left >= input.right, overflow: document.documentElement.scrollWidth - innerWidth };
+      });
+      expect(m.offset, `button level with the box at ${width}px`).toBeLessThan(12);
+      expect(m.after, `button to the right of the box at ${width}px`).toBe(true);
+      expect(m.overflow, `no sideways scroll at ${width}px`).toBeLessThanOrEqual(0);
+    }
+  });
 });

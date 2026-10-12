@@ -1002,6 +1002,9 @@ input[type='radio'] {
   flex-wrap: wrap;
   gap: var(--sp-3);
   align-items: center;
+  /* Never wider than the bar, so the name-search box shrinks on a phone instead of pushing the page sideways. */
+  min-width: 0;
+  max-width: 100%;
 }
 .explorer__filters-btn {
   display: none;
@@ -3687,8 +3690,12 @@ form.is-ai-drafted select {
 .getting-there__list { margin: 0 0 var(--sp-2); padding-left: 1.1rem; }
 .getting-there__list li { margin: 4px 0; overflow-wrap: anywhere; }
 
-.name-search { flex-wrap: wrap; gap: var(--sp-2); }
+.name-search { flex-wrap: wrap; gap: var(--sp-2); min-width: 0; max-width: 100%; }
+/* The box and its button(s) are one row that never wraps, whatever the font metrics or scrollbar width (the label may
+   still sit above them on a narrow screen). */
+.name-search__row { display: flex; flex-wrap: nowrap; align-items: center; gap: var(--sp-2); flex: 1 1 auto; min-width: 0; }
 .name-search input { min-width: 0; flex: 1 1 220px; }
+.name-search .btn { flex: none; white-space: nowrap; }
 
 /* ---------- AI-found listing info (detail page) ----------
    Always labelled with the "AI-found" badge (text, not colour alone) and a dotted left rule — distinct from confirmed
@@ -3856,8 +3863,9 @@ form.is-ai-drafted select {
 
 .home-name-search { margin-top: var(--sp-4); padding-top: var(--sp-3); border-top: 1px dashed var(--line); }
 .home-name-search label { display: block; font-weight: 700; margin-bottom: var(--sp-2); }
-.home-name-search .search__row { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
-.home-name-search input { flex: 1 1 260px; min-width: 0; }
+.home-name-search .search__row { display: flex; flex-direction: row; gap: var(--sp-2); flex-wrap: nowrap; }
+.home-name-search input { flex: 1 1 auto; min-width: 0; }
+.home-name-search .btn { flex: none; white-space: nowrap; }
 
 .map-popup .maplibregl-popup-content { padding: 12px 14px; border-radius: 10px; font: inherit; box-shadow: 0 4px 16px rgba(0,0,0,.25); }
 .map-popup__title { display: block; font-weight: 700; font-size: 1rem; color: inherit; margin-right: 16px; overflow-wrap: anywhere; }

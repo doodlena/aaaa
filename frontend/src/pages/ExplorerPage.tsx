@@ -201,13 +201,16 @@ export default function ExplorerPage() {
             }}
           >
             <label htmlFor="name-q">{t('explorer.nameSearch')}</label>
-            <input id="name-q" type="search" value={nameDraft} maxLength={100} placeholder={t('explorer.nameSearchPlaceholder')} onChange={(e) => setNameDraft(e.target.value)} />
-            <button type="submit" className="btn btn--secondary btn--sm">{t('explorer.nameSearchGo')}</button>
-            {filters.q && (
-              <button type="button" className="btn btn--ghost btn--sm" onClick={() => update({ q: '' })}>
-                {t('explorer.nameSearchClear')}
-              </button>
-            )}
+            {/* One unbreakable row: the box shrinks, but the button never drops underneath it. */}
+            <span className="name-search__row">
+              <input id="name-q" type="search" value={nameDraft} maxLength={100} placeholder={t('explorer.nameSearchPlaceholder')} onChange={(e) => setNameDraft(e.target.value)} />
+              <button type="submit" className="btn btn--secondary btn--sm">{t('explorer.nameSearchGo')}</button>
+              {filters.q && (
+                <button type="button" className="btn btn--ghost btn--sm" onClick={() => update({ q: '' })}>
+                  {t('explorer.nameSearchClear')}
+                </button>
+              )}
+            </span>
           </form>
           <div className="field field--inline">
             <label htmlFor="radius">{t('explorer.radius')}</label>
