@@ -77,8 +77,36 @@ SERVICE_TYPES = {
     "hygiene_supplies": "non_food",
     "household_essentials": "non_food",
     "food_referral": "referral",
+    # --- support beyond food (each maps to a "What do you need?" group) ---
+    "snap_application_help": "benefits",
+    "wic_services": "benefits",
+    "medicaid_enrollment_help": "benefits",
+    "senior_meals": "community_meal",
+    "kids_meals": "school",
+    "health_clinic": "health",
+    "dental_care": "health",
+    "prescription_help": "health",
+    "mental_health_counseling": "mental_health",
+    "crisis_support": "mental_health",
+    "substance_use_treatment": "mental_health",
+    "support_groups": "mental_health",
+    "housing_assistance": "housing",
+    "shelter": "housing",
+    "utility_assistance": "housing",
+    "financial_assistance": "financial",
+    "tax_preparation": "financial",
+    "clothing": "clothing",
+    "legal_aid": "legal",
+    "immigration_legal_help": "legal",
+    "job_training": "work_learning",
+    "esl_classes": "work_learning",
+    "childcare": "family",
+    "domestic_violence_support": "family",
+    "transportation_help": "transportation",
     "other": "other",
 }
+FOOD_SERVICE_GROUPS = ("pantry", "walk_up", "drive_through", "mobile", "community_meal", "delivery", "emergency", "school",
+                       "seasonal", "voucher", "referral")
 SERVICE_GROUPS = tuple(dict.fromkeys(SERVICE_TYPES.values()))
 
 OFFERING_STATUSES = ("regular", "seasonal", "event_specific", "unconfirmed")

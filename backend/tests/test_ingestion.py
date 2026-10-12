@@ -211,3 +211,15 @@ def test_two_records_same_site_keep_both_services(db, tmp_path):
     assert _count(db, Location) == 1
     assert {s.service_type for s in loc.services} == {"pantry_pickup", "mobile_pantry"}
     assert [e.status for e in loc.eligibility if e.requirement_type == "photo_id"] == ["required"]  # conservative merge
+
+
+def test_flagged_verified_listing_stays_public_as_needs_recheck(db, imported, admin, client):
+    loc = db.scalar(select(Location).where(Location.name.like("%Maple%")))
+    apply_action(db, loc, admin, "verify", "phone")
+    apply_action(db, loc, admin, "publish")
+    apply_action(db, loc, admin, "flag")
+    d = client.get(f"/api/resources/{loc.id}").json()
+    assert d["verification_label"] == "stale"
+    never = db.scalar(select(Location).where(Location.name.like("%Birch%")))
+    apply_action(db, never, admin, "flag")
+    assert client.get(f"/api/resources/{never.id}").status_code == 404  # never verified => never public

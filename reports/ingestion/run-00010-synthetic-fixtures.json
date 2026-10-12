@@ -1,0 +1,83 @@
+{
+  "run_id": 10,
+  "source": {
+    "id": "synthetic-fixtures",
+    "name": "Synthetic fixtures (test data \u2014 not real resources)",
+    "url": "file://data/fixtures/synthetic_resources.json",
+    "adapter": "structured_json",
+    "is_synthetic": true,
+    "known_limitations": [
+      "Entirely fictional. Exists to exercise the pipeline, search, and UI."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T12:07:19.975473-04:00",
+  "finished_at": "2026-10-12T16:07:20.023259+00:00",
+  "counts": {
+    "discovered": 8,
+    "inserted": 0,
+    "updated": 0,
+    "unchanged": 8,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 113,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "syn-002",
+      "status": "linked",
+      "location_id": 2,
+      "issues": []
+    },
+    {
+      "external_id": "syn-003",
+      "status": "linked",
+      "location_id": 3,
+      "issues": []
+    },
+    {
+      "external_id": "syn-005",
+      "status": "linked",
+      "location_id": 5,
+      "issues": []
+    },
+    {
+      "external_id": "syn-006",
+      "status": "linked",
+      "location_id": 6,
+      "issues": []
+    },
+    {
+      "external_id": "syn-007",
+      "status": "linked",
+      "location_id": 7,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "syn-008",
+      "status": "linked",
+      "location_id": 8,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

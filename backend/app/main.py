@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from sqlalchemy.exc import OperationalError
 
-from app.api import accounts, admin, public
+from app.api import accounts, admin, provider, public
 from app.config import get_settings
 
 log = logging.getLogger("api")
@@ -15,9 +15,9 @@ log = logging.getLogger("api")
 def create_app() -> FastAPI:
     s = get_settings()
     app = FastAPI(
-        title="Northern Virginia Food Access API",
+        title=f"{s.app_name} API",
         version="0.1.0",
-        description="Public search for food assistance resources, optional accounts, and an administrator verification API.",
+        description="Lantern: live food, mental-health and community support resources for Northern Virginia — public search, provider portal, community reports, and a verification API.",
         docs_url="/api/docs",
         openapi_url="/api/openapi.json",
     )
@@ -59,6 +59,7 @@ def create_app() -> FastAPI:
     app.include_router(public.router)
     app.include_router(accounts.router)
     app.include_router(admin.router)
+    app.include_router(provider.router)
     return app
 
 

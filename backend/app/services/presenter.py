@@ -12,13 +12,17 @@ SUMMARY_ELIGIBILITY = ("photo_id", "proof_of_address", "income_documentation", "
 
 def verification_label(loc: Location, now: datetime | None = None) -> str:
     """verified | stale | source_reported | needs_review | rejected | candidate (public API only ever sees the first two)."""
+    if loc.review_status == "needs_review" and loc.last_verified_at:
+        return "stale"  # previously verified, being re-checked (new source data or community reports)
     if loc.review_status in ("verified", "stale"):
         fresh = timedelta(days=get_settings().verification_fresh_days)
         now = now or datetime.now(UTC)
         if loc.review_status == "stale" or not loc.last_verified_at or now - loc.last_verified_at > fresh:
             return "stale"
         return "verified"
-    return {"candidate": "source_reported"}.get(loc.review_status, loc.review_status)
+    if loc.review_status in ("candidate", "needs_review"):
+        return "source_reported"  # imported from a named source, not yet checked by a reviewer
+    return loc.review_status
 
 
 def eligibility_state(loc: Location, requirement: str, service_ids: set[int] | None = None) -> str:
@@ -48,7 +52,8 @@ def food_types_of(loc: Location) -> list[str]:
     return sorted({f.food_type for s in loc.services for f in s.food_types})
 
 
-def summary(loc: Location, distance_m: float | None = None, now: datetime | None = None, on_date: date | None = None) -> dict:
+def summary(loc: Location, distance_m: float | None = None, now: datetime | None = None, on_date: date | None = None,
+            live: dict | None = None, open_reports: int = 0) -> dict:
     now = now or datetime.now(UTC)
     ftypes = food_types_of(loc)
     nxt = next_distribution(now, loc.schedules, loc.exceptions, loc.events)
@@ -57,6 +62,8 @@ def summary(loc: Location, distance_m: float | None = None, now: datetime | None
     warnings = []
     if label == "stale":
         warnings.append("stale")
+    if label == "source_reported":
+        warnings.append("not_yet_verified")
     if not has_sched:
         warnings.append("schedule_unknown")
     elig = {r: eligibility_state(loc, r) for r in SUMMARY_ELIGIBILITY}
@@ -99,6 +106,8 @@ def summary(loc: Location, distance_m: float | None = None, now: datetime | None
         "warnings": warnings,
         "is_synthetic": loc.is_synthetic,
         "match_reasons": [],
+        "live": live,  # pantry-posted status for today (None when nothing current)
+        "open_reports": open_reports,
     }
 
 
@@ -119,9 +128,10 @@ def _elig(e) -> dict:
     }
 
 
-def detail(loc: Location, sources: list[dict], translations: dict, now: datetime | None = None) -> dict:
+def detail(loc: Location, sources: list[dict], translations: dict, now: datetime | None = None, live: dict | None = None,
+           open_reports: int = 0) -> dict:
     now = now or datetime.now(UTC)
-    out = summary(loc, now=now)
+    out = summary(loc, now=now, live=live, open_reports=open_reports)
     today = now.astimezone(TZ).date()
     windows = []
     for i in range(14):
@@ -165,7 +175,7 @@ def detail(loc: Location, sources: list[dict], translations: dict, now: datetime
              "offerings": sorted(o.food_type for o in e.offerings)}
             for e in sorted(loc.events, key=lambda e: e.starts_at) if e.starts_at >= now - timedelta(days=1)
         ],
-        "current_inventory": None,  # no provider-confirmed inventory feed exists yet; UI says selection may vary
+        "current_inventory": live["items"] if live else None,  # only pantry-posted, unexpired items
         "sources": sources,
         "translations": translations,
         "directions": directions(out["lat"], out["lon"]),

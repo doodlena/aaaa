@@ -5,6 +5,7 @@ import type { ResourceSummary } from '../api/types';
 import { formatAddress, formatDate, formatDistance, formatTimeRange, parseDate, telHref } from '../lib/format';
 import { MatchReasons, OperatingBadge, SyntheticBadge, VerificationBadge, WarningList } from './Badges';
 import { Icon } from './Icon';
+import { LiveSummary, ReportsNotice } from './Live';
 
 /** "Ticket stub" showing the next distribution date — or a dashed, explicit "schedule not confirmed". */
 export function DateStub({ item }: { item: ResourceSummary }) {
@@ -68,7 +69,7 @@ export const ResultCard = forwardRef<HTMLLIElement, Props>(function ResultCard({
   return (
     <li
       ref={ref}
-      className={`card ${selected ? 'is-selected' : ''} ${uncertain ? 'card--uncertain' : ''}`}
+      className={`card ${selected ? 'is-selected' : ''} ${uncertain ? 'card--uncertain' : ''} ${item.live ? `card--live card--live-${item.live.status}` : ''}`}
       data-resource-id={item.id}
       aria-labelledby={headingId}
       aria-current={selected ? 'true' : undefined}
@@ -101,6 +102,8 @@ export const ResultCard = forwardRef<HTMLLIElement, Props>(function ResultCard({
           {formatAddress(item.address)}
           {item.distance_km !== null && <span className="card__dist"> · {t('card.away', { distance: formatDistance(item.distance_km, i18n.language) })}</span>}
         </p>
+        {item.live && <LiveSummary live={item.live} />}
+        <ReportsNotice count={item.open_reports} />
         <NextDistribution item={item} />
         {item.food_groups.length > 0 && (
           <ul className="tags" aria-label={t('card.foodLabel')}>

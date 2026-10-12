@@ -33,7 +33,16 @@ def _argos(text: str, source: str, target: str) -> str:
     return at.translate(text, source, target)
 
 
-PROVIDERS = {"libretranslate": _libretranslate, "argos": _argos}
+def _claude(text: str, source: str, target: str) -> str:
+    from app.services import ai
+
+    try:
+        return ai.translate(text, source, target)
+    except ai.AIUnavailable as e:
+        raise TranslationUnavailable(str(e)) from e
+
+
+PROVIDERS = {"libretranslate": _libretranslate, "argos": _argos, "claude": _claude}
 
 
 def get_translator(name: str | None = None):

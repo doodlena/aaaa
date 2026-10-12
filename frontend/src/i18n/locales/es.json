@@ -1,19 +1,21 @@
 {
   "app": {
-    "shortName": "Acceso a Alimentos",
-    "region": "Norte de Virginia"
+    "region": "Norte de Virginia",
+    "tagline": "Ayuda que ilumina el camino: comida, salud y apoyo cerca de usted"
   },
   "nav": {
     "skip": "Saltar al contenido principal",
     "menu": "Menú",
     "primary": "Principal",
-    "find": "Buscar comida",
+    "find": "Buscar ayuda",
     "about": "Información",
     "favorites": "Lugares guardados",
     "admin": "Administración",
     "account": "Cuenta",
     "signOut": "Cerrar sesión",
-    "signIn": "Iniciar sesión"
+    "signIn": "Iniciar sesión",
+    "forPantries": "Para despensas",
+    "home": "Inicio de {{app}}"
   },
   "lang": {
     "label": "Idioma"
@@ -22,16 +24,25 @@
     "banner": "Datos de demostración: los lugares marcados con [TEST] son ficticios."
   },
   "footer": {
-    "disclaimer": "La información puede cambiar. Comuníquese con la organización antes de ir. Este sitio es gratuito y no recopila datos personales para publicidad.",
+    "disclaimer": "Las actualizaciones en vivo provienen de los propios proveedores y vencen solas. La información puede cambiar: comuníquese con el proveedor antes de ir. Este sitio es gratuito y no recopila datos personales para publicidad.",
     "about": "Acerca de este sitio",
     "privacy": "Privacidad",
-    "mapCredit": "Mapas: OpenFreeMap y © colaboradores de OpenStreetMap."
+    "mapCredit": "Mapas: OpenFreeMap y © colaboradores de OpenStreetMap.",
+    "forPantries": "Para despensas",
+    "crisisLead": "¿En crisis?",
+    "call988": "Llame al 988",
+    "text988": "Envíe un texto al 988",
+    "emergency": "Emergencia:"
   },
   "common": {
     "loading": "Cargando…",
     "retry": "Intentar de nuevo",
     "close": "Cerrar",
-    "notConfirmed": "No confirmado"
+    "notConfirmed": "No confirmado",
+    "cancel": "Cancelar",
+    "optional": "opcional",
+    "sending": "Enviando…",
+    "charsLeft": "Quedan {{count}} caracteres"
   },
   "errors": {
     "network": "No pudimos conectarnos. Revise su conexión a internet e intente de nuevo.",
@@ -70,31 +81,6 @@
     "browse": "Ver lugares"
   },
   "home": {
-    "title": "Encuentre comida gratis cerca de usted",
-    "lead": "Despensas de alimentos, comidas gratuitas y programas de entrega a domicilio en el Norte de Virginia. Mostramos lo que está confirmado e indicamos claramente lo que no.",
-    "typesTitle": "Tipos de ayuda que puede encontrar",
-    "types": {
-      "pantry": {
-        "title": "Despensas de alimentos",
-        "body": "Recoja alimentos como enlatados, arroz, frutas y verduras frescas o lácteos para cocinar en casa."
-      },
-      "meals": {
-        "title": "Comidas gratuitas",
-        "body": "Comedores comunitarios e iglesias que sirven una comida caliente, muchas veces sin hacer preguntas."
-      },
-      "delivery": {
-        "title": "Entrega a domicilio",
-        "body": "Programas que llevan comida a personas que no pueden salir, como adultos mayores o personas con discapacidad."
-      },
-      "mobile": {
-        "title": "Despensas móviles",
-        "body": "Camiones que reparten comida en escuelas, parques y centros comunitarios ciertos días."
-      },
-      "other": {
-        "title": "Otra ayuda",
-        "body": "Fórmula para bebés, pañales, artículos de higiene, cupones para comprar comida y referidos a otros programas."
-      }
-    },
     "legendTitle": "Cómo leer la información de un lugar",
     "legendLead": "Cada requisito, como presentar una identificación, aparece de una de estas tres formas:",
     "legend": {
@@ -102,12 +88,19 @@
       "required": "La organización indica que sí lo necesita.",
       "unknown": "Todavía no lo sabemos. Llame antes de ir. No significa que no haya requisito."
     },
-    "learnMore": "Vea de dónde viene nuestra información"
+    "learnMore": "Vea de dónde viene nuestra información",
+    "lede": "{{app}} reúne ayuda gratuita en el norte de Virginia —despensas de alimentos y comidas, beneficios, atención médica, vivienda, ayuda legal y más— con actualizaciones en vivo publicadas por los propios proveedores.",
+    "findTitle": "Buscar cerca de una dirección",
+    "findLead": "Escriba una dirección o código postal para ver horarios, qué llevar e indicaciones para todo tipo de ayuda cercana.",
+    "liveLegend": "Las actualizaciones en vivo las publica el propio proveedor y muestran cuánto queda: tres barras = mucho, dos = algo, una = poco. La palabra siempre aparece junto a las barras.",
+    "pantryTitle": "¿Dirige una despensa de alimentos o un programa de ayuda?",
+    "pantryBody": "Publique en menos de un minuto cómo está hoy y qué hay en sus estantes. Las familias lo ven enseguida, con la etiqueta de que lo publicó usted, y caduca solo."
   },
   "verification": {
     "verified": "Verificado",
     "stale": "Necesita revisión",
-    "lastVerified": "Verificado por última vez el {{date}}"
+    "lastVerified": "Verificado por última vez el {{date}}",
+    "source_reported": "De una lista pública — aún sin verificar"
   },
   "badges": {
     "synthetic": "Datos de prueba — no es un lugar real"
@@ -147,14 +140,19 @@
     "eligibility_unknown": "Requisitos no confirmados",
     "temporarily_closed": "Cerrado temporalmente",
     "permanently_closed": "Cerrado permanentemente",
-    "synthetic": "Datos de prueba"
+    "synthetic": "Datos de prueba",
+    "closed_today_by_pantry": "La despensa dice que hoy está cerrada",
+    "out_today_by_pantry": "La despensa dice que hoy no tiene comida",
+    "not_yet_verified": "Un revisor de Lantern aún no lo ha comprobado — llame antes de ir"
   },
   "matchReason": {
     "distance": "a {{distance}}",
     "food_group": "Ofrece {{value}}",
     "service_group": "Ofrece {{value}}",
     "distributes_on": "Reparte comida el {{date}}",
-    "upcoming": "Próxima entrega: {{date}}"
+    "upcoming": "Próxima entrega: {{date}}",
+    "on_shelf_today": "Hoy hay {{value}} (confirmado por la despensa)",
+    "open_today_by_pantry": "Abierto hoy (confirmado por la despensa)"
   },
   "eligibilityFilter": {
     "no_id_required": "No se requiere identificación (confirmado)",
@@ -222,7 +220,17 @@
     "voucher": "Cupones para comida",
     "non_food": "Pañales y artículos del hogar",
     "referral": "Referidos",
-    "other": "Otros"
+    "other": "Otros",
+    "benefits": "Ayuda con beneficios (SNAP, WIC, Medicaid)",
+    "health": "Atención médica",
+    "mental_health": "Salud mental y crisis",
+    "housing": "Vivienda y servicios públicos",
+    "financial": "Ayuda económica",
+    "clothing": "Ropa",
+    "legal": "Ayuda legal e inmigración",
+    "work_learning": "Empleo y clases de inglés",
+    "family": "Familia y niños",
+    "transportation": "Transporte"
   },
   "serviceType": {
     "pantry_pickup": "Recogida en despensa",
@@ -241,7 +249,32 @@
     "hygiene_supplies": "Artículos de higiene",
     "household_essentials": "Artículos básicos del hogar",
     "food_referral": "Referido a programas de alimentos",
-    "other": "Otro servicio"
+    "other": "Otro servicio",
+    "snap_application_help": "Ayuda para solicitar SNAP",
+    "wic_services": "Servicios de WIC",
+    "medicaid_enrollment_help": "Ayuda para inscribirse en Medicaid",
+    "senior_meals": "Comidas para personas mayores",
+    "kids_meals": "Comidas para niños",
+    "health_clinic": "Clínica de salud",
+    "dental_care": "Atención dental",
+    "prescription_help": "Ayuda con medicamentos recetados",
+    "mental_health_counseling": "Consejería de salud mental",
+    "crisis_support": "Apoyo en crisis",
+    "substance_use_treatment": "Tratamiento por consumo de sustancias",
+    "support_groups": "Grupos de apoyo",
+    "housing_assistance": "Ayuda con la vivienda",
+    "shelter": "Albergue",
+    "utility_assistance": "Ayuda con facturas de servicios",
+    "financial_assistance": "Ayuda económica",
+    "tax_preparation": "Preparación de impuestos gratuita",
+    "clothing": "Ropa",
+    "legal_aid": "Asistencia legal",
+    "immigration_legal_help": "Ayuda legal de inmigración",
+    "job_training": "Capacitación laboral",
+    "esl_classes": "Clases de inglés (ESL)",
+    "childcare": "Cuidado infantil",
+    "domestic_violence_support": "Apoyo por violencia doméstica",
+    "transportation_help": "Ayuda con transporte"
   },
   "offering": {
     "regular": "Regular",
@@ -270,8 +303,8 @@
     "other": "Otro requisito"
   },
   "explorer": {
-    "title": "Buscar ayuda con alimentos",
-    "titleNear": "Ayuda con alimentos cerca de {{place}}",
+    "title": "Buscar ayuda",
+    "titleNear": "Ayuda cerca de {{place}}",
     "thisArea": "esta zona del mapa",
     "resultsLabel": "Resultados",
     "resultsCount_one": "{{count}} lugar coincide con su búsqueda",
@@ -303,7 +336,7 @@
     "showMap": "Mapa",
     "showInList": "Ver en la lista",
     "backToResults": "Volver a los resultados",
-    "loading": "Buscando ayuda con alimentos…",
+    "loading": "Buscando ayuda cercana…",
     "updating": "Actualizando resultados…",
     "errorTitle": "No pudimos cargar los resultados"
   },
@@ -316,7 +349,7 @@
     "showResults_other": "Ver {{count}} resultados",
     "clear": "Quitar todos los filtros",
     "foodGroups": "Tipo de comida",
-    "serviceGroups": "Tipo de ayuda",
+    "serviceGroups": "Ayuda con alimentos",
     "schedule": "Cuándo",
     "scheduleMode": {
       "any": "Cualquier día",
@@ -331,7 +364,14 @@
     "access": "Accesibilidad e idioma",
     "wheelchair": "Accesible en silla de ruedas (confirmado)",
     "language": "El personal habla",
-    "languageAny": "Cualquier idioma"
+    "languageAny": "Cualquier idioma",
+    "today": "Hoy, según la despensa",
+    "todayHint": "Solo despensas que publicaron hoy. Las que no han publicado no aparecen.",
+    "liveOpen": "Abierto hoy (confirmado por la despensa)",
+    "onShelfToday": "En los estantes hoy",
+    "supportGroups": "Otros tipos de ayuda",
+    "serviceGroupsHint": "Los lugares deben ofrecer todos los tipos de ayuda que marque. Para comparar necesidades distintas, elija una a la vez.",
+    "foodHidden": "Los filtros de alimentos están ocultos porque la ayuda que eligió no es comida. Elija una necesidad de alimentos para verlos."
   },
   "sort": {
     "distance": "Más cercanos primero",
@@ -347,7 +387,8 @@
     "searchArea": "Buscar en esta zona",
     "clusterTitle": "{{count}} lugares — acerque el mapa",
     "kindUncertain": "Podría coincidir (no confirmado)",
-    "youAreHere": "Lugar buscado"
+    "youAreHere": "Lugar buscado",
+    "livePosted": "Publicado hoy"
   },
   "schedule": {
     "weekOfMonth": {
@@ -451,7 +492,10 @@
     "lastSeen": "revisado por última vez el {{date}}",
     "noSources": "No hay ninguna fuente indicada para esta información.",
     "verifiedExplain": "Una persona del equipo confirmó esta información con la organización o con una fuente oficial el {{date}}.",
-    "staleExplain": "Esta información no se ha vuelto a revisar recientemente. Algunos datos podrían no estar al día."
+    "staleExplain": "Esta información no se ha vuelto a revisar recientemente. Algunos datos podrían no estar al día.",
+    "stockSeeToday": "Lo que hay hoy aparece en “Hoy en esta despensa”, según lo publicó la despensa.",
+    "typicalNotToday": "Esto es lo que la despensa suele ofrecer, no lo que tiene hoy.",
+    "sourceReportedExplain": "Esta información proviene de una lista pública (ver Fuentes) y un revisor de Lantern todavía no la ha comprobado. Llame al proveedor para confirmar el horario y los requisitos antes de ir."
   },
   "auth": {
     "signInTitle": "Iniciar sesión",
@@ -508,8 +552,8 @@
     "unavailable": "Este lugar ya no está publicado, por eso ocultamos sus datos. Es posible que haya cerrado o que se esté revisando."
   },
   "about": {
-    "title": "Acerca de este sitio",
-    "lead": "Un directorio público y gratuito de ayuda con alimentos en el Norte de Virginia, hecho para que las familias puedan confiar en lo que leen.",
+    "title": "Acerca de {{app}}",
+    "lead": "{{app}} es una guía gratuita de ayuda en el norte de Virginia: comida, beneficios, salud, vivienda, ayuda legal y más, con actualizaciones en vivo publicadas por los propios proveedores.",
     "whatTitle": "Qué hace este sitio",
     "what": "Reunimos información sobre despensas de alimentos, comidas gratuitas, programas de entrega a domicilio y otras ayudas, tomada de fuentes públicas y de las propias organizaciones. Una persona revisa cada lugar antes de publicarlo. Mostramos lo que está confirmado y decimos claramente cuando algo no lo está.",
     "sourcesTitle": "De dónde viene la información",
@@ -522,7 +566,7 @@
     "reviewTitle": "Con qué frecuencia revisamos la información",
     "review": "Intentamos volver a revisar cada lugar por lo menos cada {{days}} días. Los que no se han vuelto a revisar aparecen como “Necesita revisión”.",
     "changesTitle": "Por qué cambia la disponibilidad",
-    "changes": "Los bancos de alimentos dependen de donaciones y voluntarios. Los horarios, los tipos de comida y lo que hay disponible pueden cambiar de una semana a otra, y algunos eventos se cancelan con poco aviso. Nunca mostramos lo que hay disponible en el momento porque ninguna organización nos lo informa en tiempo real.",
+    "changes": "Los bancos de alimentos dependen de donaciones y voluntarios. Los horarios, los tipos de comida y lo que hay disponible pueden cambiar de una semana a otra, y algunos eventos se cancelan con poco aviso. Solo mostramos lo que hay hoy cuando la propia despensa lo ha publicado.",
     "contactTitle": "Comuníquese directamente con la organización",
     "contact": "Siempre llame o visite el sitio web de la organización antes de ir. Ellos tienen la información más reciente y pueden decirle qué debe llevar.",
     "disclaimerTitle": "Aviso",
@@ -531,7 +575,12 @@
     "privacy1": "Este sitio no tiene anuncios, rastreadores ni herramientas de análisis.",
     "privacy2": "Si usa “Usar mi ubicación”, su ubicación solo se usa para esa búsqueda en su navegador y nunca se guarda.",
     "privacy3": "No necesita una cuenta. Si crea una, solo guardamos su correo electrónico, su contraseña (cifrada), su idioma, los lugares guardados y sus preferencias de búsqueda.",
-    "privacy4": "El idioma que elija se recuerda solo en este dispositivo."
+    "privacy4": "El idioma que elija se recuerda solo en este dispositivo.",
+    "liveTitle": "Publicaciones en vivo de las despensas",
+    "live": "El personal aprobado de cada despensa puede publicar cómo está hoy (abierta, con poca comida, sin comida, cerrada) y qué hay en los estantes. Cada publicación lleva la etiqueta “Publicado por la despensa” con la hora, y desaparece sola cuando caduca. Confirmamos a cada persona con la despensa antes de que pueda publicar.",
+    "reportsInfo": "Cualquier persona puede reportar un problema con un lugar. Los reportes llegan a la despensa y a nuestro equipo; varios reportes parecidos devuelven el lugar a revisión.",
+    "privacy5": "Los reportes de problemas guardan solo lo que usted eligió y escribió. No se guarda ningún nombre, cuenta ni ubicación.",
+    "privacy6": "Las funciones de IA, cuando están activadas, reciben solo las palabras que usted escribe. Nunca se envían su ubicación ni su cuenta."
   },
   "reviewStatus": {
     "candidate": "Candidato",
@@ -761,6 +810,494 @@
     "noChanges": "No hay cambios.",
     "saving": "Guardando…",
     "saveEdits": "Guardar cambios",
-    "cancel": "Cancelar"
+    "cancel": "Cancelar",
+    "openReports_one": "{{count}} reporte de la comunidad",
+    "openReports_other": "{{count}} reportes de la comunidad",
+    "origin": {
+      "import": "De importación",
+      "provider": "De la despensa",
+      "ai": "Sugerido por IA — revise la cita de evidencia",
+      "aiNote": "Una IA leyó el texto de la fuente y sugirió esto. Acéptelo solo si la cita realmente lo dice.",
+      "providerNote": "Propuesto por personal aprobado de la despensa. Confirme con la despensa si algo parece raro."
+    },
+    "ai": {
+      "button": "Pedir sugerencias a la IA",
+      "working": "Consultando a la IA…",
+      "hint": "Ordena los horarios y requisitos escritos en las fuentes como propuestas que usted puede aceptar o rechazar.",
+      "created": "Se crearon propuestas para: {{fields}}",
+      "none": "La IA no encontró nada que pudiera respaldar con una cita."
+    },
+    "claims": {
+      "nav": "Acceso de despensas",
+      "title": "Solicitudes de acceso de despensas",
+      "guidance": "Llame a la despensa para confirmar a esta persona antes de aprobar. Use el teléfono del lugar, no uno que le haya dado la persona.",
+      "filter": "Filtrar por estado",
+      "forListing": "Para el lugar:",
+      "listingPhone": "Teléfono del lugar",
+      "noPhone": "No hay teléfono registrado — confirme de otra forma",
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "revoke": "Retirar acceso",
+      "done": "Guardado: {{status}}"
+    },
+    "reports": {
+      "nav": "Reportes de la comunidad",
+      "title": "Reportes de la comunidad",
+      "lead": "Reportes anónimos del público. Varios reportes de “estaba cerrado” o “información equivocada” en una semana devuelven el lugar a revisión automáticamente.",
+      "filter": "Filtrar por estado",
+      "pantryResponse": "Respuesta de la despensa",
+      "resolve": "Resolver",
+      "dismiss": "Descartar"
+    },
+    "aiSettings": {
+      "nav": "Ajustes de IA",
+      "title": "Ajustes de IA",
+      "lead": "Añada una clave de API de Anthropic para activar las ayudas opcionales de IA. Todo lo demás funciona sin IA.",
+      "statusTitle": "Estado",
+      "state": {
+        "active": "Activa",
+        "off": "Apagada",
+        "nokey": "Sin clave"
+      },
+      "stateHelp": {
+        "active": "Las ayudas de IA están activas para todos.",
+        "off": "Hay una clave guardada, pero las ayudas de IA están apagadas.",
+        "nokey": "Todavía no hay clave de API. Las ayudas de IA siguen ocultas."
+      },
+      "keyLabel": "Clave de API",
+      "noKey": "Ninguna guardada",
+      "modelLabel": "Modelo",
+      "source": {
+        "admin": "añadida por un administrador",
+        "environment": "del entorno del servidor",
+        "none": "ninguna"
+      },
+      "addTitle": "Añadir una clave de API",
+      "replaceTitle": "Reemplazar la clave de API",
+      "keyInput": "Clave de API de Anthropic",
+      "keyHint": "Pegue la clave una sola vez. Se guarda cifrada y no se vuelve a mostrar, solo sus últimos cuatro caracteres.",
+      "save": "Guardar y probar",
+      "saving": "Guardando y probando…",
+      "keyRequired": "Primero pegue una clave de API.",
+      "keyShape": "Eso no parece una clave de API de Anthropic. Debe empezar con sk-ant-.",
+      "saved": "Clave guardada ({{hint}}).",
+      "testOk": "La conexión funciona: {{name}}.",
+      "testFailed": "La prueba de conexión falló: {{error}}",
+      "useTitle": "Usar IA",
+      "enableLabel": "Activar las ayudas de IA",
+      "enableNeedsKey": "Añada una clave antes de activar la IA.",
+      "turnedOn": "Las ayudas de IA están activas.",
+      "turnedOff": "Las ayudas de IA están apagadas.",
+      "modelSaved": "Modelo cambiado a {{model}}.",
+      "models": {
+        "claude-sonnet-5-5": "Claude Sonnet 5.5 (predeterminado)",
+        "claude-opus-5-5": "Claude Opus 5.5",
+        "claude-haiku-5-5": "Claude Haiku 5.5"
+      },
+      "test": "Probar conexión",
+      "testing": "Probando…",
+      "remove": "Quitar clave",
+      "removeConfirmTitle": "¿Quitar la clave guardada?",
+      "removeConfirmBody": "Las ayudas de IA se apagan para todos hasta que se añada una clave nueva.",
+      "removeConfirm": "Sí, quitar la clave",
+      "keep": "Conservar la clave",
+      "removed": "Clave quitada. Las ayudas de IA están apagadas.",
+      "envKey": "Esta clave viene del entorno del servidor y solo se puede cambiar allí.",
+      "explainTitle": "Qué hace la IA aquí",
+      "doesTitle": "Sí hace",
+      "does": {
+        "search": "Convierte una pregunta escrita («comidas calientes cerca de 22204 el sábado») en filtros de búsqueda.",
+        "drafts": "Redacta una actualización a partir del anuncio que pega un proveedor, para que el personal la revise antes de publicarla.",
+        "suggestions": "Sugiere horarios y requisitos estructurados a partir de las fuentes, como propuestas que un revisor acepta o rechaza.",
+        "translation": "Puede traducir descripciones cuando la traducción automática usa Claude."
+      },
+      "doesNotTitle": "No hace",
+      "doesNot": {
+        "publish": "Publicar o cambiar listados por sí sola: siempre decide una persona.",
+        "invent": "Añadir lugares, horarios o requisitos que no estén en una fuente.",
+        "personal": "Ver la ubicación, la cuenta o los lugares guardados de nadie.",
+        "decide": "Decidir quién tiene derecho a recibir ayuda."
+      },
+      "dataTitle": "Qué se envía a Anthropic",
+      "data": {
+        "search": "Búsqueda con IA: solo las palabras que la persona escribió.",
+        "drafts": "Borradores de anuncios: solo el texto que pegó el proveedor.",
+        "suggestions": "Sugerencias de IA: el texto público de las fuentes del listado.",
+        "never": "Nunca: correos electrónicos, contraseñas, ubicaciones ni lugares guardados."
+      }
+    }
+  },
+  "offline": {
+    "banner": "No tiene conexión. Los lugares guardados y vistos recientemente se pueden abrir, pero lo que ve podría no estar al día."
+  },
+  "time": {
+    "justNow": "justo ahora",
+    "minutesAgo": "hace {{count}} min",
+    "hoursAgo": "hace {{count}} h",
+    "daysAgo": "hace {{count}} d"
+  },
+  "feed": {
+    "title": "Actualizaciones en vivo de los proveedores",
+    "scopeAll": "Publicadas hoy por despensas de todo el norte de Virginia",
+    "scopeNear": "Publicadas hoy por despensas a menos de 10 millas de usted",
+    "useLocation": "Ver despensas cerca de mí",
+    "loading": "Cargando las publicaciones de hoy…",
+    "emptyTitle": "Ningún proveedor ha publicado una actualización hoy.",
+    "emptyBody": "Busque arriba para ver los horarios habituales y lo que suele ofrecer cada lugar.",
+    "seeAllOpen": "Ver en el mapa todas las despensas abiertas hoy (confirmado por la despensa)"
+  },
+  "live": {
+    "status": {
+      "open": "Abierto hoy",
+      "limited": "Poca comida hoy",
+      "out": "Sin comida hoy",
+      "closed": "Cerrado hoy"
+    },
+    "pin": {
+      "open": "✓ Abierto",
+      "limited": "◐ Poca",
+      "out": "○ Sin comida",
+      "closed": "✕ Cerrado"
+    },
+    "level": {
+      "plenty": "Mucho",
+      "some": "Algo",
+      "low": "Poco"
+    },
+    "postedByPantry": "Publicado por la despensa",
+    "until": "hasta {{time}}",
+    "aiAssisted": "Redactado con ayuda de IA y revisado por la despensa",
+    "itemsLabel": "En los estantes hoy"
+  },
+  "today": {
+    "title": "Hoy en esta despensa",
+    "itemsLabel": "En los estantes hoy, según la despensa",
+    "noItems": "La despensa no indicó alimentos específicos.",
+    "notPosted": "La despensa no ha publicado lo que tiene hoy. Los alimentos de abajo son lo que suele ofrecer.",
+    "levelsNote": "Las cantidades son un cálculo de la propia despensa y pueden cambiar durante el día."
+  },
+  "reports": {
+    "open": "Reportar un problema",
+    "title": "Reportar un problema",
+    "about": "Sobre: {{name}}",
+    "kindLegend": "¿Qué pasó?",
+    "kind": {
+      "was_closed": "Estaba cerrado cuando fui",
+      "wrong_info": "Hay información equivocada",
+      "out_of_food": "No tenían comida",
+      "other": "Otra cosa"
+    },
+    "chooseKind": "Elija qué pasó.",
+    "note": "Cuéntenos más",
+    "privacy": "No se guarda ningún nombre, cuenta ni ubicación. Su reporte llega a la despensa y a nuestro equipo de revisión.",
+    "send": "Enviar reporte",
+    "thanks": "Gracias. Su reporte fue enviado.",
+    "whatNext": "La despensa y una persona del equipo lo revisarán. Si varias personas reportan el mismo problema, el lugar vuelve a revisión.",
+    "rateLimited": "Ha enviado varios reportes hace poco. Inténtelo de nuevo en una hora.",
+    "recent_one": "{{count}} reporte reciente — en revisión",
+    "recent_other": "{{count}} reportes recientes — en revisión"
+  },
+  "visit": {
+    "title": "Planee su visita",
+    "loading": "Cargando el plan de visita…",
+    "nextTimes": "Próximos horarios",
+    "noTimes": "No hay horarios próximos confirmados. Llame a la despensa antes de ir.",
+    "whatToBring": "Qué llevar",
+    "checklistIntro": "Basado solo en lo que la despensa ha confirmado. “Pregunte” significa que no lo sabemos; no quiere decir que no lo necesite.",
+    "action": {
+      "bring": "Llevar",
+      "do": "Necesario — hágalo antes",
+      "not_needed": "No hace falta (confirmado)",
+      "ask": "Pregunte a la despensa — no confirmado"
+    },
+    "item": {
+      "photo_id": "Identificación con foto",
+      "proof_of_address": "Comprobante de domicilio",
+      "income_documentation": "Comprobante de ingresos",
+      "benefit_documentation": "Comprobante de beneficios (SNAP, WIC, Medicaid…)",
+      "referral": "Carta de referencia",
+      "appointment": "Cita",
+      "registration": "Inscripción"
+    },
+    "suggestionsLabel": "Sugerencias",
+    "suggestion": {
+      "bags": "Sugerencia: lleve bolsas o una caja.",
+      "call_ahead": "Sugerencia: llame antes para preguntar por lo marcado con “Pregunte”."
+    },
+    "addToCalendar": "Agregar al calendario",
+    "print": "Imprimir tarjeta de visita",
+    "share": "Compartir",
+    "linkCopied": "Enlace copiado.",
+    "copyThis": "Copie este enlace: {{url}}",
+    "cardTitle": "Tarjeta de visita"
+  },
+  "ai": {
+    "search": {
+      "label": "Describa lo que necesita",
+      "placeholder": "p. ej.: verduras frescas cerca de 22204 el sábado, sin identificación",
+      "submit": "Buscar",
+      "working": "Pensando…",
+      "privacy": "Solo se envían a un servicio de IA las palabras que escribe. No su ubicación ni su cuenta.",
+      "tooShort": "Escriba unas palabras sobre lo que necesita.",
+      "rateLimited": "Hay demasiadas búsquedas con IA en este momento. Use la búsqueda y los filtros habituales."
+    },
+    "draft": {
+      "title": "Pegue su anuncio",
+      "lead": "Pegue una publicación de Facebook, un volante o un correo. Prepararemos el formulario correcto para que usted lo revise. No se publica nada hasta que presione el botón de publicar.",
+      "label": "Texto del anuncio",
+      "privacy": "Solo este texto se envía a un servicio de IA.",
+      "submit": "Preparar el formulario",
+      "working": "Preparando…",
+      "tooShort": "Pegue un poco más de texto.",
+      "unclear": "No pudimos entender de qué trata este anuncio. Llene el formulario usted mismo.",
+      "rateLimited": "Demasiados borradores en esta hora. Llene el formulario usted mismo.",
+      "drafted": "Redactado por IA — revise cada campo antes de publicar.",
+      "thingsToCheck": "Revise bien:"
+    }
+  },
+  "portal": {
+    "eyebrow": "Portal para despensas",
+    "title": "Para despensas",
+    "lead": "Cuénteles a las familias qué hay hoy en sus estantes. Sus publicaciones aparecen enseguida, con la etiqueta “Publicado por la despensa”, y caducan solas.",
+    "dashboardTitle": "Administrar {{name}}",
+    "myPantries": "Sus despensas",
+    "myRequests": "Sus solicitudes de acceso",
+    "noneYet": "Todavía no administra ninguna despensa aquí. Busque su lugar abajo y solicite acceso.",
+    "manage": "Publicar los estantes de hoy",
+    "openReports_one": "{{count}} reporte abierto",
+    "openReports_other": "{{count}} reportes abiertos",
+    "pendingChanges_one": "{{count}} corrección en revisión",
+    "pendingChanges_other": "{{count}} correcciones en revisión",
+    "pendingHint": "Una persona del equipo llamará al teléfono de la despensa que aparece en el sitio para confirmarle.",
+    "surplusLink": "Tablero de excedentes: comparta comida extra con otras despensas",
+    "backToPortal": "Volver al portal para despensas",
+    "viewPublic": "Ver lo que ven las familias",
+    "notApprovedTitle": "Todavía no puede administrar esta despensa",
+    "notApproved": "Su acceso a este lugar no ha sido aprobado.",
+    "trust": "Las publicaciones de estado, eventos y cierres aparecen enseguida con la etiqueta de su despensa. Los cambios de horario, requisitos o datos de contacto los revisa primero una persona del equipo.",
+    "claimStatus": {
+      "pending": "En espera de revisión",
+      "approved": "Aprobado",
+      "rejected": "No aprobado",
+      "revoked": "Acceso retirado"
+    },
+    "claim": {
+      "title": "Solicite acceso a la página de su despensa",
+      "lead": "Busque su despensa, díganos su función y una persona del equipo le confirmará con la despensa antes de que pueda publicar.",
+      "findLabel": "Dirección o código postal de su despensa",
+      "find": "Buscar lugares",
+      "filterName": "Filtrar por nombre",
+      "resultsLabel": "Lugares cerca de esa dirección",
+      "noneFound": "No hay coincidencias. Pruebe con otra dirección o código postal.",
+      "request": "Solicitar acceso",
+      "role": "Su función en la despensa",
+      "rolePlaceholder": "p. ej.: Coordinadora de voluntarios",
+      "roleMissing": "Díganos cuál es su función en la despensa.",
+      "note": "Algo que nos ayude a confirmarle",
+      "howVerified": "Confirmamos cada solicitud llamando al teléfono de la despensa que aparece en el sitio.",
+      "send": "Enviar solicitud",
+      "sent": "Solicitud enviada para {{name}}. La confirmaremos con la despensa.",
+      "alreadyRequested": "Ya solicitado"
+    },
+    "tabs": {
+      "label": "¿Qué quiere publicar?",
+      "shelf": "Estantes de hoy",
+      "event": "Evento especial",
+      "closure": "Cierre",
+      "correction": "Sugerir una corrección",
+      "reports": "Reportes",
+      "reportsCount": "Reportes ({{count}})"
+    },
+    "current": {
+      "title": "Cómo le ven las familias ahora",
+      "none": "No hay nada publicado para hoy.",
+      "history": "Publicaciones recientes ({{count}})",
+      "retracted": "retirada"
+    },
+    "shelf": {
+      "title": "Estantes de hoy",
+      "statusLegend": "Hoy ustedes están…",
+      "statusButton": {
+        "open": "Abiertos",
+        "limited": "Con poca comida",
+        "out": "Sin comida",
+        "closed": "Cerrados hoy"
+      },
+      "itemsLegend": "Qué hay en los estantes",
+      "itemsHint": "Marque lo que tiene e indique cuánto queda.",
+      "levelFor": "Cuánto hay de {{food}}",
+      "message": "Mensaje corto para las familias",
+      "expires": "Mostrar hasta",
+      "expiresHint": "Por defecto: el final del día de hoy. Como máximo 3 días.",
+      "preview": "Vista previa — lo que verán las familias",
+      "post": "Publicar para las familias",
+      "posted": "Publicado. Las familias ya pueden verlo.",
+      "chooseStatus": "Elija Abiertos, Con poca comida, Sin comida o Cerrados hoy.",
+      "clear": "Borrar el estado",
+      "clearConfirm": "¿Quitar el estado de hoy? Las familias volverán a ver “no confirmado”.",
+      "clearYes": "Sí, borrarlo",
+      "cleared": "Estado borrado."
+    },
+    "event": {
+      "title": "Evento especial de distribución",
+      "lead": "Una distribución de una sola vez, por ejemplo una despensa móvil o un reparto de fiestas.",
+      "name": "Nombre del evento",
+      "date": "Fecha",
+      "start": "Empieza",
+      "end": "Termina",
+      "appointment": "¿Hace falta cita?",
+      "offerings": "Comida que se ofrece",
+      "notes": "Notas para las familias",
+      "post": "Publicar evento",
+      "posted": "Evento publicado. Las familias ya pueden verlo.",
+      "missing": "Agregue un nombre (3 caracteres o más), una fecha y una hora de inicio.",
+      "endBeforeStart": "La hora de fin debe ser posterior a la de inicio."
+    },
+    "closure": {
+      "title": "Cerrado un día",
+      "date": "Fecha",
+      "reason": "Motivo",
+      "post": "Publicar cierre",
+      "posted": "Cierre publicado. Las familias ya pueden verlo.",
+      "missing": "Elija una fecha."
+    },
+    "tri": {
+      "unknown": "No sé / no se indica",
+      "required": "Sí, es necesario",
+      "not_required": "No, no es necesario"
+    },
+    "correction": {
+      "title": "Sugerir una corrección",
+      "reviewNote": "Las correcciones las revisa primero una persona del equipo. Nada público cambia hasta que la aprueben.",
+      "notes": "Notas generales",
+      "hours": "Horario semanal de distribución",
+      "replaceHours": "Proponer un nuevo horario semanal (reemplaza el actual)",
+      "day": "Día",
+      "opens": "Abre",
+      "closes": "Cierra",
+      "addRow": "Agregar un horario",
+      "removeRow": "Quitar",
+      "badHours": "Cada horario necesita una hora de apertura anterior a la de cierre.",
+      "eligibility": "Requisitos",
+      "eligibilityHint": "Cambie solo lo que sepa con seguridad. “No sé” lo deja marcado como no confirmado para las familias.",
+      "noChange": "Sin cambio",
+      "message": "Mensaje para quien revisa",
+      "send": "Enviar a revisión",
+      "sent": "Enviado a revisión. Una persona del equipo lo revisará antes de que cambie algo.",
+      "nothing": "Complete al menos un dato que quiera cambiar."
+    },
+    "reports": {
+      "title": "Reportes de la comunidad",
+      "lead": "Reportes anónimos de personas que fueron. Responda y márquelos como resueltos cuando estén arreglados.",
+      "empty": "No hay reportes.",
+      "response": "Su respuesta",
+      "markResolved": "Marcar como resuelto",
+      "send": "Guardar respuesta",
+      "yourResponse": "Su respuesta",
+      "status": {
+        "open": "Abierto",
+        "resolved": "Resuelto",
+        "dismissed": "Descartado"
+      }
+    },
+    "surplus": {
+      "title": "Tablero de excedentes",
+      "lead": "Ofrezca comida extra a otras despensas o reclame la que ellas tengan. Solo el personal de despensas aprobado puede ver este tablero.",
+      "offerTitle": "Ofrecer comida extra",
+      "from": "De",
+      "what": "Qué tiene",
+      "quantity": "Cantidad",
+      "until": "Disponible hasta",
+      "foodTypes": "Tipos de comida",
+      "pickup": "Notas para recogerla",
+      "post": "Publicar oferta",
+      "posted": "Oferta publicada.",
+      "missing": "Indique qué tiene (3 caracteres o más) y hasta cuándo está disponible.",
+      "available": "Disponible ahora",
+      "empty": "No hay ofertas de excedentes en este momento.",
+      "availableUntil": "hasta {{date}}",
+      "claim": "Reclamar",
+      "claimFor": "Reclamar para",
+      "claimed": "Reclamado. Comuníquese con la despensa para coordinar la recogida.",
+      "close": "Cerrar oferta",
+      "closed": "Oferta cerrada.",
+      "status": {
+        "open": "Disponible",
+        "claimed": "Reclamado",
+        "closed": "Cerrado"
+      }
+    }
+  },
+  "needs": {
+    "title": "¿Qué necesita?",
+    "lead": "Elija una opción para ver los lugares que la ofrecen. Después puede añadir un lugar o más filtros.",
+    "any": "Cualquier tipo de ayuda",
+    "food": {
+      "label": "Comida",
+      "hint": "Alimentos y despensas"
+    },
+    "meals": {
+      "label": "Comidas calientes",
+      "hint": "Comidas comunitarias gratuitas"
+    },
+    "baby": {
+      "label": "Artículos para bebés y familias",
+      "hint": "Pañales, higiene y artículos del hogar"
+    },
+    "benefits": {
+      "label": "Ayuda con beneficios",
+      "hint": "SNAP, WIC, Medicaid"
+    },
+    "health": {
+      "label": "Atención médica",
+      "hint": "Clínicas, dentista, medicamentos"
+    },
+    "mental_health": {
+      "label": "Salud mental y crisis",
+      "hint": "Consejería, apoyo, ayuda en crisis"
+    },
+    "housing": {
+      "label": "Vivienda y servicios",
+      "hint": "Albergue, alquiler y facturas"
+    },
+    "financial": {
+      "label": "Ayuda económica",
+      "hint": "Fondos de emergencia, impuestos gratis"
+    },
+    "clothing": {
+      "label": "Ropa",
+      "hint": "Ropa y abrigos"
+    },
+    "legal": {
+      "label": "Ayuda legal e inmigración",
+      "hint": "Asistencia legal, inmigración"
+    },
+    "work_learning": {
+      "label": "Empleo y clases de inglés",
+      "hint": "Capacitación laboral, ESL"
+    },
+    "family": {
+      "label": "Familia y niños",
+      "hint": "Cuidado infantil, protección contra el abuso"
+    },
+    "transportation": {
+      "label": "Transporte",
+      "hint": "Viajes a citas"
+    }
+  },
+  "crisis": {
+    "title": "¿En crisis?",
+    "body": "Llame o envíe un mensaje de texto al 988 (Línea de Prevención del Suicidio y Crisis), disponible las 24 horas, los 7 días de la semana. En una emergencia, llame al 911.",
+    "call988": "Llamar al 988",
+    "text988": "Enviar texto al 988",
+    "call911": "Llamar al 911"
+  },
+  "area": {
+    "label": "Zona",
+    "none": "Cerca del lugar que busqué",
+    "title": "Ayuda en {{area}}",
+    "homeLink": "Explorar todo el 8.º Distrito de Virginia",
+    "mapNote_one": "El mapa muestra {{count}} lugar en {{area}}. La lista los muestra por páginas.",
+    "mapNote_other": "El mapa muestra los {{count}} lugares en {{area}}. La lista los muestra por páginas."
   }
 }

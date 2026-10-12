@@ -10,7 +10,7 @@ test.describe('public site', () => {
     const count = page.locator('.results__count');
     await expect(count).toContainText(/match your search|matches your search/);
 
-    await page.getByRole('checkbox', { name: 'Groceries' }).check();
+    await page.getByRole('group', { name: 'Type of food' }).getByRole('checkbox', { name: 'Groceries' }).check();
     await expect(page).toHaveURL(/food_group=groceries/);
     await expect(page.getByRole('list', { name: 'Places that match' })).toBeVisible();
     // every confirmed card lists groceries among its food tags
@@ -31,7 +31,7 @@ test.describe('public site', () => {
   test('B: Spanish UI shows schedule and eligibility headings in Spanish', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('button', { name: 'Español' }).click();
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Encuentre comida gratis cerca de usted');
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Lo que hay hoy en los estantes, cerca de usted');
     await page.getByLabel('Su dirección o código postal').fill('22204');
     await page.getByRole('button', { name: 'Buscar', exact: true }).click();
     const cards = page.getByRole('list', { name: 'Lugares que coinciden' }).locator(':scope > li');

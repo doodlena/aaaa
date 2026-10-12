@@ -15,6 +15,7 @@ import { NotFoundPage } from './pages/NotFoundPage';
 // The explorer pulls in maplibre-gl, and admin is only for reviewers: both are code-split.
 const ExplorerPage = lazy(() => import('./pages/ExplorerPage'));
 const AdminRoutes = lazy(() => import('./pages/admin/AdminRoutes'));
+const PantryRoutes = lazy(() => import('./pages/pantry/PantryRoutes'));
 
 export function App() {
   return (
@@ -31,6 +32,7 @@ export function App() {
               <Route path="register" element={<RegisterPage />} />
               <Route path="account" element={<AccountPage />} />
               <Route path="favorites" element={<FavoritesPage />} />
+              <Route path="pantry/*" element={<PantryRoutes />} />
               <Route path="admin/*" element={<AdminRoutes />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>

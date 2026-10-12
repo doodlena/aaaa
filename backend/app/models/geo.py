@@ -70,3 +70,17 @@ class TitleIDivisionMetric(Base):
     warnings: Mapped[list] = mapped_column(JSONType, default=list)
     retrieved_on: Mapped[date] = mapped_column(Date)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+
+
+class CoverageArea(Base):
+    """A named boundary (e.g. a congressional district) used for filtering and coverage reports. Unlike jurisdictions,
+    coverage areas may overlap localities, so they never drive a listing's jurisdiction assignment."""
+
+    __tablename__ = "coverage_areas"
+
+    id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    name: Mapped[str] = mapped_column(String(200))
+    kind: Mapped[str] = mapped_column(String(32))
+    boundary = mapped_column(Geometry("MULTIPOLYGON", srid=4326, spatial_index=True), nullable=False)
+    source: Mapped[str | None] = mapped_column(Text)
+    config: Mapped[dict] = mapped_column(JSONType, default=dict)

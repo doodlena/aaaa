@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: open-shelf
+Version: 0.1.0
+Summary: Open Shelf (Northern Virginia) — API, ingestion pipeline, and pilot research tooling
+License: MIT
+Requires-Python: >=3.11
+Requires-Dist: fastapi>=0.115
+Requires-Dist: uvicorn[standard]>=0.30
+Requires-Dist: sqlalchemy>=2.0
+Requires-Dist: alembic>=1.13
+Requires-Dist: psycopg[binary]>=3.2
+Requires-Dist: geoalchemy2>=0.15
+Requires-Dist: pydantic-settings>=2.4
+Requires-Dist: argon2-cffi>=23.1
+Requires-Dist: httpx>=0.27
+Requires-Dist: beautifulsoup4>=4.12
+Requires-Dist: lxml>=5.0
+Requires-Dist: pdfplumber>=0.11
+Requires-Dist: pandas>=2.2
+Requires-Dist: openpyxl>=3.1
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: rapidfuzz>=3.9
+Requires-Dist: python-dateutil>=2.9
+Requires-Dist: shapely>=2.0
+Requires-Dist: email-validator>=2.1
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Provides-Extra: translate
+Requires-Dist: argostranslate>=1.9; extra == "translate"
+Provides-Extra: ai
+Requires-Dist: anthropic>=1.13; extra == "ai"

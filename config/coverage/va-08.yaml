@@ -1,0 +1,7 @@
+# Coverage areas are boundaries used for search filters and coverage reporting (not jurisdictions: they overlap them).
+id: va-08
+name: Virginia's 8th Congressional District
+kind: congressional_district
+boundary: {file: va08_cd119_tigerweb.geojson, geoid: "5108"}
+source: "US Census Bureau TIGERweb Legislative/MapServer layer 4 (119th Congressional Districts); identical in layer 0 (120th). Retrieved 2026-10-12."
+localities: [arlington-county, alexandria-city, falls-church-city, fairfax-county]  # Fairfax County: eastern ~28% only

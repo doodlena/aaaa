@@ -209,6 +209,18 @@ SERVICE_KEYWORDS = {
     "hygiene_supplies": [r"\bhygiene\b", r"\btoiletries\b"],
     "household_essentials": [r"\bhousehold (items|essentials|supplies)\b", r"\bcleaning supplies\b"],
     "pantry_pickup": [r"\bfood pantry\b", r"\bpantry\b"],
+    "snap_application_help": [r"\bsnap (application|enrollment|sign[- ]?up)\b", r"\bapply for snap\b"],
+    "wic_services": [r"\bwic\b"],
+    "mental_health_counseling": [r"\bmental health (services|counseling|care|treatment)\b", r"\bbehavioral health\b", r"\bpsychotherapy\b"],
+    "crisis_support": [r"\bcrisis (counseling|intervention|stabilization|line|hotline)\b", r"\bsuicide prevention\b"],
+    "substance_use_treatment": [r"\bsubstance use\b", r"\baddiction\b"],
+    "health_clinic": [r"\bhealth clinic\b", r"\bmedical care\b"],
+    "clothing": [r"\bclothing\b", r"\bclothes closet\b"],
+    "utility_assistance": [r"\butility (bill )?assistance\b"],
+    "housing_assistance": [r"\brent(al)? assistance\b", r"\bhousing assistance\b"],
+    "legal_aid": [r"\blegal aid\b", r"\blegal services\b"],
+    "esl_classes": [r"\besl\b", r"\benglish classes\b"],
+    "job_training": [r"\bjob training\b", r"\bemployment services\b"],
 }
 
 

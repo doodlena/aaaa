@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import type { ReactElement } from 'react';
 import { MemoryRouter, Route, Routes, useLocation } from 'react-router';
 import { vi } from 'vitest';
-import type { ResourceSummary, SearchResponse, User } from '../api/types';
+import type { Features, ResourceSummary, SearchResponse, User } from '../api/types';
 import { AuthProvider } from '../state/auth';
 import { MetaProvider } from '../state/meta';
 
@@ -21,10 +21,11 @@ export interface FetchCall {
 }
 
 /** Install a fetch mock (tests only). Unmatched requests fail loudly with 599. */
-export function mockFetch(routes: MockRoute[], opts: { user?: User | null } = {}) {
+export function mockFetch(routes: MockRoute[], opts: { user?: User | null; features?: Partial<Features> } = {}) {
   const calls: FetchCall[] = [];
   const defaults: MockRoute[] = [
     { path: '/api/auth/me', body: { user: opts.user ?? null } },
+    { path: '/api/meta/features', body: { ...testFeatures, ...opts.features } },
     { path: '/api/meta/verification', body: { fresh_days: 90, published_by_status: {}, sources: [], demo_mode: false } },
     { path: '/api/jurisdictions', body: [] },
   ];
@@ -107,6 +108,8 @@ export function summary(overrides: Partial<ResourceSummary> = {}): ResourceSumma
     is_synthetic: true,
     match_reasons: [{ code: 'distance', km: 1.2 }],
     unconfirmed: null,
+    live: null,
+    open_reports: 0,
     ...overrides,
   };
 }
@@ -126,3 +129,12 @@ export function searchResponse(overrides: Partial<SearchResponse> = {}): SearchR
 }
 
 export const testUser: User = { id: 7, email: 'person@example.com', role: 'user', preferred_language: 'en', preferences: {} };
+
+export const testFeatures: Features = {
+  app_name: 'Open Shelf',
+  demo_mode: false,
+  ai: { search: false, announcement_drafts: false, structure_suggestions: false, translation: false, model: null },
+};
+export const aiOn: Partial<Features> = {
+  ai: { search: true, announcement_drafts: true, structure_suggestions: true, translation: false, model: 'test-model' },
+};

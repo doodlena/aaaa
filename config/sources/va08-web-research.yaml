@@ -1,0 +1,18 @@
+id: va08-web-research
+name: VA-08 food assistance — AI-assisted web research (cited)
+owner: Lantern project research (each record cites its own source page)
+url: file://data/sources/va08_web_research.json
+adapter: structured_json
+retrieval: file
+formats: [json]
+jurisdictions: [arlington-county, alexandria-city, falls-church-city, fairfax-county]
+enabled: true
+store_raw: true
+publication: permitted_with_attribution   # factual listings, each linked to the organization/agency page it came from
+verified_on: "2026-10-12"
+known_limitations:
+  - "Compiled by an AI research agent from pages fetched on the retrieval date; every record cites source_url. Not verified."
+  - "Records marked needs_primary_confirmation came from a secondary directory and have only the fields it stated."
+  - "Hours/eligibility text is kept verbatim; structured schedules only where stated unambiguously."
+  - "See docs/pilot_research/VA08_RESEARCH_LOG.md for sources consulted and exclusions."
+refresh: null  # static research file; re-run research to refresh

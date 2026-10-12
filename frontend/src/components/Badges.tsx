@@ -3,13 +3,21 @@ import type { MatchReason, Tristate } from '../api/types';
 import { formatDate, formatDistance } from '../lib/format';
 import { Icon } from './Icon';
 
-/** "Verified" (solid) vs "Needs re-check" (dashed): status is shape + icon + text, never color alone. */
+/**
+ * "Verified" (solid) vs "Needs re-check" (dashed) vs "From a public list — not yet verified" (dotted, list icon):
+ * status is shape + icon + text, never color alone.
+ */
 export function VerificationBadge({ label, lastVerifiedAt }: { label: string; lastVerifiedAt?: string | null }) {
   const { t, i18n } = useTranslation();
   const stale = label !== 'verified';
+  const reported = label === 'source_reported';
   return (
-    <span className={`badge ${stale ? 'badge--unknown' : 'badge--ok'}`} title={lastVerifiedAt ? t('verification.lastVerified', { date: formatDate(lastVerifiedAt, i18n.language, { dateStyle: 'medium' }) }) : undefined}>
-      <Icon name={stale ? 'clock' : 'check'} size={14} />
+    <span
+      className={`badge ${reported ? 'badge--reported' : stale ? 'badge--unknown' : 'badge--ok'}`}
+      data-testid="verification-badge"
+      title={lastVerifiedAt ? t('verification.lastVerified', { date: formatDate(lastVerifiedAt, i18n.language, { dateStyle: 'medium' }) }) : undefined}
+    >
+      <Icon name={reported ? 'list' : stale ? 'clock' : 'check'} size={14} />
       {t(`verification.${label}`, { defaultValue: t('verification.stale') })}
     </span>
   );
@@ -56,7 +64,7 @@ export function WarningList({ warnings }: { warnings: string[] }) {
     <ul className="warnings" aria-label={t('card.warningsLabel')}>
       {shown.map((w) => (
         <li key={w}>
-          <Icon name={w === 'temporarily_closed' ? 'alert' : 'question'} size={14} />
+          <Icon name={w === 'temporarily_closed' || w.endsWith('_by_pantry') ? 'alert' : 'question'} size={14} />
           {t(`warning.${w}`, { defaultValue: w })}
         </li>
       ))}
@@ -78,6 +86,10 @@ export function matchReasonText(r: MatchReason, t: (k: string, o?: Record<string
       return t('matchReason.upcoming', { date: formatDate(r.date, lang, { weekday: 'short', month: 'short', day: 'numeric' }) });
     case 'eligibility_confirmed':
       return t(`eligibilityFilter.${r.value}`);
+    case 'on_shelf_today':
+      return t('matchReason.on_shelf_today', { value: t(`foodGroup.${r.value}`) });
+    case 'open_today_by_pantry':
+      return t('matchReason.open_today_by_pantry');
     default:
       return '';
   }

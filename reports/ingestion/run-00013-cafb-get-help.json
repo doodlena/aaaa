@@ -1,0 +1,38 @@
+{
+  "run_id": 13,
+  "source": {
+    "id": "cafb-get-help",
+    "name": "Capital Area Food Bank \u2014 Get Help map (partner sites)",
+    "url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+    "adapter": "cafb_get_help",
+    "is_synthetic": false,
+    "known_limitations": [
+      "county_name values are inconsistent ('VA Manassas City' vs 'VA City of Manassas'); jurisdiction is re-derived from coordinates.",
+      "Unused day slots repeat slot-1 times; only slots with a Frequency value are read.",
+      "Non-weekly frequencies other than ordinal weeks (e.g. 'Every other week') are kept as notes, not schedules.",
+      "No website field: official provider websites must be added by reviewers.",
+      "CAFB advises calling ahead to confirm hours."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T13:08:29.625909-04:00",
+  "finished_at": "2026-10-12T17:08:30.244693+00:00",
+  "counts": {
+    "discovered": 10,
+    "inserted": 0,
+    "updated": 0,
+    "unchanged": 0,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 134,
+    "out_of_scope": 10,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

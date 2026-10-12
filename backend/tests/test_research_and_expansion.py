@@ -136,5 +136,6 @@ def test_pilot_config_changes_scope_without_code(tmp_path):
     cfg_dir = tmp_path / "config"
     shutil.copytree(REPO_ROOT / "config", cfg_dir)
     (cfg_dir / "pilot.yaml").write_text("pilot_jurisdictions: [arlington-county]\n")
-    assert active_scope(cfg_dir) == {"arlington-county"}
+    scope = active_scope(cfg_dir)
+    assert "arlington-county" in scope and "prince-william-county" not in scope  # pilot list replaced; expansion kept
 

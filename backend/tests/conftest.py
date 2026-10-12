@@ -10,6 +10,7 @@ os.environ["FOODACCESS_DATABASE_URL"] = TEST_DB
 os.environ["FOODACCESS_ENVIRONMENT"] = "test"
 os.environ["FOODACCESS_SHOW_SYNTHETIC"] = "true"
 os.environ["FOODACCESS_GEOCODERS"] = '["zip"]'
+os.environ["FOODACCESS_SOURCE_REPORTED"] = "permitted"  # never inherit a developer's local preview setting
 
 from alembic import command  # noqa: E402
 from alembic.config import Config  # noqa: E402
@@ -48,6 +49,10 @@ def clean(migrated_db, tmp_path, monkeypatch):
         c.execute(text("TRUNCATE " + ", ".join(f'"{t}"' for t in tables if t not in KEEP) + " RESTART IDENTITY CASCADE"))
     monkeypatch.setattr(get_settings(), "reports_dir", tmp_path / "reports")
     login_limiter.reset()
+    from app.api import provider, public
+
+    for lim in (public.report_limiter, public.ai_search_limiter, provider.ai_limiter):
+        lim.reset()
     with session_factory()() as db:
         sync_jurisdictions(db)
     yield

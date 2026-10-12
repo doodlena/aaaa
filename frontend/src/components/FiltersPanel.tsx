@@ -3,8 +3,10 @@ import { useTranslation } from 'react-i18next';
 import {
   ELIGIBILITY_FILTERS,
   FOOD_GROUPS,
+  FOOD_SERVICE_GROUPS,
+  isFoodContext,
   LANGUAGE_FILTERS,
-  SERVICE_GROUPS,
+  SUPPORT_SERVICE_GROUPS,
   toggle,
   type Filters,
   type ScheduleMode,
@@ -27,7 +29,8 @@ function languageName(code: string, uiLang: string): string {
   }
 }
 
-function CheckGroup({ legend, hint, options, selected, labelKey, onToggle }: {
+function CheckGroup({ legend, hint, options, selected, labelKey, onToggle, inner = false }: {
+  inner?: boolean;
   legend: string;
   hint?: string;
   options: readonly string[];
@@ -38,7 +41,7 @@ function CheckGroup({ legend, hint, options, selected, labelKey, onToggle }: {
   const { t } = useTranslation();
   const id = useId();
   return (
-    <fieldset className="fgroup">
+    <fieldset className={`fgroup ${inner ? 'fgroup--inner' : ''}`}>
       <legend>{legend}</legend>
       {hint && <p className="fgroup__hint" id={`${id}-hint`}>{hint}</p>}
       <div className="checks">
@@ -59,8 +62,59 @@ export function FiltersPanel({ filters, onChange, onClear }: Props) {
   const setSchedule = (schedule: ScheduleMode) =>
     onChange({ schedule, date: schedule === 'date' ? filters.date || todayISO() : filters.date });
 
+  const food = isFoodContext(filters);
+  const toggleService = (v: string) => {
+    const service_groups = toggle(filters.service_groups, v);
+    // Leaving every food need behind drops the food-only filters too (they would silently narrow the results).
+    const stillFood = isFoodContext({ service_groups, food_groups: filters.food_groups });
+    onChange(stillFood ? { service_groups } : { service_groups, live_food_groups: [], live_open: false });
+  };
+
   return (
     <div className="filters">
+      <CheckGroup
+        legend={t('filters.supportGroups')}
+        hint={t('filters.serviceGroupsHint')}
+        options={SUPPORT_SERVICE_GROUPS}
+        selected={filters.service_groups}
+        labelKey="serviceGroup"
+        onToggle={toggleService}
+      />
+
+      <CheckGroup
+        legend={t('filters.serviceGroups')}
+        options={FOOD_SERVICE_GROUPS}
+        selected={filters.service_groups}
+        labelKey="serviceGroup"
+        onToggle={toggleService}
+      />
+
+      {food ? (
+      <>
+      <fieldset className="fgroup fgroup--live">
+        <legend>{t('filters.today')}</legend>
+        <p className="fgroup__hint" id={`${id}-live-hint`}>
+          {t('filters.todayHint')}
+        </p>
+        <label className="check">
+          <input
+            type="checkbox"
+            checked={filters.live_open}
+            onChange={(e) => onChange({ live_open: e.target.checked })}
+            aria-describedby={`${id}-live-hint`}
+          />
+          <span>{t('filters.liveOpen')}</span>
+        </label>
+        <CheckGroup
+          legend={t('filters.onShelfToday')}
+          options={FOOD_GROUPS}
+          selected={filters.live_food_groups}
+          labelKey="foodGroup"
+          inner
+          onToggle={(v) => onChange({ live_food_groups: toggle(filters.live_food_groups, v) })}
+        />
+      </fieldset>
+
       <CheckGroup
         legend={t('filters.foodGroups')}
         options={FOOD_GROUPS}
@@ -68,14 +122,10 @@ export function FiltersPanel({ filters, onChange, onClear }: Props) {
         labelKey="foodGroup"
         onToggle={(v) => onChange({ food_groups: toggle(filters.food_groups, v) })}
       />
-
-      <CheckGroup
-        legend={t('filters.serviceGroups')}
-        options={SERVICE_GROUPS}
-        selected={filters.service_groups}
-        labelKey="serviceGroup"
-        onToggle={(v) => onChange({ service_groups: toggle(filters.service_groups, v) })}
-      />
+      </>
+      ) : (
+        <p className="fgroup__hint filters__food-hidden">{t('filters.foodHidden')}</p>
+      )}
 
       <fieldset className="fgroup">
         <legend>{t('filters.schedule')}</legend>

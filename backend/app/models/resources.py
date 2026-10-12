@@ -220,6 +220,7 @@ class ScheduleException(Base):
     opens: Mapped[time | None] = mapped_column(Time)
     closes: Mapped[time | None] = mapped_column(Time)
     reason: Mapped[str | None] = mapped_column(Text)
+    posted_by_id: Mapped[int | None] = mapped_column(ForeignKey("users.id"))  # set when posted by pantry staff
 
     location: Mapped[Location] = relationship(back_populates="exceptions")
 
@@ -244,6 +245,8 @@ class DistributionEvent(Base):
     status: Mapped[str] = mapped_column(String(16), default="scheduled")
     notes: Mapped[str | None] = mapped_column(Text)
     source_record_id: Mapped[int | None] = mapped_column(ForeignKey("source_records.id", ondelete="SET NULL"))
+    posted_by_id: Mapped[int | None] = mapped_column(ForeignKey("users.id"))  # set when posted by pantry staff
+    ai_assisted: Mapped[bool] = mapped_column(Boolean, default=False)
 
     location: Mapped[Location] = relationship(back_populates="events")
     offerings: Mapped[list["EventOffering"]] = relationship(cascade="all, delete-orphan")
@@ -256,20 +259,6 @@ class EventOffering(Base):
 
     event_id: Mapped[int] = mapped_column(ForeignKey("distribution_events.id", ondelete="CASCADE"), primary_key=True)
     food_type: Mapped[str] = mapped_column(ForeignKey("service_categories.code"), primary_key=True)
-
-
-class InventoryReport(Base):
-    """Confirmed current inventory reported by an authorized provider. Schema only in v1 — no UI collects it."""
-
-    __tablename__ = "inventory_reports"
-
-    id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    location_id: Mapped[int] = mapped_column(ForeignKey("locations.id", ondelete="CASCADE"), index=True)
-    food_type: Mapped[str] = mapped_column(ForeignKey("service_categories.code"))
-    quantity_text: Mapped[str | None] = mapped_column(String(200))
-    reported_by_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
-    reported_at: Mapped[datetime] = created_at()
-    valid_until: Mapped[datetime] = mapped_column(DateTime(timezone=True))
 
 
 class Translation(Base):

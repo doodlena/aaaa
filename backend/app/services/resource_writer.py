@@ -2,7 +2,7 @@
 
 Used by ingestion (for unverified candidates), by admin edits, and when accepting change proposals.
 """
-from datetime import time
+from datetime import date, time
 
 from geoalchemy2.shape import from_shape, to_shape
 from shapely.geometry import Point
@@ -31,11 +31,15 @@ def coords_of(loc: Location) -> dict | None:
     return {"lat": round(p.y, 6), "lon": round(p.x, 6)}
 
 
+def _d(v):
+    return date.fromisoformat(v) if isinstance(v, str) else v
+
+
 def _schedule(d: dict, loc: Location, service: Service | None, src: int | None) -> Schedule:
     return Schedule(
         location=loc, service_id=service.id if service else None, kind=d.get("kind", "distribution"), weekday=d["weekday"],
-        opens=_t(d["opens"]), closes=_t(d["closes"]), week_of_month=d.get("week_of_month"), valid_from=d.get("valid_from"),
-        valid_to=d.get("valid_to"), appointment_only=d.get("appointment_only", False), notes=d.get("notes"), source_record_id=src,
+        opens=_t(d["opens"]), closes=_t(d["closes"]), week_of_month=d.get("week_of_month"), valid_from=_d(d.get("valid_from")),
+        valid_to=_d(d.get("valid_to")), appointment_only=d.get("appointment_only", False), notes=d.get("notes"), source_record_id=src,
     )
 
 

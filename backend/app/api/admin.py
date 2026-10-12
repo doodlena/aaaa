@@ -12,6 +12,8 @@ from app.db import get_db
 from app.ingestion.verification.workflow import apply_action, decide_change, decide_duplicate, edit_with_payload
 from app.models import (
     AuditLog,
+    CommunityReport,
+    ProviderMembership,
     ChangeProposal,
     DuplicateCandidate,
     FieldProvenance,
@@ -23,9 +25,11 @@ from app.models import (
     User,
     VerificationRecord,
 )
-from app.schemas import ActionIn, DecisionIn, ResourceEditIn
+from app.schemas import ActionIn, AIKeyIn, AISettingsIn, DecisionIn, DecisionSimpleIn, ResourceEditIn
 from app.services.presenter import detail, verification_label
+from app.services import ai
 from app.services.quality import quality_report
+from app.services.shelf import open_report_counts
 from app.vocab import REVIEW_STATUSES
 
 router = APIRouter(prefix="/api/admin", tags=["admin"], dependencies=[Depends(require_admin)])
@@ -72,6 +76,7 @@ def queue(
     srcs: dict[int, list[str]] = {}
     for lid, sid in db.execute(select(SourceRecord.location_id, SourceRecord.source_id).where(SourceRecord.location_id.in_(ids))).all():
         srcs.setdefault(lid, []).append(sid)
+    rc = open_report_counts(db, ids)
     counts = dict(db.execute(select(Location.review_status, func.count()).where(Location.merged_into_id.is_(None)).group_by(Location.review_status)).all())
     return {
         "items": [{
@@ -79,7 +84,7 @@ def queue(
             "zip": loc.zip, "jurisdiction_id": loc.jurisdiction_id, "review_status": loc.review_status,
             "verification_label": verification_label(loc), "published": loc.published, "operating_status": loc.operating_status,
             "has_coordinates": loc.geom is not None, "last_seen_at": _iso(loc.last_seen_at), "last_verified_at": _iso(loc.last_verified_at),
-            "sources": sorted(set(srcs.get(loc.id, []))), "pending_changes": pc.get(loc.id, 0), "pending_duplicates": dc.get(loc.id, 0),
+            "sources": sorted(set(srcs.get(loc.id, []))), "pending_changes": pc.get(loc.id, 0), "pending_duplicates": dc.get(loc.id, 0), "open_reports": rc.get(loc.id, 0),
             "is_synthetic": loc.is_synthetic,
         } for loc in locs],
         "total": total, "page": page, "page_size": page_size, "counts_by_status": counts,
@@ -117,7 +122,7 @@ def resource_review(location_id: int, db: Session = Depends(get_db)):
 
 
 def _cp(c: ChangeProposal) -> dict:
-    return {"id": c.id, "location_id": c.location_id, "field": c.field, "current_value": c.current_value, "proposed_value": c.proposed_value,
+    return {"id": c.id, "location_id": c.location_id, "field": c.field, "origin": c.origin, "submitted_by_id": c.submitted_by_id, "current_value": c.current_value, "proposed_value": c.proposed_value,
             "source_record_id": c.source_record_id, "status": c.status, "created_at": _iso(c.created_at), "decided_at": _iso(c.decided_at)}
 
 
@@ -207,3 +212,165 @@ def organization(org_id: int, db: Session = Depends(get_db)):
     if not o:
         raise HTTPException(404, "Organization not found")
     return {"id": o.id, "name": o.name, "website": o.website, "locations": [{"id": loc.id, "name": loc.name} for loc in o.locations]}
+
+
+# --- Lantern: pantry staff access, community reports, AI suggestions ---------------------------------------------
+
+@router.get("/claims")
+def list_claims(status: str = "pending", db: Session = Depends(get_db)):
+    rows = db.execute(select(ProviderMembership, User, Location).join(User, User.id == ProviderMembership.user_id)
+                      .join(Location, Location.id == ProviderMembership.location_id)
+                      .where(ProviderMembership.status == status).order_by(ProviderMembership.created_at)).all()
+    return {"items": [{"id": m.id, "status": m.status, "role_title": m.role_title, "note": m.note, "user_email": u.email,
+                       "location_id": loc.id, "location_name": loc.name, "location_phone": loc.phone or loc.organization.phone,
+                       "created_at": _iso(m.created_at)} for m, u, loc in rows]}
+
+
+@router.post("/claims/{claim_id}/decision")
+def decide_claim(claim_id: int, body: DecisionSimpleIn, user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    m = db.get(ProviderMembership, claim_id)
+    if not m:
+        raise HTTPException(404, "Request not found")
+    new = {"approve": "approved", "reject": "rejected", "revoke": "revoked"}.get(body.decision)
+    if not new:
+        raise HTTPException(422, "decision must be approve, reject or revoke")
+    from app.ingestion.verification.workflow import audit
+
+    before = m.status
+    m.status, m.decided_by_id, m.decided_at = new, user.id, datetime.now(UTC)
+    audit(db, user, "provider_membership", m.id, new, {"status": before}, {"status": new, "notes": body.notes})
+    db.commit()
+    return {"id": m.id, "status": m.status}
+
+
+@router.get("/reports")
+def list_reports(status: str = "open", db: Session = Depends(get_db)):
+    rows = db.execute(select(CommunityReport, Location).join(Location, Location.id == CommunityReport.location_id)
+                      .where(CommunityReport.status == status).order_by(CommunityReport.created_at.desc()).limit(500)).all()
+    return {"items": [{"id": r.id, "location_id": loc.id, "location_name": loc.name, "kind": r.kind, "note": r.note,
+                       "status": r.status, "created_at": _iso(r.created_at), "provider_response": r.provider_response}
+                      for r, loc in rows]}
+
+
+@router.post("/reports/{report_id}/decision")
+def decide_report(report_id: int, body: DecisionSimpleIn, user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    r = db.get(CommunityReport, report_id)
+    if not r:
+        raise HTTPException(404, "Report not found")
+    if body.decision not in ("resolve", "dismiss"):
+        raise HTTPException(422, "decision must be resolve or dismiss")
+    r.status = "resolved" if body.decision == "resolve" else "dismissed"
+    r.resolved_by_id, r.resolved_at = user.id, datetime.now(UTC)
+    db.commit()
+    return {"id": r.id, "status": r.status}
+
+
+@router.post("/resources/{location_id}/ai-suggestions")
+def ai_suggestions(location_id: int, user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    """Ask Claude to structure the free-text hours/eligibility kept from source records. Results become pending
+    change proposals (origin=ai) — each schedule/requirement backed by a verbatim quote — for a reviewer to accept."""
+    if not ai.enabled():
+        raise HTTPException(404, "AI suggestions are not enabled")
+    loc = load_location(db, location_id, public=False)
+    texts = []
+    for r in db.scalars(select(SourceRecord).where(SourceRecord.location_id == loc.id)).all():
+        n = r.normalized or {}
+        texts += [t for t in (n.get("raw_hours_text"), n.get("raw_eligibility_text"), n.get("notes")) if t]
+        texts += [s.get("description") for s in n.get("services", []) if s.get("description")]
+    text = "\n".join(dict.fromkeys(texts))
+    if not text.strip():
+        raise HTTPException(422, "No source text to analyze for this listing")
+    try:
+        sug = ai.suggest_structure(text)
+    except ai.AIUnavailable as e:
+        raise HTTPException(503, str(e)) from None
+    from app.services.resource_writer import structures_of
+
+    cur = structures_of(loc)
+    created = []
+    if sug.distribution_schedules:
+        cp = ChangeProposal(location_id=loc.id, field="schedules", current_value=cur["schedules"], origin="ai", submitted_by_id=user.id,
+                            proposed_value=[{"kind": "distribution", "weekday": s.weekday, "opens": s.opens, "closes": s.closes,
+                                             "week_of_month": s.week_of_month, "notes": f"AI-suggested from: \"{s.evidence}\""}
+                                            for s in sug.distribution_schedules])
+        db.add(cp)
+        created.append("schedules")
+    if sug.eligibility:
+        cp = ChangeProposal(location_id=loc.id, field="eligibility", current_value=cur["eligibility"], origin="ai", submitted_by_id=user.id,
+                            proposed_value=[{"requirement_type": e.requirement_type, "status": e.status,
+                                             "details": f"AI-suggested from: \"{e.evidence}\""} for e in sug.eligibility])
+        db.add(cp)
+        created.append("eligibility")
+    db.commit()
+    return {"created_proposals": created, "suggestions": sug.model_dump()}
+
+
+# --- AI settings (admin-uploaded Anthropic key, stored encrypted) ---------------------------------------------------
+
+def _ai_status() -> dict:
+    cfg = ai.runtime()
+    return {"enabled": cfg["enabled"], "active": ai.enabled(), "model": cfg["model"], "allowed_models": list(ai.ALLOWED_MODELS),
+            "key_source": cfg["key_source"], "key_hint": f"…{cfg['key'][-4:]}" if cfg.get("key") else None}
+
+
+def _set(db: Session, key: str, value: str, user: User, secret: bool = False) -> None:
+    from app.models import AppSetting
+
+    row = db.get(AppSetting, key) or AppSetting(key=key)
+    row.value, row.is_secret, row.updated_by_id, row.updated_at = value, secret, user.id, datetime.now(UTC)
+    db.add(row)
+
+
+@router.get("/ai-settings")
+def get_ai_settings():
+    return _ai_status()
+
+
+@router.put("/ai-settings/key")
+def put_ai_key(body: AIKeyIn, user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    from app.ingestion.verification.workflow import audit
+    from app.services.secrets import SecretUnavailable, encrypt
+
+    try:
+        _set(db, "anthropic_api_key", encrypt(body.api_key), user, secret=True)
+    except SecretUnavailable as e:
+        raise HTTPException(503, str(e)) from None
+    from app.models import AppSetting
+
+    if not db.get(AppSetting, "ai_enabled"):
+        _set(db, "ai_enabled", "true", user)  # first key upload turns AI on
+    audit(db, user, "app_setting", 0, "ai_key_updated", None, {"key_hint": f"…{body.api_key[-4:]}"})  # never the key itself
+    db.commit()
+    ai.invalidate()
+    return {**_ai_status(), "test": ai.test_connection()}
+
+
+@router.delete("/ai-settings/key")
+def delete_ai_key(user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    from app.ingestion.verification.workflow import audit
+    from app.models import AppSetting
+
+    row = db.get(AppSetting, "anthropic_api_key")
+    if row:
+        db.delete(row)
+        audit(db, user, "app_setting", 0, "ai_key_removed", None, None)
+        db.commit()
+    ai.invalidate()
+    return _ai_status()
+
+
+@router.patch("/ai-settings")
+def patch_ai_settings(body: AISettingsIn, user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    if body.enabled is not None:
+        _set(db, "ai_enabled", "true" if body.enabled else "false", user)
+    if body.model:
+        _set(db, "ai_model", body.model, user)
+    db.commit()
+    ai.invalidate()
+    return _ai_status()
+
+
+@router.post("/ai-settings/test")
+def test_ai_settings():
+    ai.invalidate()
+    return ai.test_connection()

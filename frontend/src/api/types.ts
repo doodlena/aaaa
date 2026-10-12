@@ -26,7 +26,27 @@ export type MatchReason =
   | { code: 'service_group'; value: string }
   | { code: 'distributes_on'; date: string }
   | { code: 'upcoming'; date: string }
-  | { code: 'eligibility_confirmed'; value: string };
+  | { code: 'eligibility_confirmed'; value: string }
+  | { code: 'on_shelf_today'; value: string }
+  | { code: 'open_today_by_pantry' };
+
+// ---------- Live updates from providers (pantry posts) ----------
+export type LiveStatus = 'open' | 'limited' | 'out' | 'closed';
+export type ShelfLevel = 'plenty' | 'some' | 'low';
+export interface ShelfItem {
+  food_type: string;
+  level: ShelfLevel;
+  group?: string | null;
+}
+export interface LiveShelf {
+  status: LiveStatus;
+  message: string | null;
+  items: ShelfItem[];
+  posted_at: string;
+  expires_at: string;
+  source: 'pantry';
+  ai_assisted: boolean;
+}
 
 export interface ResourceSummary {
   id: number;
@@ -55,6 +75,8 @@ export interface ResourceSummary {
   is_synthetic: boolean;
   match_reasons: MatchReason[];
   unconfirmed?: string[] | null;
+  live?: LiveShelf | null;
+  open_reports?: number;
 }
 
 export interface SearchResponse {
@@ -159,7 +181,7 @@ export interface ResourceDetail extends ResourceSummary {
   upcoming_windows: Window[];
   exceptions: { date: string; kind: string; reason: string | null; opens: string | null; closes: string | null }[];
   events: EventItem[];
-  current_inventory: null;
+  current_inventory: ShelfItem[] | null;
   sources: SourceRef[];
   translations: Record<string, Translation>;
   directions: { osm: string; apple: string; google: string; geo: string } | null;
@@ -241,6 +263,7 @@ export interface QueueItem {
   sources: string[];
   pending_changes: number;
   pending_duplicates: number;
+  open_reports?: number;
   is_synthetic: boolean;
 }
 
@@ -262,6 +285,8 @@ export interface ChangeProposal {
   status: string;
   created_at: string | null;
   decided_at: string | null;
+  origin?: 'import' | 'provider' | 'ai' | string;
+  submitted_by_id?: number | null;
 }
 
 export interface DuplicateCandidate {
@@ -336,4 +361,134 @@ export interface QualityReport {
   generated_at: string;
   includes_synthetic: boolean;
   metrics: Record<string, number | Record<string, number> | null>;
+}
+
+// ---------- Lantern: coverage areas, AI settings ----------
+export interface CoverageArea {
+  id: string;
+  name: string;
+  kind?: string;
+  localities: string[];
+  public_resources: number;
+  source?: string | null;
+}
+export type AIKeySource = 'none' | 'environment' | 'admin';
+export interface AISettings {
+  enabled: boolean;
+  active: boolean;
+  model: string;
+  allowed_models: string[];
+  key_source: AIKeySource | string;
+  key_hint: string | null;
+}
+export interface AITestResult {
+  ok: boolean;
+  error?: string | null;
+  model?: string | null;
+  display_name?: string | null;
+}
+
+// ---------- features, visit plan, reports, pantry portal, AI ----------
+export interface Features {
+  app_name: string;
+  demo_mode: boolean;
+  ai: { search: boolean; announcement_drafts: boolean; structure_suggestions: boolean; translation: boolean; model: string | null };
+}
+
+export type ChecklistKey =
+  | 'photo_id'
+  | 'proof_of_address'
+  | 'income_documentation'
+  | 'benefit_documentation'
+  | 'referral'
+  | 'appointment'
+  | 'registration';
+export type ChecklistAction = 'bring' | 'not_needed' | 'ask';
+export interface VisitPlan {
+  checklist: { key: ChecklistKey | string; action: ChecklistAction }[];
+  suggestions: string[];
+  next_windows: Window[];
+}
+
+export type ReportKind = 'was_closed' | 'wrong_info' | 'out_of_food' | 'other';
+
+export interface ProviderPantry {
+  membership_id: number;
+  status: 'pending' | 'approved' | 'rejected' | 'revoked' | string;
+  role_title: string;
+  location_id: number;
+  name: string;
+  address1: string | null;
+  city: string | null;
+  live?: LiveShelf | null;
+  open_reports?: number;
+  pending_changes?: number;
+}
+export interface ProviderMe {
+  items: ProviderPantry[];
+  food_types: string[];
+}
+export interface ShelfHistoryItem extends LiveShelf {
+  id: number;
+  retracted: boolean;
+}
+export interface PantryReport {
+  id: number;
+  kind: ReportKind | string;
+  note: string | null;
+  status: string;
+  created_at: string | null;
+  provider_response: string | null;
+}
+export interface SurplusPost {
+  id: number;
+  location_id: number;
+  pantry: string;
+  city: string | null;
+  title: string;
+  food_types: string[];
+  quantity: string | null;
+  pickup_notes: string | null;
+  available_until: string | null;
+  status: 'open' | 'claimed' | 'closed' | string;
+  claimed_by_location_id: number | null;
+  created_at: string | null;
+}
+export interface AnnouncementDraft {
+  kind: 'shelf_update' | 'event' | 'closure' | 'unclear';
+  status: LiveStatus | null;
+  message: string | null;
+  items: ShelfItem[];
+  event: { title: string; date: string; start: string; end: string | null; appointment_required: Tristate } | null;
+  closure: { date: string; reason: string | null } | null;
+  things_to_check: string[];
+}
+export interface AISearchResult {
+  filters: { food_group: string[]; service_group: string[]; eligibility: string[]; date: string | null; wheelchair: boolean };
+  place: GeocodeResult | null;
+  place_text?: string | null;
+  explanation: string;
+  notice: string;
+}
+
+export interface AdminClaim {
+  id: number;
+  status: string;
+  role_title: string;
+  note: string | null;
+  user_email: string;
+  location_id: number;
+  location_name: string;
+  location_phone: string | null;
+  created_at: string | null;
+}
+export interface AdminReport {
+  id: number;
+  location_id: number;
+  location_name: string;
+  kind: ReportKind | string;
+  note: string | null;
+  status: string;
+  created_at: string | null;
+  provider_response: string | null;
 }

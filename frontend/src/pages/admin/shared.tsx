@@ -28,3 +28,10 @@ export function renderValue(v: unknown): string {
   if (typeof v === 'string') return v;
   return JSON.stringify(v, null, 2);
 }
+
+/** Where a change proposal came from. AI ones must be checked against the quoted evidence. */
+export function OriginBadge({ origin }: { origin?: string }) {
+  const { t } = useTranslation();
+  const o = origin || 'import';
+  return <span className={`origin origin--${o}`}>{t(`admin.origin.${o}`, { defaultValue: o })}</span>;
+}

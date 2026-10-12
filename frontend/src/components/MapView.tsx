@@ -22,13 +22,13 @@ const SRC = 'resources';
 const RADIUS_SRC = 'search-radius';
 const CLUSTER_MAX_ZOOM = 13;
 
-type Kind = 'verified' | 'stale' | 'uncertain';
+type Kind = 'verified' | 'stale' | 'reported' | 'uncertain';
 
 function toGeoJSON(items: ResourceSummary[], uncertain: ResourceSummary[], indexOffset: number): GeoJSON.FeatureCollection<GeoJSON.Point> {
   const feat = (r: ResourceSummary, kind: Kind, label: string): GeoJSON.Feature<GeoJSON.Point> => ({
     type: 'Feature',
     id: r.id,
-    properties: { id: r.id, kind, label, name: r.name, synthetic: r.is_synthetic },
+    properties: { id: r.id, kind, label, name: r.name, synthetic: r.is_synthetic, live: r.live?.status ?? '' },
     geometry: { type: 'Point', coordinates: [r.lon as number, r.lat as number] },
   });
   const seen = new Set<number>();
@@ -36,7 +36,7 @@ function toGeoJSON(items: ResourceSummary[], uncertain: ResourceSummary[], index
   items.forEach((r, i) => {
     if (r.lat === null || r.lon === null || seen.has(r.id)) return;
     seen.add(r.id);
-    out.push(feat(r, r.verification_label === 'verified' ? 'verified' : 'stale', String(indexOffset + i)));
+    out.push(feat(r, r.verification_label === 'verified' ? 'verified' : r.verification_label === 'source_reported' ? 'reported' : 'stale', String(indexOffset + i)));
   });
   uncertain.forEach((r) => {
     if (r.lat === null || r.lon === null || seen.has(r.id)) return;
@@ -172,7 +172,16 @@ export default function MapView({ items, uncertain, center, radiusKm, store, onS
             label.textContent = String(p.label);
             pin.appendChild(label);
             el.appendChild(pin);
-            el.title = `${p.name} — ${tRef.current(kind === 'uncertain' ? 'map.kindUncertain' : kind === 'stale' ? 'verification.stale' : 'verification.verified')}`;
+            // Live pantry status: a distinct badge SHAPE + a short text label under the pin (never colour alone).
+            const live = String(p.live || '');
+            if (live) {
+              el.classList.add(`mk-wrap--live-${live}`);
+              const badge = document.createElement('span');
+              badge.className = `mk__live mk__live--${live}`;
+              badge.textContent = tRef.current(`live.pin.${live}`);
+              el.appendChild(badge);
+            }
+            el.title = `${p.name} — ${tRef.current(kind === 'uncertain' ? 'map.kindUncertain' : kind === 'stale' ? 'verification.stale' : kind === 'reported' ? 'verification.source_reported' : 'verification.verified')}${live ? ` — ${tRef.current(`live.status.${live}`)}` : ''}`;
             el.addEventListener('click', (ev) => {
               ev.stopPropagation();
               store.select(id, 'map');
@@ -290,7 +299,20 @@ export default function MapView({ items, uncertain, center, radiusKm, store, onS
       <div className="map__legend" aria-hidden="true">
         <span><span className="mk mk--verified mk--legend"><span className="mk__label">1</span></span>{t('verification.verified')}</span>
         <span><span className="mk mk--stale mk--legend"><span className="mk__label">2</span></span>{t('verification.stale')}</span>
+        {items.some((r) => r.verification_label === 'source_reported') && (
+          <span><span className="mk mk--reported mk--legend"><span className="mk__label">3</span></span>{t('verification.source_reported')}</span>
+        )}
         <span><span className="mk mk--uncertain mk--legend"><span className="mk__label">?</span></span>{t('map.kindUncertain')}</span>
+        {items.some((r) => r.live) && (
+          <span className="map__legend-live">
+            {t('map.livePosted')}:
+            {(['open', 'limited', 'out', 'closed'] as const).map((st) => (
+              <span key={st} className={`mk__live mk__live--${st} mk__live--legend`}>
+                {t(`live.pin.${st}`)}
+              </span>
+            ))}
+          </span>
+        )}
       </div>
     </div>
   );

@@ -1,0 +1,21 @@
+id: afac-get-groceries
+name: Arlington Food Assistance Center — Get Groceries (distribution sites)
+owner: Arlington Food Assistance Center
+url: https://afac.org/get-groceries/
+adapter: afac_locations
+retrieval: http
+formats: [html]
+jurisdictions: [arlington-county]
+enabled: true
+min_seconds_between_requests: 5
+cache_ttl_hours: 24
+store_raw: false
+publication: permitted_with_attribution   # factual listing of the provider's own sites; attributed and linked
+verified_on: "2026-10-12"
+expected_fields: [name, address parts, lat/lng, hours]
+known_limitations:
+  - "Organization page lists 5 public sites; apartment-community pickup sites are text-only and not imported."
+  - "Day abbreviations (M, Tu, W, Th, F, Sat) are expanded before schedule parsing."
+  - "The residency requirement comes from the page introduction and applies to all sites."
+terms_notes: "robots.txt allows all (Disallow: empty). Facts only; link back to AFAC."
+refresh: "0 5 * * 1"

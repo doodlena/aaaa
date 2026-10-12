@@ -3,15 +3,16 @@ import { TriChip } from '../components/Badges';
 import { SyntheticBadge, VerificationBadge } from '../components/Badges';
 import { Loading } from '../components/Status';
 import { formatDate, safeUrl } from '../lib/format';
-import { useMeta } from '../state/meta';
+import { useDocumentTitle, useMeta } from '../state/meta';
 
 export function AboutPage() {
   const { t, i18n } = useTranslation();
-  const { meta, error } = useMeta();
+  const { meta, error, appName } = useMeta();
+  useDocumentTitle(t('about.title', { app: appName }));
   return (
     <div className="page page--prose">
-      <h1>{t('about.title')}</h1>
-      <p className="lead">{t('about.lead')}</p>
+      <h1>{t('about.title', { app: appName })}</h1>
+      <p className="lead">{t('about.lead', { app: appName })}</p>
 
       <h2>{t('about.whatTitle')}</h2>
       <p>{t('about.what')}</p>
@@ -76,6 +77,10 @@ export function AboutPage() {
       <h2>{t('about.reviewTitle')}</h2>
       <p>{t('about.review', { days: meta?.fresh_days ?? 90 })}</p>
 
+      <h2>{t('about.liveTitle')}</h2>
+      <p>{t('about.live')}</p>
+      <p>{t('about.reportsInfo')}</p>
+
       <h2>{t('about.changesTitle')}</h2>
       <p>{t('about.changes')}</p>
 
@@ -91,6 +96,8 @@ export function AboutPage() {
         <li>{t('about.privacy2')}</li>
         <li>{t('about.privacy3')}</li>
         <li>{t('about.privacy4')}</li>
+        <li>{t('about.privacy5')}</li>
+        <li>{t('about.privacy6')}</li>
       </ul>
     </div>
   );

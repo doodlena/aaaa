@@ -64,7 +64,7 @@ function detail(overrides: Partial<ResourceDetail> = {}): ResourceDetail {
 
 describe('Resource detail', () => {
   it('renders unknown eligibility as "Not confirmed", never as not required', async () => {
-    mockFetch([{ path: '/api/resources/5', body: detail() }]);
+    mockFetch([{ path: '/api/resources/5', body: detail() }, { path: '/api/resources/5/visit-plan', body: { checklist: [], suggestions: [], next_windows: [] } }]);
     renderApp(<ResourcePage />, { route: '/resource/5', path: '/resource/:id' });
     const table = await screen.findByRole('table', { name: 'Requirements and their status' });
     const photoRow = within(table).getByRole('row', { name: /Photo ID/ });
@@ -79,7 +79,7 @@ describe('Resource detail', () => {
   });
 
   it('shows directions, sources, unknown website, caveats, schedule rules and the test-data badge', async () => {
-    mockFetch([{ path: '/api/resources/5', body: detail() }]);
+    mockFetch([{ path: '/api/resources/5', body: detail() }, { path: '/api/resources/5/visit-plan', body: { checklist: [], suggestions: [], next_windows: [] } }]);
     renderApp(<ResourcePage />, { route: '/resource/5', path: '/resource/:id' });
     const osm = await screen.findByTestId('directions-osm');
     expect(osm).toHaveAttribute('href', expect.stringContaining('openstreetmap.org/directions'));
@@ -95,7 +95,7 @@ describe('Resource detail', () => {
 
   it('labels machine translations and can show the original', async () => {
     await i18n.changeLanguage('es');
-    const { calls } = mockFetch([{ path: '/api/resources/5', body: detail() }]);
+    const { calls } = mockFetch([{ path: '/api/resources/5', body: detail() }, { path: '/api/resources/5/visit-plan', body: { checklist: [], suggestions: [], next_windows: [] } }]);
     renderApp(<ResourcePage />, { route: '/resource/5', path: '/resource/:id' });
     expect(await screen.findByText('Comestibles los sábados.')).toBeInTheDocument();
     expect(screen.getByText('Traducción automática — sin revisar')).toBeInTheDocument();

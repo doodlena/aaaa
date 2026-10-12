@@ -8,7 +8,7 @@ from shapely.geometry import MultiPolygon, shape
 from sqlalchemy.orm import Session
 
 from app.config import get_settings
-from app.models import Jurisdiction, SchoolDivision
+from app.models import CoverageArea, Jurisdiction, SchoolDivision
 
 
 def load_jurisdiction_configs(config_dir: Path | None = None) -> list[dict]:
@@ -68,5 +68,27 @@ def sync_jurisdictions(db: Session, config_dir: Path | None = None, data_dir: Pa
                 div.jurisdictions.append(j)
             db.add(div)
         changed.append(j.id)
+    sync_coverage_areas(db, config_dir, data_dir)
     db.commit()
     return changed
+
+
+def sync_coverage_areas(db: Session, config_dir: Path | None = None, data_dir: Path | None = None) -> list[str]:
+    s = get_settings()
+    d = (config_dir or s.config_dir) / "coverage"
+    out = []
+    for p in sorted(d.glob("*.yaml")) if d.exists() else []:
+        c = yaml.safe_load(p.read_text())
+        f = (data_dir or s.data_dir) / "boundaries" / c["boundary"]["file"]
+        feats = [x for x in json.loads(f.read_text())["features"] if str(x["properties"].get("GEOID")) == str(c["boundary"]["geoid"])]
+        if not feats:
+            continue
+        g = shape(feats[0]["geometry"])
+        a = db.get(CoverageArea, c["id"]) or CoverageArea(id=c["id"])
+        a.name, a.kind, a.source = c["name"], c["kind"], c.get("source")
+        a.boundary = from_shape(g if g.geom_type == "MultiPolygon" else MultiPolygon([g]), srid=4326)
+        a.config = {k: c.get(k) for k in ("localities",)}
+        db.add(a)
+        out.append(a.id)
+    db.flush()
+    return out

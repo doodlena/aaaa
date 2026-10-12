@@ -262,3 +262,41 @@ def test_admin_edit_rejects_script_urls(admin_client, db, imported):
 def test_login_with_reserved_domain_admin_created_by_cli(client, db):
     make_user(db, "admin@localhost.test", "dev-admin-password-1", "admin")
     assert client.post("/api/auth/login", json={"email": "Admin@localhost.test", "password": "dev-admin-password-1"}).status_code == 200
+
+
+def test_source_reported_real_listings_visible_only_from_permitted_sources(client, db, monkeypatch):
+    """Unverified real candidates appear (labelled) only when their source allows republication; restricted
+    datasets appear only in internal preview and never in production."""
+    import json as _json
+
+    from app.ingestion.base import Fetcher, SourceConfig
+    from app.ingestion.pipeline import run_source
+
+    f1, f2 = Path_tmp(db)
+    open_src = SourceConfig(id="gov-open", name="County list", url="file://a", adapter="structured_json", jurisdictions=["arlington-county"],
+                            publication="permitted_with_attribution")
+    closed_src = SourceConfig(id="restricted", name="Restricted list", url="file://b", adapter="structured_json",
+                              jurisdictions=["arlington-county"], publication="permission_required")
+    f1.write_text(_json.dumps({"records": [{"external_id": "r1", "organization_name": "Real Pantry A", "address1": "1 A St", "zip": "22204", "lat": 38.861, "lon": -77.1}]}))
+    f2.write_text(_json.dumps({"records": [{"external_id": "r2", "organization_name": "Real Pantry B", "address1": "9 B St", "zip": "22204", "lat": 38.87, "lon": -77.11}]}))
+    run_source(db, open_src, Fetcher(fixtures={"file://a": f1}))
+    run_source(db, closed_src, Fetcher(fixtures={"file://b": f2}))
+    s = get_settings()
+    res = client.get("/api/resources/search", params={**ARL, "radius_km": 10}).json()
+    assert names(res["items"]) == {"Real Pantry A"}
+    item = res["items"][0]
+    assert item["verification_label"] == "source_reported" and "not_yet_verified" in item["warnings"]
+    monkeypatch.setattr(s, "source_reported", "internal_preview")
+    assert names(client.get("/api/resources/search", params={**ARL, "radius_km": 10}).json()["items"]) == {"Real Pantry A", "Real Pantry B"}
+    monkeypatch.setattr(s, "environment", "production")
+    assert names(client.get("/api/resources/search", params={**ARL, "radius_km": 10}).json()["items"]) == {"Real Pantry A"}
+    monkeypatch.setattr(s, "source_reported", "off")
+    assert client.get("/api/resources/search", params={**ARL, "radius_km": 10}).json()["total"] == 0
+
+
+def Path_tmp(db):
+    import tempfile
+    from pathlib import Path
+
+    d = Path(tempfile.mkdtemp())
+    return d / "a.json", d / "b.json"

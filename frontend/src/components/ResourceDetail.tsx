@@ -1,3 +1,5 @@
+import { CrisisCallout } from './CrisisCallout';
+import { offersCrisisServices } from '../lib/filters';
 import { useEffect, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
@@ -6,9 +8,13 @@ import type { ResourceDetail, Schedule, Translation, Tristate } from '../api/typ
 import { formatAddress, formatDate, formatDateTime, formatTimeRange, safeUrl, telHref, weekdayName } from '../lib/format';
 import { useAsync } from '../lib/useAsync';
 import { useAuth } from '../state/auth';
+import { useDocumentTitle } from '../state/meta';
 import { OperatingBadge, SyntheticBadge, TriChip, VerificationBadge } from './Badges';
 import { Icon } from './Icon';
+import { LiveStatusTag, PostedBy, ReportsNotice, ShelfTags } from './Live';
+import { ReportProblem } from './ReportDialog';
 import { ErrorMessage, errorKey, Loading } from './Status';
+import { VisitPlanner } from './VisitPlanner';
 
 /** Requirements always listed (summary keys from presenter.SUMMARY_ELIGIBILITY); others appear when documented. */
 export const CORE_REQUIREMENTS = [
@@ -201,6 +207,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
           {r.is_synthetic && <SyntheticBadge />}
           <VerificationBadge label={r.verification_label} lastVerifiedAt={r.last_verified_at} />
           <OperatingBadge status={r.operating_status} />
+          {r.live && <LiveStatusTag status={r.live.status} />}
         </div>
         <H level={level} id={`detail-${r.id}-title`} className="detail__title">
           {r.name}
@@ -229,7 +236,10 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
             </a>
           )}
           <SaveButton id={r.id} />
+          <ReportProblem id={r.id} name={r.name} />
         </div>
+        <ReportsNotice count={r.open_reports} />
+        {offersCrisisServices([...(r.service_types || []), ...r.services.map((x) => x.service_type)]) && <CrisisCallout />}
         {r.directions && (
           <p className="detail__alt-directions">
             {t('detail.otherMaps')}{' '}
@@ -249,6 +259,10 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
           <span>{t('detail.callAhead')}</span>
         </p>
       </header>
+
+      <TodayAtPantry r={r} level={h2} />
+
+      <VisitPlanner r={r} headingLevel={h2} />
 
       <section className="detail__section" aria-labelledby={`s-basic-${r.id}`}>
         <H level={h2} id={`s-basic-${r.id}`}>
@@ -311,8 +325,8 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
             {t('detail.selectionVaries')}
           </li>
           <li>
-            <Icon name="question" size={14} />
-            {t('detail.stockNotConfirmed')}
+            <Icon name={r.live ? 'store' : 'question'} size={14} />
+            {r.live ? t('detail.stockSeeToday') : t('detail.typicalNotToday')}
           </li>
         </ul>
         {r.services.length > 0 && (
@@ -553,10 +567,52 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
         )}
         <div className="verif">
           <VerificationBadge label={r.verification_label} lastVerifiedAt={r.last_verified_at} />
-          <p>{r.verification_label === 'verified' ? t('detail.verifiedExplain', { date: lastVerified }) : t('detail.staleExplain')}</p>
+          <p>{r.verification_label === 'verified' ? t('detail.verifiedExplain', { date: lastVerified }) : r.verification_label === 'source_reported' ? t('detail.sourceReportedExplain') : t('detail.staleExplain')}</p>
         </div>
       </section>
     </article>
+  );
+}
+
+/** "Today at this pantry": the pantry's own live post, or an explicit "not confirmed today". */
+export function TodayAtPantry({ r, level }: { r: ResourceDetail; level: number }) {
+  const { t } = useTranslation();
+  const live = r.live;
+  const items = r.current_inventory ?? live?.items ?? [];
+  return (
+    <section className={`detail__section today ${live ? `today--${live.status}` : 'today--none'}`} aria-labelledby={`s-today-${r.id}`} data-testid="today-section">
+      <H level={level} id={`s-today-${r.id}`}>
+        {t('today.title')}
+      </H>
+      {live ? (
+        <>
+          <div className="today__head">
+            <LiveStatusTag status={live.status} large />
+            <PostedBy live={live} showExpiry />
+          </div>
+          {live.message && <p className="today__msg">“{live.message}”</p>}
+          {items.length > 0 ? (
+            <ShelfTags items={items} label={t('today.itemsLabel')} />
+          ) : (
+            live.status !== 'closed' && <p className="muted">{t('today.noItems')}</p>
+          )}
+          {(live.status === 'closed' || live.status === 'out') && (
+            <p className="notice notice--alert">
+              <Icon name="alert" />
+              <span>{t(live.status === 'closed' ? 'warning.closed_today_by_pantry' : 'warning.out_today_by_pantry')}</span>
+            </p>
+          )}
+          <p className="fgroup__hint">{t('today.levelsNote')}</p>
+        </>
+      ) : (
+        <p className="notice notice--unknown">
+          <Icon name="question" />
+          <span>
+            <strong>{t('detail.stockNotConfirmed')}</strong> {t('today.notPosted')}
+          </span>
+        </p>
+      )}
+    </section>
   );
 }
 
@@ -564,6 +620,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
 export function ResourceDetailView({ id, headingLevel = 1 }: { id: number; headingLevel?: Level }) {
   const { t, i18n } = useTranslation();
   const { data, error, loading, reload } = useAsync((signal) => api.resource(id, i18n.language, signal), [id, i18n.language]);
+  useDocumentTitle(headingLevel === 1 ? (data?.name ?? null) : undefined, t('app.tagline'));
   if (loading && !data) return <Loading label={t('detail.loading')} />;
   if (error) return <ErrorMessage error={error} onRetry={reload} title={t('detail.errorTitle')} />;
   if (!data) return null;

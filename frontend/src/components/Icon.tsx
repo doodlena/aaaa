@@ -22,7 +22,38 @@ const PATHS: Record<string, string> = {
   external: 'M14 4h6v6M20 4l-9 9M18 14v5H5V6h5',
   close: 'M6 6l12 12M18 6L6 18',
   arrowLeft: 'M19 12H5m6-6l-6 6 6 6',
+  store: 'M4 9l1.5-5h13L20 9M4 9h16M4 9v11h16V9M9 20v-6h6v6',
+  flag: 'M5 21V4m0 0h11l-2 4 2 4H5',
+  share: 'M12 15V3m0 0L8 7m4-4l4 4M5 12v8h14v-8',
+  print: 'M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z',
+  bag: 'M5 8h14l-1 13H6zM9 8V6a3 3 0 0 1 6 0v2',
+  sparkle: 'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z',
+  copy: 'M9 9h11v11H9zM5 15H4V4h11v1',
+  tag: 'M3 12V4h8l10 10-8 8zM7.5 8.5v.01',
+  inbox: 'M3 13l3-8h12l3 8v6H3zM3 13h5l1 3h6l1-3h5',
+  wifiOff: 'M3 3l18 18M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2.7M19 13a10 10 0 0 0-2.3-1.6M2 9.5a15 15 0 0 1 4.5-2.8M22 9.5A15 15 0 0 0 11 5.1M12 20h.01',
+  plus: 'M12 5v14M5 12h14',
+  truck: 'M3 6h11v10H3zM14 10h4l3 3v3h-7M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z',
+  // needs
+  basket: 'M3 10h18l-2 10H5zM7 10l4-6M17 10l-4-6M9 14v3M15 14v3M12 14v3',
+  bowl: 'M3 12h18a9 9 0 0 1-18 0zM9 8c0-1.5 1-1.5 1-3M14 8c0-1.5 1-1.5 1-3',
+  baby: 'M12 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM6 21c0-3.5 2.7-6 6-6s6 2.5 6 6M10.5 7.5h.01M13.5 7.5h.01',
+  document: 'M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7',
+  health: 'M10 4h4v6h6v4h-6v6h-4v-6H4v-4h6z',
+  heart: 'M12 20s-8-4.7-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.3 12 20 12 20z',
+  home: 'M3 11l9-7 9 7M5 9.5V20h14V9.5M10 20v-6h4v6',
+  coin: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6.5v1.5M12 16v1.5',
+  shirt: 'M8 3l-5 3 2 4 3-1v12h8V9l3 1 2-4-5-3a4 4 0 0 1-8 0z',
+  scale: 'M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z',
+  book: 'M4 5a2 2 0 0 1 2-2h13v15H6a2 2 0 0 0-2 2zM4 20a2 2 0 0 0 2 1h13v-3',
+  family: 'M8 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM17 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM3 21v-5a5 5 0 0 1 10 0v5M13 21v-3.5a4 4 0 0 1 8 0V21',
+  bus: 'M5 4h14v13H5zM5 11h14M8 20v-3M16 20v-3M8 14h.01M16 14h.01',
+  lifebuoy: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM5.6 5.6l3.6 3.6M14.8 14.8l3.6 3.6M18.4 5.6l-3.6 3.6M9.2 14.8l-3.6 3.6',
+  message: 'M4 5h16v11H9l-5 4z',
+  key: 'M8 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11.5 11H21M18 11v3M15 11v2',
 };
+
+export type IconName = keyof typeof PATHS | string;
 
 export function Icon({ name, size = 18, label, className }: { name: keyof typeof PATHS | string; size?: number; label?: string; className?: string }) {
   return (

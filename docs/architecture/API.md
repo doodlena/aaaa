@@ -34,3 +34,30 @@ favorites are deleted with the account).
 `GET /api/admin/changes`, `POST /api/admin/changes/{id}/decision`, `GET /api/admin/duplicates`,
 `POST /api/admin/duplicates/{id}/decision`, `GET /api/admin/ingestion/runs`, `GET /api/admin/sources`,
 `GET /api/admin/quality`, `GET /api/admin/organizations/{id}`.
+
+## Lantern additions
+
+Public:
+- `GET /api/resources/search` also accepts `live_open` (the pantry posted open or limited today) and `live_food_group`
+  (groups the pantry confirmed on the shelf today). Results include `live` and `open_reports`.
+- `POST /api/resources/{id}/reports` takes `{kind: was_closed|wrong_info|out_of_food|other, note?}`. No account is
+  needed, nothing identifying is stored, and it is rate-limited.
+- `GET /api/resources/{id}/visit-plan` returns a what-to-bring checklist (`bring` / `not_needed` / `ask`),
+  suggestions, and the next windows.
+- `GET /api/resources/{id}/calendar.ics` returns the next 30 days of distribution windows.
+- `GET /api/meta/features` returns the brand name, demo mode, and which AI features are on.
+- `POST /api/ai/search` (only when AI is on) turns a natural-language request into filters.
+
+Pantry portal (`/api/provider`, signed in; admin-approved staff for location routes):
+- `POST /claims`, `GET /me`
+- `POST|DELETE /locations/{id}/shelf`, `GET /locations/{id}/shelf/history`
+- `POST /locations/{id}/events`, `DELETE /locations/{id}/events/{eid}`, `POST /locations/{id}/closures`
+- `POST /locations/{id}/change-requests` creates change proposals with `origin=provider`, for review.
+- `GET /locations/{id}/reports`, `POST /locations/{id}/reports/{rid}/response`
+- `GET|POST /surplus`, `POST /surplus/{id}/claim`, `POST /surplus/{id}/close`
+- `POST /locations/{id}/ai/announcement-draft` (AI on) returns a draft only; nothing is saved.
+
+Admin: `GET /api/admin/claims`, `POST /api/admin/claims/{id}/decision` (approve/reject/revoke),
+`GET /api/admin/reports`, `POST /api/admin/reports/{id}/decision` (resolve/dismiss), and
+`POST /api/admin/resources/{id}/ai-suggestions` (AI on), which creates pending proposals with `origin=ai`, each backed
+by evidence quotes. Change proposals include `origin` and `submitted_by_id`.

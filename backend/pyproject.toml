@@ -1,7 +1,7 @@
 [project]
-name = "nova-food-access"
+name = "lantern"
 version = "0.1.0"
-description = "Northern Virginia Food Access Platform — API, ingestion pipeline, and pilot research tooling"
+description = "Lantern (Northern Virginia) — API, ingestion pipeline, and pilot research tooling"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 dependencies = [
@@ -29,9 +29,12 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest>=8"]
 translate = ["argostranslate>=1.9"]
+ai = ["anthropic>=1.13"]
 
 [project.scripts]
 foodaccess = "app.cli:main"
+lantern = "app.cli:main"
+openshelf = "app.cli:main"
 
 [build-system]
 requires = ["setuptools>=69"]

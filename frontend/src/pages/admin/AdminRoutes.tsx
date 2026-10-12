@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next';
 import { Navigate, NavLink, Route, Routes, useLocation } from 'react-router';
 import { Loading } from '../../components/Status';
 import { useAuth } from '../../state/auth';
+import { AdminAI } from './AdminAI';
+import { AdminClaims, AdminReports } from './AdminClaimsReports';
 import { AdminConflicts } from './AdminConflicts';
 import { AdminQuality } from './AdminQuality';
 import { AdminQueue } from './AdminQueue';
@@ -37,6 +39,12 @@ export default function AdminRoutes() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/admin/claims">{t('admin.claims.nav')}</NavLink>
+          </li>
+          <li>
+            <NavLink to="/admin/reports">{t('admin.reports.nav')}</NavLink>
+          </li>
+          <li>
             <NavLink to="/admin/conflicts">{t('admin.conflicts')}</NavLink>
           </li>
           <li>
@@ -48,16 +56,22 @@ export default function AdminRoutes() {
           <li>
             <NavLink to="/admin/quality">{t('admin.quality')}</NavLink>
           </li>
+          <li>
+            <NavLink to="/admin/ai">{t('admin.aiSettings.nav')}</NavLink>
+          </li>
         </ul>
       </nav>
       <div className="admin__main">
         <Routes>
           <Route index element={<AdminQueue />} />
           <Route path="resources/:id" element={<AdminReview />} />
+          <Route path="claims" element={<AdminClaims />} />
+          <Route path="reports" element={<AdminReports />} />
           <Route path="conflicts" element={<AdminConflicts />} />
           <Route path="runs" element={<AdminRuns />} />
           <Route path="sources" element={<AdminSources />} />
           <Route path="quality" element={<AdminQuality />} />
+          <Route path="ai" element={<AdminAI />} />
           <Route path="*" element={<Navigate to="/admin" replace />} />
         </Routes>
       </div>

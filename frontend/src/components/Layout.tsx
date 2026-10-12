@@ -1,9 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router';
 import { useAuth } from '../state/auth';
 import { useMeta } from '../state/meta';
+import { BrandLockup, LanternMark } from './Brand';
 import { Icon } from './Icon';
+import { OfflineBanner } from './OfflineBanner';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function DemoBanner() {
@@ -21,7 +23,12 @@ export function DemoBanner() {
 export function Layout() {
   const { t } = useTranslation();
   const { user, logout } = useAuth();
+  const { appName } = useMeta();
   const location = useLocation();
+  // Default title on every route change. A layout effect runs before pages' passive effects, so pages can override it.
+  useLayoutEffect(() => {
+    document.title = `${appName} — ${t('app.tagline')}`;
+  }, [location.pathname, appName, t]);
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
@@ -47,18 +54,8 @@ export function Layout() {
       <DemoBanner />
       <header className="site-header">
         <div className="site-header__inner">
-          <Link to="/" className="brand">
-            <span className="brand__mark" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <rect width="32" height="32" rx="7" fill="currentColor" />
-                <path d="M9 13h14l-2 11H11z" fill="var(--paper)" />
-                <circle cx="16" cy="9" r="3" fill="var(--marigold)" />
-              </svg>
-            </span>
-            <span className="brand__text">
-              <span className="brand__name">{t('app.shortName')}</span>
-              <span className="brand__region">{t('app.region')}</span>
-            </span>
+          <Link to="/" className="brand" aria-label={t('nav.home', { app: appName })}>
+            <BrandLockup name={appName} tagline={t('app.region')} />
           </Link>
           <LanguageSwitcher />
           <button
@@ -75,6 +72,9 @@ export function Layout() {
             <ul>
               <li>
                 <NavLink to="/find">{t('nav.find')}</NavLink>
+              </li>
+              <li>
+                <NavLink to="/pantry">{t('nav.forPantries')}</NavLink>
               </li>
               <li>
                 <NavLink to="/about">{t('nav.about')}</NavLink>
@@ -109,14 +109,27 @@ export function Layout() {
           </nav>
         </div>
       </header>
+      <OfflineBanner />
       <main id="main" ref={mainRef} tabIndex={-1}>
         <Outlet />
       </main>
       <footer className="site-footer">
         <div className="site-footer__inner">
+          <p className="site-footer__brand">
+            <LanternMark size={24} /> <strong>{appName}</strong> — {t('app.tagline')}
+          </p>
+          <p className="site-footer__crisis" data-testid="footer-crisis">
+            <Icon name="lifebuoy" size={18} />
+            <span>
+              {t('footer.crisisLead')}{' '}
+              <a href="tel:988">{t('footer.call988')}</a> · <a href="sms:988">{t('footer.text988')}</a> · {t('footer.emergency')}{' '}
+              <a href="tel:911">911</a>
+            </span>
+          </p>
           <p>{t('footer.disclaimer')}</p>
           <p>
-            <Link to="/about">{t('footer.about')}</Link> · <Link to="/about#privacy">{t('footer.privacy')}</Link>
+            <Link to="/about">{t('footer.about')}</Link> · <Link to="/pantry">{t('footer.forPantries')}</Link> ·{' '}
+            <Link to="/about#privacy">{t('footer.privacy')}</Link>
           </p>
           <p className="muted">{t('footer.mapCredit')}</p>
         </div>

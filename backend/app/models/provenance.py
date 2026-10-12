@@ -88,7 +88,10 @@ class ChangeProposal(Base):
     """A newly imported value that conflicts with a verified value. Never auto-applied."""
 
     __tablename__ = "change_proposals"
-    __table_args__ = (check_in("status", ("pending", "accepted", "rejected", "superseded")),)
+    __table_args__ = (
+        check_in("status", ("pending", "accepted", "rejected", "superseded")),
+        check_in("origin", ("import", "provider", "ai")),
+    )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     location_id: Mapped[int] = mapped_column(ForeignKey("locations.id", ondelete="CASCADE"), index=True)
@@ -97,6 +100,8 @@ class ChangeProposal(Base):
     proposed_value: Mapped[dict | list | str | None] = mapped_column(JSONType)
     source_record_id: Mapped[int | None] = mapped_column(ForeignKey("source_records.id", ondelete="SET NULL"))
     status: Mapped[str] = mapped_column(String(16), default="pending")
+    origin: Mapped[str] = mapped_column(String(16), default="import", server_default="import")
+    submitted_by_id: Mapped[int | None] = mapped_column(ForeignKey("users.id"))
     created_at: Mapped[datetime] = created_at()
     decided_by_id: Mapped[int | None] = mapped_column(ForeignKey("users.id"))
     decided_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))

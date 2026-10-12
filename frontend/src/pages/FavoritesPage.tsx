@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, Navigate } from 'react-router';
 import { api } from '../api/client';
@@ -8,12 +8,17 @@ import { Empty, ErrorMessage, errorKey, Loading } from '../components/Status';
 import { formatAddress, telHref } from '../lib/format';
 import { useAsync } from '../lib/useAsync';
 import { useAuth } from '../state/auth';
+import { warmOfflineCache } from '../lib/offline';
 
 export function FavoritesPage() {
   const { t } = useTranslation();
   const { user, loading: authLoading } = useAuth();
   const { data, error, loading, reload } = useAsync(() => (user ? api.favorites() : Promise.resolve({ items: [] })), [user?.id]);
   const [msg, setMsg] = useState<string | null>(null);
+  // Keep saved pantries' details + visit cards available offline (the service worker caches these GETs).
+  useEffect(() => {
+    if (data?.items.length) warmOfflineCache(data.items.filter((f) => f.available).map((f) => f.id));
+  }, [data]);
 
   if (authLoading) return <Loading />;
   if (!user) return <Navigate to="/login?next=/favorites" replace />;

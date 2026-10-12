@@ -90,3 +90,13 @@ def test_restricted_source_needs_direct_verification_to_publish(db, admin, tmp_p
     apply_action(db, loc, admin, "verify", "phone", "Confirmed hours with site coordinator")
     apply_action(db, loc, admin, "publish")
     assert loc.published
+
+
+def test_afac_html_adapter_expands_day_abbreviations():
+    cfg = load_source_configs()["afac-get-groceries"]
+    ad = get_adapter(cfg)
+    doc = FetchedDocument("x", 200, (FIXTURES / "afac_schema_synthetic.html").read_bytes(), "text/html", None)
+    [c] = [ad.normalize(r) for r in ad.parse(doc)]
+    got = {(s.weekday, s.opens, s.closes) for s in c.services[0].schedules}
+    assert got == {(d, "09:00", "13:00") for d in range(5)} | {(1, "18:00", "19:00"), (3, "18:00", "19:00"), (5, "08:30", "12:30")}
+    assert c.eligibility[0].requirement_type == "residency" and c.zip == "22204" and c.lat == 38.86

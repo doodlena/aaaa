@@ -1,109 +1,191 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="43" failures="0" errors="0" time="3.308182208">
-    <testsuite name="src/__tests__/ResultsList.test.tsx" timestamp="2026-10-12T15:33:15.144Z" hostname="Macbooks-MacBook-Air-2.local" tests="5" failures="0" errors="0" skipped="0" time="0.158367625">
-        <testcase classname="src/__tests__/ResultsList.test.tsx" name="ResultsList &gt; renders confirmed results with badges, match reasons and warnings" time="0.093284458">
+<testsuites name="vitest tests" tests="65" failures="0" errors="0" time="5.064055914">
+    <testsuite name="src/__tests__/ResultsList.test.tsx" timestamp="2026-10-12T17:02:11.415Z" hostname="Macbooks-MacBook-Air-2.local" tests="5" failures="0" errors="0" skipped="0" time="0.147820541">
+        <testcase classname="src/__tests__/ResultsList.test.tsx" name="ResultsList &gt; renders confirmed results with badges, match reasons and warnings" time="0.084807292">
         </testcase>
-        <testcase classname="src/__tests__/ResultsList.test.tsx" name="ResultsList &gt; lists uncertain matches in a separate, labelled section with what is unconfirmed" time="0.040965375">
+        <testcase classname="src/__tests__/ResultsList.test.tsx" name="ResultsList &gt; lists uncertain matches in a separate, labelled section with what is unconfirmed" time="0.037278375">
         </testcase>
-        <testcase classname="src/__tests__/ResultsList.test.tsx" name="ResultsList &gt; shows the coverage notice unless coverage is complete" time="0.008584625">
+        <testcase classname="src/__tests__/ResultsList.test.tsx" name="ResultsList &gt; shows the coverage notice unless coverage is complete" time="0.017084959">
         </testcase>
-        <testcase classname="src/__tests__/ResultsList.test.tsx" name="ResultsList &gt; shows an explicit unknown schedule rather than a date" time="0.0046115">
+        <testcase classname="src/__tests__/ResultsList.test.tsx" name="ResultsList &gt; shows an explicit unknown schedule rather than a date" time="0.005663375">
         </testcase>
-        <testcase classname="src/__tests__/ResultsList.test.tsx" name="ResultsList &gt; renders an empty state" time="0.009280333">
-        </testcase>
-    </testsuite>
-    <testsuite name="src/__tests__/SearchForm.test.tsx" timestamp="2026-10-12T15:33:15.145Z" hostname="Macbooks-MacBook-Air-2.local" tests="5" failures="0" errors="0" skipped="0" time="0.465667333">
-        <testcase classname="src/__tests__/SearchForm.test.tsx" name="SearchForm &gt; geocodes a ZIP and navigates to the explorer with coordinates" time="0.133628334">
-        </testcase>
-        <testcase classname="src/__tests__/SearchForm.test.tsx" name="SearchForm &gt; applies a signed-in user’s saved preferences to the new search" time="0.090250375">
-        </testcase>
-        <testcase classname="src/__tests__/SearchForm.test.tsx" name="SearchForm &gt; shows a helpful message when nothing matches" time="0.049270625">
-        </testcase>
-        <testcase classname="src/__tests__/SearchForm.test.tsx" name="SearchForm &gt; reports geocoder outages and too-short input" time="0.110852083">
-        </testcase>
-        <testcase classname="src/__tests__/SearchForm.test.tsx" name="SearchForm &gt; lets people choose when several places match" time="0.080745209">
+        <testcase classname="src/__tests__/ResultsList.test.tsx" name="ResultsList &gt; renders an empty state" time="0.002154708">
         </testcase>
     </testsuite>
-    <testsuite name="src/__tests__/admin.test.tsx" timestamp="2026-10-12T15:33:15.147Z" hostname="Macbooks-MacBook-Air-2.local" tests="4" failures="0" errors="0" skipped="0" time="0.507812">
-        <testcase classname="src/__tests__/admin.test.tsx" name="admin &gt; blocks non-admin accounts client-side" time="0.096982875">
+    <testsuite name="src/__tests__/SearchForm.test.tsx" timestamp="2026-10-12T17:02:11.416Z" hostname="Macbooks-MacBook-Air-2.local" tests="5" failures="0" errors="0" skipped="0" time="0.488663708">
+        <testcase classname="src/__tests__/SearchForm.test.tsx" name="SearchForm &gt; geocodes a ZIP and navigates to the explorer with coordinates" time="0.130293959">
         </testcase>
-        <testcase classname="src/__tests__/admin.test.tsx" name="admin &gt; queue shows status counts and records" time="0.114432125">
+        <testcase classname="src/__tests__/SearchForm.test.tsx" name="SearchForm &gt; applies a signed-in user’s saved preferences to the new search" time="0.059458792">
         </testcase>
-        <testcase classname="src/__tests__/admin.test.tsx" name="admin &gt; review: verify requires a method, actions and decisions send CSRF" time="0.226022542">
+        <testcase classname="src/__tests__/SearchForm.test.tsx" name="SearchForm &gt; shows a helpful message when nothing matches" time="0.068093459">
         </testcase>
-        <testcase classname="src/__tests__/admin.test.tsx" name="admin &gt; destructive actions ask for confirmation first" time="0.069613417">
+        <testcase classname="src/__tests__/SearchForm.test.tsx" name="SearchForm &gt; reports geocoder outages and too-short input" time="0.096735">
         </testcase>
-    </testsuite>
-    <testsuite name="src/__tests__/auth.test.tsx" timestamp="2026-10-12T15:33:15.148Z" hostname="Macbooks-MacBook-Air-2.local" tests="5" failures="0" errors="0" skipped="0" time="0.904088208">
-        <testcase classname="src/__tests__/auth.test.tsx" name="auth forms &gt; signs in and follows a safe ?next redirect" time="0.309418209">
-        </testcase>
-        <testcase classname="src/__tests__/auth.test.tsx" name="auth forms &gt; shows a clear error for wrong credentials" time="0.261771958">
-        </testcase>
-        <testcase classname="src/__tests__/auth.test.tsx" name="auth forms &gt; validates registration before calling the API" time="0.162625834">
-        </testcase>
-        <testcase classname="src/__tests__/auth.test.tsx" name="auth forms &gt; registers with the current UI language and reports a taken email" time="0.16834625">
-        </testcase>
-        <testcase classname="src/__tests__/auth.test.tsx" name="auth forms &gt; rejects open redirects" time="0.000738333">
+        <testcase classname="src/__tests__/SearchForm.test.tsx" name="SearchForm &gt; lets people choose when several places match" time="0.13325925">
         </testcase>
     </testsuite>
-    <testsuite name="src/__tests__/explorer.test.tsx" timestamp="2026-10-12T15:33:15.148Z" hostname="Macbooks-MacBook-Air-2.local" tests="3" failures="0" errors="0" skipped="0" time="0.498118">
-        <testcase classname="src/__tests__/explorer.test.tsx" name="ExplorerPage &gt; shows an error with retry when search fails, then recovers" time="0.253978667">
+    <testsuite name="src/__tests__/admin.test.tsx" timestamp="2026-10-12T17:02:11.417Z" hostname="Macbooks-MacBook-Air-2.local" tests="4" failures="0" errors="0" skipped="0" time="0.587550833">
+        <testcase classname="src/__tests__/admin.test.tsx" name="admin &gt; blocks non-admin accounts client-side" time="0.059941042">
         </testcase>
-        <testcase classname="src/__tests__/explorer.test.tsx" name="ExplorerPage &gt; applying a filter updates the URL and the API query" time="0.200148375">
+        <testcase classname="src/__tests__/admin.test.tsx" name="admin &gt; queue shows status counts and records" time="0.1480655">
         </testcase>
-        <testcase classname="src/__tests__/explorer.test.tsx" name="ExplorerPage &gt; announces network failures in plain language" time="0.042458667">
+        <testcase classname="src/__tests__/admin.test.tsx" name="admin &gt; review: verify requires a method, actions and decisions send CSRF" time="0.2781995">
         </testcase>
-    </testsuite>
-    <testsuite name="src/__tests__/favorites.test.tsx" timestamp="2026-10-12T15:33:15.149Z" hostname="Macbooks-MacBook-Air-2.local" tests="3" failures="0" errors="0" skipped="0" time="0.128142291">
-        <testcase classname="src/__tests__/favorites.test.tsx" name="FavoritesPage &gt; lists saved places, hides unpublished ones, and removes with CSRF" time="0.113864583">
-        </testcase>
-        <testcase classname="src/__tests__/favorites.test.tsx" name="FavoritesPage &gt; shows an empty state" time="0.00619975">
-        </testcase>
-        <testcase classname="src/__tests__/favorites.test.tsx" name="FavoritesPage &gt; sends guests to sign in" time="0.007218208">
+        <testcase classname="src/__tests__/admin.test.tsx" name="admin &gt; destructive actions ask for confirmation first" time="0.097518959">
         </testcase>
     </testsuite>
-    <testsuite name="src/__tests__/filters.test.ts" timestamp="2026-10-12T15:33:15.149Z" hostname="Macbooks-MacBook-Air-2.local" tests="7" failures="0" errors="0" skipped="0" time="0.009644709">
-        <testcase classname="src/__tests__/filters.test.ts" name="search filters → API query string &gt; builds location, radius and sort" time="0.004259084">
+    <testsuite name="src/__tests__/auth.test.tsx" timestamp="2026-10-12T17:02:11.417Z" hostname="Macbooks-MacBook-Air-2.local" tests="5" failures="0" errors="0" skipped="0" time="0.946685833">
+        <testcase classname="src/__tests__/auth.test.tsx" name="auth forms &gt; signs in and follows a safe ?next redirect" time="0.258272708">
         </testcase>
-        <testcase classname="src/__tests__/filters.test.ts" name="search filters → API query string &gt; joins multi-select groups with commas and maps schedule modes" time="0.002375708">
+        <testcase classname="src/__tests__/auth.test.tsx" name="auth forms &gt; shows a clear error for wrong credentials" time="0.18441675">
         </testcase>
-        <testcase classname="src/__tests__/filters.test.ts" name="search filters → API query string &gt; omits empty filters and falls back from distance sort without a location" time="0.000540125">
+        <testcase classname="src/__tests__/auth.test.tsx" name="auth forms &gt; validates registration before calling the API" time="0.216080333">
         </testcase>
-        <testcase classname="src/__tests__/filters.test.ts" name="search filters → API query string &gt; sends a viewport bbox as minLon,minLat,maxLon,maxLat" time="0.000339459">
+        <testcase classname="src/__tests__/auth.test.tsx" name="auth forms &gt; registers with the current UI language and reports a taken email" time="0.286716">
         </testcase>
-        <testcase classname="src/__tests__/filters.test.ts" name="explorer URL state &gt; round-trips through the URL" time="0.000595292">
-        </testcase>
-        <testcase classname="src/__tests__/filters.test.ts" name="explorer URL state &gt; drops unknown codes and invalid values" time="0.000360416">
-        </testcase>
-        <testcase classname="src/__tests__/filters.test.ts" name="explorer URL state &gt; counts active filters" time="0.000412667">
+        <testcase classname="src/__tests__/auth.test.tsx" name="auth forms &gt; rejects open redirects" time="0.000372">
         </testcase>
     </testsuite>
-    <testsuite name="src/__tests__/language.test.tsx" timestamp="2026-10-12T15:33:15.150Z" hostname="Macbooks-MacBook-Air-2.local" tests="3" failures="0" errors="0" skipped="0" time="0.098751458">
-        <testcase classname="src/__tests__/language.test.tsx" name="language switching &gt; switches UI text to Spanish and remembers the choice" time="0.075085041">
+    <testsuite name="src/__tests__/explorer.test.tsx" timestamp="2026-10-12T17:02:11.417Z" hostname="Macbooks-MacBook-Air-2.local" tests="3" failures="0" errors="0" skipped="0" time="0.573241292">
+        <testcase classname="src/__tests__/explorer.test.tsx" name="ExplorerPage &gt; shows an error with retry when search fails, then recovers" time="0.214010209">
         </testcase>
-        <testcase classname="src/__tests__/language.test.tsx" name="language switching &gt; saves the preference to the account (with CSRF header) when signed in" time="0.020933833">
+        <testcase classname="src/__tests__/explorer.test.tsx" name="ExplorerPage &gt; applying a filter updates the URL and the API query" time="0.304909083">
         </testcase>
-        <testcase classname="src/__tests__/language.test.tsx" name="language switching &gt; has complete, matching English and Spanish catalogs" time="0.002091208">
-        </testcase>
-    </testsuite>
-    <testsuite name="src/__tests__/resourceDetail.test.tsx" timestamp="2026-10-12T15:33:15.151Z" hostname="Macbooks-MacBook-Air-2.local" tests="4" failures="0" errors="0" skipped="0" time="0.364851667">
-        <testcase classname="src/__tests__/resourceDetail.test.tsx" name="Resource detail &gt; renders unknown eligibility as &quot;Not confirmed&quot;, never as not required" time="0.151580208">
-        </testcase>
-        <testcase classname="src/__tests__/resourceDetail.test.tsx" name="Resource detail &gt; shows directions, sources, unknown website, caveats, schedule rules and the test-data badge" time="0.073212583">
-        </testcase>
-        <testcase classname="src/__tests__/resourceDetail.test.tsx" name="Resource detail &gt; labels machine translations and can show the original" time="0.126180583">
-        </testcase>
-        <testcase classname="src/__tests__/resourceDetail.test.tsx" name="Resource detail &gt; shows a not-found error from the API" time="0.012508791">
+        <testcase classname="src/__tests__/explorer.test.tsx" name="ExplorerPage &gt; announces network failures in plain language" time="0.053264291">
         </testcase>
     </testsuite>
-    <testsuite name="src/__tests__/selection.test.tsx" timestamp="2026-10-12T15:33:15.152Z" hostname="Macbooks-MacBook-Air-2.local" tests="4" failures="0" errors="0" skipped="0" time="0.172738917">
-        <testcase classname="src/__tests__/selection.test.tsx" name="selection store &gt; notifies subscribers and records origin" time="0.017801667">
+    <testsuite name="src/__tests__/favorites.test.tsx" timestamp="2026-10-12T17:02:11.418Z" hostname="Macbooks-MacBook-Air-2.local" tests="3" failures="0" errors="0" skipped="0" time="0.175935458">
+        <testcase classname="src/__tests__/favorites.test.tsx" name="FavoritesPage &gt; lists saved places, hides unpublished ones, and removes with CSRF" time="0.161024208">
         </testcase>
-        <testcase classname="src/__tests__/selection.test.tsx" name="list ↔ map synchronisation &gt; list &quot;Show on map&quot; selects with origin=list and the map pans to it" time="0.126157667">
+        <testcase classname="src/__tests__/favorites.test.tsx" name="FavoritesPage &gt; shows an empty state" time="0.008102333">
         </testcase>
-        <testcase classname="src/__tests__/selection.test.tsx" name="list ↔ map synchronisation &gt; marker click selects with origin=map, highlights the card and scrolls it into view" time="0.025036708">
+        <testcase classname="src/__tests__/favorites.test.tsx" name="FavoritesPage &gt; sends guests to sign in" time="0.0061165">
         </testcase>
-        <testcase classname="src/__tests__/selection.test.tsx" name="list ↔ map synchronisation &gt; uncertain results get a distinct &quot;?&quot; marker" time="0.002423083">
+    </testsuite>
+    <testsuite name="src/__tests__/filters.test.ts" timestamp="2026-10-12T17:02:11.418Z" hostname="Macbooks-MacBook-Air-2.local" tests="7" failures="0" errors="0" skipped="0" time="0.0100125">
+        <testcase classname="src/__tests__/filters.test.ts" name="search filters → API query string &gt; builds location, radius and sort" time="0.004457416">
+        </testcase>
+        <testcase classname="src/__tests__/filters.test.ts" name="search filters → API query string &gt; joins multi-select groups with commas and maps schedule modes" time="0.002420834">
+        </testcase>
+        <testcase classname="src/__tests__/filters.test.ts" name="search filters → API query string &gt; omits empty filters and falls back from distance sort without a location" time="0.000547">
+        </testcase>
+        <testcase classname="src/__tests__/filters.test.ts" name="search filters → API query string &gt; sends a viewport bbox as minLon,minLat,maxLon,maxLat" time="0.000347666">
+        </testcase>
+        <testcase classname="src/__tests__/filters.test.ts" name="explorer URL state &gt; round-trips through the URL" time="0.00061925">
+        </testcase>
+        <testcase classname="src/__tests__/filters.test.ts" name="explorer URL state &gt; drops unknown codes and invalid values" time="0.000362625">
+        </testcase>
+        <testcase classname="src/__tests__/filters.test.ts" name="explorer URL state &gt; counts active filters" time="0.000419292">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/__tests__/language.test.tsx" timestamp="2026-10-12T17:02:11.418Z" hostname="Macbooks-MacBook-Air-2.local" tests="3" failures="0" errors="0" skipped="0" time="0.116538">
+        <testcase classname="src/__tests__/language.test.tsx" name="language switching &gt; switches UI text to Spanish and remembers the choice" time="0.086259167">
+        </testcase>
+        <testcase classname="src/__tests__/language.test.tsx" name="language switching &gt; saves the preference to the account (with CSRF header) when signed in" time="0.02667075">
+        </testcase>
+        <testcase classname="src/__tests__/language.test.tsx" name="language switching &gt; has complete, matching English and Spanish catalogs" time="0.002918333">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/__tests__/live.test.tsx" timestamp="2026-10-12T17:02:11.418Z" hostname="Macbooks-MacBook-Air-2.local" tests="6" failures="0" errors="0" skipped="0" time="0.241269166">
+        <testcase classname="src/__tests__/live.test.tsx" name="live shelf status &gt; badge names the pantry as source with a relative time, and levels are text (not colour only)" time="0.083818583">
+        </testcase>
+        <testcase classname="src/__tests__/live.test.tsx" name="live shelf status &gt; closed status uses a distinct label and shape class" time="0.005049">
+        </testcase>
+        <testcase classname="src/__tests__/live.test.tsx" name="live shelf status &gt; result card shows the live post and open reports" time="0.017107666">
+        </testcase>
+        <testcase classname="src/__tests__/live.test.tsx" name="live shelf status &gt; feed puts open pantries first and skips ones without a post" time="0.000593333">
+        </testcase>
+        <testcase classname="src/__tests__/live.test.tsx" name="live shelf status &gt; home leads with today&apos;s shelves from the API" time="0.05363775">
+        </testcase>
+        <testcase classname="src/__tests__/live.test.tsx" name="live shelf status &gt; detail: &quot;Today at this pantry&quot; shows live items; without a post it says stock is not confirmed" time="0.080196709">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/__tests__/openshelf.test.tsx" timestamp="2026-10-12T17:02:11.419Z" hostname="Macbooks-MacBook-Air-2.local" tests="16" failures="0" errors="0" skipped="0" time="1.324685042">
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="live filters &gt; build live_open / live_food_group and round-trip through the URL" time="0.006684291">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="report a problem &gt; sends an anonymous report and confirms" time="0.36957125">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="report a problem &gt; explains rate limiting (429) kindly" time="0.083376417">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="visit planner &gt; renders bring / not needed / ask, never showing &quot;ask&quot; as not needed, plus calendar link" time="0.05781325">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="visit planner &gt; says so when no times are confirmed" time="0.011291083">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="pantry portal &gt; lists approved pantries and pending requests" time="0.027471375">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="pantry portal &gt; posts &quot;Open&quot; with items, levels and message" time="0.361667667">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="pantry portal &gt; AI announcement draft prefills the form, flags it, and posts nothing until clicked" time="0.222674208">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="pantry portal &gt; hides the AI paste box when AI drafts are disabled" time="0.011467875">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="pantry portal &gt; sends signed-out visitors to sign in" time="0.005130583">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="AI search &gt; is hidden entirely when disabled" time="0.022790375">
+            <system-err>
+An update to MetaProvider inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() =&gt; {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you&apos;re testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to MetaProvider inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() =&gt; {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you&apos;re testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+An update to AuthProvider inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() =&gt; {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you&apos;re testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+            </system-err>
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="AI search &gt; applies the suggested filters and place to the explorer URL" time="0.077721458">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="admin: pantry access &amp; reports &gt; claims queue shows the listing phone with guidance and approves" time="0.019909583">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="admin: pantry access &amp; reports &gt; reports queue resolves" time="0.016061375">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="i18n catalogs &gt; en and es have identical keys, including every Open Shelf namespace" time="0.001785625">
+        </testcase>
+        <testcase classname="src/__tests__/openshelf.test.tsx" name="i18n catalogs &gt; no old brand strings remain and no value is empty" time="0.02777875">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/__tests__/resourceDetail.test.tsx" timestamp="2026-10-12T17:02:11.420Z" hostname="Macbooks-MacBook-Air-2.local" tests="4" failures="0" errors="0" skipped="0" time="0.279517541">
+        <testcase classname="src/__tests__/resourceDetail.test.tsx" name="Resource detail &gt; renders unknown eligibility as &quot;Not confirmed&quot;, never as not required" time="0.140138292">
+        </testcase>
+        <testcase classname="src/__tests__/resourceDetail.test.tsx" name="Resource detail &gt; shows directions, sources, unknown website, caveats, schedule rules and the test-data badge" time="0.054361375">
+        </testcase>
+        <testcase classname="src/__tests__/resourceDetail.test.tsx" name="Resource detail &gt; labels machine translations and can show the original" time="0.07676">
+        </testcase>
+        <testcase classname="src/__tests__/resourceDetail.test.tsx" name="Resource detail &gt; shows a not-found error from the API" time="0.007507375">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/__tests__/selection.test.tsx" timestamp="2026-10-12T17:02:11.420Z" hostname="Macbooks-MacBook-Air-2.local" tests="4" failures="0" errors="0" skipped="0" time="0.172136">
+        <testcase classname="src/__tests__/selection.test.tsx" name="selection store &gt; notifies subscribers and records origin" time="0.01751725">
+        </testcase>
+        <testcase classname="src/__tests__/selection.test.tsx" name="list ↔ map synchronisation &gt; list &quot;Show on map&quot; selects with origin=list and the map pans to it" time="0.122888459">
+        </testcase>
+        <testcase classname="src/__tests__/selection.test.tsx" name="list ↔ map synchronisation &gt; marker click selects with origin=map, highlights the card and scrolls it into view" time="0.0284945">
+        </testcase>
+        <testcase classname="src/__tests__/selection.test.tsx" name="list ↔ map synchronisation &gt; uncertain results get a distinct &quot;?&quot; marker" time="0.002446166">
         </testcase>
     </testsuite>
 </testsuites>

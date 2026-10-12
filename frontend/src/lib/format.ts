@@ -77,3 +77,40 @@ export function safeUrl(u: string | null | undefined): string | null {
     return null;
   }
 }
+
+/** Whole minutes since an ISO timestamp (never negative). */
+export function minutesSince(iso: string, now: number = Date.now()): number {
+  const t = new Date(iso).getTime();
+  if (Number.isNaN(t)) return 0;
+  return Math.max(0, Math.floor((now - t) / 60000));
+}
+
+/** "just now" / "12 min ago" / "2 h ago" / "3 d ago" via i18n keys time.*. */
+export function timeAgo(iso: string, t: (k: string, o?: Record<string, unknown>) => string, now: number = Date.now()): string {
+  const m = minutesSince(iso, now);
+  if (m < 1) return t('time.justNow');
+  if (m < 60) return t('time.minutesAgo', { count: m });
+  const h = Math.floor(m / 60);
+  if (h < 24) return t('time.hoursAgo', { count: h });
+  return t('time.daysAgo', { count: Math.floor(h / 24) });
+}
+
+/** Local "YYYY-MM-DDTHH:MM" for <input type="datetime-local">. */
+export function toLocalInput(d: Date): string {
+  const p = (n: number) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+
+/** End of today (23:59) in the browser's local time, as a datetime-local value. */
+export function endOfTodayInput(): string {
+  const d = new Date();
+  d.setHours(23, 59, 0, 0);
+  return toLocalInput(d);
+}
+
+/** datetime-local value → ISO string with the browser's offset (the API stores timestamps with time zones). */
+export function localInputToISO(v: string): string | null {
+  if (!v) return null;
+  const d = new Date(v);
+  return Number.isNaN(d.getTime()) ? null : d.toISOString();
+}

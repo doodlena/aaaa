@@ -1,4 +1,4 @@
-from app.models.geo import Jurisdiction, SchoolDivision, TitleIDivisionMetric, division_jurisdictions  # noqa: F401
+from app.models.geo import CoverageArea, Jurisdiction, SchoolDivision, TitleIDivisionMetric, division_jurisdictions  # noqa: F401
 from app.models.provenance import (  # noqa: F401
     AuditLog,
     ChangeProposal,
@@ -13,7 +13,6 @@ from app.models.resources import (  # noqa: F401
     DistributionEvent,
     EligibilityRequirement,
     EventOffering,
-    InventoryReport,
     Location,
     Organization,
     Schedule,
@@ -23,4 +22,5 @@ from app.models.resources import (  # noqa: F401
     ServiceFoodType,
     Translation,
 )
-from app.models.users import Favorite, User, UserSession  # noqa: F401
+from app.models.users import AppSetting, Favorite, User, UserSession  # noqa: F401
+from app.models.shelf import CommunityReport, ProviderMembership, ShelfUpdate, SurplusPost  # noqa: F401,E402

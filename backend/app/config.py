@@ -32,13 +32,30 @@ class Settings(BaseSettings):
     # Geocoding provider chain: census (US Census Bureau, free, no key), nominatim (respect usage policy), zip (local table)
     geocoders: list[str] = ["zip", "census", "nominatim"]
     nominatim_url: str = "https://nominatim.openstreetmap.org"
-    http_user_agent: str = "NoVAFoodAccess/0.1 (+https://github.com/; contact via repository issues)"
+    http_user_agent: str = "Lantern/0.3 (+https://github.com/doodlena/aaaa; contact via repository issues)"
 
     # Optional machine translation: none | libretranslate | argos
     translation_provider: str = "none"
     libretranslate_url: str = "http://localhost:5000"
 
     max_search_radius_km: float = 80.0
+
+    # Unverified-but-sourced listings. "permitted": show candidates backed by a source that allows republication with
+    # attribution, labelled "source_reported". "internal_preview": also sources that need permission — local review
+    # only, refused when environment=production. "off": verified listings only.
+    source_reported: str = "permitted"
+
+    # Branding (single place to rename the app; the UI reads it from /api/meta/features)
+    app_name: str = "Lantern"
+
+    # Community reports: this many open "was closed"/"wrong info" reports in 7 days send a verified listing to review
+    report_review_threshold: int = 3
+
+    # Optional Claude features (see app/services/ai.py). Credentials come from ANTHROPIC_API_KEY (never stored here).
+    ai_enabled: bool = False
+    ai_model: str = "claude-sonnet-5-5"
+    secret_key: str | None = None  # Fernet key for encrypting stored secrets (required in production)
+    ai_public_search_per_hour: int = 30
 
 
 @lru_cache

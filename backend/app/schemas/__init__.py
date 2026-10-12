@@ -1,5 +1,5 @@
 """Pydantic request/response models for the REST API."""
-from datetime import date
+from datetime import date, datetime
 from typing import Literal
 
 from pydantic import BaseModel, EmailStr, Field, field_validator
@@ -54,6 +54,8 @@ class ResourceSummary(BaseModel):
     is_synthetic: bool
     match_reasons: list[dict]
     unconfirmed: list[str] | None = None
+    live: dict | None = None
+    open_reports: int = 0
 
 
 class Coverage(BaseModel):
@@ -220,3 +222,127 @@ class ResourceEditIn(BaseModel):
         if not u:
             raise ValueError("must be an http(s) URL")
         return u
+
+
+# --- Lantern: reports, pantry portal, AI -------------------------------------------------------------------------
+
+class ReportIn(BaseModel):
+    kind: Literal["was_closed", "wrong_info", "out_of_food", "other"]
+    note: str | None = Field(default=None, max_length=500)
+
+
+class ShelfItemIn(BaseModel):
+    food_type: str
+    level: Literal["plenty", "some", "low"]
+
+    @field_validator("food_type")
+    @classmethod
+    def _ft(cls, v):
+        from app.vocab import FOOD_TYPES
+
+        if v not in FOOD_TYPES:
+            raise ValueError("unknown food type")
+        return v
+
+
+class ShelfUpdateIn(BaseModel):
+    status: Literal["open", "limited", "out", "closed"]
+    message: str | None = Field(default=None, max_length=280)
+    items: list[ShelfItemIn] = Field(default_factory=list, max_length=30)
+    expires_at: datetime | None = None  # default: end of today (local); max 3 days ahead
+    ai_assisted: bool = False
+
+
+class ClaimIn(BaseModel):
+    location_id: int
+    role_title: str = Field(min_length=2, max_length=120)
+    note: str | None = Field(default=None, max_length=1000)
+
+
+class EventIn(BaseModel):
+    title: str = Field(min_length=3, max_length=300)
+    starts_at: datetime
+    ends_at: datetime | None = None
+    registration_deadline: datetime | None = None
+    appointment_required: Literal[TRISTATE] = "unknown"  # type: ignore[valid-type]
+    notes: str | None = Field(default=None, max_length=1000)
+    offerings: list[str] = Field(default_factory=list)
+    ai_assisted: bool = False
+
+
+class ClosureIn(BaseModel):
+    date: date
+    reason: str | None = Field(default=None, max_length=300)
+
+
+class ChangeRequestIn(BaseModel):
+    """Pantry-proposed corrections. They enter the review queue as change proposals (origin=provider)."""
+
+    phone: str | None = None
+    website: str | None = None
+    registration_url: str | None = None
+    notes: str | None = Field(default=None, max_length=2000)
+    schedules: list[ScheduleIn] | None = None
+    eligibility: list[EligibilityIn] | None = None
+    message_to_reviewer: str | None = Field(default=None, max_length=1000)
+
+    @field_validator("website", "registration_url")
+    @classmethod
+    def _http(cls, v):
+        if v in (None, ""):
+            return None
+        from app.ingestion.normalization.text import normalize_url
+
+        u = normalize_url(v)
+        if not u:
+            raise ValueError("must be an http(s) URL")
+        return u
+
+
+class ReportResponseIn(BaseModel):
+    response: str | None = Field(default=None, max_length=500)
+    resolve: bool = True
+
+
+class SurplusIn(BaseModel):
+    location_id: int
+    title: str = Field(min_length=3, max_length=160)
+    food_types: list[str] = Field(default_factory=list)
+    quantity: str | None = Field(default=None, max_length=160)
+    pickup_notes: str | None = Field(default=None, max_length=500)
+    available_until: datetime
+
+
+class SurplusClaimIn(BaseModel):
+    location_id: int
+
+
+class AnnouncementIn(BaseModel):
+    text: str = Field(min_length=5, max_length=4000)
+
+
+class AISearchIn(BaseModel):
+    q: str = Field(min_length=3, max_length=300)
+    lang: Lang = "en"
+
+
+class DecisionSimpleIn(BaseModel):
+    decision: Literal["approve", "reject", "revoke", "resolve", "dismiss"]
+    notes: str | None = Field(default=None, max_length=2000)
+
+
+class AIKeyIn(BaseModel):
+    api_key: str = Field(min_length=20, max_length=300)
+
+    @field_validator("api_key")
+    @classmethod
+    def _shape(cls, v):
+        v = v.strip()
+        if not v.startswith("sk-ant-") or any(c.isspace() for c in v):
+            raise ValueError("This does not look like an Anthropic API key (it should start with sk-ant-)")
+        return v
+
+
+class AISettingsIn(BaseModel):
+    enabled: bool | None = None
+    model: Literal["claude-sonnet-5-5", "claude-opus-5-5", "claude-haiku-5-5"] | None = None

@@ -1,4 +1,22 @@
 import type {
+  AdminClaim,
+  AdminReport,
+  AISearchResult,
+  AISettings,
+  AITestResult,
+  CoverageArea,
+  AnnouncementDraft,
+  Features,
+  PantryReport,
+  ProviderMe,
+  ReportKind,
+  ShelfHistoryItem,
+  ShelfItem,
+  LiveShelf,
+  LiveStatus,
+  SurplusPost,
+  Tristate,
+  VisitPlan,
   AdminSource,
   Categories,
   ChangeProposal,
@@ -46,7 +64,7 @@ export function readCookie(name: string): string | null {
   return match ? decodeURIComponent(match.slice(name.length + 1)) : null;
 }
 
-type Method = 'GET' | 'POST' | 'PATCH' | 'DELETE';
+type Method = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export async function request<T>(method: Method, path: string, body?: unknown, signal?: AbortSignal): Promise<T> {
   const headers: Record<string, string> = { Accept: 'application/json' };
@@ -108,7 +126,13 @@ export const api = {
   geocode: (q: string) => request<{ results: GeocodeResult[]; unavailable_providers: string[] }>('GET', `/geocode${qs({ q })}`),
   categories: () => request<Categories>('GET', '/meta/categories'),
   jurisdictions: () => request<Jurisdiction[]>('GET', '/jurisdictions'),
+  coverageAreas: () => request<CoverageArea[]>('GET', '/coverage-areas'),
   verificationMeta: () => request<VerificationMeta>('GET', '/meta/verification'),
+  features: () => request<Features>('GET', '/meta/features'),
+  visitPlan: (id: number | string, signal?: AbortSignal) => request<VisitPlan>('GET', `/resources/${id}/visit-plan`, undefined, signal),
+  report: (id: number | string, kind: ReportKind, note?: string) =>
+    request<{ id: number; status: string }>('POST', `/resources/${id}/reports`, { kind, note: note?.trim() || null }),
+  aiSearch: (q: string, lang: string) => request<AISearchResult>('POST', '/ai/search', { q, lang }),
   // auth & account
   me: () => request<{ user: User | null }>('GET', '/auth/me'),
   login: (email: string, password: string) => request<User>('POST', '/auth/login', { email, password }),
@@ -121,6 +145,33 @@ export const api = {
   updatePreferences: (body: { preferred_language?: string; preferences?: SavedPreferences }) =>
     request<User>('PATCH', '/me/preferences', body),
   deleteAccount: (password: string) => request<void>('DELETE', '/me', { password }),
+  // pantry portal (approved staff; the server enforces membership on every call)
+  provider: {
+    me: () => request<ProviderMe>('GET', '/provider/me'),
+    claim: (location_id: number, role_title: string, note?: string) =>
+      request<{ id: number; status: string }>('POST', '/provider/claims', { location_id, role_title, note: note?.trim() || null }),
+    postShelf: (id: number, body: { status: LiveStatus; message: string | null; items: ShelfItem[]; expires_at: string | null; ai_assisted: boolean }) =>
+      request<LiveShelf>('POST', `/provider/locations/${id}/shelf`, body),
+    clearShelf: (id: number) => request<void>('DELETE', `/provider/locations/${id}/shelf`),
+    shelfHistory: (id: number) => request<{ items: ShelfHistoryItem[] }>('GET', `/provider/locations/${id}/shelf/history`),
+    postEvent: (
+      id: number,
+      body: { title: string; starts_at: string; ends_at: string | null; appointment_required: Tristate; notes: string | null; offerings: string[]; ai_assisted: boolean },
+    ) => request<{ id: number }>('POST', `/provider/locations/${id}/events`, body),
+    postClosure: (id: number, body: { date: string; reason: string | null }) => request<{ id: number }>('POST', `/provider/locations/${id}/closures`, body),
+    changeRequest: (id: number, body: Record<string, unknown>) =>
+      request<{ change_proposal_ids: number[]; status: string }>('POST', `/provider/locations/${id}/change-requests`, body),
+    reports: (id: number) => request<{ items: PantryReport[] }>('GET', `/provider/locations/${id}/reports`),
+    respondReport: (id: number, rid: number, response: string | null, resolve: boolean) =>
+      request<{ id: number; status: string }>('POST', `/provider/locations/${id}/reports/${rid}/response`, { response, resolve }),
+    surplus: () => request<{ items: SurplusPost[] }>('GET', '/provider/surplus'),
+    postSurplus: (body: { location_id: number; title: string; food_types: string[]; quantity: string | null; pickup_notes: string | null; available_until: string }) =>
+      request<SurplusPost>('POST', '/provider/surplus', body),
+    claimSurplus: (postId: number, location_id: number) => request<SurplusPost>('POST', `/provider/surplus/${postId}/claim`, { location_id }),
+    closeSurplus: (postId: number) => request<SurplusPost>('POST', `/provider/surplus/${postId}/close`),
+    announcementDraft: (id: number, text: string) =>
+      request<{ draft: AnnouncementDraft; notice: string }>('POST', `/provider/locations/${id}/ai/announcement-draft`, { text }),
+  },
   // admin
   admin: {
     queue: (params: Record<string, string | number | boolean | undefined>) => request<QueueResponse>('GET', `/admin/queue${qs(params)}`),
@@ -141,5 +192,19 @@ export const api = {
     runs: () => request<{ items: IngestionRun[] }>('GET', '/admin/ingestion/runs'),
     sources: () => request<{ items: AdminSource[] }>('GET', '/admin/sources'),
     quality: (jurisdiction?: string) => request<QualityReport>('GET', `/admin/quality${qs({ jurisdiction })}`),
+    claims: (status = 'pending') => request<{ items: AdminClaim[] }>('GET', `/admin/claims${qs({ status })}`),
+    decideClaim: (id: number, decision: 'approve' | 'reject' | 'revoke', notes?: string) =>
+      request<{ id: number; status: string }>('POST', `/admin/claims/${id}/decision`, { decision, notes: notes || null }),
+    reports: (status = 'open') => request<{ items: AdminReport[] }>('GET', `/admin/reports${qs({ status })}`),
+    decideReport: (id: number, decision: 'resolve' | 'dismiss', notes?: string) =>
+      request<{ id: number; status: string }>('POST', `/admin/reports/${id}/decision`, { decision, notes: notes || null }),
+    aiSettings: () => request<AISettings>('GET', '/admin/ai-settings'),
+    /** The key is sent once and never returned; the response only carries a hint like "…WXYZ" and a live test. */
+    saveAIKey: (api_key: string) => request<AISettings & { test: AITestResult }>('PUT', '/admin/ai-settings/key', { api_key }),
+    deleteAIKey: () => request<AISettings>('DELETE', '/admin/ai-settings/key'),
+    patchAISettings: (body: { enabled?: boolean; model?: string }) => request<AISettings>('PATCH', '/admin/ai-settings', body),
+    testAI: () => request<AITestResult>('POST', '/admin/ai-settings/test'),
+    aiSuggestions: (id: number | string) =>
+      request<{ created_proposals: string[]; suggestions: unknown }>('POST', `/admin/resources/${id}/ai-suggestions`),
   },
 };

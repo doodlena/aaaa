@@ -1,0 +1,17 @@
+id: va08-support-services
+name: VA-08 support services (mental health, benefits, health, housing, legal…) — research of official sources (cited)
+owner: Lantern project research (each record cites its own source page)
+url: file://data/sources/va08_support_services.json
+adapter: structured_json
+retrieval: file
+formats: [json]
+jurisdictions: [arlington-county, alexandria-city, falls-church-city, fairfax-county]
+enabled: true
+store_raw: true
+publication: permitted_with_attribution
+verified_on: "2026-10-12"
+known_limitations:
+  - "AI-assisted research of official/primary sources on the retrieval date; every record cites source_url. Not verified."
+  - "Hotlines without a physical location are listed in docs/pilot_research/VA08_SUPPORT_SERVICES_LOG.md, not imported."
+  - "Confidential shelter addresses are never collected."
+refresh: null

@@ -9,7 +9,39 @@ import { ErrorMessage, Loading } from '../../components/Status';
 import { formatAddress, formatTimeRange, safeUrl } from '../../lib/format';
 import { useAsync } from '../../lib/useAsync';
 import { AdminEditForm } from './AdminEditForm';
-import { adminError, Json, renderValue, StatusPill, When } from './shared';
+import { useAI } from '../../state/meta';
+import { adminError, Json, OriginBadge, renderValue, StatusPill, When } from './shared';
+
+/** Ask the AI to structure free-text hours/eligibility from source records into pending proposals (origin=ai). */
+function AISuggestButton({ id, onDone }: { id: number; onDone: () => void }) {
+  const { t } = useTranslation();
+  const [busy, setBusy] = useState(false);
+  const [msg, setMsg] = useState<string | null>(null);
+  const run = async () => {
+    setBusy(true);
+    setMsg(null);
+    try {
+      const res = await api.admin.aiSuggestions(id);
+      setMsg(res.created_proposals.length ? t('admin.ai.created', { fields: res.created_proposals.join(', ') }) : t('admin.ai.none'));
+      onDone();
+    } catch (e) {
+      setMsg(adminError(e, t));
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <div className="ai-suggest">
+      <button type="button" className="btn btn--secondary btn--sm" disabled={busy} onClick={() => void run()}>
+        {busy ? t('admin.ai.working') : t('admin.ai.button')}
+      </button>
+      <span className="muted small"> {t('admin.ai.hint')}</span>
+      <p role="status" className="form-msg">
+        {msg}
+      </p>
+    </div>
+  );
+}
 
 const MiniMap = lazy(() => import('../../components/MiniMap'));
 
@@ -116,6 +148,7 @@ export function AdminReview() {
   const [flash, setFlash] = useState<string | null>(null);
   const [decisionMsg, setDecisionMsg] = useState<string | null>(null);
   const [editing, setEditing] = useState(false);
+  const ai = useAI();
 
   if (loading && !r) return <Loading />;
   if (error) return <ErrorMessage error={error} onRetry={reload} />;
@@ -302,15 +335,18 @@ export function AdminReview() {
 
       <section aria-labelledby="cp-title" className="review__section">
         <h2 id="cp-title">{t('admin.changeProposals', { count: pendingChanges.length })}</h2>
+        {ai.structure_suggestions && <AISuggestButton id={r.id} onDone={reload} />}
         <div role="status">{decisionMsg && <p className="form-msg">{decisionMsg}</p>}</div>
         {r.change_proposals.length ? (
           <ul className="proposals">
             {r.change_proposals.map((c) => (
               <li key={c.id} className="proposal">
                 <p>
-                  <strong>{c.field}</strong> · <StatusPill status={c.status} /> · <When at={c.created_at} />
+                  <OriginBadge origin={c.origin} /> <strong>{c.field}</strong> · <StatusPill status={c.status} /> · <When at={c.created_at} />
                   {c.source_record_id && <span className="muted"> · {t('admin.sourceRecord')} #{c.source_record_id}</span>}
                 </p>
+                {c.origin === 'ai' && <p className="notice notice--unknown">{t('admin.origin.aiNote')}</p>}
+                {c.origin === 'provider' && <p className="muted small">{t('admin.origin.providerNote')}</p>}
                 <div className="compare">
                   <div>
                     <h4>{t('admin.current')}</h4>

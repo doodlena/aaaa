@@ -1,0 +1,3 @@
+[console_scripts]
+foodaccess = app.cli:main
+openshelf = app.cli:main

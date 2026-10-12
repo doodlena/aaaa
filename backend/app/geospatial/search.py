@@ -7,12 +7,12 @@ and tri-state eligibility evaluation, which need recurrence logic and must keep 
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
 
-from geoalchemy2 import Geography
-from sqlalchemy import and_, cast, exists, func, select
+from geoalchemy2 import Geography, Geometry
+from sqlalchemy import and_, cast, exists, func, or_, select
 from sqlalchemy.orm import Session, selectinload
 
 from app.config import get_settings
-from app.models import DistributionEvent, Jurisdiction, Location, Service, ServiceCategory, ServiceFoodType
+from app.models import DistributionEvent, Jurisdiction, Location, Service, ServiceCategory, ServiceFoodType, Source, SourceRecord, CoverageArea
 from app.services.presenter import eligibility_state, summary
 from app.services.schedule import TZ, windows_on
 from app.vocab import FOOD_TYPES, PUBLIC_REVIEW_STATUSES, SERVICE_TYPES
@@ -38,6 +38,7 @@ class SearchParams:
     radius_km: float = 10.0
     bbox: tuple[float, float, float, float] | None = None  # min_lon, min_lat, max_lon, max_lat
     jurisdiction: str | None = None
+    area: str | None = None  # coverage area id, e.g. "va-08"
     food_groups: list[str] = field(default_factory=list)
     food_types: list[str] = field(default_factory=list)
     service_groups: list[str] = field(default_factory=list)
@@ -47,6 +48,8 @@ class SearchParams:
     upcoming_days: int | None = None
     eligibility: list[str] = field(default_factory=list)  # keys of ELIGIBILITY_FILTERS
     wheelchair: bool = False
+    live_open: bool = False  # pantry posted "open"/"limited" today
+    live_food_groups: list[str] = field(default_factory=list)  # pantry-confirmed on the shelf today
     language: str | None = None
     sort: str = "distance"  # distance | next_distribution | relevance | name
     include_uncertain: bool = True
@@ -54,11 +57,36 @@ class SearchParams:
     page_size: int = 20
 
 
+def source_reported_condition():
+    """Unverified real candidates whose linked source permits public display (labelled 'source_reported')."""
+    s = get_settings()
+    allowed = {"permitted": ["permitted_with_attribution"],
+               "internal_preview": ["permitted_with_attribution", "permission_required", "not_assessed"]}.get(s.source_reported)
+    if s.source_reported == "internal_preview" and s.environment == "production":
+        allowed = ["permitted_with_attribution"]  # restricted datasets are never shown publicly
+    if not allowed:
+        return None
+    return and_(
+        Location.review_status.in_(("candidate", "needs_review")),
+        Location.last_verified_at.is_(None),
+        Location.is_synthetic.is_(False),
+        exists(select(1).select_from(SourceRecord).join(Source, Source.id == SourceRecord.source_id).where(
+            SourceRecord.location_id == Location.id, SourceRecord.status == "linked",
+            Source.config["publication"].as_string().in_(allowed))),
+    )
+
+
 def public_visibility():
     s = get_settings()
-    cond = [
+    verified = and_(
         Location.published.is_(True),
-        Location.review_status.in_(PUBLIC_REVIEW_STATUSES),
+        # verified/stale, or previously verified and now flagged for re-check (keeps its verified data visible)
+        Location.review_status.in_(PUBLIC_REVIEW_STATUSES)
+        | ((Location.review_status == "needs_review") & Location.last_verified_at.isnot(None)),
+    )
+    sr = source_reported_condition()
+    cond = [
+        or_(verified, sr) if sr is not None else verified,
         Location.merged_into_id.is_(None),
         Location.operating_status != "permanently_closed",
         Location.geom.isnot(None),
@@ -99,6 +127,9 @@ def search(db: Session, p: SearchParams, now: datetime | None = None) -> dict:
         conds.append(func.ST_Intersects(Location.geom, cast(func.ST_MakeEnvelope(*p.bbox, 4326), Geography)))
     if p.jurisdiction:
         conds.append(Location.jurisdiction_id == p.jurisdiction)
+    if p.area:
+        conds.append(exists(select(1).where(CoverageArea.id == p.area,
+                                            func.ST_Intersects(CoverageArea.boundary, cast(Location.geom, Geometry)))))
     # Each selected food group / service group must be offered (AND across selections, any code within a group).
     for g in p.food_groups:
         conds.append(_food_filter([c for c, grp in FOOD_TYPES.items() if grp == g]))
@@ -124,13 +155,31 @@ def search(db: Session, p: SearchParams, now: datetime | None = None) -> dict:
         q = q.order_by(distance)
     rows = db.execute(q).all()
 
+    from app.services.shelf import current_shelf, open_report_counts, shelf_dict
+
     target_date = today if p.open_today else p.on_date
+    ids = [row[0].id for row in rows]
+    shelves = current_shelf(db, ids, now)
+    reports = open_report_counts(db, ids)
     matched, uncertain = [], []
     for row in rows:
         loc = row[0]
         dist = row[1] if distance is not None else None
-        item = summary(loc, dist, now, target_date)
+        live = shelf_dict(shelves.get(loc.id))
+        if p.live_open and not (live and live["status"] in ("open", "limited")):
+            continue
+        if p.live_food_groups and not (live and set(p.live_food_groups) <= {i["group"] for i in live["items"]}):
+            continue
+        item = summary(loc, dist, now, target_date, live, reports.get(loc.id, 0))
+        closed_today = bool(live and live["status"] in ("closed", "out"))
+        if closed_today:
+            item["warnings"].append("closed_today_by_pantry" if live["status"] == "closed" else "out_today_by_pantry")
+        if closed_today and target_date == today:
+            continue  # the pantry itself says no food today
         reasons, unknowns, failed = _evaluate(loc, item, p, target_date, today)
+        reasons += [{"code": "on_shelf_today", "value": g} for g in p.live_food_groups]
+        if p.live_open:
+            reasons.append({"code": "open_today_by_pantry"})
         item["match_reasons"] = reasons
         if failed:
             continue

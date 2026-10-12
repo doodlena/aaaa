@@ -42,6 +42,12 @@ ACCEPTANCE = [  # (criterion, evidence tests)
                                                   "list ↔ map synchronisation > marker click selects with origin=map, highlights the card and scrolls it into view"]),
     ("English and Spanish interface translations function", ["language switching > switches UI text to Spanish and remembers the choice",
                                                              "language switching > has complete, matching English and Spanish catalogs"]),
+    ("Pantry live status expires and never shows when stale", ["test_live_shelf_shows_in_search_and_expires"]),
+    ("Pantry corrections and AI suggestions never change listings without review", ["test_provider_corrections_go_to_review_not_live",
+                                                                                     "test_ai_suggestions_become_reviewable_proposals",
+                                                                                     "test_ai_structure_suggestions_drop_unquoted_facts"]),
+    ("Community reports store no identity and escalate repeated problems", ["test_community_reports_anonymous_rate_limited_and_escalate"]),
+    ("Visit planner never turns unknown requirements into 'not needed'", ["test_visit_plan_never_turns_unknown_into_not_needed"]),
     ("Restricted-license sources are not republished without direct provider verification", ["test_restricted_source_needs_direct_verification_to_publish"]),
 ]
 

@@ -131,7 +131,8 @@ export function AdminQueue() {
                       <td>
                         {it.pending_changes > 0 && <div>{t('admin.pendingChanges', { count: it.pending_changes })}</div>}
                         {it.pending_duplicates > 0 && <div>{t('admin.pendingDuplicates', { count: it.pending_duplicates })}</div>}
-                        {!it.pending_changes && !it.pending_duplicates && '—'}
+                        {!!it.open_reports && <div className="queue-reports">{t('admin.openReports', { count: it.open_reports })}</div>}
+                        {!it.pending_changes && !it.pending_duplicates && !it.open_reports && '—'}
                       </td>
                       <td>
                         <When at={it.last_verified_at} />
