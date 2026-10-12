@@ -22,6 +22,8 @@ const PATHS: Record<string, string> = {
   external: 'M14 4h6v6M20 4l-9 9M18 14v5H5V6h5',
   close: 'M6 6l12 12M18 6L6 18',
   arrowLeft: 'M19 12H5m6-6l-6 6 6 6',
+  chevronUp: 'M6 15l6-6 6 6',
+  chevronDown: 'M6 9l6 6 6-6',
   store: 'M4 9l1.5-5h13L20 9M4 9h16M4 9v11h16V9M9 20v-6h6v6',
   flag: 'M5 21V4m0 0h11l-2 4 2 4H5',
   share: 'M12 15V3m0 0L8 7m4-4l4 4M5 12v8h14v-8',

@@ -345,7 +345,9 @@
     "backToResults": "Volver a los resultados",
     "loading": "Buscando ayuda cercana…",
     "updating": "Actualizando resultados…",
-    "errorTitle": "No pudimos cargar los resultados"
+    "errorTitle": "No pudimos cargar los resultados",
+    "hideSearch": "Ocultar opciones de búsqueda",
+    "showSearch": "Mostrar opciones de búsqueda"
   },
   "filters": {
     "title": "Filtros",

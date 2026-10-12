@@ -345,7 +345,9 @@
     "backToResults": "Quay lại kết quả",
     "loading": "Đang tìm trợ giúp gần đây…",
     "updating": "Đang cập nhật kết quả…",
-    "errorTitle": "Chúng tôi không tải được kết quả"
+    "errorTitle": "Chúng tôi không tải được kết quả",
+    "hideSearch": "Ẩn tùy chọn tìm kiếm",
+    "showSearch": "Hiện tùy chọn tìm kiếm"
   },
   "filters": {
     "title": "Bộ lọc",

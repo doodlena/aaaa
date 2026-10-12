@@ -345,7 +345,9 @@
     "backToResults": "결과로 돌아가기",
     "loading": "근처의 도움을 찾는 중…",
     "updating": "결과를 업데이트하는 중…",
-    "errorTitle": "결과를 불러올 수 없습니다"
+    "errorTitle": "결과를 불러올 수 없습니다",
+    "hideSearch": "검색 옵션 숨기기",
+    "showSearch": "검색 옵션 보기"
   },
   "filters": {
     "title": "필터",

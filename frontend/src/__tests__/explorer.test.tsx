@@ -26,6 +26,31 @@ describe('ExplorerPage', () => {
     expect(await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' })).toBeInTheDocument();
   });
 
+  it('search options can be folded away to give the list and map more room, and the choice is remembered', async () => {
+    mockFetch([{ path: '/api/resources/search', body: searchResponse({ items: [summary()] }) }]);
+    const first = renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099&label=ZIP%2022204', path: '/find' });
+    await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' });
+    const fold = screen.getByRole('button', { name: 'Hide search options' });
+    expect(fold).toHaveAttribute('aria-expanded', 'true');
+    expect(screen.getByLabelText('Your address or ZIP code')).toBeVisible();
+    expect(screen.getByLabelText('Distance')).toBeInTheDocument();
+
+    await userEvent.click(fold);
+    const unfold = screen.getByRole('button', { name: 'Show search options' });
+    expect(unfold).toHaveAttribute('aria-expanded', 'false');
+    expect(screen.getByLabelText('Your address or ZIP code')).not.toBeVisible();
+    expect(screen.queryByLabelText('Distance')).toBeNull();
+    // the place being searched and the results stay on screen
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Help near ZIP 22204');
+    expect(screen.getByRole('link', { name: '[TEST] Maple Community Pantry' })).toBeInTheDocument();
+
+    first.unmount(); // coming back to the page later keeps it folded
+    renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099', path: '/find' });
+    expect(await screen.findByRole('button', { name: 'Show search options' })).toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Show search options' }));
+    expect(screen.getByLabelText('Your address or ZIP code')).toBeVisible();
+  });
+
   it('applying a filter updates the URL and the API query', async () => {
     const { calls } = mockFetch([{ path: '/api/resources/search', body: searchResponse({ items: [summary()] }) }]);
     renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099', path: '/find' });

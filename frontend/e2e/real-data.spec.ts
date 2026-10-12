@@ -64,5 +64,10 @@ test.describe('real data (read-only)', () => {
     });
     expect(m.list).toBeGreaterThan(m.listBox); // there is more list than fits…
     expect(m.page).toBeLessThanOrEqual(m.window); // …but only the list panel scrolls
+    // folding the search options away gives the list and map at least three quarters of the window
+    await page.getByRole('button', { name: 'Hide search options' }).click();
+    const share = await page.evaluate(() => document.querySelector('.explorer__body')!.getBoundingClientRect().height / innerHeight);
+    expect(share).toBeGreaterThanOrEqual(0.75);
+    expect(await page.evaluate(() => document.documentElement.scrollHeight <= innerHeight)).toBe(true);
   });
 });

@@ -31,6 +31,9 @@ import { createSelectionStore, useSelection } from '../state/selection';
 
 const MapView = lazy(() => import('../components/MapView'));
 export const PAGE_SIZE = 25;
+/** Remembers on this device whether the search options above the results are folded away. */
+const BAR_KEY = 'nfa_explorer_bar';
+
 export default function ExplorerPage() {
   const { t } = useTranslation();
   const [sp, setSp] = useSearchParams();
@@ -49,6 +52,13 @@ export default function ExplorerPage() {
   const narrow = useMediaQuery('(max-width: 899px)');
   const [mobileView, setMobileView] = useState<'list' | 'map'>('list');
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [barOpen, setBarOpen] = useState(() => {
+    try {
+      return localStorage.getItem(BAR_KEY) !== '0';
+    } catch {
+      return true;
+    }
+  });
   const filtersBtnRef = useRef<HTMLButtonElement>(null);
   const drawerRef = useRef<HTMLDivElement>(null);
 
@@ -72,6 +82,15 @@ export default function ExplorerPage() {
     },
     [sp, setSp, store],
   );
+  const toggleBar = () =>
+    setBarOpen((open) => {
+      try {
+        localStorage.setItem(BAR_KEY, open ? '0' : '1');
+      } catch {
+        /* storage unavailable: the choice just isn't remembered */
+      }
+      return !open;
+    });
   const closeDetail = () => {
     const next = new URLSearchParams(sp);
     next.delete('view');
@@ -112,14 +131,25 @@ export default function ExplorerPage() {
 
   return (
     <div className={`explorer ${narrow ? `explorer--${mobileView}` : ''}`}>
-      <div className="explorer__bar">
-        <h1 className="explorer__title">
-          {placeLabel ? t('explorer.titleNear', { place: placeLabel }) : t('explorer.title')}
-        </h1>
-        <SearchForm compact />
-        <AISearch compact />
-        <NeedsChooser variant="explorer" filters={filters} onToggle={(need) => update(need ? toggleNeedPatch(filters, need) : { food_groups: [], service_groups: [] })} />
+      <div className={`explorer__bar ${barOpen ? '' : 'is-collapsed'}`}>
+        <div className="explorer__head">
+          <h1 className="explorer__title">
+            {placeLabel ? t('explorer.titleNear', { place: placeLabel }) : t('explorer.title')}
+          </h1>
+          {/* Folding the search options away leaves the list and map most of the window. */}
+          <button type="button" className="btn btn--ghost btn--sm explorer__fold" aria-expanded={barOpen} aria-controls="explorer-search" onClick={toggleBar}>
+            <Icon name={barOpen ? 'chevronUp' : 'chevronDown'} />
+            {barOpen ? t('explorer.hideSearch') : t('explorer.showSearch')}
+          </button>
+        </div>
+        <div id="explorer-search" className="explorer__search" hidden={!barOpen}>
+          <SearchForm compact />
+          <AISearch compact />
+          <NeedsChooser variant="explorer" filters={filters} onToggle={(need) => update(need ? toggleNeedPatch(filters, need) : { food_groups: [], service_groups: [] })} />
+        </div>
         <div className="explorer__controls">
+          {barOpen && (
+          <>
           <div className="field field--inline">
             <label htmlFor="radius">{t('explorer.radius')}</label>
             <select id="radius" value={filters.radius_km} disabled={!center || !!filters.bbox} onChange={(e) => update({ radius_km: Number(e.target.value) })}>
@@ -144,6 +174,8 @@ export default function ExplorerPage() {
             <button type="button" className="btn btn--ghost btn--sm" onClick={() => update({ bbox: null })}>
               {t('explorer.backToRadius')}
             </button>
+          )}
+          </>
           )}
           <button
             ref={filtersBtnRef}

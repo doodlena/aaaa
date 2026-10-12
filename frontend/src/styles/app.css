@@ -963,10 +963,36 @@ input[type='radio'] {
   align-items: flex-end;
   gap: var(--sp-3) var(--sp-5);
 }
-.explorer__title {
+.explorer__head {
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+.explorer__title {
+  flex: 1;
+  min-width: 0;
   font-size: var(--fs-lg);
   margin: 0;
+}
+.explorer__fold {
+  flex: none;
+}
+/* The search options keep their place in the bar's wrapping row; folded, they are removed entirely. */
+.explorer__search {
+  display: contents;
+}
+.explorer__search[hidden] {
+  display: none;
+}
+.explorer__bar.is-collapsed {
+  padding-top: var(--sp-2);
+  padding-bottom: var(--sp-2);
+  align-items: center;
+}
+.explorer__bar.is-collapsed .explorer__head {
+  width: auto;
+  flex: 1;
 }
 .explorer__controls {
   display: flex;
@@ -1033,8 +1059,10 @@ input[type='radio'] {
   .explorer__body {
     grid-template-rows: minmax(0, 1fr);
   }
+  /* Same side gutter as the bar and the panels, so the map does not run to the window edge. */
   .explorer__map {
     min-height: 0;
+    margin: 0 var(--sp-4) var(--sp-3);
   }
 }
 @media (max-width: 1199px) and (min-width: 900px) {
@@ -1095,9 +1123,15 @@ input[type='radio'] {
   .explorer--map .explorer__map {
     height: calc(100vh - 220px);
     min-height: 380px;
+    margin: 0 var(--sp-4) var(--sp-3);
   }
   .explorer__bar {
     gap: var(--sp-3);
+  }
+  /* On a phone the folded title keeps its own full-width row; Filters and List/Map sit below it. */
+  .explorer__bar.is-collapsed .explorer__head {
+    width: 100%;
+    flex: none;
   }
   .search--compact {
     width: 100%;
@@ -3426,6 +3460,29 @@ form.is-ai-drafted select {
 .crisis--compact {
   padding: var(--sp-3) var(--sp-4);
   margin: 0;
+}
+/* In the explorer the callout is one slim row on wide screens, so it costs the list and map little height. */
+@media (min-width: 900px) {
+  .crisis--compact {
+    align-items: center;
+    padding: var(--sp-2) var(--sp-4);
+    margin: 0;
+  }
+  .crisis--compact .crisis__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--sp-2) var(--sp-4);
+  }
+  .crisis--compact .crisis__text {
+    flex: 1;
+    min-width: 18rem;
+    margin: 0;
+  }
+  .crisis--compact .crisis__btn {
+    min-height: 36px;
+    padding: 4px 14px;
+  }
 }
 .explorer__crisis,
 .explorer__area-note {

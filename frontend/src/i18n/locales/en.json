@@ -345,7 +345,9 @@
     "backToResults": "Back to results",
     "loading": "Looking for help nearby…",
     "updating": "Updating results…",
-    "errorTitle": "We could not load results"
+    "errorTitle": "We could not load results",
+    "hideSearch": "Hide search options",
+    "showSearch": "Show search options"
   },
   "filters": {
     "title": "Filters",
