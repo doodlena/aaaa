@@ -4,6 +4,7 @@ import getpass
 import json
 import os
 import sys
+from pathlib import Path
 from datetime import UTC, datetime
 
 from sqlalchemy import select
@@ -468,6 +469,99 @@ def cmd_retract_source(a):
         print(f"{a.source_id}: {_retract(db, a.source_id)} listings rebuilt")
 
 
+FOOD_GROUPS_SET = set(__import__("app.vocab", fromlist=["FOOD_SERVICE_GROUPS"]).FOOD_SERVICE_GROUPS)
+
+
+def cmd_apply_audit(a):
+    """Apply verified audit corrections (JSON list of findings) to the source records behind each listing, then rebuild.
+
+    Edits land in the records' normalized data, so `export-snapshot` carries them to every database. Each applied
+    finding is logged (with its evidence) to data/audit/. Verified listings are never touched (they need a reviewer)."""
+    import copy
+
+    from sqlalchemy.orm.attributes import flag_modified
+
+    from app.models import Location, SourceRecord
+    from app.vocab import SERVICE_TYPES
+
+    findings = json.loads(Path(a.file).read_text())
+    applied, skipped = [], []
+    with _db() as db:
+        for f in findings:
+            loc = db.get(Location, f["listing_id"])
+            if not loc or loc.last_verified_at is not None:
+                skipped.append({**f, "skip": "verified or missing"})
+                continue
+            recs = db.scalars(select(SourceRecord).where(SourceRecord.location_id == loc.id, SourceRecord.status == "linked")
+                              .order_by(SourceRecord.id)).all()
+            if not recs:
+                skipped.append({**f, "skip": "no linked records"})
+                continue
+            field = f["field"]
+            if field == "closed_or_not_a_service":
+                for r in recs:
+                    r.status = "rejected"
+            for i, r in enumerate(recs if field != "closed_or_not_a_service" else []):
+                n = copy.deepcopy(r.normalized)
+                if field == "categories":
+                    drop = set(f.get("remove_types") or [])
+                    n["services"] = [sv for sv in n.get("services", []) if sv["service_type"] not in drop]
+                    if i == 0:
+                        have = {sv["service_type"] for sv in n["services"]}
+                        n["services"] += [{"service_type": t, "food_types": [], "schedules": []}
+                                          for t in (f.get("add_types") or []) if t in SERVICE_TYPES and t not in have]
+                    if not n["services"]:
+                        n["services"] = [{"service_type": "other", "food_types": [], "schedules": []}]
+                elif field == "hours":
+                    new = [{"kind": h["kind"], "weekday": h["weekday"], "opens": h["opens"], "closes": h["closes"],
+                            "week_of_month": h.get("week_of_month"), "appointment_only": False, "notes": None}
+                           for h in f.get("new_hours") or []]
+                    for sv in n.get("services", []):
+                        sv["schedules"] = []
+                    n["schedules"] = []
+                    if i == 0:  # the corrected schedule lives on the first record only (others no longer contribute hours)
+                        dist = [h for h in new if h["kind"] == "distribution"]
+                        food = [sv for sv in n.get("services", []) if SERVICE_TYPES.get(sv["service_type"]) in FOOD_GROUPS_SET]
+                        if dist and food:
+                            food[0]["schedules"] = dist
+                        n["schedules"] = [h for h in new if h["kind"] == "operating_hours"] + ([] if food else
+                                         [{**h, "kind": "operating_hours"} for h in dist])
+                elif field == "address":
+                    na = f.get("new_address") or {}
+                    for k in ("address1", "address2", "city", "zip"):
+                        if k in na:
+                            n[k] = na[k] or None
+                elif field == "name" and f.get("new_value"):
+                    n["location_name"] = f["new_value"]
+                elif field == "phone" and f.get("new_value"):
+                    n["phone"] = f["new_value"]
+                elif field == "eligibility" and f.get("new_value"):
+                    from app.ingestion.normalization.text import eligibility_from_text
+
+                    n["raw_eligibility_text"] = f["new_value"]
+                    n["eligibility"] = [{"requirement_type": k, "status": v, "details": f["new_value"], "values": {}}
+                                        for k, v in eligibility_from_text(f["new_value"]).items()]
+                    for sv in n.get("services", []):
+                        sv["eligibility"] = []
+                n.setdefault("notes", None)
+                n["audit_corrections"] = [*(n.get("audit_corrections") or []),
+                                          {"field": field, "evidence_url": f.get("evidence_url"), "evidence_quote": f.get("evidence_quote"),
+                                           "reason": f.get("reason"), "date": a.date}]
+                r.normalized = n
+                flag_modified(r, "normalized")
+            db.flush()
+            if field != "closed_or_not_a_service" or any(x.status == "linked" for x in recs):
+                _rebuild_from_linked(db, loc)
+            applied.append(f)
+        db.commit()
+    out = Path(a.out) if a.out else REPO_ROOT / "data" / "audit"
+    out.mkdir(parents=True, exist_ok=True)
+    (out / f"{a.date}-applied.json").write_text(json.dumps(applied, indent=1, ensure_ascii=False))
+    print(f"applied {len(applied)}; skipped {len(skipped)}")
+    for x in skipped:
+        print("  skipped:", x["listing_id"], x["field"], x["skip"])
+
+
 def cmd_rebuild_rejected(_a):
     """Rebuild unverified listings that have rejected source records, so rejected services disappear."""
     from app.models import Location, SourceRecord
@@ -684,8 +778,38 @@ def cmd_export_snapshot(_a):
                 decisions.append({"record": [rec.source_id, rec.external_id], "decision": d.status,
                                   "target": [target.source_id, target.external_id]})
     (SNAPSHOT_DIR / "duplicate_decisions.json").write_text(json.dumps(decisions, indent=1))
+    # Records a reviewer/audit rejected, so every database built from the snapshot drops them too.
+    with _db() as db:
+        rejected = sorted([r.source_id, r.external_id] for r in db.scalars(select(SourceRecord).where(
+            SourceRecord.status == "rejected", SourceRecord.is_synthetic.is_(False))).all())
+    (SNAPSHOT_DIR / "rejected_records.json").write_text(json.dumps(rejected, indent=1))
     (SNAPSHOT_DIR / "manifest.json").write_text(json.dumps({"exported_at": datetime.now(UTC).isoformat(), "sources": manifest}, indent=1))
     print(f"exported {sum(m['records'] for m in manifest)} records from {len(manifest)} sources to {SNAPSHOT_DIR}")
+
+
+def _apply_rejections(db) -> int:
+    """Replay committed record rejections (data/snapshots/rejected_records.json) and rebuild the listings they touched."""
+    from app.models import Location, SourceRecord
+
+    path = SNAPSHOT_DIR / "rejected_records.json"
+    if not path.exists():
+        return 0
+    keys = {tuple(k) for k in json.loads(path.read_text())}
+    touched = set()
+    for r in db.scalars(select(SourceRecord).where(SourceRecord.status.notin_(("rejected", "invalid")))).all():
+        if (r.source_id, r.external_id) in keys:
+            r.status = "rejected"
+            if r.location_id:
+                touched.add(r.location_id)
+    db.flush()
+    n = 0
+    for lid in touched:
+        loc = db.get(Location, lid)
+        if loc and loc.last_verified_at is None and loc.review_status != "rejected":
+            _rebuild_from_linked(db, loc)
+            n += 1
+    db.commit()
+    return n
 
 
 def _apply_duplicate_decisions(db) -> None:
@@ -746,6 +870,7 @@ def cmd_load_data(a):
             db.commit()
             print(f"{cfg.id}: {run.status} {run.counts.get('inserted')} new, {run.counts.get('unchanged')} unchanged")
         _apply_duplicate_decisions(db)
+        print(f"rejected records replayed: {_apply_rejections(db)} listings rebuilt")
         for cfg in configs.values():
             if cfg.retracted:
                 print(f"{cfg.id}: retracted — {_retract(db, cfg.id)} listings rebuilt without it")
@@ -866,6 +991,11 @@ def main(argv=None):
     dsc.add_argument("--searches", type=int, default=2, help="max web searches (each ~1 cent)")
     dsc.set_defaults(fn=cmd_ai_discover)
     sub.add_parser("ai-usage", help="(AI) spend by feature and this month's total vs budget").set_defaults(fn=cmd_ai_usage)
+    aa = sub.add_parser("apply-audit", help="apply verified audit corrections from a JSON file")
+    aa.add_argument("file")
+    aa.add_argument("--date", required=True)
+    aa.add_argument("--out", help="log directory (default data/audit)")
+    aa.set_defaults(fn=cmd_apply_audit)
     rs = sub.add_parser("retract-source", help="withdraw a source's data (reject its records, rebuild listings)")
     rs.add_argument("source_id")
     rs.set_defaults(fn=cmd_retract_source)

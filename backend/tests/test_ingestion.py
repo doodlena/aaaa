@@ -270,3 +270,46 @@ def test_long_geocode_source_label_does_not_break_import(db, tmp_path):
     cfg = SourceConfig(id="syn-g", name="g", url="file://g", adapter="structured_json", jurisdictions=["arlington-county"], is_synthetic=True)
     run = run_source(db, cfg, Fetcher(fixtures={"file://g": f}))
     assert run.counts["inserted"] == 1 and run.counts["rejected"] == 0
+
+
+def test_apply_audit_fixes_categories_and_hours_and_logs_evidence(db, imported, tmp_path, capsys):
+    import json as _json
+
+    from app.cli import main
+    from app.models import Schedule, Service
+
+    loc = db.scalars(select(Location).where(Location.is_synthetic.is_(True)).order_by(Location.id)).first()
+    types = sorted({s.service_type for s in loc.services})
+    findings = [
+        {"listing_id": loc.id, "listing_name": loc.name, "field": "categories", "current": ",".join(types),
+         "remove_types": [types[0]], "add_types": ["legal_aid"], "evidence_url": "https://example.org/p",
+         "evidence_quote": "We offer free legal clinics", "reason": "test", "confidence": "high"},
+        {"listing_id": loc.id, "listing_name": loc.name, "field": "hours", "current": "x",
+         "new_hours": [{"kind": "operating_hours", "weekday": 2, "opens": "09:00", "closes": "17:00", "week_of_month": None}],
+         "evidence_url": "https://example.org/p", "evidence_quote": "Wednesday 9am-5pm", "reason": "test", "confidence": "high"},
+    ]
+    f = tmp_path / "f.json"
+    f.write_text(_json.dumps(findings))
+    main(["apply-audit", str(f), "--date", "2026-01-01", "--out", str(tmp_path)])
+    db.expire_all()
+    got = {s.service_type for s in db.scalars(select(Service).where(Service.location_id == loc.id)).all()}
+    assert types[0] not in got and "legal_aid" in got
+    hrs = db.scalars(select(Schedule).where(Schedule.location_id == loc.id)).all()
+    assert [(h.weekday, h.opens.strftime("%H:%M"), h.kind) for h in hrs] == [(2, "09:00", "operating_hours")]
+    log = _json.loads((tmp_path / "2026-01-01-applied.json").read_text())
+    assert len(log) == 2 and log[0]["evidence_quote"] == "We offer free legal clinics"
+    assert "applied 2" in capsys.readouterr().out
+
+
+def test_rejected_records_in_snapshot_are_replayed(db, imported, tmp_path, monkeypatch):
+    import json as _json
+
+    from app import cli
+    from app.models import SourceRecord
+
+    rec = db.scalars(select(SourceRecord).where(SourceRecord.status == "linked").order_by(SourceRecord.id)).first()
+    (tmp_path / "rejected_records.json").write_text(_json.dumps([[rec.source_id, rec.external_id]]))
+    monkeypatch.setattr(cli, "SNAPSHOT_DIR", tmp_path)
+    cli._apply_rejections(db)
+    db.expire_all()
+    assert db.get(SourceRecord, rec.id).status == "rejected"
