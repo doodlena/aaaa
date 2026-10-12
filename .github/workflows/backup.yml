@@ -48,6 +48,15 @@ jobs:
           for name in BACKUP_DATABASE_URL BACKUP_PASSPHRASE AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY B2_BUCKET B2_ENDPOINT; do
             if [ -z "${!name}" ]; then echo "::error::Missing repository secret for $name (see docs/deployment/BACKUPS.md)"; missing=1; fi
           done
+          # pg_dump treats anything that is not a postgres URL as a local database name and fails confusingly.
+          url=$(printf '%s' "$BACKUP_DATABASE_URL" | tr -d '[:space:]')
+          case "$url" in
+            postgres://*@*/*|postgresql://*@*/*) ;;
+            *) echo "::error::BACKUP_DATABASE_URL is not a database URL. Copy Render's 'External Database URL' (lantern-db > Info > Connections). It starts with postgresql:// and is one line, not the 'PSQL Command'."; missing=1 ;;
+          esac
+          case "$url" in
+            *@dpg-*-a/*|*@dpg-*-a:*) echo "::error::BACKUP_DATABASE_URL looks like Render's INTERNAL URL (the host has no dots). Use the 'External Database URL', whose host ends in .render.com."; missing=1 ;;
+          esac
           exit $missing
 
       - name: Dump the database
@@ -56,6 +65,8 @@ jobs:
         run: |
           umask 077
           mkdir -p "$RUNNER_TEMP/backup"
+          BACKUP_DATABASE_URL=$(printf '%s' "$BACKUP_DATABASE_URL" | tr -d '[:space:]') # tolerate a pasted space or newline
+          export BACKUP_DATABASE_URL
           docker run --rm -e PGSSLMODE=require -e BACKUP_DATABASE_URL "$PG_IMAGE" \
             sh -c 'pg_dump "$BACKUP_DATABASE_URL" --format=custom --no-owner --no-acl' > "$RUNNER_TEMP/backup/lantern.dump"
           # A dump that cannot be listed, or that has no accounts table, is not a backup.
