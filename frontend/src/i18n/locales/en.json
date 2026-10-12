@@ -1251,7 +1251,7 @@
   },
   "needs": {
     "title": "What do you need?",
-    "lead": "Choose one to see places that offer it. You can add a place or more filters next.",
+    "lead": "Choose one to see places that offer it.",
     "any": "Any kind of help",
     "food": {
       "label": "Food",
