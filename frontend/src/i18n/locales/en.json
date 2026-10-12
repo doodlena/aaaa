@@ -407,7 +407,11 @@
     "kindUncertain": "May match (not confirmed)",
     "youAreHere": "Searched location",
     "livePosted": "Posted today",
-    "legend": "Map key"
+    "legend": "Map key",
+    "popupNext": "Next",
+    "popupDetails": "Details",
+    "popupDirections": "Directions",
+    "popupCall": "Call"
   },
   "schedule": {
     "weekOfMonth": {

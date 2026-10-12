@@ -407,7 +407,11 @@
     "kindUncertain": "Có thể phù hợp (chưa xác nhận)",
     "youAreHere": "Vị trí đã tìm",
     "livePosted": "Đã đăng hôm nay",
-    "legend": "Chú thích bản đồ"
+    "legend": "Chú thích bản đồ",
+    "popupNext": "Lần tới",
+    "popupDetails": "Chi tiết",
+    "popupDirections": "Chỉ đường",
+    "popupCall": "Gọi"
   },
   "schedule": {
     "weekOfMonth": {

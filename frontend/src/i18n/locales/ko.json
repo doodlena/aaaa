@@ -407,7 +407,11 @@
     "kindUncertain": "일치할 수 있음(확인되지 않음)",
     "youAreHere": "검색한 위치",
     "livePosted": "오늘 게시됨",
-    "legend": "지도 범례"
+    "legend": "지도 범례",
+    "popupNext": "다음",
+    "popupDetails": "자세히",
+    "popupDirections": "길찾기",
+    "popupCall": "전화"
   },
   "schedule": {
     "weekOfMonth": {

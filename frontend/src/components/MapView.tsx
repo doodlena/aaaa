@@ -264,6 +264,23 @@ export default function MapView({ items, uncertain, center, radiusKm, store, onS
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items, uncertain, center?.lat, center?.lon, radiusKm, indexOffset]);
 
+  // ---- popup for the selected place (desktop; phones use the bottom "peek" card) ----
+  const popupRef = useRef<maplibregl.Popup | null>(null);
+  const itemsRef = useRef<ResourceSummary[]>([]);
+  itemsRef.current = [...items, ...uncertain];
+  useEffect(() => {
+    const map = mapRef.current;
+    popupRef.current?.remove();
+    popupRef.current = null;
+    if (!map || sel.id === null || narrow) return;
+    const r = itemsRef.current.find((x) => x.id === sel.id);
+    if (!r || r.lat == null || r.lon == null) return;
+    popupRef.current = new maplibregl.Popup({ offset: 28, closeButton: true, maxWidth: '300px', className: 'map-popup' })
+      .setLngLat([r.lon, r.lat])
+      .setDOMContent(popupContent(r, tRef.current))
+      .addTo(map);
+  }, [sel.id, sel.seq, narrow, items, uncertain]);
+
   // ---- selection from the list: pan + highlight ----
   useEffect(() => {
     const map = mapRef.current;
@@ -327,4 +344,45 @@ export default function MapView({ items, uncertain, center, radiusKm, store, onS
       </div>
     </div>
   );
+}
+
+/** Popup body built with DOM APIs (no HTML strings), so listing text can never inject markup. */
+function popupContent(r: ResourceSummary, t: (k: string, o?: Record<string, unknown>) => string): HTMLElement {
+  const el = (tag: string, cls?: string, text?: string) => {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text) e.textContent = text;
+    return e;
+  };
+  const root = el('div', 'map-popup__body');
+  const title = el('a', 'map-popup__title', r.name) as HTMLAnchorElement;
+  title.href = `/resource/${r.id}`;
+  root.append(title);
+  if (r.organization_name && r.organization_name !== r.name) root.append(el('p', 'map-popup__org', r.organization_name));
+  const a = r.address;
+  const addr = a ? [a.address1, a.city, a.zip].filter(Boolean).join(', ') : '';
+  if (addr) root.append(el('p', 'map-popup__addr', addr));
+  const nd = r.next_distribution;
+  if (nd) {
+    const when = new Date(`${nd.date}T${nd.opens || '00:00'}`).toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
+    root.append(el('p', 'map-popup__next', `${t('map.popupNext')}: ${when}${nd.opens ? ` ${nd.opens}${nd.closes ? `–${nd.closes}` : ''}` : ''}`));
+  }
+  const actions = el('div', 'map-popup__actions');
+  const details = el('a', 'btn btn--primary btn--sm', t('map.popupDetails')) as HTMLAnchorElement;
+  details.href = `/resource/${r.id}`;
+  actions.append(details);
+  if (r.lat != null && r.lon != null) {
+    const dir = el('a', 'btn btn--secondary btn--sm', t('map.popupDirections')) as HTMLAnchorElement;
+    dir.href = `https://www.openstreetmap.org/directions?route=%3B${r.lat}%2C${r.lon}`;
+    dir.target = '_blank';
+    dir.rel = 'noopener noreferrer';
+    actions.append(dir);
+  }
+  if (r.phone) {
+    const call = el('a', 'btn btn--secondary btn--sm', t('map.popupCall')) as HTMLAnchorElement;
+    call.href = `tel:${r.phone.replace(/[^\d+]/g, '')}`;
+    actions.append(call);
+  }
+  root.append(actions);
+  return root;
 }

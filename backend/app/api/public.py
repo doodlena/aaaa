@@ -125,7 +125,7 @@ def search_resources(
     if fields == "pins":
         params.page, params.page_size = 1, 1000
         res = search(db, params)
-        slim = lambda i: {k: i.get(k) for k in ("id", "name", "lat", "lon", "verification_label", "is_synthetic", "service_types")} | {  # noqa: E731
+        slim = lambda i: {k: i.get(k) for k in ("id", "name", "organization_name", "address", "phone", "next_distribution", "lat", "lon", "verification_label", "is_synthetic", "service_types")} | {  # noqa: E731
             "live": {"status": i["live"]["status"]} if i.get("live") else None}
         return JSONResponse({"items": [slim(i) for i in res["items"]], "uncertain": [slim(i) for i in res["uncertain"]],
                              "total": res["total"], "truncated": res["truncated"]})

@@ -407,7 +407,11 @@
     "kindUncertain": "Podría coincidir (no confirmado)",
     "youAreHere": "Lugar buscado",
     "livePosted": "Publicado hoy",
-    "legend": "Leyenda del mapa"
+    "legend": "Leyenda del mapa",
+    "popupNext": "Próxima vez",
+    "popupDetails": "Detalles",
+    "popupDirections": "Cómo llegar",
+    "popupCall": "Llamar"
   },
   "schedule": {
     "weekOfMonth": {

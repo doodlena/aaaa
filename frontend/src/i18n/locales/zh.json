@@ -407,7 +407,11 @@
     "kindUncertain": "可能符合（未确认）",
     "youAreHere": "搜索的位置",
     "livePosted": "今天已发布",
-    "legend": "地图图例"
+    "legend": "地图图例",
+    "popupNext": "下次",
+    "popupDetails": "详情",
+    "popupDirections": "路线",
+    "popupCall": "致电"
   },
   "schedule": {
     "weekOfMonth": {
