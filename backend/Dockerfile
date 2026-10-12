@@ -3,7 +3,9 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 COPY backend/pyproject.toml backend/pyproject.toml
 COPY backend/app backend/app
-RUN pip install --no-cache-dir ./backend
+# Editable install: the app must run from /app/backend so it finds migrations/, config/ and data/ beside it
+# (a copied install resolves those paths inside site-packages, where they do not exist).
+RUN pip install --no-cache-dir -e ./backend
 COPY backend/ backend/
 COPY config/ config/
 COPY data/ data/
