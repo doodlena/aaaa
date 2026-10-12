@@ -311,7 +311,7 @@
     "resultsCount_other": "{{count}} places match your search",
     "uncertainCount_one": "{{count}} more may match",
     "uncertainCount_other": "{{count}} more may match",
-    "coverage": "We are still adding resources in this area. There may be more food assistance nearby that is not listed yet.",
+    "coverage": "We are still adding resources in this area. There may be more help nearby that is not listed yet.",
     "truncated": "There are many results. Zoom in or add filters to see them all.",
     "confirmedListLabel": "Places that match",
     "empty": "No places found here",
@@ -580,7 +580,8 @@
     "live": "Approved pantry staff can post today's status (open, limited, out of food, closed) and what's on the shelf. Every post is labelled “Posted by the pantry” with the time, and it disappears on its own when it expires. We confirm each staff member with the pantry before they can post.",
     "reportsInfo": "Anyone can report a problem with a listing. Reports go to the pantry and to our reviewers; several similar reports send the listing back for review.",
     "privacy5": "Problem reports store only what you chose and wrote. No name, account or location is stored.",
-    "privacy6": "AI features, when turned on, receive only the words you type. Your location and account are never sent."
+    "privacy6": "AI features, when turned on, receive only the words you type. Your location and account are never sent.",
+    "labelReported": "Imported from a public list (see Sources). A Lantern reviewer has not checked it yet — call before you go."
   },
   "reviewStatus": {
     "candidate": "Candidate",

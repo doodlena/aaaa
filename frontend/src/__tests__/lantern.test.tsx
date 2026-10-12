@@ -1,0 +1,258 @@
+import { screen, waitFor, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { describe, expect, it, vi } from 'vitest';
+import type { AISettings, User } from '../api/types';
+import en from '../i18n/locales/en.json';
+import es from '../i18n/locales/es.json';
+import {
+  AREA_BBOX,
+  areaFilters,
+  buildSearchQuery,
+  DEFAULT_FILTERS,
+  filtersFromURL,
+  filtersToURL,
+  FOOD_GROUPS,
+  SERVICE_GROUPS,
+  SERVICE_TYPES,
+} from '../lib/filters';
+import { NEEDS, needURL } from '../lib/needs';
+import { HomePage } from '../pages/HomePage';
+import { mockFetch, renderApp, searchResponse, summary } from '../test/utils';
+import { detailFixture, visitPlan } from './fixtures';
+
+vi.mock('../components/MapView', () => ({ default: () => <div data-testid="map-stub" /> }));
+vi.mock('../components/MiniMap', () => ({ default: () => <div data-testid="minimap" /> }));
+import ExplorerPage from '../pages/ExplorerPage';
+import { ResourcePage } from '../pages/ResourcePage';
+import AdminRoutes from '../pages/admin/AdminRoutes';
+
+const admin: User = { id: 1, email: 'admin@example.com', role: 'admin', preferred_language: 'en', preferences: {} };
+const searchCalls = (calls: { url: URL }[]) => calls.filter((c) => c.url.pathname === '/api/resources/search').map((c) => c.url.searchParams);
+
+describe('needs chooser', () => {
+  it('home tiles link to /find with exactly one need filter', async () => {
+    mockFetch([{ path: '/api/resources/search', body: searchResponse({ items: [] }) }]);
+    renderApp(<HomePage />);
+    const nav = screen.getByRole('navigation', { name: 'What do you need?' });
+    const links = within(nav).getAllByRole('link');
+    expect(links).toHaveLength(13);
+    const href = (name: RegExp) => new URL(within(nav).getByRole('link', { name }).getAttribute('href')!, 'http://x');
+    expect(href(/^Mental health and crisis/).searchParams.get('service_group')).toBe('mental_health');
+    expect(href(/^Food/).searchParams.get('food_group')).toBe('groceries');
+    expect(href(/^Food/).searchParams.get('service_group')).toBeNull();
+    expect(href(/^Benefits help/).searchParams.get('service_group')).toBe('benefits');
+    expect(href(/^Legal and immigration/).searchParams.get('service_group')).toBe('legal');
+    expect(href(/^Hot meals/).searchParams.get('service_group')).toBe('community_meal');
+    // district link
+    const district = new URL(screen.getByRole('link', { name: "Explore all of Virginia's 8th District" }).getAttribute('href')!, 'http://x');
+    expect(district.searchParams.get('area')).toBe('va-08');
+    expect(district.searchParams.get('bbox')).toBe('-77.24,38.6,-77.03,38.97');
+  });
+
+  it('every need maps to a known group and keeps the searched place', () => {
+    for (const n of NEEDS) {
+      if (n.service_group) expect(SERVICE_GROUPS).toContain(n.service_group);
+      if (n.food_group) expect(FOOD_GROUPS).toContain(n.food_group);
+    }
+    const base = { ...DEFAULT_FILTERS, lat: 38.86, lon: -77.1, label: 'ZIP 22204', food_groups: ['produce'], live_open: true };
+    const url = new URL(needURL(NEEDS.find((n) => n.id === 'legal')!, base), 'http://x');
+    expect(url.searchParams.get('lat')).toBe('38.86');
+    expect(url.searchParams.get('service_group')).toBe('legal');
+    expect(url.searchParams.get('food_group')).toBeNull(); // non-food need drops food filters
+    expect(url.searchParams.get('live_open')).toBeNull();
+  });
+
+  it('explorer chip replaces the need in URL + API query and hides food filters for non-food needs', async () => {
+    const { calls } = mockFetch([
+      { path: '/api/resources/search', body: searchResponse() },
+      { path: '/api/coverage-areas', body: [] },
+    ]);
+    renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099&food_group=groceries', path: '/find' });
+    await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' });
+    const group = screen.getByRole('group', { name: 'What do you need?' });
+    expect(within(group).getByRole('button', { name: /Food/ })).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByRole('group', { name: 'Type of food' })).toBeInTheDocument();
+    await userEvent.click(within(group).getByRole('button', { name: /Housing and utilities/ }));
+    await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('service_group=housing'));
+    expect(screen.getByTestId('location')).not.toHaveTextContent('food_group');
+    await waitFor(() => expect(searchCalls(calls).some((p) => p.get('service_group') === 'housing' && !p.get('food_group'))).toBe(true));
+    expect(screen.queryByRole('group', { name: 'Type of food' })).toBeNull();
+    expect(screen.getByText(/Food filters are hidden/)).toBeInTheDocument();
+  });
+});
+
+describe('988 crisis callout', () => {
+  it('appears in the explorer when Mental health is selected, with tel/sms links and no close button', async () => {
+    mockFetch([
+      { path: '/api/resources/search', body: searchResponse({ items: [] , total: 0}) },
+      { path: '/api/coverage-areas', body: [] },
+    ]);
+    renderApp(<ExplorerPage />, { route: '/find?service_group=mental_health', path: '/find' });
+    const callout = await screen.findByTestId('crisis-callout');
+    expect(callout).toHaveTextContent('In crisis? Call or text 988 (Suicide & Crisis Lifeline), available 24/7. In an emergency call 911.');
+    expect(within(callout).getByRole('link', { name: 'Call 988' })).toHaveAttribute('href', 'tel:988');
+    expect(within(callout).getByRole('link', { name: 'Text 988' })).toHaveAttribute('href', 'sms:988');
+    expect(within(callout).getByRole('link', { name: 'Call 911' })).toHaveAttribute('href', 'tel:911');
+    expect(within(callout).queryByRole('button')).toBeNull();
+  });
+
+  it('is absent for other needs, and appears on a listing that offers crisis services', async () => {
+    mockFetch([
+      { path: '/api/resources/search', body: searchResponse() },
+      { path: '/api/coverage-areas', body: [] },
+    ]);
+    const { unmount } = renderApp(<ExplorerPage />, { route: '/find?service_group=legal', path: '/find' });
+    await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' });
+    expect(screen.queryByTestId('crisis-callout')).toBeNull();
+    unmount();
+
+    const base = detailFixture();
+    mockFetch([
+      {
+        path: '/api/resources/1',
+        body: { ...base, service_types: ['crisis_support'], services: [{ ...base.services[0], service_type: 'crisis_support' }] },
+      },
+      { path: '/api/resources/1/visit-plan', body: visitPlan },
+    ]);
+    renderApp(<ResourcePage />, { route: '/resource/1', path: '/resource/:id' });
+    expect(await screen.findByTestId('crisis-callout')).toHaveTextContent('Call or text 988');
+  });
+
+  it('explorer shows the callout when a result offers mental health services', async () => {
+    mockFetch([
+      { path: '/api/resources/search', body: searchResponse({ items: [summary({ service_types: ['mental_health_counseling'] })] }) },
+      { path: '/api/coverage-areas', body: [] },
+    ]);
+    renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099', path: '/find' });
+    expect(await screen.findByTestId('crisis-callout')).toBeInTheDocument();
+  });
+});
+
+describe('area view (Virginia 8th District)', () => {
+  it('areaFilters builds area=va-08 + bbox and round-trips through the URL', () => {
+    const f = { ...DEFAULT_FILTERS, lat: 1, lon: 2, ...areaFilters('va-08') };
+    const q = new URLSearchParams(buildSearchQuery(f, 25));
+    expect(q.get('area')).toBe('va-08');
+    expect(q.get('bbox')).toBe(AREA_BBOX['va-08'].join(','));
+    expect(q.get('lat')).toBeNull();
+    expect(q.get('sort')).toBe('name');
+    expect(filtersFromURL(filtersToURL(f)).area).toBe('va-08');
+    expect(filtersFromURL(new URLSearchParams('area=BAD id')).area).toBe('');
+  });
+
+  it('explorer: picking the district searches with area + bbox, paginates the list, and loads all pins for the map', async () => {
+    const page = (n: number) => Array.from({ length: n }, (_, i) => summary({ id: 100 + i, name: `Place ${i}` }));
+    const { calls } = mockFetch([
+      {
+        path: '/api/resources/search',
+        body: (url: URL) =>
+          url.searchParams.get('page_size') === '100'
+            ? searchResponse({ items: page(48), total: 48, page_size: 100 })
+            : searchResponse({ items: page(25), total: 48, page_size: 25 }),
+      },
+      { path: '/api/coverage-areas', body: [{ id: 'va-08', name: "Virginia's 8th Congressional District", localities: [], public_resources: 48 }] },
+    ]);
+    renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099', path: '/find' });
+    const select = await screen.findByLabelText('Area');
+    await screen.findByRole('option', { name: "Virginia's 8th Congressional District" });
+    await userEvent.selectOptions(select, 'va-08');
+    await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('area=va-08'));
+    await waitFor(() =>
+      expect(searchCalls(calls).some((p) => p.get('area') === 'va-08' && p.get('bbox') === '-77.24,38.6,-77.03,38.97' && p.get('page_size') === '25')).toBe(true),
+    );
+    expect(searchCalls(calls).some((p) => p.get('area') === 'va-08' && p.get('page_size') === '100')).toBe(true);
+    expect(await screen.findByRole('heading', { level: 1, name: "Help in Virginia's 8th Congressional District" })).toBeInTheDocument();
+    expect(await screen.findByText(/The map shows all 48 places/)).toBeInTheDocument();
+    expect(screen.getByRole('navigation', { name: 'Result pages' })).toBeInTheDocument();
+  });
+});
+
+describe('admin AI settings', () => {
+  const base: AISettings = {
+    enabled: false,
+    active: false,
+    model: 'claude-sonnet-5-5',
+    allowed_models: ['claude-sonnet-5-5', 'claude-opus-5-5', 'claude-haiku-5-5'],
+    key_source: 'none',
+    key_hint: null,
+  };
+  const withKey: AISettings = { ...base, enabled: true, active: true, key_source: 'admin', key_hint: '…WXYZ' };
+
+  it('saves a key (password field, never echoed), shows the hint + test result and re-fetches features', async () => {
+    const secret = 'sk-ant-api03-abcdefghijklmnopqrstuvWXYZ';
+    const { calls } = mockFetch(
+      [
+        { path: '/api/admin/ai-settings', body: base },
+        { method: 'PUT', path: '/api/admin/ai-settings/key', body: { ...withKey, test: { ok: true, model: 'claude-sonnet-5-5', display_name: 'Claude Sonnet 5.5' } } },
+      ],
+      { user: admin },
+    );
+    renderApp(<AdminRoutes />, { route: '/admin/ai', path: '/admin/*' });
+    expect(await screen.findByTestId('ai-state')).toHaveTextContent('No key');
+    const input = screen.getByLabelText('Anthropic API key');
+    expect(input).toHaveAttribute('type', 'password');
+    expect(input).toHaveAttribute('autocomplete', 'off');
+    const featuresBefore = calls.filter((c) => c.url.pathname === '/api/meta/features').length;
+    await userEvent.type(input, secret);
+    await userEvent.click(screen.getByRole('button', { name: 'Save & test' }));
+    expect(await screen.findByTestId('ai-test-result')).toHaveTextContent('Connection works: Claude Sonnet 5.5.');
+    expect(calls.find((c) => c.method === 'PUT')!.body).toEqual({ api_key: secret });
+    expect(screen.getByTestId('ai-key-hint')).toHaveTextContent('…WXYZ');
+    expect(screen.getByTestId('ai-state')).toHaveTextContent('Active');
+    expect(input).toHaveValue('');
+    expect(document.body.textContent).not.toContain(secret);
+    await waitFor(() => expect(calls.filter((c) => c.url.pathname === '/api/meta/features').length).toBeGreaterThan(featuresBefore));
+  });
+
+  it('shows a failed test, toggles AI off, changes model and removes the key after an in-page confirmation', async () => {
+    const { calls } = mockFetch(
+      [
+        { path: '/api/admin/ai-settings', body: withKey },
+        { method: 'POST', path: '/api/admin/ai-settings/test', body: { ok: false, error: 'The API key was rejected by Anthropic' } },
+        { method: 'PATCH', path: '/api/admin/ai-settings', body: (_u: URL, init?: RequestInit) => ({ ...withKey, ...JSON.parse(String(init!.body)), active: false }) },
+        { method: 'DELETE', path: '/api/admin/ai-settings/key', body: base },
+      ],
+      { user: admin },
+    );
+    const confirmSpy = vi.spyOn(window, 'confirm');
+    renderApp(<AdminRoutes />, { route: '/admin/ai', path: '/admin/*' });
+    await screen.findByTestId('ai-key-hint');
+    await userEvent.click(screen.getByRole('button', { name: 'Test connection' }));
+    expect(await screen.findByTestId('ai-test-result')).toHaveTextContent('The API key was rejected by Anthropic');
+
+    await userEvent.click(screen.getByRole('switch', { name: 'Turn on AI helpers' }));
+    await waitFor(() => expect(calls.find((c) => c.method === 'PATCH')?.body).toEqual({ enabled: false }));
+    expect(await screen.findByText('AI helpers are off.')).toBeInTheDocument();
+
+    await userEvent.selectOptions(screen.getByLabelText('Model'), 'claude-haiku-5-5');
+    await waitFor(() => expect(calls.filter((c) => c.method === 'PATCH').at(-1)?.body).toEqual({ model: 'claude-haiku-5-5' }));
+
+    await userEvent.click(screen.getByRole('button', { name: 'Remove key' }));
+    expect(calls.some((c) => c.method === 'DELETE')).toBe(false);
+    expect(screen.getByText('Remove the saved key?')).toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Yes, remove key' }));
+    expect(await screen.findByText('Key removed. AI helpers are off.')).toBeInTheDocument();
+    expect(calls.some((c) => c.method === 'DELETE' && c.url.pathname === '/api/admin/ai-settings/key')).toBe(true);
+    expect(screen.getByTestId('ai-state')).toHaveTextContent('No key');
+    expect(confirmSpy).not.toHaveBeenCalled();
+  });
+});
+
+describe('catalogs cover every new code', () => {
+  it('en and es label every service type, service group, need and the crisis/area/AI strings', () => {
+    for (const cat of [en, es] as Record<string, Record<string, unknown>>[]) {
+      for (const code of Object.keys(SERVICE_TYPES)) expect(cat.serviceType).toHaveProperty(code);
+      for (const g of SERVICE_GROUPS) expect(cat.serviceGroup).toHaveProperty(g);
+      for (const n of NEEDS) {
+        expect(cat.needs).toHaveProperty(`${n.id}.label`);
+        expect(cat.needs).toHaveProperty(`${n.id}.hint`);
+      }
+      for (const k of ['title', 'body', 'call988', 'text988', 'call911']) expect(cat.crisis).toHaveProperty(k);
+      for (const m of ['claude-sonnet-5-5', 'claude-opus-5-5', 'claude-haiku-5-5'])
+        expect((cat.admin as Record<string, Record<string, Record<string, string>>>).aiSettings.models).toHaveProperty([m]);
+    }
+    expect(es.crisis.body).toContain('988');
+    expect(es.crisis.body).toContain('En una emergencia, llame al 911.');
+    expect(en.app.tagline).toBe('Help that lights the way — food, health and support near you');
+  });
+});

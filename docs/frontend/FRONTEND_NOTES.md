@@ -34,6 +34,30 @@ Developer documentation lives in `frontend/README.md`. This file records status 
 - PWA: manifest + small service worker (production builds only), offline banner.
 - Tests: Vitest 65 (was 43); Playwright 8 (A–D, F + new G, H, I), all against the real dev API.
 
+### Lantern: rename, needs chooser, crisis safety, district view, AI settings (2026-10-12)
+
+- Renamed **Open Shelf → Lantern** (name still from `/api/meta/features` → `app_name`; fallback "Lantern"): titles,
+  manifest, favicon/maskable icon, package name (`lantern-frontend`), service worker comment, catalogs, tests.
+  Tagline en "Help that lights the way — food, health and support near you"; es "Ayuda que ilumina el camino: comida,
+  salud y apoyo cerca de usted".
+- New identity: night-blue + amber light, Young Serif display (replaces Big Shoulders), inline-SVG lantern mark. Shelf
+  board removed from the header/hero; live pantry posts kept and renamed "Live updates from providers".
+  Per user feedback the large hero lantern illustration was removed: the home page leads with the needs chooser + search.
+- "What do you need?" chooser on home (13 tiles → /find) and in the explorer (single-select chips). Filter panel split
+  into "Other kinds of help" (10 new groups) and "Food help"; food filters only for food needs. All 25 new service
+  types + 10 groups in en/es.
+- 988/911 crisis callout (explorer + listing page, not dismissable) and a 988 line in the footer.
+- District view: "Area" select in the explorer + "Explore all of Virginia's 8th District" on home (area + bbox; map
+  shows the whole district, list paginated).
+- `/admin/ai`: status card (Active / Off / No key), Save & test, key hint, test result, enable switch, model select,
+  remove with in-page confirmation, explanation of what AI does / doesn't / what is sent.
+- `source_reported` polish: dotted badge with list icon (+ About page label).
+- E2E: synthetic scenarios skip unless `demo_mode`; single sign-in per account via `e2e/global-setup.ts` storageState;
+  new read-only real-data spec (R1–R4). F now searches around the [TEST] Birch Hill pantry (real listings pushed it out
+  of the 50 nearest "May match" results).
+- Results (2026-10-12): Vitest 76/76. Playwright against the dev API (real data, demo_mode=false): 5 passed, 7 skipped,
+  0 failed. Against a temporary second API with `FOODACCESS_SHOW_SYNTHETIC=true` (:8001 via Vite :5174): 12/12 passed.
+
 ## Open issues
 
 1. ~~Backend blocked the dev admin login (`EmailStr` rejected `.test`).~~ **Fixed 2026-10-12**: login now takes a plain
@@ -46,5 +70,11 @@ Developer documentation lives in `frontend/README.md`. This file records status 
    client-side.
 5. Service worker: verified manually on `vite preview` (production build) with Playwright — a visited pantry page
    reloads offline with its visit checklist and the offline banner. There is no automated offline test in the suite.
-6. Backend rate limits (sign-in, 5 reports/hour/IP) can make back-to-back Playwright runs fail with 429.
+6. Backend rate limits (10 sign-ins/15 min, 5 reports/hour per IP): the suite now signs in once per account per run,
+   but many runs in a row can still hit 429.
 7. Map pin live badges only show on unclustered points; clusters show a count.
+8. Service groups are ANDed by the API, so the chooser is single-select; an OR mode (`service_group_any`) would allow
+   multi-select tiles.
+9. Real data changes while the app is running (imports): ZIP 22204 and the district count (48 → 113 during this
+   session) are not fixed, so the e2e tests check labels and parameters, not counts.
+10. The area map loads up to 500 listings (5 requests of 100). A lightweight pins endpoint would scale better.

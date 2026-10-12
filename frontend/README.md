@@ -1,10 +1,10 @@
-# Open Shelf — frontend
+# Lantern — frontend
 
-**Open Shelf**: “What's on the shelf today, near you.” A live, two-way connection between food pantries and families:
-pantries post today's status and items themselves; families see it (with the source and time) before they go.
-Public site + pantry portal + admin review UI.
+**Lantern**: “Help that lights the way — food, health and support near you.” A guide to free help in Northern Virginia
+(food pantries and meals, benefits, health, mental health, housing, money, clothing, legal, jobs/English classes, family,
+transportation), with live updates posted by the providers themselves. Public site + provider portal + admin review UI.
 
-The brand name is **not hard-coded**: it comes from `GET /api/meta/features` → `app_name` (fallback `Open Shelf`,
+The brand name is **not hard-coded**: it comes from `GET /api/meta/features` → `app_name` (fallback `Lantern`,
 `src/state/meta.tsx`) and is used for the header, footer, document titles and copy (`{{app}}` in the catalogs).
 `index.html` and `public/manifest.webmanifest` carry the static fallback name. React 19 + TypeScript + Vite, react-router 7,
 react-i18next (English/Spanish), MapLibre GL JS. Plain CSS with variables (no CSS framework). All data comes from the
@@ -27,11 +27,21 @@ FastAPI backend — there is no mock data in the app.
 | `npm test` | Vitest + React Testing Library (jsdom, fetch mocked; maplibre mocked) |
 | `npx playwright test` | E2E against the **real** backend; starts/reuses Vite on :5173. First run: `npx playwright install chromium` |
 
-E2E credentials can be overridden with `E2E_ADMIN_EMAIL` / `E2E_ADMIN_PASSWORD` and `E2E_PANTRY_EMAIL` /
-`E2E_PANTRY_PASSWORD` (demo staff `pantry@localhost.test`). E2E scenarios only touch `[TEST]` listings: G re-posts
-Maple's demo shelf (open; fresh vegetables plenty, eggs some, dairy low) and H's report is resolved in `afterAll`.
-The backend rate-limits sign-ins and anonymous reports (5/hour per IP), so running the suite many times in a row can
-fail with 429 — wait and re-run.
+E2E suites:
+
+| File | Data | Writes? |
+| --- | --- | --- |
+| `e2e/real-data.spec.ts` (R1–R4) | real imported listings | **read-only** — never signs in, posts, reports or saves |
+| `public.spec.ts` B | real or demo | read-only |
+| `public.spec.ts` A, F · `account.spec.ts` C · `admin.spec.ts` D · `live-updates.spec.ts` G, H, I | fictional `[TEST]` data | only `[TEST]` listings (+ a throwaway e2e user in C) |
+
+Synthetic scenarios check `GET /api/meta/features` → `demo_mode` and **skip themselves** with a clear message when it is
+false. To run them, start an API with `FOODACCESS_SHOW_SYNTHETIC=true` (e.g. a second one on :8001 behind
+`VITE_DEV_PROXY_TARGET=http://localhost:8001 npx vite --port 5174`, then `E2E_BASE_URL=http://localhost:5174 npx
+playwright test`). `e2e/global-setup.ts` signs in **once per account per run** and saves the sessions to `e2e/.auth/`
+(git-ignored); scenarios reuse them (the API allows 10 sign-ins per 15 min per IP). Credentials: `E2E_ADMIN_EMAIL` /
+`E2E_ADMIN_PASSWORD`, `E2E_PANTRY_EMAIL` / `E2E_PANTRY_PASSWORD` (demo staff `pantry@localhost.test`). G re-posts
+Maple's demo shelf and H's report is resolved in `afterAll`. Anonymous reports are limited to 5/hour per IP.
 
 ## Environment variables
 
@@ -58,35 +68,53 @@ src/
 e2e/            Playwright scenarios (public, account, admin)
 ```
 
-Open Shelf additions
+Live updates + Lantern additions
 
 ```
-src/components/  Brand (inline SVG shelf mark), Live (status glyph, level meter, shelf tags, "Posted by the pantry"),
+src/components/  Brand (inline SVG lantern mark), NeedsChooser ("What do you need?"), CrisisCallout (988/911), Live (status glyph, level meter, shelf tags, "Posted by the pantry"),
                  TodayShelves (home feed), ReportDialog + Modal, VisitPlanner (checklist, .ics, print card, share),
                  AISearch, OfflineBanner
 src/pages/pantry/ PantryRoutes (/pantry, lazy, sign-in required): PantryHome (request access, your pantries),
                  PantryDashboard (/pantry/:id: status + items, events, closures, corrections, reports, AI paste),
                  SurplusBoard (/pantry/surplus)
 src/pages/admin/AdminClaimsReports.tsx  pantry access requests + community reports queues
+src/pages/admin/AdminAI.tsx  /admin/ai: Anthropic key (write-only), enable switch, model, test, remove
+src/lib/needs.ts  need → filter mapping for the chooser (one filter per need; the search API ANDs groups)
 src/lib/offline.ts + public/sw.js       PWA: service worker registration (production builds only) + cache warming
 ```
 
-Visual identity (see `styles/app.css`, "Open Shelf additions")
+Visual identity (see the top of `styles/app.css`)
 
-- **Concept: the pantry shelf.** Live posts hang as yellow *shelf-talker tags* under a blueberry *shelf board*; the
-  header is the top board. Everything else stays quiet.
-- **Palette:** blueberry `#232a63` (brand/actions/boards), porcelain `#f4f5f9` (page), shelf-talker yellow `#ffd34d`
-  (live posts only; never used as text colour), leaf `#1d6b45` (open), brick `#a3352b` (alerts/closed), slate
-  `#586070` (unknown).
-- **Type:** Big Shoulders Display (900/700, display: h1, feed and section titles), Atkinson Hyperlegible (body),
-  Atkinson Hyperlegible Mono (times, "posted 2 h ago", levels). All self-hosted via `@fontsource`.
-- **Status is shape + text:** open = filled circle ✓, limited = half circle, out = dashed empty circle, closed = square
-  ✕; levels are 3/2/1 bars (decorative, `aria-hidden`) + the word Plenty/Some/Low. Map pins get a labelled badge
-  ("✓ Open", "✕ Closed") under the existing numbered pin. Known = solid, unknown = dashed still applies everywhere
-  (checklist "Ask the pantry — not confirmed" rows are dashed).
+- **Concept: a lantern at night.** Night-blue chrome; warm amber light only where help is "lit": the lantern mark,
+  the soft light pool under the "What do you need?" tiles (tiles glow amber on hover/focus), live updates from
+  providers, active nav, focus rings on dark grounds. No large decorative art: the brand appears as the small mark in
+  the header/footer and favicon; the home page leads with the needs chooser and search.
+- **Palette:** night `#14203f` (brand/actions/header, 15.6:1 on white), night-deep `#0b142b`, glow amber `#f5b23c`
+  (fills only — 8.4:1 *on night*, never text on light grounds), glow-soft `#fdeac2`, ember `#8a4600` (amber text on
+  light, 7.1:1), mist page `#f1f3f8`; leaf `#1d6b45` (open), brick `#a3352b` (alerts/closed), slate `#586070`
+  (unknown). Old token names (`--berry`, `--talker`) are aliases.
+- **Type:** Young Serif (display: h1, section titles, brand), Atkinson Hyperlegible (body), Atkinson Hyperlegible Mono
+  (times, levels). Self-hosted via `@fontsource`.
+- **Status is shape + text:** verified = solid badge ✓; needs re-check = dashed ⏱; *from a public list — not yet
+  verified* = dotted badge with a list icon (map pin `mk--reported` dotted); live status glyphs as before. AI settings
+  status: Active = solid pill ✓, Off = square ✕, No key = dashed "?".
+- **Crisis safety:** a 988/911 callout (tel:988, sms:988, tel:911; no close button) shows when Mental health is the
+  selected need, when any result offers a mental-health service type, and on such a listing's page; the footer always
+  carries "In crisis? Call 988 · Text 988 · Emergency: 911".
 
 Key decisions
 
+- **"What do you need?"** 13 tiles (home: links; explorer: single-select chips). Each maps to ONE filter
+  (`food_group=groceries`, or one `service_group`) because the search API ANDs service groups; combinations go through
+  the filter panel ("Places must offer every kind of help you check"). Baby & family supplies = `non_food` only (ANDing
+  `food_group=infant` would hide diaper banks without formula). Food filters (type of food, "on the shelf today") are
+  hidden — and cleared — when every selected need is non-food.
+- **Area view:** `/find?area=va-08&bbox=-77.24,38.6,-77.03,38.97&sort=name` (from `GET /api/coverage-areas`, the
+  explorer's "Area" select, or the home link). The list stays paginated (25); the map fetches every listing in the area
+  (pages of 100, up to 500) so all pins show.
+- **AI settings (/admin/ai):** the key is write-only (password input, autocomplete off, cleared after sending; only the
+  server's `…WXYZ` hint is shown). Removing it uses an in-page confirmation (no `window.confirm`). Every change re-fetches
+  `/api/meta/features` (`useMeta().refreshFeatures`) so AI search / drafts / suggestions appear without a reload.
 - **Unknown is never "no requirement".** Eligibility is tri-state everywhere. Visual rule: *known is solid, unknown is
   dashed* — solid chip/marker = confirmed, dashed outline + "?" = not confirmed. Status is always icon/shape + text,
   never colour alone (map pins carry the list number or "?").

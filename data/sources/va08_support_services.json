@@ -1,0 +1,2461 @@
+{
+  "_notice": "Unverified candidate records of NON-FOOD support services in Virginia's 8th Congressional District, compiled by AI-assisted research from official/primary web pages fetched on 2026-10-12. Every field comes from the cited source_url (or a URL named in notes). Confirm with the provider before publishing. No confidential domestic-violence shelter addresses are included; hotlines are listed in docs/pilot_research/VA08_SUPPORT_SERVICES_LOG.md and not imported.",
+  "retrieved": "2026-10-12",
+  "method": "AI-assisted web research of official/primary sources; unverified candidates",
+  "records": [
+    {
+      "external_id": "va08svc-arlington-dhs-economic-independence",
+      "source_url": "https://www.arlingtonva.us/Government/Departments/DHS/Public-Assistance",
+      "organization_name": "Arlington County Department of Human Services",
+      "organization_website": "https://www.arlingtonva.us/Government/Departments/DHS",
+      "location_name": "DHS Sequoia Plaza 1 – Economic Independence Division (1st Floor)",
+      "address1": "2100 Washington Blvd.",
+      "address2": "1st Floor",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22204",
+      "lat": 38.873049,
+      "lon": -77.082689,
+      "geocode_source": "census_geocoder",
+      "phone": "703-228-1350",
+      "email": "dhs@arlingtonva.us",
+      "notes": "TTY 711. Emergency Financial Assistance / Community Assistance Bureau: 703-228-1300. SNAP information line 703-228-1324. Arlington Employment Center (703-228-1400) is listed on the 1st floor of Sequoia 1 in the DHS At-a-Glance directory. Sources: https://www.arlingtonva.us/Government/Departments/DHS/Public-Assistance/SNAP-Food-Stamps; https://www.arlingtonva.us/Government/Departments/DHS/Medicaid; https://www.arlingtonva.us/Government/Departments/DHS/Public-Assistance/Emergency-Financial-Assistance; https://www.arlingtonva.us/Government/Departments/DHS/Public-Assistance/Heating-Cooling-Assistance; https://www.arlingtonva.us/Government/Departments/DHS/Public-Assistance/Child-Care-Subsidy; https://www.arlingtonva.us/Government/Departments/DHS/DHS-At-a-Glance-Locations-Programs-Contact-Information",
+      "raw_hours_text": "In Person: Arlington County Dept. of Human Services 2100 Washington Boulevard, 1st Floor, Arlington, VA 22204 Monday-Friday: 8 a.m. to 5 p.m. (Medicaid page)",
+      "raw_eligibility_text": "Emergency Financial Assistance: Gross household income must be at or below 50% of the Area Median Income (AMI), based on income from the past 90 days. Heating/Cooling: Must be an Arlington resident. Child Care Subsidy: Arlington residents with low income who are working (part-time or full-time), looking for work, or going to school",
+      "services": [
+        {
+          "service_type": "snap_application_help",
+          "description": "Request an SNAP application or receive assistance completing your application in-person at 2100 Washington Blvd., 1st Floor.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "medicaid_enrollment_help",
+          "description": "Apply for Medicaid in person, or mail your application, to 2100 Washington Boulevard, 1st Floor.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "financial_assistance",
+          "description": "Emergency Financial Assistance: assistance with rent, utility, or eligible medical expenses. Maximum $3000 per calendar year. Assessment is required. Apply by calling 703-228-1300 or in person at the Customer Service Center.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "utility_assistance",
+          "description": "State-funded Fuel, Crisis and Cooling Assistance and Dominion Energy PIPP applications accepted in person or by mail at 2100 Washington Boulevard, 1st Floor; seasonal application periods apply.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "childcare",
+          "description": "Child Care Subsidy for lower-income families participating in an approved activity (working or attending school). Apply in person or call 703-228-1350 to schedule an appointment. Page notes a waitlist for subsidized care.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "housing_assistance",
+          "description": "Homelessness/at-risk of homelessness: contact the DHS Community Assistance Bureau at 703-228-1300. Shelter access is through the Centralized Access System at DHS – 2100 Washington Blvd 1st Fl.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "job_training",
+          "description": "Arlington Employment Center (listed under Economic Independence, 1st Floor): job opportunities, workshops and classes. Phone 703-228-1400.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Emergency Financial Assistance: Gross household income must be at or below 50% of the Area Median Income (AMI), based on income from the past 90 days."
+        },
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Heating/Cooling Assistance: Must be an Arlington resident"
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Child Care Subsidy: Call to schedule an appointment 703-228-1350"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-arlington-wic",
+      "source_url": "https://www.arlingtonva.us/Government/Programs/Health/Public-Health/Health-Clinics-and-Services/Women-Infants-and-Children-WIC-Program",
+      "organization_name": "Arlington County Department of Human Services – Public Health Division",
+      "organization_website": "https://www.arlingtonva.us/Government/Departments/DHS",
+      "location_name": "Arlington County WIC Clinic",
+      "address1": "2100 Washington Blvd.",
+      "address2": "1st Floor",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22204",
+      "lat": 38.873049,
+      "lon": -77.082689,
+      "geocode_source": "census_geocoder",
+      "phone": "703-228-1260",
+      "email": "ARLWICoffice@arlingtonva.us",
+      "notes": "Call to schedule an appointment. Services: supplemental food, nutrition counseling, breastfeeding support and breast pump loans, immunization screening, referrals. The DHS At-a-Glance directory lists WIC under Public Health (2nd Floor) while the WIC page says apply in person on the 1st Floor.",
+      "raw_hours_text": "Hours: Monday–Friday, 8 a.m.–5 p.m.",
+      "raw_eligibility_text": "If you are a parent, foster parent, or other legal guardian of a child under 5 years of age, you can apply for your child. If you are a parent who is pregnant, breastfeeding, or has a baby up to 6 months old, you can apply for yourself.",
+      "services": [
+        {
+          "service_type": "wic_services",
+          "description": "WIC: supplemental food, nutrition counseling and education, breastfeeding support, referrals.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Call 703-228-1260 to schedule an appointment."
+        },
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "If you are a parent, foster parent, or other legal guardian of a child under 5 years of age, you can apply for your child."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-arlington-public-health-clinics",
+      "source_url": "https://www.arlingtonva.us/Government/Departments/DHS/DHS-At-a-Glance-Locations-Programs-Contact-Information",
+      "organization_name": "Arlington County Department of Human Services – Public Health Division",
+      "organization_website": "https://www.arlingtonva.us/Government/Departments/DHS",
+      "location_name": "DHS Sequoia Plaza 1 – Public Health (2nd Floor)",
+      "address1": "2100 Washington Blvd.",
+      "address2": "2nd Floor",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22204",
+      "lat": 38.873049,
+      "lon": -77.082689,
+      "geocode_source": "census_geocoder",
+      "notes": "Directory lists Family Planning, Immunizations, Tuberculosis/Chest Clinic, Refugee Services, STI Services, Teen Health on the 2nd floor. No phone or hours on this page.",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Public Health clinics: Family Planning, Immunizations, Tuberculosis/Chest Clinic, Refugee Services, STI Services, Teen Health.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "external_id": "va08svc-arlington-behavioral-healthcare",
+      "source_url": "https://www.arlingtonva.us/Government/Programs/Health/Adult-Behavioral-Healthcare",
+      "organization_name": "Arlington County Department of Human Services – Behavioral Healthcare Division",
+      "organization_website": "https://www.arlingtonva.us/Government/Departments/DHS",
+      "location_name": "DHS Sequoia Plaza 3 – Behavioral Healthcare",
+      "address1": "2120 Washington Blvd.",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22204",
+      "lat": 38.873973,
+      "lon": -77.084228,
+      "geocode_source": "census_geocoder",
+      "phone": "703-228-5150",
+      "notes": "TTY 703-228-5242. Emergency Services 24-hour line 703-228-5160. Substance use intake 703-228-4864. Fees: sliding fee based on income. Sources: https://www.arlingtonva.us/Government/Programs/Health/Adult-Behavioral-Healthcare/Same-Day-Access; https://www.arlingtonva.us/Government/Programs/Health/Adult-Behavioral-Healthcare/Substance-Use-Adult; https://www.arlingtonva.us/Government/Programs/Health/Adult-Behavioral-Healthcare/Adult-Mental-Health/Emergency-Mental-Health-Services",
+      "raw_hours_text": "Hours 8 a.m. – 5 p.m. Mon-Fri. | Same Day Access: Monday – Thursday 9 a.m. – 1 p.m.",
+      "raw_eligibility_text": "Clients must have a substance use problem and/or mental illness. Must also be ONE of the following: Arlington resident Homeless Person receiving Medicaid Resident in Arlington psychiatric hospital, jail or other facility",
+      "services": [
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Same Day Access: walk-in mental health and substance use service eligibility assessments without an appointment.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "13:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "13:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "13:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "13:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "substance_use_treatment",
+          "description": "Outpatient substance use services (assessment, individual/group/family therapy, medication assisted treatment) and case management for residential treatment. Call 703-228-4864 or apply in person.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "crisis_support",
+          "description": "Emergency Services unit: assessment, crisis intervention and stabilization. Call 703-228-5160 (24-hour) or go to Emergency Services at 2120 Washington Blvd.",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Clients must have a substance use problem and/or mental illness. Must also be ONE of the following: Arlington resident Homeless Person receiving Medicaid Resident in Arlington psychiatric hospital, jail or other facility"
+        },
+        {
+          "requirement_type": "service_area",
+          "status": "required",
+          "details": "Anyone living, working or visiting Arlington experiencing a mental health emergency is eligible for services."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "not_required",
+          "details": "Individuals who are interested in seeking mental health or substance use treatment services can access a service eligibility assessment on a walk-in basis without an appointment."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-arlington-homeless-services-center",
+      "source_url": "https://www.arlingtonva.us/Government/Departments/DHS/Public-Assistance/HSC",
+      "organization_name": "Arlington County Department of Human Services",
+      "organization_website": "https://www.arlingtonva.us/Government/Departments/DHS",
+      "location_name": "Arlington County Homeless Services Center (operated by PathForward)",
+      "address1": "2020-A 14th Street North",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22201",
+      "lat": 38.889598,
+      "lon": -77.082923,
+      "geocode_source": "census_geocoder",
+      "notes": "Address from the 2025-2026 hypothermia shelter SOP (https://www.arlingtonva.us/files/sharedassets/public/v/1/public-assistance/documents/hypo-shelter-sops-2025-2026_final-10.24.25.pdf). Operator (PathForward) and referral rule from https://www.arlingtonva.us/Government/Departments/DHS/Public-Assistance/Homelessness/Shelters-and-Resources. Contact DHS Community Assistance Bureau 703-228-1300; after business hours 703-228-1010. HSC page last updated January 5, 2022.",
+      "raw_eligibility_text": "Please note that shelter services require a referral by Arlington County DHS Clinical Coordination Program.",
+      "services": [
+        {
+          "service_type": "shelter",
+          "description": "50 year-round shelter beds, winter hypothermia prevention beds and medical respite beds; shower, laundry and mail facilities; benefit enrollment; employment and life skills training.",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "referral",
+          "status": "required",
+          "details": "Please note that shelter services require a referral by Arlington County DHS Clinical Coordination Program."
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "external_id": "va08svc-arlington-residential-program-center",
+      "source_url": "https://www.arlingtonva.us/files/sharedassets/public/v/1/public-assistance/documents/hypo-shelter-sops-2025-2026_final-10.24.25.pdf",
+      "organization_name": "Arlington County Department of Human Services",
+      "organization_website": "https://www.arlingtonva.us/Government/Departments/DHS",
+      "location_name": "Residential Program Center (operated by PathForward)",
+      "address1": "1554 Columbia Pike",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22204",
+      "lat": 38.866535,
+      "lon": -77.071329,
+      "geocode_source": "census_geocoder",
+      "notes": "Address appears in the hypothermia SOP for RPC hypothermia overflow; Shelters and Resources page (https://www.arlingtonva.us/Government/Departments/DHS/Public-Assistance/Homelessness/Shelters-and-Resources) lists the Residential Program Center as a year-round shelter for individuals (PathForward). Contact DHS Community Assistance Bureau 703-228-1300.",
+      "services": [
+        {
+          "service_type": "shelter",
+          "description": "Residential Program Center year-round shelter for individuals; accepts hypothermia overflow from the HSC.",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "referral",
+          "status": "required",
+          "details": "Please note that shelter services require a referral by Arlington County DHS Clinical Coordination Program."
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "external_id": "va08svc-arlington-reep",
+      "source_url": "https://reep.apsva.us/contact-us/",
+      "organization_name": "Arlington Public Schools – Arlington Education and Employment Program (REEP)",
+      "organization_website": "https://reep.apsva.us/",
+      "location_name": "REEP",
+      "address1": "2110 Washington Boulevard",
+      "address2": "Suite 106",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22204",
+      "lat": 38.873935,
+      "lon": -77.084145,
+      "geocode_source": "census_geocoder",
+      "phone": "703-228-4200",
+      "website": "https://reep.apsva.us/",
+      "notes": "Intensive English classes for adults (fee-based), free drop-in English classes in partnership with Arlington DHS, workplace English and credential preparation. Source for classes: https://reep.apsva.us/class-information/",
+      "services": [
+        {
+          "service_type": "esl_classes",
+          "description": "Intensive English Classes for Adults; Free Drop-in English Classes for Beginners and Intermediate Levels; Conversation Class; Workplace English and Credential Preparation Classes.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-arlington-free-clinic",
+      "source_url": "https://arlingtonfreeclinic.org/become-a-patient/",
+      "organization_name": "Arlington Free Clinic",
+      "organization_website": "https://arlingtonfreeclinic.org/",
+      "location_name": "Arlington Free Clinic",
+      "address1": "2921 11th St. South",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22204",
+      "lat": 38.861463,
+      "lon": -77.087191,
+      "geocode_source": "census_geocoder",
+      "phone": "703-979-1400",
+      "notes": "AFC is not a walk-in urgent care; appointment required. Site navigation also lists Dental Services, Pharmacy, Women's Health and Behavioral Health.",
+      "raw_hours_text": "Self-referrals are accepted in person Monday through Friday from 9am-12pm or 1pm-4pm.",
+      "raw_eligibility_text": "No insurance or access to insurance (Medicaid, Medicare, or private insurance) 18+ years of age Arlington County resident Lived in United States for 6+ months Income requirements",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Free primary care for uninsured, low-income adult Arlington residents.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "12:00",
+              "week_of_month": null,
+              "notes": "in-person self-referral"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "12:00",
+              "week_of_month": null,
+              "notes": "in-person self-referral"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "12:00",
+              "week_of_month": null,
+              "notes": "in-person self-referral"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "12:00",
+              "week_of_month": null,
+              "notes": "in-person self-referral"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "09:00",
+              "closes": "12:00",
+              "week_of_month": null,
+              "notes": "in-person self-referral"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "13:00",
+              "closes": "16:00",
+              "week_of_month": null,
+              "notes": "in-person self-referral"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "13:00",
+              "closes": "16:00",
+              "week_of_month": null,
+              "notes": "in-person self-referral"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "13:00",
+              "closes": "16:00",
+              "week_of_month": null,
+              "notes": "in-person self-referral"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "13:00",
+              "closes": "16:00",
+              "week_of_month": null,
+              "notes": "in-person self-referral"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "13:00",
+              "closes": "16:00",
+              "week_of_month": null,
+              "notes": "in-person self-referral"
+            }
+          ]
+        },
+        {
+          "service_type": "dental_care",
+          "description": "Dental Services (listed in site navigation).",
+          "offering_status": "unconfirmed"
+        },
+        {
+          "service_type": "prescription_help",
+          "description": "Pharmacy (listed in site navigation).",
+          "offering_status": "unconfirmed"
+        },
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Behavioral Health at AFC (listed in site navigation).",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "AFC is not a walk-in urgent care. You must have an appointment before coming to the Clinic."
+        },
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "18+ years of age"
+        },
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Arlington County resident"
+        },
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Our services are for individuals and families with limited income."
+        },
+        {
+          "requirement_type": "photo_id",
+          "status": "required",
+          "details": "Proof of Identification (bring one): Passport, driver’s license, ID card, etc."
+        },
+        {
+          "requirement_type": "proof_of_address",
+          "status": "required",
+          "details": "Proof of address dated no longer than 2 months ago (bring one): Lease, recent bill, landlord letter and proof of address from landlord, bank statements, letter from community partners"
+        },
+        {
+          "requirement_type": "income_documentation",
+          "status": "required",
+          "details": "Proof of income of the household of the last 2 months: Pay stubs, letter from employer, letter from benefits"
+        },
+        {
+          "requirement_type": "other",
+          "status": "required",
+          "details": "No insurance or access to insurance (Medicaid, Medicare, or private insurance)"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-sequoia-1",
+      "source_url": "https://neighborhoodhealthva.org/our-locations/",
+      "organization_name": "Neighborhood Health",
+      "organization_website": "https://neighborhoodhealthva.org/",
+      "location_name": "Neighborhood Health @ Sequoia 1",
+      "address1": "2100 Washington Boulevard",
+      "address2": "Suite 294",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22204",
+      "lat": 38.873049,
+      "lon": -77.082689,
+      "geocode_source": "census_geocoder",
+      "phone": "703-535-5568",
+      "email": "info@nhnva.org",
+      "notes": "Community health center. Fax 703-299-1794. Services listed: Adult Medicine, Women’s Health, Dental Care. Hours text on the source omits a dash between day names (e.g. 'Monday Friday'); schedule not parsed.",
+      "raw_hours_text": "Monday Friday: 8 am – 4:30 pm",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Primary care: Adult Medicine, Women’s Health.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "dental_care",
+          "description": "Dental Care.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-arlington-pediatric-center",
+      "source_url": "https://neighborhoodhealthva.org/our-locations/",
+      "organization_name": "Neighborhood Health",
+      "organization_website": "https://neighborhoodhealthva.org/",
+      "location_name": "Neighborhood Health @ Arlington Pediatric Center",
+      "address1": "2301 Columbia Pike",
+      "address2": "Ste G",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22204",
+      "lat": 38.863817,
+      "lon": -77.08232,
+      "geocode_source": "census_geocoder",
+      "phone": "703-535-5568",
+      "email": "info@nhnva.org",
+      "notes": "Community health center. Fax 703-299-1794. Services listed: Pediatrics. Hours text on the source omits a dash between day names (e.g. 'Monday Friday'); schedule not parsed.",
+      "raw_hours_text": "Monday Friday: 9 am – 5:30 pm; Saturday: 9 am – 1 pm",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Primary care: Pediatrics.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-casey",
+      "source_url": "https://neighborhoodhealthva.org/our-locations/",
+      "organization_name": "Neighborhood Health",
+      "organization_website": "https://neighborhoodhealthva.org/",
+      "location_name": "Neighborhood Health @ Casey Health Center",
+      "address1": "1200 North Howard Street",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22304",
+      "lat": 38.82138,
+      "lon": -77.103737,
+      "geocode_source": "census_geocoder",
+      "phone": "703-535-5568",
+      "email": "info@nhnva.org",
+      "notes": "Community health center. Fax 703-299-1794. Services listed: Family & Internal Medicine, Pediatrics, Women’s Health, Prenatal and Postpartum Care, Behavioral Health, HIV Care, Pharmacy Services.",
+      "raw_hours_text": "Monday & Tuesday: 7:45 am – 7 pm; Wednesday: 8 am – 7 pm; Thursday & Friday: 8 am – 5 pm; Saturday: 8 am – 12 pm. Pharmacy (571-483-2493): Monday – Friday: 8:30 am – 12:30 pm, 1:30 pm – 5 pm; Saturday: 8 am-12:30 pm, 1:30 pm-2 pm",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Primary care: Family & Internal Medicine, Pediatrics, Women’s Health, Prenatal and Postpartum Care, HIV Care.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "07:45",
+              "closes": "19:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "07:45",
+              "closes": "19:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "19:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 5,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Behavioral Health.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "prescription_help",
+          "description": "On-site pharmacy services.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-east-glebe",
+      "source_url": "https://neighborhoodhealthva.org/our-locations/",
+      "organization_name": "Neighborhood Health",
+      "organization_website": "https://neighborhoodhealthva.org/",
+      "location_name": "Neighborhood Health @ East Glebe Road",
+      "address1": "2 East Glebe Road",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22305",
+      "lat": 38.835516,
+      "lon": -77.057633,
+      "geocode_source": "census_geocoder",
+      "phone": "703-535-5568",
+      "email": "info@nhnva.org",
+      "notes": "Community health center. Fax 703-299-1794. Services listed: Family & Internal Medicine, Pediatrics, Women’s Health, Behavioral Health. Hours text on the source omits a dash between day names (e.g. 'Monday Friday'); schedule not parsed.",
+      "raw_hours_text": "Monday Thursday: 8 am – 6 pm; Friday: 8 am – 4:30 pm",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Primary care: Family & Internal Medicine, Pediatrics, Women’s Health.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Behavioral Health.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-mark-center",
+      "source_url": "https://neighborhoodhealthva.org/our-locations/",
+      "organization_name": "Neighborhood Health",
+      "organization_website": "https://neighborhoodhealthva.org/",
+      "location_name": "Neighborhood Health @ Mark Center",
+      "address1": "4850 Mark Center Drive",
+      "address2": "3rd Floor",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22311",
+      "lat": 38.830441,
+      "lon": -77.116305,
+      "geocode_source": "census_geocoder",
+      "phone": "703-535-5568",
+      "email": "info@nhnva.org",
+      "notes": "Community health center. Fax 703-299-1794. Services listed: Family Medicine, Pediatrics, Women’s Health, Behavioral Health, Dental Care, Prenatal and Postpartum Care, HIV Care.",
+      "raw_hours_text": "Monday – Friday: 8 am – 4:30 pm. Mark Center Pharmacy (703-827-1305): Monday – Friday: 8:30 am – 12:30 pm, 1:30 pm – 5 pm",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Primary care: Family Medicine, Pediatrics, Women’s Health, Prenatal and Postpartum Care, HIV Care.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "dental_care",
+          "description": "Dental Care.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Behavioral Health.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-gartlan",
+      "source_url": "https://neighborhoodhealthva.org/our-locations/",
+      "organization_name": "Neighborhood Health",
+      "organization_website": "https://neighborhoodhealthva.org/",
+      "location_name": "Neighborhood Health @ Gartlan Community Services Board (CSB)",
+      "address1": "8119 Holland Road",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22306",
+      "lat": 38.741799,
+      "lon": -77.078142,
+      "geocode_source": "census_geocoder",
+      "phone": "703-535-5568",
+      "email": "info@nhnva.org",
+      "notes": "Community health center. Fax 703-299-1794. Services listed: Adult Medicine.",
+      "raw_hours_text": "Monday: 8 am – 12 pm; Friday: 8 am – 4:30 pm",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Primary care: Adult Medicine.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-richmond-highway",
+      "source_url": "https://neighborhoodhealthva.org/our-locations/",
+      "organization_name": "Neighborhood Health",
+      "organization_website": "https://neighborhoodhealthva.org/",
+      "location_name": "Neighborhood Health @ Richmond Highway",
+      "address1": "6677 Richmond Hwy",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22306",
+      "lat": 38.773524,
+      "lon": -77.080917,
+      "geocode_source": "census_geocoder",
+      "phone": "703-535-5568",
+      "email": "info@nhnva.org",
+      "notes": "Community health center. Fax 703-299-1794. Services listed: Family Medicine, Pediatrics, Women’s Health, Vision Care, Dental Care, Behavioral Health, Pharmacy Services.",
+      "raw_hours_text": "Monday – Tuesday: 8am-7pm; Wednesday-Friday: 8am-4:30pm; Saturday 8am-12pm; Sunday: Closed",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Primary care: Family Medicine, Pediatrics, Women’s Health, Vision Care.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "19:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "19:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 5,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "dental_care",
+          "description": "Dental Care.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Behavioral Health.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "prescription_help",
+          "description": "On-site pharmacy services.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-sherwood-hall",
+      "source_url": "https://neighborhoodhealthva.org/our-locations/",
+      "organization_name": "Neighborhood Health",
+      "organization_website": "https://neighborhoodhealthva.org/",
+      "location_name": "Neighborhood Health @ Sherwood Hall Lane",
+      "address1": "2616 Sherwood Hall Lane",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22306",
+      "lat": 38.743268,
+      "lon": -77.07698,
+      "geocode_source": "census_geocoder",
+      "phone": "703-535-5568",
+      "email": "info@nhnva.org",
+      "notes": "Community health center. Fax 703-299-1794. Services listed: Pediatrics, Behavioral Health.",
+      "raw_hours_text": "Monday, Tuesday, & Friday: 8 am – 4:30 pm; Wednesday & Thursday: 8 am – 7 pm",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Primary care: Pediatrics.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "19:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "19:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Behavioral Health.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-south-county",
+      "source_url": "https://neighborhoodhealthva.org/our-locations/",
+      "organization_name": "Neighborhood Health",
+      "organization_website": "https://neighborhoodhealthva.org/",
+      "location_name": "Neighborhood Health @ South County Center",
+      "address1": "8350 Richmond Highway",
+      "address2": "Suite 301",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22309",
+      "lat": 38.730962,
+      "lon": -77.104623,
+      "geocode_source": "census_geocoder",
+      "phone": "703-535-5568",
+      "email": "info@nhnva.org",
+      "notes": "Community health center. Fax 703-299-1794. Services listed: Family Medicine, Pediatrics, Women’s Health, Dental Care, Behavioral Health. Hours text on the source omits a dash between day names (e.g. 'Monday Friday'); schedule not parsed.",
+      "raw_hours_text": "Monday: 8 am – 7 pm; Tuesday Friday: 8 am – 4:30 pm",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Primary care: Family Medicine, Pediatrics, Women’s Health.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "dental_care",
+          "description": "Dental Care.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Behavioral Health.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-annandale",
+      "source_url": "https://neighborhoodhealthva.org/our-locations/",
+      "organization_name": "Neighborhood Health",
+      "organization_website": "https://neighborhoodhealthva.org/",
+      "location_name": "Neighborhood Health @ Annandale",
+      "address1": "6715 Little River Turnpike",
+      "address2": "Suite 201",
+      "city": "Annandale",
+      "state": "VA",
+      "zip": "22003",
+      "lat": 38.825465,
+      "lon": -77.175249,
+      "geocode_source": "census_geocoder",
+      "phone": "703-535-5568",
+      "email": "info@nhnva.org",
+      "notes": "Community health center. Fax 703-299-1794. Services listed: Family Medicine, Pediatrics, Women’s Health, Vision Care. Hours text on the source omits a dash between day names (e.g. 'Monday Friday'); schedule not parsed.",
+      "raw_hours_text": "Monday Friday: 8 am – 4:30 pm; Saturday: 8 am – 12 pm",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Primary care: Family Medicine, Pediatrics, Women’s Health, Vision Care.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-annandale-dental",
+      "source_url": "https://neighborhoodhealthva.org/our-locations/",
+      "organization_name": "Neighborhood Health",
+      "organization_website": "https://neighborhoodhealthva.org/",
+      "location_name": "Neighborhood Health @ Annandale Dental Clinic",
+      "address1": "7501 Little River Turnpike",
+      "city": "Annandale",
+      "state": "VA",
+      "zip": "22003",
+      "lat": 38.83196,
+      "lon": -77.206102,
+      "geocode_source": "census_geocoder",
+      "phone": "703-535-5568",
+      "email": "info@nhnva.org",
+      "notes": "Community health center. Fax 703-299-1794. Services listed: Dental Care. Hours text on the source omits a dash between day names (e.g. 'Monday Friday'); schedule not parsed.",
+      "raw_hours_text": "Monday Friday: 8 am – 4:30 pm",
+      "services": [
+        {
+          "service_type": "dental_care",
+          "description": "Dental Care.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-lsnv-arlington",
+      "source_url": "https://www.vplc.org/legal-services-of-northern-virginia/",
+      "organization_name": "Legal Services of Northern Virginia",
+      "location_name": "LSNV Arlington Office",
+      "address1": "2200 Wilson Blvd",
+      "address2": "Suite 210",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22201",
+      "lat": 38.891024,
+      "lon": -77.086193,
+      "geocode_source": "census_geocoder",
+      "phone": "(703) 778-6800",
+      "notes": "Listed on the Virginia Poverty Law Center page; lsnv.org returned HTTP 403 and could not be checked. Phone (703) 778-6800 is listed with the Fairfax office. Does not handle immigration cases or criminal matters. Services are completely free with no fees charged.",
+      "services": [
+        {
+          "service_type": "legal_aid",
+          "description": "Free civil legal aid (Legal Services of Northern Virginia Arlington Office).",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "external_id": "va08svc-alexandria-dchs-benefits-customer-service",
+      "source_url": "https://www.alexandriava.gov/economic-support/program/dchs-customer-relations-and-call-center",
+      "organization_name": "City of Alexandria Department of Community and Human Services (DCHS)",
+      "organization_website": "https://www.alexandriava.gov/DCHS",
+      "location_name": "Del Pepper Community Resource Center – DCHS In-Person Customer Service",
+      "address1": "4850 Mark Center Drive",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22311",
+      "lat": 38.830441,
+      "lon": -77.116305,
+      "geocode_source": "census_geocoder",
+      "phone": "703.746.5700",
+      "notes": "DCHS Call Center 703.746.5700, Monday – Friday 8 a.m. – 5 p.m.; text 703.346.5599 (Del Pepper page). Benefits/Customer Relations on Floor 5. EBT card and mail pick-up Monday-Friday 1 p.m. – 3 p.m. Emergency shelter screening walk-in at 4850 Mark Center Drive per https://www.alexandriava.gov/homeless-services/homeless-services",
+      "raw_hours_text": "In-Person Customer Service Assistance Available Monday – Friday, 8 a.m. – 5 p.m. at 4850 Mark Center Drive",
+      "services": [
+        {
+          "service_type": "snap_application_help",
+          "description": "Assistance with filing new and renewal applications as well as reports for SNAP, Medicaid, TANF.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "medicaid_enrollment_help",
+          "description": "Assistance with filing new and renewal Medicaid applications; Community Health Access Program (CHAP) help with Kaiser Permanente applications.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "financial_assistance",
+          "description": "Emergency Programs – Help with accessing assistance with rent, shelter, utilities, eviction storage, burial and appointment scheduling.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "utility_assistance",
+          "description": "Seasonal Fuel Assistance (Cooling and Heating) applications.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "tax_preparation",
+          "description": "Free Income Tax Program – Seasonal assistance with filing income taxes, by appointment only, for qualifying individuals/families.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "housing_assistance",
+          "description": "Individuals seeking emergency shelter are encouraged to go to 4850 Mark Center Drive to complete the screening on a walk-in basis; referred once a bed is available at Alexandria Community Shelter or Carpenter's Shelter.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-alexandria-dchs-behavioral-health",
+      "source_url": "https://www.alexandriava.gov/dchs/same-day-access",
+      "organization_name": "City of Alexandria Department of Community and Human Services (DCHS)",
+      "organization_website": "https://www.alexandriava.gov/DCHS",
+      "location_name": "Del Pepper Community Resource Center – Same Day Access & Emergency Services",
+      "address1": "4850 Mark Center Drive",
+      "address2": "2nd Floor (Same Day Access); 1st Floor (Emergency Services)",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22311",
+      "lat": 38.830441,
+      "lon": -77.116305,
+      "geocode_source": "census_geocoder",
+      "phone": "703.746.3535",
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "notes": "TTY 703.746.3440 or Virginia Relay 711. Staff can answer calls in English and Spanish, and in other languages through phone interpretation. Emergency Services 703.746.3401 (24/7 by phone and telehealth). Crisis info source: https://www.alexandriava.gov/adult-behavioral-health/mental-health-crisis-programs",
+      "raw_hours_text": "Staff are available Monday through Friday, 8:30 a.m. to 5 p.m. ... Monday, Tuesday, Thursday, and Friday: Last intake accepted at 2 p.m. Wednesday: Last Intake accepted at 5 p.m. | Emergency Services: 24/7 by phone and telehealth, Walk-ins 8 a.m. to 8 p.m. Mon-Wed, 8 a.m. to 5 p.m. Thurs-Fri",
+      "raw_eligibility_text": "Services are available to residents of the City of Alexandria and offered in-person or by telehealth.",
+      "services": [
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Same Day Access: walk-in behavioral health assessments (mental health and substance use), no appointment required.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "substance_use_treatment",
+          "description": "Same Day Access walk-in assessments include substance use concerns.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "crisis_support",
+          "description": "DCHS Emergency Services: 24/7 crisis intervention by phone/telehealth; walk-ins at 1st Floor.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "20:00",
+              "week_of_month": null,
+              "notes": "walk-in"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "20:00",
+              "week_of_month": null,
+              "notes": "walk-in"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "20:00",
+              "week_of_month": null,
+              "notes": "walk-in"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null,
+              "notes": "walk-in"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null,
+              "notes": "walk-in"
+            }
+          ]
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Services are available to residents of the City of Alexandria and offered in-person or by telehealth."
+        },
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "SDA serves children aged 5+, youth, and adults."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "not_required",
+          "details": "walk-in assessments for behavioral health, including mental health and substance use concerns, with no appointment required."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-alexandria-workforce-development-center",
+      "source_url": "https://www.alexandriava.gov/workforce-development/location/workforce-development-center-location-and-parking-information",
+      "organization_name": "City of Alexandria Department of Community and Human Services (DCHS)",
+      "organization_website": "https://www.alexandriava.gov/DCHS",
+      "location_name": "Workforce Development Center (WDC)",
+      "address1": "4850 Mark Center Drive",
+      "address2": "6th Floor",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22311",
+      "lat": 38.830441,
+      "lon": -77.116305,
+      "geocode_source": "census_geocoder",
+      "phone": "703.746.5940",
+      "email": "wdc@alexandriava.gov",
+      "notes": "Programs (source https://www.alexandriava.gov/workforce-development/programs-and-services): WIOA Adult and Dislocated Worker, SNAP Employment & Training, VIEW (TANF), career readiness workshops and coaching. WIOA Adult program provides skills training, English as a Second Language, and GED assistance for eligible participants.",
+      "raw_hours_text": "Monday - Friday: 8 a.m. to 5 p.m. Saturday: Closed Sunday: Closed",
+      "services": [
+        {
+          "service_type": "job_training",
+          "description": "Career coaching, job search support, skills training (WIOA Adult/Dislocated Worker, SNAP E&T, VIEW).",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "The Adult Program serves people who are 22 years and older, are legally entitled to work in the United States, and have met selective service registration requirements."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-alexandria-health-department-del-pepper",
+      "source_url": "https://alexandriava.gov/public-health/location/redella-s-del-pepper-community-resource-center",
+      "organization_name": "Alexandria Health Department",
+      "organization_website": "https://www.alexandriava.gov/Health",
+      "location_name": "Del Pepper Community Resource Center – Alexandria Health Department",
+      "address1": "4850 Mark Center Drive",
+      "address2": "Floors 3-4",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22311",
+      "lat": 38.830441,
+      "lon": -77.116305,
+      "geocode_source": "census_geocoder",
+      "phone": "703.746.4888",
+      "email": "alexhealth@vdh.virginia.gov",
+      "notes": "Clinical services appointments 703.746.4888 (Floor 4): routine immunizations, newcomer/refugee health, chest clinic and TB care, sexual & reproductive health, BabyCare case management, Narcan. WIC services 703.746.4998 (Floor 3). General questions 703.746.4996.",
+      "raw_hours_text": "Hours of operation are 8 a.m.-4:30 p.m., Monday-Friday.",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Clinical services: routine immunizations, newcomer/refugee health, chest clinic and tuberculosis care, sexual & reproductive health care, BabyCare case management.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "wic_services",
+          "description": "WIC services, Floor 3, 703.746.4998.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-carpenters-shelter-hoffman-center",
+      "source_url": "https://carpentersshelter.org/residential-shelters/",
+      "organization_name": "Carpenter's Shelter",
+      "organization_website": "https://carpentersshelter.org/",
+      "location_name": "Carpenter's Shelter – The Hoffman Center",
+      "address1": "930 N. Henry St",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22314",
+      "lat": 38.815469,
+      "lon": -77.049336,
+      "geocode_source": "census_geocoder",
+      "phone": "(703) 548-7500",
+      "email": "Info@CarpentersShelter.org",
+      "notes": "64-bed facility; as of March 2023 a family-only shelter. Case management, life skills, financial literacy, mental health services, employment assistance. David's Place day shelter at 930 North Henry Street (program hours 7-9 a.m.; laundry and showers) per https://www.alexandriava.gov/homeless-services/homeless-services",
+      "raw_eligibility_text": "Individuals and families seeking shelter must be referred from the Homeless Services Assessment Center and complete an intake assessment.",
+      "services": [
+        {
+          "service_type": "shelter",
+          "description": "Residential emergency shelter (family-only as of March 2023) with case management.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "other",
+          "description": "David's Place day shelter: laundry and showers. Program hours are 7-9 a.m.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "referral",
+          "status": "required",
+          "details": "Individuals and families seeking shelter must be referred from the Homeless Services Assessment Center and complete an intake assessment."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-alexandria-community-shelter",
+      "source_url": "https://www.alexandriava.gov/homeless-services/homeless-services",
+      "organization_name": "City of Alexandria Department of Community and Human Services (DCHS)",
+      "organization_website": "https://www.alexandriava.gov/DCHS",
+      "location_name": "Alexandria Community Shelter (operated by Carpenter's Shelter)",
+      "address1": "2355-B Mill Road",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22314",
+      "lat": 38.802932,
+      "lon": -77.06862,
+      "geocode_source": "census_geocoder",
+      "phone": "703.746.3660",
+      "notes": "City-owned 64-bed emergency shelter operated by Carpenter's Shelter for men, women and families (also described at https://carpentersshelter.org/residential-shelters/). Screening at 4850 Mark Center Drive or call 703.746.5700.",
+      "raw_eligibility_text": "Once screened, individuals will be added to the wait list and referred once a bed is available at Alexandria Community Shelter or Carpenter's Shelter.",
+      "services": [
+        {
+          "service_type": "shelter",
+          "description": "64-bed emergency shelter for men, women and families.",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "referral",
+          "status": "required",
+          "details": "Individuals seeking emergency shelter are encouraged to go to 4850 Mark Center Drive to complete the screening on a walk-in basis."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-lsnv-alexandria",
+      "source_url": "https://www.vplc.org/legal-services-of-northern-virginia/",
+      "organization_name": "Legal Services of Northern Virginia",
+      "location_name": "LSNV Alexandria Office",
+      "address1": "100 N. Pitt Street",
+      "address2": "Suite 307",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22314",
+      "lat": 38.804839,
+      "lon": -77.044811,
+      "geocode_source": "census_geocoder",
+      "notes": "Listed on the Virginia Poverty Law Center page; lsnv.org returned HTTP 403 and could not be checked. Main phone on that page (703) 778-6800 is listed with the Fairfax office. Does not handle immigration cases or criminal matters. Services are completely free with no fees charged.",
+      "raw_hours_text": "Walk-ins: Wednesdays 9:30 AM-4:00 PM (closed for lunch 12:00-1:30 PM)",
+      "services": [
+        {
+          "service_type": "legal_aid",
+          "description": "Free civil legal aid; walk-ins on Wednesdays.",
+          "offering_status": "unconfirmed",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:30",
+              "closes": "12:00",
+              "week_of_month": null,
+              "notes": "walk-in"
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "13:30",
+              "closes": "16:00",
+              "week_of_month": null,
+              "notes": "walk-in"
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "external_id": "va08svc-falls-church-housing-human-services",
+      "source_url": "https://www.fallschurchva.gov/684/Human-Services",
+      "organization_name": "City of Falls Church Housing & Human Services",
+      "organization_website": "https://www.fallschurchva.gov/681/Housing-Human-Services",
+      "location_name": "City Hall – Housing & Human Services",
+      "address1": "300 Park Ave.",
+      "address2": "Suite 102 W",
+      "city": "Falls Church",
+      "state": "VA",
+      "zip": "22046",
+      "lat": 38.884922,
+      "lon": -77.172613,
+      "geocode_source": "census_geocoder",
+      "phone": "703-248-5005",
+      "email": "hhsinfo@fallschurchva.gov",
+      "notes": "TTY 711. Address and email from https://www.fallschurchva.gov/681/Housing-Human-Services. Fairfax County Department of Family Services also serves City of Falls Church residents.",
+      "services": [
+        {
+          "service_type": "financial_assistance",
+          "description": "Emergency financial assistance with rent for City residents experiencing temporary setbacks.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "utility_assistance",
+          "description": "Assistance with utilities.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "snap_application_help",
+          "description": "Helping residents apply for programs such as SNAP.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "medicaid_enrollment_help",
+          "description": "Helping residents apply for programs such as Medicaid.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "other",
+          "description": "Referrals for food, clothing, furniture, and eyeglasses.",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Housing & Human Services (HHS) connects City of Falls Church residents with immediate support and long-term resources"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-fairfax-dfs-hyland",
+      "source_url": "https://www.fairfaxcounty.gov/familyservices/office-locations",
+      "organization_name": "Fairfax County Department of Family Services",
+      "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+      "location_name": "Human Services Center – Gerry Hyland Government Center",
+      "address1": "8350 Richmond Highway",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22309",
+      "lat": 38.730962,
+      "lon": -77.104623,
+      "geocode_source": "census_geocoder",
+      "phone": "703-324-7500",
+      "email": "DFSinfo@fairfaxcounty.gov",
+      "notes": "TTY 711. Listed as a DFS Human Services Center; secure outdoor drop box for public assistance documents (https://www.fairfaxcounty.gov/familyservices/public-assistance-employment-services/outdoor-drop-box-locations). The office-locations page does not list which programs are served in person at this site. Apply for SNAP/Medicaid/TANF online at CommonHelp or Enterprise Call Center 1-833-5CALLVA.",
+      "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.- 4:30 p.m.",
+      "services": [
+        {
+          "service_type": "snap_application_help",
+          "description": "DFS Human Services Center; drop box for benefit documents. In-person application help not explicitly stated for this site.",
+          "offering_status": "unconfirmed",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "medicaid_enrollment_help",
+          "description": "DFS Human Services Center; drop box for benefit documents. In-person application help not explicitly stated for this site.",
+          "offering_status": "unconfirmed",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "external_id": "va08svc-fairfax-dfs-annandale",
+      "source_url": "https://www.fairfaxcounty.gov/familyservices/office-locations",
+      "organization_name": "Fairfax County Department of Family Services",
+      "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+      "location_name": "Human Services Center – Heritage Center, West Wing",
+      "address1": "7611 Little River Turnpike",
+      "address2": "West Wing",
+      "city": "Annandale",
+      "state": "VA",
+      "zip": "22003",
+      "lat": 38.832288,
+      "lon": -77.208035,
+      "geocode_source": "census_geocoder",
+      "phone": "703-324-7500",
+      "email": "DFSinfo@fairfaxcounty.gov",
+      "notes": "TTY 711. Listed as a DFS Human Services Center; secure outdoor drop box for public assistance documents (https://www.fairfaxcounty.gov/familyservices/public-assistance-employment-services/outdoor-drop-box-locations). The office-locations page does not list which programs are served in person at this site. Apply for SNAP/Medicaid/TANF online at CommonHelp or Enterprise Call Center 1-833-5CALLVA.",
+      "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.- 4:30 p.m.",
+      "services": [
+        {
+          "service_type": "snap_application_help",
+          "description": "DFS Human Services Center; drop box for benefit documents. In-person application help not explicitly stated for this site.",
+          "offering_status": "unconfirmed",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "medicaid_enrollment_help",
+          "description": "DFS Human Services Center; drop box for benefit documents. In-person application help not explicitly stated for this site.",
+          "offering_status": "unconfirmed",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "external_id": "va08svc-fairfax-mount-vernon-public-health-center",
+      "source_url": "https://www.fairfaxcounty.gov/health/clinics/mount-vernon-district-office",
+      "organization_name": "Fairfax County Health Department",
+      "organization_website": "https://www.fairfaxcounty.gov/health/",
+      "location_name": "Mount Vernon Public Health Center",
+      "address1": "8350 Richmond Highway",
+      "address2": "Suite 233",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22309",
+      "lat": 38.730962,
+      "lon": -77.104623,
+      "geocode_source": "census_geocoder",
+      "phone": "703-246-7100",
+      "email": "MtVernon.Office@fairfaxcounty.gov",
+      "notes": "TTY 711. Walk-in immunizations, pregnancy testing, maternity intake, TB and STI testing (first come first served); all services by appointment at 703-246-7100. WIC appointments 703-246-5599 (https://www.fairfaxcounty.gov/health/women-infants-children). Opens at 10 a.m. on the second Thursday of each month.",
+      "raw_hours_text": "Business Hours: Monday 8 a.m.-4:30 p.m.; Tuesday 8 a.m.-6:30 p.m.; Wednesday 8 a.m.-4:30 p.m.; Thursday 8 a.m.-4:30 p.m.; Friday 8 a.m.-4:30 p.m. Walk-in service hours: Monday 8 a.m.-4 p.m.; Tuesday 10 a.m.-6 p.m.; Wednesday 8 a.m.-4 p.m.; Thursday 8 a.m.-4 p.m.; Friday 8 a.m.-12 p.m.",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Immunizations, maternity services, pregnancy testing, HIV/STI/TB testing, newcomer health screening, speech and hearing. Fees and eligibility vary by service.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "18:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "wic_services",
+          "description": "Women, Infant, and Children (WIC) Nutrition Program; call 703-246-5599 for appointments.",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "first_come_first_served",
+          "status": "required",
+          "details": "Clinic walk-in service is limited and is on a first come first served basis."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-fairfax-annandale-public-health-center-wic",
+      "source_url": "https://www.fairfaxcounty.gov/health/women-infants-children",
+      "organization_name": "Fairfax County Health Department",
+      "organization_website": "https://www.fairfaxcounty.gov/health/",
+      "location_name": "Annandale Public Health Center (WIC)",
+      "address1": "7611 Little River Turnpike",
+      "address2": "Suite 301E (East Wing)",
+      "city": "Annandale",
+      "state": "VA",
+      "zip": "22003",
+      "lat": 38.832288,
+      "lon": -77.208035,
+      "geocode_source": "census_geocoder",
+      "phone": "703-246-5599",
+      "notes": "TTY 711. WIC delivered in a hybrid format with in-person and remote appointments.",
+      "raw_hours_text": "WIC offices are open Monday to Friday, 8 a.m.-4:30 p.m. unless stated otherwise. *Hours may vary by location.",
+      "raw_eligibility_text": "Participants must meet categorical, income, residential and nutrition risk eligibility requirements.",
+      "services": [
+        {
+          "service_type": "wic_services",
+          "description": "WIC nutrition program for pregnant, postpartum and breastfeeding women, infants, and children under five.",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Please call one of the sites listed below for an appointment or assistance."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-fairfax-csb-gartlan-center",
+      "source_url": "https://www.fairfaxcounty.gov/community-services-board/about/gartlan-center",
+      "organization_name": "Fairfax-Falls Church Community Services Board",
+      "organization_website": "https://www.fairfaxcounty.gov/community-services-board/",
+      "location_name": "Gartlan Center",
+      "address1": "8119 Holland Road",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22306",
+      "lat": 38.741799,
+      "lon": -77.078142,
+      "geocode_source": "census_geocoder",
+      "phone": "703-360-6910",
+      "notes": "CSB 24/7 Emergency 703-573-5679; Detox 703-502-7000. Primary care clinic by Neighborhood Health on site; Genoa Pharmacy (703-253-7697) on site.",
+      "services": [
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Adult behavioral health outpatient, case management and treatment for people with a serious mental illness, group treatment.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "substance_use_treatment",
+          "description": "Intensive outpatient substance abuse treatment.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "support_groups",
+          "description": "Family support group.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "other",
+          "description": "Services for homeless individuals – laundry, showers, meals and mail delivery (Tuesdays from noon to 4 p.m., Fridays 8 a.m. to noon).",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "12:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-fairfax-csb-hyland-outpatient",
+      "source_url": "https://www.fairfaxcounty.gov/community-services-board/about/locations",
+      "organization_name": "Fairfax-Falls Church Community Services Board",
+      "organization_website": "https://www.fairfaxcounty.gov/community-services-board/",
+      "location_name": "Gerry Hyland Government Center (South County Center) – CSB Outpatient & Youth Services",
+      "address1": "8350 Richmond Highway",
+      "address2": "Suite 415 (Outpatient); Suite 515 (Youth)",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22309",
+      "lat": 38.730962,
+      "lon": -77.104623,
+      "geocode_source": "census_geocoder",
+      "phone": "703-704-6355",
+      "notes": "Outpatient Services Suite 415, 703-704-6355; Youth Services Suite 515, 703-704-6707. TTY 711.",
+      "services": [
+        {
+          "service_type": "mental_health_counseling",
+          "description": "CSB Outpatient Services and Youth Services.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "external_id": "va08svc-fairfax-vcw-alexandria-center",
+      "source_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
+      "organization_name": "Fairfax County Department of Family Services",
+      "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+      "location_name": "Fairfax Virginia Career Works Alexandria Center",
+      "address1": "8350 Richmond Highway",
+      "address2": "Suite 327",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22309",
+      "lat": 38.730962,
+      "lon": -77.104623,
+      "geocode_source": "census_geocoder",
+      "phone": "703-533-5400",
+      "email": "DFSWorkforceDevelopment@fairfaxcounty.gov",
+      "notes": "TTY 711. Part of Virginia Career Works – Northern Region. Services available in multiple languages. One appointment per person per day; appointments available two weeks in advance.",
+      "raw_hours_text": "Monday-Thursday 8:30 a.m.-4:30 p.m. Friday 10 a.m.-4:30 p.m. (listed with the Workforce Center team contact)",
+      "services": [
+        {
+          "service_type": "job_training",
+          "description": "Career guidance, resume and cover letter review, job search and application assistance, practice interviews.",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Please schedule an appointment to meet with a career specialist."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-fairfax-vcw-annandale-center",
+      "source_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
+      "organization_name": "Fairfax County Department of Family Services",
+      "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+      "location_name": "Fairfax Virginia Career Works Annandale Center",
+      "address1": "7611 Little River Turnpike",
+      "address2": "Suite 300 West",
+      "city": "Annandale",
+      "state": "VA",
+      "zip": "22003",
+      "lat": 38.832288,
+      "lon": -77.208035,
+      "geocode_source": "census_geocoder",
+      "phone": "703-533-5400",
+      "email": "DFSWorkforceDevelopment@fairfaxcounty.gov",
+      "notes": "TTY 711. Part of Virginia Career Works – Northern Region. Services available in multiple languages. One appointment per person per day; appointments available two weeks in advance.",
+      "raw_hours_text": "Monday-Thursday 8:30 a.m.-4:30 p.m. Friday 10 a.m.-4:30 p.m. (listed with the Workforce Center team contact)",
+      "services": [
+        {
+          "service_type": "job_training",
+          "description": "Career guidance, resume and cover letter review, job search and application assistance, practice interviews.",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Please schedule an appointment to meet with a career specialist."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-vcw-cherokee-avenue-center",
+      "source_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
+      "organization_name": "Virginia Career Works – Northern Region",
+      "location_name": "Cherokee Avenue Center",
+      "address1": "5520 Cherokee Avenue",
+      "address2": "#100",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22312",
+      "lat": 38.804192,
+      "lon": -77.165455,
+      "geocode_source": "census_geocoder",
+      "phone": "571-327-2206",
+      "email": "VCWCA@vcwnorthern.com",
+      "notes": "Listed under 'Other Local Workforce Centers' on the Fairfax County page. TTY 711 VA Relay.",
+      "services": [
+        {
+          "service_type": "job_training",
+          "description": "Workforce center (services not detailed on source page).",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "external_id": "va08svc-baileys-shelter-supportive-housing",
+      "source_url": "https://www.fairfaxcounty.gov/homeless/emergency-shelters",
+      "organization_name": "Fairfax County Office to Prevent and End Homelessness",
+      "organization_website": "https://www.fairfaxcounty.gov/homeless/",
+      "location_name": "Bailey's Shelter and Supportive Housing (operated by FACETS)",
+      "address1": "5914 Seminary Road",
+      "city": "Falls Church",
+      "state": "VA",
+      "zip": "22041",
+      "lat": 38.848533,
+      "lon": -77.128238,
+      "geocode_source": "census_geocoder",
+      "phone": "703-820-7621",
+      "notes": "50-bed shelter for adults without children (36 men, 14 women; 10 cold-weather overflow beds Nov 1 – Mar 31). Operated by FACETS. Fax 703-671-0441. Located in Fairfax County (Falls Church mailing address).",
+      "raw_eligibility_text": "Adults without children who are in need of shelter should call one of the three emergency shelters that serve single adults",
+      "services": [
+        {
+          "service_type": "shelter",
+          "description": "Full service sheltering and supportive services program for adults without children.",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "other",
+          "status": "required",
+          "details": "50-bed shelter for adults without children."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-united-community-hyland",
+      "source_url": "https://www.unitedcommunity.org/locations/",
+      "organization_name": "United Community",
+      "organization_website": "https://www.unitedcommunity.org/",
+      "location_name": "United Community – Gerry Hyland/South County Government Center",
+      "address1": "8350 Richmond Highway",
+      "address2": "Suite 527",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22309",
+      "lat": 38.730962,
+      "lon": -77.104623,
+      "geocode_source": "census_geocoder",
+      "phone": "703.768.7106",
+      "notes": "Listed as United Community mailing address. Services offered also include case management, financial planning, dental referral, Family Achievement Program. (Food pantry services are at 7511 Fordson Rd and are excluded from this non-food dataset.) Per https://www.unitedcommunity.org/programs/family-support-programs-fairfax-va/ family support programs serve families living in Fairfax County.",
+      "services": [
+        {
+          "service_type": "financial_assistance",
+          "description": "Emergency Eviction Prevention; Rental Assistance.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "utility_assistance",
+          "description": "Utility Assistance.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "prescription_help",
+          "description": "Prescription Assistance.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "job_training",
+          "description": "Employment Assistance.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-united-community-progreso-center",
+      "source_url": "https://www.unitedcommunity.org/locations/",
+      "organization_name": "United Community",
+      "organization_website": "https://www.unitedcommunity.org/",
+      "location_name": "Progreso Literacy and Citizenship Center",
+      "address1": "8350 Richmond Hwy.",
+      "address2": "Suite 325",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22309",
+      "lat": 38.730962,
+      "lon": -77.104623,
+      "geocode_source": "census_geocoder",
+      "phone": "703.799.8830",
+      "notes": "ESL registration includes intake + language assessment, $70 fee (includes textbooks), sliding scale case-by-case; citizenship preparation classes $40; staff attorney and pro bono partners for immigration legal support. Program details: https://www.unitedcommunity.org/programs/immigration-legal-and-adult-education-programs/",
+      "services": [
+        {
+          "service_type": "esl_classes",
+          "description": "Beginner to advanced ESL classes; English conversation classes; citizenship preparation classes.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "immigration_legal_help",
+          "description": "Immigration Legal Support: citizenship and naturalization applications.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "support_groups",
+          "description": "Support Groups.",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Registration includes intake + language assessment. $70 fee (includes textbooks)."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "va08svc-united-community-early-learning-center",
+      "source_url": "https://www.unitedcommunity.org/locations/",
+      "organization_name": "United Community",
+      "organization_website": "https://www.unitedcommunity.org/",
+      "location_name": "United Community Early Learning Center",
+      "address1": "2709 Popkins Ln.",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22306",
+      "lat": 38.764663,
+      "lon": -77.079196,
+      "geocode_source": "census_geocoder",
+      "phone": "703.765.0909",
+      "notes": "Accredited, affordable early learning center for children ages 6 weeks to 5 years old.",
+      "services": [
+        {
+          "service_type": "childcare",
+          "description": "Accredited, affordable, high-quality educational care center (ages 6 weeks to 5 years).",
+          "offering_status": "regular"
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "children ages 6 weeks to 5 years old"
+        }
+      ],
+      "needs_primary_confirmation": false
+    }
+  ]
+}

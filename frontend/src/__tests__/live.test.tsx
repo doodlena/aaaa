@@ -52,11 +52,12 @@ describe('live shelf status', () => {
     expect(sortFeed([a, b, c]).map((r) => r.id)).toEqual([3, 1]);
   });
 
-  it('home leads with today\'s shelves from the API', async () => {
+  it('home shows the tagline, the needs chooser and live updates from providers', async () => {
     mockFetch([{ path: '/api/resources/search', body: searchResponse({ items: [summary({ live: liveOpen() }), summary({ id: 9, name: 'No post' })] }) }]);
     renderApp(<HomePage />);
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent("What's on the shelf today, near you");
-    const feed = await screen.findByRole('list', { name: "Today's shelves near you" });
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Help that lights the way — food, health and support near you');
+    expect(screen.getByRole('navigation', { name: 'What do you need?' })).toBeInTheDocument();
+    const feed = await screen.findByRole('list', { name: 'Live updates from providers' });
     expect(within(feed).getByRole('link', { name: '[TEST] Maple Community Pantry' })).toBeInTheDocument();
     expect(within(feed).queryByText('No post')).toBeNull();
   });

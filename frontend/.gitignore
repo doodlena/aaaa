@@ -3,3 +3,6 @@ dist
 test-results
 playwright-report
 .env.local
+
+# Playwright saved sessions
+e2e/.auth/

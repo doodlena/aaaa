@@ -1,6 +1,9 @@
 import { expect, test } from '@playwright/test';
+import { demoMode, SYNTHETIC_SKIP } from './support';
 
+// Creates an account and saves a place: only run against demo data, never on a database with real users.
 test('C: register, save a favorite, sign out, sign in, favorite is still there', async ({ page }) => {
+  test.skip(!(await demoMode()), SYNTHETIC_SKIP);
   const email = `e2e-${Date.now()}-${Math.floor(Math.random() * 1e6)}@example.com`;
   const password = 'e2e-password-123';
 
