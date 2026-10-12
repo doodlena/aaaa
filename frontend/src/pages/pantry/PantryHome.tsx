@@ -286,11 +286,13 @@ export function PantryHome() {
                   </li>
                 ))}
               </ul>
-              <p>
-                <Link to="/pantry/surplus">
-                  <Icon name="truck" size={16} /> {t('portal.surplusLink')}
-                </Link>
-              </p>
+              {approved.some((p) => p.offers_food !== false) && (
+                <p>
+                  <Link to="/pantry/surplus">
+                    <Icon name="truck" size={16} /> {t('portal.surplusLink')}
+                  </Link>
+                </p>
+              )}
             </section>
           )}
           {other.length > 0 && (

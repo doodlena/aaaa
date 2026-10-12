@@ -1081,6 +1081,13 @@
         "different_places": "Likely different places",
         "unsure": "Unsure"
       }
+    },
+    "categoryChange": {
+      "title": "서비스 카테고리",
+      "current": "현재 카테고리",
+      "add": "추가",
+      "remove": "삭제",
+      "none": "없음"
     }
   },
   "offline": {
@@ -1273,7 +1280,8 @@
       "closure": "휴무",
       "correction": "수정 제안",
       "reports": "신고",
-      "reportsCount": "신고({{count}})"
+      "reportsCount": "신고({{count}})",
+      "eventService": "특별 행사 또는 진료일"
     },
     "current": {
       "title": "지금 가족들에게 보이는 모습",
@@ -1303,7 +1311,9 @@
       "clear": "상태 지우기",
       "clearConfirm": "오늘의 상태를 지울까요? 가족들에게 다시 “확인되지 않음”으로 표시됩니다.",
       "clearYes": "예, 지웁니다",
-      "cleared": "상태를 지웠습니다."
+      "cleared": "상태를 지웠습니다.",
+      "limitedHintService": "“제한 운영”은 오늘 변경 사항이 있다는 뜻입니다. 예: 예약 없는 방문 중단, 긴 대기 시간, 예약 축소. 메시지에 내용을 적어 주세요.",
+      "messagePlaceholderService": "예: 오후 2시까지 예약 없는 방문 중단. 약 1시간 대기 예상."
     },
     "event": {
       "title": "일회성 행사",
@@ -1318,7 +1328,10 @@
       "post": "행사 게시",
       "posted": "행사를 게시했습니다. 가족들이 지금 볼 수 있습니다.",
       "missing": "이름(3자 이상), 날짜, 시작 시간을 입력하세요.",
-      "endBeforeStart": "종료 시간은 시작 시간보다 늦어야 합니다."
+      "endBeforeStart": "종료 시간은 시작 시간보다 늦어야 합니다.",
+      "titleService": "특별 행사 또는 진료일",
+      "leadService": "일회성 행사. 예: 예방접종 클리닉, 법률 상담의 날, 취업 박람회, 추가 운영 시간.",
+      "namePlaceholderService": "예: 무료 독감 예방접종"
     },
     "closure": {
       "title": "특정 날짜 휴무",
@@ -1358,7 +1371,14 @@
       "yes": "예",
       "no": "아니요",
       "notSure": "모름",
-      "accessNotes": "접근성 메모 (경사로, 주차, 출입구)"
+      "accessNotes": "접근성 메모 (경사로, 주차, 출입구)",
+      "hoursService": "주간 운영 시간",
+      "categories": "이곳에서 제공하는 서비스",
+      "categoriesHint": "이 장소에서 제공하는 모든 지원 종류를 선택하세요. 카테고리 변경은 목록에 반영되기 전에 검토자가 확인합니다.",
+      "categoriesEmpty": "서비스를 하나 이상 선택해 두세요.",
+      "categoriesPending": "검토 요청 내용: {{changes}}",
+      "addLabel": "{{name}} 추가",
+      "removeLabel": "{{name}} 삭제"
     },
     "reports": {
       "title": "주민 신고",
@@ -1433,7 +1453,7 @@
     },
     "landing": {
       "title": "푸드 팬트리와 서비스 제공 기관을 위한 페이지",
-      "lead": "등록 정보를 정확하게 유지하고 오늘 소식을 가족들에게 알리세요. 운영 여부, 재고, 특별 배급을 알릴 수 있습니다. 무료입니다.",
+      "lead": "목록을 정확하게 유지하고 오늘의 상황을 알려 주세요: 운영, 휴무 또는 제한 운영, 특별 행사와 진료일, 식품 프로그램의 경우 오늘 있는 품목. 무료입니다.",
       "create": "무료 계정 만들기",
       "signIn": "로그인",
       "stepsTitle": "접근 권한 받는 방법",
@@ -1457,13 +1477,13 @@
       },
       "canTitle": "할 수 있는 일",
       "can": {
-        "live": "오늘 운영 상태와 재고 알리기",
-        "events": "특별 배급과 행사 알리기",
+        "live": "오늘의 상태(운영, 제한 운영, 휴무)와 식품 프로그램의 경우 오늘 있는 품목 게시",
+        "events": "특별 행사, 진료일, 배급 일정 안내",
         "closures": "휴일·날씨로 인한 휴무 알리기",
         "corrections": "운영 시간, 조건, 연락처 수정 (변경 전에 검토)",
         "reports": "가족들의 신고에 답하기",
         "staff": "동료를 추가해 함께 게시하기",
-        "surplus": "남는 식품을 다른 팬트리에 나누기"
+        "surplus": "식품 프로그램: 잉여 게시판에서 다른 푸드 팬트리에 남는 식품 제공"
       },
       "free": "비용이 없습니다. 정보를 팔거나 공유하지 않습니다."
     },

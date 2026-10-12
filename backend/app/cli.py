@@ -431,16 +431,35 @@ def cmd_ai_resolve_duplicates(a):
     print(json.dumps(counts))
 
 
-def _rebuild_from_linked(db, loc) -> None:
+def _rebuild_from_linked(db, loc, keep_fields: bool = True) -> None:
     from app.ingestion.candidate import CandidateResource
     from app.ingestion.pipeline import _apply_unverified
     from app.models import SourceRecord
+
+    from app.models import FieldProvenance
 
     rest = db.scalars(select(SourceRecord).where(SourceRecord.location_id == loc.id, SourceRecord.status == "linked")
                       .order_by(SourceRecord.id)).all()
     if rest:
         db.flush()
-        _apply_unverified(db, loc, CandidateResource(**rest[0].normalized), rest[0])
+        # Keep each basic field's current value when the record that supplied it is still accepted; rebuilding from
+        # the oldest record must not swap a good name/address for another source's wording.
+        keep = {}
+        linked = {r.id for r in rest}
+        fields = ("name", "address1", "address2", "city", "zip", "phone", "website") if keep_fields else ()
+        for f in fields:
+            prov = db.scalar(select(FieldProvenance).where(FieldProvenance.location_id == loc.id, FieldProvenance.field == f)
+                             .order_by(FieldProvenance.observed_at.desc()).limit(1))
+            if prov is not None and prov.source_record_id in linked:
+                keep[f] = getattr(loc, f)
+        # Primary record: the still-accepted one that most recently supplied the listing's name (else the oldest).
+        named = db.scalars(select(FieldProvenance).where(FieldProvenance.location_id == loc.id, FieldProvenance.field == "name",
+                                                         FieldProvenance.source_record_id.in_(linked))
+                           .order_by(FieldProvenance.observed_at.desc())).first()
+        primary = next((r for r in rest if named and r.id == named.source_record_id), rest[0])
+        _apply_unverified(db, loc, CandidateResource(**primary.normalized), primary)
+        for f, v in keep.items():
+            setattr(loc, f, v)
 
 
 def _retract(db, source_id: str) -> int:
@@ -551,7 +570,8 @@ def cmd_apply_audit(a):
                 flag_modified(r, "normalized")
             db.flush()
             if field != "closed_or_not_a_service" or any(x.status == "linked" for x in recs):
-                _rebuild_from_linked(db, loc)
+                # a deliberate correction of name/address/phone must win over "keep the current value"
+                _rebuild_from_linked(db, loc, keep_fields=field not in ("address", "name", "phone"))
             applied.append(f)
         db.commit()
     out = Path(a.out) if a.out else REPO_ROOT / "data" / "audit"

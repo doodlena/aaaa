@@ -6,7 +6,7 @@ import { ErrorMessage, Loading } from '../../components/Status';
 import { useAsync } from '../../lib/useAsync';
 import { useAI } from '../../state/meta';
 import type { DuplicateAIOpinion } from '../../api/types';
-import { adminError, renderValue, When } from './shared';
+import { adminError, fieldLabel, ProposalValue, renderValue, When } from './shared';
 
 /** All pending change proposals and duplicate candidates across resources. */
 export function AdminConflicts() {
@@ -53,9 +53,9 @@ export function AdminConflicts() {
               {changes.data.items.map((c) => (
                 <tr key={c.id}>
                   <td><Link to={`/admin/resources/${c.location_id}`}>#{c.location_id}</Link></td>
-                  <th scope="row">{c.field}</th>
-                  <td><pre className="json">{renderValue(c.current_value)}</pre></td>
-                  <td><pre className="json json--proposed">{renderValue(c.proposed_value)}</pre></td>
+                  <th scope="row">{fieldLabel(c.field, t)}</th>
+                  <td><ProposalValue field={c.field} value={c.current_value} /></td>
+                  <td><ProposalValue field={c.field} value={c.proposed_value} proposed /></td>
                   <td><When at={c.created_at} /></td>
                   <td className="row-actions">
                     <button type="button" className="btn btn--primary btn--sm" onClick={() => void decide(() => api.admin.decideChange(c.id, 'accept'), changes.reload)}>

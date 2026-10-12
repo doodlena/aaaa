@@ -4,9 +4,55 @@ import { api } from '../../api/client';
 import type { Tristate } from '../../api/types';
 import { Icon } from '../../components/Icon';
 import { errorKey } from '../../components/Status';
+import { SERVICE_GROUPS, SERVICE_TYPES, toggle } from '../../lib/filters';
 import { weekdayName } from '../../lib/format';
 
 const REQS = ['photo_id', 'proof_of_address', 'income_documentation', 'residency', 'appointment', 'registration', 'referral'] as const;
+
+/** Service types grouped like the public "What do you need?" groups, in that order. */
+const GROUPED_SERVICE_TYPES = SERVICE_GROUPS.map((g) => ({ group: g, types: Object.keys(SERVICE_TYPES).filter((k) => SERVICE_TYPES[k] === g) })).filter(
+  (g) => g.types.length > 0,
+);
+
+/** Tick the categories offered here. Changes become one reviewed proposal (add/remove), never applied directly. */
+function CategoryPicker({ current, selected, onChange }: { current: string[]; selected: string[]; onChange: (next: string[]) => void }) {
+  const { t } = useTranslation();
+  const id = useId();
+  const add = selected.filter((x) => !current.includes(x));
+  const remove = current.filter((x) => !selected.includes(x));
+  const label = (code: string) => t(`serviceType.${code}`, { defaultValue: code });
+  const changes = [
+    ...add.map((c) => t('portal.correction.addLabel', { name: label(c) })),
+    ...remove.map((c) => t('portal.correction.removeLabel', { name: label(c) })),
+  ];
+  return (
+    <fieldset className="fgroup category-picker" aria-describedby={`${id}-hint`}>
+      <legend>{t('portal.correction.categories')}</legend>
+      <p id={`${id}-hint`} className="fgroup__hint">
+        {t('portal.correction.categoriesHint')}
+      </p>
+      {GROUPED_SERVICE_TYPES.map((g) => (
+        <details key={g.group} className="category-picker__group" open={g.types.some((x) => selected.includes(x) || current.includes(x))}>
+          <summary>
+            {t(`serviceGroup.${g.group}`, { defaultValue: g.group })}
+            {g.types.some((x) => selected.includes(x)) && <span className="muted"> ({g.types.filter((x) => selected.includes(x)).length})</span>}
+          </summary>
+          <div className="checks checks--cols">
+            {g.types.map((code) => (
+              <label key={code} className="check check--sm">
+                <input type="checkbox" checked={selected.includes(code)} onChange={() => onChange(toggle(selected, code))} />
+                <span>{label(code)}</span>
+              </label>
+            ))}
+          </div>
+        </details>
+      ))}
+      <div aria-live="polite">
+        {changes.length > 0 && <p className="notice">{t('portal.correction.categoriesPending', { changes: changes.join(', ') })}</p>}
+      </div>
+    </fieldset>
+  );
+}
 
 interface HoursRow {
   weekday: number;
@@ -19,7 +65,17 @@ interface HoursRow {
  * Corrections to contact details, hours and requirements. They are PROPOSALS: a reviewer checks them before anything
  * public changes (verified data is never overwritten directly).
  */
-export function CorrectionForm({ locationId }: { locationId: number }) {
+export function CorrectionForm({
+  locationId,
+  food = true,
+  serviceTypes,
+}: {
+  locationId: number;
+  /** False for non-food-only listings: hours are opening hours rather than food distribution times. */
+  food?: boolean;
+  /** Current service categories; when given, the provider can propose adding/removing categories. */
+  serviceTypes?: string[];
+}) {
   const { t, i18n } = useTranslation();
   const id = useId();
   const [phone, setPhone] = useState('');
@@ -33,6 +89,7 @@ export function CorrectionForm({ locationId }: { locationId: number }) {
   const [editHours, setEditHours] = useState(false);
   const [hours, setHours] = useState<HoursRow[]>([{ weekday: 5, opens: '09:00', closes: '12:00', appointment_only: false }]);
   const [elig, setElig] = useState<Record<string, Tristate | ''>>({});
+  const [categories, setCategories] = useState<string[]>(serviceTypes || []);
   const [message, setMessage] = useState('');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -57,7 +114,19 @@ export function CorrectionForm({ locationId }: { locationId: number }) {
         setError(t('portal.correction.badHours'));
         return;
       }
-      body.schedules = hours.map((h) => ({ kind: 'distribution', ...h }));
+      body.schedules = hours.map((h) => ({ kind: food ? 'distribution' : 'operating_hours', ...h }));
+    }
+    if (serviceTypes) {
+      const add = categories.filter((x) => !serviceTypes.includes(x));
+      const remove = serviceTypes.filter((x) => !categories.includes(x));
+      if (add.length || remove.length) {
+        if (!categories.length) {
+          setError(t('portal.correction.categoriesEmpty'));
+          return;
+        }
+        if (add.length) body.add_service_types = add;
+        if (remove.length) body.remove_service_types = remove;
+      }
     }
     const eligList = Object.entries(elig)
       .filter(([, v]) => v)
@@ -128,7 +197,7 @@ export function CorrectionForm({ locationId }: { locationId: number }) {
       </div>
 
       <fieldset className="fgroup">
-        <legend>{t('portal.correction.hours')}</legend>
+        <legend>{food ? t('portal.correction.hours') : t('portal.correction.hoursService')}</legend>
         <label className="check">
           <input type="checkbox" checked={editHours} onChange={(e) => setEditHours(e.target.checked)} />
           <span>{t('portal.correction.replaceHours')}</span>
@@ -193,6 +262,8 @@ export function CorrectionForm({ locationId }: { locationId: number }) {
           ))}
         </div>
       </fieldset>
+
+      {serviceTypes && <CategoryPicker current={serviceTypes} selected={categories} onChange={setCategories} />}
 
       <div className="field">
         <label htmlFor={`${id}-msg`}>

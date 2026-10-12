@@ -1081,6 +1081,13 @@
         "different_places": "Likely different places",
         "unsure": "Unsure"
       }
+    },
+    "categoryChange": {
+      "title": "服务类别",
+      "current": "当前类别",
+      "add": "添加",
+      "remove": "移除",
+      "none": "无"
     }
   },
   "offline": {
@@ -1273,7 +1280,8 @@
       "closure": "关闭",
       "correction": "提出更正",
       "reports": "报告",
-      "reportsCount": "报告（{{count}}）"
+      "reportsCount": "报告（{{count}}）",
+      "eventService": "特别活动或义诊日"
     },
     "current": {
       "title": "家庭现在看到的您",
@@ -1303,7 +1311,9 @@
       "clear": "清除状态",
       "clearConfirm": "要移除今天的状态吗？家庭将再次看到“未确认”。",
       "clearYes": "是的，清除",
-      "cleared": "状态已清除。"
+      "cleared": "状态已清除。",
+      "limitedHintService": "“部分开放”表示今天照常开放但有变动，例如暂停接待未预约者、等候时间较长或预约名额减少。请在留言中说明。",
+      "messagePlaceholderService": "例如：下午2点前暂停接待未预约者，预计等候约1小时。"
     },
     "event": {
       "title": "一次性活动",
@@ -1318,7 +1328,10 @@
       "post": "发布活动",
       "posted": "活动已发布。家庭现在可以看到了。",
       "missing": "请填写名称（3 个字符以上）、日期和开始时间。",
-      "endBeforeStart": "结束时间必须晚于开始时间。"
+      "endBeforeStart": "结束时间必须晚于开始时间。",
+      "titleService": "特别活动或义诊日",
+      "leadService": "一次性活动，例如疫苗接种、法律援助日、招聘会或额外开放时间。",
+      "namePlaceholderService": "例如：免费流感疫苗接种"
     },
     "closure": {
       "title": "某一天关闭",
@@ -1358,7 +1371,14 @@
       "yes": "是",
       "no": "否",
       "notSure": "不确定",
-      "accessNotes": "无障碍说明（坡道、停车、入口）"
+      "accessNotes": "无障碍说明（坡道、停车、入口）",
+      "hoursService": "每周开放时间",
+      "categories": "此处提供的服务",
+      "categoriesHint": "勾选此地点提供的所有帮助类型。类别变更会先由审核人员确认，然后才会显示在您的信息页上。",
+      "categoriesEmpty": "请至少保留一项服务。",
+      "categoriesPending": "将提交审核：{{changes}}",
+      "addLabel": "添加{{name}}",
+      "removeLabel": "移除{{name}}"
     },
     "reports": {
       "title": "来自社区的报告",
@@ -1433,7 +1453,7 @@
     },
     "landing": {
       "title": "面向食物银行和服务机构",
-      "lead": "保持信息准确，并告诉家庭今天的情况：是否开放、有哪些物资、特别发放活动。完全免费。",
+      "lead": "保持信息准确，并告诉大家今天的情况：开放、关闭或部分开放，特别活动和义诊日，以及食物项目今天有哪些物资。完全免费。",
       "create": "注册免费账户",
       "signIn": "登录",
       "stepsTitle": "如何获得权限",
@@ -1457,13 +1477,13 @@
       },
       "canTitle": "您可以做什么",
       "can": {
-        "live": "发布今天的状态和现有物资",
-        "events": "宣布特别发放和活动",
+        "live": "发布今天的状态（开放、部分开放或关闭），食物项目还可发布今天有哪些物资",
+        "events": "发布特别活动、义诊日和发放活动",
         "closures": "发布节假日或天气停业通知",
         "corrections": "更正时间、条件和联系方式（修改前会审核）",
         "reports": "回复家庭的反馈",
         "staff": "添加同事一起发布",
-        "surplus": "把多余的食物分享给其他食物银行"
+        "surplus": "食物项目：在剩余物资板上把多余食物提供给其他食物银行"
       },
       "free": "完全免费。我们绝不出售或分享您的信息。"
     },

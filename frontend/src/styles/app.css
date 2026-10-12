@@ -2247,6 +2247,30 @@ input[type='radio'] {
   border-color: var(--talker);
   background: var(--talker-tint);
 }
+.category-change {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--sp-2);
+}
+.category-change--proposed {
+  border-color: var(--talker);
+  background: var(--talker-tint);
+}
+.category-change p {
+  margin: 0;
+}
+.category-change ul {
+  margin: 0 0 var(--sp-2);
+  padding-inline-start: var(--sp-4);
+}
+.category-picker__group {
+  margin-block: var(--sp-1);
+}
+.category-picker__group > summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding-block: var(--sp-1);
+}
 .proposals {
   list-style: none;
   padding: 0;

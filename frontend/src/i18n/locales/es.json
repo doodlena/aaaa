@@ -1081,6 +1081,13 @@
         "different_places": "Probablemente lugares distintos",
         "unsure": "No está claro"
       }
+    },
+    "categoryChange": {
+      "title": "Categorías de servicio",
+      "current": "Categorías actuales",
+      "add": "Agregar",
+      "remove": "Quitar",
+      "none": "Ninguna"
     }
   },
   "offline": {
@@ -1273,7 +1280,8 @@
       "closure": "Cierre",
       "correction": "Sugerir una corrección",
       "reports": "Reportes",
-      "reportsCount": "Reportes ({{count}})"
+      "reportsCount": "Reportes ({{count}})",
+      "eventService": "Evento especial o día de clínica"
     },
     "current": {
       "title": "Cómo le ven las familias ahora",
@@ -1303,7 +1311,9 @@
       "clear": "Borrar el estado",
       "clearConfirm": "¿Quitar el estado de hoy? Las familias volverán a ver “no confirmado”.",
       "clearYes": "Sí, borrarlo",
-      "cleared": "Estado borrado."
+      "cleared": "Estado borrado.",
+      "limitedHintService": "“Limitado” significa que hoy atienden con cambios, p. ej. sin atención sin cita, largas esperas o menos citas. Explíquelo en el mensaje.",
+      "messagePlaceholderService": "p. ej. Sin atención sin cita hasta las 2 pm. Espera de aprox. 1 hora."
     },
     "event": {
       "title": "Evento único",
@@ -1318,7 +1328,10 @@
       "post": "Publicar evento",
       "posted": "Evento publicado. Las familias ya pueden verlo.",
       "missing": "Agregue un nombre (3 caracteres o más), una fecha y una hora de inicio.",
-      "endBeforeStart": "La hora de fin debe ser posterior a la de inicio."
+      "endBeforeStart": "La hora de fin debe ser posterior a la de inicio.",
+      "titleService": "Evento especial o día de clínica",
+      "leadService": "Un evento único, p. ej. una clínica de vacunas, un día de ayuda legal, una feria de empleo u horario adicional.",
+      "namePlaceholderService": "p. ej. Clínica gratuita de vacuna contra la gripe"
     },
     "closure": {
       "title": "Cerrado un día",
@@ -1358,7 +1371,14 @@
       "yes": "Sí",
       "no": "No",
       "notSure": "No sé",
-      "accessNotes": "Notas de accesibilidad (rampas, estacionamiento, entrada)"
+      "accessNotes": "Notas de accesibilidad (rampas, estacionamiento, entrada)",
+      "hoursService": "Horario semanal de atención",
+      "categories": "Servicios que se ofrecen aquí",
+      "categoriesHint": "Marque cada tipo de ayuda que se ofrece en este lugar. Un revisor comprueba los cambios de categoría antes de que aparezcan en su ficha.",
+      "categoriesEmpty": "Deje marcado al menos un servicio.",
+      "categoriesPending": "Se enviará para revisión: {{changes}}",
+      "addLabel": "agregar {{name}}",
+      "removeLabel": "quitar {{name}}"
     },
     "reports": {
       "title": "Reportes de la comunidad",
@@ -1433,7 +1453,7 @@
     },
     "landing": {
       "title": "Para despensas de alimentos y proveedores de servicios",
-      "lead": "Mantenga su ficha al día y cuente a las familias lo que pasa hoy: si está abierto o cerrado, qué hay disponible y las distribuciones especiales. Es gratis.",
+      "lead": "Mantenga su ficha al día y cuente a la gente qué pasa hoy: abierto, cerrado o limitado, eventos especiales y días de clínica y, en programas de alimentos, qué hay en los estantes. Es gratis.",
       "create": "Crear una cuenta gratuita",
       "signIn": "Iniciar sesión",
       "stepsTitle": "Cómo obtener acceso",
@@ -1457,13 +1477,13 @@
       },
       "canTitle": "Lo que puede hacer",
       "can": {
-        "live": "Publicar el estado de hoy y lo que hay disponible",
-        "events": "Anunciar distribuciones y eventos especiales",
+        "live": "Publicar el estado de hoy (abierto, limitado o cerrado) y, en programas de alimentos, qué hay en los estantes",
+        "events": "Anunciar eventos especiales, días de clínica y repartos",
         "closures": "Avisar cierres por feriados o mal tiempo",
         "corrections": "Corregir horario, requisitos y contacto (se revisan antes de cambiar)",
         "reports": "Responder a los avisos de las familias",
         "staff": "Agregar colegas para que también publiquen",
-        "surplus": "Ofrecer alimentos sobrantes a otras despensas"
+        "surplus": "Programas de alimentos: ofrecer comida sobrante a otras despensas en el tablero de excedentes"
       },
       "free": "No tiene costo. Nunca vendemos ni compartimos su información."
     },

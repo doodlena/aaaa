@@ -3875,6 +3875,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Therapy practice office hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday - Friday (9 AM - 6 PM)"
+    }
+   ],
    "organization_name": "Rock Recovery",
    "organization_website": "https://www.rockrecoveryed.org",
    "raw_eligibility_text": null,

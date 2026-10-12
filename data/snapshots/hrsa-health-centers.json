@@ -12,8 +12,8 @@
    "phone": "(703) 535-5568",
    "state": "VA",
    "website": null,
-   "address1": "8350 Richmond Hwy, Suite 233",
-   "address2": null,
+   "address1": "8350 Richmond Hwy",
+   "address2": "Suite 301",
    "services": [
     {
      "frequency": null,
@@ -51,6 +51,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Source gives clinic hours but the listing shows none.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "Monday: 8 am – 7 pm; Tuesday Friday: 8 am – 4:30 pm"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "Suite repeated in both address lines.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "8350 Richmond Highway"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "Suite repeated in both address lines.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "8350 Richmond Highway"
+    }
+   ],
    "organization_name": "Neighborhood Health South County Dental",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -163,8 +186,8 @@
    "phone": "(703) 535-5568",
    "state": "VA",
    "website": null,
-   "address1": "8350 Richmond Hwy, Suite 301",
-   "address2": null,
+   "address1": "8350 Richmond Hwy",
+   "address2": "Suite 301",
    "services": [
     {
      "frequency": null,
@@ -191,6 +214,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Source gives clinic hours but the listing shows none.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "Monday: 8 am – 7 pm; Tuesday Friday: 8 am – 4:30 pm"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "Suite repeated in both address lines.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "8350 Richmond Highway"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "Suite repeated in both address lines.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "8350 Richmond Highway"
+    }
+   ],
    "organization_name": "Neighborhood Health at South County Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -249,8 +295,8 @@
    "phone": "(703) 535-5568",
    "state": "VA",
    "website": null,
-   "address1": "1225 Martha Custis Dr, Apartment C-1",
-   "address2": null,
+   "address1": "1225 Martha Custis Dr",
+   "address2": "Suite C-1",
    "services": [
     {
      "frequency": null,
@@ -277,6 +323,22 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "HRSA data labels the clinic unit as an 'Apartment'; it is a health-center suite, not an apartment.",
+     "evidence_url": "https://data.hrsa.gov/data/download",
+     "evidence_quote": "1225 Martha Custis Dr, Apartment C-1"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "HRSA data labels the clinic unit as an 'Apartment'; it is a health-center suite, not an apartment.",
+     "evidence_url": "https://data.hrsa.gov/data/download",
+     "evidence_quote": "1225 Martha Custis Dr, Apartment C-1"
+    }
+   ],
    "organization_name": "Neighborhood Health at Martha Custis Drive",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -729,6 +791,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Source gives clinic hours but the listing shows none.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "Monday Friday: 8 am – 4:30 pm"
+    }
+   ],
    "organization_name": "Neighborhood Health at Annandale Dental",
    "organization_website": "https://www.neighborhoodhealthva.org",
    "raw_eligibility_text": null,
@@ -772,6 +843,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Source gives clinic hours but the listing shows none.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "Monday Thursday: 8 am – 6 pm; Friday: 8 am – 4:30 pm"
+    }
+   ],
    "organization_name": "Neighborhood Health at 2 East",
    "organization_website": "https://www.neighborhoodhealth.org",
    "raw_eligibility_text": null,
@@ -830,8 +910,8 @@
    "phone": "(703) 535-5568",
    "state": "VA",
    "website": null,
-   "address1": "6715 Little River Tpke, Suite 201",
-   "address2": null,
+   "address1": "6715 Little River Tpke",
+   "address2": "Suite 201",
    "services": [
     {
      "frequency": null,
@@ -858,6 +938,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Source gives clinic hours but the listing shows none.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "Monday Friday: 8 am – 4:30 pm; Saturday: 8 am – 12 pm"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "Suite repeated in both address lines.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "6715 Little River Turnpike"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "Suite repeated in both address lines.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "6715 Little River Turnpike"
+    }
+   ],
    "organization_name": "Neighborhood Health at Annandale Medical",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -901,6 +1004,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Source gives clinic hours but the listing shows none.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "Monday Thursday: 8 am – 6 pm; Friday: 8 am – 4:30 pm"
+    }
+   ],
    "organization_name": "Neighborhood Health at the WOW Bus",
    "organization_website": "https://www.neighborhoodhealthva.org",
    "raw_eligibility_text": null,
@@ -987,6 +1099,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Source gives clinic hours (with the dash between day names dropped), but the listing shows none.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "Monday Friday: 8 am – 4:30 pm"
+    }
+   ],
    "organization_name": "Neighborhood Health Arlington Sequoia",
    "organization_website": "https://www.neighborhoodhealth.org",
    "raw_eligibility_text": null,
@@ -1002,8 +1123,8 @@
    "phone": "(703) 535-5568",
    "state": "VA",
    "website": null,
-   "address1": "2301 Columbia Pike, Apartment G",
-   "address2": null,
+   "address1": "2301 Columbia Pike",
+   "address2": "Suite G",
    "services": [
     {
      "frequency": null,
@@ -1030,6 +1151,29 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Source gives clinic hours but the listing shows none.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "Monday Friday: 9 am – 5:30 pm; Saturday: 9 am – 1 pm"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The unit is garbled: 'Apartment G' in address1 duplicates 'Ste G' in address2. This is a clinic suite, not an apartment.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "2301 Columbia Pike"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The unit is garbled: 'Apartment G' in address1 duplicates 'Ste G' in address2. This is a clinic suite, not an apartment.",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "2301 Columbia Pike"
+    }
+   ],
    "organization_name": "Neighborhood Health Arlington Pediatric Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1245,6 +1389,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Health center hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday–Friday, 8:00 AM–5:30 PM; Saturday, 8:00 AM–1:00 PM; Sunday closed."
+    }
+   ],
    "organization_name": "Lunera Health - Manassas",
    "organization_website": "https://www.GPWHealthCenter.com",
    "raw_eligibility_text": null,

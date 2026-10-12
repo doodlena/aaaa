@@ -1081,6 +1081,13 @@
         "different_places": "Likely different places",
         "unsure": "Unsure"
       }
+    },
+    "categoryChange": {
+      "title": "Service categories",
+      "current": "Current categories",
+      "add": "Add",
+      "remove": "Remove",
+      "none": "None"
     }
   },
   "offline": {
@@ -1273,7 +1280,8 @@
       "closure": "Closure",
       "correction": "Suggest a correction",
       "reports": "Reports",
-      "reportsCount": "Reports ({{count}})"
+      "reportsCount": "Reports ({{count}})",
+      "eventService": "Special event or clinic day"
     },
     "current": {
       "title": "How families see you now",
@@ -1303,7 +1311,9 @@
       "clear": "Clear status",
       "clearConfirm": "Remove today's status? Families will see “not confirmed” again.",
       "clearYes": "Yes, clear it",
-      "cleared": "Status cleared."
+      "cleared": "Status cleared.",
+      "limitedHintService": "“Limited” means you're open with changes today, e.g. walk-ins paused, long wait times or fewer appointments. Say what in the message.",
+      "messagePlaceholderService": "e.g. Walk-ins paused until 2 pm. Expect about a 1-hour wait."
     },
     "event": {
       "title": "One-time event",
@@ -1318,7 +1328,10 @@
       "post": "Post event",
       "posted": "Event posted. Families can see it now.",
       "missing": "Add a name (3+ characters), a date and a start time.",
-      "endBeforeStart": "The end time must be after the start time."
+      "endBeforeStart": "The end time must be after the start time.",
+      "titleService": "Special event or clinic day",
+      "leadService": "A one-time event, e.g. a vaccine clinic, legal-aid day, job fair or extra office hours.",
+      "namePlaceholderService": "e.g. Free flu shot clinic"
     },
     "closure": {
       "title": "Closed on a day",
@@ -1358,7 +1371,14 @@
       "yes": "Yes",
       "no": "No",
       "notSure": "Not sure",
-      "accessNotes": "Accessibility notes (ramps, parking, entrance)"
+      "accessNotes": "Accessibility notes (ramps, parking, entrance)",
+      "hoursService": "Weekly opening hours",
+      "categories": "Services offered here",
+      "categoriesHint": "Tick every kind of help offered at this location. A reviewer checks category changes before they appear on your listing.",
+      "categoriesEmpty": "Keep at least one service ticked.",
+      "categoriesPending": "Sending for review: {{changes}}",
+      "addLabel": "add {{name}}",
+      "removeLabel": "remove {{name}}"
     },
     "reports": {
       "title": "Reports from the community",
@@ -1433,7 +1453,7 @@
     },
     "landing": {
       "title": "For food pantries and service providers",
-      "lead": "Keep your listing accurate and tell families what's happening today: open or closed, what's on the shelf, special distributions. It's free.",
+      "lead": "Keep your listing accurate and tell people what's happening today: open, closed or limited, special events and clinic days, and for food programs what's on the shelf. It's free.",
       "create": "Create a free account",
       "signIn": "Sign in",
       "stepsTitle": "How to get access",
@@ -1457,13 +1477,13 @@
       },
       "canTitle": "What you can do",
       "can": {
-        "live": "Post today's status and what's on the shelf",
-        "events": "Announce special distributions and events",
+        "live": "Post today's status (open, limited or closed) and, for food programs, what's on the shelf",
+        "events": "Announce special events, clinic days and distributions",
         "closures": "Post holiday and weather closures",
         "corrections": "Correct hours, requirements and contact details (reviewed before they change)",
         "reports": "Answer reports from families",
         "staff": "Add colleagues so they can post too",
-        "surplus": "Offer extra food to other pantries on the surplus board"
+        "surplus": "Food programs: offer extra food to other pantries on the surplus board"
       },
       "free": "There is no cost. We never sell or share your information."
     },

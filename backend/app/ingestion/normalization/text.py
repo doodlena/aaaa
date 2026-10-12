@@ -53,10 +53,38 @@ def normalize_address(address1: str | None, zip_code: str | None = None) -> str 
 
 
 def normalize_zip(value) -> str | None:
+    """The ZIP in a ZIP field or a full address. In "10056 Dean Dr, Manassas, VA 20110" the house number also has
+    five digits, so take the LAST five-digit group, and never a number that starts a street address."""
     if value is None:
         return None
-    m = re.search(r"\b(\d{5})(?:-\d{4})?\b", str(value))
-    return m.group(1) if m else None
+    text = str(value).strip()
+    found = list(re.finditer(r"\b(\d{5})(?:-\d{4})?\b", text))
+    if not found:
+        return None
+    if len(found) == 1 and found[0].start() == 0 and re.match(r"\d{5}\s+\S", text) and not re.fullmatch(r"\d{5}(-\d{4})?", text):
+        return None  # "10056 Dean Drive, Manassas": that's a house number, and no ZIP is given
+    return found[-1].group(1)
+
+
+_UNIT = re.compile(r"^(suite|ste\.?|#|unit|apt\.?|apartment|room|rm\.?|bldg\.?|building|floor|fl\.?|\d+(st|nd|rd|th) floor)\b", re.I)
+_STATE_ZIP = re.compile(r"^(va|virginia|dc|md)?\s*(\d{5}(-\d{4})?)?$", re.I)
+
+
+def split_address(text: str | None) -> tuple[str | None, str | None, str | None]:
+    """'8033 Ashton Ave, Suite 103, Manassas, VA 20109' -> ('8033 Ashton Ave', 'Suite 103', 'Manassas').
+    Unit parts go to address2; the city is the last part before the state/ZIP that isn't a unit."""
+    parts = [p.strip() for p in (text or "").split(",") if p.strip()]
+    if not parts:
+        return None, None, None
+    address1, rest = parts[0], parts[1:]
+    while rest and _STATE_ZIP.match(rest[-1]):
+        rest = rest[:-1]
+    units = [p for p in rest if _UNIT.match(p)]
+    others = [p for p in rest if not _UNIT.match(p)]
+    city = others[-1] if others else None
+    if city:
+        city = re.sub(r"\s+(va|virginia)(\s+\d{5}(-\d{4})?)?$", "", city, flags=re.I).strip() or None
+    return address1, (", ".join(units) or None), city
 
 
 def normalize_phone(value) -> str | None:

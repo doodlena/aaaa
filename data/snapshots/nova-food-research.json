@@ -1159,53 +1159,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "17:30",
-       "closes": "20:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "17:30",
-       "closes": "20:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "17:30",
-       "closes": "20:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "17:30",
-       "closes": "20:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "12:00",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Client-choice food pantry by appointment",
      "eligibility": [],
@@ -1271,6 +1225,36 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The unit number is repeated twice.",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Each weekday shows two overlapping time blocks. The pantry's own site gives 5:30-8:00 PM, by appointment.",
+     "evidence_url": "https://haymarketfoodpantry.org/find-help/",
+     "evidence_quote": "Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm Sat Mornings: By appointment between 9:00 am and 12:00 noon"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "The pantry's own site says food is distributed by appointment only, which contradicts walk_up.",
+     "evidence_url": "https://haymarketfoodpantry.org/find-help/",
+     "evidence_quote": "Our Hours - By Appointment Only"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The unit number is repeated twice.",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
+    }
+   ],
    "organization_name": "Haymarket Regional Food Pantry (HRFP)",
    "organization_website": "https://haymarketfoodpantry.org/",
    "raw_eligibility_text": "If you live in Prince William County and in these zip codes: We Can Help You! Haymarket (20168, 20169) Gainesville (20155, 20156) Catharpin (20143) Bristow (20136) Nokesville (20181, 20182) ... Unlike most food pantries that require clients to demonstrate financial need, the Haymarket Regional Food Pantry, due to its strong faith-based nature, will feed anyone in our Service Area who comes in need of food. ... Present Proof of Address – a current utility bill, lease, home owners insurance or real estate tax statement with a name that matches the Photo ID and with an address located within the HRFP Service Area Present a government issued Photo ID (such as a driver's license, green card, or passport) for each adult resident in your household. ... Our registered clients may visit the pantry only once every seven days.",
@@ -1396,32 +1380,14 @@
     {
      "status": "required",
      "values": {},
-     "details": "Emergency Referral Program requires referral from a social service provider (social workers, clergy, hospitals, schools)",
-     "requirement_type": "referral"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "TEFAP: must meet USDA income guidelines",
-     "requirement_type": "income"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "TEFAP: Northern Virginia resident",
-     "requirement_type": "residency"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "TEFAP: bring a photo ID",
+     "details": "TEFAP monthly program: Northern Virginia residents who meet income guidelines can walk in and apply, no referral needed. Bring a photo ID, plus a lease or a piece of mail if the ID does not show your current address. The Emergency Referral Program requires a referral from a social worker, clergy, hospital or school.",
      "requirement_type": "photo_id"
     },
     {
-     "status": "required",
+     "status": "not_required",
      "values": {},
-     "details": "TEFAP: if ID lacks current address, bring a lease or mail addressed to you",
-     "requirement_type": "proof_of_address"
+     "details": "TEFAP monthly program: Northern Virginia residents who meet income guidelines can walk in and apply, no referral needed. Bring a photo ID, plus a lease or a piece of mail if the ID does not show your current address. The Emergency Referral Program requires a referral from a social worker, clergy, hospital or school.",
+     "requirement_type": "referral"
     }
    ],
    "external_id": "nova-food-ffo-warehouse-prosperity",
@@ -1433,9 +1399,18 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "eligibility",
+     "reason": "A referral is required only for the Emergency Referral Program. The TEFAP monthly program is walk-in for Northern Virginia residents who meet income guidelines. Photo ID is still requested, and a lease or piece of mail is needed only if the ID lacks a current address.",
+     "evidence_url": "https://foodforothers.org/get-help/",
+     "evidence_quote": "If you are a Northern Virginia resident, you may walk in and apply. Bring a photo ID. If the ID does not have your current address on it, please also bring in a lease or a piece of mail addressed to you."
+    }
+   ],
    "organization_name": "Food for Others",
    "organization_website": "https://foodforothers.org/",
-   "raw_eligibility_text": "Emergency Referral Program – Free emergency food is provided to individuals and families referred to Food for Others by social service providers including social workers, clergy, hospitals, and schools. ... USDA TEFAP monthly program – The Emergency Food Assistance Program (TEFAP) of the U.S. Department of Agriculture provides monthly food for clients who meet income guidelines. If you are a Northern Virginia resident, you may walk in and apply. Bring a photo ID. If the ID does not have your current address on it, please also bring in a lease or a piece of mail addressed to you.",
+   "raw_eligibility_text": "TEFAP monthly program: Northern Virginia residents who meet income guidelines can walk in and apply, no referral needed. Bring a photo ID, plus a lease or a piece of mail if the ID does not show your current address. The Emergency Referral Program requires a referral from a social worker, clergy, hospital or school.",
    "wheelchair_accessible": "unknown"
   },
   {

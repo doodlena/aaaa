@@ -1081,6 +1081,13 @@
         "different_places": "Likely different places",
         "unsure": "Unsure"
       }
+    },
+    "categoryChange": {
+      "title": "Danh mục dịch vụ",
+      "current": "Danh mục hiện tại",
+      "add": "Thêm",
+      "remove": "Bỏ",
+      "none": "Không có"
     }
   },
   "offline": {
@@ -1273,7 +1280,8 @@
       "closure": "Đóng cửa",
       "correction": "Đề xuất chỉnh sửa",
       "reports": "Báo cáo",
-      "reportsCount": "Báo cáo ({{count}})"
+      "reportsCount": "Báo cáo ({{count}})",
+      "eventService": "Sự kiện đặc biệt hoặc ngày khám"
     },
     "current": {
       "title": "Các gia đình đang thấy bạn thế nào",
@@ -1303,7 +1311,9 @@
       "clear": "Xóa tình trạng",
       "clearConfirm": "Xóa tình trạng hôm nay? Các gia đình sẽ lại thấy “chưa xác nhận”.",
       "clearYes": "Có, xóa đi",
-      "cleared": "Đã xóa tình trạng."
+      "cleared": "Đã xóa tình trạng.",
+      "limitedHintService": "“Hạn chế” nghĩa là hôm nay vẫn mở nhưng có thay đổi, ví dụ tạm ngưng nhận khách không hẹn, chờ lâu hoặc ít lịch hẹn hơn. Hãy ghi rõ trong tin nhắn.",
+      "messagePlaceholderService": "ví dụ: Tạm ngưng khách không hẹn đến 2 giờ chiều. Dự kiến chờ khoảng 1 giờ."
     },
     "event": {
       "title": "Sự kiện một lần",
@@ -1318,7 +1328,10 @@
       "post": "Đăng sự kiện",
       "posted": "Đã đăng sự kiện. Các gia đình có thể thấy ngay bây giờ.",
       "missing": "Hãy thêm tên (từ 3 ký tự), ngày và giờ bắt đầu.",
-      "endBeforeStart": "Giờ kết thúc phải sau giờ bắt đầu."
+      "endBeforeStart": "Giờ kết thúc phải sau giờ bắt đầu.",
+      "titleService": "Sự kiện đặc biệt hoặc ngày khám",
+      "leadService": "Một sự kiện một lần, ví dụ buổi tiêm chủng, ngày tư vấn pháp lý, hội chợ việc làm hoặc giờ làm việc thêm.",
+      "namePlaceholderService": "ví dụ: Tiêm phòng cúm miễn phí"
     },
     "closure": {
       "title": "Đóng cửa vào một ngày",
@@ -1358,7 +1371,14 @@
       "yes": "Có",
       "no": "Không",
       "notSure": "Không rõ",
-      "accessNotes": "Ghi chú tiếp cận (dốc, bãi đỗ xe, lối vào)"
+      "accessNotes": "Ghi chú tiếp cận (dốc, bãi đỗ xe, lối vào)",
+      "hoursService": "Giờ mở cửa hằng tuần",
+      "categories": "Dịch vụ có tại đây",
+      "categoriesHint": "Đánh dấu mọi loại hỗ trợ có tại địa điểm này. Người duyệt sẽ kiểm tra thay đổi danh mục trước khi hiển thị.",
+      "categoriesEmpty": "Hãy giữ ít nhất một dịch vụ được đánh dấu.",
+      "categoriesPending": "Sẽ gửi để duyệt: {{changes}}",
+      "addLabel": "thêm {{name}}",
+      "removeLabel": "bỏ {{name}}"
     },
     "reports": {
       "title": "Báo cáo từ cộng đồng",
@@ -1433,7 +1453,7 @@
     },
     "landing": {
       "title": "Dành cho kho thực phẩm và đơn vị cung cấp dịch vụ",
-      "lead": "Giữ thông tin chính xác và báo cho các gia đình biết tình hình hôm nay: mở hay đóng, có gì trên kệ, các đợt phát đặc biệt. Miễn phí.",
+      "lead": "Giữ thông tin chính xác và cho mọi người biết tình hình hôm nay: mở cửa, đóng cửa hoặc hạn chế, sự kiện đặc biệt và ngày khám, và với chương trình thực phẩm, những gì đang có trên kệ. Miễn phí.",
       "create": "Tạo tài khoản miễn phí",
       "signIn": "Đăng nhập",
       "stepsTitle": "Cách được cấp quyền",
@@ -1457,13 +1477,13 @@
       },
       "canTitle": "Bạn có thể làm gì",
       "can": {
-        "live": "Đăng tình trạng hôm nay và hàng trên kệ",
-        "events": "Thông báo các đợt phát và sự kiện đặc biệt",
+        "live": "Đăng tình trạng hôm nay (mở, hạn chế hoặc đóng) và, với chương trình thực phẩm, những gì đang có trên kệ",
+        "events": "Thông báo sự kiện đặc biệt, ngày khám và đợt phát",
         "closures": "Báo đóng cửa ngày lễ hoặc do thời tiết",
         "corrections": "Sửa giờ, điều kiện và liên hệ (được duyệt trước khi thay đổi)",
         "reports": "Trả lời phản ánh của các gia đình",
         "staff": "Thêm đồng nghiệp để cùng đăng",
-        "surplus": "Chia sẻ thực phẩm dư với các kho khác"
+        "surplus": "Chương trình thực phẩm: tặng thực phẩm dư cho các kho thực phẩm khác trên bảng chia sẻ"
       },
       "free": "Không tốn phí. Chúng tôi không bao giờ bán hay chia sẻ thông tin của bạn."
     },

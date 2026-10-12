@@ -160,3 +160,91 @@ def test_provider_writes_need_csrf(approved):
     token = client.headers.pop("X-CSRF-Token")
     assert client.post(f"/api/provider/locations/{maple.id}/shelf", json={"status": "open"}).status_code in (401, 403)
     client.headers["X-CSRF-Token"] = token
+
+
+# --- every kind of service, not only food ---------------------------------------------------------------------------
+
+def _make_clinic(db, loc):
+    """Turn a listing into a non-food-only one (a health clinic)."""
+    from app.models import Service
+
+    for s in list(loc.services):
+        loc.services.remove(s)
+    db.flush()
+    db.add(Service(location_id=loc.id, service_type="health_clinic"))
+    db.commit()
+    db.refresh(loc)
+
+
+def test_non_food_status_update_shows_publicly_without_food_items(approved, db):
+    client, maple, _ = approved
+    _make_clinic(db, maple)
+    mine = client.get("/api/provider/me").json()["items"][0]
+    assert mine["offers_food"] is False and mine["service_types"] == ["health_clinic"]
+    r = client.post(f"/api/provider/locations/{maple.id}/shelf", json={"status": "limited", "message": "Walk-ins paused; about a 2 hour wait"})
+    assert r.status_code == 201 and r.json()["items"] == []
+    public = TestClient(client.app)  # anonymous visitor
+    d = public.get(f"/api/resources/{maple.id}").json()
+    assert d["live"]["status"] == "limited" and d["live"]["message"] == "Walk-ins paused; about a 2 hour wait"
+    assert d["live"]["source"] == "pantry" and d["current_inventory"] == []
+    res = public.get("/api/resources/search", params={"lat": 38.86, "lon": -77.099, "radius_km": 60}).json()
+    assert next(i for i in res["items"] if i["id"] == maple.id)["live"]["status"] == "limited"
+
+
+def test_non_food_listing_rejects_shelf_items_out_of_food_and_food_offerings(approved, db):
+    from app.models import ShelfUpdate
+
+    client, maple, _ = approved
+    _make_clinic(db, maple)
+    base = f"/api/provider/locations/{maple.id}"
+    r = client.post(f"{base}/shelf", json={"status": "open", "items": [{"food_type": "eggs", "level": "low"}]})
+    assert r.status_code == 422
+    assert client.post(f"{base}/shelf", json={"status": "out"}).status_code == 422
+    assert db.scalars(select(ShelfUpdate).where(ShelfUpdate.location_id == maple.id)).all() == []
+    ev = {"title": "Flu shot clinic day", "starts_at": "2030-01-01T10:00:00"}
+    assert client.post(f"{base}/events", json={**ev, "offerings": ["fresh_fruits"]}).status_code == 422
+    assert client.post(f"{base}/events", json=ev).status_code == 201  # no food types needed
+    assert client.post(f"{base}/shelf", json={"status": "closed", "message": "Staff training"}).status_code == 201
+
+
+def test_food_listing_still_posts_shelf_items(approved):
+    client, maple, _ = approved
+    r = client.post(f"/api/provider/locations/{maple.id}/shelf", json={"status": "out", "items": []})
+    assert r.status_code == 201
+    r = client.post(f"/api/provider/locations/{maple.id}/shelf", json={"status": "open", "items": [{"food_type": "eggs", "level": "low"}]})
+    assert r.status_code == 201 and r.json()["items"][0]["food_type"] == "eggs"
+
+
+def test_category_change_goes_to_review_and_applies_only_when_accepted(approved, db):
+    from app.models import ChangeProposal
+
+    client, maple, adm = approved
+    before = sorted(s.service_type for s in maple.services)
+    assert before and "legal_aid" not in before
+    drop = before[0]
+    base = f"/api/provider/locations/{maple.id}/change-requests"
+    assert client.post(base, json={"add_service_types": ["not_a_type"]}).status_code == 422
+    assert client.post(base, json={"remove_service_types": before}).status_code == 422  # would leave no category
+    assert client.post(base, json={"add_service_types": ["legal_aid"], "remove_service_types": ["legal_aid"]}).status_code == 422
+    r = client.post(base, json={"add_service_types": ["legal_aid", "esl_classes"], "remove_service_types": [drop]})
+    assert r.status_code == 201 and r.json()["status"] == "pending_review"
+    cp = db.scalar(select(ChangeProposal).where(ChangeProposal.location_id == maple.id, ChangeProposal.field == "service_types"))
+    assert cp.origin == "provider" and cp.current_value == before
+    assert cp.proposed_value == {"add": ["legal_aid", "esl_classes"], "remove": [drop]}
+    db.refresh(maple)
+    assert sorted(s.service_type for s in maple.services) == before  # nothing applied yet
+    # the admin queue shows it; rejecting changes nothing
+    assert any(c["field"] == "service_types" for c in adm.get("/api/admin/changes").json()["items"])
+    assert adm.post(f"/api/admin/changes/{cp.id}/decision", json={"decision": "reject"}).status_code == 200
+    db.expire_all()
+    assert sorted(s.service_type for s in db.get(Location, maple.id).services) == before
+    # a second proposal, accepted, applies exactly the delta
+    client.post(base, json={"add_service_types": ["legal_aid"], "remove_service_types": [drop]})
+    cp2 = db.scalar(select(ChangeProposal).where(ChangeProposal.location_id == maple.id, ChangeProposal.field == "service_types",
+                                                 ChangeProposal.status == "pending"))
+    assert adm.post(f"/api/admin/changes/{cp2.id}/decision", json={"decision": "accept"}).status_code == 200
+    db.expire_all()
+    after = sorted(s.service_type for s in db.get(Location, maple.id).services)
+    assert after == sorted([*(x for x in before if x != drop), "legal_aid"])
+    public = TestClient(client.app).get(f"/api/resources/{maple.id}").json()
+    assert "legal_aid" in str(public)

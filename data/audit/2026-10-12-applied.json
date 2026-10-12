@@ -1,0 +1,3389 @@
+[
+ {
+  "listing_id": 13,
+  "listing_name": "James Lee Senior Center (James Lee Community Center)",
+  "field": "address",
+  "current": "2855 Annandale Road, Falls Church 22041",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/james-lee-community-center",
+  "evidence_quote": "2855 Annandale Road Falls Church, VA 22042",
+  "reason": "The ZIP code is 22042, not 22041. The CAFB source also gives 22042.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "2855 Annandale Road",
+   "city": "Falls Church",
+   "zip": "22042"
+  },
+  "verify_note": "Fetched fairfaxcounty.gov James Lee page: '2855 Annandale Road Falls Church, VA 22042'. CAFB source record also says 22042. Only the va08 gap-research record has 22041."
+ },
+ {
+  "listing_id": 16,
+  "listing_name": "Buddhist Tzu Chi Foundation",
+  "field": "hours",
+  "current": "Sat wk1 09:30-11:00",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "9:30 AM-11:00 AM (1st and 3rd of the Month)",
+  "reason": "The 3rd-Saturday distribution is missing.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "09:30",
+    "closes": "11:00",
+    "week_of_month": 1
+   },
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "09:30",
+    "closes": "11:00",
+    "week_of_month": 3
+   }
+  ],
+  "verify_note": "CAFB raw_hours_text '9:30 AM-11:00 AM (1st and 3rd of the Month)'. The parser dropped wk3. Saturday weekday is kept from the existing listing."
+ },
+ {
+  "listing_id": 17,
+  "listing_name": "The Redeemed Christian Church of God - Victory Temple",
+  "field": "hours",
+  "current": "Sat wk2 10:00-12:00",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "As long as they can find their way to the pantry on 2nd and 4th Saturday of the month.",
+  "reason": "The 4th-Saturday distribution is missing.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "10:00",
+    "closes": "12:00",
+    "week_of_month": 2
+   },
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "10:00",
+    "closes": "12:00",
+    "week_of_month": 4
+   }
+  ],
+  "verify_note": "CAFB raw '10:00 AM-12:00 PM (2nd and 4th of the Month)', and notes say '2nd and 4th Saturday'. Weekday 5 is correct."
+ },
+ {
+  "listing_id": 19,
+  "listing_name": "Mount Olive Baptist Church",
+  "field": "hours",
+  "current": "Tue wk2 13:00-15:00; Sat wk3 09:00-10:00",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "1:00 PM-3:00 PM (2nd and 4th of the Month); 9:00 AM-10:00 AM (3rd of the Month)",
+  "reason": "The 4th-Tuesday 1-3 PM distribution is missing.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "13:00",
+    "closes": "15:00",
+    "week_of_month": 2
+   },
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "13:00",
+    "closes": "15:00",
+    "week_of_month": 4
+   },
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "09:00",
+    "closes": "10:00",
+    "week_of_month": 3
+   }
+  ],
+  "verify_note": "CAFB raw '1:00 PM-3:00 PM (2nd and 4th of the Month); 9:00 AM-10:00 AM (3rd of the Month)'. Tuesday wk2/wk4 and Saturday wk3 are kept. The schedule is complete."
+ },
+ {
+  "listing_id": 20,
+  "listing_name": "Chantilly Baptist Church",
+  "field": "address",
+  "current": "14312 Chantilly Baptist Ln, Chantilly, ZIP missing",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "14312 CHANTILLY BAPTIST LN Chantilly 20151",
+  "reason": "The ZIP is missing. The county source for the same site (listing 91, CBC Blesses Mobile Market) gives 20151. Listing 91 also looks like a duplicate of this one.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "14312 Chantilly Baptist Ln",
+   "city": "Chantilly",
+   "zip": "20151"
+  },
+  "verify_note": "Listing 91 (same church, same phone) has the county source address '14312 CHANTILLY BAPTIST LN Chantilly 20151'. The CAFB record for listing 20 has no ZIP. 20151 is right."
+ },
+ {
+  "listing_id": 30,
+  "listing_name": "Rising Hope Mission Church",
+  "field": "categories",
+  "current": "appointment_distribution, community_meal, pantry_pickup, walk_up",
+  "evidence_url": "https://www.risinghopeumc.org/programs",
+  "evidence_quote": "Food Market: by appointment only Tuesday-Thursday from 1:30pm-4:30pm.",
+  "reason": "The grocery pickup is by appointment only, so walk_up is wrong. The community lunch is already covered by community_meal.",
+  "confidence": "medium",
+  "remove_types": [
+   "walk_up"
+  ],
+  "verify_note": "Fetched risinghopeumc.org/programs: 'The Food Market is open for guest shopping by appointment only Tuesday-Thursday from 1:30pm-4:30pm.' The walk-in lunch stays covered by community_meal. The remaining appointment_distribution, community_meal and pantry_pickup are all food categories and accurate."
+ },
+ {
+  "listing_id": 31,
+  "listing_name": "St. Anthony of Padua Catholic Church",
+  "field": "hours",
+  "current": "Mon 10-13; Wed 10-13; Wed wk1 10-14",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "10:00 AM-2:00 PM (1st and 3rd of the Month)",
+  "reason": "The source gives the 1st AND 3rd of the month, but only week 1 is shown. The weekday (Wednesday) is taken from the current listing.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 0,
+    "opens": "10:00",
+    "closes": "13:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 2,
+    "opens": "10:00",
+    "closes": "13:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 2,
+    "opens": "10:00",
+    "closes": "14:00",
+    "week_of_month": 1
+   },
+   {
+    "kind": "distribution",
+    "weekday": 2,
+    "opens": "10:00",
+    "closes": "14:00",
+    "week_of_month": 3
+   }
+  ],
+  "verify_note": "The raw CAFB snapshot (19261-PUSH-01) parsed '1st and 3rd' as Wednesday wk1 twice, so the weekday really is Wednesday and wk3 was lost. The existing Mon/Wed weekly 10-13 entries from 19261-PART-01 are kept."
+ },
+ {
+  "listing_id": 32,
+  "listing_name": "Sydenstricker UMC",
+  "field": "hours",
+  "current": "Tue wk2 15:00-17:30",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "3:00 PM-5:30 PM (2nd and 4th of the Month)",
+  "reason": "The 4th-Tuesday distribution is missing.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "15:00",
+    "closes": "17:30",
+    "week_of_month": 2
+   },
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "15:00",
+    "closes": "17:30",
+    "week_of_month": 4
+   }
+  ],
+  "verify_note": "CAFB raw '3:00 PM-5:30 PM (2nd and 4th of the Month)', and notes say Tuesday. Weekday 1, wk2 and wk4."
+ },
+ {
+  "listing_id": 32,
+  "listing_name": "Sydenstricker UMC",
+  "field": "eligibility",
+  "current": "(none shown)",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "Tuesday: Call for appointment, 703-703-3665. Serving only Springfield residents, 22150, 22151, 22152, 22153.",
+  "reason": "The source requires an appointment and restricts service to Springfield ZIP codes. Neither is shown.",
+  "confidence": "high",
+  "new_value": "Appointment required (call 703-703-3665). Springfield residents only (ZIPs 22150, 22151, 22152, 22153). Can pick up for one family only.",
+  "verify_note": "The quote appears verbatim in the CAFB notes, which also say 'Can only pick up for one family.' The odd phone number 703-703-3665 matches the source exactly."
+ },
+ {
+  "listing_id": 32,
+  "listing_name": "Sydenstricker UMC",
+  "field": "categories",
+  "current": "drive_through, pantry_pickup",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "Call 703-703-3665 for an appointment.",
+  "reason": "Food pickup is by appointment, so appointment_distribution is missing.",
+  "confidence": "medium",
+  "add_types": [
+   "appointment_distribution"
+  ],
+  "verify_note": "The CAFB notes contain 'Call 703-703-3665 for an appointment.' appointment_distribution is a food category, which fits the user's scope."
+ },
+ {
+  "listing_id": 46,
+  "listing_name": "ICNA Relief USA",
+  "field": "hours",
+  "current": "Thu wk2 12:30-13:30; Thu wk4 12:30-13:30; Thu wk1 14:00-15:30",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "2:00 PM-3:30 PM (1st and 3rd of the Month)",
+  "reason": "The 3rd-Thursday 2-3:30 PM distribution is missing. The source notes also say distributions rotate between several locations, including Falls Church and Woodbridge.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "14:00",
+    "closes": "15:30",
+    "week_of_month": 1
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "12:30",
+    "closes": "13:30",
+    "week_of_month": 2
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "14:00",
+    "closes": "15:30",
+    "week_of_month": 3
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "12:30",
+    "closes": "13:30",
+    "week_of_month": 4
+   }
+  ],
+  "verify_note": "The raw CAFB snapshot parsed '2:00 PM-3:30 PM (1st and 3rd of the Month)' as Thursday wk1 twice, so wk3 was dropped. The proposed four Thursday slots match the raw text. Caveat: the notes say sessions rotate across three locations, and the source does not say which slot is at Woodlawn Trail."
+ },
+ {
+  "listing_id": 47,
+  "listing_name": "Fairfax Salvation Army",
+  "field": "categories",
+  "current": "diapers, hygiene_supplies, pantry_pickup",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "Wed 9am-3pm; 4th Monday 12-3pm drive thru dist.",
+  "reason": "The 4th-Monday drive-through distribution is explicit in the source (CAFB also tags drive_through), but drive_through is missing.",
+  "confidence": "high",
+  "add_types": [
+   "drive_through"
+  ],
+  "verify_note": "The county raw text has '4th Monday 12-3pm drive thru dist.' and CAFB types_in_source include drive_through. It is a food category."
+ },
+ {
+  "listing_id": 49,
+  "listing_name": "Food For Others",
+  "field": "eligibility",
+  "current": "photo_id required, proof_of_address required, residency required, referral required",
+  "evidence_url": "https://foodforothers.org/get-help/",
+  "evidence_quote": "If you are a Northern Virginia resident, you may walk in and apply. Bring a photo ID. If the ID does not have your current address on it, please also bring in a lease or a piece of mail addressed to you.",
+  "reason": "A referral is required only for the Emergency Referral Program. The TEFAP monthly program is walk-in for Northern Virginia residents who meet income guidelines. Photo ID is still requested, and a lease or piece of mail is needed only if the ID lacks a current address.",
+  "confidence": "high",
+  "new_value": "TEFAP monthly program: Northern Virginia residents who meet income guidelines can walk in and apply, no referral needed. Bring a photo ID, plus a lease or a piece of mail if the ID does not show your current address. The Emergency Referral Program requires a referral from a social worker, clergy, hospital or school.",
+  "verify_note": "Right in substance: a referral is needed only for the Emergency Referral Program, and TEFAP is walk-in. The ID detail is wrong. foodforothers.org/get-help says for TEFAP: 'Bring a photo ID. If the ID does not have your current address on it, please also bring in a lease or a piece of mail addressed to you.' So mail does not replace photo ID. CAFB's 'ID or a piece of mail' is looser. The residency is Northern Virginia. Corrected new_value below."
+ },
+ {
+  "listing_id": 58,
+  "listing_name": "Love Church",
+  "field": "hours",
+  "current": "Fri wk1 17:00-18:00",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "5:00 PM-6:00 PM (1st and 3rd of the Month)",
+  "reason": "The 3rd-Friday distribution is missing. The notes say the day moves from Thursday to Friday in summer.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 4,
+    "opens": "17:00",
+    "closes": "18:00",
+    "week_of_month": 1
+   },
+   {
+    "kind": "distribution",
+    "weekday": 4,
+    "opens": "17:00",
+    "closes": "18:00",
+    "week_of_month": 3
+   }
+  ],
+  "verify_note": "CAFB raw '5:00 PM-6:00 PM (1st and 3rd of the Month)', and notes say Friday. Weekday 4, wk1 and wk3. The summer Thursday/Friday switch cannot be shown in this format."
+ },
+ {
+  "listing_id": 60,
+  "listing_name": "Our Lady of Angels Conference Society of St Vincent de Paul",
+  "field": "hours",
+  "current": "Sat wk2 10:00-12:00",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "10:00 AM-12:00 PM (2nd and 4th of the Month)",
+  "reason": "The 4th-Saturday distribution is missing.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "10:00",
+    "closes": "12:00",
+    "week_of_month": 2
+   },
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "10:00",
+    "closes": "12:00",
+    "week_of_month": 4
+   }
+  ],
+  "verify_note": "CAFB raw '10:00 AM-12:00 PM (2nd and 4th of the Month)', and notes say Saturday. Weekday 5, wk2 and wk4."
+ },
+ {
+  "listing_id": 62,
+  "listing_name": "CASA Woodbridge",
+  "field": "hours",
+  "current": "distribution Mon-Fri 09:00-17:00 plus Tue wk2 10:00-12:00",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "10:00 AM-12:00 PM (2nd of the Month)",
+  "reason": "The Mon-Fri 9-5 hours are CASA's general office/legal-services hours ('Monday–Friday, 9:00 AM–5:00 PM.' in the PWC source), but they are shown as food pickup. Food is only once a month, 10 AM-12 PM.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "10:00",
+    "closes": "12:00",
+    "week_of_month": 2
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "The Mon-Fri 9-5 hours come from the PWC immigration/legal record (341). The CAFB snapshot has the food slot as Tuesday wk2 10-12. Moving 9-5 to operating_hours and keeping Tue wk2 as the only distribution is correct."
+ },
+ {
+  "listing_id": 71,
+  "listing_name": "Haymarket Regional Food Pantry",
+  "field": "address",
+  "current": "7669 Limestone Drive #105 #105, Gainesville 20155",
+  "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+  "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155",
+  "reason": "The unit number is repeated twice.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "7669 Limestone Drive",
+   "address2": "#105",
+   "city": "Gainesville",
+   "zip": "20155"
+  },
+  "verify_note": "address1 currently contains '#105' and address2 is also '#105'. The pantry site confirms '7669 Limestone Drive, #105 Gainesville, VA 20155'."
+ },
+ {
+  "listing_id": 71,
+  "listing_name": "Haymarket Regional Food Pantry",
+  "field": "hours",
+  "current": "Mon-Thu both 17:00-20:30 and 17:30-20:00; Sat 09:00-12:00",
+  "evidence_url": "https://haymarketfoodpantry.org/find-help/",
+  "evidence_quote": "Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm Sat Mornings: By appointment between 9:00 am and 12:00 noon",
+  "reason": "Each weekday shows two overlapping time blocks. The pantry's own site gives 5:30-8:00 PM, by appointment.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 0,
+    "opens": "17:30",
+    "closes": "20:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "17:30",
+    "closes": "20:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 2,
+    "opens": "17:30",
+    "closes": "20:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "17:30",
+    "closes": "20:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "09:00",
+    "closes": "12:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Fetched haymarketfoodpantry.org/find-help: 'Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm; Sat Mornings: By appointment between 9:00 am and 12:00 noon'. This removes CAFB's overlapping 5:00-8:30 duplicates. Weekdays 0-3 and 5 are correct."
+ },
+ {
+  "listing_id": 71,
+  "listing_name": "Haymarket Regional Food Pantry",
+  "field": "categories",
+  "current": "appointment_distribution, delivery_qualifying, drive_through, pantry_pickup, walk_up",
+  "evidence_url": "https://haymarketfoodpantry.org/find-help/",
+  "evidence_quote": "Our Hours - By Appointment Only",
+  "reason": "The pantry's own site says food is distributed by appointment only, which contradicts walk_up.",
+  "confidence": "medium",
+  "remove_types": [
+   "walk_up"
+  ],
+  "verify_note": "The pantry site says 'Our Hours - By Appointment Only' and 'Appointments are required.' Removing walk_up leaves appointment_distribution, pantry_pickup, delivery_qualifying and drive_through, all food categories."
+ },
+ {
+  "listing_id": 76,
+  "listing_name": "ACTS",
+  "field": "hours",
+  "current": "Mon-Fri 08:30-17:30 plus food blocks, Tue wk3/wk4 17:00-18:30, Fri 08:30-17:30",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Food distribution: Monday 9-11:30 a.m. and 1-3 p.m.; Tuesday 1-3:30 p.m. and 5-7 p.m.; Thursday 9-11:30 a.m. and 1-3 p.m.; Friday CLOSED.",
+  "reason": "Several non-food times are shown as food pickup: the housing Coordinated Entry intake hours (Mon-Fri 8:30-5:30, Wednesday and Friday included) and the new-client enrollment slots. Food pickup is closed on Fridays.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "11:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 0,
+    "opens": "13:00",
+    "closes": "15:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "13:00",
+    "closes": "15:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "17:00",
+    "closes": "19:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "11:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "13:00",
+    "closes": "15:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "PWC record 152 raw text: 'Monday 9-11:30 a.m. and 1-3 p.m.; Tuesday 1-3:30 p.m. and 5-7 p.m.; Thursday 9-11:30 a.m. and 1-3 p.m.; Friday CLOSED.' CAFB agrees. The Mon-Fri 8:30-5:30 hours are housing CES intake. Tue wk3/wk4 17-18:30 is new-client enrollment, which overlaps the Tue 17-19 distribution. The proposed six blocks are complete and correct."
+ },
+ {
+  "listing_id": 76,
+  "listing_name": "ACTS",
+  "field": "eligibility",
+  "current": "photo_id required, appointment required, referral required",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Walk-in during distribution hours; no appointment needed. New clients must enroll in person during enrollment hours (arrive by 12:45 p.m. on Wednesdays).",
+  "reason": "The appointment and referral requirements belong to the utility and housing programs, not to food. Food is walk-in once enrolled. Photo ID is still required for new food clients, according to the same PWC food record.",
+  "confidence": "high",
+  "new_value": "Food: walk-in during distribution hours, no appointment or referral needed. New clients must enroll in person (1st and 2nd Wednesdays 10 AM-12:45 PM; 3rd and 4th Tuesdays 5-6:30 PM) and show photo ID with a current address, or photo ID plus a bill or lease proving Eastern Prince William County residency. Service-area ZIPs: 22025, 22026, 22125, 22134, 22135, 22172, 22191, 22192, 22193.",
+  "verify_note": "Right that appointment and referral belong to the utility and housing programs. But the proposal drops a real food requirement. The raw PWC food record's eligibility says photo_id 'required': 'New clients must present photo identification showing a current address, or photo ID plus a bill or lease proving Eastern Prince William County residency... Heads of household must present some form of ID.' Corrected to keep photo ID."
+ },
+ {
+  "listing_id": 77,
+  "listing_name": "Church of Christ of Dale City",
+  "field": "hours",
+  "current": "Mon wk2 15:00-17:00",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "3:00 PM-5:00 PM (2nd and 4th of the Month)",
+  "reason": "The 4th-Monday distribution is missing.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 0,
+    "opens": "15:00",
+    "closes": "17:00",
+    "week_of_month": 2
+   },
+   {
+    "kind": "distribution",
+    "weekday": 0,
+    "opens": "15:00",
+    "closes": "17:00",
+    "week_of_month": 4
+   }
+  ],
+  "verify_note": "CAFB raw '3:00 PM-5:00 PM (2nd and 4th of the Month)'. Monday is from the existing parse. Weekday 0, wk2 and wk4."
+ },
+ {
+  "listing_id": 81,
+  "listing_name": "CFH Inc.",
+  "field": "eligibility",
+  "current": "(none shown)",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "Monday: must call to make an appointment 571-201-6226",
+  "reason": "An appointment is required for the Monday, Wednesday and Thursday pickups, but no requirement is shown.",
+  "confidence": "high",
+  "new_value": "Appointment required for Monday, Wednesday and Thursday pickups: call 571-201-6226.",
+  "verify_note": "The CAFB notes say Mon/Wed/Thu 'must call to make an appointment 571-201-6226'. The Friday every-other-week 5-7 PM slot has no appointment note, so the text is scoped to the days the source names."
+ },
+ {
+  "listing_id": 81,
+  "listing_name": "CFH Inc.",
+  "field": "categories",
+  "current": "walk_up",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "Wednesday: must call to make an appointment 571-201-6226",
+  "reason": "The Monday, Wednesday and Thursday pickups are by appointment, so appointment_distribution is missing. walk_up stays, because the Friday every-other-week session has no stated appointment requirement.",
+  "confidence": "medium",
+  "add_types": [
+   "appointment_distribution"
+  ],
+  "verify_note": "Adding appointment_distribution is supported for Mon/Wed/Thu. Removing walk_up is not: CAFB tags the site walk_up, and the Friday every-other-week 5-7 PM session ('Friday: Every Other Week 5:00 PM-7:00 PM') carries no appointment requirement. Corrected to add only."
+ },
+ {
+  "listing_id": 82,
+  "listing_name": "Manassas Baptist Church",
+  "field": "hours",
+  "current": "Wed wk1 17:00-20:00",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "5:00 PM-8:00 PM (1st and 3rd of the Month)",
+  "reason": "The 3rd-Wednesday distribution is missing.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 2,
+    "opens": "17:00",
+    "closes": "20:00",
+    "week_of_month": 1
+   },
+   {
+    "kind": "distribution",
+    "weekday": 2,
+    "opens": "17:00",
+    "closes": "20:00",
+    "week_of_month": 3
+   }
+  ],
+  "verify_note": "CAFB raw '5:00 PM-8:00 PM (1st and 3rd of the Month)'. Wednesday is from the existing parse. Weekday 2, wk1 and wk3."
+ },
+ {
+  "listing_id": 85,
+  "listing_name": "Georgetown South Community Council",
+  "field": "hours",
+  "current": "Thu wk2 13:30-16:00",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "1:30 PM-4:00 PM (2nd and 4th of the Month)",
+  "reason": "The 4th-Thursday distribution is missing.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "13:30",
+    "closes": "16:00",
+    "week_of_month": 2
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "13:30",
+    "closes": "16:00",
+    "week_of_month": 4
+   }
+  ],
+  "verify_note": "CAFB raw '1:30 PM-4:00 PM (2nd and 4th of the Month)'. Thursday is from the existing parse. Weekday 3, wk2 and wk4."
+ },
+ {
+  "listing_id": 87,
+  "listing_name": "Britepaths",
+  "field": "categories",
+  "current": "diapers, hygiene_supplies, pantry_pickup",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "Britepaths takes referrals from local nonprofits, school social workers, and CSP to provide a $400 grocery gift card to families in a temporary crisis one time per fiscal year.",
+  "reason": "The food help is a one-time grocery gift card given by referral, not pantry pickup.",
+  "confidence": "high",
+  "add_types": [
+   "grocery_voucher"
+  ],
+  "remove_types": [
+   "pantry_pickup"
+  ],
+  "verify_note": "The county source description is exactly that quote: a $400 grocery gift card by referral, once per fiscal year, with no pantry pickup described. grocery_voucher is a food category, which fits the user's scope."
+ },
+ {
+  "listing_id": 87,
+  "listing_name": "Britepaths",
+  "field": "eligibility",
+  "current": "photo_id not_required, appointment required",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "Britepaths takes referrals from local nonprofits, school social workers, and CSP",
+  "reason": "The listing omits that a referral is required and that the help is limited to once per fiscal year.",
+  "confidence": "high",
+  "new_value": "Referral required (from local nonprofits, school social workers, or CSP). Scheduled appointments only. One time per fiscal year, for families in a temporary crisis.",
+  "verify_note": "The quote is in the listing's description. The county notes say 'Suite 200, scheduled appointments only'. The new value is fully supported."
+ },
+ {
+  "listing_id": 99,
+  "listing_name": "Fairfax County Home Delivered Meals",
+  "field": "categories",
+  "current": "home_delivery, medicaid_enrollment_help, snap_application_help",
+  "evidence_url": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
+  "evidence_quote": "Adults over the age of 60, or adults with a disability, who are homebound",
+  "reason": "This is a home-delivered meals program for homebound older adults, so senior_meals is missing.",
+  "confidence": "high",
+  "add_types": [
+   "senior_meals"
+  ],
+  "verify_note": "Fetched the county home-delivered meals page: 'Adults over the age of 60, or adults with a disability, who are homebound'. senior_meals ('Meals for older adults') is a food category and fits the user's scope."
+ },
+ {
+  "listing_id": 100,
+  "listing_name": "Same as above",
+  "field": "name",
+  "current": "Same as above",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "St. Stephen's UMC | 9203 Braddock Rd Burke 22015",
+  "reason": "The name is a spreadsheet artifact ('Same as above'). The address and website (ststephensfairfax.org) are St. Stephen's UMC, which also appears to duplicate listing 34.",
+  "confidence": "high",
+  "new_value": "St. Stephen's UMC",
+  "verify_note": "Name is 'Same as above' in the county source. The organization field is St Stephens United Methodist Church at 9203 Braddock Rd Burke, the same address as listing 34 (St. Stephen's UMC)."
+ },
+ {
+  "listing_id": 100,
+  "listing_name": "Same as above",
+  "field": "hours",
+  "current": "(no hours shown)",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "4th Saturday of the month from 7:00 am until food is gone and 1st Friday of the month from 5:00pm until food is gone",
+  "reason": "The source gives a schedule, but no hours are displayed. End times come from the CAFB record for the same church (listing 34): '5:00 PM-6:00 PM (1st of the Month); 7:00 AM-9:00 AM (4th of the Month)'.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 4,
+    "opens": "17:00",
+    "closes": "18:00",
+    "week_of_month": 1
+   },
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "07:00",
+    "closes": "09:00",
+    "week_of_month": 4
+   }
+  ],
+  "verify_note": "The county raw text has '4th Saturday... 7:00 am' and '1st Friday... 5:00pm'. End times are borrowed from the CAFB record for the same church (listing 34: '5:00 PM-6:00 PM (1st of the Month); 7:00 AM-9:00 AM (4th of the Month)'). Friday is weekday 4 wk1 and Saturday weekday 5 wk4, both correct."
+ },
+ {
+  "listing_id": 101,
+  "listing_name": "Food Distribution",
+  "field": "name",
+  "current": "Food Distribution",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "You will also see a sign with the name Culmore Family Resource Center at the entrance.",
+  "reason": "'Food Distribution' is a generic label, not a place name. The site is Second Story's Culmore Family Resource Center (website second-story.org). It may also duplicate listing 22, Second Story Culmore.",
+  "confidence": "medium",
+  "new_value": "Second Story - Culmore Family Resource Center",
+  "verify_note": "The county notes contain the quote about the Culmore Family Resource Center sign. The organization is Second Story (second-story.org). The new name is accurate."
+ },
+ {
+  "listing_id": 102,
+  "listing_name": "Providence Presbyterian Church-Door 8 back parking lot",
+  "field": "hours",
+  "current": "(no hours shown)",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "12-2 pm Wednesday and 6pm to 7:30pm Thursday",
+  "reason": "The source gives weekly distribution hours, but none are displayed.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 2,
+    "opens": "12:00",
+    "closes": "14:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "18:00",
+    "closes": "19:30",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Raw text '12-2 pm Wednesday and 6pm to 7:30pm Thursday'. Wednesday is weekday 2 (12:00-14:00) and Thursday weekday 3 (18:00-19:30)."
+ },
+ {
+  "listing_id": 102,
+  "listing_name": "Providence Presbyterian Church-Door 8 back parking lot",
+  "field": "name",
+  "current": "Providence Presbyterian Church-Door 8 back parking lot",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "Go to back parking lot-Door 8 and ring bell",
+  "reason": "The name includes entrance directions, which belong in the notes.",
+  "confidence": "medium",
+  "new_value": "Providence Presbyterian Church",
+  "verify_note": "The source name contains the door directions, and the notes repeat them. The organization field is 'Providence Presbyterian Church'."
+ },
+ {
+  "listing_id": 103,
+  "listing_name": "St. Vincent de Paul Food Pantry",
+  "field": "address",
+  "current": "(no address; city 'Null')",
+  "evidence_url": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
+  "evidence_quote": "13807 Poplar Tree Rd., Chantilly, VA 20151",
+  "reason": "The address is missing. The parish's own page (the listing's website) gives the pantry address.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "13807 Poplar Tree Rd",
+   "city": "Chantilly",
+   "zip": "20151"
+  },
+  "verify_note": "Fetched the St. Timothy page: '13807 Poplar Tree Rd., Chantilly, VA 20151'. Its schedule (3rd Saturday 9-11) matches the listing."
+ },
+ {
+  "listing_id": 103,
+  "listing_name": "St. Vincent de Paul Food Pantry",
+  "field": "eligibility",
+  "current": "photo_id not_required",
+  "evidence_url": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
+  "evidence_quote": "Please bring a picture ID and proof of address in order to validate and receive your card.",
+  "reason": "The pantry requires online pre-registration plus photo ID and proof of address for a registration card, which contradicts 'photo ID not required'.",
+  "confidence": "high",
+  "new_value": "Pre-register online first. Bring a picture ID and proof of address to receive a registration card, which is needed for food distribution.",
+  "verify_note": "The St. Timothy page says visitors must pre-register online and 'Please bring a picture ID and proof of address in order to validate and receive your card.' This contradicts photo_id not_required."
+ },
+ {
+  "listing_id": 104,
+  "listing_name": "Northern Virginia Family Service (NVFS) – Hunger Resource Center",
+  "field": "address",
+  "current": "address1 '10058 Dean Dr. Manassas', city Manassas, ZIP 10058",
+  "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
+  "evidence_quote": "10058 Dean Drive Manassas 20110",
+  "reason": "The address is garbled: the city is repeated in the street line and the street number is used as the ZIP.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "10058 Dean Dr",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "verify_note": "The nvfs.org-derived source gives '10058 Dean Drive Manassas 20110', and the manassas-food-resources record agrees (20110). The current ZIP 10058 and the city in address1 are garbled."
+ },
+ {
+  "listing_id": 107,
+  "listing_name": "Nokesville United Methodist Church",
+  "field": "eligibility",
+  "current": "appointment required",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=782d5f553535425091446bb904b3759b",
+  "evidence_quote": "Thursdays: 6-7 pm\nOther times by appointment.",
+  "reason": "The regular Thursday 6-7 PM pantry needs no appointment. Appointments are only for other times.",
+  "confidence": "high",
+  "new_value": "No appointment needed Thursdays 6-7 PM. Other times by appointment.",
+  "verify_note": "Raw text 'Thursdays: 6-7 pm\\nOther times by appointment.' The parser wrongly set appointment required for the whole listing."
+ },
+ {
+  "listing_id": 114,
+  "listing_name": "Manassas First Baptist Church",
+  "field": "categories",
+  "current": "pantry_pickup",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=782d5f553535425091446bb904b3759b",
+  "evidence_quote": "Hot Lunch/Dinner Tuesday and Thursdays",
+  "reason": "The only service in the source is a hot meal, which is community_meal, not grocery pantry pickup.",
+  "confidence": "medium",
+  "add_types": [
+   "community_meal"
+  ],
+  "remove_types": [
+   "pantry_pickup"
+  ],
+  "verify_note": "The only service in the source is 'Hot Lunch/Dinner Tuesday and Thursdays'. In the raw manassas record, pantry_pickup is the default type, marked offering_status 'unconfirmed'. community_meal is a food category."
+ },
+ {
+  "listing_id": 116,
+  "listing_name": "Sahara Programs",
+  "field": "address",
+  "current": "13958 Hollow Wind Way 201, city missing, ZIP 13958",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191",
+  "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "13958 Hollow Wind Way",
+   "address2": "201",
+   "city": "Woodbridge",
+   "zip": "22191"
+  },
+  "verify_note": "The fix is right but incomplete. The same PWC CMN record in the repo sample (docs/pilot_research/samples/pwc_cmn_food_first3.geojson, Sahara Programs) gives the full address '13958 Hollow Wind Way 201, Woodbridge VA 22191'. City and ZIP should be filled in, not left empty."
+ },
+ {
+  "listing_id": 116,
+  "listing_name": "Sahara Programs",
+  "field": "hours",
+  "current": "distribution Mon-Fri 09:00-17:00",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability.",
+  "reason": "Mon-Fri 9-5 is the organization's general office hours, repeated for every service. It is not a food pickup schedule.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Every Sahara source record repeats 'Monday–Friday, 9:00 AM–5:00 PM.' for all services, including the non-food ones, and the food record says 'depending on the service. Contact Sahara Programs'. This is office hours, not a pickup schedule."
+ },
+ {
+  "listing_id": 119,
+  "listing_name": "Woodbridge Workers Committee",
+  "field": "address",
+  "current": "14186 Logan Ct, Woodbridge 14186",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "14186 Logan Ct Woodbridge 14186",
+  "reason": "The ZIP is the street number repeated (14186), which is not a Virginia ZIP. The same phone number appears on listing 68 (Woodbridge Workers, 13950 Jefferson Davis Hwy, 22193), so this may be a duplicate.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "14186 Logan Ct",
+   "city": "Woodbridge"
+  },
+  "verify_note": "The ZIP 14186 is just the street number in the raw PWC record. No source gives the real ZIP, so dropping it is safer than guessing. Address1 and city stay correct."
+ },
+ {
+  "listing_id": 120,
+  "listing_name": "All Saints Anglican Church",
+  "field": "address",
+  "current": "14851 Gideon Dr, Woodbridge 14851",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "14851 Gideon Dr Woodbridge 14851",
+  "reason": "The ZIP is the street number repeated (14851), which is not a valid Virginia ZIP. The PWC food distribution sites layer lists the same address with ZIP 22193.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "14851 Gideon Dr",
+   "city": "Woodbridge",
+   "zip": "22193"
+  },
+  "verify_note": "The fix is right, and the real ZIP is available. The PWC food-distribution-sites record for All Saints Church at 14851 Gideon Dr, Woodbridge has USER_ZIP_C 22193 (docs/pilot_research/samples/pwc_food_distribution_sites_2022_first3.geojson)."
+ },
+ {
+  "listing_id": 120,
+  "listing_name": "All Saints Anglican Church",
+  "field": "hours",
+  "current": "(no hours shown)",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Regular church office hours provided by the organization are Monday–Thursday, 9:00 AM–5:00 PM; for weekday food assistance, arriving by approximately 4:30 PM is recommended.",
+  "reason": "The source says weekday food help is available through the office during these hours, but no hours are shown. The monthly Saturday giveaway has no stated time, so it is left off.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Raw text: office hours Monday–Thursday 9-5, with weekday food assistance through the office. Mon-Thu are weekdays 0-3, using the operating_hours kind. The Saturday giveaway has no time in the current source and is reasonably left off."
+ },
+ {
+  "listing_id": 133,
+  "listing_name": "Alexandria Food Pantry",
+  "field": "eligibility",
+  "current": "(none shown)",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "Appointments are required and can be scheduled at ccda.net under the Alexandria Food Pantry page. Wednesday and Thursday distributions are for registered clients only. New clients must schedule a Friday appointment using the same system.",
+  "reason": "The appointment requirement and the registered-clients-only rule are not shown.",
+  "confidence": "high",
+  "new_value": "Appointment required (schedule at ccda.net, Alexandria Food Pantry page). Wednesday and Thursday are for registered clients only. New clients must book a Friday appointment.",
+  "verify_note": "The CAFB notes contain the quote verbatim, including the registered-clients rule for Wednesday and Thursday and the Friday booking for new clients."
+ },
+ {
+  "listing_id": 133,
+  "listing_name": "Alexandria Food Pantry",
+  "field": "categories",
+  "current": "walk_up",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "Wednesday: Appointments are required and can be scheduled at ccda.net under the Alexandria Food Pantry page.",
+  "reason": "All distributions need an appointment, so walk_up is misleading and appointment_distribution is missing.",
+  "confidence": "high",
+  "add_types": [
+   "appointment_distribution"
+  ],
+  "remove_types": [
+   "walk_up"
+  ],
+  "verify_note": "The CAFB notes say appointments are required for Wednesday and Thursday, and new clients must book Friday appointments, so every distribution is by appointment. Both changes are food categories."
+ },
+ {
+  "listing_id": 136,
+  "listing_name": "ALIVE! Monthly Community Fresh Market - William Ramsay Recreation Center",
+  "field": "hours",
+  "current": "Sat wk4 08:30-10:30",
+  "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+  "evidence_quote": "Last Saturday of the month from 8:30 am – 10:30 am.",
+  "reason": "The market is on the LAST Saturday, not the 4th. In months with five Saturdays (for example October 31) the listing sends people a week early. The city directory notes that the market moves to the second Saturday in May, November and December.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "08:30",
+    "closes": "10:30",
+    "week_of_month": -1
+   }
+  ],
+  "verify_note": "Fetched the ALIVE page: 'the last Saturday of the month', 8:30-10:30. Oct 31, 2026 is the 5th Saturday, so wk4 would send people on Oct 24. The schema supports week_of_month -1 (ge=-1, described as last). Caveat: ALIVE lists Nov 21 and Dec 19 (3rd Saturdays), and the city directory says the 2nd Saturday in May/Nov/Dec. The reason notes these exceptions, which the rule cannot express."
+ },
+ {
+  "listing_id": 137,
+  "listing_name": "ALIVE! Monthly Community Fresh Market - Leonard \"Chick\" Armstrong Recreation Center",
+  "field": "hours",
+  "current": "Fri wk2 11:00-13:00; Sat wk4 08:30-10:30",
+  "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+  "evidence_quote": "Last Saturday of the month from 8:30 am – 10:30 am.",
+  "reason": "The ALIVE! market is on the LAST Saturday, not the 4th. The second-Friday seasonal distribution is correct. The source notes also flag an address conflict: the ALIVE! page lists 3600 Commonwealth Ave.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 4,
+    "opens": "11:00",
+    "closes": "13:00",
+    "week_of_month": 2
+   },
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "08:30",
+    "closes": "10:30",
+    "week_of_month": -1
+   }
+  ],
+  "verify_note": "Same ALIVE evidence: the last Saturday, 8:30-10:30. The second Friday 11-1 (city directory, record 198) is kept as weekday 4 wk2. The page lists this site as '3600 Commonwealth Ave.', which matches the noted address conflict. The same Nov/Dec exceptions as index 49 apply."
+ },
+ {
+  "listing_id": 161,
+  "listing_name": "St. Martins Senior Center",
+  "field": "categories",
+  "current": "service_types: ['community_meal']",
+  "evidence_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+  "evidence_quote": "Senior Congregate Nutrition Program",
+  "reason": "Source describes this as the Senior Congregate Nutrition Program (pre-registered senior lunch); the food category senior_meals is missing.",
+  "confidence": "high",
+  "add_types": [
+   "senior_meals"
+  ],
+  "verify_note": "Listing 161's source notes say 'Senior Congregate Nutrition Program'; it is a pre-registered senior lunch. senior_meals is a food category already used in other batches, so adding it is consistent with food-only categorization."
+ },
+ {
+  "listing_id": 162,
+  "listing_name": "Charles Houston Senior Center",
+  "field": "categories",
+  "current": "service_types: ['community_meal']",
+  "evidence_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+  "evidence_quote": "Senior Congregate Nutrition Program",
+  "reason": "Source describes this as the Senior Congregate Nutrition Program (pre-registered senior breakfast/lunch); the food category senior_meals is missing.",
+  "confidence": "high",
+  "add_types": [
+   "senior_meals"
+  ],
+  "verify_note": "Listing 162's source notes say 'Senior Congregate Nutrition Program'; it serves pre-registered senior breakfast and lunch. senior_meals is a valid food category."
+ },
+ {
+  "listing_id": 138,
+  "listing_name": "Jefferson-Houston School",
+  "field": "eligibility",
+  "current": "proof_of_address: required",
+  "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+  "evidence_quote": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+  "reason": "Source says proof of residency OR an ALIVE! Client Card 'may be requested' - not a hard requirement; showing it as required may turn people away.",
+  "confidence": "medium",
+  "new_value": "Proof of City of Alexandria residency or an ALIVE! Client Card may be requested (not strictly required).",
+  "verify_note": "Record 206's raw_eligibility_text says exactly 'Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.' The live ALIVE page says the same, so 'required' overstates it."
+ },
+ {
+  "listing_id": 150,
+  "listing_name": "City of Alexandria Department of Community & Human Services (Mark Center)",
+  "field": "eligibility",
+  "current": "proof_of_address: required",
+  "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+  "evidence_quote": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+  "reason": "Source says proof of residency OR an ALIVE! Client Card 'may be requested' - not a hard requirement; showing it as required may turn people away.",
+  "confidence": "medium",
+  "new_value": "Proof of City of Alexandria residency or an ALIVE! Client Card may be requested (not strictly required).",
+  "verify_note": "Record 203 has the same 'may be requested' wording, and the live page matches."
+ },
+ {
+  "listing_id": 151,
+  "listing_name": "Fairlington United Methodist Church",
+  "field": "eligibility",
+  "current": "proof_of_address: required",
+  "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+  "evidence_quote": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+  "reason": "Source says proof of residency OR an ALIVE! Client Card 'may be requested' - not a hard requirement; showing it as required may turn people away.",
+  "confidence": "medium",
+  "new_value": "Proof of City of Alexandria residency or an ALIVE! Client Card may be requested (not strictly required).",
+  "verify_note": "Record 204 has the same 'may be requested' wording, and the live page matches."
+ },
+ {
+  "listing_id": 153,
+  "listing_name": "Mt. Jezreel Baptist Church Food Pantry",
+  "field": "hours",
+  "current": "no hours shown",
+  "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+  "evidence_quote": "Dates through the end of the year: June 26th, July 24th, August 21st, September 18th, October 16th, November 20th, December 18th. 9:30 am- 2:00 pm",
+  "reason": "Listing shows no hours. The remaining 2026 dates (Aug 21, Sep 18, Oct 16, Nov 20, Dec 18) all fall on the 3rd Friday, 9:30am-2pm; registration by phone is required.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 4,
+    "opens": "09:30",
+    "closes": "14:00",
+    "week_of_month": 3
+   }
+  ],
+  "verify_note": "The quote appears on the live ALIVE page, which was posted 2026-10-07, so the dates are 2026. In 2026, Aug 21, Sep 18, Oct 16, Nov 20 and Dec 18 are all Fridays and all fall in the 3rd week. Weekday 4 at 09:30-14:00 is correct. (In 2025 the same dates were Thursdays, so the 2026 page year matters.)"
+ },
+ {
+  "listing_id": 151,
+  "listing_name": "Fairlington United Methodist Church",
+  "field": "hours",
+  "current": "no hours shown",
+  "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+  "evidence_quote": "In partnership with Fairlington United Methodist Church (3900 King St) at 5 – 6:30 p.m. Dates for the rest of the year: October 21st, November 18th, December 16th",
+  "reason": "Listing shows no hours. Oct 21, Nov 18 and Dec 16, 2026 are all 3rd Wednesdays, 5-6:30pm.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 2,
+    "opens": "17:00",
+    "closes": "18:30",
+    "week_of_month": 3
+   }
+  ],
+  "verify_note": "The live page shows '5 – 6:30 p.m.' on Oct 21, Nov 18 and Dec 16. In 2026 these are all 3rd Wednesdays, so weekday 2 at 17:00-18:30 in week 3 is correct."
+ },
+ {
+  "listing_id": 212,
+  "listing_name": "Prince William Community Services",
+  "field": "hours",
+  "current": "distribution Mon-Thu 08:00-14:30 AND 08:00-20:00 (duplicates), Fri 08:00-17:00",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Outpatient and Community-based Services: Monday–Thursday, 8:00 AM–8pm and Fridays 8:00 - 5:00 PM",
+  "reason": "Behavioral health office hours are shown as food 'distribution', and Mon-Thu has overlapping duplicate slots (Same Day Access 8-2:30 merged with 8-8).",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:00",
+    "closes": "20:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:00",
+    "closes": "20:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:00",
+    "closes": "20:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:00",
+    "closes": "20:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "08:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 285 says outpatient services run Mon–Thu 8–8 and Fri 8–5. The 8:00-14:30 entries are the Same Day Access subset, merged in as duplicates. These are behavioral-health hours, not food distribution, so changing the kind is correct and the schedule is complete."
+ },
+ {
+  "listing_id": 216,
+  "listing_name": "Project Mend-A-House",
+  "field": "hours",
+  "current": "distribution Mon-Fri 09:00-16:00",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Monday–Friday, 9:00 AM–4:00 PM.",
+  "reason": "Home-repair agency office hours shown as food distribution times.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "16:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 292 says 'Monday–Friday, 9:00 AM–4:00 PM.' This is a home-repair agency, not a food provider, so these are operating hours."
+ },
+ {
+  "listing_id": 218,
+  "listing_name": "Rock Recovery",
+  "field": "hours",
+  "current": "distribution Mon-Fri 09:00-18:00",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Monday - Friday (9 AM - 6 PM)",
+  "reason": "Therapy practice office hours shown as food distribution times.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "18:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "18:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "18:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "18:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "18:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 295 says 'Monday - Friday (9 AM - 6 PM)'. This is a therapy practice, so these are operating hours."
+ },
+ {
+  "listing_id": 225,
+  "listing_name": "VA Works",
+  "field": "hours",
+  "current": "distribution Mon-Fri 09:00-16:00",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Monday–Friday, approximately 9:00 AM–4:00 PM",
+  "reason": "Workforce office hours shown as food distribution times.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "16:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 317 says 'Monday–Friday, approximately 9:00 AM–4:00 PM'. This is a workforce office, not food."
+ },
+ {
+  "listing_id": 230,
+  "listing_name": "George Mason University – Mason and Partners (MAP) Clinics",
+  "field": "hours",
+  "current": "distribution Mon/Tue 08:00-15:00 + 08:00-16:00 (duplicates), Wed 09:00-13:00, Thu 08:00-16:00",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Manassas Park: Monday, Tuesday, Thursday, 8:00 AM–4:00 PM. MOUD: Wednesday, 9:00 AM–1:00 PM.",
+  "reason": "Clinic hours shown as food distribution, with duplicate overlapping Mon/Tue slots (pediatric vaccine hours merged in).",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "13:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:00",
+    "closes": "16:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 328 lists Mon, Tue and Thu 8–4, MOUD Wed 9–1, and pediatric vaccines Mon–Tue 8–3. The 8–3 vaccine hours fall inside the 8–4 hours. The proposed schedule is complete."
+ },
+ {
+  "listing_id": 237,
+  "listing_name": "Independence Empowerment Center (IEC)",
+  "field": "hours",
+  "current": "distribution Mon-Fri 09:00-17:00",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Mon-Fri 9am-5pm",
+  "reason": "Office hours shown as food distribution times.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Records 343, 344, 346 and 347 all say 'Mon-Fri 9am-5pm'. These are office hours, not food distribution."
+ },
+ {
+  "listing_id": 240,
+  "listing_name": "Catalyst Recovery and Wellness LLC",
+  "field": "hours",
+  "current": "distribution Mon-Sat 10:00-19:00",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Appointments available Monday–Saturday, 10:00 AM–7:00 PM.",
+  "reason": "Counseling appointment hours shown as food distribution times.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "10:00",
+    "closes": "19:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "10:00",
+    "closes": "19:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "10:00",
+    "closes": "19:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "10:00",
+    "closes": "19:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "10:00",
+    "closes": "19:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 5,
+    "opens": "10:00",
+    "closes": "19:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Records 350, 353 and 357 all say 'Appointments available Monday–Saturday, 10:00 AM–7:00 PM.' The weekdays 0–5 are correct."
+ },
+ {
+  "listing_id": 242,
+  "listing_name": "Lunera Health",
+  "field": "hours",
+  "current": "distribution Mon-Fri 08:00-17:30, Sat 08:00-13:00",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Monday–Friday, 8:00 AM–5:30 PM; Saturday, 8:00 AM–1:00 PM; Sunday closed.",
+  "reason": "Health center hours shown as food distribution times.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:00",
+    "closes": "17:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:00",
+    "closes": "17:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:00",
+    "closes": "17:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:00",
+    "closes": "17:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "08:00",
+    "closes": "17:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 5,
+    "opens": "08:00",
+    "closes": "13:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 356 says 'Monday–Friday, 8:00 AM–5:30 PM; Saturday, 8:00 AM–1:00 PM; Sunday closed.' The proposed hours match."
+ },
+ {
+  "listing_id": 246,
+  "listing_name": "City of Manassas – Community Development, Housing & Neighborhood Services",
+  "field": "hours",
+  "current": "distribution Mon-Fri 08:00-16:00",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Monday–Friday, 8:00 AM–4:00 PM.",
+  "reason": "City housing office hours shown as food distribution times.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:00",
+    "closes": "16:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "08:00",
+    "closes": "16:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 380 says 'Monday–Friday, 8:00 AM–4:00 PM.' This is a housing office."
+ },
+ {
+  "listing_id": 252,
+  "listing_name": "OAR NOVA",
+  "field": "hours",
+  "current": "distribution Mon-Fri 09:00-17:00",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Mon-Fri 9am-5pm",
+  "reason": "Reentry office hours shown as food distribution times.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Records 408 and 409 both say 'Mon-Fri 9am-5pm'. This is a reentry office."
+ },
+ {
+  "listing_id": 232,
+  "listing_name": "Grace Community Center Clinic",
+  "field": "hours",
+  "current": "distribution Sat 09:00-11:00 + 09:30-12:00, Sun 13:30-17:00 + 13:45-17:30",
+  "evidence_url": "https://www.gcchealthsystem.org",
+  "evidence_quote": "Saturday: 9:30AM-12:00PM; Sunday: 1:30PM–5:00PM",
+  "reason": "Free-clinic hours were shown as food distribution, with two conflicting sets of times per day merged from two source rows. The clinic's official website gives Sat 9:30-12:00 and Sun 1:30-5:00, which matches record 334.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 5,
+    "opens": "09:30",
+    "closes": "12:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 6,
+    "opens": "13:30",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "The fix is right that the hours are duplicated and conflicting and the kind is wrong, but it chose the wrong row. The official site (gcchealthsystem.org) says 'Saturday: 9:30AM-12:00PM; Sunday: 1:30PM–5:00PM', which matches counseling record 334, not the health_clinic row. I corrected the times to match the official site."
+ },
+ {
+  "listing_id": 205,
+  "listing_name": "Mount Vernon Public Health Center",
+  "field": "hours",
+  "current": "Tue listed twice: 08:00-16:30 and 08:00-18:30",
+  "evidence_url": "https://www.fairfaxcounty.gov/health/clinics/mount-vernon-district-office",
+  "evidence_quote": "Business Hours: Mon 8 a.m.-4:30 p.m.; Tue 8 a.m.-6:30 p.m.; Wed 8 a.m.-4:30 p.m.; Thu 8 a.m.-4:30 p.m.; Fri 8 a.m.-4:30 p.m.",
+  "reason": "Tuesday appears twice with conflicting closing times; the health center is open until 6:30pm on Tuesday.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:00",
+    "closes": "18:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 769 and the live Fairfax page both give Business Hours Mon 8–4:30, Tue 8–6:30, Wed–Fri 8–4:30. The duplicate Tue 16:30 entry came from the merged DFS office. The proposed schedule is complete."
+ },
+ {
+  "listing_id": 188,
+  "listing_name": "Neighborhood Health Arlington Sequoia",
+  "field": "hours",
+  "current": "no hours shown",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "Monday Friday: 8 am – 4:30 pm",
+  "reason": "Source gives clinic hours (with the dash between day names dropped), but the listing shows none.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 252 says 'Monday Friday: 8 am – 4:30 pm', which means Mon–Fri. That totals 42.5 hours a week, matching the HRSA figure of 42.50 operating hours per week."
+ },
+ {
+  "listing_id": 189,
+  "listing_name": "Neighborhood Health Arlington Pediatric Center",
+  "field": "hours",
+  "current": "no hours shown",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "Monday Friday: 9 am – 5:30 pm; Saturday: 9 am – 1 pm",
+  "reason": "Source gives clinic hours but the listing shows none.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "17:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 5,
+    "opens": "09:00",
+    "closes": "13:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 253 gives Mon–Fri 9–5:30 plus Sat 9–1. That totals 46.5 hours a week, matching HRSA's 46.50."
+ },
+ {
+  "listing_id": 191,
+  "listing_name": "Neighborhood Health at the WOW Bus",
+  "field": "hours",
+  "current": "no hours shown",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "Monday Thursday: 8 am – 6 pm; Friday: 8 am – 4:30 pm",
+  "reason": "Source gives clinic hours but the listing shows none.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:00",
+    "closes": "18:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:00",
+    "closes": "18:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:00",
+    "closes": "18:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:00",
+    "closes": "18:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 255 gives Mon–Thu 8–6 plus Fri 8–4:30. That totals 48.5 hours a week, matching HRSA's '2 East' record of 48.50 at the same address."
+ },
+ {
+  "listing_id": 196,
+  "listing_name": "Neighborhood Health at South County Center",
+  "field": "hours",
+  "current": "no hours shown",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "Monday: 8 am – 7 pm; Tuesday Friday: 8 am – 4:30 pm",
+  "reason": "Source gives clinic hours but the listing shows none.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:00",
+    "closes": "19:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 260 gives Mon 8–7 and Tue–Fri 8–4:30. That totals 45 hours a week, matching HRSA's South County Center record of 45.00."
+ },
+ {
+  "listing_id": 197,
+  "listing_name": "Neighborhood Health at Annandale Medical",
+  "field": "hours",
+  "current": "no hours shown",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "Monday Friday: 8 am – 4:30 pm; Saturday: 8 am – 12 pm",
+  "reason": "Source gives clinic hours but the listing shows none.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 5,
+    "opens": "08:00",
+    "closes": "12:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 261 gives Mon–Fri 8–4:30 plus Sat 8–12. That totals 46.5 hours a week, matching HRSA's 46.50."
+ },
+ {
+  "listing_id": 198,
+  "listing_name": "Neighborhood Health at Annandale Dental",
+  "field": "hours",
+  "current": "no hours shown",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "Monday Friday: 8 am – 4:30 pm",
+  "reason": "Source gives clinic hours but the listing shows none.",
+  "confidence": "medium",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "Record 262 gives Mon–Fri 8–4:30. That totals 42.5 hours a week, matching HRSA's 42.50."
+ },
+ {
+  "listing_id": 189,
+  "listing_name": "Neighborhood Health Arlington Pediatric Center",
+  "field": "address",
+  "current": "2301 Columbia Pike, Apartment G / Ste G",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "2301 Columbia Pike",
+  "reason": "The unit is garbled: 'Apartment G' in address1 duplicates 'Ste G' in address2. This is a clinic suite, not an apartment.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "2301 Columbia Pike",
+   "address2": "Suite G",
+   "city": "Arlington",
+   "zip": "22204"
+  },
+  "verify_note": "The listing has address1 '2301 Columbia Pike, Apartment G' and address2 'Ste G', so the unit is duplicated. Record 253 gives 2301 Columbia Pike, Arlington 22204. Splitting this into Suite G is correct."
+ },
+ {
+  "listing_id": 196,
+  "listing_name": "Neighborhood Health at South County Center",
+  "field": "address",
+  "current": "8350 Richmond Hwy, Suite 301 / Suite 301",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "8350 Richmond Highway",
+  "reason": "Suite repeated in both address lines.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "8350 Richmond Hwy",
+   "address2": "Suite 301",
+   "city": "Alexandria",
+   "zip": "22309"
+  },
+  "verify_note": "Address1 contains ', Suite 301' and address2 repeats 'Suite 301'. HRSA record 418 gives Suite 301, Alexandria 22309. The cleanup is correct."
+ },
+ {
+  "listing_id": 197,
+  "listing_name": "Neighborhood Health at Annandale Medical",
+  "field": "address",
+  "current": "6715 Little River Tpke, Suite 201 / Suite 201",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "6715 Little River Turnpike",
+  "reason": "Suite repeated in both address lines.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "6715 Little River Tpke",
+   "address2": "Suite 201",
+   "city": "Annandale",
+   "zip": "22003"
+  },
+  "verify_note": "Address1 contains ', Suite 201' and address2 repeats it. HRSA record 433 gives Suite 201, Annandale 22003."
+ },
+ {
+  "listing_id": 257,
+  "listing_name": "Neighborhood Health at Martha Custis Drive",
+  "field": "address",
+  "current": "1225 Martha Custis Dr, Apartment C-1",
+  "evidence_url": "https://data.hrsa.gov/data/download",
+  "evidence_quote": "1225 Martha Custis Dr, Apartment C-1",
+  "reason": "HRSA data labels the clinic unit as an 'Apartment'; it is a health-center suite, not an apartment.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "1225 Martha Custis Dr",
+   "address2": "Suite C-1",
+   "city": "Alexandria",
+   "zip": "22302"
+  },
+  "verify_note": "The official Neighborhood Health location page lists this clinic as Suite C1 at 1225 Martha Custis Dr, Alexandria 22302, so it is a suite, not an apartment. A minor detail: the site spells it 'C1' without a hyphen. 'C-1' is acceptable."
+ },
+ {
+  "listing_id": 212,
+  "listing_name": "Prince William Community Services",
+  "field": "address",
+  "current": "8033 Ashton Ave / city 'Suite 103' / 20109",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Call 703-792-7800 in Manassas",
+  "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "8033 Ashton Ave",
+   "address2": "Suite 103",
+   "city": "Manassas",
+   "zip": "20109"
+  },
+  "verify_note": "The city field holds 'Suite 103'. 8033 Ashton Ave, 20109 is PWC Community Services in Manassas, and record 414 references the Manassas line. Moving the suite to address2 and setting the city to Manassas is correct."
+ },
+ {
+  "listing_id": 214,
+  "listing_name": "Edu-Futuro",
+  "field": "address",
+  "current": "15201 Neabsco Mills Rd., Woodbridge 15201",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "15201 Neabsco Mills Rd. Woodbridge 15201",
+  "reason": "The ZIP field holds the street number (15201), not a Virginia ZIP. Neabsco Mills Rd in Woodbridge is 22191.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "15201 Neabsco Mills Rd",
+   "city": "Woodbridge",
+   "zip": "22191"
+  },
+  "verify_note": "The ZIP field '15201' duplicates the street number. Neabsco Mills Rd in Woodbridge is ZIP 22191."
+ },
+ {
+  "listing_id": 217,
+  "listing_name": "Rainbow Therapeutic Riding Center",
+  "field": "address",
+  "current": "16198 Silver Lake Rd, Haymarket 16198",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "16198 Silver Lake Rd Haymarket 16198",
+  "reason": "The ZIP field holds the street number; the Haymarket ZIP is 20169.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "16198 Silver Lake Rd",
+   "city": "Haymarket",
+   "zip": "20169"
+  },
+  "verify_note": "The ZIP field '16198' duplicates the street number. Haymarket's ZIP is 20169."
+ },
+ {
+  "listing_id": 222,
+  "listing_name": "The Chris Atwood Foundation",
+  "field": "address",
+  "current": "10301 Democracy Lane / city 'Suite 150' / zip 10301",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "10301 Democracy Lane Suite 150 10301",
+  "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "10301 Democracy Lane",
+   "address2": "Suite 150",
+   "city": "Fairfax",
+   "zip": "22030"
+  },
+  "verify_note": "Records 307–312 give '10301 Democracy Lane Suite 150 10301', so the city field holds the suite and the ZIP is the street number. Democracy Lane in Fairfax is 22030."
+ },
+ {
+  "listing_id": 223,
+  "listing_name": "UVA Health – Prince William Medical Center",
+  "field": "address",
+  "current": "8700 Sudley Rd / city None / 20110",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8700 Sudley Rd 20110",
+  "reason": "The city is missing; 8700 Sudley Rd 20110 is in Manassas.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "8700 Sudley Rd",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "verify_note": "Record 315 gives '8700 Sudley Rd 20110' with no city. The UVA Health Prince William Medical Center is in Manassas, 20110."
+ },
+ {
+  "listing_id": 225,
+  "listing_name": "VA Works",
+  "field": "address",
+  "current": "13370 Minnieville Rd, Woodbridge 13370",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "13370 Minnieville Rd Woodbridge 13370",
+  "reason": "The ZIP field holds the street number; the Woodbridge ZIP should be 22192 (verify).",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "13370 Minnieville Rd",
+   "city": "Woodbridge",
+   "zip": "22192"
+  },
+  "verify_note": "The ZIP field '13370' duplicates the street number. The Virginia Works center at 13370 Minnieville Rd, Woodbridge is in 22192."
+ },
+ {
+  "listing_id": 229,
+  "listing_name": "Formed Families Forward",
+  "field": "address",
+  "current": "10304 Eaton Place Suite 100, Fairfax 10304",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "10304 Eaton Place Suite 100 Fairfax 10304",
+  "reason": "The ZIP field holds the street number; the ZIP for Eaton Place in Fairfax is 22030.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "10304 Eaton Place",
+   "address2": "Suite 100",
+   "city": "Fairfax",
+   "zip": "22030"
+  },
+  "verify_note": "The ZIP field '10304' duplicates the street number. Eaton Place in Fairfax is 22030. Splitting the suite into address2 is fine."
+ },
+ {
+  "listing_id": 232,
+  "listing_name": "Grace Community Center Clinic",
+  "field": "address",
+  "current": "14631 Route 29 Ste 313, Centreville 14631",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "14631 Route 29 Ste 313 Centreville 14631",
+  "reason": "The ZIP field holds the street number; the Centreville ZIP should be 20121 (verify).",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "14631 Route 29",
+   "address2": "Suite 313",
+   "city": "Centreville",
+   "zip": "20121"
+  },
+  "verify_note": "The ZIP field '14631' duplicates the street number. The clinic's official website lists '14631 Route 29, Suite 313 Centreville, VA 20121', so ZIP 20121 is verified."
+ },
+ {
+  "listing_id": 233,
+  "listing_name": "Haymarket Church",
+  "field": "address",
+  "current": "15000 Washington St. Ste 206 / city None / zip 15000",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "15000 Washington St. Ste 206 15000",
+  "reason": "The city is missing and the ZIP field holds the street number. Haymarket Church is in Haymarket 20169.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "15000 Washington St",
+   "address2": "Suite 206",
+   "city": "Haymarket",
+   "zip": "20169"
+  },
+  "verify_note": "Record 336 gives '15000 Washington St. Ste 206 15000', so the city is missing and the ZIP is the street number. The provider is Haymarket Church on Washington St in Haymarket, ZIP 20169 (the whole town uses 20169)."
+ },
+ {
+  "listing_id": 239,
+  "listing_name": "Legal Aid Justice Center (LAJC) – Northern Virginia",
+  "field": "address",
+  "current": "6402 Arlington Blvd / city '#1130' / 22042",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "6402 Arlington Blvd #1130 22042",
+  "reason": "The suite number was placed in the city field; ZIP 22042 is Falls Church.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "6402 Arlington Blvd",
+   "address2": "Suite 1130",
+   "city": "Falls Church",
+   "zip": "22042"
+  },
+  "verify_note": "The city field holds '#1130'. 6402 Arlington Blvd, 22042 is in Falls Church, which is LAJC's Northern Virginia office."
+ },
+ {
+  "listing_id": 246,
+  "listing_name": "City of Manassas – Community Development, Housing & Neighborhood Services",
+  "field": "address",
+  "current": "9027 Center Street / city '2nd Floor' / 20110",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "9027 Center Street 2nd Floor 20110",
+  "reason": "The floor was placed in the city field; this is City of Manassas City Hall.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "9027 Center Street",
+   "address2": "2nd Floor",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "verify_note": "The city field holds '2nd Floor'. 9027 Center St, 20110 is Manassas City Hall."
+ },
+ {
+  "listing_id": 252,
+  "listing_name": "OAR NOVA",
+  "field": "address",
+  "current": "10700 Page Avenue Suite 200, Fairfax 10700",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "10700 Page Avenue Suite 200 Fairfax 10700",
+  "reason": "The ZIP field holds the street number; the ZIP for Page Ave in Fairfax is 22030.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "10700 Page Avenue",
+   "address2": "Suite 200",
+   "city": "Fairfax",
+   "zip": "22030"
+  },
+  "verify_note": "The ZIP field '10700' duplicates the street number. 10700 Page Ave in Fairfax is 22030."
+ },
+ {
+  "listing_id": 275,
+  "listing_name": "Next Steps Family Program",
+  "field": "address",
+  "current": "10700 Page Ave, Fairfax 10700",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "10700 Page Ave Fairfax 10700",
+  "reason": "The ZIP field holds the street number; the ZIP is 22030.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "10700 Page Ave",
+   "city": "Fairfax",
+   "zip": "22030"
+  },
+  "verify_note": "The ZIP field '10700' duplicates the street number. Page Ave in Fairfax is 22030."
+ },
+ {
+  "listing_id": 271,
+  "listing_name": "Katherine K. Hanley Family Shelter",
+  "field": "address",
+  "current": "12970 Katherine Hanley Ct, Fairfax 12970",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "12970 Katherine Hanley Ct Fairfax 12970",
+  "reason": "The ZIP field holds the street number; the ZIP is 22033.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "12970 Katherine Hanley Ct",
+   "city": "Fairfax",
+   "zip": "22033"
+  },
+  "verify_note": "The ZIP field '12970' duplicates the street number. Katherine Hanley Ct in Fairfax is 22033."
+ },
+ {
+  "listing_id": 272,
+  "listing_name": "Embry Rucker Community Shelter (ERCS)",
+  "field": "address",
+  "current": "11975 Bowman Towne Dr, Reston 11975",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "11975 Bowman Towne Dr Reston 11975",
+  "reason": "The ZIP field holds the street number; the Reston ZIP is 20190.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "11975 Bowman Towne Dr",
+   "city": "Reston",
+   "zip": "20190"
+  },
+  "verify_note": "The ZIP field '11975' duplicates the street number. Bowman Towne Dr in Reston is 20190."
+ },
+ {
+  "listing_id": 276,
+  "listing_name": "Loudoun County Homeless Services Center",
+  "field": "address",
+  "current": "19520 Meadowview Ct, Leesburg 19520",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "19520 Meadowview Ct Leesburg 19520",
+  "reason": "The ZIP field holds the street number; the Leesburg ZIP is 20175.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "19520 Meadowview Ct",
+   "city": "Leesburg",
+   "zip": "20175"
+  },
+  "verify_note": "The ZIP field '19520' duplicates the street number. Meadowview Ct in Leesburg is 20175."
+ },
+ {
+  "listing_id": 352,
+  "listing_name": "SERVE Campus",
+  "field": "hours",
+  "current": "distribution: Tue 09:30-11:30, Tue 13:00-15:00, Wed 17:00-19:30 (every week), Thu 09:30-11:30, Thu 13:00-15:00, Fri 09:30-11:30 (every week)",
+  "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+  "evidence_quote": "Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM",
+  "reason": "The Wednesday evening and Friday sessions happen only every other week, but the site shows them every week, so families could show up on a week with no distribution. An alternating-week schedule can't be written as a week_of_month value, so the corrected schedule keeps only the weekly Tue/Thu sessions. The every-other-Wednesday and every-other-Friday sessions should go in the description as text. Distribution is also by appointment only.",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "09:30",
+    "closes": "11:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "13:00",
+    "closes": "15:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "09:30",
+    "closes": "11:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "13:00",
+    "closes": "15:00",
+    "week_of_month": null
+   }
+  ],
+  "verify_note": "The quote is in record 728's raw_hours_text. It also appears word for word in the Manassas Park PDF (page 2, SERVE entry, updated 10/2025): 'Every other Wednesday: 5-7:30 PM' and 'Every other Friday: 9:30-11:30AM'. Showing those two sessions every week is wrong half the time. week_of_month cannot express an every-other-week pattern (1st/3rd is not the same thing). The new_hours are correct: Tue=1 and Thu=3, 09:30-11:30 and 13:00-15:00, kind distribution, every week. The Wed and Fri sessions are dropped from structured hours, so applying this fix must also add the every-other-Wednesday 17:00-19:30 and every-other-Friday 09:30-11:30 sessions to the description text, as the reason says. Otherwise the only evening slot is lost entirely. Appointment is already captured as eligibility.appointment=required."
+ },
+ {
+  "listing_id": 352,
+  "listing_name": "SERVE Campus",
+  "field": "categories",
+  "current": "pantry_pickup, pet_food",
+  "evidence_url": "https://pwspca.org/food/",
+  "evidence_quote": "Food assistance is provided by appointment only. To schedule an appointment, please call 571.748.2680",
+  "reason": "SERVE's food assistance is by appointment only, so appointment_distribution should be added. pantry_pickup stays, because the vocabulary defines it as a general pantry pickup, not walk-in (walk-in is walk_up), and SERVE still runs a pantry; appointment is also recorded in eligibility.",
+  "confidence": "high",
+  "add_types": [
+   "appointment_distribution"
+  ],
+  "remove_types": [],
+  "verify_note": "The quote is in record 588's raw_eligibility_text and is confirmed live on pwspca.org/food/. Adding appointment_distribution ('Distribution by appointment') is supported, and it is a food service type, so it fits the food-only categorization rule. Removing pantry_pickup is not supported. In backend/app/vocab.py, pantry_pickup means a general 'Food pantry pickup' in the pantry group, not walk-in; walk-in is the separate walk_up code. SERVE still hands out pantry food for pickup, just by appointment, and both codes map to the same 'pantry' filter group. The corrected finding keeps pantry_pickup and only adds appointment_distribution."
+ },
+ {
+  "listing_id": 277,
+  "listing_name": "Hebron/Bethel Emergency Shelter",
+  "field": "address",
+  "current": "20684 Ashburn Rd, Ashburn, VA 20684",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "20684 Ashburn Rd Ashburn 20684",
+  "reason": "The ZIP is a copy of the street number, a data error carried over from the source. 20684 is not an Ashburn ZIP. Ashburn Rd in Ashburn is 20147.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "20684 Ashburn Rd",
+   "city": "Ashburn",
+   "zip": "20147"
+  },
+  "verify_note": "The quote matches address_in_source in record 459. The ZIP is clearly the street number repeated. Web directories (Yelp, homelessshelterdirectory, 211) list 20684 Ashburn Rd, Ashburn, VA 20147 for Good Shepherd's shelter. Street and city unchanged."
+ },
+ {
+  "listing_id": 279,
+  "listing_name": "ACTS Beverly Warren Shelter",
+  "field": "address",
+  "current": "17866 Main St, Dumfries, VA 17866",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "17866 Main St Dumfries 17866",
+  "reason": "The ZIP is a copy of the street number. 17866 is a Pennsylvania ZIP, not Virginia. Dumfries is 22026.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "17866 Main St",
+   "city": "Dumfries",
+   "zip": "22026"
+  },
+  "verify_note": "The quote matches record 463's address_in_source. Prince William County's resource sheet and shelter directories list ACTS Beverly Warren Shelter at 17866 Main St, Dumfries, VA 22026. Street and city unchanged."
+ },
+ {
+  "listing_id": 280,
+  "listing_name": "Supportive Shelter",
+  "field": "address",
+  "current": "14730 Potomac Mills Rd, Woodbridge, VA 14730",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "14730 Potomac Mills Rd Woodbridge 14730",
+  "reason": "The ZIP is a copy of the street number. 14730 is a New York ZIP. Potomac Mills Rd in Woodbridge is 22192.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "14730 Potomac Mills Rd",
+   "city": "Woodbridge",
+   "zip": "22192"
+  },
+  "verify_note": "The quote matches record 465's address_in_source. MapQuest and shelter directories give 14730 Potomac Mills Rd, Woodbridge, VA 22192. Street and city unchanged."
+ },
+ {
+  "listing_id": 281,
+  "listing_name": "Fairfax County Coordinated Services Planning",
+  "field": "address",
+  "current": "12011 Government Center Pkwy, FAIRFAX, VA 12011",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "12011 Government Center Pkwy FAIRFAX 12011",
+  "reason": "The ZIP is a copy of the street number. 12011 is a New York ZIP. The Fairfax County Government Center is in 22035.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "12011 Government Center Pkwy",
+   "city": "Fairfax",
+   "zip": "22035"
+  },
+  "verify_note": "The quote matches record 467's address_in_source. County pages and partner sources list 12011 Government Center Pkwy, Fairfax, VA 22035. City capitalization normalized to 'Fairfax'. That is fine."
+ },
+ {
+  "listing_id": 282,
+  "listing_name": "Hilda M. Barg Homeless Shelter",
+  "field": "address",
+  "current": "14945 Richmond Hwy, Woodbridge, VA 14945",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "14945 Richmond Hwy Woodbridge 14945",
+  "reason": "The ZIP is a copy of the street number. 14945 is not a Virginia ZIP. 14945 Richmond Hwy in Woodbridge is 22191.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "14945 Richmond Hwy",
+   "city": "Woodbridge",
+   "zip": "22191"
+  },
+  "verify_note": "The quote matches record 469's address_in_source. Directories list the Hilda Barg shelter at 14945 Jefferson Davis Hwy (now Richmond Hwy), Woodbridge, VA 22191. Street and city unchanged."
+ },
+ {
+  "listing_id": 476,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated (10056 is not a Manassas ZIP). The NVFS contact page gives 10056 Dean Drive, Manassas, VA 20110.",
+  "confidence": "high",
+  "verify_note": "The batch source gives the address as '10056 Dean Drive Manassas 10056', so the ZIP is the street number repeated. I opened nvfs.org/contact-us and it lists the NVFS SERVE Campus as '10056 Dean Drive, Manassas, VA 20110'."
+ },
+ {
+  "listing_id": 477,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem as listing 476 (source record 396). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 478,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 397). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 479,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 398). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 480,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 399). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 481,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 400). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 482,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 401). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 483,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 402). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 487,
+  "listing_name": "Serve Family Shelter",
+  "field": "address",
+  "current": "10056 Dean Dr, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Dr",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The NVFS SERVE Campus is at 10056 Dean Drive, Manassas, VA 20110.",
+  "confidence": "high",
+  "verify_note": "The source (record 462) gives '10056 Dean Dr Manassas 10056'. The NVFS contact page lists 10056 Dean Drive as the SERVE Campus with ZIP 20110. Keeping 'Dean Dr' as written is fine."
+ },
+ {
+  "listing_id": 468,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty, ZIP 22031",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city 'Fairfax' was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "The listing has address1 '8922 Little River Turnpike Fairfax' and an empty city. The source text '8922 Little River Turnpike Fairfax 22031' shows Fairfax is the city, so moving it into the city field is correct."
+ },
+ {
+  "listing_id": 469,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "Same city-in-street-line problem (source record 368). ZIP 22031 matches the source."
+ },
+ {
+  "listing_id": 470,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "Same city-in-street-line problem (source record 371)."
+ },
+ {
+  "listing_id": 471,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "Same city-in-street-line problem (source record 374)."
+ },
+ {
+  "listing_id": 472,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "Same city-in-street-line problem (source record 382)."
+ },
+ {
+  "listing_id": 473,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "Same city-in-street-line problem (source record 384)."
+ },
+ {
+  "listing_id": 434,
+  "listing_name": "ACTS Food Pantry",
+  "field": "hours",
+  "current": "No hours shown",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "11:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 0,
+    "opens": "13:00",
+    "closes": "15:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "13:00",
+    "closes": "15:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "17:00",
+    "closes": "19:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "11:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "13:00",
+    "closes": "15:00",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+  "evidence_quote": "Food Assistance Hours: Monday 9:00 AM 11:30 AM/ 1:00 PM 3:00 PM Tuesday 1:00 PM 3:30PM / 5:00 PM 7:00 PM Thursday 9:00 AM 11:30 AM / 1:00 PM 3:00 PM",
+  "reason": "The source lists food assistance hours, but the listing shows none. New-client enrollment hours are separate and are not included here.",
+  "confidence": "high",
+  "verify_note": "The quoted 'Food Assistance Hours' appear word for word in raw_hours_text: Monday 9-11:30 and 1-3, Tuesday 1-3:30 and 5-7, Thursday 9-11:30 and 1-3. The weekday numbers 0, 1 and 3 and all times are correct. Leaving out the new-client enrollment hours is right, since those are not food pickup."
+ },
+ {
+  "listing_id": 438,
+  "listing_name": "Arlington Assembly of God",
+  "field": "hours",
+  "current": "No hours shown",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "15:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+  "evidence_quote": "Free groceries available on Tuesdays from 3:00 - 5:00 PM.",
+  "reason": "The source gives the grocery pickup time, but the listing shows no hours. No time is published for the hot dinner.",
+  "confidence": "high",
+  "verify_note": "The source notes include 'Free groceries available on Tuesdays from 3:00 - 5:00 PM.' Tuesday is weekday 1 and 15:00-17:00 matches. No time is given for the hot dinner, so it correctly gets no hours."
+ },
+ {
+  "listing_id": 449,
+  "listing_name": "St Anthony Church",
+  "field": "hours",
+  "current": "No hours shown",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 0,
+    "opens": "10:00",
+    "closes": "13:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 2,
+    "opens": "10:00",
+    "closes": "13:00",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.stanthonyparish.org/food-pantry/",
+  "evidence_quote": "The Food Pantry operates two days a week (Monday and Wednesday) from 10am to 1pm.",
+  "reason": "The listing shows no hours. The parish pantry page gives Monday and Wednesday, 10am-1pm. New-client registration is only on Wednesdays, which matches the county source's 'Walk-in only Wednesdays'.",
+  "confidence": "high",
+  "verify_note": "The batch source only says '10:00 am-1:00 pm' and 'Walk-in only Wednesdays', and the Fairfax page text does not list providers. The parish pantry page (stanthonyparish.org/food-pantry/) says 'The Food Pantry operates two days a week (Monday and Wednesday) from 10am to 1pm' and that new-client registration is only on Wednesdays. The proposal leaves out Monday, so I added a Monday 10:00-13:00 distribution entry and pointed the evidence at the parish page."
+ },
+ {
+  "listing_id": 446,
+  "listing_name": "Culmore Community Library",
+  "field": "hours",
+  "current": "Tue week 1 11:00-13:00 only",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "11:00",
+    "closes": "13:00",
+    "week_of_month": 1
+   },
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "11:00",
+    "closes": "13:00",
+    "week_of_month": 4
+   }
+  ],
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "11:00 AM-1:00 PM (1st and 4th of the Month)",
+  "reason": "The source says the distribution happens in both the 1st and 4th week, but the listing shows only the 1st week. The 4th-week occurrence is missing. I kept the displayed Tuesday; the source text does not name the day.",
+  "confidence": "medium",
+  "verify_note": "raw_hours_text reads '11:00 AM-1:00 PM (1st and 4th of the Month)', but the listing only has 'Tue wk1 11:00-13:00', so the 4th-week date is missing. Adding week 4 on the weekday already shown keeps the existing data and fills the gap. The weekday itself is not stated in the source text; the proposal leaves it as it was."
+ },
+ {
+  "listing_id": 476,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "hours",
+  "current": "Mon-Fri 09:00-17:00 shown as distribution (food pickup)",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Monday through Friday, 9am-5pm",
+  "reason": "These are housing office hours, not food pickup. They should be labeled as operating hours.",
+  "confidence": "high",
+  "verify_note": "Listing 476 is housing assistance, not food, yet its Mon-Fri 9-5 hours are labeled as food distribution. The user said the food categories apply only to food. Relabeling the same five days and times as operating hours keeps every time and fixes the kind. Source: 'Monday through Friday, 9am-5pm'."
+ },
+ {
+  "listing_id": 477,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "hours",
+  "current": "Mon-Fri 09:00-17:00 shown as distribution (food pickup)",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Monday through Friday, 9am-5pm",
+  "reason": "These are health-access office hours, not food pickup. They should be labeled as operating hours.",
+  "confidence": "high",
+  "verify_note": "Listing 477 is a health clinic, not food. Same relabeling to operating hours; the complete Mon-Fri 9-5 schedule is kept."
+ },
+ {
+  "listing_id": 478,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "hours",
+  "current": "Mon-Fri 09:00-17:00 shown as distribution (food pickup)",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Monday through Friday, 9am-5pm",
+  "reason": "These are mental health office hours, not food pickup. They should be labeled as operating hours.",
+  "confidence": "high",
+  "verify_note": "Listing 478 is mental health counseling, not food. Same relabeling to operating hours; the complete Mon-Fri 9-5 schedule is kept."
+ },
+ {
+  "listing_id": 480,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "hours",
+  "current": "Mon-Fri 09:00-17:00 shown as distribution (food pickup)",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Monday through Friday, 9am-5pm",
+  "reason": "These are program office hours, not food pickup. They should be labeled as operating hours.",
+  "confidence": "high",
+  "verify_note": "Listing 480 is job training, not food. Same relabeling to operating hours; the complete Mon-Fri 9-5 schedule is kept."
+ },
+ {
+  "listing_id": 482,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "hours",
+  "current": "Mon-Fri 09:00-17:00 shown as distribution (food pickup)",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Monday through Friday, 9am-5pm",
+  "reason": "These are financial-assistance office hours, not food pickup. They should be labeled as operating hours.",
+  "confidence": "high",
+  "verify_note": "Listing 482 is financial assistance, not food. Same relabeling to operating hours; the complete Mon-Fri 9-5 schedule is kept."
+ },
+ {
+  "listing_id": 483,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "hours",
+  "current": "Mon-Fri 09:00-17:00 shown as distribution (food pickup)",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Monday through Friday, 9am-5pm",
+  "reason": "These are utility-assistance office hours, not food pickup. They should be labeled as operating hours.",
+  "confidence": "high",
+  "verify_note": "Listing 483 is utility assistance, not food. Same relabeling to operating hours; the complete Mon-Fri 9-5 schedule is kept."
+ },
+ {
+  "listing_id": 516,
+  "listing_name": "Herndon-Reston Public Health Center",
+  "field": "hours",
+  "current": "Tuesday listed twice: 08:00-16:30 and 08:00-18:30",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:00",
+    "closes": "18:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "08:00",
+    "closes": "16:30",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.fairfaxcounty.gov/health/clinics/herndon-reston-district-office",
+  "evidence_quote": "Business Hours: Monday 8 a.m.-4:30 p.m.; Tuesday 8 a.m.-6:30 p.m.; Wednesday-Friday 8 a.m.-4:30 p.m.",
+  "reason": "Tuesday has two conflicting entries. The source gives only one Tuesday time, 8 a.m. to 6:30 p.m.",
+  "confidence": "high",
+  "verify_note": "The listing has Tuesday twice, 08:00-16:30 and 08:00-18:30. Both source records (770 and 630) give Tuesday as 8 a.m.-6:30 p.m. and Mon/Wed-Fri as 8-4:30. The proposed schedule covers all five days and is correct."
+ },
+ {
+  "listing_id": 518,
+  "listing_name": "Fairfax Employment Resource Center – Pennino Building",
+  "field": "hours",
+  "current": "No hours shown",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "10:00",
+    "closes": "16:30",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
+  "evidence_quote": "Monday-Thursday 8:30 a.m.-4:30 p.m. Friday 10 a.m.-4:30 p.m.",
+  "reason": "The source gives Workforce Center hours, but the listing shows none.",
+  "confidence": "medium",
+  "verify_note": "Source record 634's raw_hours_text includes 'Monday-Thursday 8:30 a.m.-4:30 p.m. Friday 10 a.m.-4:30 p.m.' The proposed Mon-Thu 08:30-16:30 and Fri 10:00-16:30 match, and these are correctly labeled as operating hours (job training)."
+ },
+ {
+  "listing_id": 462,
+  "listing_name": "Fairfax Virginia Career Works Alexandria Center",
+  "field": "hours",
+  "current": "No hours shown",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "10:00",
+    "closes": "16:30",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
+  "evidence_quote": "Monday-Thursday 8:30 a.m.-4:30 p.m. Friday 10 a.m.-4:30 p.m.",
+  "reason": "The source gives Workforce Center hours, but the listing shows none.",
+  "confidence": "medium",
+  "verify_note": "Source record 278's raw_hours_text has the same Mon-Thu 8:30-4:30 and Fri 10-4:30 hours. The proposed schedule matches and is labeled as operating hours. The source notes the hours are 'listed with the Workforce Center team contact'."
+ },
+ {
+  "listing_id": 463,
+  "listing_name": "Fairfax Virginia Career Works Annandale Center",
+  "field": "hours",
+  "current": "No hours shown",
+  "new_hours": [
+   {
+    "kind": "operating_hours",
+    "weekday": 0,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 1,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 2,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 3,
+    "opens": "08:30",
+    "closes": "16:30",
+    "week_of_month": null
+   },
+   {
+    "kind": "operating_hours",
+    "weekday": 4,
+    "opens": "10:00",
+    "closes": "16:30",
+    "week_of_month": null
+   }
+  ],
+  "evidence_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
+  "evidence_quote": "Monday-Thursday 8:30 a.m.-4:30 p.m. Friday 10 a.m.-4:30 p.m.",
+  "reason": "The source gives Workforce Center hours, but the listing shows none.",
+  "confidence": "medium",
+  "verify_note": "Source record 279's raw_hours_text has the same hours. The proposed schedule matches and is labeled as operating hours."
+ },
+ {
+  "listing_id": 529,
+  "listing_name": "St Paul United Methodist Church",
+  "field": "eligibility",
+  "current": "No eligibility shown",
+  "new_value": "Serves ZIP codes 22191-22193 only; must bring ID and proof of address.",
+  "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+  "evidence_quote": "*Servicingzipcodes22191-22193. YoumustbringandIDandproofofaddress.",
+  "reason": "The source limits service to three ZIP codes and requires ID and proof of address. The listing shows no requirements, so people could be turned away.",
+  "confidence": "high",
+  "verify_note": "The source's raw_eligibility_text is '*Servicingzipcodes22191-22193. YoumustbringandIDandproofofaddress.' The proposed wording matches it, and the listing's eligibility field is currently empty."
+ },
+ {
+  "listing_id": 448,
+  "listing_name": "CAFB Mobile Market",
+  "field": "categories",
+  "current": "pantry_pickup",
+  "add_types": [
+   "mobile_pantry"
+  ],
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "CAFB Mobile Market",
+  "reason": "This is a Capital Area Food Bank mobile market held once a month (2nd Monday) at a community center. It is a mobile pantry, but that food category is missing.",
+  "confidence": "medium",
+  "verify_note": "mobile_pantry is a valid service type already used in this batch (listing 531). The listing is the CAFB Mobile Market, a once-a-month (2nd Monday) produce distribution at James Lee Community Center. It is a food listing, so the food category applies. The change only adds the category; pantry_pickup stays."
+ }
+]

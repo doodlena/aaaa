@@ -143,6 +143,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "This is a home-delivered meals program for homebound older adults, so senior_meals is missing.",
+     "evidence_url": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
+     "evidence_quote": "Adults over the age of 60, or adults with a disability, who are homebound"
+    }
+   ],
    "organization_name": "Fairfax County Department of Family Services",
    "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
    "raw_eligibility_text": null,
@@ -819,53 +828,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "18:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Public health center: immunizations, maternity services, pregnancy testing, HIV/STI/TB testing, newcomer health screening. Walk-ins available.",
      "eligibility": [],
@@ -876,53 +839,7 @@
     },
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "WIC office (Suite 100). Call 703-246-5599 for appointments.",
      "eligibility": [],
@@ -933,7 +850,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:30",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "18:30",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:30",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:30",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:30",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.fairfaxcounty.gov/health/clinics/herndon-reston-district-office",
    "eligibility": [],
    "external_id": "nova-svc-fairfax-herndon-reston-phc",
@@ -945,6 +908,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Tuesday has two conflicting entries. The source gives only one Tuesday time, 8 a.m. to 6:30 p.m.",
+     "evidence_url": "https://www.fairfaxcounty.gov/health/clinics/herndon-reston-district-office",
+     "evidence_quote": "Business Hours: Monday 8 a.m.-4:30 p.m.; Tuesday 8 a.m.-6:30 p.m.; Wednesday-Friday 8 a.m.-4:30 p.m."
+    }
+   ],
    "organization_name": "Fairfax County Health Department",
    "organization_website": "https://www.fairfaxcounty.gov/health/",
    "raw_eligibility_text": "Fees and eligibility vary by service.",
@@ -1194,7 +1166,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:30",
+     "closes": "16:30",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:30",
+     "closes": "16:30",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:30",
+     "closes": "16:30",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:30",
+     "closes": "16:30",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "16:30",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
    "eligibility": [
     {
@@ -1213,6 +1231,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The source gives Workforce Center hours, but the listing shows none.",
+     "evidence_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
+     "evidence_quote": "Monday-Thursday 8:30 a.m.-4:30 p.m. Friday 10 a.m.-4:30 p.m."
+    }
+   ],
    "organization_name": "Fairfax County Department of Family Services",
    "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
    "raw_eligibility_text": null,

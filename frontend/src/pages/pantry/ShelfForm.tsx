@@ -41,7 +41,8 @@ export function AIDraftedNotice({ things }: { things: string[] }) {
 }
 
 /**
- * Post today's shelf: one-tap status, items with levels, a short message, and when it expires (default: end of today).
+ * Post today's status: one-tap status, items with levels (food listings only), a short message, and when it expires
+ * (default: end of today). Non-food listings (clinics, legal aid, shelters…) get open / limited / closed + a message.
  * Nothing is sent until "Post to families" is pressed — also when the form was prefilled by an AI draft.
  */
 export function ShelfForm({
@@ -135,6 +136,7 @@ export function ShelfForm({
             </button>
           ))}
         </div>
+        {!food && <p className="fgroup__hint">{t('portal.shelf.limitedHintService')}</p>}
       </fieldset>
 
       {food && status !== 'closed' && (
@@ -182,6 +184,7 @@ export function ShelfForm({
           id={`${id}-msg`}
           rows={2}
           maxLength={MSG_MAX}
+          placeholder={food ? undefined : t('portal.shelf.messagePlaceholderService')}
           value={message}
           onChange={(e) => setMessage(e.target.value.slice(0, MSG_MAX))}
           aria-describedby={`${id}-msg-count`}

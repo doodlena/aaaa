@@ -19,6 +19,7 @@ from app.ingestion.normalization.text import (
     normalize_phone,
     normalize_url,
     normalize_zip,
+    split_address,
     parse_schedule_text,
 )
 
@@ -58,15 +59,19 @@ def _time12(t: str | None) -> str | None:
     return f"{h:02d}:{mi:02d}"
 
 
-def _week_rule(freq: str) -> tuple[bool, int | None]:
-    """('Every week' -> weekly). Ordinal weeks -> monthly. Anything else -> not representable (kept as notes)."""
+_WEEK = {"1st": 1, "first": 1, "2nd": 2, "second": 2, "3rd": 3, "third": 3, "4th": 4, "fourth": 4, "5th": 5, "fifth": 5, "last": -1}
+
+
+def _week_rule(freq: str) -> tuple[bool, list[int | None]]:
+    """('Every week' -> weekly). Ordinal weeks -> monthly, EVERY listed week ("1st and 3rd" -> [1, 3]).
+    Anything else -> not representable (kept as notes)."""
     f = (freq or "").lower()
     if "every week" in f or f == "weekly":
-        return True, None
-    m = re.search(r"\b(1st|2nd|3rd|4th|5th|first|second|third|fourth|last)\b", f)
-    if m:
-        return True, {"1st": 1, "first": 1, "2nd": 2, "second": 2, "3rd": 3, "third": 3, "4th": 4, "fourth": 4, "5th": 5, "last": -1}[m.group(1)]
-    return False, None
+        return True, [None]
+    weeks = [_WEEK[m] for m in re.findall(r"\b(1st|2nd|3rd|4th|5th|first|second|third|fourth|fifth|last)\b", f)]
+    if weeks:
+        return True, list(dict.fromkeys(weeks))
+    return False, []
 
 
 @register("cafb_get_help")
@@ -84,7 +89,7 @@ class CAFBGetHelp(ScopedArcGIS):
                 if not freq:
                     continue  # CAFB repeats start/end into unused slots; Frequency marks a real slot
                 start, end = _time12(d.get(f"{day}_start{k}")), _time12(d.get(f"{day}_end{k}"))
-                ok, wom = _week_rule(freq)
+                ok, weeks = _week_rule(freq)
                 model = clean_text(d.get(f"{day}_Dmodel{k}")) or ""
                 codes = match_keywords(model.replace("thru", "through"), SERVICE_KEYWORDS) or ["pantry_pickup"]
                 appt = _yn(d.get(f"{day}_ApptOnly{k}")) == "yes"
@@ -95,8 +100,9 @@ class CAFBGetHelp(ScopedArcGIS):
                                                                      description=fmt or None))
                     svc.food_types = list(dict.fromkeys(svc.food_types + foods))
                     if ok and start and end and start < end and code != "home_delivery":
-                        svc.schedules.append(CandidateSchedule(weekday=day_i, opens=start, closes=end, week_of_month=wom,
-                                                               appointment_only=appt))
+                        for wom in weeks:
+                            svc.schedules.append(CandidateSchedule(weekday=day_i, opens=start, closes=end, week_of_month=wom,
+                                                                   appointment_only=appt))
                     if code == "home_delivery":
                         svc.service_type = "delivery_qualifying"
                 if not ok:
@@ -200,9 +206,7 @@ class PWCCommunityMobilization(ScopedArcGIS):
     def normalize(self, raw: RawRecord) -> CandidateResource:
         d = raw.data
         addr = clean_text(d.get("Address")) or ""
-        parts = [p.strip() for p in addr.split(",")]
-        address1 = parts[0] if parts else None
-        city = parts[1] if len(parts) > 2 else None
+        address1, address2, city = split_address(addr)
         desc = clean_text(d.get("Service_Description"))
         access = clean_text(d.get("How_to_Access_Services"))
         hours = clean_text(d.get("Hours_of_Service"), keep_lines=True)
@@ -233,7 +237,8 @@ class PWCCommunityMobilization(ScopedArcGIS):
         return CandidateResource(
             external_id=str(d.get("GlobalID") or d.get("FID")), source_url=self.config.url,
             organization_name=clean_text(d.get("Organization_Name")), organization_website=normalize_url(site),
-            address1=address1, city=city, zip=normalize_zip(addr), lat=d.get("_lat"), lon=d.get("_lon"), geocode_source="pwc_cmn",
+            address1=address1, address2=address2, city=city, zip=normalize_zip(addr), lat=d.get("_lat"), lon=d.get("_lon"),
+            geocode_source="pwc_cmn",
             phone=normalize_phone(d.get("Phone_Number")), email=clean_text(d.get("Email")), website=normalize_url(site),
             languages=langs, raw_hours_text=hours, raw_eligibility_text=access, notes=access,
             services=services, eligibility=elig,

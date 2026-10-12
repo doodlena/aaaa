@@ -625,17 +625,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "11:00",
-       "closes": "13:00",
-       "weekday": 4,
-       "week_of_month": 2,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Seasonal food distribution open to all",
      "eligibility": [],
@@ -658,6 +648,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The ALIVE! market is on the LAST Saturday, not the 4th. The second-Friday seasonal distribution is correct. The source notes also flag an address conflict: the ALIVE! page lists 3600 Commonwealth Ave.",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "Last Saturday of the month from 8:30 am – 10:30 am."
+    }
+   ],
    "organization_name": "City of Alexandria DCHS and Agape Church",
    "organization_website": null,
    "raw_eligibility_text": "Seasonal food distribution open to all, bring a bag.",
@@ -1016,6 +1015,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The ALIVE! market is on the LAST Saturday, not the 4th. The second-Friday seasonal distribution is correct. The source notes also flag an address conflict: the ALIVE! page lists 3600 Commonwealth Ave.",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "Last Saturday of the month from 8:30 am – 10:30 am."
+    }
+   ],
    "organization_name": "ALIVE! (Alexandrians Involved Ecumenically)",
    "organization_website": "https://www.alive-inc.org/",
    "raw_eligibility_text": "ALIVE! food distributions are for City of Alexandria residents. Proof of residency in the City of Alexandria may be requested.",
@@ -1078,6 +1086,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The market is on the LAST Saturday, not the 4th. In months with five Saturdays (for example October 31) the listing sends people a week early. The city directory notes that the market moves to the second Saturday in May, November and December.",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "Last Saturday of the month from 8:30 am – 10:30 am."
+    }
+   ],
    "organization_name": "ALIVE! (Alexandrians Involved Ecumenically)",
    "organization_website": "https://www.alive-inc.org/",
    "raw_eligibility_text": "ALIVE! food distributions are for City of Alexandria residents. Proof of residency in the City of Alexandria may be requested.",
@@ -1111,14 +1128,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
-     "requirement_type": "proof_of_address"
-    }
-   ],
+   "eligibility": [],
    "external_id": "va08-alive-dchs-mark-center",
    "location_name": "City of Alexandria Department of Community & Human Services (Mark Center)",
    "parking_notes": null,
@@ -1128,9 +1138,18 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "eligibility",
+     "reason": "Source says proof of residency OR an ALIVE! Client Card 'may be requested' - not a hard requirement; showing it as required may turn people away.",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested."
+    }
+   ],
    "organization_name": "ALIVE! with City of Alexandria DCHS",
    "organization_website": "https://www.alive-inc.org/",
-   "raw_eligibility_text": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+   "raw_eligibility_text": "Proof of City of Alexandria residency or an ALIVE! Client Card may be requested (not strictly required).",
    "wheelchair_accessible": "unknown"
   },
   {
@@ -1148,7 +1167,17 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "18:30",
+       "weekday": 2,
+       "week_of_month": 3,
+       "appointment_only": false
+      }
+     ],
      "food_types": [],
      "description": "Community partner food distribution (specific dates)",
      "eligibility": [],
@@ -1161,14 +1190,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
-     "requirement_type": "proof_of_address"
-    }
-   ],
+   "eligibility": [],
    "external_id": "va08-alive-fairlington-umc",
    "location_name": "Fairlington United Methodist Church",
    "parking_notes": null,
@@ -1178,9 +1200,25 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "eligibility",
+     "reason": "Source says proof of residency OR an ALIVE! Client Card 'may be requested' - not a hard requirement; showing it as required may turn people away.",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested."
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Listing shows no hours. Oct 21, Nov 18 and Dec 16, 2026 are all 3rd Wednesdays, 5-6:30pm.",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "In partnership with Fairlington United Methodist Church (3900 King St) at 5 – 6:30 p.m. Dates for the rest of the year: October 21st, November 18th, December 16th"
+    }
+   ],
    "organization_name": "ALIVE! with Fairlington United Methodist Church",
    "organization_website": "https://www.alive-inc.org/",
-   "raw_eligibility_text": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+   "raw_eligibility_text": "Proof of City of Alexandria residency or an ALIVE! Client Card may be requested (not strictly required).",
    "wheelchair_accessible": "unknown"
   },
   {
@@ -1261,14 +1299,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
-     "requirement_type": "proof_of_address"
-    }
-   ],
+   "eligibility": [],
    "external_id": "va08-alive-uncut-jefferson-houston",
    "location_name": "Jefferson-Houston School",
    "parking_notes": null,
@@ -1278,9 +1309,18 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "eligibility",
+     "reason": "Source says proof of residency OR an ALIVE! Client Card 'may be requested' - not a hard requirement; showing it as required may turn people away.",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested."
+    }
+   ],
    "organization_name": "ALIVE! with UNCUT Youth",
    "organization_website": "https://www.alive-inc.org/",
-   "raw_eligibility_text": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+   "raw_eligibility_text": "Proof of City of Alexandria residency or an ALIVE! Client Card may be requested (not strictly required).",
    "wheelchair_accessible": "unknown"
   },
   {
@@ -1569,7 +1609,17 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "14:00",
+       "weekday": 4,
+       "week_of_month": 3,
+       "appointment_only": false
+      }
+     ],
      "food_types": [],
      "description": "Registered food pickup on listed dates",
      "eligibility": [],
@@ -1599,6 +1649,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Listing shows no hours. The remaining 2026 dates (Aug 21, Sep 18, Oct 16, Nov 20, Dec 18) all fall on the 3rd Friday, 9:30am-2pm; registration by phone is required.",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "Dates through the end of the year: June 26th, July 24th, August 21st, September 18th, October 16th, November 20th, December 18th. 9:30 am- 2:00 pm"
+    }
+   ],
    "organization_name": "Mt. Jezreel Baptist Church",
    "organization_website": null,
    "raw_eligibility_text": "call 1.800.268.0448 to register for food pickup",
@@ -2187,6 +2246,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "senior_meals"
     }
    ],
    "languages": [],
@@ -2215,6 +2279,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "Source describes this as the Senior Congregate Nutrition Program (pre-registered senior lunch); the food category senior_meals is missing.",
+     "evidence_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+     "evidence_quote": "Senior Congregate Nutrition Program"
+    }
+   ],
    "organization_name": "City of Alexandria Division of Aging & Adult Services",
    "organization_website": null,
    "raw_eligibility_text": "Pre-registration required.",
@@ -2336,6 +2409,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "senior_meals"
     }
    ],
    "languages": [],
@@ -2364,6 +2442,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "Source describes this as the Senior Congregate Nutrition Program (pre-registered senior breakfast/lunch); the food category senior_meals is missing.",
+     "evidence_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+     "evidence_quote": "Senior Congregate Nutrition Program"
+    }
+   ],
    "organization_name": "City of Alexandria Division of Aging & Adult Services",
    "organization_website": null,
    "raw_eligibility_text": "Pre-registration required.",
@@ -3233,6 +3320,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "The grocery pickup is by appointment only, so walk_up is wrong. The community lunch is already covered by community_meal.",
+     "evidence_url": "https://www.risinghopeumc.org/programs",
+     "evidence_quote": "Food Market: by appointment only Tuesday-Thursday from 1:30pm-4:30pm."
+    }
+   ],
    "organization_name": "Rising Hope Mission Church",
    "organization_website": "https://www.risinghopeumc.org/",
    "raw_eligibility_text": "The Food Market is open for guest shopping by appointment only ... New guests may come into Rising Hope Monday-Friday from 10am - 11:30am to fill out an application for the market.",

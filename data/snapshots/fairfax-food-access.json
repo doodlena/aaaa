@@ -270,20 +270,6 @@
     {
      "frequency": null,
      "schedules": [],
-     "food_types": [
-      "general_groceries",
-      "emergency_food_packages"
-     ],
-     "description": "Emergency Food Support - Britepaths takes referrals from local nonprofits, school social workers, and CSP to provide a $400 grocery gift card to families in a temporary crisis one time per fiscal year.",
-     "eligibility": [],
-     "service_type": "pantry_pickup",
-     "offering_status": "unconfirmed",
-     "appointment_required": "required",
-     "registration_required": "unknown"
-    },
-    {
-     "frequency": null,
-     "schedules": [],
      "food_types": [],
      "description": null,
      "eligibility": [],
@@ -302,6 +288,12 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "grocery_voucher"
     }
    ],
    "languages": [
@@ -311,24 +303,10 @@
    "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
    "eligibility": [
     {
-     "status": "not_required",
-     "values": {},
-     "details": null,
-     "requirement_type": "photo_id"
-    },
-    {
-     "status": "not_required",
-     "values": {},
-     "details": null,
-     "requirement_type": "income"
-    },
-    {
      "status": "required",
-     "values": {
-      "zips": []
-     },
-     "details": "Yes",
-     "requirement_type": "zip_restriction"
+     "values": {},
+     "details": "Referral required (from local nonprofits, school social workers, or CSP). Scheduled appointments only. One time per fiscal year, for families in a temporary crisis.",
+     "requirement_type": "referral"
     }
    ],
    "external_id": "27c3553b-9d68-486f-8ff4-410acfd0e0da",
@@ -340,9 +318,25 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "The food help is a one-time grocery gift card given by referral, not pantry pickup.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+     "evidence_quote": "Britepaths takes referrals from local nonprofits, school social workers, and CSP to provide a $400 grocery gift card to families in a temporary crisis one time per fiscal year."
+    },
+    {
+     "date": "2026-10-12",
+     "field": "eligibility",
+     "reason": "The listing omits that a referral is required and that the help is limited to once per fiscal year.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+     "evidence_quote": "Britepaths takes referrals from local nonprofits, school social workers, and CSP"
+    }
+   ],
    "organization_name": "Britepaths",
    "organization_website": "https://britepaths.org",
-   "raw_eligibility_text": null,
+   "raw_eligibility_text": "Referral required (from local nonprofits, school social workers, or CSP). Scheduled appointments only. One time per fiscal year, for families in a temporary crisis.",
    "wheelchair_accessible": "unknown"
   },
   {
@@ -1759,6 +1753,11 @@
      "offering_status": "regular",
      "appointment_required": "not_required",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "mobile_pantry"
     }
    ],
    "languages": [
@@ -1790,6 +1789,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "This is a Capital Area Food Bank mobile market held once a month (2nd Monday) at a community center. It is a mobile pantry, but that food category is missing.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+     "evidence_quote": "CAFB Mobile Market"
+    }
+   ],
    "organization_name": "James Lee Community Center",
    "organization_website": "https://www.capitalareafoodbank.org",
    "raw_eligibility_text": null,
@@ -2623,7 +2631,26 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "general_groceries",
       "pantry_staples"
@@ -2683,6 +2710,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The listing shows no hours. The parish pantry page gives Monday and Wednesday, 10am-1pm. New-client registration is only on Wednesdays, which matches the county source's 'Walk-in only Wednesdays'.",
+     "evidence_url": "https://www.stanthonyparish.org/food-pantry/",
+     "evidence_quote": "The Food Pantry operates two days a week (Monday and Wednesday) from 10am to 1pm."
+    }
+   ],
    "organization_name": "St. Anthony Church",
    "organization_website": "https://www.stanthonyparish.org",
    "raw_eligibility_text": "Walk-in only Wednesdays",
@@ -3138,6 +3174,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "The 4th-Monday drive-through distribution is explicit in the source (CAFB also tags drive_through), but drive_through is missing.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+     "evidence_quote": "Wed 9am-3pm; 4th Monday 12-3pm drive thru dist."
+    }
+   ],
    "organization_name": "Salvation Army Fairfax",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -3713,6 +3758,11 @@
      "offering_status": "unconfirmed",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "senior_meals"
     }
    ],
    "languages": [
@@ -3754,6 +3804,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "This is a home-delivered meals program for homebound older adults, so senior_meals is missing.",
+     "evidence_url": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
+     "evidence_quote": "Adults over the age of 60, or adults with a disability, who are homebound"
+    }
+   ],
    "organization_name": "Fairfax County Home Delivered Meals",
    "organization_website": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
    "raw_eligibility_text": null,
@@ -3825,6 +3884,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "The grocery pickup is by appointment only, so walk_up is wrong. The community lunch is already covered by community_meal.",
+     "evidence_url": "https://www.risinghopeumc.org/programs",
+     "evidence_quote": "Food Market: by appointment only Tuesday-Thursday from 1:30pm-4:30pm."
+    }
+   ],
    "organization_name": "Rising Hope Mission",
    "organization_website": "https://www.risinghopeumc.org",
    "raw_eligibility_text": null,
@@ -3921,7 +3989,26 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "18:00",
+       "weekday": 4,
+       "week_of_month": 1,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "07:00",
+       "closes": "09:00",
+       "weekday": 5,
+       "week_of_month": 4,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "pantry_staples",
       "other_special_diet"
@@ -3967,7 +4054,7 @@
     }
    ],
    "external_id": "2e67ee5a-25b7-47ef-8a6b-13a331a6ed9c",
-   "location_name": "Same as above",
+   "location_name": "St. Stephen's UMC",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "fairfax_county",
@@ -3975,6 +4062,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "name",
+     "reason": "The name is a spreadsheet artifact ('Same as above'). The address and website (ststephensfairfax.org) are St. Stephen's UMC, which also appears to duplicate listing 34.",
+     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+     "evidence_quote": "St. Stephen's UMC | 9203 Braddock Rd Burke 22015"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The source gives a schedule, but no hours are displayed. End times come from the CAFB record for the same church (listing 34): '5:00 PM-6:00 PM (1st of the Month); 7:00 AM-9:00 AM (4th of the Month)'.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+     "evidence_quote": "4th Saturday of the month from 7:00 am until food is gone and 1st Friday of the month from 5:00pm until food is gone"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "name",
+     "reason": "The name is a spreadsheet artifact ('Same as above'). The address and website (ststephensfairfax.org) are St. Stephen's UMC, which also appears to duplicate listing 34.",
+     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+     "evidence_quote": "St. Stephen's UMC | 9203 Braddock Rd Burke 22015"
+    }
+   ],
    "organization_name": "St Stephens United Methodist Church",
    "organization_website": "https://www.ststephensfairfax.org/get-involved/food-clothing-donations/",
    "raw_eligibility_text": null,
@@ -4122,7 +4232,7 @@
     }
    ],
    "external_id": "5842b469-dafc-4de4-8ef1-adb86cef0fd1",
-   "location_name": "Food Distribution",
+   "location_name": "Second Story - Culmore Family Resource Center",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "fairfax_county",
@@ -4130,6 +4240,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "name",
+     "reason": "'Food Distribution' is a generic label, not a place name. The site is Second Story's Culmore Family Resource Center (website second-story.org). It may also duplicate listing 22, Second Story Culmore.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+     "evidence_quote": "You will also see a sign with the name Culmore Family Resource Center at the entrance."
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "name",
+     "reason": "'Food Distribution' is a generic label, not a place name. The site is Second Story's Culmore Family Resource Center (website second-story.org). It may also duplicate listing 22, Second Story Culmore.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+     "evidence_quote": "You will also see a sign with the name Culmore Family Resource Center at the entrance."
+    }
+   ],
    "organization_name": "Second Story",
    "organization_website": "https://second-story.org/",
    "raw_eligibility_text": null,
@@ -4150,7 +4276,26 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "14:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:00",
+       "closes": "19:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "general_groceries",
       "pantry_staples"
@@ -4181,7 +4326,7 @@
     }
    ],
    "external_id": "f6cd6150-2804-40a1-88db-280e31fdcb51",
-   "location_name": "Providence Presbyterian Church-Door 8 back parking lot",
+   "location_name": "Providence Presbyterian Church",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "fairfax_county",
@@ -4189,6 +4334,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The source gives weekly distribution hours, but none are displayed.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+     "evidence_quote": "12-2 pm Wednesday and 6pm to 7:30pm Thursday"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "name",
+     "reason": "The name includes entrance directions, which belong in the notes.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+     "evidence_quote": "Go to back parking lot-Door 8 and ring bell"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "name",
+     "reason": "The name includes entrance directions, which belong in the notes.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+     "evidence_quote": "Go to back parking lot-Door 8 and ring bell"
+    }
+   ],
    "organization_name": "Providence Presbyterian Church",
    "organization_website": "https://www.providencechurch.org",
    "raw_eligibility_text": null,
@@ -4197,14 +4365,14 @@
   {
    "lat": 38.8726932978276,
    "lon": -77.423088126985,
-   "zip": null,
-   "city": "Null",
+   "zip": "20151",
+   "city": "Chantilly",
    "email": null,
    "notes": "Please enter through the West parking lot to line up behind other cars",
    "phone": "(703) 378-7646",
    "state": "VA",
    "website": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
-   "address1": null,
+   "address1": "13807 Poplar Tree Rd",
    "address2": null,
    "services": [
     {
@@ -4261,24 +4429,10 @@
    "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
    "eligibility": [
     {
-     "status": "not_required",
-     "values": {},
-     "details": null,
-     "requirement_type": "photo_id"
-    },
-    {
-     "status": "not_required",
-     "values": {},
-     "details": null,
-     "requirement_type": "income"
-    },
-    {
      "status": "required",
-     "values": {
-      "zips": []
-     },
-     "details": "Yes",
-     "requirement_type": "zip_restriction"
+     "values": {},
+     "details": "Pre-register online first. Bring a picture ID and proof of address to receive a registration card, which is needed for food distribution.",
+     "requirement_type": "proof_of_address"
     }
    ],
    "external_id": "4ab94922-e75e-44d1-8b95-7c882be73f2c",
@@ -4290,9 +4444,32 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The address is missing. The parish's own page (the listing's website) gives the pantry address.",
+     "evidence_url": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
+     "evidence_quote": "13807 Poplar Tree Rd., Chantilly, VA 20151"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "eligibility",
+     "reason": "The pantry requires online pre-registration plus photo ID and proof of address for a registration card, which contradicts 'photo ID not required'.",
+     "evidence_url": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
+     "evidence_quote": "Please bring a picture ID and proof of address in order to validate and receive your card."
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The address is missing. The parish's own page (the listing's website) gives the pantry address.",
+     "evidence_url": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
+     "evidence_quote": "13807 Poplar Tree Rd., Chantilly, VA 20151"
+    }
+   ],
    "organization_name": "Society of St. Vincent de Paul, St. Timothy Conference",
    "organization_website": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
-   "raw_eligibility_text": null,
+   "raw_eligibility_text": "Pre-register online first. Bring a picture ID and proof of address to receive a registration card, which is needed for food distribution.",
    "wheelchair_accessible": "unknown"
   }
  ]

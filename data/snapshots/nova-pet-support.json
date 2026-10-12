@@ -778,10 +778,52 @@
      "offering_status": "unconfirmed",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "appointment_distribution"
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:30",
+     "closes": "11:30",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "13:00",
+     "closes": "15:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:30",
+     "closes": "11:30",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "13:00",
+     "closes": "15:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://pwspca.org/food/",
    "eligibility": [
     {
@@ -800,6 +842,22 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The Wednesday evening and Friday sessions happen only every other week, but the site shows them every week, so families could show up on a week with no distribution. An alternating-week schedule can't be written as a week_of_month value, so the corrected schedule keeps only the weekly Tue/Thu sessions. The every-other-Wednesday and every-other-Friday sessions should go in the description as text. Distribution is also by appointment only.",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "SERVE's food assistance is by appointment only, so appointment_distribution should be added. pantry_pickup stays, because the vocabulary defines it as a general pantry pickup, not walk-in (walk-in is walk_up), and SERVE still runs a pantry; appointment is also recorded in eligibility.",
+     "evidence_url": "https://pwspca.org/food/",
+     "evidence_quote": "Food assistance is provided by appointment only. To schedule an appointment, please call 571.748.2680"
+    }
+   ],
    "organization_name": "Northern Virginia Family Service - SERVE",
    "organization_website": null,
    "raw_eligibility_text": "Food assistance is provided by appointment only. To schedule an appointment, please call 571.748.2680 and please leave a message if no one is immediately available to take your call.",

@@ -10,7 +10,7 @@ import { formatAddress, formatTimeRange, safeUrl } from '../../lib/format';
 import { useAsync } from '../../lib/useAsync';
 import { AdminEditForm } from './AdminEditForm';
 import { useAI } from '../../state/meta';
-import { adminError, Json, OriginBadge, renderValue, StatusPill, When } from './shared';
+import { adminError, fieldLabel, Json, OriginBadge, ProposalValue, renderValue, StatusPill, When } from './shared';
 
 /** Ask the AI to structure free-text hours/eligibility from source records into pending proposals (origin=ai). */
 function AISuggestButton({ id, onDone }: { id: number; onDone: () => void }) {
@@ -342,7 +342,7 @@ export function AdminReview() {
             {r.change_proposals.map((c) => (
               <li key={c.id} className="proposal">
                 <p>
-                  <OriginBadge origin={c.origin} /> <strong>{c.field}</strong> · <StatusPill status={c.status} /> · <When at={c.created_at} />
+                  <OriginBadge origin={c.origin} /> <strong>{fieldLabel(c.field, t)}</strong> · <StatusPill status={c.status} /> · <When at={c.created_at} />
                   {c.source_record_id && <span className="muted"> · {t('admin.sourceRecord')} #{c.source_record_id}</span>}
                 </p>
                 {c.origin === 'ai' && <p className="notice notice--unknown">{t('admin.origin.aiNote')}</p>}
@@ -350,11 +350,11 @@ export function AdminReview() {
                 <div className="compare">
                   <div>
                     <h4>{t('admin.current')}</h4>
-                    <pre className="json">{renderValue(c.current_value)}</pre>
+                    <ProposalValue field={c.field} value={c.current_value} />
                   </div>
                   <div>
                     <h4>{t('admin.proposed')}</h4>
-                    <pre className="json json--proposed">{renderValue(c.proposed_value)}</pre>
+                    <ProposalValue field={c.field} value={c.proposed_value} proposed />
                   </div>
                 </div>
                 {c.status === 'pending' && (

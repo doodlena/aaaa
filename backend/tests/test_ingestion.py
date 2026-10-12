@@ -313,3 +313,13 @@ def test_rejected_records_in_snapshot_are_replayed(db, imported, tmp_path, monke
     cli._apply_rejections(db)
     db.expire_all()
     assert db.get(SourceRecord, rec.id).status == "rejected"
+
+
+def test_rebuild_keeps_fields_from_still_accepted_sources(db, imported):
+    from app.cli import _rebuild_from_linked
+
+    loc = db.scalars(select(Location).where(Location.is_synthetic.is_(True)).order_by(Location.id)).first()
+    before = (loc.name, loc.address1, loc.phone)
+    _rebuild_from_linked(db, loc)
+    db.flush()
+    assert (loc.name, loc.address1, loc.phone) == before

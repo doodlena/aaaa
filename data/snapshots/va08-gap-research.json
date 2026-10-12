@@ -1515,7 +1515,7 @@
   {
    "lat": 38.874468,
    "lon": -77.174396,
-   "zip": "22041",
+   "zip": "22042",
    "city": "Falls Church",
    "email": null,
    "notes": "Lunch program details from https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers/meals: guests and participants 50-59 pay $8.50 per meal; suggested donation $2-$6 (sliding scale by income) for ages 60+. James Lee Community Center (https://www.fairfaxcounty.gov/neighborhood-community-services/james-lee-community-center) houses a full-service Community Center, Senior Center, Teen Center and Technology Program.",
@@ -1615,6 +1615,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP code is 22042, not 22041. The CAFB source also gives 22042.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/james-lee-community-center",
+     "evidence_quote": "2855 Annandale Road Falls Church, VA 22042"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP code is 22042, not 22041. The CAFB source also gives 22042.",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/james-lee-community-center",
+     "evidence_quote": "2855 Annandale Road Falls Church, VA 22042"
+    }
+   ],
    "organization_name": "Fairfax County Department of Neighborhood and Community Services (NCS)",
    "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
    "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available. Senior Centers offer prepared lunches for participants and guests. Reservations must be made at least one day in advance at the center where you want to be served. The cost of lunch for all guests and for participants ages 50 to 59 is $8.50 per meal. The suggested meal donation (between $2 and $6) for participants ages 60 and over is based on a sliding scale depending on individual income",

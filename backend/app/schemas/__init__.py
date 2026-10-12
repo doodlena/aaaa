@@ -313,7 +313,22 @@ class ChangeRequestIn(BaseModel):
     accessibility_notes: str | None = Field(default=None, max_length=1000)
     schedules: list[ScheduleIn] | None = Field(default=None, max_length=60)
     eligibility: list[EligibilityIn] | None = Field(default=None, max_length=40)
+    # Category changes (service type codes from vocab.SERVICE_TYPES). Reviewed like every other correction.
+    add_service_types: list[str] | None = Field(default=None, max_length=20)
+    remove_service_types: list[str] | None = Field(default=None, max_length=20)
     message_to_reviewer: str | None = Field(default=None, max_length=1000)
+
+    @field_validator("add_service_types", "remove_service_types")
+    @classmethod
+    def _service_types(cls, v):
+        if v is None:
+            return None
+        from app.vocab import SERVICE_TYPES
+
+        bad = [x for x in v if x not in SERVICE_TYPES]
+        if bad:
+            raise ValueError(f"unknown service types {bad}")
+        return list(dict.fromkeys(v))
 
     @field_validator("languages")
     @classmethod

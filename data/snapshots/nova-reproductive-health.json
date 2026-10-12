@@ -688,53 +688,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "18:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "STI services at all four public health centers: sexual health education and counseling; free condoms; testing for STIs such as HIV, syphilis, chlamydia, gonorrhea, trichomonas and other STIs based on symptoms and testing capability; treatment if you test positive; extra medication for partners exposed to chlamydia or gonorrhea; starting DoxyPEP; referral for PrEP; vaccines for hepatitis A, hepatitis B and HPV (small fee for uninsured adults). Walk-in STI testing: Mon 8-4, Tue 10-6, Wed 8-4, Thu 8-4, Fri 8-12 (must walk in at least an hour before clinic closure). STI treatment availability varies by location.",
      "eligibility": [],
@@ -745,53 +699,7 @@
     },
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "18:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Pregnancy testing and maternity services (walk-in hours offered for pregnancy testing and maternity intake services); HIV testing.",
      "eligibility": [],
@@ -833,6 +741,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Tuesday appears twice with conflicting closing times; the health center is open until 6:30pm on Tuesday.",
+     "evidence_url": "https://www.fairfaxcounty.gov/health/clinics/mount-vernon-district-office",
+     "evidence_quote": "Business Hours: Mon 8 a.m.-4:30 p.m.; Tue 8 a.m.-6:30 p.m.; Wed 8 a.m.-4:30 p.m.; Thu 8 a.m.-4:30 p.m.; Fri 8 a.m.-4:30 p.m."
+    }
+   ],
    "organization_name": "Fairfax County Health Department",
    "organization_website": "https://www.fairfaxcounty.gov/health/",
    "raw_eligibility_text": "Fees and eligibility vary by service. Clinic walk-in service is limited and is on a first-come first-served basis. All clinic services are also available by appointment. Some insurance plans are accepted. For those without or choosing not to use their health insurance, we offer a sliding scale fee (based on your income eligibility) which may reduce or eliminate costs to you.",
@@ -853,53 +770,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "18:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "STI services at all four public health centers: sexual health education and counseling; free condoms; testing for STIs such as HIV, syphilis, chlamydia, gonorrhea, trichomonas and other STIs based on symptoms and testing capability; treatment if you test positive; extra medication for partners exposed to chlamydia or gonorrhea; starting DoxyPEP; referral for PrEP; vaccines for hepatitis A, hepatitis B and HPV (small fee for uninsured adults). Walk-in STI testing: Mon 8-4, Tue 10-6, Wed 8-4, Thu 8-4, Fri 8-12 (must walk in at least an hour before clinic closure). STI treatment availability varies by location.",
      "eligibility": [],
@@ -910,53 +781,7 @@
     },
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "18:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Pregnancy testing and maternity services (walk-in hours offered for pregnancy testing and maternity intake services); HIV testing.",
      "eligibility": [],
@@ -998,6 +823,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Tuesday has two conflicting entries. The source gives only one Tuesday time, 8 a.m. to 6:30 p.m.",
+     "evidence_url": "https://www.fairfaxcounty.gov/health/clinics/herndon-reston-district-office",
+     "evidence_quote": "Business Hours: Monday 8 a.m.-4:30 p.m.; Tuesday 8 a.m.-6:30 p.m.; Wednesday-Friday 8 a.m.-4:30 p.m."
+    }
+   ],
    "organization_name": "Fairfax County Health Department",
    "organization_website": "https://www.fairfaxcounty.gov/health/",
    "raw_eligibility_text": "Fees and eligibility vary by service. Clinic walk-in service is limited and is on a first-come first-served basis. All clinic services are also available by appointment. Some insurance plans are accepted. For those without or choosing not to use their health insurance, we offer a sliding scale fee (based on your income eligibility) which may reduce or eliminate costs to you.",
@@ -2642,6 +2476,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Health center hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday–Friday, 8:00 AM–5:30 PM; Saturday, 8:00 AM–1:00 PM; Sunday closed."
+    }
+   ],
    "organization_name": "Lunera Health (formerly GPW Health Center)",
    "organization_website": "https://lunerahealth.org/",
    "raw_eligibility_text": "The Center serves Prince William County and the Cities of Manassas and Manassas Park in Northern Virginia. We provide Medical, Pediatric, Dental, OB/GYN and Behavioral Health services to all members of our community, regardless of age, income or insurance status.",

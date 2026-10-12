@@ -85,6 +85,26 @@ def replace_structures(db, loc: Location, services: list[dict] | None, schedules
     db.flush()
 
 
+def apply_service_type_delta(db, loc: Location, add: list[str], remove: list[str]) -> None:
+    """Add/remove whole service categories without touching the other services' details (an accepted category change).
+
+    Added categories start as `unconfirmed` with nothing else filled in; removed ones drop their service-scoped rows.
+    """
+    from app.vocab import SERVICE_TYPES
+
+    removed_ids = {s.id for s in loc.services if s.service_type in remove}
+    for s in [s for s in loc.services if s.id in removed_ids]:
+        loc.services.remove(s)
+    loc.schedules[:] = [s for s in loc.schedules if s.service_id not in removed_ids]
+    loc.eligibility[:] = [e for e in loc.eligibility if e.service_id not in removed_ids]
+    db.flush()
+    have = {s.service_type for s in loc.services}
+    for code in dict.fromkeys(add):
+        if code in SERVICE_TYPES and code not in have:
+            db.add(Service(location=loc, service_type=code, offering_status="unconfirmed"))
+    db.flush()
+
+
 def structures_of(loc: Location) -> dict:
     """Comparable representation of the nested structures (used for change detection)."""
     def sched(s):

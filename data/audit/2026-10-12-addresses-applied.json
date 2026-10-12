@@ -1,0 +1,819 @@
+[
+ {
+  "listing_id": 13,
+  "listing_name": "James Lee Senior Center (James Lee Community Center)",
+  "field": "address",
+  "current": "2855 Annandale Road, Falls Church 22041",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/james-lee-community-center",
+  "evidence_quote": "2855 Annandale Road Falls Church, VA 22042",
+  "reason": "The ZIP code is 22042, not 22041. The CAFB source also gives 22042.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "2855 Annandale Road",
+   "city": "Falls Church",
+   "zip": "22042"
+  },
+  "verify_note": "Fetched fairfaxcounty.gov James Lee page: '2855 Annandale Road Falls Church, VA 22042'. CAFB source record also says 22042. Only the va08 gap-research record has 22041."
+ },
+ {
+  "listing_id": 20,
+  "listing_name": "Chantilly Baptist Church",
+  "field": "address",
+  "current": "14312 Chantilly Baptist Ln, Chantilly, ZIP missing",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "14312 CHANTILLY BAPTIST LN Chantilly 20151",
+  "reason": "The ZIP is missing. The county source for the same site (listing 91, CBC Blesses Mobile Market) gives 20151. Listing 91 also looks like a duplicate of this one.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "14312 Chantilly Baptist Ln",
+   "city": "Chantilly",
+   "zip": "20151"
+  },
+  "verify_note": "Listing 91 (same church, same phone) has the county source address '14312 CHANTILLY BAPTIST LN Chantilly 20151'. The CAFB record for listing 20 has no ZIP. 20151 is right."
+ },
+ {
+  "listing_id": 71,
+  "listing_name": "Haymarket Regional Food Pantry",
+  "field": "address",
+  "current": "7669 Limestone Drive #105 #105, Gainesville 20155",
+  "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+  "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155",
+  "reason": "The unit number is repeated twice.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "7669 Limestone Drive",
+   "address2": "#105",
+   "city": "Gainesville",
+   "zip": "20155"
+  },
+  "verify_note": "address1 currently contains '#105' and address2 is also '#105'. The pantry site confirms '7669 Limestone Drive, #105 Gainesville, VA 20155'."
+ },
+ {
+  "listing_id": 100,
+  "listing_name": "Same as above",
+  "field": "name",
+  "current": "Same as above",
+  "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+  "evidence_quote": "St. Stephen's UMC | 9203 Braddock Rd Burke 22015",
+  "reason": "The name is a spreadsheet artifact ('Same as above'). The address and website (ststephensfairfax.org) are St. Stephen's UMC, which also appears to duplicate listing 34.",
+  "confidence": "high",
+  "new_value": "St. Stephen's UMC",
+  "verify_note": "Name is 'Same as above' in the county source. The organization field is St Stephens United Methodist Church at 9203 Braddock Rd Burke, the same address as listing 34 (St. Stephen's UMC)."
+ },
+ {
+  "listing_id": 101,
+  "listing_name": "Food Distribution",
+  "field": "name",
+  "current": "Food Distribution",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "You will also see a sign with the name Culmore Family Resource Center at the entrance.",
+  "reason": "'Food Distribution' is a generic label, not a place name. The site is Second Story's Culmore Family Resource Center (website second-story.org). It may also duplicate listing 22, Second Story Culmore.",
+  "confidence": "medium",
+  "new_value": "Second Story - Culmore Family Resource Center",
+  "verify_note": "The county notes contain the quote about the Culmore Family Resource Center sign. The organization is Second Story (second-story.org). The new name is accurate."
+ },
+ {
+  "listing_id": 102,
+  "listing_name": "Providence Presbyterian Church-Door 8 back parking lot",
+  "field": "name",
+  "current": "Providence Presbyterian Church-Door 8 back parking lot",
+  "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
+  "evidence_quote": "Go to back parking lot-Door 8 and ring bell",
+  "reason": "The name includes entrance directions, which belong in the notes.",
+  "confidence": "medium",
+  "new_value": "Providence Presbyterian Church",
+  "verify_note": "The source name contains the door directions, and the notes repeat them. The organization field is 'Providence Presbyterian Church'."
+ },
+ {
+  "listing_id": 103,
+  "listing_name": "St. Vincent de Paul Food Pantry",
+  "field": "address",
+  "current": "(no address; city 'Null')",
+  "evidence_url": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
+  "evidence_quote": "13807 Poplar Tree Rd., Chantilly, VA 20151",
+  "reason": "The address is missing. The parish's own page (the listing's website) gives the pantry address.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "13807 Poplar Tree Rd",
+   "city": "Chantilly",
+   "zip": "20151"
+  },
+  "verify_note": "Fetched the St. Timothy page: '13807 Poplar Tree Rd., Chantilly, VA 20151'. Its schedule (3rd Saturday 9-11) matches the listing."
+ },
+ {
+  "listing_id": 104,
+  "listing_name": "Northern Virginia Family Service (NVFS) – Hunger Resource Center",
+  "field": "address",
+  "current": "address1 '10058 Dean Dr. Manassas', city Manassas, ZIP 10058",
+  "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
+  "evidence_quote": "10058 Dean Drive Manassas 20110",
+  "reason": "The address is garbled: the city is repeated in the street line and the street number is used as the ZIP.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "10058 Dean Dr",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "verify_note": "The nvfs.org-derived source gives '10058 Dean Drive Manassas 20110', and the manassas-food-resources record agrees (20110). The current ZIP 10058 and the city in address1 are garbled."
+ },
+ {
+  "listing_id": 116,
+  "listing_name": "Sahara Programs",
+  "field": "address",
+  "current": "13958 Hollow Wind Way 201, city missing, ZIP 13958",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191",
+  "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "13958 Hollow Wind Way",
+   "address2": "201",
+   "city": "Woodbridge",
+   "zip": "22191"
+  },
+  "verify_note": "The fix is right but incomplete. The same PWC CMN record in the repo sample (docs/pilot_research/samples/pwc_cmn_food_first3.geojson, Sahara Programs) gives the full address '13958 Hollow Wind Way 201, Woodbridge VA 22191'. City and ZIP should be filled in, not left empty."
+ },
+ {
+  "listing_id": 119,
+  "listing_name": "Woodbridge Workers Committee",
+  "field": "address",
+  "current": "14186 Logan Ct, Woodbridge 14186",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "14186 Logan Ct Woodbridge 14186",
+  "reason": "The ZIP is the street number repeated (14186), which is not a Virginia ZIP. The same phone number appears on listing 68 (Woodbridge Workers, 13950 Jefferson Davis Hwy, 22193), so this may be a duplicate.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "14186 Logan Ct",
+   "city": "Woodbridge"
+  },
+  "verify_note": "The ZIP 14186 is just the street number in the raw PWC record. No source gives the real ZIP, so dropping it is safer than guessing. Address1 and city stay correct."
+ },
+ {
+  "listing_id": 120,
+  "listing_name": "All Saints Anglican Church",
+  "field": "address",
+  "current": "14851 Gideon Dr, Woodbridge 14851",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "14851 Gideon Dr Woodbridge 14851",
+  "reason": "The ZIP is the street number repeated (14851), which is not a valid Virginia ZIP. The PWC food distribution sites layer lists the same address with ZIP 22193.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "14851 Gideon Dr",
+   "city": "Woodbridge",
+   "zip": "22193"
+  },
+  "verify_note": "The fix is right, and the real ZIP is available. The PWC food-distribution-sites record for All Saints Church at 14851 Gideon Dr, Woodbridge has USER_ZIP_C 22193 (docs/pilot_research/samples/pwc_food_distribution_sites_2022_first3.geojson)."
+ },
+ {
+  "listing_id": 189,
+  "listing_name": "Neighborhood Health Arlington Pediatric Center",
+  "field": "address",
+  "current": "2301 Columbia Pike, Apartment G / Ste G",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "2301 Columbia Pike",
+  "reason": "The unit is garbled: 'Apartment G' in address1 duplicates 'Ste G' in address2. This is a clinic suite, not an apartment.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "2301 Columbia Pike",
+   "address2": "Suite G",
+   "city": "Arlington",
+   "zip": "22204"
+  },
+  "verify_note": "The listing has address1 '2301 Columbia Pike, Apartment G' and address2 'Ste G', so the unit is duplicated. Record 253 gives 2301 Columbia Pike, Arlington 22204. Splitting this into Suite G is correct."
+ },
+ {
+  "listing_id": 196,
+  "listing_name": "Neighborhood Health at South County Center",
+  "field": "address",
+  "current": "8350 Richmond Hwy, Suite 301 / Suite 301",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "8350 Richmond Highway",
+  "reason": "Suite repeated in both address lines.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "8350 Richmond Hwy",
+   "address2": "Suite 301",
+   "city": "Alexandria",
+   "zip": "22309"
+  },
+  "verify_note": "Address1 contains ', Suite 301' and address2 repeats 'Suite 301'. HRSA record 418 gives Suite 301, Alexandria 22309. The cleanup is correct."
+ },
+ {
+  "listing_id": 197,
+  "listing_name": "Neighborhood Health at Annandale Medical",
+  "field": "address",
+  "current": "6715 Little River Tpke, Suite 201 / Suite 201",
+  "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+  "evidence_quote": "6715 Little River Turnpike",
+  "reason": "Suite repeated in both address lines.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "6715 Little River Tpke",
+   "address2": "Suite 201",
+   "city": "Annandale",
+   "zip": "22003"
+  },
+  "verify_note": "Address1 contains ', Suite 201' and address2 repeats it. HRSA record 433 gives Suite 201, Annandale 22003."
+ },
+ {
+  "listing_id": 257,
+  "listing_name": "Neighborhood Health at Martha Custis Drive",
+  "field": "address",
+  "current": "1225 Martha Custis Dr, Apartment C-1",
+  "evidence_url": "https://data.hrsa.gov/data/download",
+  "evidence_quote": "1225 Martha Custis Dr, Apartment C-1",
+  "reason": "HRSA data labels the clinic unit as an 'Apartment'; it is a health-center suite, not an apartment.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "1225 Martha Custis Dr",
+   "address2": "Suite C-1",
+   "city": "Alexandria",
+   "zip": "22302"
+  },
+  "verify_note": "The official Neighborhood Health location page lists this clinic as Suite C1 at 1225 Martha Custis Dr, Alexandria 22302, so it is a suite, not an apartment. A minor detail: the site spells it 'C1' without a hyphen. 'C-1' is acceptable."
+ },
+ {
+  "listing_id": 212,
+  "listing_name": "Prince William Community Services",
+  "field": "address",
+  "current": "8033 Ashton Ave / city 'Suite 103' / 20109",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "Call 703-792-7800 in Manassas",
+  "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "8033 Ashton Ave",
+   "address2": "Suite 103",
+   "city": "Manassas",
+   "zip": "20109"
+  },
+  "verify_note": "The city field holds 'Suite 103'. 8033 Ashton Ave, 20109 is PWC Community Services in Manassas, and record 414 references the Manassas line. Moving the suite to address2 and setting the city to Manassas is correct."
+ },
+ {
+  "listing_id": 214,
+  "listing_name": "Edu-Futuro",
+  "field": "address",
+  "current": "15201 Neabsco Mills Rd., Woodbridge 15201",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "15201 Neabsco Mills Rd. Woodbridge 15201",
+  "reason": "The ZIP field holds the street number (15201), not a Virginia ZIP. Neabsco Mills Rd in Woodbridge is 22191.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "15201 Neabsco Mills Rd",
+   "city": "Woodbridge",
+   "zip": "22191"
+  },
+  "verify_note": "The ZIP field '15201' duplicates the street number. Neabsco Mills Rd in Woodbridge is ZIP 22191."
+ },
+ {
+  "listing_id": 217,
+  "listing_name": "Rainbow Therapeutic Riding Center",
+  "field": "address",
+  "current": "16198 Silver Lake Rd, Haymarket 16198",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "16198 Silver Lake Rd Haymarket 16198",
+  "reason": "The ZIP field holds the street number; the Haymarket ZIP is 20169.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "16198 Silver Lake Rd",
+   "city": "Haymarket",
+   "zip": "20169"
+  },
+  "verify_note": "The ZIP field '16198' duplicates the street number. Haymarket's ZIP is 20169."
+ },
+ {
+  "listing_id": 222,
+  "listing_name": "The Chris Atwood Foundation",
+  "field": "address",
+  "current": "10301 Democracy Lane / city 'Suite 150' / zip 10301",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "10301 Democracy Lane Suite 150 10301",
+  "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "10301 Democracy Lane",
+   "address2": "Suite 150",
+   "city": "Fairfax",
+   "zip": "22030"
+  },
+  "verify_note": "Records 307–312 give '10301 Democracy Lane Suite 150 10301', so the city field holds the suite and the ZIP is the street number. Democracy Lane in Fairfax is 22030."
+ },
+ {
+  "listing_id": 223,
+  "listing_name": "UVA Health – Prince William Medical Center",
+  "field": "address",
+  "current": "8700 Sudley Rd / city None / 20110",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8700 Sudley Rd 20110",
+  "reason": "The city is missing; 8700 Sudley Rd 20110 is in Manassas.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "8700 Sudley Rd",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "verify_note": "Record 315 gives '8700 Sudley Rd 20110' with no city. The UVA Health Prince William Medical Center is in Manassas, 20110."
+ },
+ {
+  "listing_id": 225,
+  "listing_name": "VA Works",
+  "field": "address",
+  "current": "13370 Minnieville Rd, Woodbridge 13370",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "13370 Minnieville Rd Woodbridge 13370",
+  "reason": "The ZIP field holds the street number; the Woodbridge ZIP should be 22192 (verify).",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "13370 Minnieville Rd",
+   "city": "Woodbridge",
+   "zip": "22192"
+  },
+  "verify_note": "The ZIP field '13370' duplicates the street number. The Virginia Works center at 13370 Minnieville Rd, Woodbridge is in 22192."
+ },
+ {
+  "listing_id": 229,
+  "listing_name": "Formed Families Forward",
+  "field": "address",
+  "current": "10304 Eaton Place Suite 100, Fairfax 10304",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "10304 Eaton Place Suite 100 Fairfax 10304",
+  "reason": "The ZIP field holds the street number; the ZIP for Eaton Place in Fairfax is 22030.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "10304 Eaton Place",
+   "address2": "Suite 100",
+   "city": "Fairfax",
+   "zip": "22030"
+  },
+  "verify_note": "The ZIP field '10304' duplicates the street number. Eaton Place in Fairfax is 22030. Splitting the suite into address2 is fine."
+ },
+ {
+  "listing_id": 232,
+  "listing_name": "Grace Community Center Clinic",
+  "field": "address",
+  "current": "14631 Route 29 Ste 313, Centreville 14631",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "14631 Route 29 Ste 313 Centreville 14631",
+  "reason": "The ZIP field holds the street number; the Centreville ZIP should be 20121 (verify).",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "14631 Route 29",
+   "address2": "Suite 313",
+   "city": "Centreville",
+   "zip": "20121"
+  },
+  "verify_note": "The ZIP field '14631' duplicates the street number. The clinic's official website lists '14631 Route 29, Suite 313 Centreville, VA 20121', so ZIP 20121 is verified."
+ },
+ {
+  "listing_id": 233,
+  "listing_name": "Haymarket Church",
+  "field": "address",
+  "current": "15000 Washington St. Ste 206 / city None / zip 15000",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "15000 Washington St. Ste 206 15000",
+  "reason": "The city is missing and the ZIP field holds the street number. Haymarket Church is in Haymarket 20169.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "15000 Washington St",
+   "address2": "Suite 206",
+   "city": "Haymarket",
+   "zip": "20169"
+  },
+  "verify_note": "Record 336 gives '15000 Washington St. Ste 206 15000', so the city is missing and the ZIP is the street number. The provider is Haymarket Church on Washington St in Haymarket, ZIP 20169 (the whole town uses 20169)."
+ },
+ {
+  "listing_id": 239,
+  "listing_name": "Legal Aid Justice Center (LAJC) – Northern Virginia",
+  "field": "address",
+  "current": "6402 Arlington Blvd / city '#1130' / 22042",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "6402 Arlington Blvd #1130 22042",
+  "reason": "The suite number was placed in the city field; ZIP 22042 is Falls Church.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "6402 Arlington Blvd",
+   "address2": "Suite 1130",
+   "city": "Falls Church",
+   "zip": "22042"
+  },
+  "verify_note": "The city field holds '#1130'. 6402 Arlington Blvd, 22042 is in Falls Church, which is LAJC's Northern Virginia office."
+ },
+ {
+  "listing_id": 246,
+  "listing_name": "City of Manassas – Community Development, Housing & Neighborhood Services",
+  "field": "address",
+  "current": "9027 Center Street / city '2nd Floor' / 20110",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "9027 Center Street 2nd Floor 20110",
+  "reason": "The floor was placed in the city field; this is City of Manassas City Hall.",
+  "confidence": "high",
+  "new_address": {
+   "address1": "9027 Center Street",
+   "address2": "2nd Floor",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "verify_note": "The city field holds '2nd Floor'. 9027 Center St, 20110 is Manassas City Hall."
+ },
+ {
+  "listing_id": 252,
+  "listing_name": "OAR NOVA",
+  "field": "address",
+  "current": "10700 Page Avenue Suite 200, Fairfax 10700",
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "10700 Page Avenue Suite 200 Fairfax 10700",
+  "reason": "The ZIP field holds the street number; the ZIP for Page Ave in Fairfax is 22030.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "10700 Page Avenue",
+   "address2": "Suite 200",
+   "city": "Fairfax",
+   "zip": "22030"
+  },
+  "verify_note": "The ZIP field '10700' duplicates the street number. 10700 Page Ave in Fairfax is 22030."
+ },
+ {
+  "listing_id": 275,
+  "listing_name": "Next Steps Family Program",
+  "field": "address",
+  "current": "10700 Page Ave, Fairfax 10700",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "10700 Page Ave Fairfax 10700",
+  "reason": "The ZIP field holds the street number; the ZIP is 22030.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "10700 Page Ave",
+   "city": "Fairfax",
+   "zip": "22030"
+  },
+  "verify_note": "The ZIP field '10700' duplicates the street number. Page Ave in Fairfax is 22030."
+ },
+ {
+  "listing_id": 271,
+  "listing_name": "Katherine K. Hanley Family Shelter",
+  "field": "address",
+  "current": "12970 Katherine Hanley Ct, Fairfax 12970",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "12970 Katherine Hanley Ct Fairfax 12970",
+  "reason": "The ZIP field holds the street number; the ZIP is 22033.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "12970 Katherine Hanley Ct",
+   "city": "Fairfax",
+   "zip": "22033"
+  },
+  "verify_note": "The ZIP field '12970' duplicates the street number. Katherine Hanley Ct in Fairfax is 22033."
+ },
+ {
+  "listing_id": 272,
+  "listing_name": "Embry Rucker Community Shelter (ERCS)",
+  "field": "address",
+  "current": "11975 Bowman Towne Dr, Reston 11975",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "11975 Bowman Towne Dr Reston 11975",
+  "reason": "The ZIP field holds the street number; the Reston ZIP is 20190.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "11975 Bowman Towne Dr",
+   "city": "Reston",
+   "zip": "20190"
+  },
+  "verify_note": "The ZIP field '11975' duplicates the street number. Bowman Towne Dr in Reston is 20190."
+ },
+ {
+  "listing_id": 276,
+  "listing_name": "Loudoun County Homeless Services Center",
+  "field": "address",
+  "current": "19520 Meadowview Ct, Leesburg 19520",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "19520 Meadowview Ct Leesburg 19520",
+  "reason": "The ZIP field holds the street number; the Leesburg ZIP is 20175.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "19520 Meadowview Ct",
+   "city": "Leesburg",
+   "zip": "20175"
+  },
+  "verify_note": "The ZIP field '19520' duplicates the street number. Meadowview Ct in Leesburg is 20175."
+ },
+ {
+  "listing_id": 277,
+  "listing_name": "Hebron/Bethel Emergency Shelter",
+  "field": "address",
+  "current": "20684 Ashburn Rd, Ashburn, VA 20684",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "20684 Ashburn Rd Ashburn 20684",
+  "reason": "The ZIP is a copy of the street number, a data error carried over from the source. 20684 is not an Ashburn ZIP. Ashburn Rd in Ashburn is 20147.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "20684 Ashburn Rd",
+   "city": "Ashburn",
+   "zip": "20147"
+  },
+  "verify_note": "The quote matches address_in_source in record 459. The ZIP is clearly the street number repeated. Web directories (Yelp, homelessshelterdirectory, 211) list 20684 Ashburn Rd, Ashburn, VA 20147 for Good Shepherd's shelter. Street and city unchanged."
+ },
+ {
+  "listing_id": 279,
+  "listing_name": "ACTS Beverly Warren Shelter",
+  "field": "address",
+  "current": "17866 Main St, Dumfries, VA 17866",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "17866 Main St Dumfries 17866",
+  "reason": "The ZIP is a copy of the street number. 17866 is a Pennsylvania ZIP, not Virginia. Dumfries is 22026.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "17866 Main St",
+   "city": "Dumfries",
+   "zip": "22026"
+  },
+  "verify_note": "The quote matches record 463's address_in_source. Prince William County's resource sheet and shelter directories list ACTS Beverly Warren Shelter at 17866 Main St, Dumfries, VA 22026. Street and city unchanged."
+ },
+ {
+  "listing_id": 280,
+  "listing_name": "Supportive Shelter",
+  "field": "address",
+  "current": "14730 Potomac Mills Rd, Woodbridge, VA 14730",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "14730 Potomac Mills Rd Woodbridge 14730",
+  "reason": "The ZIP is a copy of the street number. 14730 is a New York ZIP. Potomac Mills Rd in Woodbridge is 22192.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "14730 Potomac Mills Rd",
+   "city": "Woodbridge",
+   "zip": "22192"
+  },
+  "verify_note": "The quote matches record 465's address_in_source. MapQuest and shelter directories give 14730 Potomac Mills Rd, Woodbridge, VA 22192. Street and city unchanged."
+ },
+ {
+  "listing_id": 281,
+  "listing_name": "Fairfax County Coordinated Services Planning",
+  "field": "address",
+  "current": "12011 Government Center Pkwy, FAIRFAX, VA 12011",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "12011 Government Center Pkwy FAIRFAX 12011",
+  "reason": "The ZIP is a copy of the street number. 12011 is a New York ZIP. The Fairfax County Government Center is in 22035.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "12011 Government Center Pkwy",
+   "city": "Fairfax",
+   "zip": "22035"
+  },
+  "verify_note": "The quote matches record 467's address_in_source. County pages and partner sources list 12011 Government Center Pkwy, Fairfax, VA 22035. City capitalization normalized to 'Fairfax'. That is fine."
+ },
+ {
+  "listing_id": 282,
+  "listing_name": "Hilda M. Barg Homeless Shelter",
+  "field": "address",
+  "current": "14945 Richmond Hwy, Woodbridge, VA 14945",
+  "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+  "evidence_quote": "14945 Richmond Hwy Woodbridge 14945",
+  "reason": "The ZIP is a copy of the street number. 14945 is not a Virginia ZIP. 14945 Richmond Hwy in Woodbridge is 22191.",
+  "confidence": "medium",
+  "new_address": {
+   "address1": "14945 Richmond Hwy",
+   "city": "Woodbridge",
+   "zip": "22191"
+  },
+  "verify_note": "The quote matches record 469's address_in_source. Directories list the Hilda Barg shelter at 14945 Jefferson Davis Hwy (now Richmond Hwy), Woodbridge, VA 22191. Street and city unchanged."
+ },
+ {
+  "listing_id": 476,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated (10056 is not a Manassas ZIP). The NVFS contact page gives 10056 Dean Drive, Manassas, VA 20110.",
+  "confidence": "high",
+  "verify_note": "The batch source gives the address as '10056 Dean Drive Manassas 10056', so the ZIP is the street number repeated. I opened nvfs.org/contact-us and it lists the NVFS SERVE Campus as '10056 Dean Drive, Manassas, VA 20110'."
+ },
+ {
+  "listing_id": 477,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem as listing 476 (source record 396). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 478,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 397). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 479,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 398). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 480,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 399). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 481,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 400). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 482,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 401). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 483,
+  "listing_name": "Northern Virginia Family Services",
+  "field": "address",
+  "current": "10056 Dean Drive, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Drive",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+  "confidence": "high",
+  "verify_note": "Same address problem (source record 402). The NVFS contact page confirms ZIP 20110."
+ },
+ {
+  "listing_id": 487,
+  "listing_name": "Serve Family Shelter",
+  "field": "address",
+  "current": "10056 Dean Dr, Manassas 10056",
+  "new_address": {
+   "address1": "10056 Dean Dr",
+   "city": "Manassas",
+   "zip": "20110"
+  },
+  "evidence_url": "https://nvfs.org/contact-us/",
+  "evidence_quote": "Manassas, VA 20110",
+  "reason": "The ZIP is the street number repeated. The NVFS SERVE Campus is at 10056 Dean Drive, Manassas, VA 20110.",
+  "confidence": "high",
+  "verify_note": "The source (record 462) gives '10056 Dean Dr Manassas 10056'. The NVFS contact page lists 10056 Dean Drive as the SERVE Campus with ZIP 20110. Keeping 'Dean Dr' as written is fine."
+ },
+ {
+  "listing_id": 468,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty, ZIP 22031",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city 'Fairfax' was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "The listing has address1 '8922 Little River Turnpike Fairfax' and an empty city. The source text '8922 Little River Turnpike Fairfax 22031' shows Fairfax is the city, so moving it into the city field is correct."
+ },
+ {
+  "listing_id": 469,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "Same city-in-street-line problem (source record 368). ZIP 22031 matches the source."
+ },
+ {
+  "listing_id": 470,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "Same city-in-street-line problem (source record 371)."
+ },
+ {
+  "listing_id": 471,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "Same city-in-street-line problem (source record 374)."
+ },
+ {
+  "listing_id": 472,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "Same city-in-street-line problem (source record 382)."
+ },
+ {
+  "listing_id": 473,
+  "listing_name": "Lutheran Social Services of the National Capital Area",
+  "field": "address",
+  "current": "address1 '8922 Little River Turnpike Fairfax', city empty",
+  "new_address": {
+   "address1": "8922 Little River Turnpike",
+   "city": "Fairfax",
+   "zip": "22031"
+  },
+  "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+  "evidence_quote": "8922 Little River Turnpike Fairfax 22031",
+  "reason": "The city was put in the street line and the city field is empty.",
+  "confidence": "high",
+  "verify_note": "Same city-in-street-line problem (source record 384)."
+ }
+]

@@ -1,7 +1,12 @@
-"""Pantry portal API. Any signed-in user may request access to a listing; an admin approves it after confirming the
-person with the pantry. Approved staff post live status, events, closures and surplus, and propose corrections.
+"""Provider portal API (food pantries and every other kind of service). Any signed-in user may request access to a
+listing; an admin approves it after confirming the person with the organization. Approved staff post live status,
+events, closures and surplus, and propose corrections.
 
-Trust model: live posts (status/items, events, closures) publish immediately, labelled "Posted by the pantry", because
+Food vs non-food is decided per location from its service types (`offers_food`). Food listings post "what's on the
+shelf" items; non-food-only listings (clinics, legal aid, shelters, ...) post the same live status (open / limited /
+closed today + a short message) with no food items, no "out of food" status and no food offerings on events.
+
+Trust model: live posts (status/items, events, closures) publish immediately, labelled "Posted by the provider", because
 they come from admin-approved staff and expire on their own. Corrections to hours/eligibility/contact details are
 *proposals* that go through the normal review queue and never overwrite verified data directly.
 """
@@ -67,10 +72,10 @@ def staff_location_ids(db: Session, user: User) -> list[int]:
 
 def require_staff(db: Session, user: User, location_id: int) -> Location:
     if user.role != "admin" and location_id not in staff_location_ids(db, user):
-        raise HTTPException(403, "You are not approved to manage this pantry")
+        raise HTTPException(403, "You are not approved to manage this listing")
     loc = db.get(Location, location_id)
     if not loc or loc.merged_into_id:
-        raise HTTPException(404, "Pantry not found")
+        raise HTTPException(404, "Listing not found")
     return loc
 
 
@@ -136,6 +141,7 @@ def my_pantries(user: User = Depends(require_user), db: Session = Depends(get_db
     for m, loc in rows:
         item = {"membership_id": m.id, "status": m.status, "role_title": m.role_title, "location_id": loc.id,
                 "name": loc.name, "address1": loc.address1, "city": loc.city, "offers_food": offers_food(loc),
+                "service_types": sorted({s.service_type for s in loc.services}),
                 "requested_at": _iso(m.created_at), "decided_at": _iso(m.decided_at), "decision_note": m.decision_note}
         if m.status == "approved":
             item.update({
@@ -154,6 +160,11 @@ def my_pantries(user: User = Depends(require_user), db: Session = Depends(get_db
 @router.post("/locations/{location_id}/shelf", status_code=201)
 def post_shelf(location_id: int, body: ShelfUpdateIn, user: User = Depends(require_user), db: Session = Depends(get_db)):
     loc = require_staff(db, user, location_id)
+    if not offers_food(loc):
+        if body.items:
+            raise HTTPException(422, "This listing has no food service, so it can't post food items")
+        if body.status == "out":
+            raise HTTPException(422, "“Out of food” is only for food services. Use “limited” or “closed” instead.")
     now = datetime.now(UTC)
     expires = body.expires_at or end_of_local_day(now)
     if expires.tzinfo is None:
@@ -196,6 +207,8 @@ def post_event(location_id: int, body: EventIn, user: User = Depends(require_use
     bad = [f for f in body.offerings if f not in FOOD_TYPES]
     if bad:
         raise HTTPException(422, f"unknown food types {bad}")
+    if body.offerings and not offers_food(loc):
+        raise HTTPException(422, "This listing has no food service, so events can't list food offered")
     ev = DistributionEvent(location_id=loc.id, title=clean_text(body.title), starts_at=starts, ends_at=ends,
                            registration_deadline=body.registration_deadline, appointment_required=body.appointment_required,
                            notes=clean_text(body.notes), posted_by_id=user.id, ai_assisted=body.ai_assisted)
@@ -257,6 +270,18 @@ def request_changes(location_id: int, body: ChangeRequestIn, user: User = Depend
         proposed["schedules"] = (current["schedules"], [s.model_dump(mode="json", exclude={"service_index"}) for s in body.schedules])
     if body.eligibility is not None:
         proposed["eligibility"] = (current["eligibility"], [e.model_dump(exclude={"service_index"}) for e in body.eligibility])
+    if body.add_service_types or body.remove_service_types:
+        have = sorted({s.service_type for s in loc.services})
+        add = [x for x in body.add_service_types or [] if x not in have]
+        remove = [x for x in body.remove_service_types or [] if x in have]
+        if set(body.add_service_types or []) & set(body.remove_service_types or []):
+            raise HTTPException(422, "A category can't be both added and removed")
+        if not add and not remove:
+            raise HTTPException(422, "Those categories are already set that way")
+        if not set(have) - set(remove) and not add:
+            raise HTTPException(422, "A listing needs at least one category")
+        # Applied as a delta only when a reviewer accepts it (workflow.decide_change), never directly.
+        proposed["service_types"] = (have, {"add": add, "remove": remove})
     if not proposed:
         raise HTTPException(422, "Nothing to change")
     ids = []
@@ -371,7 +396,7 @@ def _surplus(p: SurplusPost, db: Session) -> dict:
 def _require_any_staff(db: Session, user: User) -> list[int]:
     ids = staff_location_ids(db, user)
     if not ids and user.role != "admin":
-        raise HTTPException(403, "The surplus board is for approved pantry staff")
+        raise HTTPException(403, "The surplus board is for approved provider staff")
     return ids
 
 

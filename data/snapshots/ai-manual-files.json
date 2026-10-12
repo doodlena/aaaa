@@ -81,7 +81,62 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "11:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "15:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "15:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "19:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "11:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "15:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [],
      "description": null,
      "eligibility": [],
@@ -122,6 +177,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The source lists food assistance hours, but the listing shows none. New-client enrollment hours are separate and are not included here.",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "Food Assistance Hours: Monday 9:00 AM 11:30 AM/ 1:00 PM 3:00 PM Tuesday 1:00 PM 3:30PM / 5:00 PM 7:00 PM Thursday 9:00 AM 11:30 AM / 1:00 PM 3:00 PM"
+    }
+   ],
    "organization_name": "ACTS Food Pantry",
    "organization_website": null,
    "raw_eligibility_text": "*Only serve residents of Eastern Prince William County (Dale City, Dumfries, Lake Ridge, Montclair, Occoquan, Quantico, Triangle, and Woodbridge)",
@@ -137,8 +201,8 @@
    "phone": null,
    "state": "VA",
    "website": null,
-   "address1": "7669 Limestone Drive #105",
-   "address2": null,
+   "address1": "7669 Limestone Drive",
+   "address2": "#105",
    "services": [
     {
      "frequency": null,
@@ -183,6 +247,36 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The unit number is repeated twice.",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Each weekday shows two overlapping time blocks. The pantry's own site gives 5:30-8:00 PM, by appointment.",
+     "evidence_url": "https://haymarketfoodpantry.org/find-help/",
+     "evidence_quote": "Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm Sat Mornings: By appointment between 9:00 am and 12:00 noon"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "The pantry's own site says food is distributed by appointment only, which contradicts walk_up.",
+     "evidence_url": "https://haymarketfoodpantry.org/find-help/",
+     "evidence_quote": "Our Hours - By Appointment Only"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The unit number is repeated twice.",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
+    }
+   ],
    "organization_name": "Haymarket Regional Food Pantry",
    "organization_website": null,
    "raw_eligibility_text": "*Serve residents of Prince William (Haymarket, Gainesville, Catharpin, Bristow, and Nokesville)",
@@ -311,62 +405,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "13:00",
-       "closes": "15:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "17:00",
-       "closes": "19:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "13:00",
-       "closes": "15:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": null,
      "eligibility": [],
@@ -389,6 +428,22 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The Wednesday evening and Friday sessions happen only every other week, but the site shows them every week, so families could show up on a week with no distribution. An alternating-week schedule can't be written as a week_of_month value, so the corrected schedule keeps only the weekly Tue/Thu sessions. The every-other-Wednesday and every-other-Friday sessions should go in the description as text. Distribution is also by appointment only.",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "categories",
+     "reason": "SERVE's food assistance is by appointment only, so appointment_distribution should be added. pantry_pickup stays, because the vocabulary defines it as a general pantry pickup, not walk-in (walk-in is walk_up), and SERVE still runs a pantry; appointment is also recorded in eligibility.",
+     "evidence_url": "https://pwspca.org/food/",
+     "evidence_quote": "Food assistance is provided by appointment only. To schedule an appointment, please call 571.748.2680"
+    }
+   ],
    "organization_name": "SERVE Northern Virginia Family Services (NVFS) SERVE Campus",
    "organization_website": null,
    "raw_eligibility_text": "*ServingManassasPark,ManassasCityandWest EndPrinceWilliamCounty.",
@@ -444,7 +499,20 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Serves ZIP codes 22191-22193 only; must bring ID and proof of address.",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Serves ZIP codes 22191-22193 only; must bring ID and proof of address.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
    "external_id": "9768a8e4a57d7db1",
    "location_name": null,
    "parking_notes": null,
@@ -454,9 +522,18 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "eligibility",
+     "reason": "The source limits service to three ZIP codes and requires ID and proof of address. The listing shows no requirements, so people could be turned away.",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "*Servicingzipcodes22191-22193. YoumustbringandIDandproofofaddress."
+    }
+   ],
    "organization_name": "St Paul United Methodist Church",
    "organization_website": null,
-   "raw_eligibility_text": "*Servicingzipcodes22191-22193. YoumustbringandIDandproofofaddress.",
+   "raw_eligibility_text": "Serves ZIP codes 22191-22193 only; must bring ID and proof of address.",
    "wheelchair_accessible": "unknown"
   },
   {
@@ -589,7 +666,7 @@
    "phone": "(571) 748-2680",
    "state": "VA",
    "website": "https://nvfs.org/our-places/hunger-resource-center/",
-   "address1": "10058 Dean Drive",
+   "address1": "10058 Dean Dr",
    "address2": null,
    "services": [
     {
@@ -694,6 +771,22 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The address is garbled: the city is repeated in the street line and the street number is used as the ZIP.",
+     "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
+     "evidence_quote": "10058 Dean Drive Manassas 20110"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The address is garbled: the city is repeated in the street line and the street number is used as the ZIP.",
+     "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
+     "evidence_quote": "10058 Dean Drive Manassas 20110"
+    }
+   ],
    "organization_name": "NVFS",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1825,7 +1918,17 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "15:00",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "prepared_meals",
       "community_meals"
@@ -1865,6 +1968,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The source gives the grocery pickup time, but the listing shows no hours. No time is published for the hot dinner.",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Free groceries available on Tuesdays from 3:00 - 5:00 PM."
+    }
+   ],
    "organization_name": "Arlington Assembly of God",
    "organization_website": null,
    "raw_eligibility_text": null,

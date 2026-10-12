@@ -164,10 +164,11 @@ export function PantryDashboard() {
     setDraftKey((k) => k + 1);
     setTab(d.kind === 'event' ? 'event' : d.kind === 'closure' ? 'closure' : 'shelf');
   };
+  const food = p.offers_food !== false;
   const drafted = (kind: AnnouncementDraft['kind']) => !!draft && draft.kind === kind;
   const tabs: { k: Tab; label: string }[] = [
     { k: 'shelf', label: t('portal.tabs.shelf') },
-    { k: 'event', label: t('portal.tabs.event') },
+    { k: 'event', label: food ? t('portal.tabs.event') : t('portal.tabs.eventService') },
     { k: 'closure', label: t('portal.tabs.closure') },
     { k: 'correction', label: t('portal.tabs.correction') },
     { k: 'reports', label: p.open_reports ? t('portal.tabs.reportsCount', { count: p.open_reports }) : t('portal.tabs.reports') },
@@ -207,7 +208,7 @@ export function PantryDashboard() {
                 key={`shelf-${draftKey}`}
                 locationId={p.location_id}
                 foodTypes={me.data?.food_types}
-                food={p.offers_food !== false}
+                food={food}
                 prefill={drafted('shelf_update') ? { status: draft!.status, message: draft!.message, items: draft!.items } : null}
                 aiDrafted={drafted('shelf_update')}
                 thingsToCheck={drafted('shelf_update') ? draft!.things_to_check : []}
@@ -223,7 +224,7 @@ export function PantryDashboard() {
                 key={`event-${draftKey}`}
                 locationId={p.location_id}
                 foodTypes={me.data?.food_types}
-                food={p.offers_food !== false}
+                food={food}
                 prefill={drafted('event') ? draft!.event : null}
                 aiDrafted={drafted('event')}
                 thingsToCheck={drafted('event') ? draft!.things_to_check : []}
@@ -238,7 +239,7 @@ export function PantryDashboard() {
                 thingsToCheck={drafted('closure') ? draft!.things_to_check : []}
               />
             )}
-            {tab === 'correction' && <CorrectionForm locationId={p.location_id} />}
+            {tab === 'correction' && <CorrectionForm locationId={p.location_id} food={food} serviceTypes={p.service_types} />}
             {tab === 'reports' && <ReportsInbox locationId={p.location_id} />}
           </div>
         </div>

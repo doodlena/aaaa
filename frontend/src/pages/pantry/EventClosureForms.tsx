@@ -9,7 +9,7 @@ import { AIDraftedNotice } from './ShelfForm';
 
 const TRI: Tristate[] = ['unknown', 'required', 'not_required'];
 
-/** Pop-up distribution event. Public immediately, labelled as posted by the pantry. */
+/** One-time event (pop-up distribution, clinic day, legal-aid day…). Public immediately, labelled as posted by the provider. */
 export function EventForm({
   locationId,
   foodTypes,
@@ -61,7 +61,7 @@ export function EventForm({
         ends_at: endsAt,
         appointment_required: appt,
         notes: notes.trim() || null,
-        offerings,
+        offerings: food ? offerings : [],
         ai_assisted: aiDrafted,
       });
       setOk(t('portal.event.posted'));
@@ -74,12 +74,18 @@ export function EventForm({
 
   return (
     <form className={`form ${aiDrafted ? 'is-ai-drafted' : ''}`} onSubmit={submit} noValidate aria-labelledby={`${id}-t`}>
-      <h3 id={`${id}-t`}>{t('portal.event.title')}</h3>
-      <p className="muted">{t('portal.event.lead')}</p>
+      <h3 id={`${id}-t`}>{food ? t('portal.event.title') : t('portal.event.titleService')}</h3>
+      <p className="muted">{food ? t('portal.event.lead') : t('portal.event.leadService')}</p>
       {aiDrafted && <AIDraftedNotice things={thingsToCheck} />}
       <div className="field">
         <label htmlFor={`${id}-title`}>{t('portal.event.name')}</label>
-        <input id={`${id}-title`} value={title} maxLength={300} onChange={(e) => setTitle(e.target.value)} />
+        <input
+          id={`${id}-title`}
+          value={title}
+          maxLength={300}
+          placeholder={food ? undefined : t('portal.event.namePlaceholderService')}
+          onChange={(e) => setTitle(e.target.value)}
+        />
       </div>
       <div className="grid-fields">
         <div className="field">

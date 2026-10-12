@@ -6,100 +6,18 @@
    "lat": 38.7886254576002,
    "lon": -77.5196099084333,
    "zip": "20109",
-   "city": "Suite 103",
+   "city": "Manassas",
    "email": "emailCSB@pwcgov.org",
    "notes": "Begin through Same Day Access or call Community Services for an assessment and referral to the appropriate treatment program.",
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "address1": "8033 Ashton Ave",
-   "address2": null,
+   "address2": "Suite 103",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "14:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "14:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "14:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "14:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides individual, family, and group therapy for adults and youth experiencing mental health, substance-use, or co-occurring conditions. Youth services may also include intensive in-home treatment, psychoeducation, family support, case management, and coordination with schools and other community providers.",
      "eligibility": [],
@@ -110,7 +28,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "20:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "20:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "20:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "20:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -129,6 +93,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Behavioral health office hours are shown as food 'distribution', and Mon-Thu has overlapping duplicate slots (Same Day Access 8-2:30 merged with 8-8).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Outpatient and Community-based Services: Monday–Thursday, 8:00 AM–8pm and Fridays 8:00 - 5:00 PM"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "Begin through Same Day Access or call Community Services for an assessment and referral to the appropriate treatment program.",
@@ -138,100 +125,18 @@
    "lat": 38.7886254576002,
    "lon": -77.5196099084333,
    "zip": "20109",
-   "city": "Suite 103",
+   "city": "Manassas",
    "email": "emailCSB@pwcgov.org",
    "notes": "Walk-in, Appointment required, Online / Virtual, Walk-in (where applicable) Same Day Access – Monday-Thursday 8am-2:30 pm Crisis Receiving Center operated by Connections Health Solutions (contracted by CS) accepts walk-in 24/7 or call 703/229-0066 PWC Emergency Services 703/792-2272- walk in hours Monday-Thursday 8-8 and Friday 8-5 Developmental Disability Case Management Services- 703/792-7800 Infant and Toddler Services- for appointments703/792-7879, Drop-In Peer Recovery Hub",
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "address1": "8033 Ashton Ave",
-   "address2": null,
+   "address2": "Suite 103",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "14:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "14:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "14:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "14:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides outpatient and community-based behavioral health services for adults with serious mental illness or co-occurring disorders. Services may include psychiatric evaluation and medication management, individual and group therapy, case management, peer support, discharge planning, intensive community-based treatment, supported living services, and specialized early-psychosis treatment for adolescents and young adults.",
      "eligibility": [],
@@ -267,6 +172,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Behavioral health office hours are shown as food 'distribution', and Mon-Thu has overlapping duplicate slots (Same Day Access 8-2:30 merged with 8-8).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Outpatient and Community-based Services: Monday–Thursday, 8:00 AM–8pm and Fridays 8:00 - 5:00 PM"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "Walk-in, Appointment required, Online / Virtual, Walk-in (where applicable) Same Day Access – Monday-Thursday 8am-2:30 pm Crisis Receiving Center operated by Connections Health Solutions (contracted by CS) accepts walk-in 24/7 or call 703/229-0066 PWC Emergency Services 703/792-2272- walk in hours Monday-Thursday 8-8 and Friday 8-5 Developmental Disability Case Management Services- 703/792-7800 Infant and Toddler Services- for appointments703/792-7879, Drop-In Peer Recovery Hub",
@@ -275,14 +203,14 @@
   {
    "lat": 38.622408043295,
    "lon": -77.2877270717795,
-   "zip": "15201",
+   "zip": "22191",
    "city": "Woodbridge",
    "email": "jessikabermudez@edu-futuro.org",
    "notes": "Appointment required",
    "phone": "(703) 843-6978",
    "state": "VA",
    "website": "https://edu-futuro.org/contact-us/",
-   "address1": "15201 Neabsco Mills Rd.",
+   "address1": "15201 Neabsco Mills Rd",
    "address2": null,
    "services": [
     {
@@ -323,6 +251,22 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP field holds the street number (15201), not a Virginia ZIP. Neabsco Mills Rd in Woodbridge is 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "15201 Neabsco Mills Rd. Woodbridge 15201"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP field holds the street number (15201), not a Virginia ZIP. Neabsco Mills Rd in Woodbridge is 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "15201 Neabsco Mills Rd. Woodbridge 15201"
+    }
+   ],
    "organization_name": "Edu-Futuro",
    "organization_website": "https://edu-futuro.org/contact-us/",
    "raw_eligibility_text": "Appointment required",
@@ -343,53 +287,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "16:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "16:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "16:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "16:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "16:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides critical home repairs and accessibility modifications for low-income seniors, veterans, and people with disabilities to help them remain safely and independently in their homes. Services may include minor repairs, grab bars and railings, bathroom accessibility modifications, door widening, ramps, HVAC and roof-related work, yard/property safety improvements, and access to durable medical equipment through a loan closet.",
      "eligibility": [],
@@ -400,7 +298,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "16:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "16:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "16:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "16:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "16:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -419,6 +363,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Home-repair agency office hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday–Friday, 9:00 AM–4:00 PM."
+    }
+   ],
    "organization_name": "Project Mend-A-House",
    "organization_website": "https://www.pmah.org",
    "raw_eligibility_text": "Apply for assistance through the Project Mend-A-House website or contact the organization by phone or email for eligibility and service information.",
@@ -427,7 +380,7 @@
   {
    "lat": 38.8386497037162,
    "lon": -77.6685939621854,
-   "zip": "16198",
+   "zip": "20169",
    "city": "Haymarket",
    "email": "rainbow@rainbowriding.org",
    "notes": "Registration/intake required. Families and participants can contact Rainbow by phone or email and complete the program sign-up process to determine appropriate services and scheduling.",
@@ -469,6 +422,22 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the Haymarket ZIP is 20169.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "16198 Silver Lake Rd Haymarket 16198"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the Haymarket ZIP is 20169.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "16198 Silver Lake Rd Haymarket 16198"
+    }
+   ],
    "organization_name": "Rainbow Therapeutic Riding Center",
    "organization_website": null,
    "raw_eligibility_text": "Registration/intake required. Families and participants can contact Rainbow by phone or email and complete the program sign-up process to determine appropriate services and scheduling.",
@@ -489,53 +458,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "18:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "18:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "18:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "18:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "18:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides outpatient eating-disorder and body-image therapy for individuals ages 10+ who live in Virginia, Maryland, or Washington, DC. Services include individual therapy and specialized group therapy for teens, young adults, and adults, including body-image and meal-support groups. Therapy is available virtually and in person in Arlington. Rock Recovery accepts several major insurance plans, including Virginia Medicaid, and offers sliding-scale financial assistance for clients who are uninsured or out of network.",
      "eligibility": [],
@@ -546,7 +469,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "18:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "18:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "18:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "18:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "18:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -571,6 +540,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Therapy practice office hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday - Friday (9 AM - 6 PM)"
+    }
+   ],
    "organization_name": "Rock Recovery",
    "organization_website": "https://www.rockrecoveryed.org/",
    "raw_eligibility_text": "Appointment required. Schedule a free consultation through Rock Recovery’s website to determine fit, services, and payment options before beginning therapy.",
@@ -579,65 +557,19 @@
   {
    "lat": 38.6526300427461,
    "lon": -77.2707315053561,
-   "zip": "13958",
-   "city": null,
+   "zip": "22191",
+   "city": "Woodbridge",
    "email": "fazal@saharaprograms.org",
    "notes": "Walk-in, appointment, referral, or virtual services depending on need.",
    "phone": "(757) 394-0737",
    "state": "VA",
    "website": "https://www.saharaprograms.org",
-   "address1": "13958 Hollow Wind Way 201",
-   "address2": null,
+   "address1": "13958 Hollow Wind Way",
+   "address2": "201",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides health-related support and resource connections for individuals and families, including assistance accessing appropriate healthcare and community health services.",
      "eligibility": [],
@@ -667,6 +599,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Mon-Fri 9-5 is the organization's general office hours, repeated for every service. It is not a food pickup schedule.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability."
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    }
+   ],
    "organization_name": "Sahara Programs",
    "organization_website": "https://www.saharaprograms.org",
    "raw_eligibility_text": "Walk-in, appointment, referral, or virtual services depending on need.",
@@ -675,65 +630,19 @@
   {
    "lat": 38.6526300427461,
    "lon": -77.2707315053561,
-   "zip": "13958",
-   "city": null,
+   "zip": "22191",
+   "city": "Woodbridge",
    "email": "fazal@saharaprograms.org",
    "notes": "Friday, 9:00 AM–5:00 PM.Walk-in, appointment, referral, or virtual services depending on the program.",
    "phone": "(757) 394-0737",
    "state": "VA",
    "website": "https://www.saharaprograms.org",
-   "address1": "13958 Hollow Wind Way 201",
-   "address2": null,
+   "address1": "13958 Hollow Wind Way",
+   "address2": "201",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides mental health and emotional-wellness support, including connections to counseling and supportive services for individuals and families experiencing stress, trauma, or other behavioral health needs.",
      "eligibility": [],
@@ -763,6 +672,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Mon-Fri 9-5 is the organization's general office hours, repeated for every service. It is not a food pickup schedule.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability."
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    }
+   ],
    "organization_name": "Sahara Programs",
    "organization_website": "https://www.saharaprograms.org",
    "raw_eligibility_text": "Friday, 9:00 AM–5:00 PM.Walk-in, appointment, referral, or virtual services depending on the program.",
@@ -771,65 +703,19 @@
   {
    "lat": 38.6526300427461,
    "lon": -77.2707315053561,
-   "zip": "13958",
-   "city": null,
+   "zip": "22191",
+   "city": "Woodbridge",
    "email": "fazal@saharaprograms.org",
    "notes": "Appointment or referral may be required depending on the counseling service; contact the organization directly.",
    "phone": "(757) 394-0737",
    "state": "VA",
    "website": "https://www.saharaprograms.org",
-   "address1": "13958 Hollow Wind Way 201",
-   "address2": null,
+   "address1": "13958 Hollow Wind Way",
+   "address2": "201",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides counseling and supportive services designed to strengthen individual and family well-being, address emotional or family challenges, and connect participants with additional resources when needed.",
      "eligibility": [],
@@ -859,6 +745,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Mon-Fri 9-5 is the organization's general office hours, repeated for every service. It is not a food pickup schedule.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability."
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    }
+   ],
    "organization_name": "Sahara Programs",
    "organization_website": "https://www.saharaprograms.org",
    "raw_eligibility_text": "Appointment or referral may be required depending on the counseling service; contact the organization directly.",
@@ -867,65 +776,19 @@
   {
    "lat": 38.6526300427461,
    "lon": -77.2707315053561,
-   "zip": "13958",
-   "city": null,
+   "zip": "22191",
+   "city": "Woodbridge",
    "email": "fazal@saharaprograms.org",
    "notes": "Contact Sahara Programs for enrollment, class schedules, or program requirements.",
    "phone": "(757) 394-0737",
    "state": "VA",
    "website": "https://www.saharaprograms.org",
-   "address1": "13958 Hollow Wind Way 201",
-   "address2": null,
+   "address1": "13958 Hollow Wind Way",
+   "address2": "201",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Offers educational programs and training opportunities designed to build skills, strengthen families, and improve access to community resources and opportunities.",
      "eligibility": [],
@@ -955,6 +818,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Mon-Fri 9-5 is the organization's general office hours, repeated for every service. It is not a food pickup schedule.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability."
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    }
+   ],
    "organization_name": "Sahara Programs",
    "organization_website": "https://www.saharaprograms.org",
    "raw_eligibility_text": "Contact Sahara Programs for enrollment, class schedules, or program requirements.",
@@ -963,65 +849,19 @@
   {
    "lat": 38.6526300427461,
    "lon": -77.2707315053561,
-   "zip": "13958",
-   "city": null,
+   "zip": "22191",
+   "city": "Woodbridge",
    "email": "fazal@saharaprograms.org",
    "notes": "Walk-in, appointment, or referral depending on the service and level of need.",
    "phone": "(757) 394-0737",
    "state": "VA",
    "website": "https://www.saharaprograms.org",
-   "address1": "13958 Hollow Wind Way 201",
-   "address2": null,
+   "address1": "13958 Hollow Wind Way",
+   "address2": "201",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "ServicesProvides supportive services and safe-haven assistance for individuals and families affected by violence, abuse, trauma, or other crisis situations, including referrals and connections to appropriate community resources.",
      "eligibility": [],
@@ -1051,6 +891,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Mon-Fri 9-5 is the organization's general office hours, repeated for every service. It is not a food pickup schedule.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability."
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    }
+   ],
    "organization_name": "Sahara Programs",
    "organization_website": "https://www.saharaprograms.org",
    "raw_eligibility_text": "Walk-in, appointment, or referral depending on the service and level of need.",
@@ -1059,65 +922,19 @@
   {
    "lat": 38.6526300427461,
    "lon": -77.2707315053561,
-   "zip": "13958",
-   "city": null,
+   "zip": "22191",
+   "city": "Woodbridge",
    "email": "fazal@saharaprograms.org",
    "notes": "Contact Sahara Programs for current employment support, eligibility, or referral options.",
    "phone": "(757) 394-0737",
    "state": "VA",
    "website": "https://www.saharaprograms.org",
-   "address1": "13958 Hollow Wind Way 201",
-   "address2": null,
+   "address1": "13958 Hollow Wind Way",
+   "address2": "201",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides employment-related support and resource connections intended to strengthen economic self-sufficiency and help individuals identify workforce and career opportunities.",
      "eligibility": [],
@@ -1147,6 +964,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Mon-Fri 9-5 is the organization's general office hours, repeated for every service. It is not a food pickup schedule.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability."
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    }
+   ],
    "organization_name": "Sahara Programs",
    "organization_website": "https://www.saharaprograms.org",
    "raw_eligibility_text": "Contact Sahara Programs for current employment support, eligibility, or referral options.",
@@ -1155,65 +995,19 @@
   {
    "lat": 38.6526300427461,
    "lon": -77.2707315053561,
-   "zip": "13958",
-   "city": null,
+   "zip": "22191",
+   "city": "Woodbridge",
    "email": "fazal@saharaprograms.org",
    "notes": "Contact the organization to confirm available languages and service format.",
    "phone": "(757) 394-0737",
    "state": "VA",
    "website": "https://www.saharaprograms.org",
-   "address1": "13958 Hollow Wind Way 201",
-   "address2": null,
+   "address1": "13958 Hollow Wind Way",
+   "address2": "201",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides or connects community members with language-access support intended to reduce communication barriers and improve access to health, education, employment, and other community services.",
      "eligibility": [],
@@ -1243,6 +1037,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Mon-Fri 9-5 is the organization's general office hours, repeated for every service. It is not a food pickup schedule.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability."
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+    }
+   ],
    "organization_name": "Sahara Programs",
    "organization_website": "https://www.saharaprograms.org",
    "raw_eligibility_text": "Contact the organization to confirm available languages and service format.",
@@ -1294,15 +1111,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "10301",
-   "city": "Suite 150",
+   "zip": "22030",
+   "city": "Fairfax",
    "email": "info@thecaf.org",
    "notes": "Call or text 703-653-4221, visit the Recovery Community Center, or connect through CAF outreach programs.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
    "address1": "10301 Democracy Lane",
-   "address2": null,
+   "address2": "Suite 150",
    "services": [
     {
      "frequency": null,
@@ -1382,6 +1199,22 @@
    "jurisdiction_id": "fairfax-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10301 Democracy Lane Suite 150 10301"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10301 Democracy Lane Suite 150 10301"
+    }
+   ],
    "organization_name": "The Chris Atwood Foundation",
    "organization_website": "https://www.thecaf.org",
    "raw_eligibility_text": "Call or text 703-653-4221, visit the Recovery Community Center, or connect through CAF outreach programs.",
@@ -1390,15 +1223,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "10301",
-   "city": "Suite 150",
+   "zip": "22030",
+   "city": "Fairfax",
    "email": "info@thecaf.org",
    "notes": "Call or text the Peer Warm Line, visit the Recovery Community Center, or access scheduled peer groups and programs.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
    "address1": "10301 Democracy Lane",
-   "address2": null,
+   "address2": "Suite 150",
    "services": [
     {
      "frequency": null,
@@ -1432,6 +1265,22 @@
    "jurisdiction_id": "fairfax-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10301 Democracy Lane Suite 150 10301"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10301 Democracy Lane Suite 150 10301"
+    }
+   ],
    "organization_name": "The Chris Atwood Foundation",
    "organization_website": "https://www.thecaf.org",
    "raw_eligibility_text": "Call or text the Peer Warm Line, visit the Recovery Community Center, or access scheduled peer groups and programs.",
@@ -1440,15 +1289,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "10301",
-   "city": "Suite 150",
+   "zip": "22030",
+   "city": "Fairfax",
    "email": "info@thecaf.org",
    "notes": "Apply through CAF’s recovery housing program or contact a Peer Recovery Specialist for assistance with housing resources and referrals.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
    "address1": "10301 Democracy Lane",
-   "address2": null,
+   "address2": "Suite 150",
    "services": [
     {
      "frequency": null,
@@ -1482,6 +1331,22 @@
    "jurisdiction_id": "fairfax-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10301 Democracy Lane Suite 150 10301"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10301 Democracy Lane Suite 150 10301"
+    }
+   ],
    "organization_name": "The Chris Atwood Foundation",
    "organization_website": "https://www.thecaf.org",
    "raw_eligibility_text": "Apply through CAF’s recovery housing program or contact a Peer Recovery Specialist for assistance with housing resources and referrals.",
@@ -1490,15 +1355,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "10301",
-   "city": "Suite 150",
+   "zip": "22030",
+   "city": "Fairfax",
    "email": "info@thecaf.org",
    "notes": "Contact a CAF Peer Recovery Specialist through the warmline to discuss transportation needs and eligibility.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
    "address1": "10301 Democracy Lane",
-   "address2": null,
+   "address2": "Suite 150",
    "services": [
     {
      "frequency": null,
@@ -1532,6 +1397,22 @@
    "jurisdiction_id": "fairfax-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10301 Democracy Lane Suite 150 10301"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10301 Democracy Lane Suite 150 10301"
+    }
+   ],
    "organization_name": "The Chris Atwood Foundation",
    "organization_website": "https://www.thecaf.org",
    "raw_eligibility_text": "Contact a CAF Peer Recovery Specialist through the warmline to discuss transportation needs and eligibility.",
@@ -1540,15 +1421,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "10301",
-   "city": "Suite 150",
+   "zip": "22030",
+   "city": "Fairfax",
    "email": "info@thecaf.org",
    "notes": "Walk-in/mobile outreach or call/text 703-653-4221. Enrollment in the Comprehensive Harm Reduction program is free, easy, and anonymous.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
    "address1": "10301 Democracy Lane",
-   "address2": null,
+   "address2": "Suite 150",
    "services": [
     {
      "frequency": null,
@@ -1582,6 +1463,22 @@
    "jurisdiction_id": "fairfax-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10301 Democracy Lane Suite 150 10301"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite was placed in the city field and the street number in the ZIP field. The address is in Fairfax 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10301 Democracy Lane Suite 150 10301"
+    }
+   ],
    "organization_name": "The Chris Atwood Foundation",
    "organization_website": "https://www.thecaf.org",
    "raw_eligibility_text": "Walk-in/mobile outreach or call/text 703-653-4221. Enrollment in the Comprehensive Harm Reduction program is free, easy, and anonymous.",
@@ -1591,7 +1488,7 @@
    "lat": 38.7679809980312,
    "lon": -77.4892929839132,
    "zip": "20110",
-   "city": null,
+   "city": "Manassas",
    "email": "Rab2uu@uvahealth.org",
    "notes": "Emergency services are available by walk-in 24/7. Outpatient and specialty services may require an appointment or referral depending on the service. Online scheduling and other virtual options may be available for eligible services.",
    "phone": "(703) 369-8000",
@@ -1625,6 +1522,22 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The city is missing; 8700 Sudley Rd 20110 is in Manassas.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8700 Sudley Rd 20110"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The city is missing; 8700 Sudley Rd 20110 is in Manassas.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8700 Sudley Rd 20110"
+    }
+   ],
    "organization_name": "UVA Health – Prince William Medical Center",
    "organization_website": "https://www.uvahealth.com/",
    "raw_eligibility_text": "Emergency services are available by walk-in 24/7. Outpatient and specialty services may require an appointment or referral depending on the service. Online scheduling and other virtual options may be available for eligible services.",
@@ -1676,7 +1589,7 @@
   {
    "lat": 38.6581222849782,
    "lon": -77.3029066983477,
-   "zip": "13370",
+   "zip": "22192",
    "city": "Woodbridge",
    "email": "PrinceWilliam@virginiaworks.gov",
    "notes": "Walk-in, phone, email, online, or appointment depending on the service. Some workforce programs may require eligibility screening or referral.",
@@ -1688,53 +1601,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "16:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "16:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "16:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "16:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "16:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides free workforce and career navigation services to help job seekers explore employment opportunities, prepare for job searches, connect with employers, access workforce programs, and identify training or reemployment resources. Virginia Works also supports individuals seeking new or better employment through career guidance and connections to Virginia’s workforce system.",
      "eligibility": [],
@@ -1745,7 +1612,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "16:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "16:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "16:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "16:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "16:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -1764,6 +1677,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Workforce office hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday–Friday, approximately 9:00 AM–4:00 PM"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the Woodbridge ZIP should be 22192 (verify).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13370 Minnieville Rd Woodbridge 13370"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the Woodbridge ZIP should be 22192 (verify).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "13370 Minnieville Rd Woodbridge 13370"
+    }
+   ],
    "organization_name": "VA Works",
    "organization_website": "https://virginiaworks.gov/",
    "raw_eligibility_text": "Walk-in, phone, email, online, or appointment depending on the service. Some workforce programs may require eligibility screening or referral.",
@@ -1851,6 +1787,22 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated (14186), which is not a Virginia ZIP. The same phone number appears on listing 68 (Woodbridge Workers, 13950 Jefferson Davis Hwy, 22193), so this may be a duplicate.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "14186 Logan Ct Woodbridge 14186"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated (14186), which is not a Virginia ZIP. The same phone number appears on listing 68 (Woodbridge Workers, 13950 Jefferson Davis Hwy, 22193), so this may be a duplicate.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "14186 Logan Ct Woodbridge 14186"
+    }
+   ],
    "organization_name": "Woodbridge Workers Committee",
    "organization_website": "http://woodbridgeworkers.org",
    "raw_eligibility_text": "Walk in during scheduled distributions or call 703-969-0197 for current availability.",
@@ -1871,53 +1823,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "ACTS operates the Beverly Warren House, an emergency shelter with up to 18 beds for single women and adults with children, staffed 24/7 by trained professionals. Residents meet a Shelter Case Manager within days of admission to build an Individual Service Plan, with support for physical and mental health, employment, benefits applications, and referral to housing location, transitional housing and rapid rehousing. ACTS also runs a Rapid Re-Housing Program using a Housing First approach, and an Affordable Housing Program offering reduced rent in privately owned market-rate units for qualified low- and moderate-income households.",
      "eligibility": [],
@@ -1930,14 +1836,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Referral required. All housing needs in the Prince William region, including emergency shelter, rapid re-housing and permanent supportive housing, must go through the Coordinated Entry System. Call CES at 703-792-3366 to begin. ACTS does not take direct housing intakes.",
-     "requirement_type": "referral"
-    }
-   ],
+   "eligibility": [],
    "external_id": "2ac2e0ab-0944-42d5-b31c-7dd2f2bb1909",
    "location_name": null,
    "parking_notes": null,
@@ -1947,9 +1846,25 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Several non-food times are shown as food pickup: the housing Coordinated Entry intake hours (Mon-Fri 8:30-5:30, Wednesday and Friday included) and the new-client enrollment slots. Food pickup is closed on Fridays.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Food distribution: Monday 9-11:30 a.m. and 1-3 p.m.; Tuesday 1-3:30 p.m. and 5-7 p.m.; Thursday 9-11:30 a.m. and 1-3 p.m.; Friday CLOSED."
+    },
+    {
+     "date": "2026-10-12",
+     "field": "eligibility",
+     "reason": "The appointment and referral requirements belong to the utility and housing programs, not to food. Food is walk-in once enrolled. Photo ID is still required for new food clients, according to the same PWC food record.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Walk-in during distribution hours; no appointment needed. New clients must enroll in person during enrollment hours (arrive by 12:45 p.m. on Wednesdays)."
+    }
+   ],
    "organization_name": "Acts (Action In Community Through Service)",
    "organization_website": "https://www.actspwc.org",
-   "raw_eligibility_text": "Referral required. All housing needs in the Prince William region, including emergency shelter, rapid re-housing and permanent supportive housing, must go through the Coordinated Entry System. Call CES at 703-792-3366 to begin. ACTS does not take direct housing intakes.",
+   "raw_eligibility_text": "Food: walk-in during distribution hours, no appointment or referral needed. New clients must enroll in person (1st and 2nd Wednesdays 10 AM-12:45 PM; 3rd and 4th Tuesdays 5-6:30 PM) and show photo ID with a current address, or photo ID plus a bill or lease proving Eastern Prince William County residency. Service-area ZIPs: 22025, 22026, 22125, 22134, 22135, 22172, 22191, 22192, 22193.",
    "wheelchair_accessible": "unknown"
   },
   {
@@ -1980,20 +1895,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Appointment required for all utility assistance; book at actspwc.org/schedule-an-appointment or by email to EAinfo@actspwc.org. No confirmation call or email is sent - the slot you select is your appointment. Applicants must be Prince William Area residents with a disconnection, eviction or foreclosure notice, and must have 30 uninterrupted minutes for an in-person interview. Utility assistance is limited to once every 6 months, and requesting an appointment does not guarantee payment. Translation services available.",
-     "requirement_type": "appointment"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Yes. Photo ID plus the most current utility bill showing a past due or disconnection notice.",
-     "requirement_type": "photo_id"
-    }
-   ],
+   "eligibility": [],
    "external_id": "df786925-49e5-4377-993f-5e00c086f831",
    "location_name": null,
    "parking_notes": null,
@@ -2003,9 +1905,25 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Several non-food times are shown as food pickup: the housing Coordinated Entry intake hours (Mon-Fri 8:30-5:30, Wednesday and Friday included) and the new-client enrollment slots. Food pickup is closed on Fridays.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Food distribution: Monday 9-11:30 a.m. and 1-3 p.m.; Tuesday 1-3:30 p.m. and 5-7 p.m.; Thursday 9-11:30 a.m. and 1-3 p.m.; Friday CLOSED."
+    },
+    {
+     "date": "2026-10-12",
+     "field": "eligibility",
+     "reason": "The appointment and referral requirements belong to the utility and housing programs, not to food. Food is walk-in once enrolled. Photo ID is still required for new food clients, according to the same PWC food record.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Walk-in during distribution hours; no appointment needed. New clients must enroll in person during enrollment hours (arrive by 12:45 p.m. on Wednesdays)."
+    }
+   ],
    "organization_name": "Acts (Action In Community Through Service)",
    "organization_website": "https://www.actspwc.org",
-   "raw_eligibility_text": "Appointment required for all utility assistance; book at actspwc.org/schedule-an-appointment or by email to EAinfo@actspwc.org. No confirmation call or email is sent - the slot you select is your appointment. Applicants must be Prince William Area residents with a disconnection, eviction or foreclosure notice, and must have 30 uninterrupted minutes for an in-person interview. Utility assistance is limited to once every 6 months, and requesting an appointment does not guarantee payment. Translation services available.",
+   "raw_eligibility_text": "Food: walk-in during distribution hours, no appointment or referral needed. New clients must enroll in person (1st and 2nd Wednesdays 10 AM-12:45 PM; 3rd and 4th Tuesdays 5-6:30 PM) and show photo ID with a current address, or photo ID plus a bill or lease proving Eastern Prince William County residency. Service-area ZIPs: 22025, 22026, 22125, 22134, 22135, 22172, 22191, 22192, 22193.",
    "wheelchair_accessible": "unknown"
   },
   {
@@ -2126,15 +2044,15 @@
   {
    "lat": 38.8622721695676,
    "lon": -77.3032558878717,
-   "zip": "10304",
+   "zip": "22030",
    "city": "Fairfax",
    "email": "Info@formedfamiliesforward.org",
    "notes": "Call 703-539-2904, email Info@FormedFamiliesForward.org, or submit a request through the website. Short-term phone and direct consultations are available at no cost to qualifying Northern Virginia families and professionals.",
    "phone": "(703) 539-2904",
    "state": "VA",
    "website": "https://formedfamiliesforward.org/",
-   "address1": "10304 Eaton Place Suite 100",
-   "address2": null,
+   "address1": "10304 Eaton Place",
+   "address2": "Suite 100",
    "services": [
     {
      "frequency": null,
@@ -2168,6 +2086,22 @@
    "jurisdiction_id": "fairfax-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the ZIP for Eaton Place in Fairfax is 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10304 Eaton Place Suite 100 Fairfax 10304"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the ZIP for Eaton Place in Fairfax is 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10304 Eaton Place Suite 100 Fairfax 10304"
+    }
+   ],
    "organization_name": "Formed Families Forward",
    "organization_website": "https://formedfamiliesforward.org/",
    "raw_eligibility_text": "Call 703-539-2904, email Info@FormedFamiliesForward.org, or submit a request through the website. Short-term phone and direct consultations are available at no cost to qualifying Northern Virginia families and professionals.",
@@ -2188,62 +2122,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "13:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "15:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "15:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides free bridge-care health services for uninsured and underinsured residents, including acute and chronic disease management, school-entry exams, preventive screenings, immunizations, and treatment for substance and opioid use. The Manassas Park site also offers a Medication-Assisted Treatment/MOUD program and pediatric immunization/school-entry services.",
      "eligibility": [],
@@ -2254,7 +2133,44 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "13:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -2273,6 +2189,15 @@
    "jurisdiction_id": "manassas-park-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Clinic hours shown as food distribution, with duplicate overlapping Mon/Tue slots (pediatric vaccine hours merged in).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Manassas Park: Monday, Tuesday, Thursday, 8:00 AM–4:00 PM. MOUD: Wednesday, 9:00 AM–1:00 PM."
+    }
+   ],
    "organization_name": "George Mason University – Mason and Partners (MAP) Clinics",
    "organization_website": "https://publichealth.gmu.edu/mapclinics",
    "raw_eligibility_text": "Appointment necessary; walk-in availability limited. Call 703-993-5880 and leave a message to schedule.",
@@ -2293,44 +2218,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "13:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides mental health services and behavioral-health screening as part of its integrated bridge-care model for uninsured and underserved patients. MAP clinics also provide substance- and opioid-use treatment and coordinate referrals and follow-up for ongoing care.",
      "eligibility": [],
@@ -2360,6 +2248,15 @@
    "jurisdiction_id": "manassas-park-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Clinic hours shown as food distribution, with duplicate overlapping Mon/Tue slots (pediatric vaccine hours merged in).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Manassas Park: Monday, Tuesday, Thursday, 8:00 AM–4:00 PM. MOUD: Wednesday, 9:00 AM–1:00 PM."
+    }
+   ],
    "organization_name": "George Mason University – Mason and Partners (MAP) Clinics",
    "organization_website": "https://publichealth.gmu.edu/mapclinics",
    "raw_eligibility_text": "Call 703-993-5880 to request an appointment. Walk-in availability is limited.",
@@ -2368,38 +2265,19 @@
   {
    "lat": 38.8345087922835,
    "lon": -77.4543885599681,
-   "zip": "14631",
+   "zip": "20121",
    "city": "Centreville",
    "email": "main@gcchealthsystem.org",
    "notes": "Appointment strongly recommended, but limited walk-ins may be accommodated. All new patients must complete eligibility screening before their first physician appointment.",
    "phone": "(703) 650-9099",
    "state": "VA",
    "website": "https://www.gcchealthsystem.org",
-   "address1": "14631 Route 29 Ste 313",
-   "address2": null,
+   "address1": "14631 Route 29",
+   "address2": "Suite 313",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "11:00",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "13:45",
-       "closes": "17:30",
-       "weekday": 6,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides free primary and specialty medical care for eligible uninsured patients with household income below 250% of the federal poverty level. Direct services include primary care/general medicine, pediatrics, cardiology, orthopedics, free laboratory testing and diagnostic imaging, and prescription refills for established patients. The clinic also coordinates referrals for OB/GYN, dental, psychiatry, counseling, and other specialty care.",
      "eligibility": [],
@@ -2410,7 +2288,26 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:30",
+     "closes": "12:00",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "13:30",
+     "closes": "17:00",
+     "weekday": 6,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -2429,6 +2326,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Free-clinic hours were shown as food distribution, with two conflicting sets of times per day merged from two source rows. The clinic's official website gives Sat 9:30-12:00 and Sun 1:30-5:00, which matches record 334.",
+     "evidence_url": "https://www.gcchealthsystem.org",
+     "evidence_quote": "Saturday: 9:30AM-12:00PM; Sunday: 1:30PM–5:00PM"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the Centreville ZIP should be 20121 (verify).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "14631 Route 29 Ste 313 Centreville 14631"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the Centreville ZIP should be 20121 (verify).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "14631 Route 29 Ste 313 Centreville 14631"
+    }
+   ],
    "organization_name": "Grace Community Center Clinic",
    "organization_website": "https://www.gcchealthsystem.org",
    "raw_eligibility_text": "Appointment strongly recommended, but limited walk-ins may be accommodated. All new patients must complete eligibility screening before their first physician appointment.",
@@ -2437,38 +2357,19 @@
   {
    "lat": 38.8345087922835,
    "lon": -77.4543885599681,
-   "zip": "14631",
+   "zip": "20121",
    "city": "Centreville",
    "email": "main@gcchealthsystem.org",
    "notes": "Appointment required",
    "phone": "(703) 650-9099",
    "state": "VA",
    "website": "https://www.gcchealthsystem.org",
-   "address1": "14631 Route 29 Ste 313",
-   "address2": null,
+   "address1": "14631 Route 29",
+   "address2": "Suite 313",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "12:00",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "13:30",
-       "closes": "17:00",
-       "weekday": 6,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides counseling support for eligible uninsured patients as part of the clinic’s holistic care model. The clinic states that counseling services are provided by appointment only. Its current service page also notes that some mental-health specialty services are provided through referral partners rather than directly onsite.",
      "eligibility": [],
@@ -2504,6 +2405,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Free-clinic hours were shown as food distribution, with two conflicting sets of times per day merged from two source rows. The clinic's official website gives Sat 9:30-12:00 and Sun 1:30-5:00, which matches record 334.",
+     "evidence_url": "https://www.gcchealthsystem.org",
+     "evidence_quote": "Saturday: 9:30AM-12:00PM; Sunday: 1:30PM–5:00PM"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the Centreville ZIP should be 20121 (verify).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "14631 Route 29 Ste 313 Centreville 14631"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the Centreville ZIP should be 20121 (verify).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "14631 Route 29 Ste 313 Centreville 14631"
+    }
+   ],
    "organization_name": "Grace Community Center Clinic",
    "organization_website": "https://www.gcchealthsystem.org",
    "raw_eligibility_text": "Appointment required",
@@ -2512,15 +2436,15 @@
   {
    "lat": 38.8126578407835,
    "lon": -77.6365672130996,
-   "zip": "15000",
-   "city": null,
+   "zip": "20169",
+   "city": "Haymarket",
    "email": "info@haymarketchurch.org",
    "notes": "Contact the church or pastor to request a conversation, prayer, or pastoral support appointment.",
    "phone": "(703) 688-2546",
    "state": "VA",
    "website": "https://www.haymarketchurch.org",
-   "address1": "15000 Washington St. Ste 206",
-   "address2": null,
+   "address1": "15000 Washington St",
+   "address2": "Suite 206",
    "services": [
     {
      "frequency": null,
@@ -2554,6 +2478,22 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The city is missing and the ZIP field holds the street number. Haymarket Church is in Haymarket 20169.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "15000 Washington St. Ste 206 15000"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The city is missing and the ZIP field holds the street number. Haymarket Church is in Haymarket 20169.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "15000 Washington St. Ste 206 15000"
+    }
+   ],
    "organization_name": "Haymarket Church",
    "organization_website": "https://www.haymarketchurch.org",
    "raw_eligibility_text": "Contact the church or pastor to request a conversation, prayer, or pastoral support appointment.",
@@ -2624,53 +2564,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides support for immigrant and working-class families, including citizenship and naturalization assistance, immigration-related legal services, citizenship education and interview preparation, and connections to additional CASA services such as ESOL, health and human services, and community resources.",
      "eligibility": [],
@@ -2693,6 +2587,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "The Mon-Fri 9-5 hours are CASA's general office/legal-services hours ('Monday–Friday, 9:00 AM–5:00 PM.' in the PWC source), but they are shown as food pickup. Food is only once a month, 10 AM-12 PM.",
+     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+     "evidence_quote": "10:00 AM-12:00 PM (2nd of the Month)"
+    }
+   ],
    "organization_name": "CASA",
    "organization_website": "https://wearecasa.org/",
    "raw_eligibility_text": "Visit or contact the Woodbridge Welcome Center. Some services, including citizenship assistance, may require contacting CASA to arrange assistance or an appointment.",
@@ -2713,53 +2616,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides Independent Living Skills Training and community education to help people with disabilities become more self-sufficient. Training may include budgeting, completing forms, interviewing, self-advocacy, emergency preparedness, disability rights, and other skills based on individual needs.",
      "eligibility": [],
@@ -2770,7 +2627,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -2789,6 +2692,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Office hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Mon-Fri 9am-5pm"
+    }
+   ],
    "organization_name": "Independence Empowerment Center (IEC)",
    "organization_website": "https://www.ieccil.org",
    "raw_eligibility_text": "Contact IEC to request independent-living skills assistance, training, or information about upcoming educational events.",
@@ -2809,53 +2721,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides peer mentoring/counseling led largely by people with disabilities who share lived experience. Peer support focuses on sharing experiences, brainstorming solutions, building confidence, and helping participants make informed choices about independent living.",
      "eligibility": [],
@@ -2885,6 +2751,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Office hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Mon-Fri 9am-5pm"
+    }
+   ],
    "organization_name": "Independence Empowerment Center (IEC)",
    "organization_website": "https://www.ieccil.org",
    "raw_eligibility_text": "Contact IEC to be connected with an Independent Living Advocate or peer-support resource.",
@@ -2955,53 +2830,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides transition assistance for people with significant disabilities who are moving from nursing homes or other institutions into community-based housing, who are at risk of institutionalization, or who need supports to remain safely in the community. IEC also assists youth with disabilities transitioning from secondary school to adult community life.",
      "eligibility": [],
@@ -3031,6 +2860,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Office hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Mon-Fri 9am-5pm"
+    }
+   ],
    "organization_name": "Independence Empowerment Center (IEC)",
    "organization_website": "https://www.ieccil.org",
    "raw_eligibility_text": "Contact IEC for assessment, information, referral, and transition planning. Eligibility depends on the participant’s disability and service needs.",
@@ -3051,53 +2889,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides access to Energy Share assistance for eligible people needing help with utility bills. IEC instructs residents seeking utility assistance to contact a Facilitator for help.",
      "eligibility": [],
@@ -3127,6 +2919,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Office hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Mon-Fri 9am-5pm"
+    }
+   ],
    "organization_name": "Independence Empowerment Center (IEC)",
    "organization_website": "https://www.ieccil.org",
    "raw_eligibility_text": "Call IEC at 703-257-5400 and ask to speak with a Facilitator regarding Energy Share utility assistance.",
@@ -3179,14 +2980,14 @@
    "lat": 38.8735514874505,
    "lon": -77.160139753523,
    "zip": "22042",
-   "city": "#1130",
+   "city": "Falls Church",
    "email": "contessa@justice4all.org",
    "notes": "Intake required. Call 703-778-3450, visit/contact the Northern Virginia office, or submit the online legal-help form. Applicants are screened for financial eligibility, service area, conflicts, and the nature of the legal issue.",
    "phone": "(703) 778-3450",
    "state": "VA",
    "website": "https://www.justice4all.org",
    "address1": "6402 Arlington Blvd",
-   "address2": null,
+   "address2": "Suite 1130",
    "services": [
     {
      "frequency": null,
@@ -3220,6 +3021,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite number was placed in the city field; ZIP 22042 is Falls Church.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "6402 Arlington Blvd #1130 22042"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite number was placed in the city field; ZIP 22042 is Falls Church.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "6402 Arlington Blvd #1130 22042"
+    }
+   ],
    "organization_name": "Legal Aid Justice Center (LAJC) – Northern Virginia",
    "organization_website": "https://www.justice4all.org",
    "raw_eligibility_text": "Intake required. Call 703-778-3450, visit/contact the Northern Virginia office, or submit the online legal-help form. Applicants are screened for financial eligibility, service area, conflicts, and the nature of the legal issue.",
@@ -3240,62 +3057,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides outpatient mental health and trauma-focused treatment using individualized, evidence-based approaches. Services include treatment for mental health and co-occurring substance use concerns, trauma-informed care, EMDR, CBT, DBT, grief and loss therapy, mindfulness, and other integrative therapies.",
      "eligibility": [],
@@ -3306,7 +3068,62 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "19:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "19:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "19:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "19:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "19:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "19:00",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -3331,6 +3148,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Counseling appointment hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Appointments available Monday–Saturday, 10:00 AM–7:00 PM."
+    }
+   ],
    "organization_name": "Catalyst Recovery and Wellness LLC",
    "organization_website": "https://www.catalystwellness.com",
    "raw_eligibility_text": "Appointment required. Contact the office by phone or through the website to schedule services.",
@@ -3340,14 +3166,14 @@
    "lat": 38.8735514874505,
    "lon": -77.160139753523,
    "zip": "22042",
-   "city": "#1130",
+   "city": "Falls Church",
    "email": "contessa@justice4all.org",
    "notes": "Contact LAJC through the Northern Virginia intake process. Immigration representation is capacity-dependent. LAJC accepts clients regardless of immigration status and keeps immigration information confidential.",
    "phone": "(703) 778-3450",
    "state": "VA",
    "website": "https://www.justice4all.org",
    "address1": "6402 Arlington Blvd",
-   "address2": null,
+   "address2": "Suite 1130",
    "services": [
     {
      "frequency": null,
@@ -3381,6 +3207,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite number was placed in the city field; ZIP 22042 is Falls Church.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "6402 Arlington Blvd #1130 22042"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite number was placed in the city field; ZIP 22042 is Falls Church.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "6402 Arlington Blvd #1130 22042"
+    }
+   ],
    "organization_name": "Legal Aid Justice Center (LAJC) – Northern Virginia",
    "organization_website": "https://www.justice4all.org",
    "raw_eligibility_text": "Contact LAJC through the Northern Virginia intake process. Immigration representation is capacity-dependent. LAJC accepts clients regardless of immigration status and keeps immigration information confidential.",
@@ -3401,62 +3243,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides individual, couples, and family therapy using approaches such as Cognitive Behavioral Therapy, Dialectical Behavior Therapy, Acceptance and Commitment Therapy, Internal Family Systems, Motivational Interviewing, attachment-based therapy, and person-centered counseling.",
      "eligibility": [],
@@ -3492,6 +3279,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Counseling appointment hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Appointments available Monday–Saturday, 10:00 AM–7:00 PM."
+    }
+   ],
    "organization_name": "Catalyst Recovery and Wellness LLC",
    "organization_website": "https://www.catalystwellness.com",
    "raw_eligibility_text": "Appointment required. Contact Catalyst by phone or through the website to schedule an assessment or therapy appointment.",
@@ -3612,62 +3408,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "13:00",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides comprehensive community health services for children and adults, including family medicine, pediatrics, OB/GYN, dental care, pharmacy services, STI/HIV and PrEP services, and other preventive and primary-care services. Lunera Health is a nonprofit community health center serving Prince William County, Manassas, Manassas Park, and surrounding Northern Virginia communities.",
      "eligibility": [],
@@ -3678,7 +3419,62 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:30",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:30",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:30",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:30",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:30",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "13:00",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -3697,6 +3493,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Health center hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday–Friday, 8:00 AM–5:30 PM; Saturday, 8:00 AM–1:00 PM; Sunday closed."
+    }
+   ],
    "organization_name": "Lunera Health",
    "organization_website": "https://www.Lunerahealth.org",
    "raw_eligibility_text": "Appointments can be made online or by phone. Some services may offer telehealth or walk-in availability depending on the clinic and service.",
@@ -3717,62 +3522,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "19:00",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides outpatient treatment and recovery support for alcohol and substance use disorders, including comprehensive substance abuse assessments, individualized treatment planning, recovery management, medication-assisted treatment, gender-specific groups, and holistic recovery services. Treatment may also address co-occurring mental health and trauma-related needs.",
      "eligibility": [],
@@ -3808,6 +3558,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Counseling appointment hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Appointments available Monday–Saturday, 10:00 AM–7:00 PM."
+    }
+   ],
    "organization_name": "Catalyst Recovery and Wellness LLC",
    "organization_website": "https://www.catalystwellness.com",
    "raw_eligibility_text": "Appointment required. Contact the office for an assessment and individualized treatment planning.",
@@ -3828,62 +3587,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "13:00",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides integrated outpatient behavioral-health care for children, adolescents, and adults. Services include psychiatric care, assessment, treatment planning, stress-management support, and treatment for concerns such as depression, anxiety, OCD, trauma, grief, substance-use issues, chronic illness, behavioral challenges, and relationship or family difficulties. Services are available in English, Spanish, French, and Creole.",
      "eligibility": [],
@@ -3906,6 +3610,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Health center hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday–Friday, 8:00 AM–5:30 PM; Saturday, 8:00 AM–1:00 PM; Sunday closed."
+    }
+   ],
    "organization_name": "Lunera Health",
    "organization_website": "https://lunerahealth.org/service/behavioral-health/",
    "raw_eligibility_text": "Call the Behavioral Health Coordinators at 703-680-1950 ext. 6640 to arrange an intake appointment. An individualized treatment plan is developed during intake.",
@@ -3926,62 +3639,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "13:00",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides individual counseling for adults, children, and adolescents, as well as outpatient substance-use counseling and support for couples and families. Counseling may address trauma, grief, depression, anxiety, stress, substance use, chronic illness, behavioral concerns, and relationship difficulties.",
      "eligibility": [],
@@ -4011,6 +3669,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Health center hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday–Friday, 8:00 AM–5:30 PM; Saturday, 8:00 AM–1:00 PM; Sunday closed."
+    }
+   ],
    "organization_name": "Lunera Health",
    "organization_website": "https://lunerahealth.org/service/behavioral-health/",
    "raw_eligibility_text": "Contact the Behavioral Health team to schedule an intake and counseling appointment.",
@@ -4104,6 +3771,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Health center hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday–Friday, 8:00 AM–5:30 PM; Saturday, 8:00 AM–1:00 PM; Sunday closed."
+    }
+   ],
    "organization_name": "Lunera Health",
    "organization_website": "https://lunerahealth.org/health-discount-plans/",
    "raw_eligibility_text": "Complete the Discount Fee Program application or ask clinic staff about eligibility. Medicaid application assistance is also available through Certified Application Counselors.",
@@ -4199,13 +3875,13 @@
    "lat": 38.839390747347,
    "lon": -77.2525450387672,
    "zip": "22031",
-   "city": null,
+   "city": "Fairfax",
    "email": "https://lssnca.org/about/contact_us_form.html",
    "notes": "Schedule an appointment through the Refugee and Immigrant Services program. Eligibility varies by immigration status, funding source, and program.",
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "8922 Little River Turnpike Fairfax",
+   "address1": "8922 Little River Turnpike",
    "address2": null,
    "services": [
     {
@@ -4233,6 +3909,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The city 'Fairfax' was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The city 'Fairfax' was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Schedule an appointment through the Refugee and Immigrant Services program. Eligibility varies by immigration status, funding source, and program.",
@@ -4378,13 +4070,13 @@
    "lat": 38.839390747347,
    "lon": -77.2525450387672,
    "zip": "22031",
-   "city": null,
+   "city": "Fairfax",
    "email": "https://lssnca.org/about/contact_us_form.html",
    "notes": "Consultation required. Schedule online or call 240-956-8157. The current published consultation fee is $90.",
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "8922 Little River Turnpike Fairfax",
+   "address1": "8922 Little River Turnpike",
    "address2": null,
    "services": [
     {
@@ -4412,6 +4104,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The city was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The city was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Consultation required. Schedule online or call 240-956-8157. The current published consultation fee is $90.",
@@ -4517,13 +4225,13 @@
    "lat": 38.839390747347,
    "lon": -77.2525450387672,
    "zip": "22031",
-   "city": null,
+   "city": "Fairfax",
    "email": "https://lssnca.org/about/contact_us_form.html",
    "notes": "Complete the online intake/booking form. New patients receive an initial screening. Services are currently virtual.",
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "8922 Little River Turnpike Fairfax",
+   "address1": "8922 Little River Turnpike",
    "address2": null,
    "services": [
     {
@@ -4554,6 +4262,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The city was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The city was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Complete the online intake/booking form. New patients receive an initial screening. Services are currently virtual.",
@@ -4656,13 +4380,13 @@
    "lat": 38.839390747347,
    "lon": -77.2525450387672,
    "zip": "22031",
-   "city": null,
+   "city": "Fairfax",
    "email": "https://lssnca.org/about/contact_us_form.html",
    "notes": "Access generally occurs through LSSNCA refugee/immigrant program intake or referral into an employment program.",
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "8922 Little River Turnpike Fairfax",
+   "address1": "8922 Little River Turnpike",
    "address2": null,
    "services": [
     {
@@ -4690,6 +4414,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The city was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The city was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Access generally occurs through LSSNCA refugee/immigrant program intake or referral into an employment program.",
@@ -4871,64 +4611,18 @@
    "lat": 38.7508981339848,
    "lon": -77.4706671378441,
    "zip": "20110",
-   "city": "2nd Floor",
+   "city": "Manassas",
    "email": "twaldron@ci.manassas.va.us",
    "notes": "Walk-in",
    "phone": "(703) 257-8255",
    "state": "VA",
    "website": "https://www.manassasva.gov/community_development/housing___neighborhood_resources/housing___community_resources.php",
    "address1": "9027 Center Street",
-   "address2": null,
+   "address2": "2nd Floor",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides housing and neighborhood resource information for City of Manassas residents and connects residents with appropriate housing programs and partner agencies. Resources include emergency housing information, first-time homebuyer assistance, housing-repair and rehabilitation programs, neighborhood resources, real-estate tax incentives, and links to regional and state housing programs. Community Development also coordinates housing initiatives and works with nonprofit and regional partners on housing-related programs and funding.",
      "eligibility": [],
@@ -4939,7 +4633,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -4958,6 +4698,29 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "City housing office hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday–Friday, 8:00 AM–4:00 PM."
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The floor was placed in the city field; this is City of Manassas City Hall.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "9027 Center Street 2nd Floor 20110"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The floor was placed in the city field; this is City of Manassas City Hall.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "9027 Center Street 2nd Floor 20110"
+    }
+   ],
    "organization_name": "City of Manassas – Community Development, Housing & Neighborhood Services",
    "organization_website": "https://www.manassasva.gov/community_development/housing___neighborhood_resources/housing___community_resources.php",
    "raw_eligibility_text": "Walk-in",
@@ -5010,13 +4773,13 @@
    "lat": 38.839390747347,
    "lon": -77.2525450387672,
    "zip": "22031",
-   "city": null,
+   "city": "Fairfax",
    "email": "https://lssnca.org/about/contact_us_form.html",
    "notes": "Enrollment or referral through the relevant LSSNCA program is generally required.",
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "8922 Little River Turnpike Fairfax",
+   "address1": "8922 Little River Turnpike",
    "address2": null,
    "services": [
     {
@@ -5044,6 +4807,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The city was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The city was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Enrollment or referral through the relevant LSSNCA program is generally required.",
@@ -5096,13 +4875,13 @@
    "lat": 38.839390747347,
    "lon": -77.2525450387672,
    "zip": "22031",
-   "city": null,
+   "city": "Fairfax",
    "email": "https://lssnca.org/about/contact_us_form.html",
    "notes": "Baltimore County Housing Stability referrals are through Coordinated Entry or LSSNCA resettlement programs. Other refugee housing assistance is accessed through resettlement case management.",
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "8922 Little River Turnpike Fairfax",
+   "address1": "8922 Little River Turnpike",
    "address2": null,
    "services": [
     {
@@ -5130,6 +4909,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The city was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The city was put in the street line and the city field is empty.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "8922 Little River Turnpike Fairfax 22031"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Baltimore County Housing Stability referrals are through Coordinated Entry or LSSNCA resettlement programs. Other refugee housing assistance is accessed through resettlement case management.",
@@ -5188,7 +4983,7 @@
   {
    "lat": 38.7446204238418,
    "lon": -77.5001681675075,
-   "zip": "10056",
+   "zip": "20110",
    "city": "Manassas",
    "email": "info@nvfs.org",
    "notes": "Referral/intake required. Emergency shelter and homelessness-prevention applicants must begin through Prince William County Coordinated Entry at 703-792-3366; walk-ins to the shelter are not accepted for intake.",
@@ -5200,53 +4995,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides emergency shelter and housing-stability services for individuals and families in Prince William County, Manassas, and Manassas Park. Services include the NVFS Family Shelter, case management, homelessness prevention, rapid re-housing, housing-location assistance, and connections to permanent housing. NVFS also operates income-based affordable rental units in Prince William County, subject to availability.",
      "eligibility": [],
@@ -5257,7 +5006,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [],
    "external_id": "03977c9f-ff45-4003-b141-315bc0cd46ea",
@@ -5269,6 +5064,29 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated (10056 is not a Manassas ZIP). The NVFS contact page gives 10056 Dean Drive, Manassas, VA 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "These are housing office hours, not food pickup. They should be labeled as operating hours.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday through Friday, 9am-5pm"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated (10056 is not a Manassas ZIP). The NVFS contact page gives 10056 Dean Drive, Manassas, VA 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    }
+   ],
    "organization_name": "Northern Virginia Family Services",
    "organization_website": "https://nvfs.org/",
    "raw_eligibility_text": "Referral/intake required. Emergency shelter and homelessness-prevention applicants must begin through Prince William County Coordinated Entry at 703-792-3366; walk-ins to the shelter are not accepted for intake.",
@@ -5277,7 +5095,7 @@
   {
    "lat": 38.7446204238418,
    "lon": -77.5001681675075,
-   "zip": "10056",
+   "zip": "20110",
    "city": "Manassas",
    "email": "info@nvfs.org",
    "notes": "Call the applicable health-access program or NVFS for intake. Medicaid and prescription-access programs have program-specific contacts and eligibility requirements.",
@@ -5289,53 +5107,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Helps low-income and uninsured residents access healthcare through Medicaid application assistance, prescription-medication access, health navigation, and connections to community healthcare. In Prince William County, NVFS health-access services are also provided through partner locations including the George Mason University MAP Clinic and Community Services Board clinics.",
      "eligibility": [],
@@ -5346,7 +5118,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [],
    "external_id": "66359f8e-8e33-431b-886b-d64853aa0717",
@@ -5358,6 +5176,29 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "These are health-access office hours, not food pickup. They should be labeled as operating hours.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday through Friday, 9am-5pm"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    }
+   ],
    "organization_name": "Northern Virginia Family Services",
    "organization_website": "https://nvfs.org/our-services/community-health/",
    "raw_eligibility_text": "Call the applicable health-access program or NVFS for intake. Medicaid and prescription-access programs have program-specific contacts and eligibility requirements.",
@@ -5366,7 +5207,7 @@
   {
    "lat": 38.7446204238418,
    "lon": -77.5001681675075,
-   "zip": "10056",
+   "zip": "20110",
    "city": "Manassas",
    "email": "info@nvfs.org",
    "notes": "Contact NVFS or the specific mental-health program for screening, referral, and appointment information.",
@@ -5378,53 +5219,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides culturally responsive, trauma-informed mental health services to children, adults, immigrants, refugees, survivors of torture and trauma, and other individuals facing significant behavioral-health needs. Services are tailored to clients' developmental, cultural, and language needs and may be delivered in NVFS centers, homes, schools, or community settings.",
      "eligibility": [],
@@ -5435,7 +5230,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [],
    "external_id": "5234f2b6-1123-4b74-9f2a-3a7bf238e208",
@@ -5447,6 +5288,29 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "These are mental health office hours, not food pickup. They should be labeled as operating hours.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday through Friday, 9am-5pm"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    }
+   ],
    "organization_name": "Northern Virginia Family Services",
    "organization_website": "https://nvfs.org/our-services/mental-health-trauma-recovery/",
    "raw_eligibility_text": "Contact NVFS or the specific mental-health program for screening, referral, and appointment information.",
@@ -5455,7 +5319,7 @@
   {
    "lat": 38.7446204238418,
    "lon": -77.5001681675075,
-   "zip": "10056",
+   "zip": "20110",
    "city": "Manassas",
    "email": "info@nvfs.org",
    "notes": "Contact or submit a referral to the appropriate NVFS mental-health or survivor-support program.",
@@ -5490,6 +5354,22 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    }
+   ],
    "organization_name": "Northern Virginia Family Services",
    "organization_website": "https://nvfs.org/our-services/mental-health-trauma-recovery/",
    "raw_eligibility_text": "Contact or submit a referral to the appropriate NVFS mental-health or survivor-support program.",
@@ -5498,7 +5378,7 @@
   {
    "lat": 38.7446204238418,
    "lon": -77.5001681675075,
-   "zip": "10056",
+   "zip": "20110",
    "city": "Manassas",
    "email": "info@nvfs.org",
    "notes": "Application or program registration generally required. Head Start applicants provide age, income, residency, and other eligibility documentation.",
@@ -5510,53 +5390,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides early childhood education, parenting education, family workshops, youth programming, and workforce training. In Prince William County, NVFS offers Early Head Start and Head Start for eligible families with children from birth through age 5, including a Head Start classroom at the SERVE Campus. Family Programs also offer one-to-one parent coaching, group programs, and workshops for caregivers.",
      "eligibility": [],
@@ -5567,7 +5401,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [],
    "external_id": "0be9825d-3678-4b03-866d-540069551488",
@@ -5579,6 +5459,29 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "These are program office hours, not food pickup. They should be labeled as operating hours.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday through Friday, 9am-5pm"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    }
+   ],
    "organization_name": "Northern Virginia Family Services",
    "organization_website": "https://nvfs.org/our-services/child-youth-family-services/",
    "raw_eligibility_text": "Application or program registration generally required. Head Start applicants provide age, income, residency, and other eligibility documentation.",
@@ -5587,7 +5490,7 @@
   {
    "lat": 38.7446204238418,
    "lon": -77.5001681675075,
-   "zip": "10056",
+   "zip": "20110",
    "city": "Manassas",
    "email": "info@nvfs.org",
    "notes": "Contact the NVFS Multicultural Center at 571-748-2806 for legal-service intake and eligibility information.",
@@ -5622,6 +5525,22 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    }
+   ],
    "organization_name": "Northern Virginia Family Services",
    "organization_website": "https://nvfs.org/our-services/immigration-legal-services/",
    "raw_eligibility_text": "Contact the NVFS Multicultural Center at 571-748-2806 for legal-service intake and eligibility information.",
@@ -5630,7 +5549,7 @@
   {
    "lat": 38.7446204238418,
    "lon": -77.5001681675075,
-   "zip": "10056",
+   "zip": "20110",
    "city": "Manassas",
    "email": "info@nvfs.org",
    "notes": "Eligibility assessment/referral required. For Prince William homelessness-prevention services, begin through Coordinated Entry at 703-792-3366.",
@@ -5642,53 +5561,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides needs-based emergency financial assistance through selected housing-stability programs. In the Prince William area, homelessness-prevention services may assist eligible families at risk of eviction or utility disconnection, and rapid re-housing can provide short-term rental assistance. NVFS's Regional Housing Assistance Program also provides emergency financial assistance and housing case management to eligible Northern Virginia residents with qualifying health conditions.",
      "eligibility": [],
@@ -5699,7 +5572,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -5718,6 +5637,29 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "These are financial-assistance office hours, not food pickup. They should be labeled as operating hours.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday through Friday, 9am-5pm"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    }
+   ],
    "organization_name": "Northern Virginia Family Services",
    "organization_website": "https://nvfs.org/our-services/housing-food-and-urgent-support/",
    "raw_eligibility_text": "Eligibility assessment/referral required. For Prince William homelessness-prevention services, begin through Coordinated Entry at 703-792-3366.",
@@ -5726,7 +5668,7 @@
   {
    "lat": 38.7446204238418,
    "lon": -77.5001681675075,
-   "zip": "10056",
+   "zip": "20110",
    "city": "Manassas",
    "email": "info@nvfs.org",
    "notes": "Contact Prince William County Coordinated Entry at 703-792-3366 for homelessness-prevention assessment and connection to eligible services.",
@@ -5738,53 +5680,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides emergency utility assistance through selected housing-stability and homelessness-prevention programs for eligible households facing utility disconnection. In Prince William County, utility assistance is part of homelessness-prevention support rather than a general unrestricted utility-payment program.",
      "eligibility": [],
@@ -5795,7 +5691,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [],
    "external_id": "2e0db46d-38bb-4973-bd3c-5714da503498",
@@ -5807,6 +5749,29 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "These are utility-assistance office hours, not food pickup. They should be labeled as operating hours.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Monday through Friday, 9am-5pm"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP is the street number repeated. The correct ZIP is 20110.",
+     "evidence_url": "https://nvfs.org/contact-us/",
+     "evidence_quote": "Manassas, VA 20110"
+    }
+   ],
    "organization_name": "Northern Virginia Family Services",
    "organization_website": "https://nvfs.org/our-services/housing-food-and-urgent-support/",
    "raw_eligibility_text": "Contact Prince William County Coordinated Entry at 703-792-3366 for homelessness-prevention assessment and connection to eligible services.",
@@ -5990,65 +5955,19 @@
   {
    "lat": 38.8453843529732,
    "lon": -77.3153321154075,
-   "zip": "10700",
+   "zip": "22030",
    "city": "Fairfax",
    "email": "info@oarnova.org",
    "notes": "Contact OAR for a reentry intake or submit a Reentry and Family Services referral. Employment assistance is generally provided as part of an individualized case plan.",
    "phone": "(703) 246-3033",
    "state": "VA",
    "website": "https://www.oarnova.org",
-   "address1": "10700 Page Avenue Suite 200",
-   "address2": null,
+   "address1": "10700 Page Avenue",
+   "address2": "Suite 200",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides employment assistance for justice-involved and formerly incarcerated individuals. Case managers help participants become employment-ready, identify job opportunities, and connect with local employers willing to consider applicants with criminal records. Reentry assistance may also address employment-related needs such as identification, transportation to interviews, work clothing, tools, training, and other barriers to obtaining or maintaining employment.",
      "eligibility": [],
@@ -6059,7 +5978,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
    "eligibility": [
     {
@@ -6078,6 +6043,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Reentry office hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Mon-Fri 9am-5pm"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the ZIP for Page Ave in Fairfax is 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10700 Page Avenue Suite 200 Fairfax 10700"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the ZIP for Page Ave in Fairfax is 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10700 Page Avenue Suite 200 Fairfax 10700"
+    }
+   ],
    "organization_name": "OAR NOVA",
    "organization_website": "https://www.oarnova.org",
    "raw_eligibility_text": "Contact OAR for a reentry intake or submit a Reentry and Family Services referral. Employment assistance is generally provided as part of an individualized case plan.",
@@ -6086,65 +6074,19 @@
   {
    "lat": 38.8453843529732,
    "lon": -77.3153321154075,
-   "zip": "10700",
+   "zip": "22030",
    "city": "Fairfax",
    "email": "info@oarnova.org",
    "notes": "Contact OAR for assessment and case management. Financial assistance is needs-based and is not a general public cash-assistance program.",
    "phone": "(703) 246-3033",
    "state": "VA",
    "website": "https://www.oarnova.org",
-   "address1": "10700 Page Avenue Suite 200",
-   "address2": null,
+   "address1": "10700 Page Avenue",
+   "address2": "Suite 200",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides limited direct financial and emergency assistance to eligible justice-involved individuals and their families as part of reentry and family services. Assistance may help with urgent needs related to housing stability, utilities, transportation, work expenses, food, clothing, identification, or other barriers that could interfere with successful reentry and family stability. Assistance depends on individual need and available resources.",
      "eligibility": [],
@@ -6174,6 +6116,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Reentry office hours shown as food distribution times.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Mon-Fri 9am-5pm"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the ZIP for Page Ave in Fairfax is 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10700 Page Avenue Suite 200 Fairfax 10700"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The ZIP field holds the street number; the ZIP for Page Ave in Fairfax is 22030.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "10700 Page Avenue Suite 200 Fairfax 10700"
+    }
+   ],
    "organization_name": "OAR NOVA",
    "organization_website": "https://www.oarnova.org",
    "raw_eligibility_text": "Contact OAR for assessment and case management. Financial assistance is needs-based and is not a general public cash-assistance program.",
@@ -6183,14 +6148,14 @@
    "lat": 38.7886254576002,
    "lon": -77.5196099084333,
    "zip": "20109",
-   "city": "Suite 103",
+   "city": "Manassas",
    "email": "emailCSB@pwcgov.org",
    "notes": "Contact Community Services or visit participating recovery-support programs. Some peer and recovery services may be available without a formal external referral.",
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "address1": "8033 Ashton Ave",
-   "address2": null,
+   "address2": "Suite 103",
    "services": [
     {
      "frequency": null,
@@ -6217,6 +6182,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Behavioral health office hours are shown as food 'distribution', and Mon-Thu has overlapping duplicate slots (Same Day Access 8-2:30 merged with 8-8).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Outpatient and Community-based Services: Monday–Thursday, 8:00 AM–8pm and Fridays 8:00 - 5:00 PM"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "Contact Community Services or visit participating recovery-support programs. Some peer and recovery services may be available without a formal external referral.",
@@ -6226,14 +6214,14 @@
    "lat": 38.7886254576002,
    "lon": -77.5196099084333,
    "zip": "20109",
-   "city": "Suite 103",
+   "city": "Manassas",
    "email": "emailCSB@pwcgov.org",
    "notes": "Eligibility and referral requirements vary. Supported Employment serves individuals meeting program criteria who are referred through the Virginia Department for Aging and Rehabilitative Services (DARS).",
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "address1": "8033 Ashton Ave",
-   "address2": null,
+   "address2": "Suite 103",
    "services": [
     {
      "frequency": null,
@@ -6260,6 +6248,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Behavioral health office hours are shown as food 'distribution', and Mon-Thu has overlapping duplicate slots (Same Day Access 8-2:30 merged with 8-8).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Outpatient and Community-based Services: Monday–Thursday, 8:00 AM–8pm and Fridays 8:00 - 5:00 PM"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "Eligibility and referral requirements vary. Supported Employment serves individuals meeting program criteria who are referred through the Virginia Department for Aging and Rehabilitative Services (DARS).",
@@ -6269,14 +6280,14 @@
    "lat": 38.7886254576002,
    "lon": -77.5196099084333,
    "zip": "20109",
-   "city": "Suite 103",
+   "city": "Manassas",
    "email": "emailCSB@pwcgov.org",
    "notes": "No external referral is required to ask for help. Call Community Services or the MAT/recovery program directly. Current MAT information lists 703-792-2628 for assistance with opioid or alcohol recovery services.",
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "address1": "8033 Ashton Ave",
-   "address2": null,
+   "address2": "Suite 103",
    "services": [
     {
      "frequency": null,
@@ -6310,6 +6321,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Behavioral health office hours are shown as food 'distribution', and Mon-Thu has overlapping duplicate slots (Same Day Access 8-2:30 merged with 8-8).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Outpatient and Community-based Services: Monday–Thursday, 8:00 AM–8pm and Fridays 8:00 - 5:00 PM"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "No external referral is required to ask for help. Call Community Services or the MAT/recovery program directly. Current MAT information lists 703-792-2628 for assistance with opioid or alcohol recovery services.",
@@ -6319,64 +6353,18 @@
    "lat": 38.7886254576002,
    "lon": -77.5196099084333,
    "zip": "20109",
-   "city": "Suite 103",
+   "city": "Manassas",
    "email": "emailCSB@pwcgov.org",
    "notes": "Call 703-792-7800 in Manassas or 703-792-4900 in Woodbridge. The Crisis Receiving Center at 14011 Worth Ave, Woodbridge also accepts walk-ins 24/7.",
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "address1": "8033 Ashton Ave",
-   "address2": null,
+   "address2": "Suite 103",
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "20:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Provides 24/7 behavioral-health crisis assessment, intervention, and screening for individuals experiencing mental health or substance-use crises, including assessment for psychiatric hospitalization when appropriate. Scheduled and walk-in crisis services are available through Community Services, and the Prince William Crisis Receiving Center provides 24/7 walk-in crisis care.",
      "eligibility": [],
@@ -6399,6 +6387,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12",
+     "field": "hours",
+     "reason": "Behavioral health office hours are shown as food 'distribution', and Mon-Thu has overlapping duplicate slots (Same Day Access 8-2:30 merged with 8-8).",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Outpatient and Community-based Services: Monday–Thursday, 8:00 AM–8pm and Fridays 8:00 - 5:00 PM"
+    },
+    {
+     "date": "2026-10-12",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    },
+    {
+     "date": "2026-10-12-addresses",
+     "field": "address",
+     "reason": "The suite number was placed in the city field, so the city (Manassas) is missing.",
+     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+     "evidence_quote": "Call 703-792-7800 in Manassas"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "Call 703-792-7800 in Manassas or 703-792-4900 in Woodbridge. The Crisis Receiving Center at 14011 Worth Ave, Woodbridge also accepts walk-ins 24/7.",

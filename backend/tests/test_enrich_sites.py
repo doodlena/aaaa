@@ -107,3 +107,23 @@ def test_ai_hours_must_be_stated_in_the_quote():
     assert ai._hours_stated("Hours: 8 AM - 4:30 PM, M-F", 2, "08:00", "16:30")
     assert not ai._hours_stated("Monday - Friday 9:00 AM - 5:00 PM", 5, "09:00", "17:00")  # Saturday not stated
     assert ai._hours_stated("open 24 hours a day, 7 days a week", 6, "00:00", "23:59")
+
+
+def test_zip_is_never_the_house_number_and_units_are_not_cities():
+    from app.ingestion.normalization.text import normalize_zip, split_address
+
+    assert normalize_zip("10056 Dean Drive, Manassas") is None
+    assert normalize_zip("10056 Dean Dr, Manassas, VA 20110") == "20110"
+    assert normalize_zip("20110-1234") == "20110"
+    assert split_address("8033 Ashton Ave, Suite 103, Manassas, VA 20109") == ("8033 Ashton Ave", "Suite 103", "Manassas")
+    assert split_address("9027 Center Street, 2nd Floor, Manassas, VA 20110") == ("9027 Center Street", "2nd Floor", "Manassas")
+    assert split_address("4511 Daly Dr, Chantilly VA 20151") == ("4511 Daly Dr", None, "Chantilly")
+
+
+def test_cafb_keeps_every_listed_week():
+    from app.ingestion.adapters.arcgis_sources import _week_rule
+
+    assert _week_rule("1st and 3rd of the Month") == (True, [1, 3])
+    assert _week_rule("2nd and 4th of the Month") == (True, [2, 4])
+    assert _week_rule("Every week") == (True, [None])
+    assert _week_rule("Every other week") == (False, [])

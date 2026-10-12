@@ -20,7 +20,7 @@ from app.models import (
     User,
     VerificationRecord,
 )
-from app.services.resource_writer import coords_of, replace_structures, set_coords, structures_of
+from app.services.resource_writer import apply_service_type_delta, coords_of, replace_structures, set_coords, structures_of
 
 
 def snapshot(loc: Location) -> dict:
@@ -178,6 +178,8 @@ def decide_change(db: Session, cp: ChangeProposal, user: User, accept: bool, not
             replace_structures(db, loc, None, v, None, cp.source_record_id)
         elif cp.field == "eligibility":
             replace_structures(db, loc, None, None, v, cp.source_record_id)
+        elif cp.field == "service_types":  # provider-proposed category change: {"add": [...], "remove": [...]}
+            apply_service_type_delta(db, loc, (v or {}).get("add", []), (v or {}).get("remove", []))
         elif cp.field == "organization_website":
             loc.organization.website = v
         else:

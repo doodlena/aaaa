@@ -120,6 +120,13 @@ under the old number, was given the two provider-portal columns and stamped `001
 - The staff portal is labelled "For services" and serves every kind of provider. `/api/provider/me` reports
   `offers_food` per listing; when false the portal hides the food-only controls ("Out of food", shelf items, event food
   offerings). The URL is still `/pantry`, and the surplus board remains food-only.
+  Non-food-only listings (2026-10-12): "Today's status" reuses the live-status model (`shelf_updates`, no migration):
+  open / limited / closed today + message, shown publicly like any live status. The API refuses food items, "out" and
+  event food offerings for them (422). Events read "Special event or clinic day"; proposed hours are `operating_hours`.
+  Providers can propose category changes (`add_service_types` / `remove_service_types`) → one `service_types`
+  ChangeProposal (`{"add","remove"}`), applied as a delta only when an admin accepts it (`apply_service_type_delta`);
+  admin review shows it as labelled lists. `offers_food` counts the `non_food` group (diapers, hygiene) as food-side,
+  matching the frontend's FOOD_SERVICE_GROUPS. Tests: `test_non_food_*`, `test_category_change_*`, `nonFoodPortal.test.tsx`.
 - Search preferences and saved places are encrypted at rest with `FOODACCESS_SECRET_KEY` (migration `0011`; the
   `favorites` table is gone, saved places live in `users.saved_places`). Emails and preferred language are not
   encrypted. Without the key in production the data is stored in the clear with a logged warning.

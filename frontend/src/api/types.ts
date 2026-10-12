@@ -439,6 +439,8 @@ export interface ProviderPantry {
   city: string | null;
   /** False for listings with no food service: the portal then hides the food-only controls. */
   offers_food?: boolean;
+  /** Current service category codes (backend/app/vocab.py SERVICE_TYPES) — used to propose category changes. */
+  service_types?: string[];
   live?: LiveShelf | null;
   open_reports?: number;
   pending_changes?: number;
