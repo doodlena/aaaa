@@ -5,8 +5,7 @@
 #   BACKUP_DATABASE_URL  Render "External Database URL" of lantern-db
 #   BACKUP_PASSPHRASE    password used to encrypt the dump (needed again to restore; keep a copy somewhere safe)
 #   B2_KEY_ID, B2_APPLICATION_KEY   Backblaze application key limited to the backup bucket
-#   B2_BUCKET            bucket name
-#   B2_ENDPOINT          the bucket's S3 endpoint, e.g. s3.us-east-005.backblazeb2.com
+#   B2_BUCKET, B2_ENDPOINT          fallbacks only: the job asks Backblaze which bucket and endpoint the key is for
 name: Database backup
 
 on:
@@ -27,6 +26,10 @@ jobs:
     if: github.repository == 'doodlena/aaaa'
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    defaults:
+      run:
+        # "bash" (rather than the default) makes a failure anywhere in a pipeline fail the step.
+        shell: bash
     env:
       RETENTION_DAYS: "7"
       PG_IMAGE: postgres:17 # pg_dump must be at least as new as the server (render.yaml: postgresMajorVersion 17)
@@ -36,8 +39,8 @@ jobs:
       # B2 does not accept the newer default integrity checksums of the AWS CLI.
       AWS_REQUEST_CHECKSUM_CALCULATION: when_required
       AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
-      B2_BUCKET: ${{ secrets.B2_BUCKET }}
-      B2_ENDPOINT: ${{ secrets.B2_ENDPOINT }}
+      B2_BUCKET_SECRET: ${{ secrets.B2_BUCKET }}
+      B2_ENDPOINT_SECRET: ${{ secrets.B2_ENDPOINT }}
     steps:
       - name: Check that the secrets are set
         env:
@@ -45,7 +48,7 @@ jobs:
           BACKUP_PASSPHRASE: ${{ secrets.BACKUP_PASSPHRASE }}
         run: |
           missing=0
-          for name in BACKUP_DATABASE_URL BACKUP_PASSPHRASE AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY B2_BUCKET B2_ENDPOINT; do
+          for name in BACKUP_DATABASE_URL BACKUP_PASSPHRASE AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY; do
             if [ -z "${!name}" ]; then echo "::error::Missing repository secret for $name (see docs/deployment/BACKUPS.md)"; missing=1; fi
           done
           # pg_dump treats anything that is not a postgres URL as a local database name and fails confusingly.
@@ -58,6 +61,42 @@ jobs:
             *@dpg-*-a/*|*@dpg-*-a:*) echo "::error::BACKUP_DATABASE_URL looks like Render's INTERNAL URL (the host has no dots). Use the 'External Database URL', whose host ends in .render.com."; missing=1 ;;
           esac
           exit $missing
+
+      - name: Find the bucket and check it can be reached
+        run: |
+          # Ask Backblaze what this key is for: it knows the right endpoint and, for a key limited to one bucket, the
+          # bucket name. That is more reliable than typing them into secrets (which are used only as a fallback).
+          bucket=$(printf '%s' "$B2_BUCKET_SECRET" | tr -d '[:space:]')
+          endpoint=$(printf '%s' "$B2_ENDPOINT_SECRET" | tr -d '[:space:]' | sed -E 's#^https?://##; s#/+$##')
+          if auth=$(curl -fsS --max-time 30 -u "$AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY" https://api.backblazeb2.com/b2api/v3/b2_authorize_account); then
+            key_endpoint=$(jq -r '.apiInfo.storageApi.s3ApiUrl // empty' <<<"$auth" | sed -E 's#^https?://##; s#/+$##')
+            key_bucket=$(jq -r '.apiInfo.storageApi.bucketName // empty' <<<"$auth")
+            caps=$(jq -r '(.apiInfo.storageApi.capabilities // []) | join(" ")' <<<"$auth")
+            if [ -n "$key_endpoint" ] && [ "$key_endpoint" != "$endpoint" ]; then
+              echo "::warning::The B2_ENDPOINT secret does not match the endpoint Backblaze reports for this key. Using Backblaze's."
+              endpoint=$key_endpoint
+            fi
+            if [ -n "$key_bucket" ] && [ "$key_bucket" != "$bucket" ]; then
+              echo "::warning::The B2_BUCKET secret does not match the bucket this key is limited to. Using the key's bucket."
+              bucket=$key_bucket
+            fi
+            case " $caps " in *" writeFiles "*) ;; *) echo "::error::This Backblaze key cannot write files. Create one with Read and Write access."; exit 1 ;; esac
+          else
+            echo "::error::Backblaze rejected B2_KEY_ID / B2_APPLICATION_KEY (check both secrets; the application key is shown only once when created)."
+            exit 1
+          fi
+          if [ -z "$bucket" ] || [ -z "$endpoint" ]; then
+            echo "::error::Could not work out the bucket or endpoint. Set the B2_BUCKET and B2_ENDPOINT secrets (docs/deployment/BACKUPS.md)."
+            exit 1
+          fi
+          echo "::add-mask::$bucket"
+          echo "B2_BUCKET=$bucket" >> "$GITHUB_ENV"
+          echo "B2_ENDPOINT=$endpoint" >> "$GITHUB_ENV"
+          if ! aws s3api head-bucket --bucket "$bucket" --endpoint-url "https://$endpoint" > /dev/null; then
+            echo "::error::The bucket cannot be reached with this key and endpoint. Nothing was backed up."
+            exit 1
+          fi
+          echo "Bucket reachable."
 
       - name: Dump the database
         env:
@@ -90,16 +129,23 @@ jobs:
       - name: Upload to private storage
         run: |
           key="backups/lantern-$(date -u +%Y%m%d-%H%M%S).dump.gpg"
+          local_size=$(stat -c %s "$RUNNER_TEMP/backup/lantern.dump.gpg")
           aws s3 cp "$RUNNER_TEMP/backup/lantern.dump.gpg" "s3://$B2_BUCKET/$key" --endpoint-url "https://$B2_ENDPOINT" --only-show-errors
-          aws s3api head-object --bucket "$B2_BUCKET" --key "$key" --endpoint-url "https://$B2_ENDPOINT" --query ContentLength --output text \
-            | xargs -I{} echo "Uploaded $key ({} bytes)"
+          # Do not trust the upload until the bucket itself reports a file of the same size.
+          remote_size=$(aws s3api head-object --bucket "$B2_BUCKET" --key "$key" --endpoint-url "https://$B2_ENDPOINT" --query ContentLength --output text)
+          if [ "$remote_size" != "$local_size" ]; then
+            echo "::error::Upload not confirmed: the bucket reports '$remote_size' bytes for $key, expected $local_size."
+            exit 1
+          fi
+          echo "Uploaded and confirmed: $key ($remote_size bytes)"
           rm -f "$RUNNER_TEMP/backup/lantern.dump.gpg"
 
       - name: Remove backups older than the retention period
         run: |
           cutoff=$(date -u -d "-$RETENTION_DAYS days" +%Y%m%d)
           aws s3api list-objects-v2 --bucket "$B2_BUCKET" --prefix backups/lantern- --endpoint-url "https://$B2_ENDPOINT" \
-            --query 'Contents[].Key' --output text | tr '\t' '\n' | while read -r key; do
+            --query 'Contents[].Key' --output text > "$RUNNER_TEMP/keys.txt"
+          tr '\t' '\n' < "$RUNNER_TEMP/keys.txt" | while read -r key; do
               day=$(printf '%s' "$key" | sed -n 's#^backups/lantern-\([0-9]\{8\}\)-[0-9]\{6\}\.dump\.gpg$#\1#p')
               if [ -n "$day" ] && [ "$day" -lt "$cutoff" ]; then
                 aws s3 rm "s3://$B2_BUCKET/$key" --endpoint-url "https://$B2_ENDPOINT" --only-show-errors && echo "Removed $key"
