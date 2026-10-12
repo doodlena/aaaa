@@ -77,7 +77,8 @@ def test_scoped_discovery_only_requests_pilot_jurisdictions():
 
 
 def test_restricted_source_needs_direct_verification_to_publish(db, admin, tmp_path):
-    cfg = load_source_configs()["fairfax-food-access"]
+    # The Fairfax feed itself is published by owner decision; test the gate with a restricted copy of its config.
+    cfg = load_source_configs()["fairfax-food-access"].model_copy(update={"publication": "permission_required"})
     fx = {u: FIXTURES / "fairfax_schema_synthetic.geojson" for u in get_adapter(cfg).discover()}
     run = run_source(db, cfg, Fetcher(fixtures=fx), scope={"fairfax-county", "fairfax-city"})
     assert run.counts["inserted"] >= 1
