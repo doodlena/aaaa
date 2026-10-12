@@ -3,8 +3,8 @@
 Saved places move from the `favorites` table (a readable account-to-listing link) into an encrypted list on the account,
 and existing search preferences are encrypted in place. See app/services/secrets.py (seal/unseal).
 
-Revision ID: 0011
-Revises: 0010
+Revision ID: 0010
+Revises: 0009
 Create Date: 2026-10-12 23:30:00
 """
 import json
@@ -13,8 +13,8 @@ from alembic import op
 import sqlalchemy as sa
 from sqlalchemy.dialects import postgresql
 
-revision = '0011'
-down_revision = '0010'
+revision = '0010'
+down_revision = '0009'
 branch_labels = None
 depends_on = None
 
