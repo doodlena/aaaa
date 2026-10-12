@@ -946,6 +946,21 @@
         "drafts": "Borradores de anuncios: solo el texto que pegó el proveedor.",
         "suggestions": "Sugerencias de IA: el texto público de las fuentes del listado.",
         "never": "Nunca: correos electrónicos, contraseñas, ubicaciones ni lugares guardados."
+      },
+      "fastModelLabel": "Modelo para tareas diarias",
+      "spendLabel": "Gasto de IA este mes",
+      "budgetLabel": "Presupuesto mensual (USD)",
+      "budgetHelp": "Las funciones de IA se pausan automáticamente cuando el gasto estimado del mes alcanza el presupuesto.",
+      "budgetSaved": "Presupuesto mensual fijado en ${{amount}}."
+    },
+    "dupAI": {
+      "ask": "Preguntar a la IA",
+      "asking": "Consultando…",
+      "advisory": "Opinión de la IA — usted decide",
+      "verdict": {
+        "same_place": "Probablemente el mismo lugar",
+        "different_places": "Probablemente lugares distintos",
+        "unsure": "No está claro"
       }
     }
   },

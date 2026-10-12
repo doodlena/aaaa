@@ -1,1 +1,1 @@
-from app.ingestion.adapters import arcgis_sources, bulk_sources, generic, html_sources  # noqa: F401
+from app.ingestion.adapters import ai_extract, arcgis_sources, bulk_sources, generic, html_sources  # noqa: F401

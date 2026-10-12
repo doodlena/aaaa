@@ -1,0 +1,30 @@
+id: ai-web-pages
+name: Web pages found by AI discovery (AI-extracted, verified against the page)
+owner: Various (each record cites its page)
+url: https://github.com/doodlena/aaaa/blob/main/config/sources/ai-web-pages.yaml
+adapter: ai_page_extract
+retrieval: http
+formats:
+- html
+- pdf
+jurisdictions:
+- arlington-county
+- alexandria-city
+- falls-church-city
+- fairfax-county
+- fairfax-city
+- loudoun-county
+- prince-william-county
+- manassas-city
+- manassas-park-city
+enabled: true
+min_seconds_between_requests: 3
+cache_ttl_hours: 168
+store_raw: true
+publication: permitted_with_attribution
+verified_on: '2026-10-12'
+request_urls: []
+known_limitations:
+- robots.txt and blocks are respected by the fetcher; blocked pages are skipped, never
+  retried another way.
+refresh: null

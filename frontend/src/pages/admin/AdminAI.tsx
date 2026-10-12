@@ -116,6 +116,20 @@ export function AdminAI() {
             <dt>{t('admin.aiSettings.modelLabel')}</dt>
             <dd className="mono">{s.model}</dd>
           </div>
+          {s.fast_model && (
+            <div className="kv">
+              <dt>{t('admin.aiSettings.fastModelLabel')}</dt>
+              <dd className="mono">{s.fast_model}</dd>
+            </div>
+          )}
+          {s.month_spend_usd !== undefined && (
+            <div className="kv">
+              <dt>{t('admin.aiSettings.spendLabel')}</dt>
+              <dd data-testid="ai-spend">
+                ${s.month_spend_usd.toFixed(2)} / ${(s.monthly_budget_usd ?? 0).toFixed(2)}
+              </dd>
+            </div>
+          )}
         </dl>
         <p className="muted small">{t(`admin.aiSettings.stateHelp.${st}`)}</p>
       </section>
@@ -196,6 +210,28 @@ export function AdminAI() {
               </option>
             ))}
           </select>
+        </div>
+
+        <div className="field field--inline">
+          <label htmlFor={`${id}-b`}>{t('admin.aiSettings.budgetLabel')}</label>
+          <input
+            id={`${id}-b`}
+            type="number"
+            min={0}
+            max={1000}
+            step={1}
+            defaultValue={s.monthly_budget_usd ?? 5}
+            disabled={busy !== null}
+            onBlur={(e) => {
+              const v = Number(e.target.value);
+              if (!Number.isFinite(v) || v === s.monthly_budget_usd) return;
+              void run('model', () => api.admin.patchAISettings({ monthly_budget_usd: v }), (r) => {
+                setS(r);
+                setMsg({ ok: true, text: t('admin.aiSettings.budgetSaved', { amount: v.toFixed(2) }) });
+              });
+            }}
+          />
+          <p className="fgroup__hint">{t('admin.aiSettings.budgetHelp')}</p>
         </div>
 
         <div className="form__actions">

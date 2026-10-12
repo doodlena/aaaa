@@ -946,6 +946,21 @@
         "drafts": "公告草稿：只有服务机构粘贴的文字。",
         "suggestions": "AI 建议：条目的公开来源文字。",
         "never": "绝不发送：电子邮件地址、密码、位置或已保存的地点。"
+      },
+      "fastModelLabel": "Model for everyday tasks",
+      "spendLabel": "AI spend this month",
+      "budgetLabel": "Monthly budget (USD)",
+      "budgetHelp": "AI features pause automatically when this month's estimated spend reaches the budget.",
+      "budgetSaved": "Monthly budget set to ${{amount}}."
+    },
+    "dupAI": {
+      "ask": "Ask AI",
+      "asking": "Asking…",
+      "advisory": "AI opinion — you decide",
+      "verdict": {
+        "same_place": "Likely the same place",
+        "different_places": "Likely different places",
+        "unsure": "Unsure"
       }
     }
   },

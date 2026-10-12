@@ -1,4 +1,4 @@
-import type {
+import type { DuplicateAIOpinion,
   AdminClaim,
   AdminReport,
   AISearchResult,
@@ -203,7 +203,9 @@ export const api = {
     /** The key is sent once and never returned; the response only carries a hint like "…WXYZ" and a live test. */
     saveAIKey: (api_key: string) => request<AISettings & { test: AITestResult }>('PUT', '/admin/ai-settings/key', { api_key }),
     deleteAIKey: () => request<AISettings>('DELETE', '/admin/ai-settings/key'),
-    patchAISettings: (body: { enabled?: boolean; model?: string }) => request<AISettings>('PATCH', '/admin/ai-settings', body),
+    patchAISettings: (body: { enabled?: boolean; model?: string; fast_model?: string; monthly_budget_usd?: number }) =>
+      request<AISettings>('PATCH', '/admin/ai-settings', body),
+    duplicateAIOpinion: (id: number) => request<DuplicateAIOpinion>('POST', `/admin/duplicates/${id}/ai-opinion`),
     testAI: () => request<AITestResult>('POST', '/admin/ai-settings/test'),
     aiSuggestions: (id: number | string) =>
       request<{ created_proposals: string[]; suggestions: unknown }>('POST', `/admin/resources/${id}/ai-suggestions`),

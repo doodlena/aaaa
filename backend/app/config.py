@@ -53,7 +53,9 @@ class Settings(BaseSettings):
 
     # Optional Claude features (see app/services/ai.py). Credentials come from ANTHROPIC_API_KEY (never stored here).
     ai_enabled: bool = False
-    ai_model: str = "claude-sonnet-5-5"
+    ai_model: str = "claude-sonnet-5-5"  # "careful" tasks (web page extraction)
+    ai_fast_model: str = "claude-haiku-5-5"  # high-volume tasks (search, drafts, suggestions, translation): ~20x cheaper
+    ai_monthly_budget_usd: float = 5.0  # hard cap; AI pauses when this month's estimated spend reaches it
     secret_key: str | None = None  # Fernet key for encrypting stored secrets (required in production)
     ai_public_search_per_hour: int = 30
 

@@ -372,6 +372,9 @@ export interface AISettings {
   enabled: boolean;
   active: boolean;
   model: string;
+  fast_model?: string;
+  monthly_budget_usd?: number | null;
+  month_spend_usd?: number;
   allowed_models: string[];
   key_source: AIKeySource | string;
   key_hint: string | null;
@@ -488,4 +491,10 @@ export interface AdminReport {
   status: string;
   created_at: string | null;
   provider_response: string | null;
+}
+
+export interface DuplicateAIOpinion {
+  verdict: 'same_place' | 'different_places' | 'unsure';
+  reasons: string[];
+  advisory: boolean;
 }

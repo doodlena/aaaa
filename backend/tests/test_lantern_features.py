@@ -246,7 +246,7 @@ def test_ai_structure_suggestions_drop_unquoted_facts():
     assert [s.weekday for s in out.distribution_schedules] == [1]
     assert [e.requirement_type for e in out.eligibility] == ["photo_id"]
     assert "untrusted data" in fake.calls[0]["system"]
-    assert fake.calls[0]["model"] == "claude-sonnet-5-5"
+    assert fake.calls[0]["model"] == "claude-haiku-5-5"  # cheap model for high-volume tasks
 
 
 def test_ai_suggestions_become_reviewable_proposals(admin_client, db, imported, ai_on):
@@ -328,7 +328,7 @@ def test_admin_uploads_key_encrypted_never_returned(admin_client, db, monkeypatc
     r = admin_client.put("/api/admin/ai-settings/key", json={"api_key": secret})
     body = r.json()
     assert r.status_code == 200 and body["active"] and body["key_source"] == "admin" and body["key_hint"] == "…WXYZ"
-    assert body["test"]["ok"] and called == {"key": secret, "model": "claude-sonnet-5-5"}
+    assert body["test"]["ok"] and called["key"] == secret and body["test"]["fast_model"] == "claude-haiku-5-5"
     assert secret not in r.text and secret not in admin_client.get("/api/admin/ai-settings").text
     row = db.get(AppSetting, "anthropic_api_key")
     assert row.is_secret and secret not in row.value  # encrypted at rest
@@ -368,3 +368,87 @@ def test_expanded_service_catalog_and_mental_health_filter(client, db, tmp_path)
     from app.ingestion.normalization.text import SERVICE_KEYWORDS, match_keywords
 
     assert match_keywords("Help for families in crisis; budget counseling", SERVICE_KEYWORDS) == []
+
+
+def test_ai_cache_budget_and_usage_log(client, ai_on, monkeypatch):
+    """Identical requests are served from cache (no second API call); spending is logged; the monthly cap stops calls."""
+    from app.models import AIUsage
+
+    class Usage:
+        input_tokens, output_tokens = 1000, 100
+
+    out = {"place": None, "food_groups": ["produce"], "service_groups": [], "eligibility": [], "day": None,
+           "wheelchair": False, "explanation": "Produce."}
+    fake = FakeClaude({"SearchIntent": out})
+    orig = fake.parse
+    fake.parse = lambda **kw: NS(**{**vars(orig(**kw)), "usage": Usage()})
+    ai.set_client(fake)
+    assert client.post("/api/ai/search", json={"q": "Fresh  Produce please"}).status_code == 200
+    assert client.post("/api/ai/search", json={"q": "fresh produce PLEASE"}).status_code == 200  # normalized -> cache hit
+    assert len(fake.calls) == 1
+    from app.db import session_factory
+
+    with session_factory()() as db:
+        rows = db.query(AIUsage).order_by(AIUsage.id).all()
+    assert [r.cached for r in rows] == [False, True]
+    assert abs(rows[0].cost_usd - (1000 * 0.10 + 100 * 0.50) / 1e6) < 1e-9  # Haiku pricing
+    monkeypatch.setattr(get_settings(), "ai_monthly_budget_usd", 0.0)
+    ai.invalidate()
+    r = client.post("/api/ai/search", json={"q": "something new"})
+    assert r.status_code == 503 and "budget" in r.json()["detail"].lower()
+    assert len(fake.calls) == 1  # no paid call once the cap is reached
+
+
+def test_ai_page_extraction_keeps_only_verbatim_facts(ai_on, tmp_path):
+    page = ("Helping Hands Pantry\n123 Example Rd, Falls Church, VA 22046\nPhone: 555-010-4444\n"
+            "Food distribution Tuesdays 10am-12pm. Photo ID required.\nWe provide groceries and fresh produce.")
+    fake = FakeClaude({"PageExtraction": {"places": [
+        {"organization_name": "Helping Hands Pantry", "location_name": None, "address1": "123 Example Rd", "city": "Falls Church",
+         "zip": "22046", "phone": "555-010-4444", "website": None, "hours_text": "Food distribution Tuesdays 10am-12pm.",
+         "eligibility_text": "Photo ID required.", "description": "We provide groceries and fresh produce.",
+         "service_types": ["pantry_pickup"], "food_types": ["general_groceries"], "evidence": ["We provide groceries"]},
+        {"organization_name": "Invented Clinic", "location_name": None, "address1": "9 Nowhere St", "city": None, "zip": None,
+         "phone": None, "website": None, "hours_text": None, "eligibility_text": None, "description": None,
+         "service_types": ["health_clinic"], "food_types": [], "evidence": ["free clinic"]},
+        {"organization_name": "Helping Hands Pantry", "location_name": None, "address1": "123 Example Rd", "city": None,
+         "zip": "22046", "phone": "555-010-9999", "website": None, "hours_text": "Open daily 24 hours", "eligibility_text": None,
+         "description": None, "service_types": ["shelter"], "food_types": [], "evidence": ["we run a shelter"]}]}})
+    ai.set_client(fake)
+    places = ai.extract_places(page, "https://example.org/p")
+    assert [p["organization_name"] for p in places] == ["Helping Hands Pantry", "Helping Hands Pantry"]  # invented org dropped
+    good, bad = places
+    assert good["phone"] == "555-010-4444" and good["service_types"] == ["pantry_pickup"]
+    assert bad["phone"] is None and bad["hours_text"] is None and bad["service_types"] == []  # unquoted facts dropped
+    # adapter turns it into a candidate with parsed schedule + eligibility, citing the page
+    from app.ingestion.adapters.ai_extract import AIPageExtract
+    from app.ingestion.base import FetchedDocument, load_source_configs
+
+    ad = AIPageExtract(load_source_configs()["ai-web-pages"])
+    recs = list(ad.parse(FetchedDocument("https://example.org/p", 200, f"<html><body><p>{page.replace(chr(10), '<br>')}</p></body></html>".encode(), "text/html", None)))
+    c = ad.normalize(recs[0])
+    assert c.source_url == "https://example.org/p" and c.services[0].schedules[0].weekday == 1
+    assert {e.requirement_type: e.status for e in c.eligibility}["photo_id"] == "required"
+    assert len(fake.calls) == 1  # second parse of the same page text came from the cache
+
+
+def test_ai_discovery_uses_search_results_and_skips_aggregators(ai_on):
+    class Resp:
+        usage = NS(input_tokens=100, output_tokens=10, server_tool_use=NS(web_search_requests=1))
+        content = [NS(type="web_search_tool_result", content=[NS(url="https://city.example.gov/food", title="City food help"),
+                                                              NS(url="https://www.findhelp.org/x", title="Aggregator")]),
+                   NS(type="text", text="See https://church.example.org/pantry")]
+
+    class Fake:
+        def __init__(self):
+            self.messages, self.n = self, 0
+
+        def create(self, **kw):
+            self.n += 1
+            assert kw["tools"][0]["max_uses"] == 2
+            return Resp()
+
+    f = Fake()
+    ai.set_client(f)
+    leads = ai.discover_leads("Falls Church", "food pantries")
+    assert [x["url"] for x in leads] == ["https://city.example.gov/food", "https://church.example.org/pantry"]
+    assert ai.discover_leads("falls church", "Food Pantries") == leads and f.n == 1  # cached

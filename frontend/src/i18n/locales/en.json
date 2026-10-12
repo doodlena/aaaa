@@ -946,6 +946,21 @@
         "drafts": "Announcement drafts: only the text the provider pasted.",
         "suggestions": "AI suggestions: the listing's public source text.",
         "never": "Never: email addresses, passwords, locations or saved places."
+      },
+      "fastModelLabel": "Model for everyday tasks",
+      "spendLabel": "AI spend this month",
+      "budgetLabel": "Monthly budget (USD)",
+      "budgetHelp": "AI features pause automatically when this month's estimated spend reaches the budget.",
+      "budgetSaved": "Monthly budget set to ${{amount}}."
+    },
+    "dupAI": {
+      "ask": "Ask AI",
+      "asking": "Asking…",
+      "advisory": "AI opinion — you decide",
+      "verdict": {
+        "same_place": "Likely the same place",
+        "different_places": "Likely different places",
+        "unsure": "Unsure"
       }
     }
   },

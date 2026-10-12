@@ -946,6 +946,21 @@
         "drafts": "공지 초안: 제공 기관이 붙여넣은 글만.",
         "suggestions": "AI 제안: 항목의 공개 출처 글.",
         "never": "절대 전송하지 않음: 이메일 주소, 비밀번호, 위치, 저장한 장소."
+      },
+      "fastModelLabel": "Model for everyday tasks",
+      "spendLabel": "AI spend this month",
+      "budgetLabel": "Monthly budget (USD)",
+      "budgetHelp": "AI features pause automatically when this month's estimated spend reaches the budget.",
+      "budgetSaved": "Monthly budget set to ${{amount}}."
+    },
+    "dupAI": {
+      "ask": "Ask AI",
+      "asking": "Asking…",
+      "advisory": "AI opinion — you decide",
+      "verdict": {
+        "same_place": "Likely the same place",
+        "different_places": "Likely different places",
+        "unsure": "Unsure"
       }
     }
   },

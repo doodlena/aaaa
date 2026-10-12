@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, UniqueConstraint
+from sqlalchemy import Boolean, DateTime, Float, ForeignKey, Integer, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db import Base
@@ -64,3 +64,32 @@ class AppSetting(Base):
     is_secret: Mapped[bool] = mapped_column(Boolean, default=False)
     updated_by_id: Mapped[int | None] = mapped_column(ForeignKey("users.id"))
     updated_at: Mapped[datetime] = created_at()
+
+
+class AIUsage(Base):
+    """One row per Claude API call: feature, model, tokens, estimated cost (for the monthly budget cap)."""
+
+    __tablename__ = "ai_usage"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    at: Mapped[datetime] = created_at()
+    feature: Mapped[str] = mapped_column(String(32), index=True)
+    model: Mapped[str] = mapped_column(String(48))
+    input_tokens: Mapped[int] = mapped_column(Integer, default=0)
+    output_tokens: Mapped[int] = mapped_column(Integer, default=0)
+    web_searches: Mapped[int] = mapped_column(Integer, default=0)
+    cost_usd: Mapped[float] = mapped_column(Float, default=0.0)
+    cached: Mapped[bool] = mapped_column(Boolean, default=False)
+
+
+class AICache(Base):
+    """Cached AI outputs keyed by a hash of (feature, model, input). Identical requests are never paid for twice;
+    unchanged web pages are never re-extracted."""
+
+    __tablename__ = "ai_cache"
+
+    key: Mapped[str] = mapped_column(String(64), primary_key=True)
+    feature: Mapped[str] = mapped_column(String(32))
+    model: Mapped[str] = mapped_column(String(48))
+    output: Mapped[dict] = mapped_column(JSONType)
+    created_at: Mapped[datetime] = created_at()

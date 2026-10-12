@@ -358,3 +358,5 @@ class AIKeyIn(BaseModel):
 class AISettingsIn(BaseModel):
     enabled: bool | None = None
     model: Literal["claude-sonnet-5-5", "claude-opus-5-5", "claude-haiku-5-5"] | None = None
+    fast_model: Literal["claude-sonnet-5-5", "claude-opus-5-5", "claude-haiku-5-5"] | None = None
+    monthly_budget_usd: float | None = Field(default=None, ge=0, le=1000)

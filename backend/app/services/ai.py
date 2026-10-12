@@ -101,6 +101,16 @@ class Translation(BaseModel):
 # --- client ----------------------------------------------------------------------------------------------------------
 
 ALLOWED_MODELS = ("claude-sonnet-5-5", "claude-opus-5-5", "claude-haiku-5-5")
+# USD per million tokens (input, output) from the Anthropic price list; web search is billed per search.
+PRICES = {"claude-haiku-5-5": (0.10, 0.50), "claude-sonnet-5-5": (2.0, 10.0), "claude-opus-5-5": (4.0, 20.0)}
+WEB_SEARCH_USD = 0.01
+# Cost routing: high-volume/simple features use the cheap "fast" model; page extraction uses the admin-chosen model.
+FEATURE_TIER = {"search": "fast", "announcement": "fast", "structure": "fast", "translate": "fast", "duplicate": "fast",
+                "discover": "fast", "extract": "careful"}
+
+
+class BudgetExceeded(Exception):
+    pass
 
 _client = None
 _injected = False
@@ -131,7 +141,8 @@ def runtime() -> dict:
     if _runtime_cache and time.monotonic() - _runtime_cache[0] < 15:
         return _runtime_cache[1]
     s = get_settings()
-    cfg = {"enabled": bool(s.ai_enabled), "model": s.ai_model, "key": None, "key_source": "none"}
+    cfg = {"enabled": bool(s.ai_enabled), "model": s.ai_model, "fast_model": s.ai_fast_model, "key": None,
+           "key_source": "none", "monthly_budget_usd": s.ai_monthly_budget_usd}
     if os.environ.get("ANTHROPIC_API_KEY"):
         cfg["key_source"] = "environment"
     try:
@@ -142,11 +153,19 @@ def runtime() -> dict:
         from app.services.secrets import SecretUnavailable, decrypt
 
         with session_factory()() as db:
-            rows = {r.key: r for r in db.query(AppSetting).filter(AppSetting.key.in_(("ai_enabled", "ai_model", "anthropic_api_key"))).all()}
+            rows = {r.key: r for r in db.query(AppSetting).filter(AppSetting.key.in_(
+                ("ai_enabled", "ai_model", "ai_fast_model", "ai_monthly_budget_usd", "anthropic_api_key"))).all()}
         if "ai_enabled" in rows:
             cfg["enabled"] = rows["ai_enabled"].value == "true"
         if "ai_model" in rows and rows["ai_model"].value in ALLOWED_MODELS:
             cfg["model"] = rows["ai_model"].value
+        if "ai_fast_model" in rows and rows["ai_fast_model"].value in ALLOWED_MODELS:
+            cfg["fast_model"] = rows["ai_fast_model"].value
+        if "ai_monthly_budget_usd" in rows:
+            try:
+                cfg["monthly_budget_usd"] = max(0.0, float(rows["ai_monthly_budget_usd"].value))
+            except ValueError:
+                pass
         if "anthropic_api_key" in rows:
             try:
                 cfg["key"], cfg["key_source"] = decrypt(rows["anthropic_api_key"].value), "admin"
@@ -163,8 +182,74 @@ def enabled() -> bool:
     return bool(cfg["enabled"]) and (_injected or cfg["key_source"] != "none")
 
 
-def model() -> str:
-    return runtime()["model"]
+def model(feature: str | None = None) -> str:
+    cfg = runtime()
+    return cfg["fast_model"] if FEATURE_TIER.get(feature or "", "careful") == "fast" else cfg["model"]
+
+
+def cost_usd(model_id: str, input_tokens: int, output_tokens: int, web_searches: int = 0) -> float:
+    pin, pout = PRICES.get(model_id, PRICES["claude-sonnet-5-5"])
+    return input_tokens * pin / 1e6 + output_tokens * pout / 1e6 + web_searches * WEB_SEARCH_USD
+
+
+def month_spend() -> float:
+    from datetime import UTC, datetime
+
+    from sqlalchemy import func, select
+
+    from app.db import session_factory
+    from app.models import AIUsage
+
+    start = datetime.now(UTC).replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+    with session_factory()() as db:
+        return float(db.scalar(select(func.coalesce(func.sum(AIUsage.cost_usd), 0.0)).where(AIUsage.at >= start)) or 0.0)
+
+
+def _check_budget() -> None:
+    budget = runtime()["monthly_budget_usd"]
+    if budget is not None and month_spend() >= budget:
+        raise BudgetExceeded(f"Monthly AI budget of ${budget:.2f} reached — AI features pause until next month or an admin raises it")
+
+
+def _record(feature: str, model_id: str, usage, cached: bool = False, web_searches: int = 0) -> None:
+    from app.db import session_factory
+    from app.models import AIUsage
+
+    tin = int(getattr(usage, "input_tokens", 0) or 0) if usage is not None else 0
+    tout = int(getattr(usage, "output_tokens", 0) or 0) if usage is not None else 0
+    with session_factory()() as db:
+        db.add(AIUsage(feature=feature, model=model_id, input_tokens=tin, output_tokens=tout, web_searches=web_searches,
+                       cost_usd=0.0 if cached else cost_usd(model_id, tin, tout, web_searches), cached=cached))
+        db.commit()
+
+
+def _cache_key(feature: str, model_id: str, *parts: str) -> str:
+    import hashlib
+
+    return hashlib.sha256("\x1f".join((feature, model_id, *parts)).encode()).hexdigest()
+
+
+def _cache_get(key: str):
+    from app.db import session_factory
+    from app.models import AICache
+
+    with session_factory()() as db:
+        row = db.get(AICache, key)
+        return row.output if row else None
+
+
+def _cache_put(key: str, feature: str, model_id: str, output: dict) -> None:
+    from sqlalchemy.exc import IntegrityError
+
+    from app.db import session_factory
+    from app.models import AICache
+
+    with session_factory()() as db:
+        db.add(AICache(key=key, feature=feature, model=model_id, output=output))
+        try:
+            db.commit()
+        except IntegrityError:
+            db.rollback()
 
 
 def _get_client():
@@ -188,7 +273,9 @@ def test_connection() -> dict:
 
     try:
         info = _get_client().models.retrieve(model())
-        return {"ok": True, "model": getattr(info, "id", model()), "display_name": getattr(info, "display_name", None)}
+        fast = _get_client().models.retrieve(model("search"))
+        return {"ok": True, "model": getattr(info, "id", model()), "display_name": getattr(info, "display_name", None),
+                "fast_model": getattr(fast, "id", model("search"))}
     except anthropic.AuthenticationError:
         return {"ok": False, "error": "The API key was rejected by Anthropic"}
     except anthropic.PermissionDeniedError:
@@ -201,7 +288,19 @@ def test_connection() -> dict:
         return {"ok": False, "error": str(e)}
 
 
-def _parse(schema, system: str, user: str, max_tokens: int = 4000):
+def _parse(feature: str, schema, system: str, user: str, max_tokens: int = 2000, use_cache: bool = True):
+    """One structured Claude call with cost controls: model routing, response cache, monthly budget cap, usage log."""
+    model_id = model(feature)
+    key = _cache_key(feature, model_id, system, user)
+    if use_cache:
+        hit = _cache_get(key)
+        if hit is not None:
+            _record(feature, model_id, None, cached=True)
+            return schema.model_validate(hit)
+    try:
+        _check_budget()
+    except BudgetExceeded as e:
+        raise AIUnavailable(str(e)) from e
     client = _get_client()
     try:
         import anthropic
@@ -211,7 +310,7 @@ def _parse(schema, system: str, user: str, max_tokens: int = 4000):
         api_errors = ()
     try:
         resp = client.messages.parse(
-            model=model(),
+            model=model_id,
             max_tokens=max_tokens,
             system=f"{system}\n\n{GUARD}",
             messages=[{"role": "user", "content": user}],
@@ -220,8 +319,11 @@ def _parse(schema, system: str, user: str, max_tokens: int = 4000):
     except api_errors as e:  # network / rate limit / API error: callers fall back to manual entry
         log.warning("Claude request failed: %s", type(e).__name__)
         raise AIUnavailable("The AI assistant is unavailable right now") from e
+    _record(feature, model_id, getattr(resp, "usage", None))
     if getattr(resp, "stop_reason", None) == "refusal" or resp.parsed_output is None:
         raise AIUnavailable("The AI assistant could not process this text")
+    if use_cache:
+        _cache_put(key, feature, model_id, resp.parsed_output.model_dump(mode="json"))
     return resp.parsed_output
 
 
@@ -230,7 +332,7 @@ def _parse(schema, system: str, user: str, max_tokens: int = 4000):
 def draft_announcement(text: str, today_iso: str, pantry_name: str) -> AnnouncementDraft:
     """Pantry portal: turn a pasted social-media post/flyer into a draft status, event, or closure."""
     return _parse(
-        AnnouncementDraft,
+        "announcement", AnnouncementDraft,
         "You help food pantry volunteers turn an announcement they already wrote into a structured post for a food "
         "assistance map. Classify it as a same-day shelf/status update, a dated distribution event, a closure, or unclear.",
         f"Pantry: {pantry_name}\nToday: {today_iso}\n\nAnnouncement text:\n<<<\n{text[:4000]}\n>>>",
@@ -245,7 +347,7 @@ def _in_text(evidence: str, text: str) -> bool:
 def suggest_structure(text: str) -> StructureSuggestion:
     """Reviewer aid: structured schedule/eligibility suggestions from free text, each backed by a verbatim quote."""
     out: StructureSuggestion = _parse(
-        StructureSuggestion,
+        "structure", StructureSuggestion,
         "Extract FOOD DISTRIBUTION times (not office/thrift/enrollment hours) and explicit eligibility requirements from a "
         "food pantry's text. For every item, copy the exact supporting words into `evidence`.",
         f"Text:\n<<<\n{text[:6000]}\n>>>",
@@ -261,20 +363,154 @@ def suggest_structure(text: str) -> StructureSuggestion:
 def interpret_search(q: str, lang: str) -> SearchIntent:
     """Public search box: natural language -> the app's existing filters. Results still come only from the database."""
     return _parse(
-        SearchIntent,
+        "search", SearchIntent,
         "Convert a person's request for food help in Northern Virginia into search filters. Food groups: "
         f"{', '.join(FOOD_GROUPS)}. Service groups: {', '.join(SERVICE_GROUPS)}. Eligibility filters: "
         f"{', '.join(ELIGIBILITY_FILTERS)}. Use only filters the person asked for. Reply language: {lang}.",
-        q[:300],
-        max_tokens=1500,
+        " ".join(q.lower().split())[:300],  # normalized so repeated searches hit the cache
+        max_tokens=800,
     )
 
 
 def translate(text: str, source: str, target: str) -> str:
     """Translation provider for services/translation.py (stored as unreviewed machine translation)."""
     return _parse(
-        Translation,
+        "translate", Translation,
         f"Translate the text from {source} to {target} for families seeking food assistance. Preserve meaning exactly, "
         "especially requirements, dates, times, names, and phone numbers. Output only the translation.",
         text[:4000],
     ).text
+
+
+# --- AI-assisted web extraction ("AI scraping") ---------------------------------------------------------------------
+
+ServiceType = Literal[tuple(__import__("app.vocab", fromlist=["SERVICE_TYPES"]).SERVICE_TYPES)]  # type: ignore[valid-type]
+
+
+class ExtractedPlace(BaseModel):
+    organization_name: str
+    location_name: str | None
+    address1: str | None = Field(description="Street address exactly as written")
+    city: str | None
+    zip: str | None
+    phone: str | None
+    website: str | None
+    hours_text: str | None = Field(description="Hours copied EXACTLY from the text, or null")
+    eligibility_text: str | None = Field(description="Requirements copied EXACTLY from the text, or null")
+    description: str | None = Field(description="Short description copied EXACTLY from the text, or null")
+    service_types: list[ServiceType]
+    food_types: list[FoodType]
+    evidence: list[str] = Field(description="Exact quotes from the text that show this place offers these services")
+
+
+class PageExtraction(BaseModel):
+    places: list[ExtractedPlace]
+
+
+def _digits(s: str | None) -> str:
+    return re.sub(r"\D", "", s or "")
+
+
+def extract_places(text: str, url: str) -> list[dict]:
+    """Extract assistance locations from one page's text. Every kept field is checked against the page text in code:
+    names, addresses, hours and requirements must appear verbatim; services need a supporting quote. Unchanged pages
+    hit the cache (no cost)."""
+    text = text[:30000]  # bound cost per page (~8k tokens)
+    out: PageExtraction = _parse(
+        "extract", PageExtraction,
+        "List every physical location on this page where people can get help (food, health, mental health, housing, "
+        "benefits, legal, clothing, pets, etc.). Copy names, addresses, hours and requirements exactly as written. Skip "
+        "hotlines without an address and confidential shelter addresses. Use only service types the page states.",
+        f"Page URL: {url}\n\nPage text:\n<<<\n{text}\n>>>", max_tokens=6000)
+    keep = []
+    for p in out.places:
+        if not _in_text(p.organization_name, text):
+            continue
+        d = p.model_dump()
+        for f in ("location_name", "address1", "city", "hours_text", "eligibility_text", "description"):
+            if d[f] and not _in_text(d[f], text):
+                d[f] = None  # not verbatim on the page -> dropped, never guessed
+        if d["phone"] and _digits(d["phone"])[-10:] not in _digits(text):
+            d["phone"] = None
+        if d["zip"] and d["zip"][:5] not in text:
+            d["zip"] = None
+        quotes = [q for q in p.evidence if _in_text(q, text)]
+        if not quotes:
+            d["service_types"], d["food_types"] = [], []
+        d["evidence"] = quotes
+        if d["address1"] or d["phone"]:
+            keep.append(d)
+    return keep
+
+
+class Lead(BaseModel):
+    name: str
+    url: str
+
+
+class Leads(BaseModel):
+    leads: list[Lead]
+
+
+def discover_leads(area: str, topic: str, max_searches: int = 2) -> list[dict]:
+    """Web search for pages that list `topic` providers in `area`. Returns candidate URLs only (they are fetched later
+    with robots.txt checks and extracted with verification). Cached per (area, topic)."""
+    model_id = model("discover")
+    key = _cache_key("discover", model_id, area.lower(), topic.lower())
+    hit = _cache_get(key)
+    if hit is not None:
+        _record("discover", model_id, None, cached=True)
+        return hit["leads"]
+    try:
+        _check_budget()
+    except BudgetExceeded as e:
+        raise AIUnavailable(str(e)) from e
+    import anthropic
+
+    try:
+        resp = _get_client().messages.create(
+            model=model_id, max_tokens=1200,
+            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": max_searches}],
+            system="You find official or organizational web pages that list community assistance providers. Prefer "
+                   "government, nonprofit and provider pages; avoid aggregators. " + GUARD,
+            messages=[{"role": "user", "content": f"Find up to 8 web pages listing {topic} in {area}, Virginia. "
+                                                  "Answer with one line per page: URL | organization or page name."}])
+    except (anthropic.APIConnectionError, anthropic.RateLimitError, anthropic.APIStatusError) as e:
+        raise AIUnavailable("Web discovery is unavailable right now") from e
+    searches = getattr(getattr(resp.usage, "server_tool_use", None), "web_search_requests", 0) or 0
+    _record("discover", model_id, resp.usage, web_searches=searches)
+    leads = []
+    # Real URLs from the search tool results (never model-invented), then any URLs the answer lists.
+    for b in resp.content:
+        if getattr(b, "type", "") == "web_search_tool_result" and isinstance(getattr(b, "content", None), list):
+            for r in b.content:
+                if getattr(r, "url", None):
+                    leads.append({"url": r.url, "name": (getattr(r, "title", "") or "")[:200]})
+    text = "\n".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
+    for m in re.finditer(r"https?://[^\s|)\]>\"']+", text):
+        leads.append({"url": m.group(0).rstrip(".,"), "name": ""})
+    # Social media and third-party aggregators are skipped: secondary data whose terms often forbid scraping.
+    skip = ("facebook.com", "instagram.com", "yelp.com", "twitter.com", "x.com/", "linkedin.com", "youtube.com", "findhelp.org",
+            "foodpantries.org", "feedam.org", "freshfoodnetwork.org", "foodhelpline.org", "benefitsexplorer.com",
+            "needhelppayingbills.com", "211virginia.org", "auntbertha.com", "virginianavigator.org", "homelessshelterdirectory.org")
+    leads = [x for x in {x["url"]: x for x in leads}.values() if not any(d in x["url"] for d in skip)][:10]
+    if leads:  # never cache an empty answer
+        _cache_put(key, "discover", model_id, {"leads": leads})
+    return leads
+
+
+class DuplicateOpinion(BaseModel):
+    verdict: Literal["same_place", "different_places", "unsure"]
+    reasons: list[str]
+
+
+def compare_records(a: dict, b: dict) -> DuplicateOpinion:
+    """Reviewer aid: are two records the same place/program? Advisory only; a reviewer decides."""
+    import json
+
+    return _parse("duplicate", DuplicateOpinion,
+                  "Two records from a community-resource directory may describe the same physical location and program. "
+                  "Compare names, addresses, phones and services. Different programs in the same building are "
+                  "'different_places' if they are separate services. Give short reasons.",
+                  f"Record A:\n{json.dumps(a, sort_keys=True, default=str)[:3000]}\n\nRecord B:\n"
+                  f"{json.dumps(b, sort_keys=True, default=str)[:3000]}", max_tokens=600)

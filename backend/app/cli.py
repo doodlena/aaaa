@@ -378,6 +378,43 @@ def cmd_load_data(a):
     print("done")
 
 
+def cmd_ai_discover(a):
+    """AI web search for provider pages in an area; adds new URLs to config/sources/ai-web-pages.yaml for review."""
+    import yaml
+
+    from app.services import ai
+
+    if not ai.enabled():
+        sys.exit("AI is not enabled (Admin → AI settings)")
+    try:
+        leads = ai.discover_leads(a.area, a.topic, max_searches=a.searches)
+    except ai.AIUnavailable as e:
+        sys.exit(str(e))
+    p = get_settings().config_dir / "sources" / "ai-web-pages.yaml"
+    cfg = yaml.safe_load(p.read_text())
+    have = set(cfg.get("request_urls") or [])
+    new = [x for x in leads if x["url"] not in have]
+    cfg["request_urls"] = sorted(have | {x["url"] for x in new})
+    p.write_text(yaml.safe_dump(cfg, sort_keys=False, allow_unicode=True))
+    for x in leads:
+        print(("NEW  " if x in new else "seen ") + f"{x['url']}  {x['name']}")
+    print(f"{len(new)} new page(s) queued. Review {p.name}, then: lantern ingest --source ai-web-pages --geocode")
+
+
+def cmd_ai_usage(_a):
+    from sqlalchemy import func
+
+    from app.models import AIUsage
+    from app.services import ai
+
+    with _db() as db:
+        rows = db.execute(select(AIUsage.feature, func.count(), func.sum(AIUsage.cost_usd), func.sum(AIUsage.input_tokens),
+                                 func.sum(AIUsage.output_tokens)).group_by(AIUsage.feature)).all()
+    for f, n, c, i, o in rows:
+        print(f"{f:12s} calls={n:4d} tokens_in={i or 0:8d} out={o or 0:7d} cost=${c or 0:.4f}")
+    print(f"this month: ${ai.month_spend():.4f} of ${ai.runtime()['monthly_budget_usd']:.2f} budget")
+
+
 def cmd_evaluate(a):
     from app.research.evaluation import run_pilot_evaluation
 
@@ -430,6 +467,12 @@ def main(argv=None):
     tr.add_argument("--limit", type=int, default=200)
     tr.set_defaults(fn=cmd_translate)
     sub.add_parser("evaluate-pilot", help="write the pilot evaluation report").set_defaults(fn=cmd_evaluate)
+    dsc = sub.add_parser("ai-discover", help="(AI) web-search for provider pages in an area and queue them for extraction")
+    dsc.add_argument("area")
+    dsc.add_argument("topic")
+    dsc.add_argument("--searches", type=int, default=2, help="max web searches (each ~1 cent)")
+    dsc.set_defaults(fn=cmd_ai_discover)
+    sub.add_parser("ai-usage", help="(AI) spend by feature and this month's total vs budget").set_defaults(fn=cmd_ai_usage)
     sub.add_parser("export-snapshot", help="write imported republishable records to data/snapshots/ (commit these)").set_defaults(fn=cmd_export_snapshot)
     ld = sub.add_parser("load-data", help="rebuild listings from data/snapshots/ (no scraping needed)")
     ld.add_argument("--if-empty", action="store_true", help="only load when the database has no real listings yet")

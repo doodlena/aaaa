@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 import { api } from '../../api/client';
 import { ErrorMessage, Loading } from '../../components/Status';
 import { useAsync } from '../../lib/useAsync';
+import { useAI } from '../../state/meta';
+import type { DuplicateAIOpinion } from '../../api/types';
 import { adminError, renderValue, When } from './shared';
 
 /** All pending change proposals and duplicate candidates across resources. */
@@ -103,6 +105,7 @@ export function AdminConflicts() {
                   <td>{d.score}</td>
                   <td className="small">{renderValue(d.reasons)}</td>
                   <td className="row-actions">
+                    <AIOpinion id={d.id} />
                     <button type="button" className="btn btn--primary btn--sm" onClick={() => void decide(() => api.admin.decideDuplicate(d.id, 'merge'), dups.reload)}>
                       {t('admin.merge')}
                     </button>
@@ -119,5 +122,43 @@ export function AdminConflicts() {
         <p className="muted">{t('admin.none')}</p>
       )}
     </div>
+  );
+}
+
+/** Advisory AI comparison of a duplicate pair (cached server-side; the reviewer still decides). */
+function AIOpinion({ id }: { id: number }) {
+  const { t } = useTranslation();
+  const aiFeatures = useAI();
+  const [op, setOp] = useState<DuplicateAIOpinion | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState<string | null>(null);
+  if (!aiFeatures?.structure_suggestions) return null;
+  if (op)
+    return (
+      <div className="small" data-testid="dup-ai-opinion">
+        <strong>{t(`admin.dupAI.verdict.${op.verdict}`)}</strong> <span className="muted">({t('admin.dupAI.advisory')})</span>
+        <ul>{op.reasons.map((r, i) => <li key={i}>{r}</li>)}</ul>
+      </div>
+    );
+  return (
+    <>
+      <button
+        type="button"
+        className="btn btn--secondary btn--sm"
+        disabled={busy}
+        onClick={() => {
+          setBusy(true);
+          setErr(null);
+          api.admin
+            .duplicateAIOpinion(id)
+            .then(setOp)
+            .catch((e: Error) => setErr(e.message))
+            .finally(() => setBusy(false));
+        }}
+      >
+        {busy ? t('admin.dupAI.asking') : t('admin.dupAI.ask')}
+      </button>
+      {err && <span className="form-error small">{err}</span>}
+    </>
   );
 }

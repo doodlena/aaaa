@@ -1,0 +1,17 @@
+id: ai-manual-files
+name: Manually downloaded pages & PDFs (AI-extracted, verified against the file)
+owner: Lantern team (each file cites its original URL in options.citations)
+url: file://data/sources/manual
+adapter: ai_page_extract
+retrieval: file
+formats: [pdf, html, txt]
+jurisdictions: [arlington-county, alexandria-city, falls-church-city, fairfax-county, fairfax-city, loudoun-county, prince-william-county, manassas-city, manassas-park-city]
+enabled: true
+store_raw: true
+publication: permitted_with_attribution
+verified_on: "2026-10-12"
+options:
+  manual_dir: data/sources/manual
+  citations: {}   # filename -> original public URL, e.g. arlington-2026-food-flyer.pdf: https://www.arlingtonva.us/...
+known_limitations: ["Requires AI (Claude). Fields not found verbatim in the file are dropped. Unverified candidates."]
+refresh: null

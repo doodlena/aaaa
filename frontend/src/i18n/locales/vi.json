@@ -946,6 +946,21 @@
         "drafts": "Bản nháp thông báo: chỉ văn bản nơi cung cấp đã dán.",
         "suggestions": "Gợi ý của AI: văn bản nguồn công khai của mục.",
         "never": "Không bao giờ: địa chỉ email, mật khẩu, vị trí hay địa điểm đã lưu."
+      },
+      "fastModelLabel": "Model for everyday tasks",
+      "spendLabel": "AI spend this month",
+      "budgetLabel": "Monthly budget (USD)",
+      "budgetHelp": "AI features pause automatically when this month's estimated spend reaches the budget.",
+      "budgetSaved": "Monthly budget set to ${{amount}}."
+    },
+    "dupAI": {
+      "ask": "Ask AI",
+      "asking": "Asking…",
+      "advisory": "AI opinion — you decide",
+      "verdict": {
+        "same_place": "Likely the same place",
+        "different_places": "Likely different places",
+        "unsure": "Unsure"
       }
     }
   },

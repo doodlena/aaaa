@@ -2,7 +2,7 @@
 from datetime import UTC, datetime, timedelta
 
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy import func, or_, select
+from sqlalchemy import Integer, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.api.public import load_location, location_sources, location_translations
@@ -309,7 +309,9 @@ def ai_suggestions(location_id: int, user: User = Depends(require_admin), db: Se
 
 def _ai_status() -> dict:
     cfg = ai.runtime()
-    return {"enabled": cfg["enabled"], "active": ai.enabled(), "model": cfg["model"], "allowed_models": list(ai.ALLOWED_MODELS),
+    return {"enabled": cfg["enabled"], "active": ai.enabled(), "model": cfg["model"], "fast_model": cfg["fast_model"],
+            "monthly_budget_usd": cfg["monthly_budget_usd"], "month_spend_usd": round(ai.month_spend(), 4),
+            "allowed_models": list(ai.ALLOWED_MODELS),
             "key_source": cfg["key_source"], "key_hint": f"…{cfg['key'][-4:]}" if cfg.get("key") else None}
 
 
@@ -365,6 +367,10 @@ def patch_ai_settings(body: AISettingsIn, user: User = Depends(require_admin), d
         _set(db, "ai_enabled", "true" if body.enabled else "false", user)
     if body.model:
         _set(db, "ai_model", body.model, user)
+    if body.fast_model:
+        _set(db, "ai_fast_model", body.fast_model, user)
+    if body.monthly_budget_usd is not None:
+        _set(db, "ai_monthly_budget_usd", str(body.monthly_budget_usd), user)
     db.commit()
     ai.invalidate()
     return _ai_status()
@@ -374,3 +380,45 @@ def patch_ai_settings(body: AISettingsIn, user: User = Depends(require_admin), d
 def test_ai_settings():
     ai.invalidate()
     return ai.test_connection()
+
+
+@router.get("/ai-usage")
+def ai_usage():
+    from sqlalchemy import func as f
+
+    from app.db import session_factory
+    from app.models import AIUsage
+
+    start = datetime.now(UTC).replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+    with session_factory()() as db:
+        rows = db.execute(select(AIUsage.feature, f.count(), f.sum(AIUsage.cost_usd), f.sum(f.cast(AIUsage.cached, Integer)))
+                          .where(AIUsage.at >= start).group_by(AIUsage.feature)).all()
+    cfg = ai.runtime()
+    return {"month_spend_usd": round(ai.month_spend(), 4), "monthly_budget_usd": cfg["monthly_budget_usd"],
+            "by_feature": [{"feature": r[0], "calls": r[1], "cost_usd": round(r[2] or 0, 4), "cached_calls": int(r[3] or 0)} for r in rows]}
+
+
+@router.post("/duplicates/{dup_id}/ai-opinion")
+def duplicate_ai_opinion(dup_id: int, db: Session = Depends(get_db)):
+    """Advisory AI comparison of the two records behind a duplicate candidate (cached; reviewer still decides)."""
+    if not ai.enabled():
+        raise HTTPException(404, "AI is not enabled")
+    d = db.get(DuplicateCandidate, dup_id)
+    if not d:
+        raise HTTPException(404, "Duplicate candidate not found")
+    loc = db.get(Location, d.location_id)
+    a = {"name": loc.name, "organization": loc.organization.name, "address": loc.address1, "city": loc.city, "zip": loc.zip,
+         "phone": loc.phone, "services": sorted({s.service_type for s in loc.services})}
+    if d.source_record_id:
+        b = (db.get(SourceRecord, d.source_record_id).normalized or {})
+        b = {k: b.get(k) for k in ("organization_name", "location_name", "address1", "city", "zip", "phone")} | {
+            "services": sorted({s.get("service_type") for s in b.get("services", [])})}
+    else:
+        o = db.get(Location, d.other_location_id)
+        b = {"name": o.name, "organization": o.organization.name, "address": o.address1, "city": o.city, "zip": o.zip,
+             "phone": o.phone, "services": sorted({s.service_type for s in o.services})}
+    try:
+        op = ai.compare_records(a, b)
+    except ai.AIUnavailable as e:
+        raise HTTPException(503, str(e)) from None
+    return {"verdict": op.verdict, "reasons": op.reasons, "advisory": True}
