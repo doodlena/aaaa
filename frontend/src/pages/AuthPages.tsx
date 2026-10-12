@@ -29,7 +29,7 @@ function GoogleG() {
   );
 }
 
-export function OAuthButton({ next, link = false, top = false }: { next: string; link?: boolean; top?: boolean }) {
+export function OAuthButton({ next, link = false, below = false }: { next: string; link?: boolean; below?: boolean }) {
   const { t } = useTranslation();
   const provider = useOAuth();
   const [error, setError] = useState<string | null>(null);
@@ -58,7 +58,12 @@ export function OAuthButton({ next, link = false, top = false }: { next: string;
 
   const google = /google/i.test(provider.name);
   return (
-    <div className={`oauth${top ? ' oauth--top' : ''}`}>
+    <div className={`oauth${below ? ' oauth--below' : ''}`}>
+      {below && (
+        <p className="oauth__or" aria-hidden="true">
+          <span>{t('auth.or')}</span>
+        </p>
+      )}
       <button
         type="button"
         className={google ? 'oauth__google' : `btn btn--secondary ${link ? '' : 'btn--lg'}`}
@@ -72,11 +77,6 @@ export function OAuthButton({ next, link = false, top = false }: { next: string;
       {error && (
         <p className="form-error" role="alert">
           {error}
-        </p>
-      )}
-      {top && (
-        <p className="oauth__or" aria-hidden="true">
-          <span>{t('auth.or')}</span>
         </p>
       )}
     </div>
@@ -166,7 +166,7 @@ export function LoginPage() {
     <div className="page page--narrow">
       <h1>{t('auth.signInTitle')}</h1>
       <p>{t('auth.optionalNote')}</p>
-      <OAuthButton next={safeNext(sp.get('next'))} top />
+      <div className="auth-box">
       <form className="form" onSubmit={onSubmit} noValidate aria-describedby={error ? `${id}-err` : undefined}>
         <div className="field">
           <label htmlFor={`${id}-email`}>{t('auth.email')}</label>
@@ -185,6 +185,8 @@ export function LoginPage() {
           {busy ? t('auth.signingIn') : t('auth.signIn')}
         </button>
       </form>
+      <OAuthButton next={safeNext(sp.get('next'))} below />
+      </div>
       <p>
         {t('auth.noAccount')} <Link to={`/register${sp.get('next') ? `?next=${encodeURIComponent(sp.get('next')!)}` : ''}`}>{t('auth.createAccount')}</Link>
       </p>
@@ -226,7 +228,7 @@ export function RegisterPage() {
     <div className="page page--narrow">
       <h1>{t('auth.registerTitle')}</h1>
       <p>{t('auth.registerIntro')}</p>
-      <OAuthButton next={safeNext(sp.get('next'))} top />
+      <div className="auth-box">
       <form className="form" onSubmit={onSubmit} noValidate>
         <div className="field">
           <label htmlFor={`${id}-email`}>{t('auth.email')}</label>
@@ -261,6 +263,8 @@ export function RegisterPage() {
           {busy ? t('auth.creating') : t('auth.createAccount')}
         </button>
       </form>
+      <OAuthButton next={safeNext(sp.get('next'))} below />
+      </div>
       <p className="muted">{t('auth.privacyShort')}</p>
       <p>
         {t('auth.haveAccount')} <Link to="/login">{t('auth.signIn')}</Link>

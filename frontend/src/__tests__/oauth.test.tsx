@@ -35,14 +35,14 @@ describe('OAuth sign-in', () => {
     expect(JSON.parse(sessionStorage.getItem('nfa_oauth_flow')!)).toEqual({ next: '/favorites', link: false });
   });
 
-  it('Google gets the standard button with the G logo, placed above the email form', async () => {
+  it('Google gets the standard button with the G logo, placed below the sign-in button', async () => {
     mockFetch([], { features: { oauth: { enabled: true, provider: 'Google' } } });
     renderApp(<LoginPage />, { route: '/login', path: '/login' });
     const btn = await screen.findByRole('button', { name: 'Continue with Google' });
     expect(btn).toHaveClass('oauth__google');
     expect(btn.querySelector('svg.oauth__logo')).not.toBeNull();
-    const email = screen.getByLabelText('Email');
-    expect(btn.compareDocumentPosition(email) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    const signIn = screen.getByRole('button', { name: 'Sign in' });
+    expect(btn.compareDocumentPosition(signIn) & Node.DOCUMENT_POSITION_PRECEDING).toBeTruthy();
   });
 
   it('finishes sign-in on the callback page, exchanging the code exactly once', async () => {
