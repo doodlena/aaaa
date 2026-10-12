@@ -1,0 +1,199 @@
+{
+  "va08-gap-research": {
+    "url": "https://github.com/doodlena/aaaa/blob/main/config/sources/va08-gap-research.yaml",
+    "pages": [
+      "https://annandalechurch.com/foodministry",
+      "https://ccda.net/find-help/emergency-assistance/clothing/",
+      "https://ccda.net/find-help/medical-mental-healthcare/mental-health-counseling/",
+      "https://englishempowermentcenter.org/for-students/in-person-classes/",
+      "https://foodforothers.org/get-help/neighborhood-sites/",
+      "https://seniorservicesalex.org/programs/transportation/",
+      "https://www.alexandriava.gov/Paratransit",
+      "https://www.alexandriava.gov/commonwealths-attorney/victim-services",
+      "https://www.cathedralstm.org/ministries/english-second-language-esl/",
+      "https://www.clotheslinearlington.org/get-clothing/",
+      "https://www.culmoreclinic.org/patient-enrollment",
+      "https://www.fairfaxcounty.gov/familyservices/employment-and-training/volunteer-income-tax-assistance",
+      "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+      "https://www.fallschurchva.gov/611/Senior-Center",
+      "https://www.ourladyqueenofpeace.org/matthew-25.html",
+      "https://www.tahirih.org/"
+    ]
+  },
+  "ai-manual-files": {
+    "url": "https://github.com/doodlena/aaaa/blob/main/config/sources/ai-manual-files.yaml",
+    "pages": [
+      "https://nami-northernvirginia.org/support/locally-offered-programs/",
+      "https://nvfs.org/our-places/hunger-resource-center/",
+      "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+      "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf"
+    ]
+  },
+  "va08-support-services": {
+    "url": "https://github.com/doodlena/aaaa/blob/main/config/sources/va08-support-services.yaml",
+    "pages": [
+      "https://alexandriava.gov/public-health/location/redella-s-del-pepper-community-resource-center",
+      "https://arlingtonfreeclinic.org/become-a-patient/",
+      "https://carpentersshelter.org/residential-shelters/",
+      "https://neighborhoodhealthva.org/our-locations/",
+      "https://reep.apsva.us/contact-us/",
+      "https://www.alexandriava.gov/dchs/same-day-access",
+      "https://www.alexandriava.gov/economic-support/program/dchs-customer-relations-and-call-center",
+      "https://www.alexandriava.gov/homeless-services/homeless-services",
+      "https://www.alexandriava.gov/workforce-development/location/workforce-development-center-location-and-parking-information",
+      "https://www.arlingtonva.us/Government/Departments/DHS/DHS-At-a-Glance-Locations-Programs-Contact-Information",
+      "https://www.arlingtonva.us/Government/Departments/DHS/Public-Assistance",
+      "https://www.arlingtonva.us/Government/Departments/DHS/Public-Assistance/HSC",
+      "https://www.arlingtonva.us/Government/Programs/Health/Adult-Behavioral-Healthcare",
+      "https://www.arlingtonva.us/Government/Programs/Health/Public-Health/Health-Clinics-and-Services/Women-Infants-and-Children-WIC-Program",
+      "https://www.arlingtonva.us/files/sharedassets/public/v/1/public-assistance/documents/hypo-shelter-sops-2025-2026_final-10.24.25.pdf",
+      "https://www.fairfaxcounty.gov/community-services-board/about/gartlan-center",
+      "https://www.fairfaxcounty.gov/community-services-board/about/locations",
+      "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
+      "https://www.fairfaxcounty.gov/familyservices/office-locations",
+      "https://www.fairfaxcounty.gov/health/clinics/mount-vernon-district-office",
+      "https://www.fairfaxcounty.gov/health/women-infants-children",
+      "https://www.fairfaxcounty.gov/homeless/emergency-shelters",
+      "https://www.fallschurchva.gov/684/Human-Services",
+      "https://www.unitedcommunity.org/locations/",
+      "https://www.vplc.org/legal-services-of-northern-virginia/"
+    ]
+  },
+  "nova-reproductive-health": {
+    "url": "https://github.com/doodlena/aaaa/blob/main/config/sources/nova-reproductive-health.yaml",
+    "pages": [
+      "https://api.reproductivehealthservices.gov/v1/clinics/c44d68d4-bf8c-4315-a3c4-ddb3568476ff",
+      "https://hwnova.org/locations/herndon-location/",
+      "https://hwnova.org/locations/leesburg-location/",
+      "https://hwnova.org/locations/reston-location/",
+      "https://hwnova.org/locations/sterling/",
+      "https://hwnova.org/locations/sully-herndon/",
+      "https://lunerahealth.org/location/dumfries/",
+      "https://lunerahealth.org/location/manassas/",
+      "https://lunerahealth.org/location/woodbridge/",
+      "https://neighborhoodhealthva.org/our-locations/",
+      "https://www.alexandriava.gov/health-department/program/clinical-services",
+      "https://www.fairfaxcounty.gov/health/clinics/annandale-district-office",
+      "https://www.fairfaxcounty.gov/health/clinics/franconia-springfield-public-health-center",
+      "https://www.fairfaxcounty.gov/health/clinics/herndon-reston-district-office",
+      "https://www.fairfaxcounty.gov/health/clinics/mount-vernon-district-office",
+      "https://www.inova.org/our-services/inova-cares-for-women",
+      "https://www.loudoun.gov/1258/Health-Clinics",
+      "https://www.vdh.virginia.gov/prince-william/clinical-services/"
+    ]
+  },
+  "synthetic-fixtures": {
+    "url": "https://github.com/doodlena/aaaa/blob/main/config/sources/synthetic-fixtures.yaml",
+    "pages": [
+      "https://example.org/synthetic/syn-001",
+      "https://example.org/synthetic/syn-002",
+      "https://example.org/synthetic/syn-003",
+      "https://example.org/synthetic/syn-004",
+      "https://example.org/synthetic/syn-005",
+      "https://example.org/synthetic/syn-006",
+      "https://example.org/synthetic/syn-007",
+      "https://example.org/synthetic/syn-008"
+    ]
+  },
+  "va08-web-research": {
+    "url": "https://github.com/doodlena/aaaa/blob/main/config/sources/va08-web-research.yaml",
+    "pages": [
+      "https://accacares.org/foodpantry/",
+      "https://afac.org/get-groceries/",
+      "https://ccda.net/wp-content/uploads/2025/09/Website-Pantry-Listing-9.12.2025.pdf",
+      "https://fcswecare.org/programs/",
+      "https://grovetonbaptistchurch.org/",
+      "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+      "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+      "https://www.culmoreumc.org/food--clothing-ministry.html",
+      "https://www.hungerfreealexandria.com/i-need-assistance",
+      "https://www.risinghopeumc.org/programs",
+      "https://www.unitedcommunity.org/food/"
+    ]
+  },
+  "nova-pet-support": {
+    "url": "https://github.com/doodlena/aaaa/blob/main/config/sources/nova-pet-support.yaml",
+    "pages": [
+      "https://anicira.org/locations/anicira-manassas/",
+      "https://hsfc.org/outreach/ani-meals-program/",
+      "https://petsofthehomeless.org/get-help/find-locations/animal-welfare-league-of-alexandria/",
+      "https://petsofthehomeless.org/get-help/find-locations/dulles-south-food-pantry/",
+      "https://pwspca.org/food/",
+      "https://www.awla.org/services/for-pets/clinics/",
+      "https://www.awla.org/services/for-pets/communitycare/",
+      "https://www.awla.org/services/for-pets/spay-neuter-vouchers/",
+      "https://www.awla.org/services/for-pets/veterinary-assistance/",
+      "https://www.awla.org/services/for-you/help-program/",
+      "https://www.awla.org/services/for-you/pet-support-pantry/",
+      "https://www.fairfaxcounty.gov/animalservices/petresources",
+      "https://www.fairfaxcounty.gov/animalservices/petresources/PetHaven",
+      "https://www.fairfaxcounty.gov/animalservices/petresources/vaccine-and-microchip-clinic",
+      "https://www.fairfaxcounty.gov/animalservices/spay-and-neuter-voucher-program",
+      "https://www.loudoun.gov/3020/Pet-Pantry",
+      "https://www.loudoun.gov/3906/Low-Cost-Resources"
+    ]
+  },
+  "hrsa-health-centers": {
+    "url": "https://findahealthcenter.hrsa.gov/",
+    "pages": []
+  },
+  "ai-website-enrichment": {
+    "url": "https://github.com/doodlena/aaaa/blob/main/config/sources/ai-website-enrichment.yaml",
+    "pages": []
+  },
+  "nova-food-research": {
+    "url": "https://github.com/doodlena/aaaa/blob/main/config/sources/nova-food-research.yaml",
+    "pages": [
+      "https://ccda.net/find-help/food/sterling-food-pantry/",
+      "https://dsfp.org/get-assistance",
+      "https://findfreedomtoday.org/",
+      "https://foodforothers.org/get-help/",
+      "https://foodforothers.org/get-help/neighborhood-sites/",
+      "https://haymarketfoodpantry.org/find-help/",
+      "https://lortonaction.org/food-pantry/",
+      "https://njlclovettsville.org/food-pantry",
+      "https://www.cornerstonesva.org/get-help",
+      "https://www.linkagainsthunger.org/get-help",
+      "https://www.loudounfeeds.org/get-help",
+      "https://www.poweredbyspark.org/programs/other_pwc_food_resources",
+      "https://www.roundhillumc.org/food-pantry",
+      "https://www.sevenloavesmiddleburg.org/regular-distrubution/",
+      "https://www.sterlingumc.org/grace",
+      "https://www.stjamesleesburg.org/grace-to-go",
+      "https://www.tolministries.org/branches/food/",
+      "https://www.tolministries.org/food-pantry/",
+      "https://www.wfcmva.org/get-help"
+    ]
+  },
+  "nova-support-services": {
+    "url": "https://github.com/doodlena/aaaa/blob/main/config/sources/nova-support-services.yaml",
+    "pages": [
+      "https://loudounfreeclinic.org/location/",
+      "https://www.fairfaxcounty.gov/community-services-board/facility/chantilly-office",
+      "https://www.fairfaxcounty.gov/community-services-board/facility/reston-northwest-center",
+      "https://www.fairfaxcounty.gov/community-services-board/sharon-bulova-center-community-health",
+      "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
+      "https://www.fairfaxcounty.gov/familyservices/office-locations",
+      "https://www.fairfaxcounty.gov/health/clinics/franconia-springfield-public-health-center",
+      "https://www.fairfaxcounty.gov/health/clinics/herndon-reston-district-office",
+      "https://www.fairfaxcounty.gov/health/women-infants-children",
+      "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+      "https://www.fairfaxcounty.gov/neighborhood-community-services/transportation/tops",
+      "https://www.fcps.edu/academics/adult-and-community-education-ace/adult-esol",
+      "https://www.loudoun.gov/1258/Health-Clinics",
+      "https://www.loudoun.gov/1578/WIC-Program",
+      "https://www.loudoun.gov/1592/Workforce-Resource-Center",
+      "https://www.loudoun.gov/6274/Same-Day-Access",
+      "https://www.loudoun.gov/6385/Shenandoah-Office-Building-Relocation-of",
+      "https://www.loudoun.gov/Facilities/Facility/Details/Ashburn-Senior-Center-177",
+      "https://www.loudoun.gov/Facilities/Facility/Details/Carver-Center-70",
+      "https://www.loudoun.gov/Facilities/Facility/Details/Dulles-South-Senior-Center-73",
+      "https://www.loudoun.gov/Facilities/Facility/Details/Loudoun-County-Senior-Center-at-Cascades-72",
+      "https://www.loudoun.gov/Facilities/Facility/Details/The-Senior-Center-of-Leesburg-74",
+      "https://www.loudoun.gov/familyservices",
+      "https://www.loudoun.gov/mhsads",
+      "https://www.vplc.org/legal-services-of-northern-virginia/",
+      "https://www.wfcmva.org/get-help"
+    ]
+  }
+}

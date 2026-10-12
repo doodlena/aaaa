@@ -628,7 +628,47 @@
       "For pantries: paste a Facebook post or flyer and AI fills in today's status or event for staff to check and post.",
       "For reviewers: AI suggests structured hours and requirements, and helps spot duplicate listings. A person approves every change."
     ],
-    "aiSafety": "Privacy: only the words you type (or public provider text) are sent to the AI. Never your location, name, or account."
+    "aiSafety": "Privacy: only the words you type (or public provider text) are sent to the AI. Never your location, name, or account.",
+    "copy": {
+      "lead": "Finding help shouldn't be complicated. {{app}} makes it easier for people in Northern Virginia to find food, healthcare, housing, and other community resources, all in one place.",
+      "goal": "Our goal is to help you find the support you need, close to home.",
+      "howTitle": "How {{app}} works",
+      "how": "We bring together information from local nonprofits, government agencies, and service providers to help you find nearby resources.",
+      "search": "You can search for services, explore the map, or simply describe what you're looking for. We use AI to make searching easier and organize information, but a person reviews listings before they're published.",
+      "providers": "Organizations can also share updates about their hours, availability, and services.",
+      "accuracyTitle": "Keeping information accurate",
+      "accuracy": "We aim to review listings at least every 90 days and clearly label information that may need updating.",
+      "contact": "Because hours, requirements, and availability can change, we recommend contacting an organization before visiting.",
+      "privacyTitle": "Your privacy matters",
+      "privacyIntro": "{{app}} is free to use, and you don't need an account to find help.",
+      "privacy": {
+        "location": {
+          "title": "Your location stays private.",
+          "body": "If you choose to share your location, it's used to find nearby resources and isn't stored."
+        },
+        "accounts": {
+          "title": "Accounts are optional.",
+          "body": "You can create one to save favorite places and preferences."
+        },
+        "ads": {
+          "title": "No ads or tracking.",
+          "body": "We don't collect personal information for advertising."
+        },
+        "ai": {
+          "title": "Responsible AI use.",
+          "body": "AI features process the words you enter, not your name, account information, or location."
+        }
+      },
+      "sourcesTitle": "Where our information comes from",
+      "sourcesIntro": "{{app}} uses publicly available information from trusted local organizations, government agencies, and service providers.",
+      "examples": "Some of our sources include:",
+      "providerSources": "We also use information published directly by individual service providers.",
+      "allSources": "All sources",
+      "reminderTitle": "A quick reminder",
+      "reminder": "{{app}} is an independent resource guide and is not affiliated with the organizations listed. We do our best to provide accurate information, but services and availability aren't guaranteed.",
+      "help": "For community assistance, call 211. For mental health crisis support, call or text 988. For emergencies, call 911.",
+      "providerPages": "Các trang nguồn gốc"
+    }
   },
   "reviewStatus": {
     "candidate": "Ứng viên",
