@@ -261,14 +261,15 @@ def _record_from_lookup(loc: Location, out: dict, stats: dict) -> dict | None:
     if not text.strip():
         stats["nothing_found"] += 1
         return None
-    try:
-        st = ai.suggest_structure(text)
-    except ai.AIUnavailable:
-        return None
     types = sorted({s.service_type for s in loc.services}) or ["other"]
     food = [t for t in types if t in FOOD_TYPES]
-    sched = [{"kind": "distribution", "weekday": x.weekday, "opens": x.opens, "closes": x.closes, "week_of_month": x.week_of_month,
-              "appointment_only": False, "notes": None} for x in st.distribution_schedules] if food else []
+    try:
+        st = ai.suggest_structure(text, hours="distribution" if food else "operating")
+    except ai.AIUnavailable:
+        return None
+    # Food: distribution times on the food service. Other services: the location's regular open hours.
+    sched = [{"kind": "distribution" if food else "operating_hours", "weekday": x.weekday, "opens": x.opens, "closes": x.closes,
+              "week_of_month": x.week_of_month, "appointment_only": False, "notes": None} for x in st.distribution_schedules]
     eligibility = [{"requirement_type": e.requirement_type, "status": e.status, "details": e.evidence, "values": {}} for e in st.eligibility]
     if not sched and not eligibility:
         stats["nothing_found"] += 1
@@ -277,13 +278,14 @@ def _record_from_lookup(loc: Location, out: dict, stats: dict) -> dict | None:
     stats["with_eligibility"] += bool(eligibility)
     src = next((s["url"] for f in (hours if sched else []) + elig + hours for s in f["sources"]), None)
     lat, lon = _coord(loc)
-    services = [{"service_type": t, "description": None, "food_types": [], "schedules": sched if t == (food[0] if food else None) else []}
+    services = [{"service_type": t, "description": None, "food_types": [], "schedules": sched if food and t == food[0] else []}
                 for t in types]
     from app.ingestion.candidate import CandidateResource
 
     rec = {"external_id": f"lookup-{loc.id}", "source_url": src, "organization_name": loc.organization.name, "location_name": loc.name,
            "address1": loc.address1, "address2": loc.address2, "city": loc.city, "zip": loc.zip, "lat": lat, "lon": lon,
-           "geocode_source": "existing listing", "phone": loc.phone, "services": services, "eligibility": eligibility, "schedules": [],
+           "geocode_source": "existing listing", "phone": loc.phone, "services": services, "eligibility": eligibility,
+           "schedules": [] if food else sched,
            "notes": "AI web lookup, cited: " + " | ".join(s["quote"][:150] for f in hours + elig for s in f["sources"][:1])[:600]}
     CandidateResource(**rec)  # validate
     return rec

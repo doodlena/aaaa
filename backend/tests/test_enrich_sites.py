@@ -14,7 +14,7 @@ def test_ai_fill_uses_structure_step_when_parser_failed(monkeypatch):
         distribution_schedules=[ai.ScheduleSuggestion(weekday=4, opens="10:00", closes="15:00", week_of_month=None,
                                                       evidence="open from 10 AM to 3 PM")],
         eligibility=[ai.EligibilitySuggestion(requirement_type="photo_id", status="not_required", evidence="No ID required.")])
-    monkeypatch.setattr(ai, "suggest_structure", lambda text: out)
+    monkeypatch.setattr(ai, "suggest_structure", lambda text, hours="distribution": out)
     rec, stats = _rec(), {}
     enrich_sites._ai_fill(rec, FOOD_OK, stats)
     assert rec["services"][0]["schedules"][0] | {} == {"kind": "distribution", "weekday": 4, "opens": "10:00", "closes": "15:00",
@@ -43,7 +43,7 @@ def _loc(types=("pantry_pickup",)):
 def test_lookup_record_built_only_from_cited_quotes(monkeypatch):
     seen = []
 
-    def fake_structure(text):
+    def fake_structure(text, hours="distribution"):
         seen.append(text)
         return ai.StructureSuggestion(
             distribution_schedules=[ai.ScheduleSuggestion(weekday=5, opens="09:00", closes="11:00", week_of_month=None,
@@ -67,12 +67,20 @@ def test_lookup_without_quotes_or_for_non_food_adds_no_times(monkeypatch):
     monkeypatch.setattr(enrich_sites, "_coord", lambda loc: (38.85, -77.3))
     stats = {"with_hours": 0, "with_eligibility": 0, "nothing_found": 0}
     assert enrich_sites._record_from_lookup(_loc(), {"fields": []}, stats) is None
-    monkeypatch.setattr(ai, "suggest_structure", lambda text: ai.StructureSuggestion(
-        distribution_schedules=[ai.ScheduleSuggestion(weekday=1, opens="09:00", closes="10:00", week_of_month=None, evidence="x")],
-        eligibility=[]))
-    out = {"fields": [{"field": "hours", "value": "v", "sources": [{"url": "https://c.example.org", "quote": "Mon 9-10"}]}]}
-    assert enrich_sites._record_from_lookup(_loc(("legal_aid",)), out, stats) is None  # no distribution times on non-food
-    assert stats["nothing_found"] == 2
+    kinds = []
+
+    def fake(text, hours="distribution"):
+        kinds.append(hours)
+        return ai.StructureSuggestion(distribution_schedules=[ai.ScheduleSuggestion(weekday=1, opens="09:00", closes="17:00",
+                                                                                    week_of_month=None, evidence="x")], eligibility=[])
+
+    monkeypatch.setattr(ai, "suggest_structure", fake)
+    out = {"fields": [{"field": "hours", "value": "v", "sources": [{"url": "https://c.example.org", "quote": "Mon 9-5"}]}]}
+    rec = enrich_sites._record_from_lookup(_loc(("legal_aid",)), out, stats)
+    # non-food: office hours on the location, never as food distribution times
+    assert kinds == ["operating"] and rec["services"][0]["schedules"] == []
+    assert rec["schedules"][0]["kind"] == "operating_hours"
+    assert stats["nothing_found"] == 1
 
 
 def json_dumps(x):

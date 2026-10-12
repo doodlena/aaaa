@@ -347,12 +347,15 @@ def _in_text(evidence: str, text: str) -> bool:
     return bool(evidence.strip()) and norm(evidence) in norm(text)
 
 
-def suggest_structure(text: str) -> StructureSuggestion:
-    """Reviewer aid: structured schedule/eligibility suggestions from free text, each backed by a verbatim quote."""
+def suggest_structure(text: str, hours: str = "distribution") -> StructureSuggestion:
+    """Reviewer aid: structured schedule/eligibility suggestions from free text, each backed by a verbatim quote.
+    hours="distribution" extracts food distribution times only; hours="operating" extracts a service's regular open hours."""
+    what = ("FOOD DISTRIBUTION times (not office/thrift/enrollment hours)" if hours == "distribution" else
+            "the service's REGULAR OPEN HOURS (office/clinic/walk-in hours; not holiday or one-off hours)")
     out: StructureSuggestion = _parse(
         "structure", StructureSuggestion,
-        "Extract FOOD DISTRIBUTION times (not office/thrift/enrollment hours) and explicit eligibility requirements from a "
-        "food pantry's text. For every item, copy the exact supporting words into `evidence`.",
+        f"Extract {what} and explicit eligibility requirements from an assistance provider's text. Put the hours in "
+        "`distribution_schedules`. For every item, copy the exact supporting words into `evidence`.",
         f"Text:\n<<<\n{text[:6000]}\n>>>",
     )
     out.distribution_schedules = [s for s in out.distribution_schedules
