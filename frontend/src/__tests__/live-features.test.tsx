@@ -202,10 +202,19 @@ describe('pantry portal', () => {
     expect(screen.queryByLabelText('Announcement text')).toBeNull();
   });
 
-  it('sends signed-out visitors to sign in', async () => {
+  it('explains access to signed-out visitors on the portal front page', async () => {
     mockFetch([]);
     renderApp(<PantryRoutes />, { route: '/pantry', path: '/pantry/*' });
-    await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('/login?next=%2Fpantry'));
+    expect(await screen.findByRole('heading', { level: 1, name: 'For food pantries and service providers' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Create a free account' })).toHaveAttribute('href', '/register?next=%2Fpantry');
+    expect(screen.getByRole('link', { name: 'Sign in' })).toHaveAttribute('href', '/login?next=%2Fpantry');
+    expect(screen.getByText('3. We confirm with your organization')).toBeInTheDocument();
+  });
+
+  it('sends signed-out visitors on deeper portal pages to sign in', async () => {
+    mockFetch([]);
+    renderApp(<PantryRoutes />, { route: '/pantry/5', path: '/pantry/*' });
+    await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('/login?next=%2Fpantry%2F5'));
   });
 });
 

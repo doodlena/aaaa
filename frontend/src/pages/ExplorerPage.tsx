@@ -16,6 +16,7 @@ import {
   buildSearchQuery,
   DEFAULT_FILTERS,
   filtersFromURL,
+  mergePreferences,
   filtersToURL,
   RADII,
   REGION_CENTER,
@@ -27,6 +28,7 @@ import { formatAddress } from '../lib/format';
 import { toggleNeedPatch } from '../lib/needs';
 import { useAsync } from '../lib/useAsync';
 import { useMediaQuery } from '../lib/useMediaQuery';
+import { useAuth } from '../state/auth';
 import { createSelectionStore, useSelection } from '../state/selection';
 
 const MapView = lazy(() => import('../components/MapView'));
@@ -44,6 +46,22 @@ export default function ExplorerPage() {
   useEffect(() => {
     setFilters(filtersFromURL(new URLSearchParams(spKey)));
   }, [spKey]);
+  // Signed in: saved preferences fill in whatever the URL doesn't choose (once per visit; "Ignore" undoes it).
+  const { user } = useAuth();
+  const prefsTried = useRef(false);
+  const [prefsUndo, setPrefsUndo] = useState<{ before: string; applied: string } | null>(null);
+  useEffect(() => {
+    if (!user || prefsTried.current) return;
+    prefsTried.current = true;
+    const cur = new URLSearchParams(spKey);
+    const merged = mergePreferences(filtersFromURL(cur), cur, user.preferences);
+    const next = filtersToURL(merged);
+    if (cur.get('view')) next.set('view', cur.get('view')!);
+    if (next.toString() !== cur.toString()) {
+      setPrefsUndo({ before: spKey, applied: next.toString() });
+      setSp(next, { replace: true });
+    }
+  }, [user, spKey, setSp]);
   const viewId = Number(sp.get('view')) || null;
   const query = buildSearchQuery(filters, PAGE_SIZE);
   const { data, error, loading, reload } = useAsync((signal) => api.search(query, signal), [query]);
@@ -320,6 +338,22 @@ export default function ExplorerPage() {
             <ErrorMessage error={error} onRetry={reload} title={t('explorer.errorTitle')} />
           ) : data ? (
             <div aria-busy={loading}>
+              {prefsUndo && prefsUndo.applied === spKey && (
+                <p className="prefs-note" role="status">
+                  <Icon name="check" size={16} /> {t('explorer.prefsApplied')}{' '}
+                  <button
+                    type="button"
+                    className="link-btn"
+                    onClick={() => {
+                      setSp(new URLSearchParams(prefsUndo.before), { replace: true });
+                      setPrefsUndo(null);
+                    }}
+                  >
+                    {t('explorer.prefsIgnore')}
+                  </button>{' '}
+                  · <Link to="/account">{t('explorer.prefsEdit')}</Link>
+                </p>
+              )}
               {loading && <p className="results__refreshing" role="status">{t('explorer.updating')}</p>}
               <ResultsList
                 data={data}

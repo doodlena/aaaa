@@ -487,3 +487,13 @@ def test_auto_refresh_cycle_and_admin_status(admin_client, db, monkeypatch, tmp_
     assert st["last_run"] and st["hour_local"] == 4
     nxt = scheduler._next_run(datetime(2026, 10, 12, 12, 0, tzinfo=UTC))
     assert nxt.astimezone(TZ).hour == 4 and nxt > datetime(2026, 10, 12, 12, 0, tzinfo=UTC)
+
+
+def test_contact_email_is_configurable_and_can_be_hidden(client, monkeypatch):
+    from app.config import get_settings
+
+    s = get_settings()
+    monkeypatch.setattr(s, "contact_email", "help@example.org")
+    assert client.get("/api/meta/features").json()["contact_email"] == "help@example.org"
+    monkeypatch.setattr(s, "contact_email", "")
+    assert client.get("/api/meta/features").json()["contact_email"] is None

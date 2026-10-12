@@ -33,7 +33,8 @@
     "crisisLead": "In crisis?",
     "call988": "Call 988",
     "text988": "Text 988",
-    "emergency": "Emergency:"
+    "emergency": "Emergency:",
+    "contactLead": "Run a food pantry or service? Questions, corrections or access to post updates:"
   },
   "common": {
     "loading": "Loading…",
@@ -356,7 +357,10 @@
     "nameSearchPlaceholder": "e.g. church, Catholic Charities, clinic",
     "nameSearchGo": "Search",
     "nameSearchClear": "Clear",
-    "regionCenter": "Northern Virginia (center)"
+    "regionCenter": "Northern Virginia (center)",
+    "prefsApplied": "Using your saved preferences.",
+    "prefsIgnore": "Ignore for this search",
+    "prefsEdit": "Change them"
   },
   "filters": {
     "title": "Filters",
@@ -926,7 +930,14 @@
       "approve": "Approve",
       "reject": "Reject",
       "revoke": "Remove access",
-      "done": "Saved: {{status}}"
+      "done": "Saved: {{status}}",
+      "addedByStaff": "Added by approved staff of this listing.",
+      "noteToRequester": "Note to requester",
+      "rejectReason": "Reason (shown to the requester)",
+      "rejectReasonHint": "For example: \"We couldn't reach your office. Please add a phone number we can call.\"",
+      "rejectConfirm": "Decline request",
+      "pendingBadge_one": "{{count}} request waiting",
+      "pendingBadge_other": "{{count}} requests waiting"
     },
     "reports": {
       "nav": "Community reports",
@@ -1298,7 +1309,14 @@
       "message": "Message to the reviewer",
       "send": "Send for review",
       "sent": "Sent for review. A reviewer will check it before anything changes.",
-      "nothing": "Fill in at least one thing to change."
+      "nothing": "Fill in at least one thing to change.",
+      "email": "Public email",
+      "languages": "Languages staff speak (codes, e.g. en, es)",
+      "wheelchair": "Wheelchair accessible",
+      "yes": "Yes",
+      "no": "No",
+      "notSure": "Not sure",
+      "accessNotes": "Accessibility notes (ramps, parking, entrance)"
     },
     "reports": {
       "title": "Reports from the community",
@@ -1340,6 +1358,76 @@
         "claimed": "Claimed",
         "closed": "Closed"
       }
+    },
+    "requestedOn": "requested {{date}}",
+    "reviewerNote": "Note from the site team",
+    "revokedHint": "Contact the site team if you need access again.",
+    "withdraw": "Withdraw request",
+    "sendAgain": "Send the request again",
+    "confirm": {
+      "title": "Is everything on your listing correct?",
+      "lead": "If the hours, requirements and contact details shown on your public page are right, confirm it. Your listing then shows as verified, with today's date.",
+      "notYet": "Not yet confirmed by your organization or the site team.",
+      "lastVerified": "Last verified {{date}}.",
+      "pendingFirst_one": "{{count}} correction you sent is still waiting for review. Confirm after it's reviewed.",
+      "pendingFirst_other": "{{count}} corrections you sent are still waiting for review. Confirm after they're reviewed.",
+      "notes": "Note (what you checked)",
+      "button": "Yes, it's all correct",
+      "done": "Thank you. Your listing is now marked verified as of today.",
+      "blocked": "Some corrections are still waiting for review. Once they're reviewed, you can confirm the listing."
+    },
+    "staff": {
+      "title": "People who can post",
+      "you": "you",
+      "remove": "Remove",
+      "removeYes": "Yes, remove",
+      "howTo": "Add a colleague so they can post updates too. They need a free account on this site first; we don't send emails.",
+      "email": "Their account email",
+      "add": "Add colleague",
+      "added": "{{email}} can now post for this listing.",
+      "noAccount": "No account uses that email yet. Ask your colleague to create a free account, then add them.",
+      "already": "That person already has access, or their access was removed by the site team.",
+      "missing": "Enter their email and role."
+    },
+    "landing": {
+      "title": "For food pantries and service providers",
+      "lead": "Keep your listing accurate and tell families what's happening today: open or closed, what's on the shelf, special distributions. It's free.",
+      "create": "Create a free account",
+      "signIn": "Sign in",
+      "stepsTitle": "How to get access",
+      "steps": {
+        "account": {
+          "title": "1. Create a free account",
+          "body": "Use your work email if you have one. Signing in with Google works too."
+        },
+        "request": {
+          "title": "2. Find your listing and request access",
+          "body": "Search by address or ZIP, pick your location, and tell us your role and how we can confirm you (for example, your office phone)."
+        },
+        "review": {
+          "title": "3. We confirm with your organization",
+          "body": "A site team member calls or emails your organization using its public contact details, usually within a few days."
+        },
+        "post": {
+          "title": "4. Post updates any time",
+          "body": "Once approved, your updates appear on your public listing right away, labelled as posted by your organization."
+        }
+      },
+      "canTitle": "What you can do",
+      "can": {
+        "live": "Post today's status and what's on the shelf",
+        "events": "Announce special distributions and events",
+        "closures": "Post holiday and weather closures",
+        "corrections": "Correct hours, requirements and contact details (reviewed before they change)",
+        "reports": "Answer reports from families",
+        "staff": "Add colleagues so they can post too",
+        "surplus": "Offer extra food to other pantries on the surplus board"
+      },
+      "free": "There is no cost. We never sell or share your information."
+    },
+    "contact": {
+      "questions": "Questions or need access? Email",
+      "claimHelp": "Need help with your claim? Email"
     }
   },
   "needs": {

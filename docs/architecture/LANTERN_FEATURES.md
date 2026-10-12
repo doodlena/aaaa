@@ -15,9 +15,16 @@ stale. Lantern is a **live, two-way connection**:
 
 ## Pantry portal: trust model
 
-1. A signed-in person requests access to a listing. They give a role and how to reach them.
+Signed-out visitors to `/pantry` see a page explaining what services can do and how access works (guide for providers:
+`docs/providers/PROVIDER_GUIDE.md`).
+
+1. A signed-in person requests access to a listing. They give a role and how to reach them. Limits: 10 requests per
+   hour and 10 waiting at once per person; role ≤120 and note ≤1,000 characters.
 2. An admin confirms the person **by calling the pantry's listed phone number**, then approves the request. Every
-   decision is in the audit log.
+   decision is in the audit log. The admin menu shows a badge with the number of waiting requests (there is no email
+   service). A decline can carry a reason, which the requester sees on their portal page; they can then send the
+   request again with better details. A pending request can be withdrawn. Access an admin *removed* (revoked) can only
+   be restored by an admin.
 3. Approved staff can:
    - **Post live status** (open / limited / out / closed) and **items with stock levels** (plenty / some / low).
      These publish immediately as "Posted by the pantry". They come from approved staff and expire on their own (end
@@ -27,6 +34,14 @@ stale. Lantern is a **live, two-way connection**:
    - **Suggest corrections** to hours, eligibility, or contact details. These go into the review queue as change
      proposals (`origin=provider`) and **never overwrite verified data directly**.
    - **Answer community reports** and use the **surplus board**.
+   - **Add colleagues** who already have an account (no email is sent), and remove them. The added membership records
+     who vouched for it (`added_by_id`) and is audited. Admins can still revoke anyone.
+   - **Confirm the listing is correct.** This records a `verify` action with method `provider_submission`, attributed
+     to that admin-approved person, so the listing shows as verified with today's date. It is refused while change
+     proposals are still pending, so a provider can't confirm data that is about to change.
+
+Every `/api/provider/locations/{id}/…` endpoint checks the caller is approved staff for **that** listing (or an admin);
+`tests/test_provider_portal.py` checks each one returns 403 for another listing. Writes need the session's CSRF token.
 
 ## Community reports
 

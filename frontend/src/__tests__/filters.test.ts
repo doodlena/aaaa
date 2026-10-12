@@ -80,3 +80,25 @@ describe('explorer URL state', () => {
     expect(activeFilterCount({ ...DEFAULT_FILTERS, food_groups: ['a', 'b'], wheelchair: true, schedule: 'today' })).toBe(4);
   });
 });
+
+describe('mergePreferences', () => {
+  const prefs = { radius_km: 16, sort: 'name', service_groups: ['walk_up'], eligibility: ['no_id_required'], wheelchair: true, language_filter: 'es' };
+  it('fills in only what the URL does not choose', async () => {
+    const { mergePreferences } = await import('../lib/filters');
+    const sp = new URLSearchParams('lat=38.8&lon=-77.1&service_group=pantry');
+    const f = mergePreferences(filtersFromURL(sp), sp, prefs);
+    expect(f.service_groups).toEqual(['pantry']); // the URL's choice wins
+    expect(f.radius_km).toBe(16);
+    expect(f.sort).toBe('name');
+    expect(f.eligibility).toEqual(['no_id_required']);
+    expect(f.wheelchair).toBe(true);
+    expect(f.language).toBe('es');
+  });
+  it('leaves name searches and people without preferences alone', async () => {
+    const { mergePreferences } = await import('../lib/filters');
+    const sp = new URLSearchParams('q=church');
+    expect(mergePreferences(filtersFromURL(sp), sp, prefs)).toEqual(filtersFromURL(sp));
+    const plain = new URLSearchParams('lat=38.8&lon=-77.1');
+    expect(mergePreferences(filtersFromURL(plain), plain, null)).toEqual(filtersFromURL(plain));
+  });
+});

@@ -393,6 +393,8 @@ export interface AITestResult {
 // ---------- features, visit plan, reports, pantry portal, AI ----------
 export interface Features {
   app_name: string;
+  /** Public contact for services/providers; null hides it. */
+  contact_email?: string | null;
   demo_mode: boolean;
   /** Optional sign-in with an OpenID Connect provider; `provider` is its display name (may be empty). */
   oauth?: { enabled: boolean; provider: string };
@@ -429,6 +431,20 @@ export interface ProviderPantry {
   live?: LiveShelf | null;
   open_reports?: number;
   pending_changes?: number;
+  requested_at?: string | null;
+  decided_at?: string | null;
+  /** The reviewer's note to the requester (e.g. why a request was declined). */
+  decision_note?: string | null;
+  verification_label?: string;
+  last_verified_at?: string | null;
+}
+export interface StaffMember {
+  membership_id: number;
+  email: string;
+  role_title: string;
+  status: string;
+  is_you: boolean;
+  since: string | null;
 }
 export interface ProviderMe {
   items: ProviderPantry[];
@@ -487,6 +503,8 @@ export interface AdminClaim {
   location_name: string;
   location_phone: string | null;
   created_at: string | null;
+  decision_note?: string | null;
+  added_by_staff?: boolean;
 }
 export interface AdminReport {
   id: number;

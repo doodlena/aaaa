@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router';
 import { useAuth } from '../state/auth';
-import { useMeta } from '../state/meta';
+import { useContactEmail, useMeta } from '../state/meta';
 import { BrandLockup, LanternMark } from './Brand';
 import { Icon } from './Icon';
 import { OfflineBanner } from './OfflineBanner';
@@ -24,6 +24,7 @@ export function Layout() {
   const { t } = useTranslation();
   const { user, logout } = useAuth();
   const { appName } = useMeta();
+  const contactEmail = useContactEmail();
   const location = useLocation();
   // Default title on every route change. A layout effect runs before pages' passive effects, so pages can override it.
   useLayoutEffect(() => {
@@ -127,6 +128,11 @@ export function Layout() {
             </span>
           </p>
           <p>{t('footer.disclaimer')}</p>
+          {contactEmail && (
+            <p className="site-footer__contact">
+              {t('footer.contactLead')} <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+            </p>
+          )}
           <p>
             <Link to="/about">{t('footer.about')}</Link> · <Link to="/pantry">{t('footer.forPantries')}</Link> ·{' '}
             <Link to="/about#privacy">{t('footer.privacy')}</Link>

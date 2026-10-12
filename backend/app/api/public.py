@@ -227,7 +227,7 @@ def resource_ai_info_generate(location_id: int, request: Request, db: Session = 
 def meta_features():
     s = get_settings()
     on = ai.enabled()
-    return {"app_name": s.app_name, "demo_mode": s.show_synthetic,
+    return {"app_name": s.app_name, "demo_mode": s.show_synthetic, "contact_email": s.contact_email or None,
             "oauth": {"enabled": oauth.enabled(), "provider": oauth.provider_name()},
             "ai": {"search": on, "listing_lookup": on, "announcement_drafts": on, "structure_suggestions": on,
                    "translation": on and s.translation_provider == "claude", "model": ai.model() if on else None}}

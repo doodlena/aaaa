@@ -52,6 +52,8 @@ class Settings(BaseSettings):
 
     # Branding (single place to rename the app; the UI reads it from /api/meta/features)
     app_name: str = "Lantern"
+    # Public contact for services/providers (shown in the footer and the "For services" pages). Empty hides it.
+    contact_email: str = "alexandercarsoncordova+lantern@gmail.com"
 
     # Community reports: this many open "was closed"/"wrong info" reports in 7 days send a verified listing to review
     report_review_threshold: int = 3

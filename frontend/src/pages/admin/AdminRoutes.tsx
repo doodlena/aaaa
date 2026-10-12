@@ -3,7 +3,7 @@ import { Navigate, NavLink, Route, Routes, useLocation } from 'react-router';
 import { Loading } from '../../components/Status';
 import { useAuth } from '../../state/auth';
 import { AdminAI } from './AdminAI';
-import { AdminClaims, AdminReports } from './AdminClaimsReports';
+import { AdminClaims, AdminReports, PendingClaimsBadge } from './AdminClaimsReports';
 import { AdminConflicts } from './AdminConflicts';
 import { AdminQuality } from './AdminQuality';
 import { AdminQueue } from './AdminQueue';
@@ -39,7 +39,9 @@ export default function AdminRoutes() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/admin/claims">{t('admin.claims.nav')}</NavLink>
+            <NavLink to="/admin/claims">
+              {t('admin.claims.nav')} <PendingClaimsBadge refreshKey={location.pathname} />
+            </NavLink>
           </li>
           <li>
             <NavLink to="/admin/reports">{t('admin.reports.nav')}</NavLink>

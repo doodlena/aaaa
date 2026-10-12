@@ -33,7 +33,8 @@
     "crisisLead": "¿En crisis?",
     "call988": "Llame al 988",
     "text988": "Envíe un texto al 988",
-    "emergency": "Emergencia:"
+    "emergency": "Emergencia:",
+    "contactLead": "¿Administra una despensa o servicio? Preguntas, correcciones o acceso para publicar novedades:"
   },
   "common": {
     "loading": "Cargando…",
@@ -356,7 +357,10 @@
     "nameSearchPlaceholder": "p. ej., iglesia, Catholic Charities, clínica",
     "nameSearchGo": "Buscar",
     "nameSearchClear": "Borrar",
-    "regionCenter": "Norte de Virginia (centro)"
+    "regionCenter": "Norte de Virginia (centro)",
+    "prefsApplied": "Usando tus preferencias guardadas.",
+    "prefsIgnore": "Ignorar en esta búsqueda",
+    "prefsEdit": "Cambiarlas"
   },
   "filters": {
     "title": "Filtros",
@@ -926,7 +930,14 @@
       "approve": "Aprobar",
       "reject": "Rechazar",
       "revoke": "Retirar acceso",
-      "done": "Guardado: {{status}}"
+      "done": "Guardado: {{status}}",
+      "addedByStaff": "Agregado por personal aprobado de esta ficha.",
+      "noteToRequester": "Nota para el solicitante",
+      "rejectReason": "Motivo (lo verá el solicitante)",
+      "rejectReasonHint": "Por ejemplo: \"No pudimos comunicarnos con su oficina. Agregue un teléfono al que podamos llamar.\"",
+      "rejectConfirm": "Rechazar solicitud",
+      "pendingBadge_one": "{{count}} solicitud en espera",
+      "pendingBadge_other": "{{count}} solicitudes en espera"
     },
     "reports": {
       "nav": "Reportes de la comunidad",
@@ -1298,7 +1309,14 @@
       "message": "Mensaje para quien revisa",
       "send": "Enviar a revisión",
       "sent": "Enviado a revisión. Una persona del equipo lo revisará antes de que cambie algo.",
-      "nothing": "Complete al menos un dato que quiera cambiar."
+      "nothing": "Complete al menos un dato que quiera cambiar.",
+      "email": "Correo público",
+      "languages": "Idiomas del personal (códigos, p. ej. en, es)",
+      "wheelchair": "Accesible en silla de ruedas",
+      "yes": "Sí",
+      "no": "No",
+      "notSure": "No sé",
+      "accessNotes": "Notas de accesibilidad (rampas, estacionamiento, entrada)"
     },
     "reports": {
       "title": "Reportes de la comunidad",
@@ -1340,6 +1358,76 @@
         "claimed": "Reclamado",
         "closed": "Cerrado"
       }
+    },
+    "requestedOn": "solicitado el {{date}}",
+    "reviewerNote": "Nota del equipo del sitio",
+    "revokedHint": "Comuníquese con el equipo del sitio si necesita acceso otra vez.",
+    "withdraw": "Retirar solicitud",
+    "sendAgain": "Enviar la solicitud otra vez",
+    "confirm": {
+      "title": "¿Está todo correcto en su ficha?",
+      "lead": "Si el horario, los requisitos y los datos de contacto de su página pública son correctos, confírmelo. Su ficha aparecerá como verificada con la fecha de hoy.",
+      "notYet": "Aún no confirmado por su organización ni por el equipo del sitio.",
+      "lastVerified": "Última verificación: {{date}}.",
+      "pendingFirst_one": "{{count}} corrección que envió todavía espera revisión. Confirme después de que se revise.",
+      "pendingFirst_other": "{{count}} correcciones que envió todavía esperan revisión. Confirme después de que se revisen.",
+      "notes": "Nota (qué revisó)",
+      "button": "Sí, todo está correcto",
+      "done": "Gracias. Su ficha ahora aparece como verificada hoy.",
+      "blocked": "Algunas correcciones todavía esperan revisión. Cuando se revisen, podrá confirmar la ficha."
+    },
+    "staff": {
+      "title": "Personas que pueden publicar",
+      "you": "usted",
+      "remove": "Quitar",
+      "removeYes": "Sí, quitar",
+      "howTo": "Agregue a un colega para que también pueda publicar. Primero necesita una cuenta gratuita en este sitio; no enviamos correos.",
+      "email": "Correo de su cuenta",
+      "add": "Agregar colega",
+      "added": "{{email}} ya puede publicar para esta ficha.",
+      "noAccount": "Ninguna cuenta usa ese correo. Pida a su colega que cree una cuenta gratuita y luego agréguelo.",
+      "already": "Esa persona ya tiene acceso, o el equipo del sitio le quitó el acceso.",
+      "missing": "Escriba su correo y su función."
+    },
+    "landing": {
+      "title": "Para despensas de alimentos y proveedores de servicios",
+      "lead": "Mantenga su ficha al día y cuente a las familias lo que pasa hoy: si está abierto o cerrado, qué hay disponible y las distribuciones especiales. Es gratis.",
+      "create": "Crear una cuenta gratuita",
+      "signIn": "Iniciar sesión",
+      "stepsTitle": "Cómo obtener acceso",
+      "steps": {
+        "account": {
+          "title": "1. Cree una cuenta gratuita",
+          "body": "Use su correo de trabajo si tiene uno. También puede entrar con Google."
+        },
+        "request": {
+          "title": "2. Busque su ficha y solicite acceso",
+          "body": "Busque por dirección o código postal, elija su sede e indique su función y cómo podemos confirmarlo (por ejemplo, el teléfono de su oficina)."
+        },
+        "review": {
+          "title": "3. Confirmamos con su organización",
+          "body": "Alguien del equipo llama o escribe a su organización usando sus datos de contacto públicos, normalmente en pocos días."
+        },
+        "post": {
+          "title": "4. Publique cuando quiera",
+          "body": "Una vez aprobado, sus avisos aparecen en su ficha pública de inmediato, marcados como publicados por su organización."
+        }
+      },
+      "canTitle": "Lo que puede hacer",
+      "can": {
+        "live": "Publicar el estado de hoy y lo que hay disponible",
+        "events": "Anunciar distribuciones y eventos especiales",
+        "closures": "Avisar cierres por feriados o mal tiempo",
+        "corrections": "Corregir horario, requisitos y contacto (se revisan antes de cambiar)",
+        "reports": "Responder a los avisos de las familias",
+        "staff": "Agregar colegas para que también publiquen",
+        "surplus": "Ofrecer alimentos sobrantes a otras despensas"
+      },
+      "free": "No tiene costo. Nunca vendemos ni compartimos su información."
+    },
+    "contact": {
+      "questions": "¿Preguntas o necesita acceso? Escriba a",
+      "claimHelp": "¿Necesita ayuda con su solicitud? Escriba a"
     }
   },
   "needs": {

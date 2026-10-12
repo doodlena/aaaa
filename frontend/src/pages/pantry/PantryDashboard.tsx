@@ -13,6 +13,7 @@ import { CorrectionForm } from './CorrectionForm';
 import { ClosureForm, EventForm } from './EventClosureForms';
 import { ReportsInbox } from './ReportsInbox';
 import { ShelfForm } from './ShelfForm';
+import { ConfirmListing, StaffPanel } from './StaffAndConfirm';
 
 type Tab = 'shelf' | 'event' | 'closure' | 'correction' | 'reports';
 
@@ -243,6 +244,8 @@ export function PantryDashboard() {
         </div>
         <aside className="portal__side">
           <CurrentShelf p={lastPosted && !p.live ? { ...p, live: lastPosted } : p} onChanged={me.reload} />
+          <ConfirmListing p={p} onConfirmed={me.reload} />
+          <StaffPanel locationId={p.location_id} />
           <p className="muted small">{t('portal.trust')}</p>
         </aside>
       </div>

@@ -311,6 +311,26 @@ export function applyPreferences(f: Filters, p: SavedPreferences | undefined | n
   };
 }
 
+/**
+ * Fill in a signed-in person's saved preferences for anything the URL doesn't already choose.
+ * A choice in the URL (from a link, the home page tiles or the AI search) always wins; name searches are left alone.
+ */
+export function mergePreferences(f: Filters, sp: URLSearchParams, p: SavedPreferences | undefined | null): Filters {
+  if (!p || f.q) return f;
+  const saved = applyPreferences({ ...f }, p);
+  const out = { ...f };
+  if (!sp.has('radius_km') && typeof p.radius_km === 'number') out.radius_km = saved.radius_km;
+  if (!sp.has('sort') && p.sort) out.sort = saved.sort;
+  if (!sp.has('food_group') && !sp.has('service_group')) {
+    out.food_groups = saved.food_groups;
+    out.service_groups = saved.service_groups;
+  }
+  if (!sp.has('eligibility')) out.eligibility = saved.eligibility;
+  if (!sp.has('wheelchair') && p.wheelchair) out.wheelchair = true;
+  if (!sp.has('language') && p.language_filter) out.language = saved.language;
+  return out;
+}
+
 function round(n: number): number {
   return Math.round(n * 1e5) / 1e5;
 }

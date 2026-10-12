@@ -31,6 +31,8 @@ class ProviderMembership(Base):
     created_at: Mapped[datetime] = created_at()
     decided_by_id: Mapped[int | None] = mapped_column(ForeignKey("users.id"))
     decided_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    decision_note: Mapped[str | None] = mapped_column(Text)  # shown to the requester (e.g. why access was declined)
+    added_by_id: Mapped[int | None] = mapped_column(ForeignKey("users.id"))  # set when approved staff added a colleague
 
 
 class ShelfUpdate(Base):

@@ -33,6 +33,8 @@ from app.schemas import (
     AnnouncementIn,
     ChangeRequestIn,
     ClaimIn,
+    ProviderConfirmIn,
+    StaffAddIn,
     ClosureIn,
     EventIn,
     ReportResponseIn,
@@ -41,6 +43,7 @@ from app.schemas import (
     SurplusIn,
 )
 from app.services import ai
+from app.services.presenter import verification_label
 from app.services.resource_writer import structures_of
 from app.services.schedule import TZ
 from app.services.shelf import current_shelf, end_of_local_day, shelf_dict
@@ -48,6 +51,9 @@ from app.vocab import FOOD_SERVICE_GROUPS, FOOD_TYPES, SERVICE_TYPES
 
 router = APIRouter(prefix="/api/provider", tags=["pantry portal"])
 ai_limiter = RateLimiter(60, 3600)
+claim_limiter = RateLimiter(10, 3600)  # access requests per user per hour
+staff_limiter = RateLimiter(30, 3600)  # colleagues added per user per hour
+MAX_PENDING_CLAIMS = 10
 
 
 def _iso(d):
@@ -73,6 +79,23 @@ def require_staff(db: Session, user: User, location_id: int) -> Location:
 @router.post("/claims", status_code=201)
 def request_access(body: ClaimIn, user: User = Depends(require_user), db: Session = Depends(get_db)):
     load_location(db, body.location_id)  # only public listings can be claimed
+    if not claim_limiter.allow(f"user:{user.id}"):
+        raise HTTPException(429, "Too many access requests. Please wait an hour and try again.")
+    pending = db.query(ProviderMembership).filter_by(user_id=user.id, status="pending").count()
+    if pending >= MAX_PENDING_CLAIMS:
+        raise HTTPException(429, "You have many requests waiting. Please wait until they are reviewed.")
+    existing = db.scalar(select(ProviderMembership).where(ProviderMembership.user_id == user.id,
+                                                          ProviderMembership.location_id == body.location_id))
+    if existing:
+        if existing.status != "rejected":  # pending/approved: nothing to do; revoked: an admin must restore it
+            raise HTTPException(409, "You already requested access to this listing" if existing.status != "revoked"
+                                else "Your access to this listing was removed. Contact the site team to restore it.")
+        # A declined request may be sent again with better details for the reviewer.
+        existing.status, existing.role_title, existing.note = "pending", clean_text(body.role_title), clean_text(body.note)
+        existing.decided_by_id = existing.decided_at = existing.decision_note = None
+        audit(db, user, "provider_membership", existing.id, "re_requested", {"status": "rejected"}, {"status": "pending"})
+        db.commit()
+        return {"id": existing.id, "status": existing.status}
     m = ProviderMembership(user_id=user.id, location_id=body.location_id, role_title=clean_text(body.role_title),
                            note=clean_text(body.note))
     db.add(m)
@@ -80,8 +103,21 @@ def request_access(body: ClaimIn, user: User = Depends(require_user), db: Sessio
         db.commit()
     except IntegrityError:
         db.rollback()
-        raise HTTPException(409, "You already requested access to this pantry") from None
+        raise HTTPException(409, "You already requested access to this listing") from None
     return {"id": m.id, "status": m.status}
+
+
+@router.delete("/claims/{membership_id}", status_code=204)
+def withdraw_claim(membership_id: int, user: User = Depends(require_user), db: Session = Depends(get_db)):
+    """The requester withdraws a pending request (or leaves a listing they manage)."""
+    m = db.get(ProviderMembership, membership_id)
+    if not m or m.user_id != user.id:
+        raise HTTPException(404, "Request not found")
+    if m.status not in ("pending", "approved", "rejected"):
+        raise HTTPException(409, "This request can't be withdrawn")
+    audit(db, user, "provider_membership", m.id, "withdrawn", {"status": m.status}, None)
+    db.delete(m)
+    db.commit()
 
 
 def offers_food(loc: Location) -> bool:
@@ -99,12 +135,15 @@ def my_pantries(user: User = Depends(require_user), db: Session = Depends(get_db
     out = []
     for m, loc in rows:
         item = {"membership_id": m.id, "status": m.status, "role_title": m.role_title, "location_id": loc.id,
-                "name": loc.name, "address1": loc.address1, "city": loc.city, "offers_food": offers_food(loc)}
+                "name": loc.name, "address1": loc.address1, "city": loc.city, "offers_food": offers_food(loc),
+                "requested_at": _iso(m.created_at), "decided_at": _iso(m.decided_at), "decision_note": m.decision_note}
         if m.status == "approved":
             item.update({
                 "live": shelf_dict(shelves.get(loc.id)),
                 "open_reports": db.query(CommunityReport).filter_by(location_id=loc.id, status="open").count(),
                 "pending_changes": db.query(ChangeProposal).filter_by(location_id=loc.id, status="pending", origin="provider").count(),
+                "verification_label": verification_label(loc),
+                "last_verified_at": _iso(loc.last_verified_at),
             })
         out.append(item)
     return {"items": out, "food_types": list(FOOD_TYPES)}
@@ -203,9 +242,15 @@ def request_changes(location_id: int, body: ChangeRequestIn, user: User = Depend
         if not normalize_phone(body.phone):
             raise HTTPException(422, "Phone number not recognized")
         proposed["phone"] = (loc.phone, normalize_phone(body.phone))
-    for f in ("website", "registration_url"):
+    for f in ("email", "website", "registration_url"):
         if getattr(body, f):
             proposed[f] = (getattr(loc, f), getattr(body, f))
+    if body.languages is not None:
+        proposed["languages"] = (list(loc.languages or []), body.languages)
+    if body.wheelchair_accessible is not None:
+        proposed["wheelchair_accessible"] = (loc.wheelchair_accessible, body.wheelchair_accessible)
+    if body.accessibility_notes:
+        proposed["accessibility_notes"] = (loc.accessibility_notes, clean_text(body.accessibility_notes))
     if body.notes:
         proposed["notes"] = (loc.notes, clean_text(body.notes))
     if body.schedules is not None:
@@ -224,6 +269,69 @@ def request_changes(location_id: int, body: ChangeRequestIn, user: User = Depend
     audit(db, user, "location", loc.id, "provider_change_request", None, {"fields": sorted(proposed), "message": body.message_to_reviewer})
     db.commit()
     return {"change_proposal_ids": ids, "status": "pending_review"}
+
+
+# --- staff: colleagues who can post for this listing -----------------------------------------------------------------
+
+@router.get("/locations/{location_id}/staff")
+def list_staff(location_id: int, user: User = Depends(require_user), db: Session = Depends(get_db)):
+    loc = require_staff(db, user, location_id)
+    rows = db.execute(select(ProviderMembership, User).join(User, User.id == ProviderMembership.user_id)
+                      .where(ProviderMembership.location_id == loc.id, ProviderMembership.status.in_(("approved", "pending")))
+                      .order_by(ProviderMembership.created_at)).all()
+    return {"items": [{"membership_id": m.id, "email": u.email, "role_title": m.role_title, "status": m.status,
+                       "is_you": u.id == user.id, "since": _iso(m.decided_at or m.created_at)} for m, u in rows]}
+
+
+@router.post("/locations/{location_id}/staff", status_code=201)
+def add_staff(location_id: int, body: StaffAddIn, user: User = Depends(require_user), db: Session = Depends(get_db)):
+    """Approved staff vouch for a colleague. The colleague must already have an account (we send no email)."""
+    loc = require_staff(db, user, location_id)
+    if not staff_limiter.allow(f"user:{user.id}"):
+        raise HTTPException(429, "Too many colleagues added this hour")
+    other = db.scalar(select(User).where(User.email == body.email.strip().lower()))
+    if not other:
+        raise HTTPException(404, "No account uses that email yet. Ask your colleague to create a free account first, then add them.")
+    m = db.scalar(select(ProviderMembership).where(ProviderMembership.user_id == other.id, ProviderMembership.location_id == loc.id))
+    if m and m.status == "approved":
+        raise HTTPException(409, "That person can already post for this listing")
+    if m and m.status == "revoked":
+        raise HTTPException(409, "That person's access was removed by the site team. Contact them to restore it.")
+    before = m.status if m else None
+    if not m:
+        m = ProviderMembership(user_id=other.id, location_id=loc.id)
+        db.add(m)
+    now = datetime.now(UTC)
+    m.role_title, m.status, m.added_by_id, m.decided_by_id, m.decided_at = clean_text(body.role_title), "approved", user.id, user.id, now
+    db.flush()
+    audit(db, user, "provider_membership", m.id, "staff_added", {"status": before}, {"status": "approved", "email": other.email})
+    db.commit()
+    return {"membership_id": m.id, "email": other.email, "status": m.status}
+
+
+@router.delete("/locations/{location_id}/staff/{membership_id}", status_code=204)
+def remove_staff(location_id: int, membership_id: int, user: User = Depends(require_user), db: Session = Depends(get_db)):
+    loc = require_staff(db, user, location_id)
+    m = db.get(ProviderMembership, membership_id)
+    if not m or m.location_id != loc.id or m.status not in ("approved", "pending"):
+        raise HTTPException(404, "Not found")
+    audit(db, user, "provider_membership", m.id, "staff_removed", {"status": m.status}, None)
+    db.delete(m)
+    db.commit()
+
+
+# --- "everything on this listing is correct" ----------------------------------------------------------------------
+
+@router.post("/locations/{location_id}/confirm")
+def confirm_listing(location_id: int, body: ProviderConfirmIn, user: User = Depends(require_user), db: Session = Depends(get_db)):
+    """Approved staff confirm the listing as shown is accurate. Recorded as a verification by that (admin-approved,
+    attributable) person with method provider_submission. Pending corrections must be reviewed first."""
+    from app.ingestion.verification.workflow import apply_action
+
+    loc = require_staff(db, user, location_id)
+    note = "Confirmed accurate by approved provider staff" + (f": {clean_text(body.notes)}" if body.notes else "")
+    apply_action(db, loc, user, "verify", "provider_submission", note)
+    return {"verification_label": verification_label(loc), "last_verified_at": _iso(loc.last_verified_at)}
 
 
 # --- community reports about my pantry -----------------------------------------------------------------------------

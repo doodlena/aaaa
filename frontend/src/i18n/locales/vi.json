@@ -33,7 +33,8 @@
     "crisisLead": "Đang gặp khủng hoảng?",
     "call988": "Gọi 988",
     "text988": "Nhắn tin 988",
-    "emergency": "Khẩn cấp:"
+    "emergency": "Khẩn cấp:",
+    "contactLead": "Bạn điều hành kho thực phẩm hoặc dịch vụ? Câu hỏi, sửa thông tin hoặc quyền đăng cập nhật:"
   },
   "common": {
     "loading": "Đang tải…",
@@ -356,7 +357,10 @@
     "nameSearchPlaceholder": "vd: nhà thờ, Catholic Charities, phòng khám",
     "nameSearchGo": "Tìm",
     "nameSearchClear": "Xóa",
-    "regionCenter": "Bắc Virginia (trung tâm)"
+    "regionCenter": "Bắc Virginia (trung tâm)",
+    "prefsApplied": "Đang dùng tùy chọn đã lưu của bạn.",
+    "prefsIgnore": "Bỏ qua cho lần tìm này",
+    "prefsEdit": "Thay đổi"
   },
   "filters": {
     "title": "Bộ lọc",
@@ -926,7 +930,14 @@
       "approve": "Duyệt",
       "reject": "Từ chối",
       "revoke": "Thu hồi quyền",
-      "done": "Đã lưu: {{status}}"
+      "done": "Đã lưu: {{status}}",
+      "addedByStaff": "Được nhân viên đã duyệt của địa điểm này thêm vào.",
+      "noteToRequester": "Ghi chú cho người yêu cầu",
+      "rejectReason": "Lý do (người yêu cầu sẽ thấy)",
+      "rejectReasonHint": "Ví dụ: \"Chúng tôi không liên lạc được với văn phòng. Vui lòng thêm số điện thoại.\"",
+      "rejectConfirm": "Từ chối yêu cầu",
+      "pendingBadge_one": "{{count}} yêu cầu đang chờ",
+      "pendingBadge_other": "{{count}} yêu cầu đang chờ"
     },
     "reports": {
       "nav": "Báo cáo từ cộng đồng",
@@ -1298,7 +1309,14 @@
       "message": "Lời nhắn cho người duyệt",
       "send": "Gửi để xem xét",
       "sent": "Đã gửi để xem xét. Người duyệt sẽ kiểm tra trước khi có bất kỳ thay đổi nào.",
-      "nothing": "Hãy điền ít nhất một điều cần thay đổi."
+      "nothing": "Hãy điền ít nhất một điều cần thay đổi.",
+      "email": "Email công khai",
+      "languages": "Ngôn ngữ nhân viên nói (mã, ví dụ en, es)",
+      "wheelchair": "Có lối cho xe lăn",
+      "yes": "Có",
+      "no": "Không",
+      "notSure": "Không rõ",
+      "accessNotes": "Ghi chú tiếp cận (dốc, bãi đỗ xe, lối vào)"
     },
     "reports": {
       "title": "Báo cáo từ cộng đồng",
@@ -1340,6 +1358,76 @@
         "claimed": "Đã có người nhận",
         "closed": "Đã đóng"
       }
+    },
+    "requestedOn": "đã yêu cầu {{date}}",
+    "reviewerNote": "Ghi chú của nhóm quản lý",
+    "revokedHint": "Hãy liên hệ nhóm quản lý nếu bạn cần truy cập lại.",
+    "withdraw": "Rút yêu cầu",
+    "sendAgain": "Gửi lại yêu cầu",
+    "confirm": {
+      "title": "Thông tin của bạn có đúng hết không?",
+      "lead": "Nếu giờ, điều kiện và thông tin liên hệ trên trang công khai là đúng, hãy xác nhận. Trang của bạn sẽ hiện là đã xác minh với ngày hôm nay.",
+      "notYet": "Chưa được tổ chức của bạn hoặc nhóm quản lý xác nhận.",
+      "lastVerified": "Xác minh lần cuối {{date}}.",
+      "pendingFirst_one": "{{count}} chỉnh sửa bạn gửi đang chờ duyệt. Hãy xác nhận sau khi được duyệt.",
+      "pendingFirst_other": "{{count}} chỉnh sửa bạn gửi đang chờ duyệt. Hãy xác nhận sau khi được duyệt.",
+      "notes": "Ghi chú (bạn đã kiểm tra gì)",
+      "button": "Đúng, tất cả đều chính xác",
+      "done": "Cảm ơn bạn. Trang của bạn đã được đánh dấu xác minh hôm nay.",
+      "blocked": "Một số chỉnh sửa còn chờ duyệt. Sau khi duyệt xong, bạn có thể xác nhận."
+    },
+    "staff": {
+      "title": "Người có thể đăng",
+      "you": "bạn",
+      "remove": "Xóa",
+      "removeYes": "Có, xóa",
+      "howTo": "Thêm đồng nghiệp để họ cũng có thể đăng. Họ cần có tài khoản miễn phí trên trang này trước; chúng tôi không gửi email.",
+      "email": "Email tài khoản của họ",
+      "add": "Thêm đồng nghiệp",
+      "added": "{{email}} giờ có thể đăng cho địa điểm này.",
+      "noAccount": "Chưa có tài khoản nào dùng email này. Hãy nhờ đồng nghiệp tạo tài khoản miễn phí rồi thêm họ.",
+      "already": "Người này đã có quyền, hoặc quyền của họ đã bị nhóm quản lý gỡ.",
+      "missing": "Nhập email và vai trò của họ."
+    },
+    "landing": {
+      "title": "Dành cho kho thực phẩm và đơn vị cung cấp dịch vụ",
+      "lead": "Giữ thông tin chính xác và báo cho các gia đình biết tình hình hôm nay: mở hay đóng, có gì trên kệ, các đợt phát đặc biệt. Miễn phí.",
+      "create": "Tạo tài khoản miễn phí",
+      "signIn": "Đăng nhập",
+      "stepsTitle": "Cách được cấp quyền",
+      "steps": {
+        "account": {
+          "title": "1. Tạo tài khoản miễn phí",
+          "body": "Dùng email công việc nếu có. Có thể đăng nhập bằng Google."
+        },
+        "request": {
+          "title": "2. Tìm địa điểm và yêu cầu quyền",
+          "body": "Tìm theo địa chỉ hoặc mã ZIP, chọn địa điểm, cho biết vai trò và cách chúng tôi xác nhận (ví dụ số điện thoại văn phòng)."
+        },
+        "review": {
+          "title": "3. Chúng tôi xác nhận với tổ chức",
+          "body": "Nhóm quản lý gọi hoặc email cho tổ chức qua thông tin liên hệ công khai, thường trong vài ngày."
+        },
+        "post": {
+          "title": "4. Đăng bất cứ lúc nào",
+          "body": "Sau khi được duyệt, bài đăng hiện ngay trên trang công khai, ghi là do tổ chức của bạn đăng."
+        }
+      },
+      "canTitle": "Bạn có thể làm gì",
+      "can": {
+        "live": "Đăng tình trạng hôm nay và hàng trên kệ",
+        "events": "Thông báo các đợt phát và sự kiện đặc biệt",
+        "closures": "Báo đóng cửa ngày lễ hoặc do thời tiết",
+        "corrections": "Sửa giờ, điều kiện và liên hệ (được duyệt trước khi thay đổi)",
+        "reports": "Trả lời phản ánh của các gia đình",
+        "staff": "Thêm đồng nghiệp để cùng đăng",
+        "surplus": "Chia sẻ thực phẩm dư với các kho khác"
+      },
+      "free": "Không tốn phí. Chúng tôi không bao giờ bán hay chia sẻ thông tin của bạn."
+    },
+    "contact": {
+      "questions": "Có câu hỏi hoặc cần quyền truy cập? Email",
+      "claimHelp": "Cần hỗ trợ về yêu cầu? Email"
     }
   },
   "needs": {

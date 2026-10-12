@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState, t
 import { useTranslation } from 'react-i18next';
 import { api } from '../api/client';
 import type { User } from '../api/types';
-import { isSupported, setLanguage, type LangCode } from '../i18n';
+import { isSupported, LANG_STORAGE_KEY, setLanguage, type LangCode } from '../i18n';
 
 interface AuthValue {
   user: User | null;
@@ -28,7 +28,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     let alive = true;
     api
       .me()
-      .then((r) => alive && setUser(r.user))
+      .then((r) => {
+        if (!alive) return;
+        setUser(r.user);
+        // New device/browser with no language chosen yet: use the one saved on the account.
+        let chosen: string | null = null;
+        try {
+          chosen = localStorage.getItem(LANG_STORAGE_KEY);
+        } catch {
+          /* storage unavailable */
+        }
+        if (r.user && !chosen && isSupported(r.user.preferred_language) && r.user.preferred_language !== i18n.language) {
+          void setLanguage(r.user.preferred_language);
+        }
+      })
       .catch(() => alive && setUser(null))
       .finally(() => alive && setLoading(false));
     return () => {

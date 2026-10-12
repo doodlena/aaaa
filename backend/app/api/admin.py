@@ -223,7 +223,14 @@ def list_claims(status: str = "pending", db: Session = Depends(get_db)):
                       .where(ProviderMembership.status == status).order_by(ProviderMembership.created_at)).all()
     return {"items": [{"id": m.id, "status": m.status, "role_title": m.role_title, "note": m.note, "user_email": u.email,
                        "location_id": loc.id, "location_name": loc.name, "location_phone": loc.phone or loc.organization.phone,
-                       "created_at": _iso(m.created_at)} for m, u, loc in rows]}
+                       "created_at": _iso(m.created_at), "decision_note": m.decision_note,
+                       "added_by_staff": m.added_by_id is not None} for m, u, loc in rows]}
+
+
+@router.get("/claims/pending-count")
+def pending_claims_count(db: Session = Depends(get_db)):
+    """For the admin menu badge (there is no email notification service)."""
+    return {"pending": db.query(ProviderMembership).filter_by(status="pending").count()}
 
 
 @router.post("/claims/{claim_id}/decision")
@@ -238,6 +245,7 @@ def decide_claim(claim_id: int, body: DecisionSimpleIn, user: User = Depends(req
 
     before = m.status
     m.status, m.decided_by_id, m.decided_at = new, user.id, datetime.now(UTC)
+    m.decision_note = (body.notes or "").strip()[:1000] or None  # shown to the requester on their portal page
     audit(db, user, "provider_membership", m.id, new, {"status": before}, {"status": new, "notes": body.notes})
     db.commit()
     return {"id": m.id, "status": m.status}

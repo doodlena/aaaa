@@ -55,6 +55,11 @@ export function MetaProvider({ children }: { children: ReactNode }) {
 
 export const useMeta = () => useContext(MetaContext);
 
+/** Contact email for services/providers (configured on the server), or null. */
+export function useContactEmail(): string | null {
+  return useContext(MetaContext).features?.contact_email || null;
+}
+
 /** AI switches; everything is off until the server says otherwise. */
 /** The configured OAuth sign-in provider, or null when the feature is off. `name` may be empty (use a generic label). */
 export function useOAuth(): { name: string } | null {

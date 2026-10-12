@@ -11,6 +11,7 @@ import type { DuplicateAIOpinion,
   ProviderMe,
   ReportKind,
   ShelfHistoryItem,
+  StaffMember,
   ShelfItem,
   LiveShelf,
   LiveStatus,
@@ -175,6 +176,15 @@ export const api = {
     closeSurplus: (postId: number) => request<SurplusPost>('POST', `/provider/surplus/${postId}/close`),
     announcementDraft: (id: number, text: string) =>
       request<{ draft: AnnouncementDraft; notice: string }>('POST', `/provider/locations/${id}/ai/announcement-draft`, { text }),
+    withdrawClaim: (membershipId: number) => request<void>('DELETE', `/provider/claims/${membershipId}`),
+    staff: (id: number) => request<{ items: StaffMember[] }>('GET', `/provider/locations/${id}/staff`),
+    addStaff: (id: number, email: string, role_title: string) =>
+      request<{ membership_id: number; email: string; status: string }>('POST', `/provider/locations/${id}/staff`, { email, role_title }),
+    removeStaff: (id: number, membershipId: number) => request<void>('DELETE', `/provider/locations/${id}/staff/${membershipId}`),
+    confirm: (id: number, notes?: string) =>
+      request<{ verification_label: string; last_verified_at: string | null }>('POST', `/provider/locations/${id}/confirm`, {
+        notes: notes?.trim() || null,
+      }),
   },
   // admin
   admin: {
@@ -197,6 +207,7 @@ export const api = {
     sources: () => request<{ items: AdminSource[] }>('GET', '/admin/sources'),
     quality: (jurisdiction?: string) => request<QualityReport>('GET', `/admin/quality${qs({ jurisdiction })}`),
     claims: (status = 'pending') => request<{ items: AdminClaim[] }>('GET', `/admin/claims${qs({ status })}`),
+    pendingClaims: () => request<{ pending: number }>('GET', '/admin/claims/pending-count'),
     decideClaim: (id: number, decision: 'approve' | 'reject' | 'revoke', notes?: string) =>
       request<{ id: number; status: string }>('POST', `/admin/claims/${id}/decision`, { decision, notes: notes || null }),
     reports: (status = 'open') => request<{ items: AdminReport[] }>('GET', `/admin/reports${qs({ status })}`),

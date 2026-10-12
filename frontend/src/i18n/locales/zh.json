@@ -33,7 +33,8 @@
     "crisisLead": "遇到危机？",
     "call988": "拨打 988",
     "text988": "发短信到 988",
-    "emergency": "紧急情况："
+    "emergency": "紧急情况：",
+    "contactLead": "您运营食物银行或服务机构吗？如有问题、需要更正或申请发布更新权限，请联系："
   },
   "common": {
     "loading": "加载中…",
@@ -356,7 +357,10 @@
     "nameSearchPlaceholder": "例如：教会、Catholic Charities、诊所",
     "nameSearchGo": "搜索",
     "nameSearchClear": "清除",
-    "regionCenter": "北弗吉尼亚（中心）"
+    "regionCenter": "北弗吉尼亚（中心）",
+    "prefsApplied": "正在使用您保存的偏好设置。",
+    "prefsIgnore": "本次搜索忽略",
+    "prefsEdit": "更改"
   },
   "filters": {
     "title": "筛选",
@@ -926,7 +930,14 @@
       "approve": "批准",
       "reject": "拒绝",
       "revoke": "移除权限",
-      "done": "已保存：{{status}}"
+      "done": "已保存：{{status}}",
+      "addedByStaff": "由此地点已获批的工作人员添加。",
+      "noteToRequester": "给申请人的备注",
+      "rejectReason": "原因（申请人可见）",
+      "rejectReasonHint": "例如：\"我们联系不上您的办公室。请添加一个可以拨打的电话号码。\"",
+      "rejectConfirm": "拒绝申请",
+      "pendingBadge_one": "{{count}} 个申请待处理",
+      "pendingBadge_other": "{{count}} 个申请待处理"
     },
     "reports": {
       "nav": "社区报告",
@@ -1298,7 +1309,14 @@
       "message": "给审核员的留言",
       "send": "提交审核",
       "sent": "已提交审核。在任何内容更改之前，审核员会先核查。",
-      "nothing": "请至少填写一项要更改的内容。"
+      "nothing": "请至少填写一项要更改的内容。",
+      "email": "公开邮箱",
+      "languages": "员工使用的语言（代码，如 en、es）",
+      "wheelchair": "轮椅可通行",
+      "yes": "是",
+      "no": "否",
+      "notSure": "不确定",
+      "accessNotes": "无障碍说明（坡道、停车、入口）"
     },
     "reports": {
       "title": "来自社区的报告",
@@ -1340,6 +1358,76 @@
         "claimed": "已认领",
         "closed": "已关闭"
       }
+    },
+    "requestedOn": "{{date}} 申请",
+    "reviewerNote": "网站团队的备注",
+    "revokedHint": "如需再次获得权限，请联系网站团队。",
+    "withdraw": "撤回申请",
+    "sendAgain": "重新申请",
+    "confirm": {
+      "title": "您的信息都正确吗？",
+      "lead": "如果公开页面上的时间、条件和联系方式都正确，请确认。您的信息将显示为今天已核实。",
+      "notYet": "尚未经您的机构或网站团队确认。",
+      "lastVerified": "最近核实：{{date}}。",
+      "pendingFirst_one": "您提交的 {{count}} 项更正仍在等待审核。审核后再确认。",
+      "pendingFirst_other": "您提交的 {{count}} 项更正仍在等待审核。审核后再确认。",
+      "notes": "备注（您核对了什么）",
+      "button": "是的，全部正确",
+      "done": "谢谢。您的信息已标记为今天已核实。",
+      "blocked": "有些更正仍在等待审核。审核完成后即可确认。"
+    },
+    "staff": {
+      "title": "可以发布的人员",
+      "you": "您",
+      "remove": "移除",
+      "removeYes": "确认移除",
+      "howTo": "添加同事，让他们也能发布。对方需要先在本网站注册免费账户；我们不发送电子邮件。",
+      "email": "对方的账户邮箱",
+      "add": "添加同事",
+      "added": "{{email}} 现在可以为此地点发布。",
+      "noAccount": "还没有账户使用这个邮箱。请同事先注册免费账户，然后再添加。",
+      "already": "此人已有权限，或其权限已被网站团队移除。",
+      "missing": "请输入邮箱和职务。"
+    },
+    "landing": {
+      "title": "面向食物银行和服务机构",
+      "lead": "保持信息准确，并告诉家庭今天的情况：是否开放、有哪些物资、特别发放活动。完全免费。",
+      "create": "注册免费账户",
+      "signIn": "登录",
+      "stepsTitle": "如何获得权限",
+      "steps": {
+        "account": {
+          "title": "1. 注册免费账户",
+          "body": "如有工作邮箱请使用工作邮箱。也可以用 Google 登录。"
+        },
+        "request": {
+          "title": "2. 找到您的地点并申请权限",
+          "body": "按地址或邮编搜索，选择您的地点，告诉我们您的职务以及如何核实您的身份（例如办公室电话）。"
+        },
+        "review": {
+          "title": "3. 我们与您的机构确认",
+          "body": "网站团队会通过机构的公开联系方式致电或发邮件确认，通常几天内完成。"
+        },
+        "post": {
+          "title": "4. 随时发布",
+          "body": "获批后，您的更新会立即显示在公开页面上，并标明由您的机构发布。"
+        }
+      },
+      "canTitle": "您可以做什么",
+      "can": {
+        "live": "发布今天的状态和现有物资",
+        "events": "宣布特别发放和活动",
+        "closures": "发布节假日或天气停业通知",
+        "corrections": "更正时间、条件和联系方式（修改前会审核）",
+        "reports": "回复家庭的反馈",
+        "staff": "添加同事一起发布",
+        "surplus": "把多余的食物分享给其他食物银行"
+      },
+      "free": "完全免费。我们绝不出售或分享您的信息。"
+    },
+    "contact": {
+      "questions": "有疑问或需要权限？请发邮件至",
+      "claimHelp": "申请需要帮助？请发邮件至"
     }
   },
   "needs": {

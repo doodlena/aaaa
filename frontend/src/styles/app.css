@@ -3892,3 +3892,27 @@ form.is-ai-drafted select {
 .oauth__logo { flex: none; }
 .oauth__or { display: flex; align-items: center; gap: var(--sp-3); margin: 0 0 var(--sp-3); color: var(--ink-soft); font-size: .875rem; }
 .oauth__or::before, .oauth__or::after { content: ""; flex: 1; border-top: 1px solid var(--line); }
+
+.prefs-note { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 0 0 var(--sp-3); padding: 8px 12px;
+  background: var(--surface-2, #f3f6f8); border-radius: 8px; font-size: .9rem; }
+.link-btn { background: none; border: 0; padding: 0; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
+/* Sign-in / register: centered column */
+.page--auth { margin-inline: auto; max-width: 400px; }
+.page--auth h1, .page--auth > p { text-align: center; }
+.page--auth .auth-box { margin-inline: auto; }
+.page--auth .auth-box + p, .page--auth .auth-box ~ p { margin-top: var(--sp-4); text-align: center; }
+
+/* Provider portal: request rows, confirm card, staff list, signed-out landing, admin badge. */
+.request-row { padding: var(--sp-3) 0; border-bottom: 1px solid var(--line); }
+.request-row p { margin: 0 0 var(--sp-1); }
+.request-row__note { background: var(--surface-2, #f5f6f8); border-radius: 6px; padding: var(--sp-2) var(--sp-3); }
+.confirm-listing, .staff-panel { margin-top: var(--sp-4); }
+.staff-list li { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--sp-2); padding: var(--sp-2) 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.staff-add { margin-top: var(--sp-3); }
+.provider-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--sp-3); padding: 0; list-style: none; }
+.provider-steps li { border: 1px solid var(--line); border-radius: 10px; padding: var(--sp-3); }
+.provider-steps p { margin: var(--sp-1) 0 0; }
+.provider-can { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--sp-2); }
+.provider-can li { display: flex; gap: var(--sp-2); align-items: flex-start; }
+.nav-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; padding: 0 6px; margin-left: 4px; border-radius: 10px; background: #b3261e; color: #fff; font-size: .75rem; font-weight: 700; }
+.contact-email { margin: var(--sp-2) 0; overflow-wrap: anywhere; }

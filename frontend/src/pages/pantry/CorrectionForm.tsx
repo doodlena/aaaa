@@ -26,6 +26,10 @@ export function CorrectionForm({ locationId }: { locationId: number }) {
   const [website, setWebsite] = useState('');
   const [registration, setRegistration] = useState('');
   const [notes, setNotes] = useState('');
+  const [email, setEmail] = useState('');
+  const [langs, setLangs] = useState('');
+  const [wheelchair, setWheelchair] = useState<'' | 'yes' | 'no' | 'unknown'>('');
+  const [access, setAccess] = useState('');
   const [editHours, setEditHours] = useState(false);
   const [hours, setHours] = useState<HoursRow[]>([{ weekday: 5, opens: '09:00', closes: '12:00', appointment_only: false }]);
   const [elig, setElig] = useState<Record<string, Tristate | ''>>({});
@@ -44,6 +48,10 @@ export function CorrectionForm({ locationId }: { locationId: number }) {
     if (website.trim()) body.website = website.trim();
     if (registration.trim()) body.registration_url = registration.trim();
     if (notes.trim()) body.notes = notes.trim();
+    if (email.trim()) body.email = email.trim();
+    if (langs.trim()) body.languages = langs.split(/[,\s]+/).filter(Boolean);
+    if (wheelchair) body.wheelchair_accessible = wheelchair;
+    if (access.trim()) body.accessibility_notes = access.trim();
     if (editHours) {
       if (hours.some((h) => !h.opens || !h.closes || h.closes <= h.opens)) {
         setError(t('portal.correction.badHours'));
@@ -92,6 +100,27 @@ export function CorrectionForm({ locationId }: { locationId: number }) {
           <label htmlFor={`${id}-reg`}>{t('detail.registrationLink')}</label>
           <input id={`${id}-reg`} type="url" placeholder="https://" value={registration} onChange={(e) => setRegistration(e.target.value)} />
         </div>
+        <div className="field">
+          <label htmlFor={`${id}-email`}>{t('portal.correction.email')}</label>
+          <input id={`${id}-email`} type="email" maxLength={254} value={email} onChange={(e) => setEmail(e.target.value)} />
+        </div>
+        <div className="field">
+          <label htmlFor={`${id}-langs`}>{t('portal.correction.languages')}</label>
+          <input id={`${id}-langs`} value={langs} maxLength={120} placeholder="en, es, ko" onChange={(e) => setLangs(e.target.value)} />
+        </div>
+        <div className="field">
+          <label htmlFor={`${id}-wc`}>{t('portal.correction.wheelchair')}</label>
+          <select id={`${id}-wc`} value={wheelchair} onChange={(e) => setWheelchair(e.target.value as typeof wheelchair)}>
+            <option value="">{t('portal.correction.noChange')}</option>
+            <option value="yes">{t('portal.correction.yes')}</option>
+            <option value="no">{t('portal.correction.no')}</option>
+            <option value="unknown">{t('portal.correction.notSure')}</option>
+          </select>
+        </div>
+      </div>
+      <div className="field">
+        <label htmlFor={`${id}-access`}>{t('portal.correction.accessNotes')}</label>
+        <input id={`${id}-access`} value={access} maxLength={1000} onChange={(e) => setAccess(e.target.value)} />
       </div>
       <div className="field">
         <label htmlFor={`${id}-notes`}>{t('portal.correction.notes')}</label>

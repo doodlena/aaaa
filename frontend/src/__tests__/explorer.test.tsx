@@ -2,6 +2,7 @@ import { screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import { mockFetch, renderApp, searchResponse, summary } from '../test/utils';
+import { testUser } from '../test/utils';
 
 vi.mock('../components/MapView', () => ({ default: () => <div data-testid="map-stub" /> }));
 import ExplorerPage from '../pages/ExplorerPage';
@@ -84,3 +85,18 @@ describe('ExplorerPage', () => {
     expect(await screen.findByRole('alert')).toHaveTextContent('We could not connect');
   });
 });
+
+describe('saved preferences on Find help', () => {
+  it('applies a signed-in person\'s saved filters, says so, and can ignore them', async () => {
+    const user = { ...testUser, preferences: { eligibility: ['no_id_required'], wheelchair: true } };
+    const { calls } = mockFetch([{ path: '/api/resources/search', body: searchResponse({ items: [summary()] }) }], { user });
+    renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099', path: '/find' });
+    expect(await screen.findByText(/Using your saved preferences/)).toBeInTheDocument();
+    await waitFor(() => expect(calls.some((c) => c.url.pathname === '/api/resources/search' && c.url.searchParams.get('wheelchair') === 'true')).toBe(true));
+    await userEvent.click(screen.getByRole('button', { name: 'Ignore for this search' }));
+    await waitFor(() => expect(screen.queryByText(/Using your saved preferences/)).toBeNull());
+    const last = calls.filter((c) => c.url.pathname === '/api/resources/search').at(-1)!;
+    expect(last.url.searchParams.get('wheelchair')).toBeNull();
+  });
+});
+

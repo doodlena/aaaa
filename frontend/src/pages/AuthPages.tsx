@@ -120,7 +120,7 @@ export function OAuthCallbackPage() {
 
   if (!error) return <Loading />;
   return (
-    <div className="page page--narrow">
+    <div className="page page--narrow page--auth">
       <h1>{t('auth.signInTitle')}</h1>
       <p className="form-error" role="alert">
         {error}
@@ -163,7 +163,7 @@ export function LoginPage() {
   };
 
   return (
-    <div className="page page--narrow">
+    <div className="page page--narrow page--auth">
       <h1>{t('auth.signInTitle')}</h1>
       <p>{t('auth.optionalNote')}</p>
       <div className="auth-box">
@@ -225,7 +225,7 @@ export function RegisterPage() {
   };
 
   return (
-    <div className="page page--narrow">
+    <div className="page page--narrow page--auth">
       <h1>{t('auth.registerTitle')}</h1>
       <p>{t('auth.registerIntro')}</p>
       <div className="auth-box">

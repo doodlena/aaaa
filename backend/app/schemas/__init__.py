@@ -271,6 +271,19 @@ class ClaimIn(BaseModel):
     note: str | None = Field(default=None, max_length=1000)
 
 
+class StaffAddIn(BaseModel):
+    """Approved staff add a colleague who already has a (free) account. No email is sent."""
+
+    email: str = Field(min_length=3, max_length=254)
+    role_title: str = Field(min_length=2, max_length=120)
+
+
+class ProviderConfirmIn(BaseModel):
+    """'Everything on this listing is correct as of today' from approved staff (verification method provider_submission)."""
+
+    notes: str | None = Field(default=None, max_length=1000)
+
+
 class EventIn(BaseModel):
     title: str = Field(min_length=3, max_length=300)
     starts_at: datetime
@@ -278,7 +291,7 @@ class EventIn(BaseModel):
     registration_deadline: datetime | None = None
     appointment_required: Literal[TRISTATE] = "unknown"  # type: ignore[valid-type]
     notes: str | None = Field(default=None, max_length=1000)
-    offerings: list[str] = Field(default_factory=list)
+    offerings: list[str] = Field(default_factory=list, max_length=30)
     ai_assisted: bool = False
 
 
@@ -290,13 +303,37 @@ class ClosureIn(BaseModel):
 class ChangeRequestIn(BaseModel):
     """Pantry-proposed corrections. They enter the review queue as change proposals (origin=provider)."""
 
-    phone: str | None = None
-    website: str | None = None
-    registration_url: str | None = None
+    phone: str | None = Field(default=None, max_length=40)
+    email: str | None = Field(default=None, max_length=254)
+    website: str | None = Field(default=None, max_length=500)
+    registration_url: str | None = Field(default=None, max_length=500)
     notes: str | None = Field(default=None, max_length=2000)
-    schedules: list[ScheduleIn] | None = None
-    eligibility: list[EligibilityIn] | None = None
+    languages: list[str] | None = Field(default=None, max_length=20)
+    wheelchair_accessible: Literal[YES_NO_UNKNOWN] | None = None  # type: ignore[valid-type]
+    accessibility_notes: str | None = Field(default=None, max_length=1000)
+    schedules: list[ScheduleIn] | None = Field(default=None, max_length=60)
+    eligibility: list[EligibilityIn] | None = Field(default=None, max_length=40)
     message_to_reviewer: str | None = Field(default=None, max_length=1000)
+
+    @field_validator("languages")
+    @classmethod
+    def _langs(cls, v):
+        if v is None:
+            return None
+        out = [x.strip().lower() for x in v if x and x.strip()]
+        if any(len(x) > 8 or not x.replace("-", "").isalpha() for x in out):
+            raise ValueError("languages must be language codes like en, es, ko")
+        return list(dict.fromkeys(out))
+
+    @field_validator("email")
+    @classmethod
+    def _email(cls, v):
+        if v in (None, ""):
+            return None
+        v = v.strip()
+        if "@" not in v or " " in v or "." not in v.split("@")[-1]:
+            raise ValueError("not an email address")
+        return v.lower()
 
     @field_validator("website", "registration_url")
     @classmethod
@@ -319,7 +356,7 @@ class ReportResponseIn(BaseModel):
 class SurplusIn(BaseModel):
     location_id: int
     title: str = Field(min_length=3, max_length=160)
-    food_types: list[str] = Field(default_factory=list)
+    food_types: list[str] = Field(default_factory=list, max_length=30)
     quantity: str | None = Field(default=None, max_length=160)
     pickup_notes: str | None = Field(default=None, max_length=500)
     available_until: datetime

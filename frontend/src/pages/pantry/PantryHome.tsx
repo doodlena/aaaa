@@ -7,9 +7,10 @@ import { SyntheticBadge } from '../../components/Badges';
 import { Icon } from '../../components/Icon';
 import { LiveStatusTag, PostedBy } from '../../components/Live';
 import { Empty, ErrorMessage, errorKey, Loading } from '../../components/Status';
-import { formatAddress } from '../../lib/format';
+import { formatAddress, formatDateTime } from '../../lib/format';
 import { useAsync } from '../../lib/useAsync';
 import { useDocumentTitle } from '../../state/meta';
+import { ContactEmail } from './ContactEmail';
 
 function ClaimForm({ r, onDone, onCancel }: { r: ResourceSummary; onDone: () => void; onCancel: () => void }) {
   const { t } = useTranslation();
@@ -48,6 +49,7 @@ function ClaimForm({ r, onDone, onCancel }: { r: ResourceSummary; onDone: () => 
         <textarea id={`${id}-note`} rows={2} maxLength={1000} value={note} onChange={(e) => setNote(e.target.value)} />
       </div>
       <p className="fgroup__hint">{t('portal.claim.howVerified')}</p>
+      <ContactEmail kind="claimHelp" />
       <div aria-live="polite">{error && <p className="form-error">{error}</p>}</div>
       <div className="form__actions">
         <button type="submit" className="btn btn--primary btn--sm" disabled={busy}>
@@ -99,7 +101,8 @@ function RequestAccess({ mine, onRequested }: { mine: ProviderPantry[]; onReques
   };
 
   const shown = (results || []).filter((r) => !nameFilter.trim() || r.name.toLowerCase().includes(nameFilter.trim().toLowerCase()));
-  const already = new Set(mine.map((m) => m.location_id));
+  // A declined request can be sent again with better details; everything else is already in progress.
+  const already = new Set(mine.filter((m) => m.status !== 'rejected').map((m) => m.location_id));
 
   return (
     <section className="card-section" aria-labelledby={`${id}-t`}>
@@ -165,6 +168,72 @@ function RequestAccess({ mine, onRequested }: { mine: ProviderPantry[]; onReques
   );
 }
 
+/** One of my access requests: status, when, the reviewer's note, and withdraw (pending) or send again (declined). */
+function RequestRow({ p, onChanged }: { p: ProviderPantry; onChanged: () => void }) {
+  const { t, i18n } = useTranslation();
+  const [busy, setBusy] = useState(false);
+  const [resend, setResend] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const withdraw = async () => {
+    setBusy(true);
+    setError(null);
+    try {
+      await api.provider.withdrawClaim(p.membership_id);
+      onChanged();
+    } catch (err) {
+      setError(t(errorKey(err)));
+      setBusy(false);
+    }
+  };
+  const asSummary = { id: p.location_id, name: p.name } as ResourceSummary;
+  return (
+    <li className="request-row">
+      <p>
+        <strong>{p.name}</strong> — <span className={`pill pill--${p.status}`}>{t(`portal.claimStatus.${p.status}`, { defaultValue: p.status })}</span>
+        {p.requested_at && (
+          <span className="muted">
+            {' '}
+            · {t('portal.requestedOn', { date: formatDateTime(p.requested_at, i18n.language) })}
+          </span>
+        )}
+      </p>
+      {p.status === 'pending' && <p className="muted">{t('portal.pendingHint')}</p>}
+      {p.decision_note && (
+        <p className="request-row__note">
+          <strong>{t('portal.reviewerNote')}:</strong> {p.decision_note}
+        </p>
+      )}
+      {p.status === 'revoked' && <p className="muted">{t('portal.revokedHint')}</p>}
+      {p.status !== 'approved' && !resend && <ContactEmail kind="claimHelp" />}
+      <div className="form__actions">
+        {p.status === 'pending' && (
+          <button type="button" className="btn btn--ghost btn--sm" disabled={busy} onClick={() => void withdraw()}>
+            {t('portal.withdraw')}
+            <span className="visually-hidden"> — {p.name}</span>
+          </button>
+        )}
+        {p.status === 'rejected' && !resend && (
+          <button type="button" className="btn btn--secondary btn--sm" onClick={() => setResend(true)}>
+            {t('portal.sendAgain')}
+            <span className="visually-hidden"> — {p.name}</span>
+          </button>
+        )}
+      </div>
+      {resend && (
+        <ClaimForm
+          r={asSummary}
+          onCancel={() => setResend(false)}
+          onDone={() => {
+            setResend(false);
+            onChanged();
+          }}
+        />
+      )}
+      {error && <p className="form-error">{error}</p>}
+    </li>
+  );
+}
+
 export function PantryHome() {
   const { t } = useTranslation();
   useDocumentTitle(t('portal.title'));
@@ -178,6 +247,7 @@ export function PantryHome() {
         <p className="eyebrow">{t('portal.eyebrow')}</p>
         <h1 className="display display--sm">{t('portal.title')}</h1>
         <p className="lead">{t('portal.lead')}</p>
+        <ContactEmail />
       </header>
       {me.loading && !me.data && <Loading />}
       {!!me.error && <ErrorMessage error={me.error} onRetry={me.reload} />}
@@ -230,10 +300,7 @@ export function PantryHome() {
               </h2>
               <ul className="plain-list request-list">
                 {other.map((p) => (
-                  <li key={p.membership_id}>
-                    <strong>{p.name}</strong> — <span className={`pill pill--${p.status}`}>{t(`portal.claimStatus.${p.status}`, { defaultValue: p.status })}</span>
-                    {p.status === 'pending' && <span className="muted"> {t('portal.pendingHint')}</span>}
-                  </li>
+                  <RequestRow key={p.membership_id} p={p} onChanged={me.reload} />
                 ))}
               </ul>
             </section>
