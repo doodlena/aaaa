@@ -25,7 +25,7 @@
     "banner": "Demo data: listings marked [TEST] are fictional."
   },
   "footer": {
-    "disclaimer": "Live updates come from the support profiders, but information can still change. This site does not collect personal data for advertising or any other usage.",
+    "disclaimer": "Live updates come from the support providers, but information can still change. This site does not collect personal data for advertising or any other usage.",
     "about": "About this site",
     "privacy": "Privacy",
     "mapCredit": "Maps: OpenFreeMap and © OpenStreetMap contributors.",
@@ -90,7 +90,7 @@
       "unknown": "We do not know yet. Call before you go. It does not mean there is no requirement."
     },
     "learnMore": "Learn where our information comes from",
-    "lede": "{{app}} helps you find free support in Northern Virginia. This includes service like food pantries and meals, benefits, healthcare, housing, legal help, and more. Live availability updates are posted by the providers themselves.",
+    "lede": "{{app}} helps you find free support in Northern Virginia. This includes services like food pantries and meals, benefits, healthcare, housing, legal help, and more. Live availability updates are posted by the providers themselves.",
     "findTitle": "Search near an address",
     "findLead": "Type an address or ZIP code to see hours, what to bring and directions for every kind of help nearby.",
     "liveLegend": "Live updates are posted by the provider itself and show how much is left: three bars = plenty, two = some, one = low.",
@@ -101,7 +101,7 @@
     "verified": "Verified",
     "stale": "Needs re-check",
     "lastVerified": "Last verified {{date}}",
-    "source_reported": "From a public lis; not yet verified"
+    "source_reported": "From a public list; not yet verified"
   },
   "badges": {
     "synthetic": "Test data; not a real resource"

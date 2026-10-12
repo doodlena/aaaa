@@ -55,7 +55,7 @@ describe('live shelf status', () => {
   it('home shows the tagline, the needs chooser and live updates from providers', async () => {
     mockFetch([{ path: '/api/resources/search', body: searchResponse({ items: [summary({ live: liveOpen() }), summary({ id: 9, name: 'No post' })] }) }]);
     renderApp(<HomePage />);
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Help that lights the way — food, health and support near you');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('One place to find food, health and support near you');
     expect(screen.getByRole('navigation', { name: 'What do you need?' })).toBeInTheDocument();
     const feed = await screen.findByRole('list', { name: 'Live updates from providers' });
     expect(within(feed).getByRole('link', { name: '[TEST] Maple Community Pantry' })).toBeInTheDocument();

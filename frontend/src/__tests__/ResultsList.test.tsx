@@ -26,7 +26,7 @@ describe('ResultsList', () => {
     );
     expect(screen.getByRole('status')).toHaveTextContent('1 place matches your search');
     const card = screen.getByRole('listitem', { name: /Maple Community Pantry/ });
-    expect(within(card).getByTestId('synthetic-badge')).toHaveTextContent('Test data — not a real resource');
+    expect(within(card).getByTestId('synthetic-badge')).toHaveTextContent('Test data; not a real resource');
     expect(within(card).getByText('Verified')).toBeInTheDocument();
     expect(within(card).getByText('Offers Groceries')).toBeInTheDocument();
     expect(within(card).getByText('No ID required (confirmed)')).toBeInTheDocument();

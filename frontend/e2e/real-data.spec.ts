@@ -5,14 +5,14 @@ import { expect, test } from '@playwright/test';
  * report or save anything, so they cannot modify real records.
  */
 test.describe('real data (read-only)', () => {
-  test('R1: ZIP 22204 shows real listings labelled "From a public list — not yet verified"', async ({ page }) => {
+  test('R1: ZIP 22204 shows real listings labelled "From a public list; not yet verified"', async ({ page }) => {
     await page.goto('/');
     await page.getByLabel('Your address or ZIP code').fill('22204');
     await page.getByRole('button', { name: 'Search', exact: true }).click();
     await expect(page).toHaveURL(/\/find\?.*lat=/);
     const list = page.getByRole('list', { name: 'Places that match' });
     await expect(list).toBeVisible();
-    const reported = list.locator(':scope > li').filter({ has: page.getByTestId('verification-badge').filter({ hasText: 'From a public list — not yet verified' }) });
+    const reported = list.locator(':scope > li').filter({ has: page.getByTestId('verification-badge').filter({ hasText: 'From a public list; not yet verified' }) });
     expect(await reported.count()).toBeGreaterThan(0);
     // Status is never colour only: the badge is the dotted variant with its own icon + words.
     await expect(reported.first().getByTestId('verification-badge')).toHaveClass(/badge--reported/);

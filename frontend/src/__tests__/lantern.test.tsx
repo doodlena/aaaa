@@ -253,6 +253,6 @@ describe('catalogs cover every new code', () => {
     }
     expect(es.crisis.body).toContain('988');
     expect(es.crisis.body).toContain('En una emergencia, llame al 911.');
-    expect(en.app.tagline).toBe('Help that lights the way — food, health and support near you');
+    expect(en.app.tagline).toBe('One place to find food, health and support near you');
   });
 });
