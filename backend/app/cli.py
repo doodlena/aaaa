@@ -315,6 +315,69 @@ def cmd_ai_suggest(a):
     print(f"{done} AI schedule suggestions queued for review")
 
 
+SNAPSHOT_DIR = REPO_ROOT / "data" / "snapshots"
+
+
+def cmd_export_snapshot(_a):
+    """Write every imported record from republishable sources to data/snapshots/ (committed), so a fresh database
+    can be rebuilt without re-scraping. Sources whose terms need permission (publication != permitted_with_attribution)
+    are never written to the repository; `load-data --live-restricted` fetches them live instead."""
+    from app.ingestion.base import load_source_configs
+    from app.models import IngestionRun, SourceRecord
+
+    configs = load_source_configs()
+    SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+    manifest = []
+    with _db() as db:
+        order = {sid: i for i, sid in enumerate(dict.fromkeys(db.scalars(select(IngestionRun.source_id).order_by(IngestionRun.id)).all()))}
+        for sid, cfg in sorted(configs.items(), key=lambda kv: order.get(kv[0], 10**6)):
+            if cfg.is_synthetic or cfg.publication != "permitted_with_attribution":
+                continue
+            recs = db.scalars(select(SourceRecord).where(SourceRecord.source_id == sid, SourceRecord.status != "invalid")
+                              .order_by(SourceRecord.id)).all()
+            if not recs:
+                continue
+            out = SNAPSHOT_DIR / f"{sid}.json"
+            out.write_text(json.dumps({"_notice": f"Snapshot of normalized records imported from source '{sid}' ({cfg.name}). "
+                                       "Unverified candidates; see config/sources/ for attribution and terms.",
+                                       "source_id": sid, "records": [r.normalized for r in recs]}, indent=1, ensure_ascii=False, default=str))
+            manifest.append({"source_id": sid, "file": out.name, "records": len(recs), "order": len(manifest)})
+    (SNAPSHOT_DIR / "manifest.json").write_text(json.dumps({"exported_at": datetime.now(UTC).isoformat(), "sources": manifest}, indent=1))
+    print(f"exported {sum(m['records'] for m in manifest)} records from {len(manifest)} sources to {SNAPSHOT_DIR}")
+
+
+def cmd_load_data(a):
+    """Rebuild listings from data/snapshots/ (idempotent: re-running changes nothing). Optionally fetch restricted
+    sources live for local/internal review."""
+    from app.ingestion.base import Fetcher, load_source_configs
+    from app.ingestion.pipeline import run_source, sync_source_row
+    from app.models import Location
+    from app.services.registry import active_scope, sync_jurisdictions
+
+    configs = load_source_configs()
+    man = json.loads((SNAPSHOT_DIR / "manifest.json").read_text())
+    with _db() as db:
+        sync_jurisdictions(db)
+        if a.if_empty and db.scalar(select(Location.id).where(Location.is_synthetic.is_(False)).limit(1)):
+            print("database already has real listings; skipping (use without --if-empty to refresh)")
+            return
+        for m in sorted(man["sources"], key=lambda m: m["order"]):
+            cfg = configs.get(m["source_id"])
+            if not cfg:
+                continue
+            snap = cfg.model_copy(update={"adapter": "structured_json", "url": f"snapshot://{m['file']}", "request_urls": [], "options": {}})
+            run = run_source(db, snap, Fetcher(fixtures={snap.url: SNAPSHOT_DIR / m["file"]}), scope=None)
+            sync_source_row(db, cfg)  # keep the real adapter/config on the source row
+            db.commit()
+            print(f"{cfg.id}: {run.status} {run.counts.get('inserted')} new, {run.counts.get('unchanged')} unchanged")
+        if a.live_restricted:
+            for cfg in configs.values():
+                if cfg.enabled and not cfg.is_synthetic and cfg.publication != "permitted_with_attribution":
+                    r = run_source(db, cfg, Fetcher(), active_scope())
+                    print(f"{cfg.id} (live, restricted — local review only): {r.status} {r.counts.get('inserted')} new")
+    print("done")
+
+
 def cmd_evaluate(a):
     from app.research.evaluation import run_pilot_evaluation
 
@@ -367,6 +430,11 @@ def main(argv=None):
     tr.add_argument("--limit", type=int, default=200)
     tr.set_defaults(fn=cmd_translate)
     sub.add_parser("evaluate-pilot", help="write the pilot evaluation report").set_defaults(fn=cmd_evaluate)
+    sub.add_parser("export-snapshot", help="write imported republishable records to data/snapshots/ (commit these)").set_defaults(fn=cmd_export_snapshot)
+    ld = sub.add_parser("load-data", help="rebuild listings from data/snapshots/ (no scraping needed)")
+    ld.add_argument("--if-empty", action="store_true", help="only load when the database has no real listings yet")
+    ld.add_argument("--live-restricted", action="store_true", help="also fetch permission-required sources live (local review only)")
+    ld.set_defaults(fn=cmd_load_data)
     ais = sub.add_parser("ai-suggest", help="(optional, Claude) queue AI-structured hours suggestions for review")
     ais.add_argument("--limit", type=int, default=25)
     ais.set_defaults(fn=cmd_ai_suggest)

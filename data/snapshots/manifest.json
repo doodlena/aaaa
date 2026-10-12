@@ -1,0 +1,83 @@
+{
+ "exported_at": "2026-10-12T18:43:29.629959+00:00",
+ "sources": [
+  {
+   "source_id": "manassas-food-resources",
+   "file": "manassas-food-resources.json",
+   "records": 18,
+   "order": 0
+  },
+  {
+   "source_id": "pwc-cmn-resources",
+   "file": "pwc-cmn-resources.json",
+   "records": 13,
+   "order": 1
+  },
+  {
+   "source_id": "afac-get-groceries",
+   "file": "afac-get-groceries.json",
+   "records": 5,
+   "order": 2
+  },
+  {
+   "source_id": "va08-web-research",
+   "file": "va08-web-research.json",
+   "records": 52,
+   "order": 3
+  },
+  {
+   "source_id": "va08-support-services",
+   "file": "va08-support-services.json",
+   "records": 41,
+   "order": 4
+  },
+  {
+   "source_id": "pwc-cmn-support-services",
+   "file": "pwc-cmn-support-services.json",
+   "records": 130,
+   "order": 5
+  },
+  {
+   "source_id": "hrsa-health-centers",
+   "file": "hrsa-health-centers.json",
+   "records": 29,
+   "order": 6
+  },
+  {
+   "source_id": "nvrc-homeless-shelters",
+   "file": "nvrc-homeless-shelters.json",
+   "records": 26,
+   "order": 7
+  },
+  {
+   "source_id": "samhsa-treatment",
+   "file": "samhsa-treatment.json",
+   "records": 106,
+   "order": 8
+  },
+  {
+   "source_id": "nova-pet-support",
+   "file": "nova-pet-support.json",
+   "records": 15,
+   "order": 9
+  },
+  {
+   "source_id": "nova-food-research",
+   "file": "nova-food-research.json",
+   "records": 32,
+   "order": 10
+  },
+  {
+   "source_id": "nova-support-services",
+   "file": "nova-support-services.json",
+   "records": 39,
+   "order": 11
+  },
+  {
+   "source_id": "va08-gap-research",
+   "file": "va08-gap-research.json",
+   "records": 28,
+   "order": 12
+  }
+ ]
+}

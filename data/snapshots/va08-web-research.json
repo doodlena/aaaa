@@ -1,0 +1,3587 @@
+{
+ "_notice": "Snapshot of normalized records imported from source 'va08-web-research' (VA-08 food assistance — AI-assisted web research (cited)). Unverified candidates; see config/sources/ for attribution and terms.",
+ "source_id": "va08-web-research",
+ "records": [
+  {
+   "lat": 38.844097,
+   "lon": -77.088837,
+   "zip": "22206",
+   "city": "Arlington",
+   "email": null,
+   "notes": "Weekly supplemental groceries. Choose one site and visit once a week (per Arlington County 2026 flyer). Home delivery for homebound clients: call 571-384-1448. Document questions: 571-384-1440. AFAC strives to provide every week: milk, eggs, one serving of protein (choice of chicken, ground beef, fish, or hot dogs), fresh fruit, fresh vegetables, cereal or oatmeal, canned goods, rice/pasta/dry beans, bread, baked goods.",
+   "phone": "703-845-8486",
+   "state": "VA",
+   "website": "https://afac.org/get-groceries/",
+   "address1": "2708 S Nelson St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:00",
+       "closes": "19:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:00",
+       "closes": "19:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "12:30",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "dairy",
+      "eggs",
+      "meat",
+      "poultry",
+      "fish",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "pantry_staples",
+      "bread",
+      "baked_goods"
+     ],
+     "description": "Weekly supplemental groceries (referral required)",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "If you are temporarily or permanently homebound due to a disability, recovering from a recent surgery, or are postpartum, and don't have someone to pick up your groceries from AFAC, call 571-384-1448 to ask about home delivery.",
+     "eligibility": [],
+     "service_type": "delivery_qualifying",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://afac.org/get-groceries/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "live in Arlington",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "get a referral from an Arlington County social service agency. AFAC referrals last for 6 months",
+     "requirement_type": "referral"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "you must provide ONE photo identification",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "ONE proof of your address in Arlington ... A post office box or business address is not acceptable.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-afac-nelson-hq",
+   "location_name": "AFAC Headquarters (Nelson Street)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Monday to Friday: 9:00 AM – 1:00 PM; Tuesday and Thursday evenings: 6:00 – 7:00 PM; Saturday morning: 8:30 AM – 12:30 PM",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington Food Assistance Center (AFAC)",
+   "organization_website": "https://afac.org/",
+   "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.856607,
+   "lon": -77.112621,
+   "zip": "22204",
+   "city": "Arlington",
+   "email": null,
+   "notes": "AFAC grocery distribution site (referral required). Please let your social worker know which site you prefer. Note: Arlington County Feb 2026 flyer lists Monday 9:00 - 11:30 AM for this site.",
+   "phone": "703-845-8486",
+   "state": "VA",
+   "website": "https://afac.org/get-groceries/",
+   "address1": "909 S Dinwiddie St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "11:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "dairy",
+      "eggs",
+      "meat",
+      "poultry",
+      "fish",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "pantry_staples",
+      "bread",
+      "baked_goods"
+     ],
+     "description": "Weekly supplemental groceries (referral required)",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://afac.org/get-groceries/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "live in Arlington",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "get a referral from an Arlington County social service agency. AFAC referrals last for 6 months",
+     "requirement_type": "referral"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "you must provide ONE photo identification",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "ONE proof of your address in Arlington ... A post office box or business address is not acceptable.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-afac-arlington-mill",
+   "location_name": "AFAC at Arlington Mill Community Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Monday: 9:30 – 11:30 AM",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington Food Assistance Center (AFAC)",
+   "organization_website": "https://afac.org/",
+   "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.862064,
+   "lon": -77.093372,
+   "zip": "22204",
+   "city": "Arlington",
+   "email": null,
+   "notes": "AFAC grocery distribution site (referral required). Please let your social worker know which site you prefer.",
+   "phone": "703-845-8486",
+   "state": "VA",
+   "website": "https://afac.org/get-groceries/",
+   "address1": "918 S Lincoln St",
+   "address2": "1st floor community room",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:00",
+       "closes": "17:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "dairy",
+      "eggs",
+      "meat",
+      "poultry",
+      "fish",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "pantry_staples",
+      "bread",
+      "baked_goods"
+     ],
+     "description": "Weekly supplemental groceries (referral required)",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://afac.org/get-groceries/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "live in Arlington",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "get a referral from an Arlington County social service agency. AFAC referrals last for 6 months",
+     "requirement_type": "referral"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "you must provide ONE photo identification",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "ONE proof of your address in Arlington ... A post office box or business address is not acceptable.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-afac-gilliam-place",
+   "location_name": "AFAC at Gilliam Place",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Monday: 4:00 – 5:30 PM",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington Food Assistance Center (AFAC)",
+   "organization_website": "https://afac.org/",
+   "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.883394,
+   "lon": -77.135412,
+   "zip": "22205",
+   "city": "Arlington",
+   "email": null,
+   "notes": "AFAC grocery distribution site (referral required). Please let your social worker know which site you prefer.",
+   "phone": "703-845-8486",
+   "state": "VA",
+   "website": "https://afac.org/get-groceries/",
+   "address1": "5705 Washington Blvd",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "15:30",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "dairy",
+      "eggs",
+      "meat",
+      "poultry",
+      "fish",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "pantry_staples",
+      "bread",
+      "baked_goods"
+     ],
+     "description": "Weekly supplemental groceries (referral required)",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://afac.org/get-groceries/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "live in Arlington",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "get a referral from an Arlington County social service agency. AFAC referrals last for 6 months",
+     "requirement_type": "referral"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "you must provide ONE photo identification",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "ONE proof of your address in Arlington ... A post office box or business address is not acceptable.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-afac-westover-fisher-house",
+   "location_name": "AFAC at Westover @ Fisher House",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Wednesday: 3:30 – 5 PM",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington Food Assistance Center (AFAC)",
+   "organization_website": "https://afac.org/",
+   "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.875348,
+   "lon": -77.107553,
+   "zip": "22203",
+   "city": "Arlington",
+   "email": null,
+   "notes": "AFAC grocery distribution site (referral required). Please let your social worker know which site you prefer.",
+   "phone": "703-845-8486",
+   "state": "VA",
+   "website": "https://afac.org/get-groceries/",
+   "address1": "4108 4th St N",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "dairy",
+      "eggs",
+      "meat",
+      "poultry",
+      "fish",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "pantry_staples",
+      "bread",
+      "baked_goods"
+     ],
+     "description": "Weekly supplemental groceries (referral required)",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://afac.org/get-groceries/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "live in Arlington",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "get a referral from an Arlington County social service agency. AFAC referrals last for 6 months",
+     "requirement_type": "referral"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "you must provide ONE photo identification",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "ONE proof of your address in Arlington ... A post office box or business address is not acceptable.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-afac-gates-of-ballston",
+   "location_name": "AFAC at Gates of Ballston Community Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Friday: 11:00 AM – 1:00 PM",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington Food Assistance Center (AFAC)",
+   "organization_website": "https://afac.org/",
+   "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.88032,
+   "lon": -77.096518,
+   "zip": "22201",
+   "city": "Arlington",
+   "email": null,
+   "notes": "AFAC grocery distribution site (referral required). Please let your social worker know which site you prefer.",
+   "phone": "703-845-8486",
+   "state": "VA",
+   "website": "https://afac.org/get-groceries/",
+   "address1": "606 N Irving St",
+   "address2": "lower level",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "10:30",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "dairy",
+      "eggs",
+      "meat",
+      "poultry",
+      "fish",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "pantry_staples",
+      "bread",
+      "baked_goods"
+     ],
+     "description": "Weekly supplemental groceries (referral required)",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://afac.org/get-groceries/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "live in Arlington",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "get a referral from an Arlington County social service agency. AFAC referrals last for 6 months",
+     "requirement_type": "referral"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "you must provide ONE photo identification",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "ONE proof of your address in Arlington ... A post office box or business address is not acceptable.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-afac-clarendon-umc",
+   "location_name": "AFAC at Clarendon United Methodist Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Saturday: 8:30 – 10:30 AM",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington Food Assistance Center (AFAC)",
+   "organization_website": "https://afac.org/",
+   "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.836708,
+   "lon": -77.057751,
+   "zip": "22305",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Seasonal food distribution open to all, bring a bag. Recommended to arrive early.",
+   "phone": "703-887-4992",
+   "state": "VA",
+   "website": null,
+   "address1": "25 W Reed Ave",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": 2,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Seasonal food distribution open to all",
+     "eligibility": [],
+     "service_type": "seasonal_program",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [],
+   "external_id": "va08-dchs-agape-chick-armstrong",
+   "location_name": "Leonard \"Chick\" Armstrong Recreation Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Second Friday each month, 11 a.m.-1 p.m., recommended to arrive early.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "City of Alexandria DCHS and Agape Church",
+   "organization_website": null,
+   "raw_eligibility_text": "Seasonal food distribution open to all, bring a bag.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.806726,
+   "lon": -77.133323,
+   "zip": "22304",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Free groceries, personal care items, cleaning supplies, school supplies. Closed Sundays, Mondays, Fridays and all federal holidays. Phone from City of Alexandria Food Resource Directory (Jan 2026). City directory (Jan 2026) lists Tue-Thu closure 2-3 p.m.; ALIVE page lists 2-2:30 pm.",
+   "phone": "703-549-3692",
+   "state": "VA",
+   "website": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "address1": "510-F South Van Dorn St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "14:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "14:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "14:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "14:30",
+       "closes": "18:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "14:30",
+       "closes": "18:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "14:30",
+       "closes": "18:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "15:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Client-choice food hub",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Personal care items",
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Cleaning supplies, school supplies",
+     "eligibility": [],
+     "service_type": "household_essentials",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "provide Alexandria residents with free groceries",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Neighbors are welcome to visit once a month",
+     "requirement_type": "visit_limit"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "proof of residency in the City of Alexandria may be requested.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-alive-west-end-food-hub",
+   "location_name": "ALIVE! West End Food Hub",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "West End Food Hub at 510-F South Van Dorn Street: Tuesdays 11am – 6pm (Closed 2pm – 2:30pm); Wednesdays 11am – 6pm (Closed 2 pm – 2:30 pm); Thursdays 11am – 6pm (Closed 2 pm – 2:30 pm); Saturdays 9am – 3pm",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "ALIVE! (Alexandrians Involved Ecumenically)",
+   "organization_website": "https://www.alive-inc.org/",
+   "raw_eligibility_text": "The ALIVE! Community Food Hubs provide Alexandria residents with free groceries ... Neighbors are welcome to visit once a month, and proof of residency in the City of Alexandria may be requested.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.828465,
+   "lon": -77.058999,
+   "zip": "22301",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Free groceries, personal care items, cleaning supplies, school supplies. Closed Sundays, Mondays, Fridays and all federal holidays. Phone from City of Alexandria Food Resource Directory (Jan 2026). City directory (Jan 2026) lists Tue-Thu closure 2-3 p.m.; ALIVE page lists 2-2:30 pm.",
+   "phone": "703-549-3692",
+   "state": "VA",
+   "website": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "address1": "2601 Mount Vernon Ave",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "14:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "14:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "14:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "14:30",
+       "closes": "18:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "14:30",
+       "closes": "18:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "14:30",
+       "closes": "18:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "15:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Client-choice food hub",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Personal care items",
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Cleaning supplies, school supplies",
+     "eligibility": [],
+     "service_type": "household_essentials",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "provide Alexandria residents with free groceries",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Neighbors are welcome to visit once a month",
+     "requirement_type": "visit_limit"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "proof of residency in the City of Alexandria may be requested.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-alive-del-ray-food-hub",
+   "location_name": "ALIVE! Del Ray Food Hub",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Del Ray Food Hub at 2601 Mount Vernon Avenue: Tuesdays 11am – 6pm (Closed 2pm – 2:30pm); Wednesdays 11am – 6pm (Closed 2 pm – 2:30 pm); Thursdays 11am – 6pm (Closed 2 pm – 2:30 pm); Saturdays 9am – 3pm",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "ALIVE! (Alexandrians Involved Ecumenically)",
+   "organization_website": "https://www.alive-inc.org/",
+   "raw_eligibility_text": "The ALIVE! Community Food Hubs provide Alexandria residents with free groceries ... Neighbors are welcome to visit once a month, and proof of residency in the City of Alexandria may be requested.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.836708,
+   "lon": -77.057751,
+   "zip": "22305",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "ALIVE page lists this site's address as '3600 Commonwealth Ave.'; address used here is from the City of Alexandria Food Resource Directory (Jan 2026), which lists Leonard \"Chick\" Armstrong Recreation Center (25 West Reed Ave) as a weekend distribution site. Free bags of groceries (produce, chicken, eggs, bread). Please bring reusable bags. Dates are subject to change. City directory (Jan 2026) lists 8:30-11:30 a.m. on the last Saturday (Jan-Apr, Jun-Oct) and second Saturday in May, Nov, Dec.",
+   "phone": null,
+   "state": "VA",
+   "website": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "address1": "25 W Reed Ave",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "fresh_vegetables",
+      "fresh_fruits",
+      "poultry",
+      "eggs",
+      "bread"
+     ],
+     "description": "Monthly Community Fresh Market",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "ALIVE! food distributions are for City of Alexandria residents.",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Proof of residency in the City of Alexandria may be requested.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-alive-fresh-market-chick-armstrong",
+   "location_name": "ALIVE! Monthly Community Fresh Market - Leonard \"Chick\" Armstrong Recreation Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Last Saturday of the month from 8:30 am – 10:30 am. Dates for the rest of the year: October 31st, November 21st, December 19th",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "ALIVE! (Alexandrians Involved Ecumenically)",
+   "organization_website": "https://www.alive-inc.org/",
+   "raw_eligibility_text": "ALIVE! food distributions are for City of Alexandria residents. Proof of residency in the City of Alexandria may be requested.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.827344,
+   "lon": -77.130327,
+   "zip": "22311",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Free bags of groceries (produce, chicken, eggs, bread). Please bring reusable bags. Dates are subject to change. City directory (Jan 2026) lists 8:30-11:30 a.m. on the last Saturday (Jan-Apr, Jun-Oct) and second Saturday in May, Nov, Dec.",
+   "phone": null,
+   "state": "VA",
+   "website": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "address1": "5650 Sanger Ave",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "fresh_vegetables",
+      "fresh_fruits",
+      "poultry",
+      "eggs",
+      "bread"
+     ],
+     "description": "Monthly Community Fresh Market",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "ALIVE! food distributions are for City of Alexandria residents.",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Proof of residency in the City of Alexandria may be requested.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-alive-fresh-market-ramsay",
+   "location_name": "ALIVE! Monthly Community Fresh Market - William Ramsay Recreation Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Last Saturday of the month from 8:30 am – 10:30 am. Dates for the rest of the year: October 31st, November 21st, December 19th",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "ALIVE! (Alexandrians Involved Ecumenically)",
+   "organization_website": "https://www.alive-inc.org/",
+   "raw_eligibility_text": "ALIVE! food distributions are for City of Alexandria residents. Proof of residency in the City of Alexandria may be requested.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.830441,
+   "lon": -77.116305,
+   "zip": "22311",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "ALIVE! community partner food distribution. Please note dates are subject to change. City directory (Jan 2026) describes ALIVE! Food Pop-Ups as bags of food in the parking lot; drive-through and walk-up depending on site.",
+   "phone": null,
+   "state": "VA",
+   "website": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "address1": "4850 Mark Center Dr",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Community partner food distribution (specific dates)",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-alive-dchs-mark-center",
+   "location_name": "City of Alexandria Department of Community & Human Services (Mark Center)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "In partnership with City of Alexandria, Department of Community & Human Services, (4850 Mark Center Dr) at 2 – 3:30 p.m. Dates for the rest of the year: October 14th, November 10th, December 9th. Hosted by St. John's Community Services at DCHS at 2 – 3:30 p.m.: October 28th",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "ALIVE! with City of Alexandria DCHS",
+   "organization_website": "https://www.alive-inc.org/",
+   "raw_eligibility_text": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.832357,
+   "lon": -77.094718,
+   "zip": "22302",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "ALIVE! community partner food distribution. Please note dates are subject to change. City directory (Jan 2026) describes ALIVE! Food Pop-Ups as bags of food in the parking lot; drive-through and walk-up depending on site.",
+   "phone": null,
+   "state": "VA",
+   "website": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "address1": "3900 King St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Community partner food distribution (specific dates)",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-alive-fairlington-umc",
+   "location_name": "Fairlington United Methodist Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "In partnership with Fairlington United Methodist Church (3900 King St) at 5 – 6:30 p.m. Dates for the rest of the year: October 21st, November 18th, December 16th",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "ALIVE! with Fairlington United Methodist Church",
+   "organization_website": "https://www.alive-inc.org/",
+   "raw_eligibility_text": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.827194,
+   "lon": -77.110013,
+   "zip": "22304",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "ALIVE! community partner food distribution. Please note dates are subject to change. City directory (Jan 2026) describes ALIVE! Food Pop-Ups as bags of food in the parking lot; drive-through and walk-up depending on site.",
+   "phone": null,
+   "state": "VA",
+   "website": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "address1": "4646 Seminary Rd",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Community partner food distribution (specific dates)",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-alive-hammond-ms",
+   "location_name": "Francis C. Hammond Middle School",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Hosted by Communities in Schools at Hammond Middle School (4646 Seminary Road) at 4 – 6 p.m. Dates for the rest of the year: October 22nd, November 19th, December 17th",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "ALIVE! with Communities in Schools",
+   "organization_website": "https://www.alive-inc.org/",
+   "raw_eligibility_text": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.807386,
+   "lon": -77.055514,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "ALIVE! community partner food distribution. Please note dates are subject to change. City directory (Jan 2026) describes ALIVE! Food Pop-Ups as bags of food in the parking lot; drive-through and walk-up depending on site.",
+   "phone": null,
+   "state": "VA",
+   "website": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "address1": "1501 Cameron St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Community partner food distribution (specific dates)",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+     "requirement_type": "proof_of_address"
+    }
+   ],
+   "external_id": "va08-alive-uncut-jefferson-houston",
+   "location_name": "Jefferson-Houston School",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "In partnership with UNCUT Youth at Jefferson-Houston School (1501 Cameron Street) at 10 a.m. – 12:00 p.m. Dates for the rest of the year: October 24th, November 21st, December 19th",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "ALIVE! with UNCUT Youth",
+   "organization_website": "https://www.alive-inc.org/",
+   "raw_eligibility_text": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.805311,
+   "lon": -77.046986,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Provides perishable and non-perishable food (and toiletries once a month). Requires sign-in by name, bring a bag. Church outreach page: food distributed in the Meade Room on Thursday mornings; volunteers also deliver food to the home bound.",
+   "phone": "703-549-1450 ext. 2",
+   "state": "VA",
+   "website": null,
+   "address1": "118 N Washington St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "10:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Perishable and non-perishable food",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Toiletries once a month",
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Requires sign-in by name",
+     "requirement_type": "other"
+    }
+   ],
+   "external_id": "va08-lazarus-food-pantry-historic-christ-church",
+   "location_name": "Historic Christ Church Lazarus Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Thursday, 9-10 a.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Historic Christ Church",
+   "organization_website": "https://www.historicchristchurch.org/",
+   "raw_eligibility_text": "Requires sign-in by name, bring a bag.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.83756,
+   "lon": -77.064882,
+   "zip": "22305",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Provides food staples to low-income families and individuals. Hispanic heritage foods available.",
+   "phone": "703-549-1980",
+   "state": "VA",
+   "website": "https://gracealex.org/service/local-missions/food-ministries",
+   "address1": "3601 Russell Rd",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:00",
+       "closes": "19:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:00",
+       "closes": "19:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "pantry_staples",
+      "culturally_specific"
+     ],
+     "description": "Food staples",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Provides food staples to low-income families and individuals.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "va08-grace-episcopal-alexandria",
+   "location_name": "Grace Episcopal Church Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Tuesday and Friday, 6-7:30 p.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Grace Episcopal Church",
+   "organization_website": "https://gracealex.org/",
+   "raw_eligibility_text": "Provides food staples to low-income families and individuals.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.838616,
+   "lon": -77.116505,
+   "zip": "22311",
+   "city": "Alexandria",
+   "email": "contact@westendfoodpantry.com",
+   "notes": "Provides perishable and non-perishable foods, receive a prepared amount of food, specific to family size. Hot meal available every other Monday. CONFLICT: ALIVE! food program page (updated Oct 2026) lists West End Food Pantry at '2800 Hope Way, Alexandria, VA', Mondays 5 pm – 6:30 pm. Confirm current location.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "5150 Fillmore Ave",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "18:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Prepared amount of food specific to family size",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "prepared_meals"
+     ],
+     "description": "Hot meal available every other Monday",
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [],
+   "external_id": "va08-west-end-food-pantry",
+   "location_name": "West End Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Monday 5-6:30 p.m. *Hot meal available every other Monday",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "West End Food Pantry",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.826212,
+   "lon": -77.086579,
+   "zip": "22302",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Food distribution (listed under FOOD DISTRIBUTION in the City directory).",
+   "phone": "703-998-9006",
+   "state": "VA",
+   "website": null,
+   "address1": "3408 King St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "12:00",
+       "weekday": 4,
+       "week_of_month": 1,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "12:00",
+       "weekday": 4,
+       "week_of_month": 3,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Food distribution",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [],
+   "external_id": "va08-oakland-baptist-alexandria",
+   "location_name": "Oakland Baptist Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "11 a.m.-12 p.m. First and third Friday of each month",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Oakland Baptist Church",
+   "organization_website": "https://obcalexandria.church/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.80839,
+   "lon": -77.052918,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Call 1.800.268.0448 to register for food pickup. City directory (Jan 2026): 'Provides healthy and nutritious food options, bring a bag. Must register each week by Wednesday.'",
+   "phone": "1-800-268-0448",
+   "state": "VA",
+   "website": null,
+   "address1": "317 N Payne St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Registered food pickup on listed dates",
+     "eligibility": [],
+     "service_type": "appointment_distribution",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "call 1.800.268.0448 to register for food pickup",
+     "requirement_type": "registration"
+    }
+   ],
+   "external_id": "va08-mt-jezreel-baptist-pantry",
+   "location_name": "Mt. Jezreel Baptist Church Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Dates through the end of the year: June 26th, July 24th, August 21st, September 18th, October 16th, November 20th, December 18th. 9:30 am- 2:00 pm",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Mt. Jezreel Baptist Church",
+   "organization_website": null,
+   "raw_eligibility_text": "call 1.800.268.0448 to register for food pickup",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.808434,
+   "lon": -77.041795,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Listed as an ALIVE! pantry partner. Open until food is gone.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "322 Tancil Ct",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": 2,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Monthly food pantry",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "eligibility": [],
+   "external_id": "va08-ruby-tucker-family-center-pantry",
+   "location_name": "Ruby Tucker Family Center Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Second Friday of the month 11:00 am – 1:00 pm (or until food is gone)",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Ruby Tucker Family Center",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.80568,
+   "lon": -77.05478,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": "ChristHouse@ccda.net",
+   "notes": "Evening meal for homeless and low-income individuals; to-go meals picked up every night, in all weather conditions. Guests may begin to arrive at 4:30 p.m. and arrive by 5:30 p.m. to be served a hot meal to-go bag; late guests may receive a non-perishable meal bag.",
+   "phone": "703-549-8644",
+   "state": "VA",
+   "website": "https://ccda.net/find-help/food/alexandria-food-pantry/#christ-house-evening-meal",
+   "address1": "131 S West St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "17:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "17:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "17:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "17:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "17:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "17:30",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "17:30",
+       "weekday": 6,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "prepared_meals"
+     ],
+     "description": "To-go hot evening meal",
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [],
+   "external_id": "va08-christ-house-evening-meal",
+   "location_name": "Christ House Evening Meal",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Daily, 5-5:30 p.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Catholic Charities of the Diocese of Arlington",
+   "organization_website": "https://ccda.net/",
+   "raw_eligibility_text": "Evening meal for homeless and low-income individuals",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.807912,
+   "lon": -77.04872,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "All food programs take place between 12-1 p.m. No ID required. (ALIVE! page lists the Bag Lunch Program as 'Every Thursday and Friday'; confirm.)",
+   "phone": "703-549-1334",
+   "state": "VA",
+   "website": null,
+   "address1": "322 N Alfred St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "prepared_meals"
+     ],
+     "description": "Bag Lunch Program",
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:30",
+       "closes": "13:30",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "prepared_meals"
+     ],
+     "description": "Saturday Hot Meal Program (October-April)",
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No ID required.",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "va08-meade-memorial-episcopal",
+   "location_name": "Meade Memorial Episcopal Church Food Programs",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Bag Lunch Program Monday-Friday, 12-1 p.m.; Saturday Hot Meal Program Saturday (October-April), 12:30-1:30 p.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Meade Memorial Episcopal Church",
+   "organization_website": "https://meadechurch.org/",
+   "raw_eligibility_text": "No ID required.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.804926,
+   "lon": -77.047069,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Breakfast open to all, shared breakfast ministry. ALIVE! page lists the Washington Street UMC address as 115 S Washington Street.",
+   "phone": null,
+   "state": "VA",
+   "website": "https://wsumc.com/engagement/open-table",
+   "address1": "109 S Washington St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "06:00",
+       "closes": "08:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "06:00",
+       "closes": "08:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "community_meals"
+     ],
+     "description": "Free breakfast open to all",
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [],
+   "external_id": "va08-open-table-wsumc",
+   "location_name": "Open Table Breakfast - Washington Street United Methodist",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Monday and Friday, 6-8 a.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Open Table (shared breakfast ministry)",
+   "organization_website": null,
+   "raw_eligibility_text": "Breakfast open to all",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.812283,
+   "lon": -77.049146,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Breakfast open to all, shared breakfast ministry.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "1024 Wythe St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "06:00",
+       "closes": "08:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "community_meals"
+     ],
+     "description": "Free breakfast open to all",
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [],
+   "external_id": "va08-open-table-blue-white-carry-out",
+   "location_name": "Open Table Breakfast - Blue & White Carry Out",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Tuesday, 6-8 a.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Open Table (shared breakfast ministry)",
+   "organization_website": null,
+   "raw_eligibility_text": "Breakfast open to all",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.803396,
+   "lon": -77.047258,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Breakfast open to all, shared breakfast ministry.",
+   "phone": null,
+   "state": "VA",
+   "website": "https://oldtown.cc/get-connected/open-table",
+   "address1": "212 S Washington St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "06:00",
+       "closes": "08:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "community_meals"
+     ],
+     "description": "Free breakfast open to all",
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [],
+   "external_id": "va08-open-table-old-town-community-church",
+   "location_name": "Open Table Breakfast - Old Town Community Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Wednesday, 6-8 a.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Open Table (shared breakfast ministry)",
+   "organization_website": null,
+   "raw_eligibility_text": "Breakfast open to all",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.80195,
+   "lon": -77.043176,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Breakfast open to all, shared breakfast ministry.",
+   "phone": null,
+   "state": "VA",
+   "website": "https://opmh.org/service-and-justice",
+   "address1": "323 S Fairfax St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "06:00",
+       "closes": "08:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "community_meals"
+     ],
+     "description": "Free breakfast open to all",
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [],
+   "external_id": "va08-open-table-old-presbyterian-meeting-house",
+   "location_name": "Open Table Breakfast - Old Presbyterian Meeting House",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Thursday, 6-8 a.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Open Table (shared breakfast ministry)",
+   "organization_website": null,
+   "raw_eligibility_text": "Breakfast open to all",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.816579,
+   "lon": -77.112494,
+   "zip": "22304",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Senior Congregate Nutrition Program. Meals are served Monday–Friday, excluding holidays. Pre-registration required.",
+   "phone": "703-751-2766",
+   "state": "VA",
+   "website": null,
+   "address1": "4650 Taney Ave",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "prepared_meals"
+     ],
+     "description": "Senior congregate lunch",
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Pre-registration required.",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Listed under 'FOOD ACCESS PROGRAMS FOR OLDER ADULTS' (Senior Congregate Nutrition Program)",
+     "requirement_type": "age"
+    }
+   ],
+   "external_id": "va08-st-martins-senior-center",
+   "location_name": "St. Martins Senior Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Monday-Friday, 12-1 p.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "City of Alexandria Division of Aging & Adult Services",
+   "organization_website": null,
+   "raw_eligibility_text": "Pre-registration required.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.812229,
+   "lon": -77.047807,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Senior Congregate Nutrition Program. Meals are served Monday–Friday, excluding holidays. Pre-registration required.",
+   "phone": "703-746-5456",
+   "state": "VA",
+   "website": null,
+   "address1": "901 Wythe St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "09:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "09:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "09:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "09:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "09:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "12:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "12:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "12:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "12:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "12:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "prepared_meals"
+     ],
+     "description": "Senior congregate breakfast and lunch",
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Pre-registration required.",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Listed under 'FOOD ACCESS PROGRAMS FOR OLDER ADULTS' (Senior Congregate Nutrition Program)",
+     "requirement_type": "age"
+    }
+   ],
+   "external_id": "va08-charles-houston-senior-center",
+   "location_name": "Charles Houston Senior Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Monday-Friday Breakfast 8:30-9:30 a.m. Lunch 12-12:30 p.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "City of Alexandria Division of Aging & Adult Services",
+   "organization_website": null,
+   "raw_eligibility_text": "Pre-registration required.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.827344,
+   "lon": -77.130327,
+   "zip": "22311",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "5650 Sanger Ave",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-ramsay-rec",
+   "location_name": "Little Free Pantry - William Ramsay Rec. Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.83153,
+   "lon": -77.093906,
+   "zip": "22302",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "3846 King St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-fairlington-presbyterian",
+   "location_name": "Little Free Pantry - Fairlington Presbyterian Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.806866,
+   "lon": -77.075117,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "2647 Duke St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-duke-street",
+   "location_name": "Little Free Pantry - Duke Street",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.814896,
+   "lon": -77.072416,
+   "zip": "22302",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "2723 King St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-first-christian-alexandria",
+   "location_name": "Little Free Pantry - First Christian Church of Alexandria",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.828294,
+   "lon": -77.06602,
+   "zip": "22301",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "2500 Russell Rd",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-alexandria-country-day",
+   "location_name": "Little Free Pantry - Alexandria Country Day School",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.841688,
+   "lon": -77.062096,
+   "zip": "22305",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "3907 Bruce St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-casa-chirilagua",
+   "location_name": "Little Free Pantry - Casa Chirilagua",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.838744,
+   "lon": -77.062339,
+   "zip": "22305",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "3704 Mount Vernon Ave",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-st-ritas",
+   "location_name": "Little Free Pantry - St. Rita's Catholic Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.837528,
+   "lon": -77.059161,
+   "zip": "22305",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "65 Dale St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-dale-st-garden",
+   "location_name": "Little Free Pantry - Dale St. Community Garden",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8217,
+   "lon": -77.057907,
+   "zip": "22301",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "1702 Mount Vernon Ave",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-del-ray-pantry",
+   "location_name": "Little Free Pantry - Del Ray Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.817991,
+   "lon": -77.05708,
+   "zip": "22301",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "1301 Mount Vernon Ave",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-george-washington",
+   "location_name": "Little Free Pantry - George Washington Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.810645,
+   "lon": -77.052592,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "512 N Payne St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-yellow-blessing-box",
+   "location_name": "Little Free Pantry - Yellow Blessing Box",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.812229,
+   "lon": -77.047807,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "901 Wythe St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-charles-houston-rec",
+   "location_name": "Little Free Pantry - Charles Houston Rec. Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.802128,
+   "lon": -77.04409,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Little Free Pantry listed by Hunger Free Alexandria: 'free food at any time'. City directory: grassroots crowdsourced mini pantry; always open to take or leave food.",
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "316 S Royal St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Little free pantry (self-serve)",
+     "eligibility": [],
+     "service_type": "walk_up",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.hungerfreealexandria.com/i-need-assistance",
+   "eligibility": [],
+   "external_id": "va08-lfp-old-presbyterian-meeting-house",
+   "location_name": "Little Free Pantry - Old Presbyterian Meeting House",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "free food at any time",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Little Free Pantries (Alexandria)",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.754237,
+   "lon": -77.086068,
+   "zip": "22306",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Client-choice pantry at United Community's Fordson Road site. Fresh produce, eggs, dairy when available, meats, and shelf-stable staples—including culturally familiar items like rice, beans, lentils, Maseca, oils, and spices.",
+   "phone": null,
+   "state": "VA",
+   "website": "https://www.unitedcommunity.org/food/",
+   "address1": "7511 Fordson Rd",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "15:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "15:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "fresh_fruits",
+      "fresh_vegetables",
+      "eggs",
+      "dairy",
+      "meat",
+      "pantry_staples",
+      "culturally_specific"
+     ],
+     "description": "Client-choice food pantry",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.unitedcommunity.org/food/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "live in our service ZIP codes (22306, 22307, 22308, 22309, and east of Telegraph: 22303, 22310)",
+     "requirement_type": "zip_restriction"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "For the pantry, we collect basic information to confirm service area and understand household size.",
+     "requirement_type": "registration"
+    }
+   ],
+   "external_id": "va08-united-community-cynthia-hull-pantry",
+   "location_name": "Cynthia Hull Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Monday: 10:00 am – 1:00 pm; Tuesday: 12:00 pm – 3:00 pm; Wednesday: 2:00 pm – 5:00 pm; Thursday: 12:00 pm – 3:00 pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "United Community",
+   "organization_website": "https://www.unitedcommunity.org/",
+   "raw_eligibility_text": "Neighbors experiencing food insecurity who live in our service ZIP codes (22306, 22307, 22308, 22309, and east of Telegraph: 22303, 22310). For the pantry, we collect basic information to confirm service area and understand household size. Some USDA programs (like TEFAP) may not require registration.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.743595,
+   "lon": -77.100231,
+   "zip": "22309",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Community Mobile Market in partnership with Capital Area Food Bank (CAFB): healthy groceries and fresh produce.",
+   "phone": "571-255-8958",
+   "state": "VA",
+   "website": "https://www.unitedcommunity.org/food/",
+   "address1": "4015 Fielding St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:00",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": 1,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "fresh_vegetables",
+      "fresh_fruits"
+     ],
+     "description": "Community Mobile Market (with CAFB)",
+     "eligibility": [],
+     "service_type": "mobile_pantry",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.unitedcommunity.org/food/",
+   "eligibility": [],
+   "external_id": "va08-united-community-mm-mount-vernon-woods",
+   "location_name": "Community Mobile Market - Mount Vernon Woods Elementary School",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "First Monday of each month, from 4-5pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "United Community",
+   "organization_website": "https://www.unitedcommunity.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.739347,
+   "lon": -77.074145,
+   "zip": "22306",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Community Mobile Market in partnership with Capital Area Food Bank (CAFB): healthy groceries and fresh produce.",
+   "phone": "703-660-2464",
+   "state": "VA",
+   "website": "https://www.unitedcommunity.org/food/",
+   "address1": "2500 Parkers Ln",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "15:00",
+       "closes": "16:00",
+       "weekday": 2,
+       "week_of_month": 1,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "fresh_vegetables",
+      "fresh_fruits"
+     ],
+     "description": "Community Mobile Market (with CAFB)",
+     "eligibility": [],
+     "service_type": "mobile_pantry",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.unitedcommunity.org/food/",
+   "eligibility": [],
+   "external_id": "va08-united-community-mm-walt-whitman",
+   "location_name": "Community Mobile Market - Walt Whitman Middle School",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "First Wednesday each month, from 3-4pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "United Community",
+   "organization_website": "https://www.unitedcommunity.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.734129,
+   "lon": -77.101328,
+   "zip": "22309",
+   "city": "Alexandria",
+   "email": "info@risinghopeumc.org",
+   "notes": "Address from Fairfax County Franconia District food assistance page. Food Market open for guest shopping by appointment only; new guests may come in Monday-Friday 10am - 11:30am to fill out an application. Individuals must bring their own shopping bags. Rising Hope Kitchen serves a community lunch at noon, Monday through Friday; breakfast at Sunday Table Worship. TEFAP partner.",
+   "phone": "703-360-1976",
+   "state": "VA",
+   "website": null,
+   "address1": "8220 Russell Rd",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:30",
+       "closes": "16:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:30",
+       "closes": "16:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:30",
+       "closes": "16:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Food Market (guest shopping by appointment)",
+     "eligibility": [],
+     "service_type": "appointment_distribution",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "community_meals"
+     ],
+     "description": "Rising Hope Kitchen community lunch at noon, Monday through Friday",
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.risinghopeumc.org/programs",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "by appointment only",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "New guests may come into Rising Hope Monday-Friday from 10am - 11:30am to fill out an application for the market.",
+     "requirement_type": "registration"
+    }
+   ],
+   "external_id": "va08-rising-hope-mission-church",
+   "location_name": "Rising Hope Mission Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Food Market: by appointment only Tuesday-Thursday from 1:30pm-4:30pm. New guest applications Monday-Friday from 10am - 11:30am. Rising Hope Kitchen: at noon, Monday through Friday.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Rising Hope Mission Church",
+   "organization_website": "https://www.risinghopeumc.org/",
+   "raw_eligibility_text": "The Food Market is open for guest shopping by appointment only ... New guests may come into Rising Hope Monday-Friday from 10am - 11:30am to fill out an application for the market.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.776154,
+   "lon": -77.080283,
+   "zip": "22306",
+   "city": "Alexandria",
+   "email": "info@grovetonbaptistchurch.org",
+   "notes": "Food Pantry entrance: Door 1. Clothes Closet open Fridays 10 AM to 2 PM (Door 3).",
+   "phone": "703-768-9084",
+   "state": "VA",
+   "website": null,
+   "address1": "6511 Richmond Hwy",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "15:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Food pantry",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://grovetonbaptistchurch.org/",
+   "eligibility": [],
+   "external_id": "va08-groveton-baptist-food-pantry",
+   "location_name": "Groveton Baptist Church Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "On Fridays our Food Pantry is open from 10 AM to 3 PM (Door 1)",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Groveton Baptist Church",
+   "organization_website": "https://grovetonbaptistchurch.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.831534,
+   "lon": -77.193751,
+   "zip": "22003",
+   "city": "Annandale",
+   "email": null,
+   "notes": "Pantry trailer separate from the Child Development Center. Drivers pick up pre-bagged food at the pantry on Tuesday-Thursday afternoons and deliver to the client's home in the Annandale area. Need Assistance? Call Fairfax County Coordinated Services Planning 703-222-0880 (Mon-Fri 8 a.m. to 4:30 p.m.).",
+   "phone": "703-222-0880",
+   "state": "VA",
+   "website": "https://accacares.org/foodpantry/",
+   "address1": "7200 Columbia Pike",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Pre-bagged food delivered to clients' homes in the Annandale area",
+     "eligibility": [],
+     "service_type": "delivery_qualifying",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://accacares.org/foodpantry/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Need Assistance? Call Fairfax County Coordinated Services Planning 703-222-0880",
+     "requirement_type": "referral"
+    }
+   ],
+   "external_id": "va08-acca-food-pantry",
+   "location_name": "ACCA Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Deliveries: Tuesday-Thursday afternoons (no client pick-up hours stated)",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Annandale Christian Community for Action (ACCA)",
+   "organization_website": "https://accacares.org/",
+   "raw_eligibility_text": "Need Assistance? Call Fairfax County Coordinated Services Planning 703-222-0880",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.853739,
+   "lon": -77.135594,
+   "zip": "22041",
+   "city": "Falls Church",
+   "email": null,
+   "notes": "Address from culmoreumc.org home page. Mobile food pantry with Capital Area Food Bank in the church parking lot (fresh produce) every 2nd Friday; Grace Ministries (UMC) distributes packages of food and clothing on the fourth Friday of each month; drop-in pantry with non-perishable and limited frozen food; daily food rescue pantry from the Church office. No times stated.",
+   "phone": "703-820-5131",
+   "state": "VA",
+   "website": null,
+   "address1": "3400 Charles St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "fresh_vegetables",
+      "fresh_fruits"
+     ],
+     "description": "CAFB mobile food pantry (fresh produce), 2nd Friday of each month",
+     "eligibility": [],
+     "service_type": "mobile_pantry",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Grace Ministries food and clothing packages, fourth Friday of each month",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "pantry_staples",
+      "frozen_foods"
+     ],
+     "description": "Drop-in pantry and daily food rescue pantry (non-perishables, limited frozen food)",
+     "eligibility": [],
+     "service_type": "emergency_food",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.culmoreumc.org/food--clothing-ministry.html",
+   "eligibility": [],
+   "external_id": "va08-culmore-umc-food-ministry",
+   "location_name": "Culmore Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "mobile food pantry: every 2nd Friday of each month; Grace Ministries: fourth Friday of each month; daily food rescue pantry from the Church office",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Culmore United Methodist Church",
+   "organization_website": "https://www.culmoreumc.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.866385,
+   "lon": -77.200303,
+   "zip": "22042",
+   "city": "Falls Church",
+   "email": "fcswecare@aol.com",
+   "notes": "Non-perishable and fresh food; volunteers bag and deliver a week's supply of food to clients. FCS cannot provide assistance on a walk-in basis. To speak to a social worker contact Fairfax County CSP at 703-222-0880.",
+   "phone": "703-237-2562",
+   "state": "VA",
+   "website": null,
+   "address1": "7416 Arlington Blvd",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "A week's supply of food bagged and delivered to referred clients",
+     "eligibility": [],
+     "service_type": "delivery_qualifying",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://fcswecare.org/programs/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "FCS serves Falls Church zip codes 22042, 22043, 22044, and 22046.",
+     "requirement_type": "zip_restriction"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "All assistance for individuals and families in need is arranged by social services organizations of Fairfax County, Falls Church City, and faith community leaders",
+     "requirement_type": "referral"
+    }
+   ],
+   "external_id": "va08-fcs-knox-presbyterian",
+   "location_name": "FCS Food Pantry at Knox Presbyterian Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": null,
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Falls Church Community Service Council (FCS)",
+   "organization_website": "https://fcswecare.org/",
+   "raw_eligibility_text": "FCS serves Falls Church zip codes 22042, 22043, 22044, and 22046. FCS cannot provide assistance on a walk-in basis. All assistance ... is arranged by social services organizations of Fairfax County, Falls Church City, and faith community leaders",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.829509,
+   "lon": -77.143687,
+   "zip": "22312",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Listed on Catholic Charities (St. Lucy Food Project) master pantry listing (9/12/2025). Catholic Charities notes each partner pantry operates under its own guidelines; contact the pantry to confirm hours and eligibility.",
+   "phone": "703-354-0395",
+   "state": "VA",
+   "website": null,
+   "address1": "4319 Sano St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "11:30",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Food pantry",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://ccda.net/wp-content/uploads/2025/09/Website-Pantry-Listing-9.12.2025.pdf",
+   "eligibility": [],
+   "external_id": "va08-poor-sisters-st-joseph-pantry",
+   "location_name": "Poor Sisters of St. Joseph Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Sat-9:30-11:30 am",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Poor Sisters of St. Joseph",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.858884,
+   "lon": -77.205038,
+   "zip": "22042",
+   "city": "Falls Church",
+   "email": null,
+   "notes": "Listed on Catholic Charities (St. Lucy Food Project) master pantry listing (9/12/2025). Catholic Charities notes each partner pantry operates under its own guidelines; contact the pantry to confirm hours and eligibility.",
+   "phone": "703-573-3808",
+   "state": "VA",
+   "website": null,
+   "address1": "7500 St Philip Ct",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "10:00",
+       "weekday": 5,
+       "week_of_month": 1,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "10:00",
+       "weekday": 5,
+       "week_of_month": 3,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Food pantry",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://ccda.net/wp-content/uploads/2025/09/Website-Pantry-Listing-9.12.2025.pdf",
+   "eligibility": [],
+   "external_id": "va08-st-philip-food-pantry",
+   "location_name": "St. Philip Food Pantry",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "1st & 3rd Sat 8:30-10",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "St. Philip Catholic Church",
+   "organization_website": null,
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  }
+ ]
+}

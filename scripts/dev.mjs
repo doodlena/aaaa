@@ -264,7 +264,7 @@ async function serve(env, { demo, open }) {
   }
   console.log(`\n\x1b[1mReady.\x1b[0m  Web app: ${WEB_URL}   API docs: ${API_URL}/api/docs`);
   if (!demo) {
-    console.log('A new database has no published listings, so the map starts empty. For fictional [TEST] listings: npm run demo');
+    console.log('Real listings were loaded from data/snapshots (unverified, labelled). For fictional [TEST] listings too: npm run demo');
   }
   if (open && !process.env.CI && !process.env.CODESPACES) openBrowser(WEB_URL);
 }
@@ -280,6 +280,11 @@ async function main(argv) {
 
   step('Preparing the database (foodaccess bootstrap)');
   foodaccess(['bootstrap'], env);
+
+  // Real listings: load the committed snapshot (data/snapshots/) into a fresh database. No scraping; skipped when
+  // the database already has real listings. Unverified records show as "From a public list — not yet verified".
+  step('Loading real listings from data/snapshots (first run only)');
+  foodaccess(['load-data', '--if-empty'], env);
 
   if (demo) {
     step('Loading synthetic demo data (fictional, labelled [TEST])');

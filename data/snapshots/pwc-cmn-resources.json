@@ -1,0 +1,1037 @@
+{
+ "_notice": "Snapshot of normalized records imported from source 'pwc-cmn-resources' (Prince William County — Community Mobilization Network resource locations (Food Assistance)). Unverified candidates; see config/sources/ for attribution and terms.",
+ "source_id": "pwc-cmn-resources",
+ "records": [
+  {
+   "lat": 38.5631072930397,
+   "lon": -77.3290206014862,
+   "zip": "22026",
+   "city": "Dumfries",
+   "email": "info@actspwc.org",
+   "notes": "Walk-in during distribution hours; no appointment needed. New clients must enroll in person during enrollment hours (arrive by 12:45 p.m. on Wednesdays). Only the applicant should enter the lobby; children may accompany them. New clients receive a starter order on the day they enroll and their first full order the following month.",
+   "phone": "(703) 441-8606",
+   "state": "VA",
+   "website": "https://www.actspwc.org",
+   "address1": "3900 Acts Ln",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "11:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "15:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "15:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "19:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "11:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "15:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": 3,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": 4,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "pantry_staples",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "meat",
+      "fish",
+      "dairy",
+      "bread",
+      "emergency_food_packages"
+     ],
+     "description": "ACTS Hunger Prevention Center provides food assistance to enrolled households once per month. Depending on availability, households receive canned goods, rice, pasta, peanut butter and jelly, bread, cereal, meat or fish, fresh fruits and vegetables, and dairy. Non-clients are offered an emergency bag of food and information on enrollment. A home delivery program serves homebound seniors aged 65 and older and people whose disability prevents them from coming in person, with deliveries once a month. ACTS is a Capital Area Food Bank partner participating in USDA programs, and partners with the Greater DC Diaper Bank to provide diapers and infant supplies. Services are offered in English and Spanish.",
+     "eligibility": [],
+     "service_type": "delivery_qualifying",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "en",
+    "es"
+   ],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Walk-in during distribution hours; no appointment needed. New clients must enroll in person during enrollment hours (arrive by 12:45 p.m. on Wednesdays). Only the applicant should enter the lobby; children may accompany them. New clients receive a starter order on the day they enroll and their first full order the following month.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Yes. New clients must present photo identification showing a current address, or photo ID plus a bill or lease proving Eastern Prince William County residency (Dale City, Dumfries, Lake Ridge, Montclair, Occoquan, Quantico, Triangle, Woodbridge). Heads of household must present some form of ID. Additional information is requested but not required, and is used to determine USDA eligibility.",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "1828b094-7e60-4fea-8230-566a859c2c0f",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "Food distribution: Monday 9-11:30 a.m. and 1-3 p.m.; Tuesday 1-3:30 p.m. and 5-7 p.m.; Thursday 9-11:30 a.m. and 1-3 p.m.; Friday CLOSED. New client enrollment: 1st and 2nd Wednesdays 10 a.m.-12:45 p.m.; 3rd and 4th Tuesdays 5-6:30 p.m. Follows the federal holiday schedule.",
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Acts (Action In Community Through Service)",
+   "organization_website": "https://www.actspwc.org",
+   "raw_eligibility_text": "Walk-in during distribution hours; no appointment needed. New clients must enroll in person during enrollment hours (arrive by 12:45 p.m. on Wednesdays). Only the applicant should enter the lobby; children may accompany them. New clients receive a starter order on the day they enroll and their first full order the following month.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.6317623002182,
+   "lon": -77.2678219995931,
+   "zip": "22194",
+   "city": "Woodbridge",
+   "email": "info@pwccfoundation.org",
+   "notes": "Access varies by program. Residents may participate through scheduled community/school distributions or contact the Foundation for current program information. The website also lists local food-assistance referral options for residents needing immediate food support.",
+   "phone": "(800) 455-4773",
+   "state": "VA",
+   "website": "https://pwccfoundation.org",
+   "address1": "P.O. Box 5148",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Provides food-insecurity programs for Prince William County children and families, including the C.H.O.W. Wagon, mobile food distribution, school food pantries, and the Backpack Buddy Box program, which provides weekend meals to children during the school year. The Foundation also connects residents with local food-assistance partners when additional help is needed.",
+     "eligibility": [],
+     "service_type": "mobile_pantry",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "5d2661cd-db00-4c38-b50f-cccd1429daf2",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "Varies by program, distribution site, and event.",
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Prince William County Community Foundation",
+   "organization_website": "https://pwccfoundation.org",
+   "raw_eligibility_text": "Access varies by program. Residents may participate through scheduled community/school distributions or contact the Foundation for current program information. The website also lists local food-assistance referral options for residents needing immediate food support.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.6526300427461,
+   "lon": -77.2707315053561,
+   "zip": "13958",
+   "city": null,
+   "email": "fazal@saharaprograms.org",
+   "notes": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability.",
+   "phone": "(757) 394-0737",
+   "state": "VA",
+   "website": "https://www.saharaprograms.org",
+   "address1": "13958 Hollow Wind Way 201",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "17:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "17:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "17:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "17:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Provides food assistance and connections to basic-needs resources for individuals and families experiencing food insecurity.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "433feb1b-1d01-49bb-aac0-ba0d7d692f0b",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "Monday–Friday, 9:00 AM–5:00 PM.",
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Sahara Programs",
+   "organization_website": "https://www.saharaprograms.org",
+   "raw_eligibility_text": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7641917490222,
+   "lon": -77.4784431130469,
+   "zip": "20110",
+   "city": "Manassas",
+   "email": "receptionist@stthomasumc.org",
+   "notes": "Walk-in / drive-through. No appointment is required for the regular Saturday food pantry. Families may also sign up for TEFAP food to receive additional staple items",
+   "phone": "(703) 368-5161",
+   "state": "VA",
+   "website": "https://www.stthomasumc.org",
+   "address1": "8899 Sudley Road",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "11:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "meat",
+      "frozen_foods",
+      "bread",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Provides a weekly drive-through food pantry for individuals and families experiencing food insecurity. Groceries may include canned and shelf-stable foods, bread, fresh produce, deli items, frozen meat, and baby items. Families may receive food weekly, and those in line by closing time are served while supplies are available.",
+     "eligibility": [],
+     "service_type": "drive_through",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "meat",
+      "frozen_foods",
+      "bread",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": null,
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Walk-in / drive-through. No appointment is required for the regular Saturday food pantry. Families may also sign up for TEFAP food to receive additional staple items",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No photo ID requirement stated on the official food pantry page.",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "ab4ad92d-2989-487d-9fef-0cf6d3c5b219",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "Every Saturday, 9:00–11:00 AM. Participants who are in line by 11:00 AM will receive food that day.",
+   "jurisdiction_id": "manassas-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "St Thomas United Methodist Church",
+   "organization_website": "https://www.stthomasumc.org",
+   "raw_eligibility_text": "Walk-in / drive-through. No appointment is required for the regular Saturday food pantry. Families may also sign up for TEFAP food to receive additional staple items",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.683603000315,
+   "lon": -77.2597774002725,
+   "zip": "22125",
+   "city": "Occoquan",
+   "email": "Office@tgnck.org",
+   "notes": "Contact TGNCK through the website or by email for assistance. Virginia Mobile Meals serves families referred through partnered Fairfax and Prince William County schools and individuals/families who contact TGNCK through its website.",
+   "phone": "(872) 731-2151",
+   "state": "VA",
+   "website": "https://www.tgnck.org",
+   "address1": "P.O. Box 257",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "general_groceries"
+     ],
+     "description": "Provides hunger-relief assistance to food-insecure individuals and families through Mobile Meals and related programs. In Virginia, assistance may include grocery store pickup/e-gift cards, limited grocery delivery for urgent situations, and Meals 2 Go support for eligible families. The program serves populations including families, students, seniors, veterans, and survivors of domestic violence.",
+     "eligibility": [],
+     "service_type": "grocery_voucher",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Yes",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "bd1fad9e-d839-4306-9f6f-046093ca9b17",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "By appointment/program availability. TGNCK closes annually from December 15 through February 1 and is not open on holidays.",
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "The Good News Community Kitchen",
+   "organization_website": "https://www.tgnck.org",
+   "raw_eligibility_text": "Contact TGNCK through the website or by email for assistance. Virginia Mobile Meals serves families referred through partnered Fairfax and Prince William County schools and individuals/families who contact TGNCK through its website.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7522130034515,
+   "lon": -77.4733281399551,
+   "zip": "20110",
+   "city": "Manassas",
+   "email": "info@trinityepiscopalchurch.org",
+   "notes": "Walk in during scheduled grocery distributions. Individuals needing ready-to-eat food may visit the church office Monday–Friday during available food ministry hours.",
+   "phone": "(703) 368-4231",
+   "state": "VA",
+   "website": null,
+   "address1": "9325 West Street",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "15:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "15:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "15:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "15:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "15:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries"
+     ],
+     "description": "Provides free food assistance to community members experiencing food insecurity. The food pantry distributes full grocery bags twice each month, and smaller ready-to-eat food bags are available on weekdays for people who are unhoused or do not have access to food preparation facilities. No application or documentation is required.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "af2c10e0-5d87-4053-a282-62a2d3eb3d53",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "Full grocery distribution: 2nd and 4th Wednesdays of each month beginning at 9:30 AM, while supplies last. Ready-to-eat/lunch bags: Monday–Friday, 9:00 AM–3:00 PM.",
+   "jurisdiction_id": "manassas-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Trinity Episcopal Church",
+   "organization_website": null,
+   "raw_eligibility_text": "Walk in during scheduled grocery distributions. Individuals needing ready-to-eat food may visit the church office Monday–Friday during available food ministry hours.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.645533545989,
+   "lon": -77.3568238772463,
+   "zip": "14186",
+   "city": "Woodbridge",
+   "email": "lyallna@comcast.net",
+   "notes": "Walk in during scheduled distributions or call 703-969-0197 for assistance and current information.",
+   "phone": "(703) 969-0197",
+   "state": "VA",
+   "website": "http://woodbridgeworkers.org",
+   "address1": "14186 Logan Ct",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:30",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:30",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:30",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:30",
+       "closes": "13:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Provides recurring food distributions for immigrant, low-income, and other community residents in Prince William County. Food distribution is one of the organization’s primary ongoing services and is offered several times each week.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "a31e1a8f-0870-475b-bd6e-24f6c24e5706",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "Organization-provided schedule: Monday, Thursday, Friday, and Saturday, 11:30 AM–1:00 PM.",
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Woodbridge Workers Committee",
+   "organization_website": "http://woodbridgeworkers.org",
+   "raw_eligibility_text": "Walk in during scheduled distributions or call 703-969-0197 for assistance and current information.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.6335171238465,
+   "lon": -77.2599096304857,
+   "zip": "22191",
+   "city": "Woodbridge",
+   "email": "missions@holinesstabernaclecogic.org",
+   "notes": "Contact the church at 703-497-7928 or publicrelations@holinesstabernaclecogic.org for the current distribution location, schedule, and any registration requirements. The current official pages do not clearly state that an appointment or Monday online registration is required.",
+   "phone": "(703) 497-7928",
+   "state": "VA",
+   "website": "https://www.holinesstabernaclecogic.org",
+   "address1": "1505 Walnut Street",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "11:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Provides free food and fresh-produce assistance to individuals and families in the community in partnership with the Capital Area Food Bank. The church describes its food ministry as helping meet basic physical needs, including food and clothing, for community members in need.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Contact the church at 703-497-7928 or publicrelations@holinesstabernaclecogic.org for the current distribution location, schedule, and any registration requirements. The current official pages do not clearly state that an appointment or Monday online registration is required.",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "e79565d6-3a39-4b5f-a428-447cc9805ebd",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "Pickup Fridays 9-11am. **Must register on website-Mondays at 6am",
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Holiness Tabernacle",
+   "organization_website": "https://www.holinesstabernaclecogic.org",
+   "raw_eligibility_text": "Contact the church at 703-497-7928 or publicrelations@holinesstabernaclecogic.org for the current distribution location, schedule, and any registration requirements. The current official pages do not clearly state that an appointment or Monday online registration is required.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.6301460061786,
+   "lon": -77.3009249645253,
+   "zip": "14851",
+   "city": "Woodbridge",
+   "email": "office@allsaintswoodbridge.org",
+   "notes": "Walk in during scheduled food giveaways or contact the church office for weekday food availability. Calling ahead is recommended for assistance outside scheduled giveaway events.",
+   "phone": "(703) 670-0093",
+   "state": "VA",
+   "website": "https://allsaintswoodbridge.org",
+   "address1": "14851 Gideon Dr",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Community Food Assistance: Provides free food to community members experiencing food insecurity through recurring food giveaways. Food assistance may also be available through the church office during regular business hours. The church’s 2026 calendar continues to list monthly community food giveaways.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No.",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "946371c3-425e-4a4a-97bb-bf2524153283",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "Food Giveaway: generally held monthly on a Saturday; recent 2026 giveaways have been scheduled on the second Saturday of the month. Regular church office hours provided by the organization are Monday–Thursday, 9:00 AM–5:00 PM; for weekday food assistance, arriving by approximately 4:30 PM is recommended.",
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "All Saints Anglican Church",
+   "organization_website": "https://allsaintswoodbridge.org",
+   "raw_eligibility_text": "Walk in during scheduled food giveaways or contact the church office for weekday food availability. Calling ahead is recommended for assistance outside scheduled giveaway events.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7817604278219,
+   "lon": -77.5580218232699,
+   "zip": "20109",
+   "city": "Manassas",
+   "email": "info@houseofmercyva.org",
+   "notes": "New clients must schedule an in-person intake appointment to establish an account. After registration, clients may return every 15 days on a walk-in basis for food.",
+   "phone": "(703) 659-1636",
+   "state": "VA",
+   "website": "https://houseofmercyva.org/",
+   "address1": "8154 Flannery Ct",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "16:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "16:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "16:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "16:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "16:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Provides free food assistance to individuals and families experiencing food insecurity. Registered clients may receive food twice per month, every 15 days. The pantry serves community members regardless of race, ethnicity, national origin, age, sex, or disability and also connects clients with educational and community resources.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Yes",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "a045f19d-4164-40cc-b8fd-c0b35c63329a",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "Monday–Friday, 10:00 AM–4:00 PM.",
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "House of Mercy",
+   "organization_website": "https://houseofmercyva.org/",
+   "raw_eligibility_text": "New clients must schedule an in-person intake appointment to establish an account. After registration, clients may return every 15 days on a walk-in basis for food.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.6759930001751,
+   "lon": -77.374143999592,
+   "zip": "20112",
+   "city": "Manassas",
+   "email": "shehla.ahmad@humanityfirstusa.org",
+   "notes": "Appointment/registration required. The registration link opens in advance of each distribution date. Residents should register online through the Manassas Food Distribution page.",
+   "phone": "(703) 303-2130",
+   "state": "VA",
+   "website": "https://humanityfirstusa.org/portfolio/manassas-food-pantry/",
+   "address1": "Masroor Mosque 5640 Hoadly Rd",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Provides free monthly food assistance to individuals and families experiencing food insecurity through Humanity First USA’s Manassas food distribution program. The program is part of Humanity First USA’s broader Food Security initiative, which provides food staples and nutritional support to people in need.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Appointment/registration required. The registration link opens in advance of each distribution date. Residents should register online through the Manassas Food Distribution page.",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "9475ef13-57f7-4d7f-9527-c9b2c375bb77",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "Monthly, typically on a Saturday or Sunday. The exact date and time are announced on the program webpage before each distribution.",
+   "jurisdiction_id": "prince-william-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Humanity First USA – Manassas Food Distribution",
+   "organization_website": "https://humanityfirstusa.org/portfolio/manassas-food-pantry/",
+   "raw_eligibility_text": "Appointment/registration required. The registration link opens in advance of each distribution date. Residents should register online through the Manassas Food Distribution page.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.764658327894,
+   "lon": -77.482610511736,
+   "zip": "20110",
+   "city": "Manassas",
+   "email": "office@mbcnova.org",
+   "notes": "Walk-in. Guests are served at the back of the Manassas Community Center during scheduled pantry hours.",
+   "phone": "(703) 361-2146",
+   "state": "VA",
+   "website": "https://mbcnova.org/",
+   "address1": "8800 Sudley Rd",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "meat"
+     ],
+     "description": "Operates a community food pantry in partnership with the Capital Area Food Bank. Provides groceries and shelf-stable foods such as canned meat and vegetables, fruit, pasta, cereal, soup, rice, peanut butter, and other staples to community members in need.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "abcdc406-4e66-4172-ab5a-c9767c52acf7",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "1st and 3rd Wednesdays, 5:30–7:30 PM. Closed on holidays.",
+   "jurisdiction_id": "manassas-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Manassas Baptist Church",
+   "organization_website": "https://mbcnova.org/",
+   "raw_eligibility_text": "Walk-in. Guests are served at the back of the Manassas Community Center during scheduled pantry hours.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.7445797715896,
+   "lon": -77.5007123210925,
+   "zip": "10058",
+   "city": null,
+   "email": "hvandyke@nvfs.org",
+   "notes": "Enrollment and appointment required. Contact NVFS to enroll and schedule food assistance. The Hunger Resource Center serves enrolled clients rather than operating as a general walk-in pantry.",
+   "phone": "(571) 356-1558",
+   "state": "VA",
+   "website": "https://www.nvfs.org/assistance/food-assistance/",
+   "address1": "10058 Dean Dr. Manassas",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "18:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries",
+      "pantry_staples",
+      "meat",
+      "poultry",
+      "dairy",
+      "eggs",
+      "bread",
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "description": "Provides groceries and nutritious food to eligible individuals and families through the NVFS Hunger Resource Center. Available food may include fresh produce, dairy products, meat, poultry, eggs, bread, canned goods, beans, pasta, rice, peanut butter, and other pantry staples. The program serves hundreds of Northern Virginia families each month and also distributes seasonal food and grocery support.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Enrollment and appointment required. Contact NVFS to enroll and schedule food assistance. The Hunger Resource Center serves enrolled clients rather than operating as a general walk-in pantry.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Yes",
+     "requirement_type": "photo_id"
+    }
+   ],
+   "external_id": "bfa69a9a-b9a6-43ac-ab9a-0787dd1b35f6",
+   "location_name": null,
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "pwc_cmn",
+   "raw_hours_text": "Client distribution hours vary by appointment and program schedule. The current website separately lists food-donation drop-off hours as Monday, Tuesday, Thursday & Friday, 9:00 AM–4:00 PM, and Wednesday, 9:00 AM–6:00 PM; these should not be used as client pickup hours.",
+   "jurisdiction_id": "manassas-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Northern Virginia Family Service (NVFS) – Hunger Resource Center",
+   "organization_website": "https://www.nvfs.org/assistance/food-assistance/",
+   "raw_eligibility_text": "Enrollment and appointment required. Contact NVFS to enroll and schedule food assistance. The Hunger Resource Center serves enrolled clients rather than operating as a general walk-in pantry.",
+   "wheelchair_accessible": "unknown"
+  }
+ ]
+}

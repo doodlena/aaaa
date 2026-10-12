@@ -1,0 +1,399 @@
+{
+ "_notice": "Snapshot of normalized records imported from source 'afac-get-groceries' (Arlington Food Assistance Center — Get Groceries (distribution sites)). Unverified candidates; see config/sources/ for attribution and terms.",
+ "source_id": "afac-get-groceries",
+ "records": [
+  {
+   "lat": 38.8436259,
+   "lon": -77.0893398,
+   "zip": "22206",
+   "city": "Arlington",
+   "email": null,
+   "notes": null,
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "2708 South Nelson Street",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:00",
+       "closes": "19:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:00",
+       "closes": "19:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "12:30",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries"
+     ],
+     "description": null,
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://afac.org/get-groceries/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {
+      "jurisdictions": [
+       "arlington-county"
+      ]
+     },
+     "details": "The Arlington Food Assistance Center (AFAC) is committed to providing free supplemental groceries to any Arlington County resident who cannot afford to purchase enough food for themselves or their families.",
+     "requirement_type": "residency"
+    }
+   ],
+   "external_id": "f2ac23425659dd94",
+   "location_name": "AFAC Headquarters",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "afac",
+   "raw_hours_text": "M-F: 9am-1pm, Tu & Th: 6pm-7pm, | Sat: 8:30am-12:30pm",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington Food Assistance Center",
+   "organization_website": "https://afac.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8564043,
+   "lon": -77.1121009,
+   "zip": "22204",
+   "city": "Arlington",
+   "email": null,
+   "notes": null,
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "909 South Dinwiddie Street",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "11:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries"
+     ],
+     "description": null,
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://afac.org/get-groceries/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {
+      "jurisdictions": [
+       "arlington-county"
+      ]
+     },
+     "details": "The Arlington Food Assistance Center (AFAC) is committed to providing free supplemental groceries to any Arlington County resident who cannot afford to purchase enough food for themselves or their families.",
+     "requirement_type": "residency"
+    }
+   ],
+   "external_id": "0b819f7aed41284c",
+   "location_name": "Arlington Mill Community Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "afac",
+   "raw_hours_text": "M: 9:30 – 11:30am",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington Food Assistance Center",
+   "organization_website": "https://afac.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8615196,
+   "lon": -77.0933745,
+   "zip": "22204",
+   "city": "Arlington",
+   "email": null,
+   "notes": null,
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "918 South Lincoln Street",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:00",
+       "closes": "17:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries"
+     ],
+     "description": null,
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://afac.org/get-groceries/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {
+      "jurisdictions": [
+       "arlington-county"
+      ]
+     },
+     "details": "The Arlington Food Assistance Center (AFAC) is committed to providing free supplemental groceries to any Arlington County resident who cannot afford to purchase enough food for themselves or their families.",
+     "requirement_type": "residency"
+    }
+   ],
+   "external_id": "156856f529b62df3",
+   "location_name": "Gilliam Place",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "afac",
+   "raw_hours_text": "1st floor community room | M: 4 – 5:30pm",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington Food Assistance Center",
+   "organization_website": "https://afac.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.880236,
+   "lon": -77.0970962,
+   "zip": "22201",
+   "city": "Arlington",
+   "email": null,
+   "notes": null,
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "606 North Irving Street",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:30",
+       "closes": "10:30",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries"
+     ],
+     "description": null,
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://afac.org/get-groceries/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {
+      "jurisdictions": [
+       "arlington-county"
+      ]
+     },
+     "details": "The Arlington Food Assistance Center (AFAC) is committed to providing free supplemental groceries to any Arlington County resident who cannot afford to purchase enough food for themselves or their families.",
+     "requirement_type": "residency"
+    }
+   ],
+   "external_id": "e5a008270d8e2b7f",
+   "location_name": "Clarendon United Methodist Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "afac",
+   "raw_hours_text": "lower level | Sat: 8:30–10:30am",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington Food Assistance Center",
+   "organization_website": "https://afac.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.8836064,
+   "lon": -77.135489,
+   "zip": "22205",
+   "city": "Arlington",
+   "email": null,
+   "notes": null,
+   "phone": null,
+   "state": "VA",
+   "website": null,
+   "address1": "5705 Washington Boulevard",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "15:30",
+       "closes": "17:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "general_groceries"
+     ],
+     "description": null,
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://afac.org/get-groceries/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {
+      "jurisdictions": [
+       "arlington-county"
+      ]
+     },
+     "details": "The Arlington Food Assistance Center (AFAC) is committed to providing free supplemental groceries to any Arlington County resident who cannot afford to purchase enough food for themselves or their families.",
+     "requirement_type": "residency"
+    }
+   ],
+   "external_id": "33c5599fe659d9ad",
+   "location_name": "Westover at Fisher House",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "afac",
+   "raw_hours_text": "W: 3:30–5pm",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Arlington Food Assistance Center",
+   "organization_website": "https://afac.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  }
+ ]
+}

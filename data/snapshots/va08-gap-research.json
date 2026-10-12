@@ -1,0 +1,2214 @@
+{
+ "_notice": "Snapshot of normalized records imported from source 'va08-gap-research' (VA-08 gaps (clothing, transport, DV offices, Falls Church, more mental health & pantries) — AI-assisted research (cited)). Unverified candidates; see config/sources/ for attribution and terms.",
+ "source_id": "va08-gap-research",
+ "records": [
+  {
+   "lat": 38.804751,
+   "lon": -77.045025,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Public prosecutor's office (not a shelter). VWAP and VSTOP advocates provide court accompaniment, safety planning, crisis intervention, referrals, restitution help and Virginia Victims Fund applications; dedicated Domestic Violence Intervention Specialist for survivors of domestic abuse, intimate partner violence or sexual assault. VWAP/VSTOP are NOT bound by the same confidentiality standards as other victim support services (systems-based prosecution office). 24/7 hotlines: Domestic Violence 703.746.4911; Sexual Assault 703.683.7273. Page shows two hour statements: phone 'Monday–Friday, 7:30 a.m. to 4:30 p.m.' and office 'Monday through Friday from 7:30 a.m. to 4:00 p.m.'.",
+   "phone": "(703) 746-4100",
+   "state": "VA",
+   "website": "https://www.alexandriava.gov/commonwealths-attorney/victim-services",
+   "address1": "520 King Street",
+   "address2": "Suite 301",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:30",
+       "closes": "16:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:30",
+       "closes": "16:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:30",
+       "closes": "16:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:30",
+       "closes": "16:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:30",
+       "closes": "16:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "VSTOP domestic violence/sexual assault advocacy and Domestic Violence Intervention Specialist for survivors involved in the criminal justice process.",
+     "eligibility": [],
+     "service_type": "domestic_violence_support",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:30",
+       "closes": "16:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:30",
+       "closes": "16:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:30",
+       "closes": "16:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:30",
+       "closes": "16:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "07:30",
+       "closes": "16:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Victim-Witness Assistance: court accompaniment, rights information, victim impact statements, restitution and Criminal Injuries Compensation Fund claims (English and Spanish).",
+     "eligibility": [],
+     "service_type": "legal_aid",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/commonwealths-attorney/victim-services",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Victims and witnesses of crime (criminal justice process in Alexandria).",
+     "requirement_type": "other"
+    }
+   ],
+   "external_id": "va08gap-alexandria-cwa-victim-witness-vstop",
+   "location_name": "Victim-Witness Assistance Program (VWAP) & VSTOP – Office of the Commonwealth's Attorney",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Our hours of operation are Monday through Friday from 7:30 a.m. to 4:00 p.m. | You can contact VWAP or VSTOP by calling (703) 746-4100 during office hours, Monday–Friday, 7:30 a.m. to 4:30 p.m. Walk-in assistance is also available if you have a scheduled court appearance.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "City of Alexandria Office of the Commonwealth's Attorney",
+   "organization_website": "https://www.alexandriava.gov/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.804967,
+   "lon": -77.044634,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": "paratransit@alexandriava.gov",
+   "notes": "Address is the mailing address for applications given in the 2026 DOT Paratransit Certification Application PDF (https://www.alexandriava.gov/sites/default/files/2026-04/DOT%20Paratransit%20Certification%20Application.pdf); fax 703.746.6433. The page does not state walk-in office hours. Trips: Mon–Fri 4:30 a.m.–2:00 a.m.; Sat 5:00 a.m.–2:00 a.m.; Sun 5:45 a.m.–2:00 a.m.; must be scheduled in advance (until 5 p.m. the day before). $2 peak-hour surcharge on paid-zone trips weekdays 7–9 a.m. and 2–4 p.m.; Personal Care Attendant rides free. Visitors with disabilities: up to 21 days in 365. New Rider Applications offered in English, Spanish, Amharic, Arabic, Farsi. Call center operated by Senior Services of Alexandria. Call center hours (raw_hours_text) are phone hours, not walk-in office hours.",
+   "phone": "703.746.5222",
+   "state": "VA",
+   "website": "https://www.alexandriava.gov/Paratransit",
+   "address1": "123 N. Pitt Street",
+   "address2": "Suite 230",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "ADA paratransit (curb-to-curb) for residents and visitors who cannot use fixed-route transit due to disability; application to the Paratransit Coordinator required.",
+     "eligibility": [],
+     "service_type": "transportation_help",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish",
+    "Amharic",
+    "Arabic",
+    "Farsi"
+   ],
+   "schedules": [],
+   "source_url": "https://www.alexandriava.gov/Paratransit",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Cannot use fixed route public transit due to disability.",
+     "requirement_type": "other"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Must submit an application to the Paratransit Coordinator; registered riders schedule trips.",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "DOT trips must be scheduled in advance (up until 5 p.m. the day before).",
+     "requirement_type": "appointment"
+    }
+   ],
+   "external_id": "va08gap-alexandria-dot-paratransit",
+   "location_name": "Alexandria DOT Paratransit (Paratransit Coordinator)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "The DOT Call Center is staffed Monday through Friday 8:00 a.m. to 5:00 p.m. and weekends 8:30 a.m. to 4:30 p.m.",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "City of Alexandria – DOT Paratransit",
+   "organization_website": "https://www.alexandriava.gov/",
+   "raw_eligibility_text": "DOT Paratransit is a specialized transportation service for residents and visitors who cannot use fixed routed public transit due to their disability. In order to use the service, residents must submit an application to the Paratransit Coordinator. Upon approval, reservations may be made for specific trips.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.826173,
+   "lon": -77.21278,
+   "zip": "22003",
+   "city": "Annandale",
+   "email": null,
+   "notes": "Mission Center community hub in the Heritage neighborhood. Food: client-choice, ~350 families/week; milk and fresh produce regularly along with bread and canned and dry goods. Persons living outside 22003 are given a small bag of food with information about other food sites. Clothing/personal products from https://annandalechurch.com/clothesministry (infant diaper registration: text FACETS at 571-378-0793 or 571-388-8285). Free ESL (Family Literacy Program) from https://annandalechurch.com/esl: for parents with children in FCPS; contact Jackie Lake 571-771-9258, jslake@fcps.edu. Site offers page translation (Spanish, Korean prompts shown). Also hosts the Janet Petty Children's Wellness Clinic (not recorded here).",
+   "phone": null,
+   "state": "VA",
+   "website": "https://annandalechurch.com/missioncenter",
+   "address1": "7901 Heritage Drive",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:00",
+       "closes": "18:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [
+      "dairy",
+      "bread",
+      "pantry_staples"
+     ],
+     "description": "Weekly client-choice food distribution; milk and fresh produce regularly along with bread and canned and dry goods.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "16:00",
+       "closes": "18:30",
+       "weekday": 3,
+       "week_of_month": 3,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Children's clothing distribution (monthly, 3rd Thursday).",
+     "eligibility": [],
+     "service_type": "clothing",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "16:00",
+       "closes": "18:30",
+       "weekday": 3,
+       "week_of_month": 2,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Feminine hygiene products distribution (monthly, 2nd Thursday).",
+     "eligibility": [],
+     "service_type": "hygiene_supplies",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "16:30",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": 4,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "16:00",
+       "closes": "18:30",
+       "weekday": 3,
+       "week_of_month": 4,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Infant diapers (4th Tuesday; register by texting FACETS) and adult diapers (4th Thursday).",
+     "eligibility": [],
+     "service_type": "diapers",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "12:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "12:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "19:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "19:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Free English as a Second Language classes (Family Literacy Program) for parents with children in Fairfax County Public Schools; children welcome.",
+     "eligibility": [],
+     "service_type": "esl_classes",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://annandalechurch.com/foodministry",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Food ministry serves community members living in the 22003 Annandale zip code.",
+     "requirement_type": "zip_restriction"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Clients must register for food.",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Evidence (utility bill, driver’s license, etc.) of living in the service area.",
+     "requirement_type": "proof_of_address"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "One registration card/food pickup per household per week.",
+     "requirement_type": "visit_limit"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "ESL classes are for parents with children in the Fairfax County Public Schools system.",
+     "requirement_type": "other"
+    }
+   ],
+   "external_id": "va08gap-annandale-umc-mission-center",
+   "location_name": "Annandale UMC Mission Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "To receive food, come on Thursdays from 4-6:30 p.m. | Distributions: 2nd Thursday 4:00 – 6:30 p.m.: Feminine Hygiene Products; 3rd Thursday 4:00 – 6:30 p.m.: Children’s Clothing; 4th Tuesday 4:30 – 6:30 p.m.: Infant Diapers; 4th Thursday 4:00 – 6:30 p.m.: Adult Diapers | ESL: Tuesdays and Thursdays, 10 a.m. - noon. Mondays and Wednesdays, 5-7 p.m.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Annandale United Methodist Church",
+   "organization_website": "https://annandalechurch.com/",
+   "raw_eligibility_text": "Important: This mission serves community members living in the 22003 Annandale zip code. Clients must register showing evidence (utility bill, driver’s license, etc.) of living in our service area. One registration card/food pickup per household per week. Persons living outside zip code 22003 will be given a small bag of food with information about other food sites in Fairfax County.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.870718,
+   "lon": -77.102704,
+   "zip": "22203",
+   "city": "Arlington",
+   "email": null,
+   "notes": "Free, volunteer-run ESL classes; all levels welcome; no books to purchase; students grouped by proficiency. Not held when STM School (follows Arlington County) or Rectory (follows Federal Government) is closed. Page has Spanish text. Address is the parish address shown on the page.",
+   "phone": "703-525-1300",
+   "state": "VA",
+   "website": "https://www.cathedralstm.org/ministries/english-second-language-esl/",
+   "address1": "3901 Cathedral Lane",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "18:50",
+       "closes": "19:50",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Free volunteer-run ESL classes for all levels, beginners to fluent speakers.",
+     "eligibility": [],
+     "service_type": "esl_classes",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "schedules": [],
+   "source_url": "https://www.cathedralstm.org/ministries/english-second-language-esl/",
+   "eligibility": [],
+   "external_id": "va08gap-cathedral-st-thomas-more-esl",
+   "location_name": "Cathedral of Saint Thomas More – ESL Classes (School Cafeteria)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "These free classes meet Wednesdays from 6:50 to 7:50 pm (during Religious Education classes) in the School Cafeteria.",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Cathedral of Saint Thomas More",
+   "organization_website": "https://www.cathedralstm.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.805743,
+   "lon": -77.054768,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Page states: 'The Clothing Closet will reopen on Tuesday, October 20th, 2026.' Intake by appointment on Tuesdays at Christ House, 131 S. West Street; voucher shopping same day at the Clothing Closet, 125 S. West St. Former Thrift Store transitioned to a free Clothing Closet. Serves eligible residents of the Diocese of Arlington incl. Arlington County, City of Alexandria, City of Falls Church, Fairfax County.",
+   "phone": "703-940-7505",
+   "state": "VA",
+   "website": "https://ccda.net/find-help/emergency-assistance/clothing/",
+   "address1": "125 S. West St.",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "14:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Free clothing through a voucher program; intake by appointment, same-day voucher shopping.",
+     "eligibility": [],
+     "service_type": "clothing",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://ccda.net/find-help/emergency-assistance/clothing/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Clothing intake is by appointment only (call 703-940-7505).",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "A current photo ID is required.",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Proof of children: photo ID or passport, school documentation, or birth certificate for each child.",
+     "requirement_type": "other"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Families may receive a clothing voucher once in a 3-month period; individuals who are unhoused once every 30 days.",
+     "requirement_type": "visit_limit"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Residents of the Diocese of Arlington (incl. Arlington County, City of Alexandria, City of Falls Church, Fairfax County and others).",
+     "requirement_type": "service_area"
+    }
+   ],
+   "external_id": "va08gap-ccda-clothing-closet-alexandria",
+   "location_name": "Catholic Charities Clothing Closet (next to Christ House)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Clothing Intake Hours: Tuesdays only – 9:00am – 2:00pm at Christ House, 131 S. West Street, Alexandria\nShopping must be same day between: 9:00am – 2:00pm at Clothing Closet, 125 S. West Street, Alexandria",
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Catholic Charities of the Diocese of Arlington",
+   "organization_website": "https://ccda.net/",
+   "raw_eligibility_text": "Applicants who are 18 years of age or older are considered adults and must apply for clothing under their name. A current photo ID is required. Proof of children is required and one of the following must be provided for each child: photo ID or passport, school documentation (i.e. registration, letter, etc.), or birth certificate. Depending on appointment availability, families may receive a clothing voucher once in a 3-month period, and individuals who are unhoused may receive items once every 30 days. The number of clothing items depends on the availability of clothing at the Clothing Closet at the time of the intake.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.721693,
+   "lon": -77.095379,
+   "zip": "22309",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Parish location listed under 'Our Locations (North Region)'. Outpatient counseling for individuals, couples, parent-child relationships and families (anxiety, depression, grief and loss, marital/premarital, parenting, healing from abuse); in-person at listed parishes and by telehealth. Faith-integrated, available to people of all faiths. North Region intake 703-687-8987 (bilingual English/Spanish). Psychological assessments on a sliding scale (psych.testing@ccda.net). The page does not state counseling fees or office hours at this parish. GEOCODE CAUTION: the Census geocoder matched this address to '8710 OLD MOUNT VERNON RD, ALEXANDRIA, VA, 22309' (a different street name); verify the pin before publishing.",
+   "phone": "703-687-8987",
+   "state": "VA",
+   "website": "https://ccda.net/find-help/medical-mental-healthcare/mental-health-counseling/",
+   "address1": "8710 Mount Vernon Hwy",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Out-patient counseling for individuals, couples, parent-child relationships and families; call intake coordinator to initiate service.",
+     "eligibility": [],
+     "service_type": "mental_health_counseling",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "schedules": [],
+   "source_url": "https://ccda.net/find-help/medical-mental-healthcare/mental-health-counseling/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Call intake coordinators (North Region 703-687-8987) to schedule.",
+     "requirement_type": "appointment"
+    }
+   ],
+   "external_id": "va08gap-ccda-counseling-good-shepherd",
+   "location_name": "Catholic Charities Family Services Counseling – Good Shepherd",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": null,
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Catholic Charities of the Diocese of Arlington – Family Services",
+   "organization_website": "https://ccda.net/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.853203,
+   "lon": -77.060061,
+   "zip": "22202",
+   "city": "Arlington",
+   "email": null,
+   "notes": "Parish location listed under 'Our Locations (North Region)'. Outpatient counseling for individuals, couples, parent-child relationships and families (anxiety, depression, grief and loss, marital/premarital, parenting, healing from abuse); in-person at listed parishes and by telehealth. Faith-integrated, available to people of all faiths. North Region intake 703-687-8987 (bilingual English/Spanish). Psychological assessments on a sliding scale (psych.testing@ccda.net). The page does not state counseling fees or office hours at this parish.",
+   "phone": "703-687-8987",
+   "state": "VA",
+   "website": "https://ccda.net/find-help/medical-mental-healthcare/mental-health-counseling/",
+   "address1": "830 23rd St S",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Out-patient counseling for individuals, couples, parent-child relationships and families; call intake coordinator to initiate service.",
+     "eligibility": [],
+     "service_type": "mental_health_counseling",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "schedules": [],
+   "source_url": "https://ccda.net/find-help/medical-mental-healthcare/mental-health-counseling/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Call intake coordinators (North Region 703-687-8987) to schedule.",
+     "requirement_type": "appointment"
+    }
+   ],
+   "external_id": "va08gap-ccda-counseling-our-lady-of-lourdes",
+   "location_name": "Catholic Charities Family Services Counseling – Our Lady of Lourdes",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": null,
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Catholic Charities of the Diocese of Arlington – Family Services",
+   "organization_website": "https://ccda.net/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.885974,
+   "lon": -77.097434,
+   "zip": "22201",
+   "city": "Arlington",
+   "email": null,
+   "notes": "Parish location listed under 'Our Locations (North Region)'. Outpatient counseling for individuals, couples, parent-child relationships and families (anxiety, depression, grief and loss, marital/premarital, parenting, healing from abuse); in-person at listed parishes and by telehealth. Faith-integrated, available to people of all faiths. North Region intake 703-687-8987 (bilingual English/Spanish). Psychological assessments on a sliding scale (psych.testing@ccda.net). The page does not state counseling fees or office hours at this parish.",
+   "phone": "703-687-8987",
+   "state": "VA",
+   "website": "https://ccda.net/find-help/medical-mental-healthcare/mental-health-counseling/",
+   "address1": "3304 Washington Blvd",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Out-patient counseling for individuals, couples, parent-child relationships and families; call intake coordinator to initiate service.",
+     "eligibility": [],
+     "service_type": "mental_health_counseling",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "schedules": [],
+   "source_url": "https://ccda.net/find-help/medical-mental-healthcare/mental-health-counseling/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Call intake coordinators (North Region 703-687-8987) to schedule.",
+     "requirement_type": "appointment"
+    }
+   ],
+   "external_id": "va08gap-ccda-counseling-st-charles-borromeo",
+   "location_name": "Catholic Charities Family Services Counseling – St. Charles Borromeo",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": null,
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Catholic Charities of the Diocese of Arlington – Family Services",
+   "organization_website": "https://ccda.net/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.885912,
+   "lon": -77.100254,
+   "zip": "22201",
+   "city": "Arlington",
+   "email": "carol@clotheslinearlington.org",
+   "notes": "Free clothing for school-aged children (K-12) from low-income families. Visits by appointment; online order with pickup also available. Basic wardrobe twice a year: 5 tops, 4 bottoms, 5 pairs of new underwear and socks; shoes, pajamas, coats etc. as available. Address/phone/client email from https://www.clotheslinearlington.org/contact/. Spanish pages exist on site.",
+   "phone": "(703) 243-2615",
+   "state": "VA",
+   "website": "https://www.clotheslinearlington.org/get-clothing/",
+   "address1": "3330 Washington Blvd",
+   "address2": "Suite 200",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Qualifying students select a full wardrobe of clothing twice a year, free of charge.",
+     "eligibility": [],
+     "service_type": "clothing",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "schedules": [],
+   "source_url": "https://www.clotheslinearlington.org/get-clothing/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Students and their families must make an appointment at The Clothesline in advance.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Children attending school in Arlington (kindergarten to 12th grade); pre-school students not served.",
+     "requirement_type": "student_affiliation"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Free & Reduced Meal qualification letter from APS, a referral letter, or ParentVue schedule from a community eligibility school.",
+     "requirement_type": "income_documentation"
+    }
+   ],
+   "external_id": "va08gap-clothesline-arlington-kids",
+   "location_name": "The Clothesline for Arlington Kids",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": null,
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "The Clothesline for Arlington Kids",
+   "organization_website": "https://www.clotheslinearlington.org/",
+   "raw_eligibility_text": "The Clothesline serves qualifying children attending school in Arlington (kindergarten to 12th grade). At this time, we do not serve pre-school students. There are three ways to qualify: Present a current Free & Reduced Meal qualification letter from Arlington Public Schools indicating your child’s name. Present a referral letter from a school social worker, a local social services organization, or a place of worship. If your child attends a community eligibility school you may present a screenshot of their current class schedule in ParentVue.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.872564,
+   "lon": -77.159231,
+   "zip": "22042",
+   "city": "Falls Church",
+   "email": "info@culmoreclinic.org",
+   "notes": "Nonprofit, heavily volunteer-run clinic offering free medical care, counseling (licensed volunteer mental health professionals), and specialty referrals to uninsured adults in the Bailey's Crossroads/Falls Church area. Also HIV and STD testing, physical therapy, EKGs and dental services (https://www.culmoreclinic.org/care). New patients register by calling 703-260-8429 (enrollment page); appointment line on contact page is 703-260-8413. 8-10 week wait list for new patients. Sources conflict on days (three vs four days a week) and on the 200% FPL example amounts ($2,600/month vs $2,265/month for an individual). Follows Fairfax County Schools for weather/holiday closures. Mailing: PO Box 8332, Falls Church, VA 22041. Hours from https://www.culmoreclinic.org/contact.",
+   "phone": "703-260-8413",
+   "state": "VA",
+   "website": "https://www.culmoreclinic.org/",
+   "address1": "6400 Arlington Blvd.",
+   "address2": "Suite 940B",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "18:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "18:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "14:00",
+       "closes": "18:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Free basic medical services, diagnostic testing, health counseling and specialty referrals for uninsured adults.",
+     "eligibility": [],
+     "service_type": "health_clinic",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Counseling by a team of licensed volunteer mental health professionals for clinic patients.",
+     "eligibility": [],
+     "service_type": "mental_health_counseling",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Dental services for clinic patients.",
+     "eligibility": [],
+     "service_type": "dental_care",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.culmoreclinic.org/patient-enrollment",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Income at 200% of Federal Poverty Level or below.",
+     "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Adult patients only (18+ years old).",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Proof of Fairfax County residence.",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Proof of income (pay stub, W2 form, or a letter from an employer stating rate of pay).",
+     "requirement_type": "income_documentation"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "By appointment only; register as a patient by calling 703-260-8429.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Uninsured adults.",
+     "requirement_type": "other"
+    }
+   ],
+   "external_id": "va08gap-culmore-clinic",
+   "location_name": "Culmore Clinic",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Clinic Hours - By appointment only: Tuesday: 9 am - 1 pm & 2 pm - 6 pm Wednesday: 9 am - 1 pm & 2 pm - 6 pm Thursday: 9 am - 1 pm & 2 pm - 6 pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Culmore Clinic",
+   "organization_website": "https://www.culmoreclinic.org/",
+   "raw_eligibility_text": "Clinic patients’ income must be at 200% of Federal Poverty Level or below (e.g. $2,600/month or $31,200/year for an individual and $4,625/month or $55,500/year for a family of 4). ... Culmore Clinic is open three days per week and serves adult patients only (18+ years old) by appointment only. All patients are required to bring the following to their registration appointment: Proof of income (pay stub, W2 form, or a letter from an employer stating rate of pay) Proof of Fairfax County residence",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.872482,
+   "lon": -77.093749,
+   "zip": "22201",
+   "city": "Arlington",
+   "email": "info@EnglishEmpowermentCenter.org",
+   "notes": "Fall 2026 term only. Flyer: https://englishempowermentcenter.org/wp-content/uploads/2026/07/Arlington-Church-Conversation-flyer-fall-2026.pdf",
+   "phone": "703-237-0866",
+   "state": "VA",
+   "website": "https://englishempowermentcenter.org/wp-content/uploads/2026/07/Arlington-Church-Conversation-flyer-fall-2026.pdf",
+   "address1": "3201 Arlington Blvd",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "18:00",
+       "closes": "19:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Free intermediate/advanced English conversation class for adults; open to all, no sign-up.",
+     "eligibility": [],
+     "service_type": "esl_classes",
+     "offering_status": "seasonal",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://englishempowermentcenter.org/for-students/in-person-classes/",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No registration required. Walk-ins welcome.",
+     "requirement_type": "registration"
+    }
+   ],
+   "external_id": "va08gap-eec-conversation-arlington-church-of-christ",
+   "location_name": "English Empowerment Center – Arlington Church of Christ (conversation class)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Wednesdays 6:00pm-7:30pm, September 23-December 9 (Fall 2026)",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "English Empowerment Center (formerly Literacy Council of Northern Virginia)",
+   "organization_website": "https://englishempowermentcenter.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.885388,
+   "lon": -77.175395,
+   "zip": "22046",
+   "city": "Falls Church",
+   "email": "info@EnglishEmpowermentCenter.org",
+   "notes": "City of Falls Church library site. Fall 2026 term only. Web page says dates September 21-December 14; flyer says September 21-December 7. Flyer: https://englishempowermentcenter.org/wp-content/uploads/2026/07/Mary-Riley-Conversation-flyer-fall-2026.pdf",
+   "phone": "703-237-0866",
+   "state": "VA",
+   "website": "https://englishempowermentcenter.org/wp-content/uploads/2026/07/Mary-Riley-Conversation-flyer-fall-2026.pdf",
+   "address1": "120 N Virginia Ave",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "18:30",
+       "closes": "20:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Free intermediate/advanced English conversation class for adults; open to all.",
+     "eligibility": [],
+     "service_type": "esl_classes",
+     "offering_status": "seasonal",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://englishempowermentcenter.org/for-students/in-person-classes/",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No registration required. Walk-ins welcome.",
+     "requirement_type": "registration"
+    }
+   ],
+   "external_id": "va08gap-eec-conversation-mary-riley-styles-library",
+   "location_name": "English Empowerment Center – Mary Riley Styles Public Library (conversation class)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Mondays 6:30pm-8:00pm, September 21-December 7 (Fall 2026)",
+   "jurisdiction_id": "falls-church-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "English Empowerment Center (formerly Literacy Council of Northern Virginia)",
+   "organization_website": "https://englishempowermentcenter.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.853739,
+   "lon": -77.135594,
+   "zip": "22041",
+   "city": "Falls Church",
+   "email": "info@EnglishEmpowermentCenter.org",
+   "notes": "Fall 2026 term only. Same site as existing food record va08-culmore-umc-food-ministry (merge candidate). Flyer: https://englishempowermentcenter.org/wp-content/uploads/2026/07/Culmore-flyer-fall-2026.pdf",
+   "phone": "703-237-0866",
+   "state": "VA",
+   "website": "https://englishempowermentcenter.org/wp-content/uploads/2026/07/Culmore-flyer-fall-2026.pdf",
+   "address1": "3400 Charles St",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "12:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "12:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "FREE English classes for beginning level adults (drop-in English Learning Group).",
+     "eligibility": [],
+     "service_type": "esl_classes",
+     "offering_status": "seasonal",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://englishempowermentcenter.org/for-students/in-person-classes/",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No registration required. Walk-ins welcome.",
+     "requirement_type": "registration"
+    }
+   ],
+   "external_id": "va08gap-eec-esl-culmore-umc",
+   "location_name": "English Empowerment Center – Culmore United Methodist",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Monday & Wednesday 10:30am-12:30pm, September 21-December 9 (Fall 2026)",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "English Empowerment Center (formerly Literacy Council of Northern Virginia)",
+   "organization_website": "https://englishempowermentcenter.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.849034,
+   "lon": -77.085745,
+   "zip": "22206",
+   "city": "Arlington",
+   "email": "info@EnglishEmpowermentCenter.org",
+   "notes": "CONFLICT: the in-person classes web page lists Drew under 'Free English Learning Groups' ('No registration required. Walk-ins welcome. FREE.'), but the Drew flyer says 'Services Fee: $85' with sign-up Thursday, August 13. Confirm cost before publishing. Flyer: https://englishempowermentcenter.org/wp-content/uploads/2026/07/Drew-CC-flyer-fall-2026.pdf",
+   "phone": "703-237-0866",
+   "state": "VA",
+   "website": "https://englishempowermentcenter.org/wp-content/uploads/2026/07/Drew-CC-flyer-fall-2026.pdf",
+   "address1": "3500 23rd St S",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "18:30",
+       "closes": "20:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "18:30",
+       "closes": "20:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "English classes for beginning level adults.",
+     "eligibility": [],
+     "service_type": "esl_classes",
+     "offering_status": "seasonal",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://englishempowermentcenter.org/for-students/in-person-classes/",
+   "eligibility": [],
+   "external_id": "va08gap-eec-esl-drew-community-center",
+   "location_name": "English Empowerment Center – Charles Drew Community Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Tuesday & Thursday 6:30pm-8:30pm, September 22-December 10 (Fall 2026)",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "English Empowerment Center (formerly Literacy Council of Northern Virginia)",
+   "organization_website": "https://englishempowermentcenter.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.734129,
+   "lon": -77.101328,
+   "zip": "22309",
+   "city": "Alexandria",
+   "email": "info@EnglishEmpowermentCenter.org",
+   "notes": "Fall 2026 term only (Sept 21-Dec 9). Same site as existing food record va08-rising-hope-mission-church (merge candidate). Flyer: https://englishempowermentcenter.org/wp-content/uploads/2026/07/Rising-Hope-flyer-fall-2026.pdf",
+   "phone": "703-237-0866",
+   "state": "VA",
+   "website": "https://englishempowermentcenter.org/wp-content/uploads/2026/07/Rising-Hope-flyer-fall-2026.pdf",
+   "address1": "8220 Russell Road",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "12:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "12:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "FREE English classes for beginning level adults (drop-in English Learning Group).",
+     "eligibility": [],
+     "service_type": "esl_classes",
+     "offering_status": "seasonal",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://englishempowermentcenter.org/for-students/in-person-classes/",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No registration required. Walk-ins welcome.",
+     "requirement_type": "registration"
+    }
+   ],
+   "external_id": "va08gap-eec-esl-rising-hope",
+   "location_name": "English Empowerment Center – Rising Hope United Methodist Church",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Monday & Wednesday 10:30am-12:30pm, September 21-December 9 (Fall 2026)",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "English Empowerment Center (formerly Literacy Council of Northern Virginia)",
+   "organization_website": "https://englishempowermentcenter.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.885788,
+   "lon": -77.1716,
+   "zip": "22046",
+   "city": "Falls Church",
+   "email": "tbrowand@fallschurchva.gov",
+   "notes": "Social activities, recreation programs and trips for older adults age 50+ (bingo, bridge, canasta, art open studios, military history forum, foreign-language conversation groups). NO congregate meal program is listed: the 'Lunch Bunch' meets the second Friday of every month at Noon and participants pay for their own lunch at local restaurants. Front desk 703-248-5027 (TTY 711); Senior Center Coordinator 703-248-5020. Membership year shown on page: Sept 1, 2025 to Aug 31, 2026.",
+   "phone": "703-248-5027",
+   "state": "VA",
+   "website": "https://www.fallschurchva.gov/611/Senior-Center",
+   "address1": "223 Little Falls St.",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Senior center social, educational and recreation programs for adults 50+ (no meal program listed).",
+     "eligibility": [],
+     "service_type": "other",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fallschurchva.gov/611/Senior-Center",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Programs for older adults age 50+.",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Must join the Senior Center as a member; free for City of Falls Church residents, $12 per person for non-City residents.",
+     "requirement_type": "registration"
+    }
+   ],
+   "external_id": "va08gap-falls-church-city-senior-center",
+   "location_name": "Falls Church Senior Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": null,
+   "jurisdiction_id": "falls-church-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "City of Falls Church Recreation & Parks",
+   "organization_website": "https://www.fallschurchva.gov/",
+   "raw_eligibility_text": "To participate in any Senior Center programs, you must officially join the Senior Center as a member. Please call the Front Desk at 703-248-5027 (TTY 711) to register. Free for City of Falls Church residents and $12 per person for non-City residents",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.877794,
+   "lon": -77.206174,
+   "zip": "22043",
+   "city": "Falls Church",
+   "email": "info@foodforothers.org",
+   "notes": "Parking lot of Wexford Manor Apartments. Outdoor neighborhood distribution of supplemental food; bring your own grocery bags. Only a start time is published (no end time), so no structured schedule. Closed whenever Fairfax County Government is closed; 2026 holiday closures listed on page. Food for Others main office/market is at 2938 Prosperity Ave, Fairfax (outside VA-08). ZIP not given on the page; taken from the Census geocoder match.",
+   "phone": "703-207-9173",
+   "state": "VA",
+   "website": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "address1": "2802 Hollywood Road",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Neighborhood site distribution of supplemental food; the only question asked is household size.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "eligibility": [],
+   "external_id": "va08gap-ffo-hollywood",
+   "location_name": "Food for Others Neighborhood Site – Hollywood (Wexford Manor Apartments)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Falls Church : Wednesday, Friday ... Hollywood (Fairfax County): 2802 Hollywood Road, parking lot of Wexford Manor Apartments, south of Savannah Street, Falls Church . 6:30pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org/",
+   "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, “How many people are in your household?” Please bring your own grocery bags.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.866158,
+   "lon": -77.149525,
+   "zip": "22044",
+   "city": "Falls Church",
+   "email": "info@foodforothers.org",
+   "notes": "Site is on Greenwood Drive near Building #6195; geocoded to 6195 Greenwood Dr (approximate). Outdoor neighborhood distribution of supplemental food; bring your own grocery bags. Only a start time is published (no end time), so no structured schedule. Closed whenever Fairfax County Government is closed; 2026 holiday closures listed on page. Food for Others main office/market is at 2938 Prosperity Ave, Fairfax (outside VA-08). ZIP not given on the page; taken from the Census geocoder match.",
+   "phone": "703-207-9173",
+   "state": "VA",
+   "website": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "address1": "6195 Greenwood Dr",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Neighborhood site distribution of supplemental food; the only question asked is household size.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "eligibility": [],
+   "external_id": "va08gap-ffo-patrick-henry",
+   "location_name": "Food for Others Neighborhood Site – Patrick Henry (Seven Corners)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Seven Corners: Tuesday, Thursday ... Patrick Henry: Greenwood Drive, west of Patrick Henry Drive near Building #6195, Falls Church . 6:30pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org/",
+   "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, “How many people are in your household?” Please bring your own grocery bags.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.871346,
+   "lon": -77.147991,
+   "zip": "22044",
+   "city": "Falls Church",
+   "email": "info@foodforothers.org",
+   "notes": "Site is in front of Building #6134 Willston Garden Apartments; geocoded to 6134 Willston Dr. Outdoor neighborhood distribution of supplemental food; bring your own grocery bags. Only a start time is published (no end time), so no structured schedule. Closed whenever Fairfax County Government is closed; 2026 holiday closures listed on page. Food for Others main office/market is at 2938 Prosperity Ave, Fairfax (outside VA-08). ZIP not given on the page; taken from the Census geocoder match.",
+   "phone": "703-207-9173",
+   "state": "VA",
+   "website": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "address1": "6134 Willston Dr",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Neighborhood site distribution of supplemental food; the only question asked is household size.",
+     "eligibility": [],
+     "service_type": "pantry_pickup",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "eligibility": [],
+   "external_id": "va08gap-ffo-willston",
+   "location_name": "Food for Others Neighborhood Site – Willston (Seven Corners)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Seven Corners: Tuesday, Thursday ... Willston: In front of Building #6134 Willston Garden Apartments, off Willston Drive and west of John Marshall Drive, Falls Church . 6:00pm",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org/",
+   "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, “How many people are in your household?” Please bring your own grocery bags.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.843015,
+   "lon": -77.134595,
+   "zip": "22041",
+   "city": "Falls Church",
+   "email": null,
+   "notes": "Lunch program details from https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers/meals: guests and participants 50-59 pay $8.50 per meal; suggested donation $2-$6 (sliding scale by income) for ages 60+. Center page (https://www.fairfaxcounty.gov/neighborhood-community-services/minnie-h-peyton-community-center-baileys): 'A noon meal is provided weekdays to members who register. Transportation may be available.' Activities for adults age 50 and older.",
+   "phone": "703-820-2131",
+   "state": "VA",
+   "website": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+   "address1": "5920 Summers Lane",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "A noon meal is provided weekdays to members who register (senior center congregate lunch).",
+     "eligibility": [],
+     "service_type": "senior_meals",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Senior Center membership is open to persons 50 years of age and older.",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Senior Center membership required for programs; annual membership fees apply.",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Lunch reservations must be made at least one day in advance at the center where you want to be served.",
+     "requirement_type": "appointment"
+    }
+   ],
+   "external_id": "va08gap-ffx-baileys-senior-center",
+   "location_name": "Minnie H. Peyton Community Center at Bailey's – Senior Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.-4 p.m.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Fairfax County Department of Neighborhood and Community Services (NCS)",
+   "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
+   "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available. Senior Centers offer prepared lunches for participants and guests. Reservations must be made at least one day in advance at the center where you want to be served. The cost of lunch for all guests and for participants ages 50 to 59 is $8.50 per meal. The suggested meal donation (between $2 and $6) for participants ages 60 and over is based on a sliding scale depending on individual income",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.874468,
+   "lon": -77.174396,
+   "zip": "22041",
+   "city": "Falls Church",
+   "email": null,
+   "notes": "Lunch program details from https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers/meals: guests and participants 50-59 pay $8.50 per meal; suggested donation $2-$6 (sliding scale by income) for ages 60+. James Lee Community Center (https://www.fairfaxcounty.gov/neighborhood-community-services/james-lee-community-center) houses a full-service Community Center, Senior Center, Teen Center and Technology Program.",
+   "phone": "703-534-3387",
+   "state": "VA",
+   "website": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+   "address1": "2855 Annandale Road",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Prepared lunches for senior center participants and guests (congregate meal program); reservation at least one day in advance.",
+     "eligibility": [],
+     "service_type": "senior_meals",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Senior Center membership is open to persons 50 years of age and older.",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Senior Center membership required for programs; annual membership fees apply.",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Lunch reservations must be made at least one day in advance at the center where you want to be served.",
+     "requirement_type": "appointment"
+    }
+   ],
+   "external_id": "va08gap-ffx-james-lee-senior-center",
+   "location_name": "James Lee Senior Center (James Lee Community Center)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.-4 p.m.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Fairfax County Department of Neighborhood and Community Services (NCS)",
+   "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
+   "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available. Senior Centers offer prepared lunches for participants and guests. Reservations must be made at least one day in advance at the center where you want to be served. The cost of lunch for all guests and for participants ages 50 to 59 is $8.50 per meal. The suggested meal donation (between $2 and $6) for participants ages 60 and over is based on a sliding scale depending on individual income",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.764274,
+   "lon": -77.153793,
+   "zip": "22315",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Lunch program details from https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers/meals: guests and participants 50-59 pay $8.50 per meal; suggested donation $2-$6 (sliding scale by income) for ages 60+. Moved to its new location at the new Franconia District Government Center, 7130 Silver Lake Boulevard.",
+   "phone": "703-339-7676",
+   "state": "VA",
+   "website": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+   "address1": "7130 Silver Lake Boulevard",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Prepared lunches for senior center participants and guests (congregate meal program); reservation at least one day in advance.",
+     "eligibility": [],
+     "service_type": "senior_meals",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Senior Center membership is open to persons 50 years of age and older.",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Senior Center membership required for programs; annual membership fees apply.",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Lunch reservations must be made at least one day in advance at the center where you want to be served.",
+     "requirement_type": "appointment"
+    }
+   ],
+   "external_id": "va08gap-ffx-kingstowne-center-active-adults",
+   "location_name": "Kingstowne Center for Active Adults",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.-4 p.m.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Fairfax County Department of Neighborhood and Community Services (NCS)",
+   "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
+   "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available. Senior Centers offer prepared lunches for participants and guests. Reservations must be made at least one day in advance at the center where you want to be served. The cost of lunch for all guests and for participants ages 50 to 59 is $8.50 per meal. The suggested meal donation (between $2 and $6) for participants ages 60 and over is based on a sliding scale depending on individual income",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.82094,
+   "lon": -77.142918,
+   "zip": "22312",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "Lunch program details from https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers/meals: guests and participants 50-59 pay $8.50 per meal; suggested donation $2-$6 (sliding scale by income) for ages 60+.",
+   "phone": "703-914-0330",
+   "state": "VA",
+   "website": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+   "address1": "4710 North Chambliss Street",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "16:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Prepared lunches for senior center participants and guests (congregate meal program); reservation at least one day in advance.",
+     "eligibility": [],
+     "service_type": "senior_meals",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Senior Center membership is open to persons 50 years of age and older.",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Senior Center membership required for programs; annual membership fees apply.",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Lunch reservations must be made at least one day in advance at the center where you want to be served.",
+     "requirement_type": "appointment"
+    }
+   ],
+   "external_id": "va08gap-ffx-lincolnia-senior-center",
+   "location_name": "Lincolnia Senior Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.-4 p.m.",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Fairfax County Department of Neighborhood and Community Services (NCS)",
+   "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
+   "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available. Senior Centers offer prepared lunches for participants and guests. Reservations must be made at least one day in advance at the center where you want to be served. The cost of lunch for all guests and for participants ages 50 to 59 is $8.50 per meal. The suggested meal donation (between $2 and $6) for participants ages 60 and over is based on a sliding scale depending on individual income",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.854391,
+   "lon": -77.082884,
+   "zip": "22204",
+   "city": "Arlington",
+   "email": null,
+   "notes": "Free store staffed by volunteers; gently used clothing, shoes, and small household goods at no charge. Closed on dates in the '2026: Matthew 25 Calendar of Days Closed' (e.g., Nov 11, Nov 25, Nov 28, Dec 19, Dec 23, Dec 26, Dec 30, 2026). Donation drop-off at building #4, the Ministry Center. Phone is the parish office number.",
+   "phone": "703-979-5580",
+   "state": "VA",
+   "website": "https://www.ourladyqueenofpeace.org/matthew-25.html",
+   "address1": "2700 South 19th Street",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "12:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "12:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "We offer gently used clothing, shoes, and small household goods, among other items, to those in need at no charge.",
+     "eligibility": [],
+     "service_type": "clothing",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "12:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "operating_hours",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "12:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
+     "food_types": [],
+     "description": "Small household goods at no charge.",
+     "eligibility": [],
+     "service_type": "household_essentials",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.ourladyqueenofpeace.org/matthew-25.html",
+   "eligibility": [],
+   "external_id": "va08gap-olqp-matthew-25-free-store",
+   "location_name": "Matthew 25 Bazaar Free Store",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "MATTHEW 25 BAZAAR FREE STORE HOURS OF OPERATION (unless listed in the 2026: Matthew 25 Calendar of Days Closed ; see below.) Wednesdays: 9:00 AM to 12:00 Noon Saturdays: 9:00 AM to 12:00 Noon",
+   "jurisdiction_id": "arlington-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Our Lady Queen of Peace Catholic Church",
+   "organization_website": "https://www.ourladyqueenofpeace.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.80646,
+   "lon": -77.04674,
+   "zip": "22314",
+   "city": "Alexandria",
+   "email": null,
+   "notes": "SSA operates the City of Alexandria DOT Paratransit Call Center (reservations/questions (703) 836-5222; to apply contact Tytiana White at 703-836-5222 or paratransit@alexandriava.gov). Two bilingual (Spanish) reservations staff. Also describes the City's Senior Taxi Yellow Card program for Alexandria residents 60+ with yearly household income of $48,508 or less (info 703.746.5697; forms to Division of Aging and Adult Services, 4850 Mark Center Drive, 9th Floor). DASH bus is free.",
+   "phone": "703.836.4414",
+   "state": "VA",
+   "website": "https://seniorservicesalex.org/programs/transportation/",
+   "address1": "206 N. Washington Street",
+   "address2": "Suite 301",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Paratransit call center: applications, reservations and customer service for DOT Paratransit; information on Senior Taxi Yellow Card discounted taxi fares.",
+     "eligibility": [],
+     "service_type": "transportation_help",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "schedules": [],
+   "source_url": "https://seniorservicesalex.org/programs/transportation/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "DOT Paratransit is for residents who find it difficult or are unable to use public transportation (disability).",
+     "requirement_type": "other"
+    }
+   ],
+   "external_id": "va08gap-senior-services-alexandria-transportation",
+   "location_name": "Senior Services of Alexandria – Transportation Program (DOT Paratransit Call Center)",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": null,
+   "jurisdiction_id": "alexandria-city",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Senior Services of Alexandria",
+   "organization_website": "https://seniorservicesalex.org/",
+   "raw_eligibility_text": "Senior Taxi Yellow Card Program is available to Alexandria residents age 60 and older who have a yearly household income of $48,508 or less. ... Interested individuals must apply to the program to determine eligibility and then purchase fares in advance at a discounted cost.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.872564,
+   "lon": -77.159231,
+   "zip": "22042",
+   "city": "Falls Church",
+   "email": "greaterdc@tahirih.org",
+   "notes": "Agency office (not a shelter). Serves immigrant survivors of gender-based violence (legal services incl. gender-based asylum, policy advocacy). For help with a case: 1 (866) 575-0071. Some third-party directories list 6402 Arlington Blvd, Suite 300 (not used). Home page does not state office hours or intake criteria in detail.",
+   "phone": "571-282-6161",
+   "state": "VA",
+   "website": "https://www.tahirih.org/",
+   "address1": "6400 Arlington Blvd",
+   "address2": "Suite 400",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Legal help for immigrant survivors of gender-based violence.",
+     "eligibility": [],
+     "service_type": "immigration_legal_help",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Support for immigrant survivors of gender-based violence.",
+     "eligibility": [],
+     "service_type": "domestic_violence_support",
+     "offering_status": "regular",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.tahirih.org/",
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Immigrant survivors of gender-based violence.",
+     "requirement_type": "other"
+    }
+   ],
+   "external_id": "va08gap-tahirih-justice-center-greater-dc",
+   "location_name": "Tahirih Justice Center – National and Greater DC Offices",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": null,
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Tahirih Justice Center",
+   "organization_website": "https://www.tahirih.org/",
+   "raw_eligibility_text": null,
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.730962,
+   "lon": -77.104623,
+   "zip": "22309",
+   "city": "Alexandria",
+   "email": "DFSVITA@FairfaxCounty.gov",
+   "notes": "Seasonal free tax preparation site. VITA Tax Season 2025 preparation services ended April 15, 2026; the hours shown are for the 2026 filing season and are kept as raw text only (no schedules) until the next season is posted. Run by Northern Virginia CASH (NVACASH) coalition with Fairfax County DFS operational support; contact DFSVITA@FairfaxCounty.gov or 703-533-5320 (leave a message). What to bring: photo ID, all income statements (W-2, W-2G, 1099), Social Security card or ITIN letter for all family members, voided check, expense documents, Form 1095-A. ZIP from the same address on other Fairfax County pages (South County Center).",
+   "phone": "703-533-5320",
+   "state": "VA",
+   "website": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/volunteer-income-tax-assistance",
+   "address1": "8350 Richmond Hwy",
+   "address2": null,
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Free Volunteer Income Tax Assistance (VITA) tax preparation for low-income families; walk-ins welcome.",
+     "eligibility": [],
+     "service_type": "tax_preparation",
+     "offering_status": "seasonal",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/volunteer-income-tax-assistance",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Walk-ins are welcome, no appointments are needed.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "The VITA Program provides free tax preparation services to low-income families.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "va08gap-vita-hyland-government-center",
+   "location_name": "VITA Free Tax Preparation – Gerry Hyland Government Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Tuesdays & Wednesdays: 6-8:00 p.m. Saturdays: 10:00 a.m. -3:00 p.m. January 31 - April 15, 2026",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Northern Virginia CASH Campaign VITA / Fairfax County Department of Family Services",
+   "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+   "raw_eligibility_text": "In-person VITA services are available at several sites in Northern Virginia. Walk-ins are welcome, no appointments are needed.",
+   "wheelchair_accessible": "unknown"
+  },
+  {
+   "lat": 38.832288,
+   "lon": -77.208035,
+   "zip": "22003",
+   "city": "Annandale",
+   "email": "DFSVITA@FairfaxCounty.gov",
+   "notes": "Seasonal free tax preparation site. VITA Tax Season 2025 preparation services ended April 15, 2026; the hours shown are for the 2026 filing season and are kept as raw text only (no schedules) until the next season is posted. Run by Northern Virginia CASH (NVACASH) coalition with Fairfax County DFS operational support; contact DFSVITA@FairfaxCounty.gov or 703-533-5320 (leave a message). What to bring: photo ID, all income statements (W-2, W-2G, 1099), Social Security card or ITIN letter for all family members, voided check, expense documents, Form 1095-A.",
+   "phone": "703-533-5320",
+   "state": "VA",
+   "website": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/volunteer-income-tax-assistance",
+   "address1": "7611 Little River Turnpike",
+   "address2": "Suite 300W (West Wing)",
+   "services": [
+    {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": "Free Volunteer Income Tax Assistance (VITA) tax preparation for low-income families; walk-ins welcome.",
+     "eligibility": [],
+     "service_type": "tax_preparation",
+     "offering_status": "seasonal",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    }
+   ],
+   "languages": [],
+   "schedules": [],
+   "source_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/volunteer-income-tax-assistance",
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Walk-ins are welcome, no appointments are needed.",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "The VITA Program provides free tax preparation services to low-income families.",
+     "requirement_type": "income"
+    }
+   ],
+   "external_id": "va08gap-vita-vcw-annandale",
+   "location_name": "VITA Free Tax Preparation – Virginia Career Works Fairfax Annandale Center",
+   "parking_notes": null,
+   "transit_notes": null,
+   "geocode_source": "census_geocoder",
+   "raw_hours_text": "Tuesdays & Thursdays: 4-6:30 p.m. Saturdays: 10:00 a.m. -4:00 p.m. January 29 - April 14, 2026",
+   "jurisdiction_id": "fairfax-county",
+   "operating_status": "unknown",
+   "registration_url": null,
+   "organization_name": "Northern Virginia CASH Campaign VITA / Fairfax County Department of Family Services",
+   "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+   "raw_eligibility_text": "In-person VITA services are available at several sites in Northern Virginia. Walk-ins are welcome, no appointments are needed.",
+   "wheelchair_accessible": "unknown"
+  }
+ ]
+}
