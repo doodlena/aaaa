@@ -87,14 +87,13 @@ describe('language switching', () => {
     expect(screen.queryByRole('button', { name: '한국어' })).not.toBeInTheDocument();
   });
 
-  // Staff-only screens (admin, pantry portal) are not translated for these languages yet and fall back to English.
   it.each([
     ['zh', zh],
     ['vi', vi],
     ['ko', ko],
-  ])('has a complete public catalog for %s with the same placeholders as English', (_code, catalog) => {
+  ])('has a complete catalog for %s with the same keys and placeholders as English', (_code, catalog) => {
     const at = (o: unknown, k: string) => k.split('.').reduce<unknown>((x, p) => (x as Record<string, unknown>)?.[p], o) as string;
-    const expected = flatKeys(en).filter((k) => !k.startsWith('admin.') && !k.startsWith('portal.'));
+    const expected = flatKeys(en);
     expect(flatKeys(catalog).sort()).toEqual(expected.sort());
     const vars = (s: string) => (s.match(/{{\w+}}/g) || []).sort();
     const bad = expected.filter((k) => !at(catalog, k) || vars(at(catalog, k)).join() !== vars(at(en, k)).join());

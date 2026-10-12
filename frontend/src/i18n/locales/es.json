@@ -1,7 +1,7 @@
 {
   "app": {
     "region": "Norte de Virginia",
-    "tagline": "Ayuda que ilumina el camino: comida, salud y apoyo cerca de usted"
+    "tagline": "Un solo lugar para encontrar comida, salud y apoyo cerca de usted"
   },
   "nav": {
     "skip": "Saltar al contenido principal",
@@ -25,7 +25,7 @@
     "banner": "Datos de demostración: los lugares marcados con [TEST] son ficticios."
   },
   "footer": {
-    "disclaimer": "Las actualizaciones en vivo provienen de los propios proveedores y vencen solas. La información puede cambiar: comuníquese con el proveedor antes de ir. Este sitio es gratuito y no recopila datos personales para publicidad.",
+    "disclaimer": "Las actualizaciones en vivo provienen de los proveedores de apoyo, pero la información aún puede cambiar. Este sitio no recopila datos personales para publicidad ni para ningún otro uso.",
     "about": "Acerca de este sitio",
     "privacy": "Privacidad",
     "mapCredit": "Mapas: OpenFreeMap y © colaboradores de OpenStreetMap.",
@@ -70,7 +70,7 @@
     "tooShort": "Escriba al menos 3 caracteres, por ejemplo un código postal de 5 dígitos.",
     "noMatch": "No encontramos ese lugar. Revise cómo lo escribió o pruebe con un código postal.",
     "providersDown": "La búsqueda por dirección no está disponible en este momento. Pruebe con un código postal o elija su condado o ciudad abajo.",
-    "chooseOne": "Encontramos más de un lugar. Elija el suyo:",
+    "chooseOne": "¡Encontramos más de un lugar! Elija el suyo:",
     "useLocation": "Usar mi ubicación",
     "locating": "Buscando su ubicación…",
     "locationNote": "Su navegador le pedirá permiso. Su ubicación solo se usa para esta búsqueda y nunca se guarda.",
@@ -83,28 +83,28 @@
   },
   "home": {
     "legendTitle": "Cómo leer la información de un lugar",
-    "legendLead": "Cada requisito, como presentar una identificación, aparece de una de estas tres formas:",
+    "legendLead": "Cada requisito (p. ej., necesitar una identificación) se muestra de una de tres maneras:",
     "legend": {
       "not_required": "La organización confirmó que no lo necesita.",
       "required": "La organización indica que sí lo necesita.",
       "unknown": "Todavía no lo sabemos. Llame antes de ir. No significa que no haya requisito."
     },
     "learnMore": "Vea de dónde viene nuestra información",
-    "lede": "{{app}} reúne ayuda gratuita en el norte de Virginia —despensas de alimentos y comidas, beneficios, atención médica, vivienda, ayuda legal y más— con actualizaciones en vivo publicadas por los propios proveedores.",
+    "lede": "{{app}} le ayuda a encontrar apoyo gratuito en el norte de Virginia. Esto incluye servicios como despensas de alimentos y comidas, beneficios, atención médica, vivienda, ayuda legal y más. Los propios proveedores publican actualizaciones en vivo sobre la disponibilidad.",
     "findTitle": "Buscar cerca de una dirección",
     "findLead": "Escriba una dirección o código postal para ver horarios, qué llevar e indicaciones para todo tipo de ayuda cercana.",
-    "liveLegend": "Las actualizaciones en vivo las publica el propio proveedor y muestran cuánto queda: tres barras = mucho, dos = algo, una = poco. La palabra siempre aparece junto a las barras.",
+    "liveLegend": "Las actualizaciones en vivo las publica el propio proveedor y muestran cuánto queda: tres barras = mucho, dos = algo, una = poco.",
     "pantryTitle": "¿Dirige una despensa de alimentos o un programa de ayuda?",
-    "pantryBody": "Publique en menos de un minuto cómo está hoy y qué hay en sus estantes. Las familias lo ven enseguida, con la etiqueta de que lo publicó usted, y caduca solo."
+    "pantryBody": "Publique el estado de hoy y lo que hay en sus estantes en menos de un minuto para que las familias lo vean de inmediato."
   },
   "verification": {
     "verified": "Verificado",
     "stale": "Necesita revisión",
     "lastVerified": "Verificado por última vez el {{date}}",
-    "source_reported": "De una lista pública — aún sin verificar"
+    "source_reported": "De una lista pública; aún sin verificar"
   },
   "badges": {
-    "synthetic": "Datos de prueba — no es un lugar real"
+    "synthetic": "Datos de prueba; no es un recurso real"
   },
   "operating": {
     "open": "Abierto",
@@ -376,7 +376,7 @@
     "liveOpen": "Abierto hoy (confirmado por la despensa)",
     "onShelfToday": "En los estantes hoy",
     "supportGroups": "Otros tipos de ayuda",
-    "serviceGroupsHint": "Los lugares deben ofrecer todos los tipos de ayuda que marque. Para comparar necesidades distintas, elija una a la vez.",
+    "serviceGroupsHint": "Se muestran los lugares que ofrecen cualquiera de los tipos de ayuda que marque.",
     "foodHidden": "Los filtros de alimentos están ocultos porque la ayuda que eligió no es comida. Elija una necesidad de alimentos para verlos."
   },
   "sort": {
@@ -1251,7 +1251,7 @@
   },
   "needs": {
     "title": "¿Qué necesita?",
-    "lead": "Elija una opción para ver los lugares que la ofrecen. Después puede añadir un lugar o más filtros.",
+    "lead": "Elija una para ver los lugares que la ofrecen.",
     "any": "Cualquier tipo de ayuda",
     "food": {
       "label": "Comida",
@@ -1308,7 +1308,8 @@
     "pets": {
       "label": "Mascotas",
       "hint": "Comida para mascotas, veterinario de bajo costo"
-    }
+    },
+    "multiHint": "Elija una o más."
   },
   "crisis": {
     "title": "¿En crisis?",
@@ -1321,7 +1322,7 @@
     "label": "Zona",
     "none": "Cerca del lugar que busqué",
     "title": "Ayuda en {{area}}",
-    "homeLink": "Explorar todos los recursos disponibles",
+    "homeLink": "Explore todos los recursos disponibles",
     "mapNote_one": "El mapa muestra {{count}} lugar en {{area}}. La lista los muestra por páginas.",
     "mapNote_other": "El mapa muestra los {{count}} lugares en {{area}}. La lista los muestra por páginas."
   }

@@ -43,6 +43,9 @@ class SearchParams:
     food_types: list[str] = field(default_factory=list)
     service_groups: list[str] = field(default_factory=list)
     service_types: list[str] = field(default_factory=list)
+    # "all": every selected group must be offered. "any": needs are alternatives — a place matches when it offers any
+    # selected service group, or the food need (all selected food groups together).
+    need_match: str = "all"
     on_date: date | None = None
     open_today: bool = False
     upcoming_days: int | None = None
@@ -130,13 +133,18 @@ def search(db: Session, p: SearchParams, now: datetime | None = None) -> dict:
     if p.area:
         conds.append(exists(select(1).where(CoverageArea.id == p.area,
                                             func.ST_Intersects(CoverageArea.boundary, cast(Location.geom, Geometry)))))
-    # Each selected food group / service group must be offered (AND across selections, any code within a group).
-    for g in p.food_groups:
-        conds.append(_food_filter([c for c, grp in FOOD_TYPES.items() if grp == g]))
+    # Each selected food group / service group must be offered (AND across selections, any code within a group),
+    # unless need_match="any" makes the selected needs alternatives.
+    food = [_food_filter([c for c, grp in FOOD_TYPES.items() if grp == g]) for g in p.food_groups]
+    service = [_service_filter([c for c, grp in SERVICE_TYPES.items() if grp == g]) for g in p.service_groups]
+    if p.need_match == "any":
+        alternatives = service + ([and_(*food)] if food else [])
+        if alternatives:
+            conds.append(or_(*alternatives))
+    else:
+        conds += food + service
     for c in p.food_types:
         conds.append(_food_filter([c]))
-    for g in p.service_groups:
-        conds.append(_service_filter([c for c, grp in SERVICE_TYPES.items() if grp == g]))
     for c in p.service_types:
         conds.append(_service_filter([c]))
     if p.wheelchair:
@@ -210,10 +218,16 @@ def _evaluate(loc, item, p: SearchParams, target_date, today):
     unknowns: list[str] = []
     if item["distance_km"] is not None:
         reasons.append({"code": "distance", "km": item["distance_km"]})
+    # With need_match="any" a place may offer only some of the selected needs: list the ones it really offers.
+    any_need = p.need_match == "any"
+    offered_food = set(item["food_groups"])
+    offered_service = {SERVICE_TYPES[s] for s in item["service_types"] if s in SERVICE_TYPES}
     for g in p.food_groups:
-        reasons.append({"code": "food_group", "value": g})
+        if not any_need or g in offered_food:
+            reasons.append({"code": "food_group", "value": g})
     for g in p.service_groups:
-        reasons.append({"code": "service_group", "value": g})
+        if not any_need or g in offered_service:
+            reasons.append({"code": "service_group", "value": g})
     if target_date:
         if not item["has_distribution_schedule"]:
             unknowns.append("schedule")

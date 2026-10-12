@@ -25,7 +25,7 @@ import {
   type Filters,
 } from '../lib/filters';
 import { formatAddress } from '../lib/format';
-import { needPatch } from '../lib/needs';
+import { toggleNeedPatch } from '../lib/needs';
 import type { SearchResponse } from '../api/types';
 import { useAsync } from '../lib/useAsync';
 import { useMediaQuery } from '../lib/useMediaQuery';
@@ -144,7 +144,7 @@ export default function ExplorerPage() {
         </h1>
         <SearchForm compact />
         <AISearch compact />
-        <NeedsChooser variant="explorer" filters={filters} onSelect={(need) => update(need ? needPatch(need) : { food_groups: [], service_groups: [] })} />
+        <NeedsChooser variant="explorer" filters={filters} onToggle={(need) => update(need ? toggleNeedPatch(filters, need) : { food_groups: [], service_groups: [] })} />
         <div className="explorer__controls">
           <div className="field field--inline">
             <label htmlFor="radius">{t('explorer.radius')}</label>

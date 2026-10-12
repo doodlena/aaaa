@@ -61,17 +61,49 @@ describe('needs chooser', () => {
     expect(url.searchParams.get('live_open')).toBeNull();
   });
 
-  it('explorer chip replaces the need in URL + API query and hides food filters for non-food needs', async () => {
+  it('explorer chips are multi-select: needs add up and the search asks for places offering any of them', async () => {
     const { calls } = mockFetch([
       { path: '/api/resources/search', body: searchResponse() },
       { path: '/api/coverage-areas', body: [] },
     ]);
     renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099&food_group=groceries', path: '/find' });
     await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' });
-    const group = screen.getByRole('group', { name: 'What do you need?' });
-    expect(within(group).getByRole('button', { name: /Food/ })).toHaveAttribute('aria-pressed', 'true');
+    const group = screen.getByRole('group', { name: /What do you need\?/ });
+    const chip = (name: RegExp) => within(group).getByRole('button', { name });
+    expect(chip(/^Food/)).toHaveAttribute('aria-pressed', 'true');
+    expect(searchCalls(calls).every((p) => !p.get('need_match'))).toBe(true); // one need: nothing to combine
+
+    await userEvent.click(chip(/Housing and utilities/));
+    await userEvent.click(chip(/Clothing/));
+    await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('service_group=housing%2Cclothing'));
+    expect(screen.getByTestId('location')).toHaveTextContent('food_group=groceries');
+    for (const name of [/^Food/, /Housing and utilities/, /Clothing/]) expect(chip(name)).toHaveAttribute('aria-pressed', 'true');
+    await waitFor(() =>
+      expect(searchCalls(calls).some((p) => p.get('service_group') === 'housing,clothing' && p.get('food_group') === 'groceries' && p.get('need_match') === 'any')).toBe(true),
+    );
+    expect(screen.getByRole('group', { name: 'Type of food' })).toBeInTheDocument(); // a food need is still selected
+
+    await userEvent.click(chip(/Housing and utilities/)); // pressing again removes only that need
+    await waitFor(() => expect(screen.getByTestId('location')).not.toHaveTextContent('housing'));
+    expect(chip(/Clothing/)).toHaveAttribute('aria-pressed', 'true');
+
+    await userEvent.click(within(group).getByRole('button', { name: 'Any kind of help' }));
+    await waitFor(() => expect(screen.getByTestId('location')).not.toHaveTextContent('service_group'));
+    expect(screen.getByTestId('location')).not.toHaveTextContent('food_group');
+  });
+
+  it('hides food filters once no food need is selected', async () => {
+    const { calls } = mockFetch([
+      { path: '/api/resources/search', body: searchResponse() },
+      { path: '/api/coverage-areas', body: [] },
+    ]);
+    renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099&food_group=groceries', path: '/find' });
+    await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' });
+    const group = screen.getByRole('group', { name: /What do you need\?/ });
+    expect(within(group).getByRole('button', { name: /^Food/ })).toHaveAttribute('aria-pressed', 'true');
     expect(screen.getByRole('group', { name: 'Type of food' })).toBeInTheDocument();
     await userEvent.click(within(group).getByRole('button', { name: /Housing and utilities/ }));
+    await userEvent.click(within(group).getByRole('button', { name: /^Food/ }));
     await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('service_group=housing'));
     expect(screen.getByTestId('location')).not.toHaveTextContent('food_group');
     await waitFor(() => expect(searchCalls(calls).some((p) => p.get('service_group') === 'housing' && !p.get('food_group'))).toBe(true));

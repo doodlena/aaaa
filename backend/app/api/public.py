@@ -81,6 +81,7 @@ def search_resources(
     food_type: CSV = None,
     service_group: CSV = None,
     service_type: CSV = None,
+    need_match: str = Query("all", pattern="^(all|any)$", description="any: selected needs are alternatives (OR)"),
     eligibility: CSV = None,
     date_: date | None = Query(None, alias="date"),
     open_today: bool = False,
@@ -113,7 +114,7 @@ def search_resources(
             raise HTTPException(422, f"unknown {name}: {bad}")
     params = SearchParams(
         lat=lat, lon=lon, radius_km=radius_km, bbox=box, jurisdiction=jurisdiction, area=area, food_groups=fg, food_types=_split(food_type),
-        service_groups=sg, service_types=_split(service_type), on_date=date_, open_today=open_today,
+        service_groups=sg, service_types=_split(service_type), need_match=need_match, on_date=date_, open_today=open_today,
         upcoming_days=upcoming_days, eligibility=el, wheelchair=wheelchair, live_open=live_open, live_food_groups=lfg,
         language=language, sort=sort,
         include_uncertain=include_uncertain, page=page, page_size=page_size,

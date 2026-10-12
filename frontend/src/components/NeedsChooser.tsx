@@ -2,18 +2,17 @@ import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 import { DEFAULT_FILTERS, type Filters } from '../lib/filters';
-import { currentNeed, NEEDS, needURL, type Need } from '../lib/needs';
+import { NEEDS, needSelected, needURL, type Need } from '../lib/needs';
 import { Icon } from './Icon';
 
 /**
- * "What do you need?" — one tile per need. On the home page tiles are links to /find (single need each; the search API
- * ANDs service groups, so combinations belong in the filter panel). In the explorer they are toggle buttons that
- * replace the current need and keep the place.
+ * "What do you need?" — one tile per need. On the home page tiles are links to /find (one need each). In the explorer
+ * they are multi-select toggle buttons: each adds or removes its need, and results show places that offer any of them.
  */
 export function NeedsChooser(
   props:
     | { variant: 'home'; base?: Filters; headingId?: string }
-    | { variant: 'explorer'; filters: Filters; onSelect: (need: Need | null) => void },
+    | { variant: 'explorer'; filters: Filters; onToggle: (need: Need | null) => void },
 ) {
   const { t } = useTranslation();
   const id = useId();
@@ -39,11 +38,10 @@ export function NeedsChooser(
     );
   }
 
-  const active = currentNeed(props.filters);
   return (
     <div className="needs needs--compact" role="group" aria-labelledby={`${id}-l`}>
       <p id={`${id}-l`} className="needs__label">
-        {t('needs.title')}
+        {t('needs.title')} <span className="needs__multi">{t('needs.multiHint')}</span>
       </p>
       <ul className="needs__row">
         <li>
@@ -51,7 +49,7 @@ export function NeedsChooser(
             type="button"
             className="need-chip"
             aria-pressed={!props.filters.service_groups.length && !props.filters.food_groups.length}
-            onClick={() => props.onSelect(null)}
+            onClick={() => props.onToggle(null)}
           >
             {t('needs.any')}
           </button>
@@ -61,9 +59,9 @@ export function NeedsChooser(
             <button
               type="button"
               className="need-chip"
-              aria-pressed={active?.id === n.id}
+              aria-pressed={needSelected(props.filters, n)}
               data-need={n.id}
-              onClick={() => props.onSelect(active?.id === n.id ? null : n)}
+              onClick={() => props.onToggle(n)}
             >
               <Icon name={n.icon} size={18} />
               {t(`needs.${n.id}.label`)}

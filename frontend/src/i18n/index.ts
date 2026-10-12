@@ -6,7 +6,7 @@ import es from './locales/es.json';
 /**
  * To add a language: add src/i18n/locales/<code>.json and register it here (and in LAZY_CATALOGS unless it is bundled).
  * `primary` languages are always-visible buttons; the rest sit behind the "+" menu and load on demand.
- * A lazy catalog may leave keys out (e.g. staff-only screens); those fall back to English.
+ * Every catalog must have the same keys as en.json (language.test.tsx checks this); a missing key falls back to English.
  */
 export const SUPPORTED_LANGUAGES = [
   { code: 'en', native: 'English', locale: 'en-US', primary: true },

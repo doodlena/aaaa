@@ -261,6 +261,8 @@ export function buildSearchQuery(f: Filters, pageSize = 50): string {
   if (f.area) sp.set('area', f.area);
   if (f.food_groups.length) sp.set('food_group', f.food_groups.join(','));
   if (f.service_groups.length) sp.set('service_group', f.service_groups.join(','));
+  // Several needs are alternatives: show places that offer any of them (food groups together count as one need).
+  if (f.service_groups.length + (f.food_groups.length ? 1 : 0) > 1) sp.set('need_match', 'any');
   if (f.eligibility.length) sp.set('eligibility', f.eligibility.join(','));
   if (f.schedule === 'today') sp.set('open_today', 'true');
   if (f.schedule === 'date' && f.date) sp.set('date', f.date);

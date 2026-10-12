@@ -1,9 +1,9 @@
-import { DEFAULT_FILTERS, filtersToURL, type Filters } from './filters';
+import { DEFAULT_FILTERS, filtersToURL, isFoodContext, toggle, type Filters } from './filters';
 import type { IconName } from '../components/Icon';
 
 /**
- * "What do you need?" tiles. Each need maps to exactly ONE filter (the search API ANDs service groups, so combining
- * needs in one tile would hide places that offer only one of them). Combinations live in the filter panel.
+ * "What do you need?" tiles. Each need maps to exactly ONE filter. Several needs can be selected at once in the
+ * explorer: the search then asks for places that offer ANY of them (need_match=any, see buildSearchQuery).
  */
 export interface Need {
   id: string;
@@ -43,15 +43,22 @@ export function needPatch(need: Need): Partial<Filters> {
   };
 }
 
-/** The need currently expressed by the filters (exactly one need filter set), if any. */
-export function currentNeed(f: Pick<Filters, 'food_groups' | 'service_groups'>): Need | undefined {
-  return NEEDS.find(
-    (n) =>
-      f.food_groups.length === (n.food_group ? 1 : 0) &&
-      f.service_groups.length === (n.service_group ? 1 : 0) &&
-      (!n.food_group || f.food_groups[0] === n.food_group) &&
-      (!n.service_group || f.service_groups[0] === n.service_group),
-  );
+/** Whether the filters include this need (several needs can be selected together). */
+export function needSelected(f: Pick<Filters, 'food_groups' | 'service_groups'>, need: Need): boolean {
+  return need.service_group ? f.service_groups.includes(need.service_group) : !!need.food_group && f.food_groups.includes(need.food_group);
+}
+
+/** Filters patch that adds or removes one need, keeping the others. Leaving every food need drops the food-only filters. */
+export function toggleNeedPatch(f: Filters, need: Need): Partial<Filters> {
+  const service_groups = need.service_group ? toggle(f.service_groups, need.service_group) : f.service_groups;
+  // Turning the food need off also clears "type of food" refinements, which only narrow that need.
+  const food_groups = need.food_group ? (needSelected(f, need) ? [] : [...f.food_groups, need.food_group]) : f.food_groups;
+  return {
+    food_groups,
+    service_groups,
+    ...(isFoodContext({ food_groups, service_groups }) ? {} : { live_food_groups: [], live_open: false }),
+    page: 1,
+  };
 }
 
 /** /find URL for a need, starting from `base` (e.g. the current place). */

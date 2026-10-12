@@ -59,6 +59,21 @@ def test_food_and_service_filters(client, published):
     assert r["items"][0]["match_reasons"][1] == {"code": "service_group", "value": "drive_through"}
 
 
+def test_need_match_any_treats_selected_needs_as_alternatives(client, published):
+    both = {**ARL, "radius_km": 60, "food_group": "infant", "service_group": "drive_through"}
+    assert names(client.get("/api/resources/search", params=both).json()["items"]) == set()  # default: must offer both
+    r = client.get("/api/resources/search", params={**both, "need_match": "any"}).json()
+    assert names(r["items"]) == {"[TEST] Cedar Family Services — Annandale", "[TEST] Riverbend Food Share"}
+    # match reasons name only what each place really offers, never every selected need
+    why = {i["name"]: [m for m in i["match_reasons"] if m["code"] in ("food_group", "service_group")] for i in r["items"]}
+    assert why["[TEST] Cedar Family Services — Annandale"] == [{"code": "food_group", "value": "infant"}]
+    assert why["[TEST] Riverbend Food Share"] == [{"code": "service_group", "value": "drive_through"}]
+    # food groups stay a refinement of the one food need (still AND among themselves)
+    r = client.get("/api/resources/search", params={**ARL, "radius_km": 60, "food_group": ["produce", "dairy"], "need_match": "any"}).json()
+    assert names(r["items"]) == {"[TEST] Maple Community Pantry — Main Site"}
+    assert client.get("/api/resources/search", params={**ARL, "need_match": "some"}).status_code == 422
+
+
 def test_no_id_filter_excludes_unknown_and_required(client, published):
     """Scenario F: 'No ID required' never matches listings whose ID requirement is unknown."""
     r = client.get("/api/resources/search", params={**ARL, "radius_km": 60, "eligibility": "no_id_required"}).json()

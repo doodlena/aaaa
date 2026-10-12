@@ -376,7 +376,7 @@
     "liveOpen": "Open today (pantry-confirmed)",
     "onShelfToday": "On the shelf today",
     "supportGroups": "Other kinds of help",
-    "serviceGroupsHint": "Places must offer every kind of help you check. To compare different needs, pick one at a time.",
+    "serviceGroupsHint": "Places that offer any of the kinds of help you check are shown.",
     "foodHidden": "Food filters are hidden because the help you picked is not food. Choose a food need to see them."
   },
   "sort": {
@@ -1308,7 +1308,8 @@
     "pets": {
       "label": "Pets",
       "hint": "Pet food, low-cost vet care"
-    }
+    },
+    "multiHint": "Choose one or more."
   },
   "crisis": {
     "title": "In crisis?",
