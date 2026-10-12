@@ -1,5 +1,3 @@
-import { CrisisCallout } from './CrisisCallout';
-import { offersCrisisServices } from '../lib/filters';
 import { useEffect, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
@@ -241,7 +239,6 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
           <ReportProblem id={r.id} name={r.name} />
         </div>
         <ReportsNotice count={r.open_reports} />
-        {offersCrisisServices([...(r.service_types || []), ...r.services.map((x) => x.service_type)]) && <CrisisCallout />}
         {r.directions && (
           <p className="detail__alt-directions">
             {t('detail.otherMaps')}{' '}

@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { Link, useSearchParams } from 'react-router';
 import { api } from '../api/client';
 import { AISearch } from '../components/AISearch';
-import { CrisisCallout } from '../components/CrisisCallout';
 import { NeedsChooser } from '../components/NeedsChooser';
 import { FiltersPanel } from '../components/FiltersPanel';
 import { Icon } from '../components/Icon';
@@ -15,7 +14,6 @@ import {
   ANY_DISTANCE,
   activeFilterCount,
   buildSearchQuery,
-  offersCrisisServices,
   DEFAULT_FILTERS,
   filtersFromURL,
   filtersToURL,
@@ -170,10 +168,6 @@ export default function ExplorerPage() {
   const center = filters.lat !== null && filters.lon !== null ? { lat: filters.lat, lon: filters.lon } : null;
   const selected = data && sel.id !== null ? [...data.items, ...data.uncertain].find((r) => r.id === sel.id) : undefined;
   const placeLabel = filters.bbox ? t('explorer.thisArea') : filters.label || jurisdictionName;
-  const showCrisis =
-    filters.service_groups.includes('mental_health') ||
-    !!data?.items.some((r) => offersCrisisServices(r.service_types)) ||
-    !!data?.uncertain.some((r) => offersCrisisServices(r.service_types));
   const mapItems = pins.data?.items || data?.items || [];
   const mapOffset = pins.data ? 1 : data ? (data.page - 1) * data.page_size + 1 : 1;
 
@@ -265,12 +259,6 @@ export default function ExplorerPage() {
           </button>
         </div>
       </div>
-
-      {showCrisis && (
-        <div className="explorer__crisis">
-          <CrisisCallout compact />
-        </div>
-      )}
 
       {narrow && (
         // Its own block (not inside the bar) so it can stay stuck under the header while the page scrolls.

@@ -105,29 +105,17 @@ describe('needs chooser', () => {
   });
 });
 
-describe('988 crisis callout', () => {
-  it('appears in the explorer when Mental health is selected, with tel/sms links and no close button', async () => {
+describe('988 crisis callout (moved to the footer only)', () => {
+  it('no crisis box in the explorer, even for Mental health or crisis results', async () => {
     mockFetch([
-      { path: '/api/resources/search', body: searchResponse({ items: [] , total: 0}) },
+      { path: '/api/resources/search', body: searchResponse({ items: [summary({ service_types: ['mental_health_counseling'] })] }) },
     ]);
-    renderApp(<ExplorerPage />, { route: '/find?service_group=mental_health', path: '/find' });
-    const callout = await screen.findByTestId('crisis-callout');
-    expect(callout).toHaveTextContent('In crisis? Call or text 988 (Suicide & Crisis Lifeline), available 24/7. In an emergency call 911.');
-    expect(within(callout).getByRole('link', { name: 'Call 988' })).toHaveAttribute('href', 'tel:988');
-    expect(within(callout).getByRole('link', { name: 'Text 988' })).toHaveAttribute('href', 'sms:988');
-    expect(within(callout).getByRole('link', { name: 'Call 911' })).toHaveAttribute('href', 'tel:911');
-    expect(within(callout).queryByRole('button')).toBeNull();
-  });
-
-  it('is absent for other needs, and appears on a listing that offers crisis services', async () => {
-    mockFetch([
-      { path: '/api/resources/search', body: searchResponse() },
-    ]);
-    const { unmount } = renderApp(<ExplorerPage />, { route: '/find?service_group=legal', path: '/find' });
+    renderApp(<ExplorerPage />, { route: '/find?service_group=mental_health&lat=38.86&lon=-77.099', path: '/find' });
     await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' });
     expect(screen.queryByTestId('crisis-callout')).toBeNull();
-    unmount();
+  });
 
+  it('no crisis box on a listing that offers crisis services', async () => {
     const base = detailFixture();
     mockFetch([
       {
@@ -137,15 +125,8 @@ describe('988 crisis callout', () => {
       { path: '/api/resources/1/visit-plan', body: visitPlan },
     ]);
     renderApp(<ResourcePage />, { route: '/resource/1', path: '/resource/:id' });
-    expect(await screen.findByTestId('crisis-callout')).toHaveTextContent('Call or text 988');
-  });
-
-  it('explorer shows the callout when a result offers mental health services', async () => {
-    mockFetch([
-      { path: '/api/resources/search', body: searchResponse({ items: [summary({ service_types: ['mental_health_counseling'] })] }) },
-    ]);
-    renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099', path: '/find' });
-    expect(await screen.findByTestId('crisis-callout')).toBeInTheDocument();
+    await screen.findByRole('heading', { level: 1 });
+    expect(screen.queryByTestId('crisis-callout')).toBeNull();
   });
 });
 
