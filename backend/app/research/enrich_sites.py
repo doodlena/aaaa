@@ -198,3 +198,92 @@ def _ai_fill(rec: dict, food_ok: set, stats: dict) -> None:
         rec["eligibility"] = [{"requirement_type": e.requirement_type, "status": e.status, "details": e.evidence, "values": {}}
                               for e in out.eligibility]
         stats["ai_eligibility"] = stats.get("ai_eligibility", 0) + 1
+
+
+LOOKUP_OUT = REPO_ROOT / "data" / "sources" / "ai_listing_lookup.json"
+FOOD_TYPES = {"pantry_pickup", "walk_up", "drive_through", "mobile_pantry", "community_meal", "emergency_food", "senior_meals",
+              "kids_meals", "school_based", "delivery_qualifying", "home_delivery"}
+
+
+def lookup_missing(db, limit: int = 50, food_only: bool = True) -> dict:
+    """Per-listing AI web lookup (cited) for listings missing hours or eligibility, then turn the CITED QUOTES into
+    structured schedules/eligibility (verbatim-checked against the quoted page text). Never marks anything verified."""
+    from app.api.public import _missing_fields, detail_with_live, load_location  # same 'what is missing' logic as the button
+
+    existing = json.loads(LOOKUP_OUT.read_text())["records"] if LOOKUP_OUT.exists() else []
+    by_id = {r["external_id"]: r for r in existing}
+    stats = {"looked_up": 0, "cached": 0, "with_hours": 0, "with_eligibility": 0, "nothing_found": 0}
+    q = select(Location).where(Location.is_synthetic.is_(False), Location.merged_into_id.is_(None),
+                               Location.review_status.in_(("candidate", "needs_review", "stale")), Location.last_verified_at.is_(None))
+    locs = db.scalars(q.order_by(Location.id)).all()
+    is_food = lambda l: bool({s.service_type for s in l.services} & FOOD_TYPES)  # noqa: E731
+    locs = sorted(locs, key=lambda l: not is_food(l))
+    for loc in locs:
+        if stats["looked_up"] >= limit:
+            break
+        if food_only and not is_food(loc):
+            continue
+        has_sched = db.scalar(select(Schedule.id).where(Schedule.location_id == loc.id).limit(1))
+        has_elig = db.scalar(select(EligibilityRequirement.id).where(EligibilityRequirement.location_id == loc.id,
+                                                                     EligibilityRequirement.status != "unknown").limit(1))
+        if has_sched and has_elig:
+            continue
+        try:
+            d = detail_with_live(db, load_location(db, loc.id), None)
+        except Exception:
+            continue
+        missing = _missing_fields(d)
+        cached = ai.enrich_cached(loc.id)
+        info = {"name": loc.name, "organization": loc.organization.name, "address": ", ".join(x for x in (loc.address1, loc.city, loc.zip) if x),
+                "website": loc.website or loc.organization.website, "phone": loc.phone}
+        try:
+            out = cached if cached is not None else ai.enrich_listing(loc.id, info, missing)
+        except ai.AIUnavailable as e:
+            stats["stopped"] = str(e)
+            break
+        stats["cached" if cached is not None else "looked_up"] += 1
+        rec = _record_from_lookup(loc, out, stats)
+        if rec:
+            by_id[rec["external_id"]] = rec
+        LOOKUP_OUT.write_text(json.dumps({"_notice": "Hours/eligibility from a per-listing AI web lookup. Every value is backed by "
+                                                     "a quote from the cited page (source_url). Unverified.",
+                                          "records": list(by_id.values())}, indent=1, ensure_ascii=False))
+    return stats
+
+
+def _record_from_lookup(loc: Location, out: dict, stats: dict) -> dict | None:
+    fields = {f["field"]: f for f in out.get("fields", [])}
+    hours = [f for k, f in fields.items() if k in ("hours", "dates")]
+    elig = [f for k, f in fields.items() if k in ("eligibility", "id_required")]
+    # The structure step only sees text quoted from the cited pages, so every value is checked against the page itself.
+    quotes = lambda fs: "\n".join(s["quote"] for f in fs for s in f["sources"] if s.get("quote"))  # noqa: E731
+    text = "\n".join(t for t in (quotes(hours), quotes(elig)) if t)
+    if not text.strip():
+        stats["nothing_found"] += 1
+        return None
+    try:
+        st = ai.suggest_structure(text)
+    except ai.AIUnavailable:
+        return None
+    types = sorted({s.service_type for s in loc.services}) or ["other"]
+    food = [t for t in types if t in FOOD_TYPES]
+    sched = [{"kind": "distribution", "weekday": x.weekday, "opens": x.opens, "closes": x.closes, "week_of_month": x.week_of_month,
+              "appointment_only": False, "notes": None} for x in st.distribution_schedules] if food else []
+    eligibility = [{"requirement_type": e.requirement_type, "status": e.status, "details": e.evidence, "values": {}} for e in st.eligibility]
+    if not sched and not eligibility:
+        stats["nothing_found"] += 1
+        return None
+    stats["with_hours"] += bool(sched)
+    stats["with_eligibility"] += bool(eligibility)
+    src = next((s["url"] for f in (hours if sched else []) + elig + hours for s in f["sources"]), None)
+    lat, lon = _coord(loc)
+    services = [{"service_type": t, "description": None, "food_types": [], "schedules": sched if t == (food[0] if food else None) else []}
+                for t in types]
+    from app.ingestion.candidate import CandidateResource
+
+    rec = {"external_id": f"lookup-{loc.id}", "source_url": src, "organization_name": loc.organization.name, "location_name": loc.name,
+           "address1": loc.address1, "address2": loc.address2, "city": loc.city, "zip": loc.zip, "lat": lat, "lon": lon,
+           "geocode_source": "existing listing", "phone": loc.phone, "services": services, "eligibility": eligibility, "schedules": [],
+           "notes": "AI web lookup, cited: " + " | ".join(s["quote"][:150] for f in hours + elig for s in f["sources"][:1])[:600]}
+    CandidateResource(**rec)  # validate
+    return rec

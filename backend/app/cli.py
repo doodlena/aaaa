@@ -595,6 +595,31 @@ def cmd_ai_enrich_sites(a):
         print(f"linked {linked} records directly to their listings")
 
 
+def cmd_ai_lookup_missing(a):
+    """(AI) Cited web lookup for listings missing hours/eligibility; imports the cited facts as structured data."""
+    from app.ingestion.base import Fetcher, load_source_configs
+    from app.ingestion.pipeline import attach_record_to_location, run_source
+    from app.models import DuplicateCandidate, Location, SourceRecord
+    from app.research.enrich_sites import lookup_missing
+    from app.services import ai
+
+    if not ai.enabled():
+        sys.exit("AI is not enabled (Admin → AI settings)")
+    with _db() as db:
+        print(json.dumps(lookup_missing(db, limit=a.limit, food_only=not a.all)))
+        run = run_source(db, load_source_configs()["ai-listing-lookup"], Fetcher())
+        print(f"import: {run.status} {json.dumps({k: v for k, v in run.counts.items() if v and k != 'extra'})}")
+        for rec in db.scalars(select(SourceRecord).where(SourceRecord.source_id == "ai-listing-lookup",
+                                                         SourceRecord.status == "duplicate_candidate")).all():
+            loc = db.get(Location, int(rec.external_id.split("-", 1)[1]))
+            if loc:
+                for d in db.scalars(select(DuplicateCandidate).where(DuplicateCandidate.source_record_id == rec.id,
+                                                                     DuplicateCandidate.status == "pending")).all():
+                    d.status = "merged" if d.location_id == loc.id else "distinct"
+                attach_record_to_location(db, rec, loc, actor_label="ai:listing-lookup")
+        db.commit()
+
+
 def cmd_export_snapshot(_a):
     """Write every imported record from republishable sources to data/snapshots/ (committed), so a fresh database
     can be rebuilt without re-scraping. Sources whose terms need permission (publication != permitted_with_attribution)
@@ -812,6 +837,10 @@ def main(argv=None):
     dsc.add_argument("--searches", type=int, default=2, help="max web searches (each ~1 cent)")
     dsc.set_defaults(fn=cmd_ai_discover)
     sub.add_parser("ai-usage", help="(AI) spend by feature and this month's total vs budget").set_defaults(fn=cmd_ai_usage)
+    lm = sub.add_parser("ai-lookup-missing", help="(AI) cited web lookup for listings missing hours/eligibility")
+    lm.add_argument("--limit", type=int, default=50)
+    lm.add_argument("--all", action="store_true", help="include non-food services (default: food listings only)")
+    lm.set_defaults(fn=cmd_ai_lookup_missing)
     es = sub.add_parser("ai-enrich-sites", help="(AI) fill hours/eligibility/what-to-bring from providers' own websites")
     es.add_argument("--limit", type=int, default=50)
     es.add_argument("--jurisdiction")

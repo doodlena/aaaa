@@ -3,7 +3,7 @@
 Lantern lists free food, health and support services in Northern Virginia. If you run or volunteer at one of them,
 you can keep your listing accurate and tell families what is happening today. It's free.
 
-**Contact:** alexandercarsoncordova+lantern@gmail.com (questions, access problems, or to restore removed access). The
+**Contact:** alexandercarsoncordova@gmail.com (questions, access problems, or to restore removed access). The
 site shows the current address on the "For services" page and in the footer; deployments set it with
 `FOODACCESS_CONTACT_EMAIL`.
 
