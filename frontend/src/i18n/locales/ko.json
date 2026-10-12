@@ -549,7 +549,8 @@
     "oauthCancelled": "로그인이 취소되었습니다.",
     "oauthAccountExists": "이 이메일로 만든 계정이 이미 있습니다. 비밀번호로 로그인한 다음 계정 페이지에서 제공 업체를 연결하세요.",
     "oauthLinkConflict": "해당 제공 업체 계정은 이미 이곳의 다른 계정에 연결되어 있습니다.",
-    "oauthBackToSignIn": "로그인으로 돌아가기"
+    "oauthBackToSignIn": "로그인으로 돌아가기",
+    "or": "또는"
   },
   "account": {
     "title": "내 계정",

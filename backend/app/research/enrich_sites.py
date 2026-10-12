@@ -142,6 +142,8 @@ def _save(by_id: dict, stats: dict) -> dict:
     from app.ingestion.candidate import CandidateEligibility, CandidateResource, CandidateSchedule, CandidateService
     from app.ingestion.normalization.text import clean_text, eligibility_from_text, parse_schedule_text
 
+    food_ok = {"pantry_pickup", "walk_up", "drive_through", "mobile_pantry", "community_meal", "emergency_food", "senior_meals",
+               "kids_meals", "school_based", "delivery_qualifying", "home_delivery"}
     records = []
     for r in by_id.values():
         if "services" in r:  # already in final shape
@@ -163,6 +165,36 @@ def _save(by_id: dict, stats: dict) -> dict:
         rec.update({"services": services, "eligibility": elig, "schedules": loc_sched})
         CandidateResource(**rec)  # validate
         records.append(rec)
+    for rec in records:
+        _ai_fill(rec, food_ok, stats)
     OUT.write_text(json.dumps({"_notice": "Details extracted with AI from each provider's own website; every value appears verbatim "
                                           "on the cited page (source_url). Unverified.", "records": records}, indent=1, ensure_ascii=False))
     return stats
+
+
+def _ai_fill(rec: dict, food_ok: set, stats: dict) -> None:
+    """When the rule parser couldn't read the hours/eligibility wording, ask the AI 'structure' step.
+
+    Every schedule/requirement it returns is backed by a verbatim quote of the page text (checked in ai.suggest_structure).
+    Distribution times are only attached to food services; nothing is invented when the text is absent.
+    """
+    has_sched = bool(rec["schedules"]) or any(s["schedules"] for s in rec["services"])
+    text = "\n".join(t for t in (rec.get("raw_hours_text"), rec.get("raw_eligibility_text")) if t)
+    food = [s for s in rec["services"] if s["service_type"] in food_ok]
+    want_sched = not has_sched and rec.get("raw_hours_text") and food
+    want_elig = not rec["eligibility"] and rec.get("raw_eligibility_text")
+    if not text or not (want_sched or want_elig):
+        return
+    try:
+        out = ai.suggest_structure(text)
+    except ai.AIUnavailable:
+        return
+    if want_sched and out.distribution_schedules:
+        food[0]["schedules"] = [{"kind": "distribution", "weekday": x.weekday, "opens": x.opens, "closes": x.closes,
+                                 "week_of_month": x.week_of_month, "appointment_only": False, "notes": None}
+                                for x in out.distribution_schedules]
+        stats["ai_schedules"] = stats.get("ai_schedules", 0) + 1
+    if want_elig and out.eligibility:
+        rec["eligibility"] = [{"requirement_type": e.requirement_type, "status": e.status, "details": e.evidence, "values": {}}
+                              for e in out.eligibility]
+        stats["ai_eligibility"] = stats.get("ai_eligibility", 0) + 1

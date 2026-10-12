@@ -549,7 +549,8 @@
     "oauthCancelled": "Đã hủy đăng nhập.",
     "oauthAccountExists": "Đã có tài khoản dùng email này. Hãy đăng nhập bằng mật khẩu, rồi kết nối nhà cung cấp từ trang tài khoản của bạn.",
     "oauthLinkConflict": "Tài khoản nhà cung cấp đó đã được kết nối với một tài khoản khác ở đây.",
-    "oauthBackToSignIn": "Quay lại đăng nhập"
+    "oauthBackToSignIn": "Quay lại đăng nhập",
+    "or": "hoặc"
   },
   "account": {
     "title": "Tài khoản của bạn",

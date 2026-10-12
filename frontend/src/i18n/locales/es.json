@@ -549,7 +549,8 @@
     "oauthCancelled": "Se canceló el inicio de sesión.",
     "oauthAccountExists": "Ya existe una cuenta con este correo electrónico. Inicie sesión con su contraseña y luego conecte el proveedor desde la página de su cuenta.",
     "oauthLinkConflict": "Esa cuenta del proveedor ya está conectada a otra cuenta aquí.",
-    "oauthBackToSignIn": "Volver a iniciar sesión"
+    "oauthBackToSignIn": "Volver a iniciar sesión",
+    "or": "o"
   },
   "account": {
     "title": "Su cuenta",

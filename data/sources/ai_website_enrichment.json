@@ -1,0 +1,2238 @@
+{
+ "_notice": "Details extracted with AI from each provider's own website; every value appears verbatim on the cited page (source_url). Unverified.",
+ "records": [
+  {
+   "external_id": "site-15",
+   "source_url": "https://www.burkeumc.org/co-op",
+   "organization_name": "Burke United Methodist Church",
+   "location_name": "Burke United Methodist Church",
+   "address1": "6200 Burke Centre Parkway",
+   "address2": null,
+   "city": "Burke",
+   "zip": "22015",
+   "lat": 38.78409,
+   "lon": -77.280702,
+   "geocode_source": "existing listing",
+   "phone": "(703) 250-6100",
+   "raw_hours_text": "Tuesday 1-2 PM Thursday 6-7 PM Saturday 9-10 AM",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Tuesday 1-2 PM | Thursday 6-7 PM | Saturday 9-10 AM | 6200 Burke Centre Parkway, Burke VA 22015 | Families select the items they need and receive an average of six bags of groceries, including fresh food and household essentials. | We serve neighbors who live in Burke, Springfield, or Fairfax (city). | Food is always free.",
+   "services": [
+    {
+     "service_type": "walk_up",
+     "description": "Serving 200+ families each month, our Community Co-Op offers a choice-based food experience rooted in dignity, generosity, and community partnership. Families select the items they need and receive an average of six bags of groceries, including fresh food and household essentials.",
+     "food_types": [
+      "general_groceries",
+      "pantry_staples"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "13:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "18:00",
+       "closes": "19:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "09:00",
+       "closes": "10:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-40",
+   "source_url": "https://www.culmoreumc.org/",
+   "organization_name": "Culmore UMC",
+   "location_name": "Culmore Church",
+   "address1": "3400 Charles St",
+   "address2": null,
+   "city": "Falls Church",
+   "zip": "22041",
+   "lat": 38.853739,
+   "lon": -77.135594,
+   "geocode_source": "existing listing",
+   "phone": "(703) 820-5131",
+   "raw_hours_text": "Every Thursday starting at 7:00 AM",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): MAP (Mason And Partners) Free Medical Clinic Every Thursday starting at 7:00 AM in the Fellowship Hall | For appointments Call: (703) 993-5880 | The church is located at: 3400 Charles Street, Falls Church, VA 22041.",
+   "services": [
+    {
+     "service_type": "drive_through",
+     "description": "Free Medical Clinic",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "emergency_food",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "mobile_pantry",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-41",
+   "source_url": "https://grovetonbaptistchurch.org/",
+   "organization_name": "Groveton Baptist Church",
+   "location_name": "Groveton Baptist Church Food Pantry",
+   "address1": "6511 Richmond Hwy",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22306",
+   "lat": 38.776154,
+   "lon": -77.080283,
+   "geocode_source": "existing listing",
+   "phone": "(703) 768-9084",
+   "raw_hours_text": "On Fridays our Food Pantry is open from 10 AM to 3 PM (Door 1) and our Clothes Closet is open from 10 AM to 2 PM (Door 3).",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): On Fridays our Food Pantry is open from 10 AM to 3 PM (Door 1) | our Clothes Closet is open from 10 AM to 2 PM (Door 3)",
+   "services": [
+    {
+     "service_type": "delivery_qualifying",
+     "description": "Meeting the needs for the underserved of the Route One Corridors is central to our work as a local church.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "10:00",
+       "closes": "15:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "10:00",
+       "closes": "14:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ],
+     "eligibility": []
+    },
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "walk_up",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-176",
+   "source_url": "https://www.unitedcommunity.org/food/",
+   "organization_name": "United Community",
+   "location_name": "Community Mobile Market - Mount Vernon Woods Elementary School",
+   "address1": "4015 Fielding St",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22309",
+   "lat": 38.743595,
+   "lon": -77.100231,
+   "geocode_source": "existing listing",
+   "phone": "(571) 255-8958",
+   "raw_hours_text": "First Monday of each month, from 4-5pm",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Mount Vernon Woods Elementary School 4015 Fielding St., Alexandria, VA 22309 571.255.8958 First Monday of each month, from 4-5pm",
+   "services": [
+    {
+     "service_type": "mobile_pantry",
+     "description": "In partnership with Capital Area Food Bank (CAFB), these mobile markets deliver healthy groceries and fresh produce to families in a convenient, familiar setting.",
+     "food_types": [
+      "general_groceries"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "16:00",
+       "closes": "17:00",
+       "week_of_month": 1,
+       "appointment_only": false,
+       "notes": null
+      }
+     ],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-177",
+   "source_url": "https://www.unitedcommunity.org/food/",
+   "organization_name": "United Community",
+   "location_name": "Community Mobile Market - Walt Whitman Middle School",
+   "address1": "2500 Parkers Ln",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22306",
+   "lat": 38.739347,
+   "lon": -77.074145,
+   "geocode_source": "existing listing",
+   "phone": "(703) 660-2464",
+   "raw_hours_text": "First Wednesday each month, from 3-4pm",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Walt Whitman Middle School 2500 Parkers Lane, Alexandria, VA 22306 703.660.2464 First Wednesday each month, from 3-4pm",
+   "services": [
+    {
+     "service_type": "mobile_pantry",
+     "description": "In partnership with Capital Area Food Bank (CAFB), these mobile markets deliver healthy groceries and fresh produce to families in a convenient, familiar setting.",
+     "food_types": [
+      "general_groceries"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "15:00",
+       "closes": "16:00",
+       "week_of_month": 1,
+       "appointment_only": false,
+       "notes": null
+      }
+     ],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-178",
+   "source_url": "https://accacares.org/foodpantry/",
+   "organization_name": "Annandale Christian Community for Action (ACCA)",
+   "location_name": "ACCA Food Pantry",
+   "address1": "7200 Columbia Pike",
+   "address2": null,
+   "city": "Annandale",
+   "zip": "22003",
+   "lat": 38.831534,
+   "lon": -77.193751,
+   "geocode_source": "existing listing",
+   "phone": "(703) 222-0880",
+   "raw_hours_text": "Individuals can donate non-perishable food at the pantry on Tuesday-Friday from 1:30-4 pm, except for County Holidays and other scheduled closings.",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): The ACCA food pantry is located at 7200 Columbia Pike (trailer separate from the Child Development Center) in Annandale.",
+   "services": [
+    {
+     "service_type": "delivery_qualifying",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "13:30",
+       "closes": "16:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "13:30",
+       "closes": "16:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "13:30",
+       "closes": "16:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "13:30",
+       "closes": "16:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-108",
+   "source_url": "https://haymarketfoodpantry.org/find-help/",
+   "organization_name": "Haymarket Regional Food Pantry",
+   "location_name": "Haymarket Regional Food Pantry",
+   "address1": "6611 Jefferson St",
+   "address2": null,
+   "city": "Haymarket",
+   "zip": "20169",
+   "lat": 38.812635,
+   "lon": -77.635224,
+   "geocode_source": "existing listing",
+   "phone": null,
+   "raw_hours_text": "Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm\nSat Mornings: By appointment between 9:00 am and 12:00 noon",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): The Haymarket Regional Food Pantry will feed anyone in our service area who comes in need of food. | Make an Appointment: (703) 754-5990 | Appointments are required. | The Haymarket Regional Food Pantry is located: 7669 Limestone Drive, #105 Gainesville, VA 20155 | Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm | Sat Mornings: By appointment between 9:00 am and 12:00 noon",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "The Haymarket Regional Food Pantry will feed anyone in our service area who comes in need of food.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "17:30",
+       "closes": "20:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "17:30",
+       "closes": "20:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "17:30",
+       "closes": "20:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "17:30",
+       "closes": "20:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 5,
+       "opens": "09:00",
+       "closes": "12:00",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-150",
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "organization_name": "ALIVE! with City of Alexandria DCHS",
+   "location_name": "City of Alexandria Department of Community & Human Services (Mark Center)",
+   "address1": "4850 Mark Center Dr",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22311",
+   "lat": 38.830441,
+   "lon": -77.116305,
+   "geocode_source": "existing listing",
+   "phone": null,
+   "raw_hours_text": null,
+   "raw_eligibility_text": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): In partnership with City of Alexandria, Department of Community & Human Services, (4850 Mark Center Dr) at 2 – 3:30 p.m.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [
+      "general_groceries"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "proof_of_address",
+     "status": "required",
+     "details": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+     "values": {}
+    }
+   ],
+   "schedules": []
+  },
+  {
+   "external_id": "site-151",
+   "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+   "organization_name": "ALIVE! with Fairlington United Methodist Church",
+   "location_name": "Fairlington United Methodist Church",
+   "address1": "3900 King St",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22302",
+   "lat": 38.832357,
+   "lon": -77.094718,
+   "geocode_source": "existing listing",
+   "phone": null,
+   "raw_hours_text": null,
+   "raw_eligibility_text": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): In partnership with Fairlington United Methodist Church (3900 King St) at 5 – 6:30 p.m.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [
+      "general_groceries"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "proof_of_address",
+     "status": "required",
+     "details": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
+     "values": {}
+    }
+   ],
+   "schedules": []
+  },
+  {
+   "external_id": "site-155",
+   "source_url": "https://ccda.net/find-help/food/alexandria-food-pantry/#christ-house-evening-meal",
+   "organization_name": "Catholic Charities of the Diocese of Arlington",
+   "location_name": "Christ House Evening Meal",
+   "address1": "131 S West St",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22314",
+   "lat": 38.80568,
+   "lon": -77.05478,
+   "geocode_source": "existing listing",
+   "phone": "(703) 549-8644",
+   "raw_hours_text": "The dinners are currently to-go meals and can be picked up every night, in all weather conditions, from 5 to 5:30 p.m.",
+   "raw_eligibility_text": "Homeless and low-income individuals are welcome to enjoy a nutritious dinner and the companionship of their neighbors at no cost.",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Christ House offers an evening meal every night of the year. | The dinners are currently to-go meals and can be picked up every night, in all weather conditions, from 5 to 5:30 p.m. | Contact 703-549-8644 or ChristHouse@ccda.net",
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": "Christ House offers an evening meal every night of the year. Homeless and low-income individuals are welcome to enjoy a nutritious dinner and the companionship of their neighbors at no cost.",
+     "food_types": [
+      "prepared_meals"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "17:00",
+       "closes": "17:30",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "17:00",
+       "closes": "17:30",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "17:00",
+       "closes": "17:30",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "17:00",
+       "closes": "17:30",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "17:00",
+       "closes": "17:30",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 5,
+       "opens": "17:00",
+       "closes": "17:30",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 6,
+       "opens": "17:00",
+       "closes": "17:30",
+       "week_of_month": null,
+       "appointment_only": false,
+       "notes": null
+      }
+     ],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-184",
+   "source_url": "https://pathforwardva.org/get-help/",
+   "organization_name": "Arlington County Department of Human Services",
+   "location_name": "Arlington Homeless Services Center",
+   "address1": "2020 14th St N",
+   "address2": null,
+   "city": "Arlington",
+   "zip": "22201",
+   "lat": 38.889438,
+   "lon": -77.083208,
+   "geocode_source": "existing listing",
+   "phone": "(703) 228-1300",
+   "raw_hours_text": "Day program hours are Monday – Friday from 8:00am – 4:00pm. Emergency Shelter after 4pm call: 703.228.1010",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Day program hours are Monday – Friday from 8:00am – 4:00pm. | Emergency Shelter after 4pm call: 703.228.1010 | I need shelter | I need clothing | I need medical care | I need a mental health counselor | I need help with a substance use disorder | I need assistance with eviction prevention | I need long term housing",
+   "services": [
+    {
+     "service_type": "shelter",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "08:00",
+     "closes": "16:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "08:00",
+     "closes": "16:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "08:00",
+     "closes": "16:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "08:00",
+     "closes": "16:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "08:00",
+     "closes": "16:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "external_id": "site-263",
+   "source_url": "https://hwnova.org/services/",
+   "organization_name": "Loudoun Community Health Center dba HealthWorks for Northern Virginia",
+   "location_name": "HealthWorks Leesburg Location",
+   "address1": "163 Fort Evans Road NE",
+   "address2": null,
+   "city": "Leesburg",
+   "zip": "20176",
+   "lat": 39.109034,
+   "lon": -77.541621,
+   "geocode_source": "existing listing",
+   "phone": "(703) 443-2000",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "provides medical, dental and behavioral health services to anyone in need, regardless of age or ability to pay, whether they have insurance or not",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Leesburg 163 Fort Evans Road NE Leesburg, VA 20176 | Dental Suite 1st Floor. | HealthWorks for Northern Virginia provides medical, dental and behavioral health services to anyone in need, regardless of age or ability to pay, whether they have insurance or not. | Prescription Assistance Program | Health Insurance Enrollment Assistance",
+   "services": [
+    {
+     "service_type": "health_clinic",
+     "description": "HealthWorks for Northern Virginia provides medical, dental and behavioral health services to anyone in need, regardless of age or ability to pay, whether they have insurance or not.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "reproductive_health",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "not_required",
+     "details": "regardless of age",
+     "values": {}
+    },
+    {
+     "requirement_type": "income",
+     "status": "not_required",
+     "details": "regardless of age or ability to pay",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "whether they have insurance or not",
+     "values": {}
+    }
+   ],
+   "schedules": []
+  },
+  {
+   "external_id": "site-264",
+   "source_url": "https://hwnova.org/services/",
+   "organization_name": "Sterling",
+   "location_name": "HealthWorks Sterling Location",
+   "address1": "21641 Ridgetop Cir",
+   "address2": "#107",
+   "city": "Sterling",
+   "zip": "20166",
+   "lat": 39.025845,
+   "lon": -77.408509,
+   "geocode_source": "existing listing",
+   "phone": "(703) 443-2000",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "provides medical, dental and behavioral health services to anyone in need, regardless of age or ability to pay, whether they have insurance or not",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Sterling 21641 Ridgetop Circle, #107 Sterling, VA 20166 | HealthWorks for Northern Virginia provides medical, dental and behavioral health services to anyone in need, regardless of age or ability to pay, whether they have insurance or not. | Prescription Assistance Program | Health Insurance Enrollment Assistance",
+   "services": [
+    {
+     "service_type": "health_clinic",
+     "description": "HealthWorks for Northern Virginia provides medical, dental and behavioral health services to anyone in need, regardless of age or ability to pay, whether they have insurance or not.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "reproductive_health",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "not_required",
+     "details": "regardless of age",
+     "values": {}
+    },
+    {
+     "requirement_type": "income",
+     "status": "not_required",
+     "details": "regardless of age or ability to pay",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "whether they have insurance or not",
+     "values": {}
+    }
+   ],
+   "schedules": []
+  },
+  {
+   "external_id": "site-284",
+   "source_url": "https://centerfordiscovery.com/locations/fairfax/",
+   "organization_name": "Center for Discovery Fairfax",
+   "location_name": "Center for Discovery Fairfax",
+   "address1": "5343 Summit Drive",
+   "address2": null,
+   "city": "Fairfax",
+   "zip": "22030",
+   "lat": 38.837143,
+   "lon": -77.387056,
+   "geocode_source": "existing listing",
+   "phone": "(855) 818-2029",
+   "raw_hours_text": "Hours 24/7",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Residential Treatment | Hours 24/7 | This adolescent gender-inclusive treatment center provides patients with group therapy, structured and monitored mealtimes, group social events, family therapy and individual therapy | This location provides free online eating disorder support groups. | Center for Discovery Fairfax is a residential eating disorder treatment center",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Center for Discovery Fairfax is a residential eating disorder treatment center that has provided residential and partial hospitalization treatment to patients of all genders ages 10-18. Center for Discovery Fairfax serves Northern Virginia, Washington D.C. and Southern Maryland, including Baltimore.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-288",
+   "source_url": "https://www.drgoldberg.org",
+   "organization_name": "Dr Goldberg and Associates PLLC Vienna Office",
+   "location_name": "Dr Goldberg and Associates PLLC Vienna Office",
+   "address1": "110 Pleasant Street NW",
+   "address2": "Suite D",
+   "city": "Vienna",
+   "zip": "22180",
+   "lat": 38.89857,
+   "lon": -77.270305,
+   "geocode_source": "existing listing",
+   "phone": "(703) 935-0058",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "We accept Anthem, Blue Cross Blue Shield, Cigna, and United Healthcare",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): We provide therapy, medication management, and psychological testing for children, teens, and adults throughout Northern Virginia.",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Providing Psychological Services to residents of Northern Virginia, the District of Columbia and Maryland",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-291",
+   "source_url": "https://connectionshs.com/chantilly",
+   "organization_name": "Connections Chantilly",
+   "location_name": "Connections Chantilly",
+   "address1": "14554 Lee Road",
+   "address2": null,
+   "city": "Chantilly",
+   "zip": "20151",
+   "lat": 38.890662,
+   "lon": -77.454753,
+   "geocode_source": "existing listing",
+   "phone": "(703) 543-9948",
+   "raw_hours_text": "Every day, 24 hours a day, seven days a week.",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Our Chantilly treatment center is open 24/7/365. The center provides care and focused treatment to adults experiencing a mental health crisis in a safe, open, and therapeutic setting. | Every day, 24 hours a day, seven days a week. | 14554 Lee Road | Chantilly, Virginia 20151 | (703) 543-9948",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Our Chantilly treatment center is open 24/7/365. The center provides care and focused treatment to adults experiencing a mental health crisis in a safe, open, and therapeutic setting.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-296",
+   "source_url": "https://www.drgoldberg.org",
+   "organization_name": "Dr Goldberg and Associates PLLC Reston Office",
+   "location_name": "Dr Goldberg and Associates PLLC Reston Office",
+   "address1": "11495 Sunset Hills Road",
+   "address2": "Suite 202",
+   "city": "Reston",
+   "zip": "20190",
+   "lat": 38.951756,
+   "lon": -77.344732,
+   "geocode_source": "existing listing",
+   "phone": "(703) 935-0058",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "We accept Anthem, Blue Cross Blue Shield, Cigna, and United Healthcare",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): We have six locations in Alexandria, McLean, Vienna, Reston, and Sterling.",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Providing Psychological Services to residents of Northern Virginia, the District of Columbia and Maryland",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-297",
+   "source_url": "https://www.sandstonecare.com/locations/reston-rehab-center/",
+   "organization_name": "Sandstone Care Reston",
+   "location_name": "Sandstone Care Reston",
+   "address1": "11415 Isaac Newton Square South",
+   "address2": null,
+   "city": "Reston",
+   "zip": "20190",
+   "lat": 38.951917,
+   "lon": -77.337395,
+   "geocode_source": "existing listing",
+   "phone": "(703) 260-9359",
+   "raw_hours_text": "24 Hours",
+   "raw_eligibility_text": "Ages: Teens and Young Adults",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Sandstone Care Reston Outpatient Center | Address: 11415 Isaac Newton Square S, Reston, VA 20190 | Phone: (703) 260-9359 | Hours: 24 Hours | Levels of Care: Partial Hospitalization (PHP), Intensive Outpatient (IOP), Assessments | Ages: Teens and Young Adults",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "We help teens, young adults, and their families overcome challenges with drugs, alcohol, and addiction in Reston, Virginia.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Ages: Teens and Young Adults",
+     "values": {}
+    }
+   ],
+   "schedules": []
+  },
+  {
+   "external_id": "site-298",
+   "source_url": "https://www.sandstonecare.com/locations/virginia-detox-center/",
+   "organization_name": "Sandstone Care Detox Center",
+   "location_name": "Sandstone Care Detox Center",
+   "address1": "15100 Enterprise Court",
+   "address2": "Suite 300",
+   "city": "Chantilly",
+   "zip": "20151",
+   "lat": 38.90699,
+   "lon": -77.468686,
+   "geocode_source": "existing listing",
+   "phone": "(703) 686-5753",
+   "raw_hours_text": "24 Hours",
+   "raw_eligibility_text": "Our Chantilly Detox location only treats adults and young adults, not adolescents.",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Address: 15100 Enterprise Ct, Suite 300, Chantilly, VA 20151 | Phone: (703) 686-5753 | Hours: 24 Hours | Levels of Care: Detox, Assessments | Our Chantilly Detox location only treats adults and young adults, not adolescents. | We help young adults, adults, and their families overcome challenges with drugs, alcohol, mental health issues, trauma, and addiction in Fairfax County, Virginia.",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "We help young adults, adults, and their families overcome challenges with drugs, alcohol, mental health issues, trauma, and addiction in Fairfax County, Virginia.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-299",
+   "source_url": "https://www.montenido.com/locations/clementine-virginia-fairfax",
+   "organization_name": "Monte Nido Clementine Fairfax",
+   "location_name": "Monte Nido Clementine Fairfax",
+   "address1": "11329 Henderson Road",
+   "address2": null,
+   "city": "Fairfax Station",
+   "zip": "22039",
+   "lat": 38.74027,
+   "lon": -77.338859,
+   "geocode_source": "existing listing",
+   "phone": "(888) 228-1253",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "Our Residential program is for medically stable clients who need a highly structured multidisciplinary care and recovery program.",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Location 11329 Henderson Rd, Fairfax Station, VA, 22039 | Monte Nido Clementine Fairfax (now open to all genders!) offers residential eating disorder treatment for adolescents ages 11-17. | Our Residential program is for medically stable clients who need a highly structured multidisciplinary care and recovery program. | With 24/7 nursing and dedicated times with medical providers, counselors, and dietitians, Residential Living provides the highest level of care outside of a clinical setting. | O",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Monte Nido Clementine Fairfax (now open to all genders!) offers residential eating disorder treatment for adolescents ages 11-17.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-303",
+   "source_url": "https://www.drgoldberg.org",
+   "organization_name": "Dr Goldberg and Associates PLLC McLean Office",
+   "location_name": "Dr Goldberg and Associates PLLC McLean Office",
+   "address1": "1749 Old Meadow Road",
+   "address2": "Suite 205",
+   "city": "Mc Lean",
+   "zip": "22102",
+   "lat": 38.921998,
+   "lon": -77.210749,
+   "geocode_source": "existing listing",
+   "phone": "(703) 935-0058",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "We accept Anthem, Blue Cross Blue Shield, Cigna, and United Healthcare",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): We have six locations in Alexandria, McLean, Vienna, Reston, and Sterling.",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Providing Psychological Services to residents of Northern Virginia, the District of Columbia and Maryland",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-309",
+   "source_url": "https://www.sandstonecare.com/locations/alexandria-treatment-center/",
+   "organization_name": "Sandstone Care Alexandria",
+   "location_name": "Sandstone Care Alexandria",
+   "address1": "5400 Shawnee Road",
+   "address2": "Suite 101",
+   "city": "Alexandria",
+   "zip": "22312",
+   "lat": 38.805789,
+   "lon": -77.167653,
+   "geocode_source": "existing listing",
+   "phone": "(571) 556-7505",
+   "raw_hours_text": "24 Hours",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): We help teens, young adults, and their families overcome challenges with drugs, alcohol, and addiction in Alexandria, Virginia. | Address: 5400 Shawnee Rd Suite #101, Alexandria, VA, 22312 | Phone: (571) 556-7505 | Hours: 24 Hours | Levels of Care: Partial Hospitalization (PHP), Intensive Outpatient (IOP), Assessments | Our Teen & Young Adult IOP, or Intensive Outpatient Program, consists of 3-4 days of weekly programming that treats mental health challenges such as depression, trauma, anxiety, ",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "We help teens, young adults, and their families overcome challenges with drugs, alcohol, and addiction in Alexandria, Virginia.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-310",
+   "source_url": "https://www.nvfs.org/multicultural",
+   "organization_name": "Northern Virginia Family Services Multicultural Center",
+   "location_name": "Northern Virginia Family Services Multicultural Center",
+   "address1": "6400 Arlington Boulevard",
+   "address2": "Suite 110",
+   "city": "Falls Church",
+   "zip": "22042",
+   "lat": 38.872807,
+   "lon": -77.1602,
+   "geocode_source": "existing listing",
+   "phone": "(571) 748-2818",
+   "raw_hours_text": "Monday – Friday 9:00 AM – 5:00 PM",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Trauma-informed care and case management for people rebuilding their lives in the United States. | 6400 Arlington Blvd., Suite 110, Falls Church, VA 22042 | Office hours: Monday – Friday 9:00 AM – 5:00 PM | Comprehensive, free services for survivors of torture including mental health care, medical care, legal aid, and social services | Professional counseling, advocacy, and case management for immigrants who are experiencing, or are at risk of experiencing, domestic violence or sexual assault. |",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Trauma-informed care and case management for people rebuilding their lives in the United States.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "09:00",
+     "closes": "17:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "09:00",
+     "closes": "17:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "17:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "09:00",
+     "closes": "17:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "09:00",
+     "closes": "17:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "external_id": "site-312",
+   "source_url": "https://www.drgoldberg.org",
+   "organization_name": "Dr Goldberg and Associates PLLC Stevenson Alexandria Office",
+   "location_name": "Dr Goldberg and Associates PLLC Stevenson Alexandria Office",
+   "address1": "6300 Stevenson Avenue",
+   "address2": "Suite B",
+   "city": "Alexandria",
+   "zip": "22304",
+   "lat": 38.812556,
+   "lon": -77.140187,
+   "geocode_source": "existing listing",
+   "phone": "(703) 935-0058",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "We accept Anthem, Blue Cross Blue Shield, Cigna, and United Healthcare",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): We have six locations in Alexandria, McLean, Vienna, Reston, and Sterling.",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Providing Psychological Services to residents of Northern Virginia, the District of Columbia and Maryland",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-318",
+   "source_url": "https://centerfordiscovery.com/locations/mclean/",
+   "organization_name": "Center for Discovery McLean",
+   "location_name": "Center for Discovery McLean",
+   "address1": "5949 Oakdale Road",
+   "address2": null,
+   "city": "McLean",
+   "zip": "22101",
+   "lat": 38.92613,
+   "lon": -77.138877,
+   "geocode_source": "existing listing",
+   "phone": "(866) 944-9796",
+   "raw_hours_text": "Hours 24/7",
+   "raw_eligibility_text": "offers care to female and non-binary (regardless of sex assigned at birth) patients age 18 years and older",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): CENTER FOR DISCOVERY 5949 Oakdale Road McLean, VA 22101 PH 800.760.3934 Hours 24/7 | Center for Discovery McLean is a high level of care eating disorder treatment facility that offers care to female and non-binary (regardless of sex assigned at birth) patients age 18 years and older. | Residential Treatment | Dialectal behavioral therapy (DBT) with skills groups, art therapy and yoga therapy are also offered | individual dietary sessions twice a week | weekly food exposure groups | This location",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Center for Discovery McLean is a high level of care eating disorder treatment facility that offers care to female and non-binary (regardless of sex assigned at birth) patients age 18 years and older.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "age 18 years and older",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "offers care to female and non-binary (regardless of sex assigned at birth) patients",
+     "values": {}
+    }
+   ],
+   "schedules": []
+  },
+  {
+   "external_id": "site-320",
+   "source_url": "https://www.drgoldberg.org",
+   "organization_name": "Dr Goldberg and Associates LLC Sterling Office",
+   "location_name": "Dr Goldberg and Associates LLC Sterling Office",
+   "address1": "46090 Lake Center Plaza",
+   "address2": "Suite 101",
+   "city": "Sterling",
+   "zip": "20165",
+   "lat": 39.033924,
+   "lon": -77.405022,
+   "geocode_source": "existing listing",
+   "phone": "(703) 935-0058",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "We accept Anthem, Blue Cross Blue Shield, Cigna, and United Healthcare",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): We have six locations in Alexandria, McLean, Vienna, Reston, and Sterling.",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Providing Psychological Services to residents of Northern Virginia, the District of Columbia and Maryland",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-323",
+   "source_url": "https://natcaptreatment.org/programs/demeter-house",
+   "organization_name": "National Capital Trt and Recovery Phoenix Prog Mens Residential Center",
+   "location_name": "National Capital Treatment and Recover Phase II Mens Residential",
+   "address1": "521 North Quincy Street",
+   "address2": null,
+   "city": "Arlington",
+   "zip": "22203",
+   "lat": 38.876978,
+   "lon": -77.107615,
+   "geocode_source": "existing listing",
+   "phone": "(703) 841-0703",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "for adult women",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Demeter House offers clinically managed intensive residential treatment services for adult women. | Medication Assisted Treatment | Individual Counseling | Group Counseling | Additional Medical and Mental Health Care as Needed | Schedule a confidential assessment Call us at (703) 841-0703, option 1",
+   "services": [
+    {
+     "service_type": "substance_use_treatment",
+     "description": "Demeter House offers clinically managed intensive residential treatment services for adult women. Our female-only rehab center provides women a safe, supported, and comfortable environment.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "adult women",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "for adult women",
+     "values": {}
+    }
+   ],
+   "schedules": []
+  },
+  {
+   "external_id": "site-327",
+   "source_url": "https://connectionshs.com/woodbridge",
+   "organization_name": "Connections Health Solutions",
+   "location_name": "Connections Health Solutions",
+   "address1": "14011 Worth Avenue",
+   "address2": null,
+   "city": "Woodbridge",
+   "zip": "22192",
+   "lat": 38.647686,
+   "lon": -77.293977,
+   "geocode_source": "existing listing",
+   "phone": "(703) 229-0066",
+   "raw_hours_text": "open 24/7/365",
+   "raw_eligibility_text": "adults and youth ages 12 and older who are experiencing a crisis",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Crisis receiving center | Walk-in urgent care | Crisis stabilization | Youth services (12+) | (703) 229-0066 | 14011 Worth Avenue Woodbridge, VA 22192 | Connections Prince William County crisis receiving center is open 24/7/365 and provides a range of services for adults and youth ages 12 and older who are experiencing a crisis. | The center offers a range of services for individuals ages 12+ in crisis, including walk-in mental health services and stabilization units.",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Connections Prince William County crisis receiving center is open 24/7/365 and provides a range of services for adults and youth ages 12 and older who are experiencing a crisis.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "adults and youth ages 12 and older",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "required",
+     "details": "who are experiencing a crisis",
+     "values": {}
+    }
+   ],
+   "schedules": []
+  },
+  {
+   "external_id": "site-332",
+   "source_url": "https://www.washingtonbehavioralhealth.com",
+   "organization_name": "Washington Behavioral Health",
+   "location_name": "Washington Behavioral Health",
+   "address1": "1954 Opitz Boulevard",
+   "address2": "Suite 007",
+   "city": "Woodbridge",
+   "zip": "22191",
+   "lat": 38.635246,
+   "lon": -77.274659,
+   "geocode_source": "existing listing",
+   "phone": "(703) 492-2924",
+   "raw_hours_text": "Monday to Friday: 9:00 am - 5:00 pm",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): 1954 Opitz Blvd Suite #007 Woodbridge VA, 22191 | Monday to Friday: 9:00 am - 5:00 pm | Washington Behavioral Health is an outpatient psychiatric practice serving Woodbridge and the surrounding Northern Virginia area.",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Washington Behavioral Health is an outpatient psychiatric practice serving Woodbridge and the surrounding Northern Virginia area.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "09:00",
+     "closes": "17:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "09:00",
+     "closes": "17:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "17:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "09:00",
+     "closes": "17:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "09:00",
+     "closes": "17:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "external_id": "site-336",
+   "source_url": "https://natcaptreatment.org",
+   "organization_name": "National Capital Treatment and Recover Recovery Haven",
+   "location_name": "National Capital Treatment and Recover Recovery Haven",
+   "address1": "120 South Payne Street",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22314",
+   "lat": 38.8052,
+   "lon": -77.053433,
+   "geocode_source": "existing listing",
+   "phone": "(703) 841-0703",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "Low Intensity Residential Program for Women",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Recovery Haven Low Intensity Residential Program for Women",
+   "services": [
+    {
+     "service_type": "substance_use_treatment",
+     "description": "Low Intensity Residential Program for Women",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-338",
+   "source_url": "https://www.drgoldberg.org",
+   "organization_name": "Dr Goldberg and Associates PLLC Old Town Alexandria Office",
+   "location_name": "Dr Goldberg and Associates PLLC Old Town Alexandria Office",
+   "address1": "228 South Washington Street",
+   "address2": "Suite 310",
+   "city": "Alexandria",
+   "zip": "22314",
+   "lat": 38.80299,
+   "lon": -77.047136,
+   "geocode_source": "existing listing",
+   "phone": "(703) 935-0058",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "We accept Anthem, Blue Cross Blue Shield, Cigna, and United Healthcare",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): We have six locations in Alexandria, McLean, Vienna, Reston, and Sterling.",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Providing Psychological Services to residents of Northern Virginia, the District of Columbia and Maryland",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "substance_use_treatment",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-339",
+   "source_url": "https://centerfordiscovery.com/locations/alexandria-outpatient/",
+   "organization_name": "Center for Discovery Alexandria",
+   "location_name": "Center for Discovery Alexandria",
+   "address1": "209 Madison Street",
+   "address2": "Suite 3-B",
+   "city": "Alexandria",
+   "zip": "22306",
+   "lat": 38.812734,
+   "lon": -77.040417,
+   "geocode_source": "existing listing",
+   "phone": "(855) 818-2029",
+   "raw_hours_text": "M-F 9:00am to 5:00pm",
+   "raw_eligibility_text": "Ages 10+",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Center for Discovery in Alexandria, Virginia, is an outpatient treatment center that opened in 2017 and treats patients of all ages who are struggling with an eating disorder or with an eating disorder in the presence of a mental health disorder, otherwise known as a co-occurring disorder. | Ages 10+",
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Center for Discovery in Alexandria, Virginia, is an outpatient treatment center that opened in 2017 and treats patients of all ages who are struggling with an eating disorder or with an eating disorder in the presence of a mental health disorder, otherwise known as a co-occurring disorder.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Ages 10+",
+     "values": {}
+    }
+   ],
+   "schedules": []
+  },
+  {
+   "external_id": "site-347",
+   "source_url": "https://hsfc.org/about/hours-and-directions/",
+   "organization_name": "Humane Society of Fairfax County",
+   "location_name": "Humane Society of Fairfax County main office",
+   "address1": "4057 Chain Bridge Road",
+   "address2": null,
+   "city": "Fairfax",
+   "zip": "22030",
+   "lat": 38.844726,
+   "lon": -77.307395,
+   "geocode_source": "existing listing",
+   "phone": "(703) 385-7387",
+   "raw_hours_text": "Monday , Wednesday, Thursday 10 am to 4 pm Saturday closed Sunday Closed Major Holidays Closed",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Our main administrative office also houses adoptable cats, rabbits, small animals and birds.",
+   "services": [
+    {
+     "service_type": "pet_food",
+     "description": "Our main administrative office also houses adoptable cats, rabbits, small animals and birds.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "pet_supplies",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-355",
+   "source_url": "https://www.tolministries.org/branches/food/",
+   "organization_name": "Tree of Life Ministries",
+   "location_name": "Tree of Life Western Loudoun Pantry",
+   "address1": "115 East Main Street",
+   "address2": null,
+   "city": "Purcellville",
+   "zip": "20132",
+   "lat": 39.136771,
+   "lon": -77.714537,
+   "geocode_source": "existing listing",
+   "phone": "(540) 441-7920",
+   "raw_hours_text": "Join us every THURSDAY evening for a sit-down FREE MEAL. We are on site serving meals starting at 5:30 pm until supplies last.",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Purcellville Center, 115 East Main Street, Purcellville, VA 20132 | Join us every THURSDAY evening for a sit-down FREE MEAL. | We are on site serving meals starting at 5:30 pm until supplies last.",
+   "services": [
+    {
+     "service_type": "home_delivery",
+     "description": null,
+     "food_types": [
+      "community_meals"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [
+      "community_meals"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-357",
+   "source_url": "https://www.tolministries.org/branches/food/",
+   "organization_name": "Tree of Life Ministries",
+   "location_name": "Crossroads Baptist Church (Tree of Life Community Dinner)",
+   "address1": "850 Edwards Ferry Rd NE",
+   "address2": null,
+   "city": "Leesburg",
+   "zip": "20176",
+   "lat": 39.113656,
+   "lon": -77.543679,
+   "geocode_source": "existing listing",
+   "phone": "(540) 441-7920",
+   "raw_hours_text": "Join us every TUESDAY evening for a sit down FREE MEAL. We are on site serving meals starting at 6:00PM until supplies last.",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Crossroads Baptist Church, 850 Edwards Ferry Rd NE, Leesburg, VA 20176 | Join us every TUESDAY evening for a sit down FREE MEAL. | We are on site serving meals starting at 6:00PM until supplies last.",
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": null,
+     "food_types": [
+      "community_meals"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-362",
+   "source_url": "https://www.roundhillumc.org/food-pantry",
+   "organization_name": "Round Hill United Methodist Church",
+   "location_name": "Round Hill UMC Food Pantry and Blessings Box",
+   "address1": "11 W. Loudoun Street",
+   "address2": null,
+   "city": "Round Hill",
+   "zip": "20141",
+   "lat": 39.132327,
+   "lon": -77.770717,
+   "geocode_source": "existing listing",
+   "phone": "(540) 338-4445",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "We have a list of regular clients who receive a monthly order form by email or text, and then return the form the week before our monthly distribution, which is normally the third full weekend of every month.",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Volunteers take orders in advance from families who need food. | The food is packed in bags and boxes, then delivered to the vehicle in the church parking lot. | We also have a Blessings Box which is refreshed daily with nonperishable items providing needed food available any time of day. | Round Hill UMC Food Pantry and Blessings Box 11 W. Loudoun Street, Round Hill VA 20141. | They choose a variety of items – canned goods, pasta, rice, beans, protein, fresh produce, dairy products",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [
+      "pantry_staples",
+      "fresh_vegetables",
+      "dairy"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "registration",
+     "status": "required",
+     "details": "We have a list of regular clients who receive a monthly order form by email or text, and then return the form the week before our monthly distribution",
+     "values": {}
+    }
+   ],
+   "schedules": []
+  },
+  {
+   "external_id": "site-404",
+   "source_url": "https://www.cathedralstm.org/ministries/english-second-language-esl/",
+   "organization_name": "Cathedral of Saint Thomas More",
+   "location_name": "Cathedral of Saint Thomas More – ESL Classes (School Cafeteria)",
+   "address1": "3901 Cathedral Lane",
+   "address2": null,
+   "city": "Arlington",
+   "zip": "22203",
+   "lat": 38.870718,
+   "lon": -77.102704,
+   "geocode_source": "existing listing",
+   "phone": "(703) 525-1300",
+   "raw_hours_text": "These free classes meet Wednesdays from 6:50 to 7:50 pm (during Religious Education classes) in the School Cafeteria.",
+   "raw_eligibility_text": "Even if you did not join last year or can attend classes only occasionally, we welcome all students of all levels, from beginners to fluent speakers.",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): These free classes meet Wednesdays from 6:50 to 7:50 pm (during Religious Education classes) in the School Cafeteria. | Even if you did not join last year or can attend classes only occasionally, we welcome all students of all levels, from beginners to fluent speakers. | The ESL classes are volunteer-run and do not require students to purchase books.",
+   "services": [
+    {
+     "service_type": "esl_classes",
+     "description": "ESL classes at the Cathedral of Saint Thomas More!",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "18:50",
+     "closes": "19:50",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "external_id": "site-413",
+   "source_url": "https://englishempowermentcenter.org/wp-content/uploads/2026/07/Drew-CC-flyer-fall-2026.pdf",
+   "organization_name": "English Empowerment Center (formerly Literacy Council of Northern Virginia)",
+   "location_name": "English Empowerment Center – Charles Drew Community Center",
+   "address1": "3500 23rd St S",
+   "address2": null,
+   "city": "Arlington",
+   "zip": "22206",
+   "lat": 38.849034,
+   "lon": -77.085745,
+   "geocode_source": "existing listing",
+   "phone": "(703) 237-0866",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "English Classes for Beginning Level Adults",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): English Classes for Beginning Level Adults | Drew Community Center | 3500 23rd St S, Arlington, VA 22206 | Tuesday & Thursday | 6:30pm-8:30pm | September 22-December 10 | Learn English for work, family, and community, and improve listening, speaking, reading, and writing skills!",
+   "services": [
+    {
+     "service_type": "esl_classes",
+     "description": "Learn English for work, family, and community, and improve listening, speaking, reading, and writing skills!",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-421",
+   "source_url": "https://www.ourladyqueenofpeace.org/matthew-25.html",
+   "organization_name": "Our Lady Queen of Peace Catholic Church",
+   "location_name": "Matthew 25 Bazaar Free Store",
+   "address1": "2700 South 19th Street",
+   "address2": null,
+   "city": "Arlington",
+   "zip": "22204",
+   "lat": 38.854391,
+   "lon": -77.082884,
+   "geocode_source": "existing listing",
+   "phone": "(703) 979-5580",
+   "raw_hours_text": "Wednesdays: 9:00 AM to 12:00 Noon Saturdays: 9:00 AM to 12:00 Noon",
+   "raw_eligibility_text": "to those in need at no charge",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): We offer gently used clothing, shoes, and small household goods, among other items, to those in need at no charge. | Wednesdays:  9:00 AM to 12:00 Noon | Saturdays:       9:00 AM to 12:00 Noon | Drop-off donations to building #4 the Ministry Center.",
+   "services": [
+    {
+     "service_type": "clothing",
+     "description": "We offer gently used clothing, shoes, and small household goods, among other items, to those in need at no charge.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "household_essentials",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "12:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "12:00",
+     "week_of_month": null,
+     "appointment_only": false,
+     "notes": null
+    }
+   ]
+  },
+  {
+   "external_id": "site-484",
+   "source_url": "https://hwnova.org/services/",
+   "organization_name": "Loudoun Community Health Center dba HealthWorks for Northern Virginia (Herndon)",
+   "location_name": "Loudoun Community Health Center dba HealthWorks for Northern Virginia (Herndon)",
+   "address1": "1141 Elden St, Suite 300",
+   "address2": null,
+   "city": "Herndon",
+   "zip": "20170",
+   "lat": 38.964325,
+   "lon": -77.396837,
+   "geocode_source": "existing listing",
+   "phone": "(703) 443-2000",
+   "raw_hours_text": null,
+   "raw_eligibility_text": "provides medical, dental and behavioral health services to anyone in need, regardless of age or ability to pay, whether they have insurance or not",
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Herndon 1141 Elden Street, Third Floor Herndon, VA 20170 | Dental Suite 218 | HealthWorks for Northern Virginia provides medical, dental and behavioral health services to anyone in need, regardless of age or ability to pay, whether they have insurance or not. | Prescription Assistance Program | Health Insurance Enrollment Assistance",
+   "services": [
+    {
+     "service_type": "health_clinic",
+     "description": "HealthWorks for Northern Virginia provides medical, dental and behavioral health services to anyone in need, regardless of age or ability to pay, whether they have insurance or not.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "age",
+     "status": "not_required",
+     "details": "regardless of age",
+     "values": {}
+    },
+    {
+     "requirement_type": "income",
+     "status": "not_required",
+     "details": "regardless of age or ability to pay",
+     "values": {}
+    },
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "whether they have insurance or not",
+     "values": {}
+    }
+   ],
+   "schedules": []
+  },
+  {
+   "external_id": "site-495",
+   "source_url": "https://www.uvahealth.com/locations/Behavioral-Health-Manassas-LOC0000234841",
+   "organization_name": "UVA Health System Prince William Medical Center",
+   "location_name": "UVA Health System Prince William Medical Center",
+   "address1": "8644 Sudley Road",
+   "address2": "Suite 300",
+   "city": "Manassas",
+   "zip": "20110",
+   "lat": 38.767612,
+   "lon": -77.48873,
+   "geocode_source": "existing listing",
+   "phone": "(703) 369-8404",
+   "raw_hours_text": "Today's Hours 8:00 AM - 4:30 PM",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): At UVA Health Behavioral Health Manassas, we offer expert behavioral health services for adults. | Bipolar Disorder | Depression | Anxiety | Attention Deficit Hyperactivity Disorder | Attention Deficit Disorder | Autism Spectrum Disorders | Panic Attacks | Obsessive Compulsive Disorder | Post-traumatic Stress Disorder",
+   "services": [
+    {
+     "service_type": "substance_use_treatment",
+     "description": "At UVA Health Behavioral Health Manassas, we offer expert behavioral health services for adults.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-512",
+   "source_url": "https://findfreedomtoday.org/",
+   "organization_name": "Freedom Community Pantry",
+   "location_name": "Freedom Community Pantry (Loch Lomond Freedom Center warehouse)",
+   "address1": "9325 Mace St",
+   "address2": null,
+   "city": "Manassas Park",
+   "zip": null,
+   "lat": 38.781376,
+   "lon": -77.47808,
+   "geocode_source": "existing listing",
+   "phone": null,
+   "raw_hours_text": "We serve hundreds of people every other Monday!",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Visit us at 9325 Mace St, Manassas Park, VA | We serve hundreds of people every other Monday! | Freedom Community Pantry distributes food, clothing, and household items to neighbors from our warehouse at Loch Lomond Freedom Center.",
+   "services": [
+    {
+     "service_type": "clothing",
+     "description": "Freedom Community Pantry distributes food, clothing, and household items to neighbors from our warehouse at Loch Lomond Freedom Center.",
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "household_essentials",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    },
+    {
+     "service_type": "pantry_pickup",
+     "description": null,
+     "food_types": [],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-513",
+   "source_url": "https://www.tolministries.org/branches/food/",
+   "organization_name": "Tree of Life Ministries",
+   "location_name": "Tree of Life Purcellville Center (Community Dinner)",
+   "address1": "115 East Main Street",
+   "address2": null,
+   "city": "Purcellville",
+   "zip": "20132",
+   "lat": 39.136771,
+   "lon": -77.714537,
+   "geocode_source": "existing listing",
+   "phone": "(540) 441-7920",
+   "raw_hours_text": "Join us every THURSDAY evening for a sit-down FREE MEAL. We are on site serving meals starting at 5:30 pm until supplies last.",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Purcellville Center, 115 East Main Street, Purcellville, VA 20132 | Join us every THURSDAY evening for a sit-down FREE MEAL. | We are on site serving meals starting at 5:30 pm until supplies last.",
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": null,
+     "food_types": [
+      "community_meals"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  },
+  {
+   "external_id": "site-514",
+   "source_url": "https://www.tolministries.org/branches/food/",
+   "organization_name": "Tree of Life Ministries",
+   "location_name": "Sterling Community Center (Tree of Life Community Dinner)",
+   "address1": "120 Enterprise St",
+   "address2": null,
+   "city": "Sterling",
+   "zip": "20164",
+   "lat": 38.999163,
+   "lon": -77.402759,
+   "geocode_source": "existing listing",
+   "phone": "(540) 441-7920",
+   "raw_hours_text": "Join us every TUESDAY evening for a sit down FREE MEAL. We are on site serving meals starting at 6:30PM until supplies last.",
+   "raw_eligibility_text": null,
+   "notes": "From the provider's website (AI-extracted, verbatim-checked): Sterling Community Center, 120 Enterprise St, Sterling, 20164 | Join us every TUESDAY evening for a sit down FREE MEAL. | We are on site serving meals starting at 6:30PM until supplies last.",
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": null,
+     "food_types": [
+      "community_meals"
+     ],
+     "offering_status": "unconfirmed",
+     "frequency": null,
+     "appointment_required": "unknown",
+     "registration_required": "unknown",
+     "schedules": [],
+     "eligibility": []
+    }
+   ],
+   "eligibility": [],
+   "schedules": []
+  }
+ ]
+}

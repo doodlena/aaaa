@@ -1802,5 +1802,236 @@
    "hrsa-health-centers",
    "6de52720913c87de"
   ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-40"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "19652-MOMK-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-40"
+  ],
+  "decision": "distinct",
+  "target": [
+   "fairfax-food-access",
+   "de222610-c45b-4d15-8370-45f24afe4cdb"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-15"
+  ],
+  "decision": "merged",
+  "target": [
+   "cafb-get-help",
+   "22207-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-15"
+  ],
+  "decision": "distinct",
+  "target": [
+   "fairfax-food-access",
+   "c30bf32e-7ab2-407a-8f11-fe29e2fe01f6"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-495"
+  ],
+  "decision": "merged",
+  "target": [
+   "samhsa-treatment",
+   "1385c9bcbd75fc59"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-495"
+  ],
+  "decision": "distinct",
+  "target": [
+   "pwc-cmn-support-services",
+   "d6ab7274-3e94-4938-b014-1aceba34125b"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-495"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "b29d43558604e1f3"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-495"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "a2161032d1644b7c"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-512"
+  ],
+  "decision": "merged",
+  "target": [
+   "nova-food-research",
+   "nova-food-freedom-community-pantry"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-512"
+  ],
+  "decision": "distinct",
+  "target": [
+   "cafb-get-help",
+   "19757-PART-01"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-513"
+  ],
+  "decision": "merged",
+  "target": [
+   "nova-food-research",
+   "nova-food-tol-dinner-purcellville"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-513"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nova-food-research",
+   "nova-food-tol-western-loudoun-pantry"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-514"
+  ],
+  "decision": "merged",
+  "target": [
+   "nova-food-research",
+   "nova-food-tol-dinner-sterling"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-514"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nova-pet-support",
+   "nova-pet-loudoun-mobile-pet-pantry-sterling-cc"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-150"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-web-research",
+   "va08-alive-dchs-mark-center"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-150"
+  ],
+  "decision": "distinct",
+  "target": [
+   "samhsa-treatment",
+   "8a6388d253e6f055"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-150"
+  ],
+  "decision": "distinct",
+  "target": [
+   "va08-support-services",
+   "va08svc-alexandria-health-department-del-pepper"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-155"
+  ],
+  "decision": "merged",
+  "target": [
+   "va08-web-research",
+   "va08-christ-house-evening-meal"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-155"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nvrc-homeless-shelters",
+   "nvrc-26"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-355"
+  ],
+  "decision": "merged",
+  "target": [
+   "nova-food-research",
+   "nova-food-tol-western-loudoun-pantry"
+  ]
+ },
+ {
+  "record": [
+   "ai-website-enrichment",
+   "site-355"
+  ],
+  "decision": "distinct",
+  "target": [
+   "nova-food-research",
+   "nova-food-tol-dinner-purcellville"
+  ]
  }
 ]

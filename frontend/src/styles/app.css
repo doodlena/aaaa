@@ -3873,3 +3873,18 @@ form.is-ai-drafted select {
 .map-popup__next { font-weight: 600; }
 .map-popup__actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .map-popup .maplibregl-popup-close-button { font-size: 20px; width: 32px; height: 32px; }
+
+/* Provider sign-in at the top of the sign-in/register forms; Google gets its standard white button with the "G". */
+.oauth--top { margin: 0 0 var(--sp-4); padding: 0; border-top: 0; }
+.oauth__google {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  width: 100%; max-width: 400px; min-height: 48px; padding: 0 16px;
+  background: #fff; color: #1f1f1f; border: 1px solid #747775; border-radius: 4px;
+  font: 500 1rem/1 Roboto, Arial, system-ui, sans-serif; cursor: pointer;
+}
+.oauth__google:hover { background: #f8faff; box-shadow: 0 1px 3px rgba(60, 64, 67, .3); }
+.oauth__google:focus-visible { outline: 3px solid var(--focus, #1a73e8); outline-offset: 2px; }
+.oauth__google:disabled { opacity: .6; cursor: progress; }
+.oauth__logo { flex: none; }
+.oauth__or { display: flex; align-items: center; gap: var(--sp-3); max-width: 400px; margin: var(--sp-4) 0 0; color: var(--ink-soft); }
+.oauth__or::before, .oauth__or::after { content: ""; flex: 1; border-top: 1px solid var(--line); }

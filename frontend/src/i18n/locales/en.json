@@ -549,7 +549,8 @@
     "oauthCancelled": "Sign-in was cancelled.",
     "oauthAccountExists": "An account with this email already exists. Sign in with your password, then connect the provider from your account page.",
     "oauthLinkConflict": "That provider account is already connected to a different account here.",
-    "oauthBackToSignIn": "Back to sign in"
+    "oauthBackToSignIn": "Back to sign in",
+    "or": "or"
   },
   "account": {
     "title": "Your account",

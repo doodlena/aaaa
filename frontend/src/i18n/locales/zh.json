@@ -549,7 +549,8 @@
     "oauthCancelled": "登录已取消。",
     "oauthAccountExists": "这个电子邮件已有账户。请用密码登录，然后在账户页面连接该提供方。",
     "oauthLinkConflict": "该提供方账户已连接到这里的另一个账户。",
-    "oauthBackToSignIn": "返回登录"
+    "oauthBackToSignIn": "返回登录",
+    "or": "或"
   },
   "account": {
     "title": "您的账户",
