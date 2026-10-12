@@ -98,6 +98,9 @@ do not carry it. `data/snapshots/` has not been re-exported for this source.
 - The congressional-district view was removed: no `area` search parameter, `/api/coverage-areas` endpoint or
   `coverage_areas` table (migration `0007`). Source ids, data files and research logs keep their `va08` names because
   imported records reference them. The default search radius is 10 miles (frontend and API).
+- The staff portal is labelled "For services" and serves every kind of provider. `/api/provider/me` reports
+  `offers_food` per listing; when false the portal hides the food-only controls ("Out of food", shelf items, event food
+  offerings). The URL is still `/pantry`, and the surplus board remains food-only.
 - No automated accessibility audit (axe) has been run. WCAG practices were applied and checked by hand.
 - Development environment notes: the Homebrew `node` 26.5 binary is broken (missing `libsimdjson`), so `/usr/local/bin`
   node 22 was used, with `npm_config_cache` pointed at a writable directory.

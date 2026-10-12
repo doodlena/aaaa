@@ -131,3 +131,10 @@ def test_schedule_parser_real_world_patterns():
 
 def test_phone_with_extra_text():
     assert normalize_phone("703-441-8606 | Home delivery enrollment: 703-441-8606 ext. 288") == "(703) 441-8606"
+
+
+def test_database_url_from_managed_host_uses_psycopg3():
+    from app.config import Settings
+
+    for given in ("postgres://u:p@db.example/x", "postgresql://u:p@db.example/x", "postgresql+psycopg://u:p@db.example/x"):
+        assert Settings(database_url=given).database_url == "postgresql+psycopg://u:p@db.example/x"

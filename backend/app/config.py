@@ -2,6 +2,7 @@
 from functools import lru_cache
 from pathlib import Path
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -69,6 +70,15 @@ class Settings(BaseSettings):
     oidc_client_secret: str | None = None
     oidc_provider_name: str = ""  # shown on the button, e.g. "Google"; a generic label is used when empty
     oidc_redirect_url: str | None = None  # defaults to <first CORS origin>/auth/callback; must be registered with the provider
+
+    @field_validator("database_url")
+    @classmethod
+    def _use_psycopg3(cls, v: str) -> str:
+        # Managed hosts (Render, Heroku, ...) hand out postgres:// or postgresql:// URLs; only psycopg 3 is installed.
+        for prefix in ("postgres://", "postgresql://"):
+            if v.startswith(prefix):
+                return "postgresql+psycopg://" + v[len(prefix):]
+        return v
 
 
 @lru_cache

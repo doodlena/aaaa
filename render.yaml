@@ -1,0 +1,32 @@
+# Render Blueprint: the API (Docker) and its PostGIS database. The web app is deployed on Vercel (frontend/vercel.json)
+# and proxies /api to this service, so the browser stays same-origin and the session cookies keep working.
+# Free plans: the API sleeps after 15 idle minutes, and a free Render database is deleted 30 days after creation.
+services:
+  - type: web
+    name: lantern-api
+    runtime: docker
+    plan: free
+    region: virginia
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    dockerCommand: sh render-start.sh
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit  # every push to the linked branch redeploys
+    buildFilter:
+      paths: [backend/**, config/**, data/**, render.yaml]
+    envVars:
+      - key: FOODACCESS_DATABASE_URL
+        fromDatabase: {name: lantern-db, property: connectionString}
+      - key: FOODACCESS_ENVIRONMENT
+        value: production
+      - key: FOODACCESS_COOKIE_SECURE
+        value: "true"
+      - key: FOODACCESS_SHOW_SYNTHETIC
+        value: "false"
+
+databases:
+  - name: lantern-db
+    plan: free
+    region: virginia
+    postgresMajorVersion: "17"
+    databaseName: foodaccess
