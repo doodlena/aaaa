@@ -6,7 +6,15 @@ import { createSelectionStore, useSelection } from '../state/selection';
 import { searchResponse, summary } from '../test/utils';
 
 // ---- maplibre mock: records camera calls and lets the test fire marker clicks ----
-const { FakeMap, FakeMarker, FakeBounds, mapInstances } = vi.hoisted(() => {
+const { FakeMap, FakeMarker, FakeBounds, FakePopup, mapInstances } = vi.hoisted(() => {
+  class FakePopup {
+    static opened: HTMLElement[] = [];
+    setLngLat() { return this; }
+    setDOMContent(el: HTMLElement) { FakePopup.opened.push(el); return this; }
+    addTo() { return this; }
+    remove() { return this; }
+  }
+  
 const mapInstances: InstanceType<typeof FakeMap>[] = [];
   class FakeMap {
   handlers: Record<string, ((e?: unknown) => void)[]> = {};
@@ -72,10 +80,10 @@ const mapInstances: InstanceType<typeof FakeMap>[] = [];
     return this;
   }
 }
-  return { FakeMap, FakeMarker, FakeBounds, mapInstances };
+  return { FakeMap, FakeMarker, FakeBounds, FakePopup, mapInstances };
 });
 vi.mock('maplibre-gl', () => ({
-  default: { Map: FakeMap, Marker: FakeMarker, NavigationControl: class {}, LngLatBounds: FakeBounds },
+  default: { Map: FakeMap, Marker: FakeMarker, NavigationControl: class {}, LngLatBounds: FakeBounds, Popup: FakePopup },
   Map: FakeMap,
 }));
 
