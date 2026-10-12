@@ -2,10 +2,35 @@ from datetime import datetime
 
 from sqlalchemy import Boolean, DateTime, Float, ForeignKey, Integer, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.types import TypeDecorator
 
 from app.db import Base
 from app.models._common import check_in, created_at
 from app.models.geo import JSONType
+
+
+class EncryptedJSON(TypeDecorator):
+    """A JSON value encrypted at rest (app/services/secrets.py). The database holds {"_enc": "<token>"}: someone reading
+    the table, a backup or a dump cannot see what a person searched for or saved. Assign a new value to change it
+    (in-place mutation is not tracked)."""
+
+    impl = JSONType
+    cache_ok = True
+
+    def __init__(self, empty=dict):
+        super().__init__()
+        self.empty = empty
+
+    def process_bind_param(self, value, dialect):
+        from app.services.secrets import seal
+
+        return seal(self.empty() if value is None else value)
+
+    def process_result_value(self, value, dialect):
+        from app.services.secrets import unseal
+
+        out = unseal(value, None)
+        return self.empty() if out is None else out
 
 
 class User(Base):
@@ -17,8 +42,12 @@ class User(Base):
     password_hash: Mapped[str] = mapped_column(String(200))
     role: Mapped[str] = mapped_column(String(16), default="user")
     preferred_language: Mapped[str] = mapped_column(String(8), default="en")
-    # Non-sensitive search preferences only (filters, radius). Never income, status, or precise location.
-    preferences: Mapped[dict] = mapped_column(JSONType, default=dict)
+    # Search preferences (filters, radius). Never income, status, or precise location. Encrypted at rest: a filter such
+    # as "no ID required" says something about the person.
+    preferences: Mapped[dict] = mapped_column(EncryptedJSON(dict), default=dict)
+    # Saved places, newest last: [{"id": <location id>, "at": "<ISO time>"}]. Encrypted at rest for the same reason, so
+    # there is deliberately no table linking accounts to listings.
+    saved_places: Mapped[list] = mapped_column(EncryptedJSON(list), default=list, server_default="[]")
     created_at: Mapped[datetime] = created_at()
 
 
@@ -43,14 +72,6 @@ class OAuthIdentity(Base):
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
     issuer: Mapped[str] = mapped_column(String(255))
     subject: Mapped[str] = mapped_column(String(255))
-    created_at: Mapped[datetime] = created_at()
-
-
-class Favorite(Base):
-    __tablename__ = "favorites"
-
-    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), primary_key=True)
-    location_id: Mapped[int] = mapped_column(ForeignKey("locations.id", ondelete="CASCADE"), primary_key=True)
     created_at: Mapped[datetime] = created_at()
 
 

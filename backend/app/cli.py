@@ -38,7 +38,29 @@ def cmd_bootstrap(a):
         for cfg in load_source_configs().values():
             sync_source_row(db, cfg)
         db.commit()
-    print(f"bootstrap ok: {len(ids)} jurisdictions synced")
+        sealed = seal_account_data(db)
+    print(f"bootstrap ok: {len(ids)} jurisdictions synced" + (f"; encrypted private data for {sealed} accounts" if sealed else ""))
+
+
+def seal_account_data(db) -> int:
+    """Encrypt any account whose preferences or saved places are still stored in the clear (rows written while no
+    FOODACCESS_SECRET_KEY was set). Does nothing without a key. Safe to re-run."""
+    from sqlalchemy import text
+
+    from app.services import secrets
+
+    if not secrets.available():
+        print("WARNING: FOODACCESS_SECRET_KEY is not set, so search preferences and saved places are stored unencrypted.")
+        return 0
+    n = 0
+    for user_id, prefs, places in db.execute(text("SELECT id, preferences, saved_places FROM users")).all():
+        todo = {c: v for c, v in (("preferences", prefs), ("saved_places", places)) if v and not secrets.is_sealed(v)}
+        for column, value in todo.items():
+            db.execute(text(f"UPDATE users SET {column} = CAST(:v AS jsonb) WHERE id = :id"),
+                       {"v": json.dumps(secrets.seal(value)), "id": user_id})
+        n += bool(todo)
+    db.commit()
+    return n
 
 
 def cmd_sync_registry(_a):

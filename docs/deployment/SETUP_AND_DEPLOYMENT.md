@@ -66,9 +66,24 @@ See `.env.example`. Every backend variable uses the prefix `FOODACCESS_`.
 | `HTTP_USER_AGENT` | project UA | Identifies the crawler. Include a contact address. |
 | `TRANSLATION_PROVIDER`, `LIBRETRANSLATE_URL` | `none` | Optional machine translation |
 | `MAX_SEARCH_RADIUS_KM` | 80 | API guard |
+| `SECRET_KEY` | unset (dev: `data/secret.key`) | Encrypts search preferences, saved places and stored secrets. **Set in production**, keep it stable, back it up. |
 | `OIDC_ISSUER`, `OIDC_CLIENT_ID`, `OIDC_CLIENT_SECRET` | unset | Optional OAuth sign-in (see below). Off unless all three are set. |
 | `OIDC_PROVIDER_NAME`, `OIDC_REDIRECT_URL` | empty, `<first CORS origin>/auth/callback` | Button label; redirect URL registered with the provider |
 | `VITE_MAP_STYLE_URL` | OpenFreeMap Liberty | MapLibre style. Point to self-hosted tiles in production if desired. |
+
+## Private account data
+
+Each account's search preferences and saved places are encrypted before they reach the database
+(`backend/app/services/secrets.py`, column type `EncryptedJSON`). A database dump, a backup or the table itself shows only
+`{"_enc": "..."}`, and there is no table linking accounts to listings. Email addresses are not encrypted (sign-in looks
+them up) and passwords are Argon2 hashes.
+
+- The key is `FOODACCESS_SECRET_KEY` (any long random string; a Fernet key is used as is). Whoever has both the
+  database and this key can read the data, so store the key only in the host's environment settings.
+- If production runs without the key, accounts keep working but this data is stored in the clear and a warning is
+  logged. `foodaccess bootstrap` (run on every start) encrypts such rows once the key is set.
+- If the key is changed or lost, existing preferences and saved places can no longer be read: people stay signed up but
+  see empty preferences and no saved places.
 
 ## OAuth sign-in (optional)
 
@@ -116,6 +131,16 @@ proxying `/api`). Put a TLS-terminating reverse proxy in front.
 
 **Status:** the Compose files were written but **not executed** in the development environment, because Docker was
 not installed. Treat them as untested until the first `docker compose up`.
+
+## Administrator account on Render + Vercel
+
+Render's free plan has no shell, so `backend/render-start.sh` creates the administrator on start:
+
+1. In the Render dashboard, open `lantern-api` → Environment and add `FOODACCESS_ADMIN_EMAIL` and
+   `FOODACCESS_ADMIN_PASSWORD` (at least 12 characters; a shorter one stops the service from starting).
+2. Save and let the service redeploy. The log prints `admin ready: <email>`.
+3. Sign in on the Vercel site at `/login` with that email and password. Administrators land on `/admin/overview`.
+4. Remove both variables afterwards. While they are set, every restart resets that account's password to the value.
 
 ## Production notes
 

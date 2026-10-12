@@ -2035,6 +2035,64 @@ input[type='radio'] {
   font-variant-numeric: tabular-nums;
   text-align: right;
 }
+.overview section {
+  margin-top: var(--sp-6);
+}
+.tiles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: var(--sp-3);
+}
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  height: 100%;
+  padding: var(--sp-4);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+}
+.tile--link:hover {
+  border-color: var(--night);
+}
+.tile--due {
+  border-left: var(--board) solid var(--night);
+}
+.tile__value {
+  font-family: var(--display);
+  font-size: var(--fs-xl);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.tile__label {
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+.table--bars th[scope='row'] {
+  width: 16rem;
+  font-weight: 400;
+}
+.table--bars .table__num {
+  width: 4.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.bar {
+  display: block;
+  min-width: 4rem;
+  height: 0.75rem;
+  background: var(--night-tint);
+}
+.bar__fill {
+  display: block;
+  height: 100%;
+  background: var(--night);
+}
 .pill {
   display: inline-block;
   padding: 1px 8px;

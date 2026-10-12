@@ -1,3 +1,5 @@
+from datetime import UTC, datetime
+
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from sqlalchemy import delete, select
 from sqlalchemy.exc import IntegrityError
@@ -17,7 +19,7 @@ from app.auth.security import (
 )
 from app.db import get_db
 from app.geospatial.search import public_visibility
-from app.models import Favorite, Location, OAuthIdentity, User, UserSession
+from app.models import Location, OAuthIdentity, User, UserSession
 from app.schemas import DeleteAccountIn, LoginIn, MeOut, OAuthCallbackIn, OAuthStartIn, PreferencesIn, RegisterIn, UserOut
 from app.services.presenter import summary
 
@@ -120,32 +122,46 @@ def oauth_callback(body: OAuthCallbackIn, request: Request, response: Response, 
     return user_out(user, db)
 
 
+def _current_location_id(db: Session, location_id: int) -> int:
+    """Follow merges: a saved listing that was merged into another one now means the listing that was kept."""
+    seen = set()
+    while location_id not in seen:
+        seen.add(location_id)
+        target = db.scalar(select(Location.merged_into_id).where(Location.id == location_id))
+        if not target:
+            break
+        location_id = target
+    return location_id
+
+
 @router.get("/me/favorites")
 def list_favorites(user: User = Depends(require_user), db: Session = Depends(get_db)):
-    favs = db.scalars(select(Favorite).where(Favorite.user_id == user.id).order_by(Favorite.created_at.desc())).all()
-    visible = set(db.scalars(select(Location.id).where(public_visibility(), Location.id.in_([f.location_id for f in favs]))).all())
+    ids = list(dict.fromkeys(_current_location_id(db, f["id"]) for f in reversed(user.saved_places)))  # newest first
+    visible = set(db.scalars(select(Location.id).where(public_visibility(), Location.id.in_(ids))).all())
     items = []
-    for f in favs:
-        if f.location_id in visible:
-            items.append({"id": f.location_id, "available": True, "resource": summary(load_location(db, f.location_id))})
+    for location_id in ids:
+        if location_id in visible:
+            items.append({"id": location_id, "available": True, "resource": summary(load_location(db, location_id))})
         else:  # unpublished/closed since saving: keep the bookmark but expose nothing unpublished
-            items.append({"id": f.location_id, "available": False, "resource": None})
+            items.append({"id": location_id, "available": False, "resource": None})
     return {"items": items}
 
 
 @router.post("/me/favorites/{location_id}", status_code=201)
 def add_favorite(location_id: int, user: User = Depends(require_user), db: Session = Depends(get_db)):
     load_location(db, location_id)  # 404 unless publicly visible
-    if not db.get(Favorite, (user.id, location_id)):
-        db.add(Favorite(user_id=user.id, location_id=location_id))
+    if all(_current_location_id(db, f["id"]) != location_id for f in user.saved_places):
+        user.saved_places = [*user.saved_places, {"id": location_id, "at": datetime.now(UTC).isoformat(timespec="seconds")}]
         db.commit()
     return {"id": location_id, "saved": True}
 
 
 @router.delete("/me/favorites/{location_id}", status_code=204)
 def remove_favorite(location_id: int, user: User = Depends(require_user), db: Session = Depends(get_db)):
-    db.execute(delete(Favorite).where(Favorite.user_id == user.id, Favorite.location_id == location_id))
-    db.commit()
+    kept = [f for f in user.saved_places if location_id not in (f["id"], _current_location_id(db, f["id"]))]
+    if len(kept) != len(user.saved_places):
+        user.saved_places = kept
+        db.commit()
     return Response(status_code=204)
 
 
@@ -169,7 +185,7 @@ def delete_account(body: DeleteAccountIn, request: Request, response: Response, 
         raise HTTPException(409, "Administrator accounts must be removed by another administrator via the CLI")
     destroy_session(db, request, response)
     db.execute(delete(UserSession).where(UserSession.user_id == user.id))
-    db.delete(user)  # favorites cascade
+    db.delete(user)  # preferences and saved places are part of the row
     db.commit()
     response.status_code = 204
     return response

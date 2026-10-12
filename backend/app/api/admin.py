@@ -206,6 +206,40 @@ def quality(jurisdiction: str | None = None, db: Session = Depends(get_db)):
     return quality_report(db, jurisdiction)
 
 
+OVERVIEW_WEEKS = 8
+
+
+@router.get("/overview")
+def overview(db: Session = Depends(get_db)):
+    """Dashboard numbers: what is waiting for a reviewer, and reviewer actions per week. Counted from the database;
+    synthetic listings are left out, as in the quality report."""
+    real = Location.is_synthetic.is_(False)
+    today = datetime.now(UTC).date()
+    this_week = today - timedelta(days=today.weekday())  # Monday, UTC
+    starts = [this_week - timedelta(weeks=i) for i in range(OVERVIEW_WEEKS - 1, -1, -1)]
+    weeks = {d: {"week_start": d.isoformat(), "verified": 0, "published": 0} for d in starts}
+    since = datetime.combine(starts[0], datetime.min.time(), UTC)
+    rows = db.execute(select(VerificationRecord.action, VerificationRecord.created_at)
+                      .join(Location, Location.id == VerificationRecord.location_id)
+                      .where(real, VerificationRecord.action.in_(("verify", "publish")), VerificationRecord.created_at >= since)).all()
+    for action, at in rows:
+        day = at.astimezone(UTC).date()
+        week = weeks.get(day - timedelta(days=day.weekday()))
+        if week:
+            week["verified" if action == "verify" else "published"] += 1
+    return {
+        "generated_at": datetime.now(UTC).isoformat(), "includes_synthetic": False,
+        "pending_claims": db.scalar(select(func.count()).select_from(ProviderMembership)
+                                    .join(Location, Location.id == ProviderMembership.location_id)
+                                    .where(real, ProviderMembership.status == "pending")) or 0,
+        "open_reports": db.scalar(select(func.count()).select_from(CommunityReport)
+                                  .join(Location, Location.id == CommunityReport.location_id)
+                                  .where(real, CommunityReport.status == "open")) or 0,
+        "accounts": db.scalar(select(func.count()).select_from(User)) or 0,
+        "weeks": list(weeks.values()),
+    }
+
+
 @router.get("/organizations/{org_id}")
 def organization(org_id: int, db: Session = Depends(get_db)):
     o = db.get(Organization, org_id)

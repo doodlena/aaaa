@@ -60,6 +60,14 @@ auto-merging). 69 rows imported as 68 unverified candidates; 11 same-venue dupli
 verification of a source's listings (same gates as the admin UI). Verification lives only in the database; snapshots
 do not carry it. `data/snapshots/` has not been re-exported for this source.
 
+**Admin overview (2026-10-12).** `/admin/overview` is the reviewers' landing page (administrators go there after
+signing in unless a `?next` is set): counts of what is waiting (provider access requests, unverified listings, conflicts
+and duplicates, open reports, overdue re-checks), totals, listings by review status, completeness bars, and verify/publish
+actions per week for 8 weeks. Numbers come from `GET /api/admin/quality` and the new `GET /api/admin/overview`; synthetic
+listings are left out and a metric the server cannot compute shows as "—". No visitor tracking was added. Tests:
+`test_admin_overview_*`, `admin.test.tsx`, `auth.test.tsx`. Not yet deployed; the production admin account is created by
+setting `FOODACCESS_ADMIN_EMAIL` and `FOODACCESS_ADMIN_PASSWORD` on Render (`backend/render-start.sh`).
+
 ## Architectural decisions (see docs/architecture/ARCHITECTURE.md)
 
 1. Modular monolith: FastAPI, PostGIS, React SPA, and a cron-driven CLI. No brokers.
@@ -101,6 +109,9 @@ do not carry it. `data/snapshots/` has not been re-exported for this source.
 - The staff portal is labelled "For services" and serves every kind of provider. `/api/provider/me` reports
   `offers_food` per listing; when false the portal hides the food-only controls ("Out of food", shelf items, event food
   offerings). The URL is still `/pantry`, and the surplus board remains food-only.
+- Search preferences and saved places are encrypted at rest with `FOODACCESS_SECRET_KEY` (migration `0010`; the
+  `favorites` table is gone, saved places live in `users.saved_places`). Emails and preferred language are not
+  encrypted. Without the key in production the data is stored in the clear with a logged warning.
 - No automated accessibility audit (axe) has been run. WCAG practices were applied and checked by hand.
 - Development environment notes: the Homebrew `node` 26.5 binary is broken (missing `libsimdjson`), so `/usr/local/bin`
   node 22 was used, with `npm_config_cache` pointed at a writable directory.

@@ -14,7 +14,6 @@ from app.models import (
     AuditLog,
     ChangeProposal,
     DuplicateCandidate,
-    Favorite,
     Location,
     Organization,
     SourceRecord,
@@ -192,12 +191,9 @@ def decide_change(db: Session, cp: ChangeProposal, user: User, accept: bool, not
 
 
 def merge_locations(db: Session, keep: Location, drop: Location, user: User) -> None:
-    """Merge `drop` into `keep`: re-point source records & favorites, hide `drop`. Keep's verified data is untouched."""
+    """Merge `drop` into `keep`: re-point source records, hide `drop`. Keep's verified data is untouched."""
     db.execute(update(SourceRecord).where(SourceRecord.location_id == drop.id).values(location_id=keep.id, status="linked"))
-    for fav in db.scalars(select(Favorite).where(Favorite.location_id == drop.id)).all():
-        if not db.get(Favorite, (fav.user_id, keep.id)):
-            db.add(Favorite(user_id=fav.user_id, location_id=keep.id))
-        db.delete(fav)
+    # Saved places are encrypted per account and follow merged_into_id when read (api/accounts.py).
     drop.merged_into_id = keep.id
     drop.published = False
     drop.review_status = "rejected"

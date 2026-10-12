@@ -1,0 +1,96 @@
+# Daily encrypted backup of the live database to private storage (Backblaze B2). See docs/deployment/BACKUPS.md.
+#
+# The dump holds accounts, so it is encrypted on the runner before it is uploaded and it is NEVER committed to this
+# (public) repository or attached to the run. Everything sensitive comes from repository secrets:
+#   BACKUP_DATABASE_URL  Render "External Database URL" of lantern-db
+#   BACKUP_PASSPHRASE    password used to encrypt the dump (needed again to restore; keep a copy somewhere safe)
+#   B2_KEY_ID, B2_APPLICATION_KEY   Backblaze application key limited to the backup bucket
+#   B2_BUCKET            bucket name
+#   B2_ENDPOINT          the bucket's S3 endpoint, e.g. s3.us-east-005.backblazeb2.com
+name: Database backup
+
+on:
+  schedule:
+    - cron: "17 8 * * *" # every day at 08:17 UTC (about 4 a.m. Eastern)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: database-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    # Forks have no secrets; without this the scheduled job would fail there every day.
+    if: github.repository == 'doodlena/aaaa'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      RETENTION_DAYS: "7"
+      PG_IMAGE: postgres:17 # pg_dump must be at least as new as the server (render.yaml: postgresMajorVersion 17)
+      AWS_ACCESS_KEY_ID: ${{ secrets.B2_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.B2_APPLICATION_KEY }}
+      AWS_DEFAULT_REGION: us-east-1 # ignored by B2, required by the client
+      # B2 does not accept the newer default integrity checksums of the AWS CLI.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
+      B2_BUCKET: ${{ secrets.B2_BUCKET }}
+      B2_ENDPOINT: ${{ secrets.B2_ENDPOINT }}
+    steps:
+      - name: Check that the secrets are set
+        env:
+          BACKUP_DATABASE_URL: ${{ secrets.BACKUP_DATABASE_URL }}
+          BACKUP_PASSPHRASE: ${{ secrets.BACKUP_PASSPHRASE }}
+        run: |
+          missing=0
+          for name in BACKUP_DATABASE_URL BACKUP_PASSPHRASE AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY B2_BUCKET B2_ENDPOINT; do
+            if [ -z "${!name}" ]; then echo "::error::Missing repository secret for $name (see docs/deployment/BACKUPS.md)"; missing=1; fi
+          done
+          exit $missing
+
+      - name: Dump the database
+        env:
+          BACKUP_DATABASE_URL: ${{ secrets.BACKUP_DATABASE_URL }}
+        run: |
+          umask 077
+          mkdir -p "$RUNNER_TEMP/backup"
+          docker run --rm -e PGSSLMODE=require -e BACKUP_DATABASE_URL "$PG_IMAGE" \
+            sh -c 'pg_dump "$BACKUP_DATABASE_URL" --format=custom --no-owner --no-acl' > "$RUNNER_TEMP/backup/lantern.dump"
+          # A dump that cannot be listed, or that has no accounts table, is not a backup.
+          docker run --rm -i "$PG_IMAGE" pg_restore --list < "$RUNNER_TEMP/backup/lantern.dump" > "$RUNNER_TEMP/backup/contents.txt"
+          grep -q "TABLE DATA public users" "$RUNNER_TEMP/backup/contents.txt"
+          grep -q "TABLE DATA public locations" "$RUNNER_TEMP/backup/contents.txt"
+          echo "Dump size: $(du -h "$RUNNER_TEMP/backup/lantern.dump" | cut -f1)"
+
+      - name: Encrypt
+        env:
+          BACKUP_PASSPHRASE: ${{ secrets.BACKUP_PASSPHRASE }}
+        run: |
+          umask 077
+          cd "$RUNNER_TEMP/backup"
+          gpg --batch --yes --pinentry-mode loopback --passphrase-fd 3 --symmetric --cipher-algo AES256 \
+            --output lantern.dump.gpg lantern.dump 3<<<"$BACKUP_PASSPHRASE"
+          # Prove the file can be decrypted with the same passphrase before trusting it.
+          gpg --batch --quiet --pinentry-mode loopback --passphrase-fd 3 --decrypt lantern.dump.gpg 3<<<"$BACKUP_PASSPHRASE" | cmp -s - lantern.dump
+          rm -f lantern.dump contents.txt
+
+      - name: Upload to private storage
+        run: |
+          key="backups/lantern-$(date -u +%Y%m%d-%H%M%S).dump.gpg"
+          aws s3 cp "$RUNNER_TEMP/backup/lantern.dump.gpg" "s3://$B2_BUCKET/$key" --endpoint-url "https://$B2_ENDPOINT" --only-show-errors
+          aws s3api head-object --bucket "$B2_BUCKET" --key "$key" --endpoint-url "https://$B2_ENDPOINT" --query ContentLength --output text \
+            | xargs -I{} echo "Uploaded $key ({} bytes)"
+          rm -f "$RUNNER_TEMP/backup/lantern.dump.gpg"
+
+      - name: Remove backups older than the retention period
+        run: |
+          cutoff=$(date -u -d "-$RETENTION_DAYS days" +%Y%m%d)
+          aws s3api list-objects-v2 --bucket "$B2_BUCKET" --prefix backups/lantern- --endpoint-url "https://$B2_ENDPOINT" \
+            --query 'Contents[].Key' --output text | tr '\t' '\n' | while read -r key; do
+              day=$(printf '%s' "$key" | sed -n 's#^backups/lantern-\([0-9]\{8\}\)-[0-9]\{6\}\.dump\.gpg$#\1#p')
+              if [ -n "$day" ] && [ "$day" -lt "$cutoff" ]; then
+                aws s3 rm "s3://$B2_BUCKET/$key" --endpoint-url "https://$B2_ENDPOINT" --only-show-errors && echo "Removed $key"
+              fi
+            done

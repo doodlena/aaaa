@@ -1,4 +1,5 @@
 """API tests against PostGIS with synthetic fixtures."""
+import json
 from math import isclose
 
 from sqlalchemy import select
@@ -224,6 +225,97 @@ def test_preferences_reject_sensitive_keys_and_delete_account(client, db):
     assert client.post("/api/auth/login", json={"email": "u@example.org", "password": USER_PW}).status_code == 401
 
 
+def _raw_account(db, email):
+    """What someone reading the database (or a backup of it) would see for this account."""
+    from sqlalchemy import text
+
+    db.rollback()
+    return db.execute(text("SELECT preferences::text, saved_places::text FROM users WHERE email = :e"), {"e": email}).one()
+
+
+def test_preferences_and_saved_places_are_encrypted_at_rest(client, db, published):
+    make_user(db, "u@example.org", USER_PW)
+    login(client, "u@example.org", USER_PW)
+    prefs = {"eligibility": ["no_id_required"], "service_groups": ["legal"], "radius_km": 5}
+    assert client.patch("/api/me/preferences", json={"preferences": prefs}).json()["preferences"] == prefs
+    loc_id = client.get("/api/resources/search", params={"lat": 38.86, "lon": -77.099, "radius_km": 60}).json()["items"][0]["id"]
+    assert client.post(f"/api/me/favorites/{loc_id}").status_code == 201
+
+    raw_prefs, raw_places = _raw_account(db, "u@example.org")
+    for raw in (raw_prefs, raw_places):
+        assert raw.startswith('{"_enc": "') and "no_id_required" not in raw and "legal" not in raw
+    assert '"id"' not in raw_places and '"at"' not in raw_places  # no readable list of saved listings
+    # there is no readable table linking accounts to listings any more
+    from sqlalchemy import inspect
+
+    assert "favorites" not in inspect(db.get_bind()).get_table_names()
+    # the person still gets their own data back
+    assert client.get("/api/auth/me").json()["user"]["preferences"] == prefs
+    assert [i["id"] for i in client.get("/api/me/favorites").json()["items"]] == [loc_id]
+
+
+def test_plain_rows_still_read_and_bootstrap_encrypts_them(client, db, published):
+    """Rows written before encryption (or while no key was set) keep working and are sealed on the next bootstrap."""
+    from sqlalchemy import text
+
+    from app.cli import seal_account_data
+
+    u = make_user(db, "old@example.org", USER_PW)
+    db.execute(text("UPDATE users SET preferences = CAST(:p AS jsonb), saved_places = CAST(:s AS jsonb) WHERE id = :id"),
+               {"p": json.dumps({"eligibility": ["no_id_required"]}), "s": json.dumps([{"id": 1, "at": "2026-10-01T00:00:00+00:00"}]), "id": u.id})
+    db.commit()
+    login(client, "old@example.org", USER_PW)
+    assert client.get("/api/auth/me").json()["user"]["preferences"] == {"eligibility": ["no_id_required"]}
+    assert seal_account_data(db) == 1 and seal_account_data(db) == 0  # idempotent
+    raw_prefs, raw_places = _raw_account(db, "old@example.org")
+    assert "no_id_required" not in raw_prefs and raw_places.startswith('{"_enc"')
+    assert client.get("/api/auth/me").json()["user"]["preferences"] == {"eligibility": ["no_id_required"]}
+
+
+def test_changed_key_loses_private_data_but_not_the_account(client, db, monkeypatch):
+    from cryptography.fernet import Fernet
+
+    make_user(db, "u@example.org", USER_PW)
+    login(client, "u@example.org", USER_PW)
+    client.patch("/api/me/preferences", json={"preferences": {"eligibility": ["no_id_required"]}})
+    monkeypatch.setattr(get_settings(), "secret_key", Fernet.generate_key().decode())
+    db.expire_all()
+    me = client.get("/api/auth/me")
+    assert me.status_code == 200 and me.json()["user"]["preferences"] == {}  # unreadable, not a crash
+    assert client.get("/api/me/favorites").json()["items"] == []
+    # a platform-generated secret that is not a Fernet key works too
+    monkeypatch.setattr(get_settings(), "secret_key", "not-a-fernet-key/just+random==")
+    assert client.patch("/api/me/preferences", json={"preferences": {"radius_km": 5}}).json()["preferences"] == {"radius_km": 5}
+
+
+def test_without_a_key_in_production_accounts_keep_working_unencrypted(client, db, monkeypatch):
+    s = get_settings()
+    monkeypatch.setattr(s, "secret_key", None)
+    monkeypatch.setattr(s, "environment", "production")
+    make_user(db, "u@example.org", USER_PW)
+    login(client, "u@example.org", USER_PW)
+    assert client.patch("/api/me/preferences", json={"preferences": {"radius_km": 5}}).json()["preferences"] == {"radius_km": 5}
+    assert _raw_account(db, "u@example.org")[0] == '{"radius_km": 5}'  # stored in the clear until a key is configured
+
+
+def test_saved_place_follows_a_merge(client, db, published, admin):
+    from app.ingestion.verification.workflow import merge_locations
+    from app.models import Location
+
+    make_user(db, "u@example.org", USER_PW)
+    login(client, "u@example.org", USER_PW)
+    items = client.get("/api/resources/search", params={"lat": 38.86, "lon": -77.099, "radius_km": 60}).json()["items"]
+    drop_id, keep_id = items[0]["id"], items[1]["id"]
+    assert client.post(f"/api/me/favorites/{drop_id}").status_code == 201
+    merge_locations(db, db.get(Location, keep_id), db.get(Location, drop_id), admin)
+    db.commit()
+    assert [i["id"] for i in client.get("/api/me/favorites").json()["items"]] == [keep_id]
+    assert client.post(f"/api/me/favorites/{keep_id}").status_code == 201  # already saved: no duplicate
+    assert len(client.get("/api/me/favorites").json()["items"]) == 1
+    assert client.delete(f"/api/me/favorites/{keep_id}").status_code == 204
+    assert client.get("/api/me/favorites").json()["items"] == []
+
+
 # --- admin ------------------------------------------------------------------------------------------------------
 
 def test_admin_routes_protected(client, db, imported):
@@ -274,6 +366,31 @@ def test_admin_quality_and_runs(admin_client, imported):
     runs = admin_client.get("/api/admin/ingestion/runs").json()["items"]
     assert runs[0]["counts"]["inserted"] == 8
     assert admin_client.get("/api/admin/sources").json()["items"][0]["is_synthetic"]
+
+
+def test_admin_overview_counts_real_listings_only(admin_client, published, db):
+    from app.models import ProviderMembership
+
+    user = make_user(db, "coordinator@example.org", USER_PW)
+
+    ov = admin_client.get("/api/admin/overview").json()
+    assert len(ov["weeks"]) == 8 and ov["pending_claims"] == 0 and ov["accounts"] == 2
+    assert all(w["verified"] == 0 and w["published"] == 0 for w in ov["weeks"])  # synthetic listings are left out
+
+    loc = db.scalars(select(Location)).first()
+    loc.is_synthetic = False
+    db.add(ProviderMembership(user_id=user.id, location_id=loc.id, role_title="Coordinator", status="pending"))
+    db.commit()
+    ov = admin_client.get("/api/admin/overview").json()
+    assert ov["pending_claims"] == 1 and ov["open_reports"] == 0
+    assert ov["weeks"][-1]["verified"] == 1 and ov["weeks"][-1]["published"] == 1
+    assert sum(w["verified"] for w in ov["weeks"][:-1]) == 0
+
+
+def test_admin_overview_requires_admin(client, db):
+    make_user(db, "visitor@example.org", USER_PW)
+    login(client, "visitor@example.org", USER_PW)
+    assert client.get("/api/admin/overview").status_code == 403
 
 
 def test_security_headers(client):

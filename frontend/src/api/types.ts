@@ -370,6 +370,15 @@ export interface QualityReport {
   metrics: Record<string, number | Record<string, number> | null>;
 }
 
+export interface AdminOverview {
+  generated_at: string;
+  includes_synthetic: boolean;
+  pending_claims: number;
+  open_reports: number;
+  accounts: number;
+  weeks: { week_start: string; verified: number; published: number }[];
+}
+
 // ---------- Lantern: AI settings ----------
 export type AIKeySource = 'none' | 'environment' | 'admin';
 export interface AISettings {

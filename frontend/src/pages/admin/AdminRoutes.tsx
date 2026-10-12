@@ -5,6 +5,7 @@ import { useAuth } from '../../state/auth';
 import { AdminAI } from './AdminAI';
 import { AdminClaims, AdminReports, PendingClaimsBadge } from './AdminClaimsReports';
 import { AdminConflicts } from './AdminConflicts';
+import { AdminOverview } from './AdminOverview';
 import { AdminQuality } from './AdminQuality';
 import { AdminQueue } from './AdminQueue';
 import { AdminReview } from './AdminReview';
@@ -33,6 +34,9 @@ export default function AdminRoutes() {
     <div className="admin">
       <nav className="admin__nav" aria-label={t('admin.navLabel')}>
         <ul>
+          <li>
+            <NavLink to="/admin/overview">{t('admin.overview.nav')}</NavLink>
+          </li>
           <li>
             <NavLink to="/admin" end>
               {t('admin.queue')}
@@ -66,6 +70,7 @@ export default function AdminRoutes() {
       <div className="admin__main">
         <Routes>
           <Route index element={<AdminQueue />} />
+          <Route path="overview" element={<AdminOverview />} />
           <Route path="resources/:id" element={<AdminReview />} />
           <Route path="claims" element={<AdminClaims />} />
           <Route path="reports" element={<AdminReports />} />

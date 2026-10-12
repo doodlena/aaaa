@@ -15,6 +15,15 @@ describe('auth forms', () => {
     expect(calls.find((c) => c.method === 'POST')!.body).toEqual({ email: 'person@example.com', password: 'correct-horse-1' });
   });
 
+  it('sends an administrator to the admin overview after sign-in', async () => {
+    mockFetch([{ method: 'POST', path: '/api/auth/login', body: { ...testUser, role: 'admin' } }]);
+    renderApp(<LoginPage />, { route: '/login', path: '/login' });
+    await userEvent.type(screen.getByLabelText('Email'), 'admin@example.com');
+    await userEvent.type(screen.getByLabelText('Password'), 'correct-horse-1');
+    await userEvent.click(screen.getByRole('button', { name: 'Sign in' }));
+    await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('/admin/overview'));
+  });
+
   it('shows a clear error for wrong credentials', async () => {
     mockFetch([{ method: 'POST', path: '/api/auth/login', status: 401, body: { detail: 'Email or password is incorrect' } }]);
     renderApp(<LoginPage />, { route: '/login' });

@@ -19,6 +19,8 @@ services:
       FOODACCESS_COOKIE_SECURE: ${FOODACCESS_COOKIE_SECURE:-true}
       FOODACCESS_CORS_ORIGINS: ${FOODACCESS_CORS_ORIGINS:-["http://localhost:8080"]}
       FOODACCESS_SHOW_SYNTHETIC: ${FOODACCESS_SHOW_SYNTHETIC:-false}
+      # Encrypts private account data and stored secrets (see docs/deployment/SETUP_AND_DEPLOYMENT.md)
+      FOODACCESS_SECRET_KEY: ${FOODACCESS_SECRET_KEY:-}
       # Optional OpenID Connect sign-in (off while these are empty)
       FOODACCESS_OIDC_ISSUER: ${FOODACCESS_OIDC_ISSUER:-}
       FOODACCESS_OIDC_CLIENT_ID: ${FOODACCESS_OIDC_CLIENT_ID:-}

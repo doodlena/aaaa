@@ -38,6 +38,25 @@ describe('admin', () => {
     expect(await screen.findByRole('heading', { name: 'Administrators only' })).toBeInTheDocument();
   });
 
+  it('overview shows what is waiting, completeness and weekly activity from the API', async () => {
+    mockFetch(
+      [
+        { path: '/api/admin/quality', body: { jurisdiction: null, generated_at: '2026-10-12T00:00:00Z', includes_synthetic: false, metrics: { locations_total: 40, by_review_status: { candidate: 30, needs_review: 2, verified: 8 }, published: 8, stale: 1, pending_conflicts: 3, pending_duplicates: 4, organizations: 12, valid_address_pct: 95.5, with_documented_eligibility_pct: null } } },
+        { path: '/api/admin/overview', body: { generated_at: '2026-10-12T00:00:00Z', includes_synthetic: false, pending_claims: 5, open_reports: 0, accounts: 9, weeks: [{ week_start: '2026-10-05', verified: 2, published: 1 }, { week_start: '2026-10-12', verified: 6, published: 0 }] } },
+      ],
+      { user: admin },
+    );
+    renderApp(<AdminRoutes />, { route: '/admin/overview', path: '/admin/*' });
+    expect(await screen.findByRole('link', { name: '5 Provider access requests' })).toHaveAttribute('href', '/admin/claims');
+    expect(screen.getByRole('link', { name: '32 Listings not yet verified' })).toHaveAttribute('href', '/admin');
+    expect(screen.getByRole('link', { name: '7 Conflicts and possible duplicates' })).toHaveAttribute('href', '/admin/conflicts');
+    expect(within(screen.getByRole('row', { name: /With a complete address/ })).getByText('95.5%')).toBeInTheDocument();
+    // a metric the server could not compute is shown as missing, never as 0%
+    expect(within(screen.getByRole('row', { name: /With documented eligibility/ })).getByText('—')).toBeInTheDocument();
+    const week = screen.getByRole('row', { name: /Oct 12/ });
+    expect(within(week).getByText('6')).toBeInTheDocument();
+  });
+
   it('queue shows status counts and records', async () => {
     const { calls } = mockFetch(
       [{ path: '/api/admin/queue', body: { items: [{ id: 3, name: '[TEST] Willow Mutual Aid', organization_name: 'W', address1: '1 St', city: 'X', zip: '22000', jurisdiction_id: null, review_status: 'verified', verification_label: 'verified', published: true, operating_status: 'open', has_coordinates: true, last_seen_at: null, last_verified_at: null, sources: ['synthetic-fixtures'], pending_changes: 1, pending_duplicates: 0, is_synthetic: true }], total: 1, page: 1, page_size: 25, counts_by_status: { verified: 8, candidate: 2 } } }],

@@ -35,6 +35,10 @@ services:
         sync: false
       - key: FOODACCESS_SHOW_SYNTHETIC
         value: "false"
+      # Encrypts private account data (search preferences, saved places) and stored secrets. Generated once by Render.
+      # Keep it stable and back it up: without it that data cannot be read.
+      - key: FOODACCESS_SECRET_KEY
+        generateValue: true
 
 databases:
   - name: lantern-db

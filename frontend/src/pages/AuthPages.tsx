@@ -152,8 +152,9 @@ export function LoginPage() {
     }
     setBusy(true);
     try {
-      await login(email.trim(), password);
-      navigate(safeNext(sp.get('next')));
+      const u = await login(email.trim(), password);
+      // Reviewers land on their dashboard unless they were on their way somewhere else.
+      navigate(sp.get('next') || u.role !== 'admin' ? safeNext(sp.get('next')) : '/admin/overview');
     } catch (err) {
       const k = errorKey(err);
       setError(k === 'errors.unauthorized' ? t('auth.badCredentials') : t(k));
