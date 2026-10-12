@@ -1,5 +1,5 @@
 {
- "_notice": "Snapshot of normalized records imported from source 'va08-support-services' (VA-08 support services (mental health, benefits, health, housing, legal…) — research of official sources (cited)). Unverified candidates; see config/sources/ for attribution and terms.",
+ "_notice": "Snapshot of normalized records imported from source 'va08-support-services' (Inner Northern Virginia support services (mental health, benefits, health, housing, legal…) — research of official sources (cited)). Unverified candidates; see config/sources/ for attribution and terms.",
  "source_id": "va08-support-services",
  "records": [
   {

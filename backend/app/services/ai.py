@@ -421,7 +421,7 @@ def extract_places(text: str, url: str) -> list[dict]:
         "List every physical location on this page where people can get help (food, health, mental health, housing, "
         "benefits, legal, clothing, pets, etc.). Copy names, addresses, hours and requirements exactly as written. Skip "
         "hotlines without an address and confidential shelter addresses. Use only service types the page states.",
-        f"Page URL: {url}\n\nPage text:\n<<<\n{text}\n>>>", max_tokens=6000)
+        f"Page URL: {url}\n\nPage text:\n<<<\n{text}\n>>>", max_tokens=16000)
     keep = []
     for p in out.places:
         if not _in_text(p.organization_name, text):

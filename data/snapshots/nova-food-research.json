@@ -1,5 +1,5 @@
 {
- "_notice": "Snapshot of normalized records imported from source 'nova-food-research' (Northern Virginia food assistance outside VA-08 — AI-assisted research (cited)). Unverified candidates; see config/sources/ for attribution and terms.",
+ "_notice": "Snapshot of normalized records imported from source 'nova-food-research' (Northern Virginia food assistance (Loudoun, western Fairfax, Prince William) — AI-assisted research (cited)). Unverified candidates; see config/sources/ for attribution and terms.",
  "source_id": "nova-food-research",
  "records": [
   {

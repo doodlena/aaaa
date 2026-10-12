@@ -1,5 +1,5 @@
 {
- "_notice": "Snapshot of normalized records imported from source 'nova-support-services' (Northern Virginia support services outside VA-08 — AI-assisted research (cited)). Unverified candidates; see config/sources/ for attribution and terms.",
+ "_notice": "Snapshot of normalized records imported from source 'nova-support-services' (Northern Virginia support services (Fairfax, Loudoun, Prince William) — AI-assisted research (cited)). Unverified candidates; see config/sources/ for attribution and terms.",
  "source_id": "nova-support-services",
  "records": [
   {

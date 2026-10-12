@@ -1,0 +1,139 @@
+{
+  "run_id": 26,
+  "source": {
+    "id": "ai-manual-files",
+    "name": "Manually downloaded pages & PDFs (AI-extracted, verified against the file)",
+    "url": "file://data/sources/manual",
+    "adapter": "ai_page_extract",
+    "is_synthetic": false,
+    "known_limitations": [
+      "Requires AI (Claude). Fields not found verbatim in the file are dropped. Unverified candidates."
+    ]
+  },
+  "status": "partial",
+  "started_at": "2026-10-12T15:06:21.609665-04:00",
+  "finished_at": "2026-10-12T19:07:19.526782+00:00",
+  "counts": {
+    "discovered": 13,
+    "inserted": 2,
+    "updated": 5,
+    "unchanged": 0,
+    "rejected": 0,
+    "duplicate_candidates": 3,
+    "conflicts": 0,
+    "needs_review": 417,
+    "out_of_scope": 3,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 1,
+    "extra": {
+      "auto_linked": 5
+    }
+  },
+  "errors": [
+    {
+      "stage": "parse",
+      "url": "file://data/sources/manual/english-2026-food-assistance-2-page-flyer.pdf",
+      "error": "ValidationError: 1 validation error for PageExtraction\n  Invalid JSON: EOF while parsing a string at line 1 column 11315 [type=json_invalid, input_value='{\"places\":[{\"organizatio...me\":\"Food Not Bombs NOV', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+    }
+  ],
+  "records_requiring_review": [
+    {
+      "external_id": "9d2c63104a5fa080",
+      "status": "linked",
+      "location_id": 118,
+      "issues": []
+    },
+    {
+      "external_id": "d1a18fad3ade00f3",
+      "status": "linked",
+      "location_id": 434,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "b72a1b14a6501062",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "d3bc7fca08031072",
+      "status": "linked",
+      "location_id": 112,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "520b22a89bc26aa2",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "39eef2ec8ff493ff",
+      "status": "linked",
+      "location_id": 435,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "54ed046e17606f88",
+      "status": "linked",
+      "location_id": 104,
+      "issues": []
+    },
+    {
+      "external_id": "04995b9d7dc4cb4d",
+      "status": "linked",
+      "location_id": 66,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "32e25efb329c3724",
+      "status": "linked",
+      "location_id": 352,
+      "issues": []
+    },
+    {
+      "external_id": "9768a8e4a57d7db1",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

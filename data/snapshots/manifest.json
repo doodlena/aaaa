@@ -1,5 +1,5 @@
 {
- "exported_at": "2026-10-12T18:43:29.629959+00:00",
+ "exported_at": "2026-10-12T19:08:35.029001+00:00",
  "sources": [
   {
    "source_id": "manassas-food-resources",
@@ -78,6 +78,12 @@
    "file": "va08-gap-research.json",
    "records": 28,
    "order": 12
+  },
+  {
+   "source_id": "ai-manual-files",
+   "file": "ai-manual-files.json",
+   "records": 36,
+   "order": 13
   }
  ]
 }

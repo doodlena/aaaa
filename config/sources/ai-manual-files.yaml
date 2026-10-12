@@ -4,14 +4,32 @@ owner: Lantern team (each file cites its original URL in options.citations)
 url: file://data/sources/manual
 adapter: ai_page_extract
 retrieval: file
-formats: [pdf, html, txt]
-jurisdictions: [arlington-county, alexandria-city, falls-church-city, fairfax-county, fairfax-city, loudoun-county, prince-william-county, manassas-city, manassas-park-city]
+formats:
+- pdf
+- html
+- txt
+jurisdictions:
+- arlington-county
+- alexandria-city
+- falls-church-city
+- fairfax-county
+- fairfax-city
+- loudoun-county
+- prince-william-county
+- manassas-city
+- manassas-park-city
 enabled: true
 store_raw: true
 publication: permitted_with_attribution
-verified_on: "2026-10-12"
+verified_on: '2026-10-12'
 options:
   manual_dir: data/sources/manual
-  citations: {}   # filename -> original public URL, e.g. arlington-2026-food-flyer.pdf: https://www.arlingtonva.us/...
-known_limitations: ["Requires AI (Claude). Fields not found verbatim in the file are dropped. Unverified candidates."]
+  citations:
+    Food Bank Resources.pdf: https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf
+    Locally Offered Programs - NAMI Northern Virginia.html: https://nami-northernvirginia.org/support/locally-offered-programs/
+    Hunger Resource Center - NVFS.html: https://nvfs.org/our-places/hunger-resource-center/
+    english-2026-food-assistance-2-page-flyer.pdf: https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf
+known_limitations:
+- Requires AI (Claude). Fields not found verbatim in the file are dropped. Unverified
+  candidates.
 refresh: null
