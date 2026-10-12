@@ -38,8 +38,12 @@ def create_app() -> FastAPI:
         response.headers.setdefault("Permissions-Policy", "geolocation=(self), camera=(), microphone=()")
         if request.url.path.startswith("/api/") and not request.url.path.startswith("/api/docs"):
             response.headers.setdefault("Content-Security-Policy", "default-src 'none'; frame-ancestors 'none'")
-            response.headers.setdefault("Cache-Control", "no-store" if "/me" in request.url.path or "/admin" in request.url.path
-                                        or "/auth" in request.url.path else "public, max-age=60")
+            path = request.url.path
+            private = any(x in path for x in ("/me", "/admin", "/auth", "/provider"))
+            # Public data changes often (imports, live provider posts, reports): browsers must revalidate every time so
+            # result counts and live statuses are never stale. Only the static category list may be reused briefly.
+            response.headers.setdefault("Cache-Control", "no-store" if private
+                                        else "public, max-age=300" if path == "/api/meta/categories" else "no-cache")
         return response
 
     @app.exception_handler(RequestValidationError)

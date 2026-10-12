@@ -318,3 +318,9 @@ def Path_tmp(db):
 
     d = Path(tempfile.mkdtemp())
     return d / "a.json", d / "b.json"
+
+
+def test_search_responses_are_never_served_stale(client, published):
+    r = client.get("/api/resources/search", params={**ARL, "radius_km": 5})
+    assert r.headers["cache-control"] == "no-cache"  # counts/live status must revalidate
+    assert client.get("/api/auth/me").headers["cache-control"] == "no-store"
