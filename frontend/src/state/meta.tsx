@@ -67,13 +67,13 @@ export function useAI(): Features['ai'] {
 }
 
 /**
- * Sets document.title to "<page> · <app name>", or "<app name> — <tagline>" when page is null.
+ * Sets document.title to "<page> · <app name>", or "<app name>: <tagline>" when page is null.
  * page === undefined leaves the title alone (e.g. a detail panel embedded in another page).
  */
 export function useDocumentTitle(page?: string | null, tagline?: string) {
   const { appName } = useMeta();
   useEffect(() => {
     if (typeof document === 'undefined' || page === undefined) return;
-    document.title = page ? `${page} · ${appName}` : tagline ? `${appName} — ${tagline}` : appName;
+    document.title = page ? `${page} · ${appName}` : tagline ? `${appName}: ${tagline}` : appName;
   }, [page, appName, tagline]);
 }

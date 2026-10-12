@@ -1,7 +1,7 @@
 {
   "name": "Lantern",
   "short_name": "Lantern",
-  "description": "Help that lights the way — food, health and support near you.",
+  "description": "One place to find food, health and support near you.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

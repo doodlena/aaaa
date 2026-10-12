@@ -27,7 +27,7 @@ export function Layout() {
   const location = useLocation();
   // Default title on every route change. A layout effect runs before pages' passive effects, so pages can override it.
   useLayoutEffect(() => {
-    document.title = `${appName} — ${t('app.tagline')}`;
+    document.title = `${appName}: ${t('app.tagline')}`;
   }, [location.pathname, appName, t]);
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -116,7 +116,7 @@ export function Layout() {
       <footer className="site-footer">
         <div className="site-footer__inner">
           <p className="site-footer__brand">
-            <LanternMark size={24} /> <strong>{appName}</strong> — {t('app.tagline')}
+            <LanternMark size={24} /> <strong>{appName}:</strong> {t('app.tagline')}
           </p>
           <p className="site-footer__crisis" data-testid="footer-crisis">
             <Icon name="lifebuoy" size={18} />
