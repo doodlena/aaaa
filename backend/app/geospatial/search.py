@@ -35,7 +35,7 @@ ELIGIBILITY_FILTERS = {
 class SearchParams:
     lat: float | None = None
     lon: float | None = None
-    radius_km: float = 16.09  # 10 miles
+    radius_km: float | None = 16.09  # 10 miles; None = no distance limit (results are still sorted from lat/lon)
     bbox: tuple[float, float, float, float] | None = None  # min_lon, min_lat, max_lon, max_lat
     jurisdiction: str | None = None
     food_groups: list[str] = field(default_factory=list)
@@ -123,7 +123,7 @@ def search(db: Session, p: SearchParams, now: datetime | None = None) -> dict:
         pt = _point(p.lat, p.lon)
         distance = func.ST_Distance(Location.geom, pt)
         q = select(Location, distance.label("distance_m"))
-        if not p.bbox:
+        if not p.bbox and p.radius_km is not None:
             conds.append(func.ST_DWithin(Location.geom, pt, p.radius_km * 1000))
     if p.bbox:
         conds.append(func.ST_Intersects(Location.geom, cast(func.ST_MakeEnvelope(*p.bbox, 4326), Geography)))
@@ -270,7 +270,9 @@ def coverage(db: Session, p: SearchParams) -> dict:
     active = db.scalars(select(Jurisdiction).where(Jurisdiction.status.in_(("pilot", "expansion")))).all()
     covered_ids = [j.id for j in active]
     complete = None
-    if p.lat is not None and p.lon is not None and any(j.boundary is not None for j in active):
+    if p.lat is not None and p.lon is not None and p.radius_km is None:
+        complete = False  # no distance limit always reaches beyond the places where data is being collected
+    elif p.lat is not None and p.lon is not None and any(j.boundary is not None for j in active):
         area = func.ST_Buffer(_point(p.lat, p.lon), p.radius_km * 1000)
         complete = bool(db.scalar(select(func.ST_CoveredBy(
             area, cast(func.ST_Union(Jurisdiction.boundary), Geography),

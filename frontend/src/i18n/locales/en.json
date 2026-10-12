@@ -347,7 +347,8 @@
     "updating": "Updating results…",
     "errorTitle": "We could not load results",
     "hideSearch": "Hide search options",
-    "showSearch": "Show search options"
+    "showSearch": "Show search options",
+    "radiusAny": "No limit"
   },
   "filters": {
     "title": "Filters",

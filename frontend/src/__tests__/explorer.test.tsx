@@ -51,6 +51,18 @@ describe('ExplorerPage', () => {
     expect(screen.getByLabelText('Your address or ZIP code')).toBeVisible();
   });
 
+  it('Distance offers "No limit", which searches without a radius', async () => {
+    const { calls } = mockFetch([{ path: '/api/resources/search', body: searchResponse({ items: [summary()] }) }]);
+    renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099', path: '/find' });
+    await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' });
+    await userEvent.selectOptions(screen.getByLabelText('Distance'), 'No limit');
+    await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('radius_km=any'));
+    await waitFor(() =>
+      expect(calls.some((c) => c.url.pathname === '/api/resources/search' && c.url.searchParams.get('any_distance') === 'true' && !c.url.searchParams.get('radius_km'))).toBe(true),
+    );
+    expect(screen.getByLabelText('Distance')).toHaveDisplayValue('No limit');
+  });
+
   it('applying a filter updates the URL and the API query', async () => {
     const { calls } = mockFetch([{ path: '/api/resources/search', body: searchResponse({ items: [summary()] }) }]);
     renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099', path: '/find' });

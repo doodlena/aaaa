@@ -1,9 +1,9 @@
 import { useEffect, useId, useState, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { api } from '../api/client';
 import type { GeocodeResult, Jurisdiction } from '../api/types';
-import { applyPreferences, DEFAULT_FILTERS, filtersToURL, type Filters } from '../lib/filters';
+import { applyPreferences, DEFAULT_FILTERS, filtersFromURL, filtersToURL, type Filters } from '../lib/filters';
 import { useAuth } from '../state/auth';
 import { Icon } from './Icon';
 import { errorKey } from './Status';
@@ -17,6 +17,7 @@ type Phase = 'idle' | 'geocoding' | 'locating';
 export function SearchForm({ compact = false }: { compact?: boolean }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
   const { user } = useAuth();
   const id = useId();
   const [q, setQ] = useState('');
@@ -35,7 +36,13 @@ export function SearchForm({ compact = false }: { compact?: boolean }) {
   }, [compact]);
 
   const go = (patch: Partial<Filters>) => {
-    const base = applyPreferences({ ...DEFAULT_FILTERS }, user?.preferences);
+    let base = applyPreferences({ ...DEFAULT_FILTERS }, user?.preferences);
+    if (location.pathname === '/find') {
+      // Searching a new place from the results page keeps what is already chosen there (distance, needs, filters, sort).
+      const current = filtersFromURL(new URLSearchParams(location.search));
+      const hadPlace = current.lat !== null || !!current.bbox || !!current.jurisdiction;
+      base = { ...current, lat: null, lon: null, label: '', bbox: null, jurisdiction: '', page: 1, sort: !hadPlace && current.sort === 'name' ? 'distance' : current.sort };
+    }
     navigate(`/find?${filtersToURL({ ...base, ...patch }).toString()}`);
   };
 

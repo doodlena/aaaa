@@ -123,6 +123,8 @@ export const RADII_MILES = [1, 3, 5, 10, 25] as const;
 export const milesToKm = (mi: number) => Math.round(mi * 1.609344 * 100) / 100;
 export const kmToMiles = (km: number) => Math.round((km / 1.609344) * 10) / 10;
 export const RADII = RADII_MILES.map(milesToKm);
+/** Filters.radius_km value for "no distance limit" (URL: radius_km=any, API: any_distance=true). */
+export const ANY_DISTANCE = 0;
 export const LANGUAGE_FILTERS = ['es', 'en', 'am', 'ar', 'fa', 'ko', 'vi', 'zh', 'fr', 'ur'] as const;
 
 export type ScheduleMode = 'any' | 'today' | 'date' | 'upcoming';
@@ -196,7 +198,7 @@ export function filtersFromURL(sp: URLSearchParams): Filters {
     lat: lat !== null && lat >= -90 && lat <= 90 ? lat : null,
     lon: lon !== null && lon >= -180 && lon <= 180 ? lon : null,
     label: sp.get('label') || '',
-    radius_km: radius && radius > 0 && radius <= 80 ? radius : DEFAULT_FILTERS.radius_km,
+    radius_km: sp.get('radius_km') === 'any' ? ANY_DISTANCE : radius && radius > 0 && radius <= 80 ? radius : DEFAULT_FILTERS.radius_km,
     bbox,
     jurisdiction: sp.get('jurisdiction') || '',
     food_groups: list(sp.get('food_group'), FOOD_GROUPS),
@@ -221,7 +223,7 @@ export function filtersToURL(f: Filters): URLSearchParams {
     sp.set('lon', String(round(f.lon)));
   }
   if (f.label) sp.set('label', f.label);
-  if (f.radius_km !== DEFAULT_FILTERS.radius_km) sp.set('radius_km', String(f.radius_km));
+  if (f.radius_km !== DEFAULT_FILTERS.radius_km) sp.set('radius_km', f.radius_km === ANY_DISTANCE ? 'any' : String(f.radius_km));
   if (f.bbox) sp.set('bbox', f.bbox.map(round).join(','));
   if (f.jurisdiction) sp.set('jurisdiction', f.jurisdiction);
   if (f.food_groups.length) sp.set('food_group', f.food_groups.join(','));
@@ -244,7 +246,8 @@ export function buildSearchQuery(f: Filters, pageSize = 50): string {
   if (f.lat !== null && f.lon !== null) {
     sp.set('lat', String(f.lat));
     sp.set('lon', String(f.lon));
-    sp.set('radius_km', String(f.radius_km));
+    if (f.radius_km === ANY_DISTANCE) sp.set('any_distance', 'true');
+    else sp.set('radius_km', String(f.radius_km));
   }
   if (f.bbox) sp.set('bbox', f.bbox.join(','));
   if (f.jurisdiction) sp.set('jurisdiction', f.jurisdiction);

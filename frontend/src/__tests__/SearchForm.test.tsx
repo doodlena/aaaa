@@ -21,6 +21,26 @@ describe('SearchForm', () => {
     expect(geo.url.searchParams.get('q')).toBe('22204');
   });
 
+  it('on the results page, searching a new place keeps the distance, needs and filters already chosen', async () => {
+    mockFetch([
+      { path: '/api/geocode', body: { results: [{ label: 'ZIP 20147', lat: 39.04, lon: -77.48, source: 'x', precision: 'zip' }], unavailable_providers: [] } },
+    ]);
+    renderApp(<SearchForm compact />, {
+      route: '/find?lat=38.86&lon=-77.1&label=ZIP%2022204&radius_km=any&service_group=housing,clothing&eligibility=no_id_required&sort=name&page=3',
+      path: '/find',
+    });
+    await userEvent.type(screen.getByLabelText('Your address or ZIP code'), '20147');
+    await userEvent.click(screen.getByRole('button', { name: /search/i }));
+    await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('ZIP+20147'));
+    const loc = new URLSearchParams(screen.getByTestId('location').textContent!.split('?')[1]);
+    expect(loc.get('lat')).toBe('39.04'); // the new place replaces the old one…
+    expect(loc.get('radius_km')).toBe('any'); // …and everything else chosen stays
+    expect(loc.get('service_group')).toBe('housing,clothing');
+    expect(loc.get('eligibility')).toBe('no_id_required');
+    expect(loc.get('sort')).toBe('name');
+    expect(loc.get('page')).toBeNull(); // back to the first page of the new results
+  });
+
   it('applies a signed-in user’s saved preferences to the new search', async () => {
     mockFetch(
       [{ path: '/api/geocode', body: { results: [{ label: 'ZIP 22204', lat: 38.86, lon: -77.1, source: 'x', precision: 'zip' }], unavailable_providers: [] } }],

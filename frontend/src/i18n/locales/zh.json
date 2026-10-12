@@ -347,7 +347,8 @@
     "updating": "正在更新结果…",
     "errorTitle": "无法加载结果",
     "hideSearch": "收起搜索选项",
-    "showSearch": "展开搜索选项"
+    "showSearch": "展开搜索选项",
+    "radiusAny": "不限距离"
   },
   "filters": {
     "title": "筛选",

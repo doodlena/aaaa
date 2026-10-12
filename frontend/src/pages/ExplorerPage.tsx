@@ -12,6 +12,7 @@ import { ResultsList } from '../components/ResultsList';
 import { SearchForm } from '../components/SearchForm';
 import { ErrorMessage, Loading } from '../components/Status';
 import {
+  ANY_DISTANCE,
   activeFilterCount,
   buildSearchQuery,
   offersCrisisServices,
@@ -153,11 +154,12 @@ export default function ExplorerPage() {
           <div className="field field--inline">
             <label htmlFor="radius">{t('explorer.radius')}</label>
             <select id="radius" value={filters.radius_km} disabled={!center || !!filters.bbox} onChange={(e) => update({ radius_km: Number(e.target.value) })}>
-              {(RADII.includes(filters.radius_km) ? RADII : [...RADII, filters.radius_km].sort((a, b) => a - b)).map((r) => (
+              {(RADII.includes(filters.radius_km) || filters.radius_km === ANY_DISTANCE ? RADII : [...RADII, filters.radius_km].sort((a, b) => a - b)).map((r) => (
                 <option key={r} value={r}>
                   {t('explorer.radiusOption', { miles: kmToMiles(r) })}
                 </option>
               ))}
+              <option value={ANY_DISTANCE}>{t('explorer.radiusAny')}</option>
             </select>
           </div>
           <div className="field field--inline">
@@ -270,7 +272,7 @@ export default function ExplorerPage() {
               uncertain={data?.uncertain || []}
               indexOffset={mapOffset}
               center={center}
-              radiusKm={filters.bbox ? null : filters.radius_km}
+              radiusKm={filters.bbox || filters.radius_km === ANY_DISTANCE ? null : filters.radius_km}
               store={store}
               onSearchArea={(bbox) => update({ bbox })}
             />

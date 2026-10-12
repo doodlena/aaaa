@@ -347,7 +347,8 @@
     "updating": "Đang cập nhật kết quả…",
     "errorTitle": "Chúng tôi không tải được kết quả",
     "hideSearch": "Ẩn tùy chọn tìm kiếm",
-    "showSearch": "Hiện tùy chọn tìm kiếm"
+    "showSearch": "Hiện tùy chọn tìm kiếm",
+    "radiusAny": "Không giới hạn"
   },
   "filters": {
     "title": "Bộ lọc",

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { activeFilterCount, buildSearchQuery, DEFAULT_FILTERS, filtersFromURL, filtersToURL, milesToKm } from '../lib/filters';
+import { ANY_DISTANCE, activeFilterCount, buildSearchQuery, DEFAULT_FILTERS, filtersFromURL, filtersToURL, milesToKm } from '../lib/filters';
 
 const parse = (q: string) => Object.fromEntries(new URLSearchParams(q));
 
@@ -53,6 +53,17 @@ describe('explorer URL state', () => {
   it('round-trips through the URL', () => {
     const f = { ...DEFAULT_FILTERS, lat: 38.86, lon: -77.099, label: 'ZIP 22204', radius_km: milesToKm(10), food_groups: ['groceries'], eligibility: ['no_id_required'], schedule: 'upcoming' as const, sort: 'next_distribution' };
     expect(filtersFromURL(filtersToURL(f))).toEqual(f);
+  });
+
+  it('"No limit" distance: radius_km=any in the URL, any_distance=true (and no radius) to the API', () => {
+    const f = filtersFromURL(new URLSearchParams('lat=38.86&lon=-77.099&radius_km=any'));
+    expect(f.radius_km).toBe(ANY_DISTANCE);
+    expect(filtersToURL(f).get('radius_km')).toBe('any');
+    const q = new URLSearchParams(buildSearchQuery(f, 25));
+    expect(q.get('any_distance')).toBe('true');
+    expect(q.get('radius_km')).toBeNull();
+    expect(q.get('sort')).toBe('distance'); // still ordered from the searched place
+    expect(new URLSearchParams(buildSearchQuery({ ...f, radius_km: milesToKm(5) }, 25)).get('any_distance')).toBeNull();
   });
 
   it('drops unknown codes and invalid values', () => {

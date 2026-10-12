@@ -59,6 +59,16 @@ def test_food_and_service_filters(client, published):
     assert r["items"][0]["match_reasons"][1] == {"code": "service_group", "value": "drive_through"}
 
 
+def test_any_distance_removes_the_radius_limit_but_keeps_distance_order(client, published):
+    near = client.get("/api/resources/search", params={**ARL, "radius_km": 1}).json()
+    everywhere = client.get("/api/resources/search", params={**ARL, "radius_km": 1, "any_distance": "true"}).json()
+    wide = client.get("/api/resources/search", params={**ARL, "radius_km": 80}).json()
+    assert everywhere["total"] >= wide["total"] > near["total"]
+    d = [i["distance_km"] for i in everywhere["items"]]
+    assert d == sorted(d) and all(x is not None for x in d)
+    assert everywhere["coverage"]["complete"] is False  # an unlimited search always reaches past covered areas
+
+
 def test_need_match_any_treats_selected_needs_as_alternatives(client, published):
     both = {**ARL, "radius_km": 60, "food_group": "infant", "service_group": "drive_through"}
     assert names(client.get("/api/resources/search", params=both).json()["items"]) == set()  # default: must offer both

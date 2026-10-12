@@ -347,7 +347,8 @@
     "updating": "Actualizando resultados…",
     "errorTitle": "No pudimos cargar los resultados",
     "hideSearch": "Ocultar opciones de búsqueda",
-    "showSearch": "Mostrar opciones de búsqueda"
+    "showSearch": "Mostrar opciones de búsqueda",
+    "radiusAny": "Sin límite"
   },
   "filters": {
     "title": "Filtros",

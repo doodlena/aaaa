@@ -74,6 +74,7 @@ def search_resources(
     lat: float | None = Query(None, ge=-90, le=90),
     lon: float | None = Query(None, ge=-180, le=180),
     radius_km: float = Query(16.09, gt=0, description="Default is 10 miles"),
+    any_distance: bool = Query(False, description="No distance limit around lat/lon (radius_km is ignored)"),
     bbox: str | None = Query(None, description="min_lon,min_lat,max_lon,max_lat (viewport search)"),
     jurisdiction: str | None = None,
     food_group: CSV = None,
@@ -112,7 +113,7 @@ def search_resources(
         if bad:
             raise HTTPException(422, f"unknown {name}: {bad}")
     params = SearchParams(
-        lat=lat, lon=lon, radius_km=radius_km, bbox=box, jurisdiction=jurisdiction, food_groups=fg, food_types=_split(food_type),
+        lat=lat, lon=lon, radius_km=None if any_distance else radius_km, bbox=box, jurisdiction=jurisdiction, food_groups=fg, food_types=_split(food_type),
         service_groups=sg, service_types=_split(service_type), need_match=need_match, on_date=date_, open_today=open_today,
         upcoming_days=upcoming_days, eligibility=el, wheelchair=wheelchair, live_open=live_open, live_food_groups=lfg,
         language=language, sort=sort,
