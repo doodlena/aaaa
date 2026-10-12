@@ -6,7 +6,7 @@ import { AuthProvider } from './state/auth';
 import { MetaProvider } from './state/meta';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
-import { LoginPage, RegisterPage } from './pages/AuthPages';
+import { LoginPage, OAuthCallbackPage, RegisterPage } from './pages/AuthPages';
 import { AccountPage } from './pages/AccountPage';
 import { FavoritesPage } from './pages/FavoritesPage';
 import { ResourcePage } from './pages/ResourcePage';
@@ -30,6 +30,7 @@ export function App() {
               <Route path="about" element={<AboutPage />} />
               <Route path="login" element={<LoginPage />} />
               <Route path="register" element={<RegisterPage />} />
+              <Route path="auth/callback" element={<OAuthCallbackPage />} />
               <Route path="account" element={<AccountPage />} />
               <Route path="favorites" element={<FavoritesPage />} />
               <Route path="pantry/*" element={<PantryRoutes />} />

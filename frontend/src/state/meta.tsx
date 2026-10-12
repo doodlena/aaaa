@@ -56,6 +56,12 @@ export function MetaProvider({ children }: { children: ReactNode }) {
 export const useMeta = () => useContext(MetaContext);
 
 /** AI switches; everything is off until the server says otherwise. */
+/** The configured OAuth sign-in provider, or null when the feature is off. `name` may be empty (use a generic label). */
+export function useOAuth(): { name: string } | null {
+  const o = useContext(MetaContext).features?.oauth;
+  return o?.enabled ? { name: o.provider } : null;
+}
+
 export function useAI(): Features['ai'] {
   return useContext(MetaContext).features?.ai ?? NO_AI;
 }

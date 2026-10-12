@@ -57,6 +57,13 @@ class Settings(BaseSettings):
     secret_key: str | None = None  # Fernet key for encrypting stored secrets (required in production)
     ai_public_search_per_hour: int = 30
 
+    # Optional sign-in with an OpenID Connect provider (see app/auth/oauth.py). Off unless issuer, id and secret are set.
+    oidc_issuer: str | None = None  # e.g. https://accounts.google.com
+    oidc_client_id: str | None = None
+    oidc_client_secret: str | None = None
+    oidc_provider_name: str = ""  # shown on the button, e.g. "Google"; a generic label is used when empty
+    oidc_redirect_url: str | None = None  # defaults to <first CORS origin>/auth/callback; must be registered with the provider
+
 
 @lru_cache
 def get_settings() -> Settings:

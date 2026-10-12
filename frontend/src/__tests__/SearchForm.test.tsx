@@ -24,7 +24,7 @@ describe('SearchForm', () => {
   it('applies a signed-in user’s saved preferences to the new search', async () => {
     mockFetch(
       [{ path: '/api/geocode', body: { results: [{ label: 'ZIP 22204', lat: 38.86, lon: -77.1, source: 'x', precision: 'zip' }], unavailable_providers: [] } }],
-      { user: { id: 1, email: 'a@example.com', role: 'user', preferred_language: 'en', preferences: { food_groups: ['produce'], eligibility: ['no_id_required'] } } },
+      { user: { id: 1, email: 'a@example.com', role: 'user', preferred_language: 'en', preferences: { food_groups: ['produce'], eligibility: ['no_id_required'] }, has_password: true, oauth_linked: false } },
     );
     renderApp(<SearchForm />);
     await waitFor(() => expect(globalThis.fetch).toHaveBeenCalled());

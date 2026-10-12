@@ -9,6 +9,8 @@ interface AuthValue {
   loading: boolean;
   login(email: string, password: string): Promise<User>;
   register(email: string, password: string): Promise<User>;
+  /** Finish an OAuth sign-in (or account link) with the code and state the provider sent back. */
+  completeOAuth(code: string, state: string): Promise<User>;
   logout(): Promise<void>;
   setUser(u: User | null): void;
   /** Change UI language: persists locally and, when signed in, to the account. */
@@ -62,6 +64,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     [i18n.language],
   );
 
+  const completeOAuth = useCallback(
+    async (code: string, state: string) => {
+      const u = await api.oauthCallback(code, state, isSupported(i18n.language) ? i18n.language : 'en');
+      setUser(u);
+      adoptAccountLanguage(u);
+      return u;
+    },
+    [adoptAccountLanguage, i18n.language],
+  );
+
   const logout = useCallback(async () => {
     try {
       await api.logout();
@@ -86,8 +98,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   );
 
   const value = useMemo(
-    () => ({ user, loading, login, register, logout, setUser, changeLanguage }),
-    [user, loading, login, register, logout, changeLanguage],
+    () => ({ user, loading, login, register, completeOAuth, logout, setUser, changeLanguage }),
+    [user, loading, login, register, completeOAuth, logout, changeLanguage],
   );
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

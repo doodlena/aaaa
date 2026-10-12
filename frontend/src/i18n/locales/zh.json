@@ -524,7 +524,15 @@
     "registerIntro": "查找食物不需要账户。账户只是让您可以保存地点和偏好。",
     "passwordHint": "至少 10 个字符。",
     "confirmPassword": "再次输入密码",
-    "privacyShort": "我们只保存您的电子邮件、受保护的密码、您的语言和您保存的地点。我们绝不分享或出售这些信息。"
+    "privacyShort": "我们只保存您的电子邮件、受保护的密码、您的语言和您保存的地点。我们绝不分享或出售这些信息。",
+    "oauthContinue": "使用 {{provider}} 继续",
+    "oauthContinueGeneric": "使用单点登录继续",
+    "oauthPrivacy": "我们只从提供方收到您的电子邮件地址。不包括个人资料、联系人或其他数据。",
+    "oauthFailed": "登录未完成。请重试。",
+    "oauthCancelled": "登录已取消。",
+    "oauthAccountExists": "这个电子邮件已有账户。请用密码登录，然后在账户页面连接该提供方。",
+    "oauthLinkConflict": "该提供方账户已连接到这里的另一个账户。",
+    "oauthBackToSignIn": "返回登录"
   },
   "account": {
     "title": "您的账户",
@@ -546,7 +554,13 @@
     "deleteConfirmRequired": "请勾选此框，确认您要删除账户。",
     "deleteButton": "删除我的账户",
     "wrongPassword": "密码不正确。",
-    "adminCannotDelete": "管理员账户不能在这里删除。"
+    "adminCannotDelete": "管理员账户不能在这里删除。",
+    "oauthTitle": "登录方式",
+    "oauthIntro": "连接一个提供方，这样您无需密码即可登录。",
+    "oauthConnect": "连接 {{provider}}",
+    "oauthConnectGeneric": "连接单点登录",
+    "oauthLinked": "已连接 {{provider}}。您可以用它登录。",
+    "oauthLinkedGeneric": "已连接单点登录。您可以用它登录。"
   },
   "favorites": {
     "title": "已保存的地点",

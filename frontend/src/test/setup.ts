@@ -24,6 +24,7 @@ window.scrollTo = (() => {}) as typeof window.scrollTo;
 
 beforeEach(async () => {
   localStorage.clear();
+  sessionStorage.clear();
   document.cookie = 'nfa_csrf=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
   await i18n.changeLanguage('en');
 });

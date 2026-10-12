@@ -66,7 +66,25 @@ See `.env.example`. Every backend variable uses the prefix `FOODACCESS_`.
 | `HTTP_USER_AGENT` | project UA | Identifies the crawler. Include a contact address. |
 | `TRANSLATION_PROVIDER`, `LIBRETRANSLATE_URL` | `none` | Optional machine translation |
 | `MAX_SEARCH_RADIUS_KM` | 80 | API guard |
+| `OIDC_ISSUER`, `OIDC_CLIENT_ID`, `OIDC_CLIENT_SECRET` | unset | Optional OAuth sign-in (see below). Off unless all three are set. |
+| `OIDC_PROVIDER_NAME`, `OIDC_REDIRECT_URL` | empty, `<first CORS origin>/auth/callback` | Button label; redirect URL registered with the provider |
 | `VITE_MAP_STYLE_URL` | OpenFreeMap Liberty | MapLibre style. Point to self-hosted tiles in production if desired. |
+
+## OAuth sign-in (optional)
+
+Sign-in with any OpenID Connect provider (Google, Microsoft, or a self-hosted one such as Keycloak or Authentik) is
+built in and off by default. Password accounts keep working either way.
+
+1. Create an OAuth client ("Web application") with the provider. Register the redirect URL
+   `<site>/auth/callback` (`http://localhost:5173/auth/callback` for local development).
+2. Set `FOODACCESS_OIDC_ISSUER` (e.g. `https://accounts.google.com`), `FOODACCESS_OIDC_CLIENT_ID`,
+   `FOODACCESS_OIDC_CLIENT_SECRET` and, for the button label, `FOODACCESS_OIDC_PROVIDER_NAME` in `.env`. Never commit
+   the secret.
+3. Restart the API. `/api/meta/features` then reports `oauth.enabled: true` and the sign-in pages show the button.
+
+Only the `openid email` scopes are requested and only the provider's subject id is stored (table `oauth_identities`).
+The provider must report the email as verified. A provider sign-in never takes over an existing password account with
+the same email: that person signs in with the password and uses "Connect" on the account page.
 
 ## Tests
 

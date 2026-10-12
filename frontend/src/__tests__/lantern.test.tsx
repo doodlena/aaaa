@@ -26,7 +26,7 @@ import ExplorerPage from '../pages/ExplorerPage';
 import { ResourcePage } from '../pages/ResourcePage';
 import AdminRoutes from '../pages/admin/AdminRoutes';
 
-const admin: User = { id: 1, email: 'admin@example.com', role: 'admin', preferred_language: 'en', preferences: {} };
+const admin: User = { id: 1, email: 'admin@example.com', role: 'admin', preferred_language: 'en', preferences: {}, has_password: true, oauth_linked: false };
 const searchCalls = (calls: { url: URL }[]) => calls.filter((c) => c.url.pathname === '/api/resources/search').map((c) => c.url.searchParams);
 
 describe('needs chooser', () => {

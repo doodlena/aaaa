@@ -524,7 +524,15 @@
     "registerIntro": "식품을 찾는 데 계정은 필요하지 않습니다. 계정은 장소와 설정을 저장하는 용도일 뿐입니다.",
     "passwordHint": "10자 이상.",
     "confirmPassword": "비밀번호를 다시 입력하세요",
-    "privacyShort": "이메일, 보호 처리된 비밀번호, 언어, 저장한 장소만 보관합니다. 절대 공유하거나 판매하지 않습니다."
+    "privacyShort": "이메일, 보호 처리된 비밀번호, 언어, 저장한 장소만 보관합니다. 절대 공유하거나 판매하지 않습니다.",
+    "oauthContinue": "{{provider}}(으)로 계속하기",
+    "oauthContinueGeneric": "통합 로그인으로 계속하기",
+    "oauthPrivacy": "제공 업체로부터 이메일 주소만 받습니다. 프로필, 연락처 등 다른 정보는 받지 않습니다.",
+    "oauthFailed": "로그인이 완료되지 않았습니다. 다시 시도해 주세요.",
+    "oauthCancelled": "로그인이 취소되었습니다.",
+    "oauthAccountExists": "이 이메일로 만든 계정이 이미 있습니다. 비밀번호로 로그인한 다음 계정 페이지에서 제공 업체를 연결하세요.",
+    "oauthLinkConflict": "해당 제공 업체 계정은 이미 이곳의 다른 계정에 연결되어 있습니다.",
+    "oauthBackToSignIn": "로그인으로 돌아가기"
   },
   "account": {
     "title": "내 계정",
@@ -546,7 +554,13 @@
     "deleteConfirmRequired": "계정 삭제를 원하시면 확인란에 체크하세요.",
     "deleteButton": "내 계정 삭제",
     "wrongPassword": "비밀번호가 올바르지 않습니다.",
-    "adminCannotDelete": "관리자 계정은 여기에서 삭제할 수 없습니다."
+    "adminCannotDelete": "관리자 계정은 여기에서 삭제할 수 없습니다.",
+    "oauthTitle": "로그인 방법",
+    "oauthIntro": "제공 업체를 연결하면 비밀번호 없이 로그인할 수 있습니다.",
+    "oauthConnect": "{{provider}} 연결",
+    "oauthConnectGeneric": "통합 로그인 연결",
+    "oauthLinked": "{{provider}}이(가) 연결되어 있습니다. 이 방법으로 로그인할 수 있습니다.",
+    "oauthLinkedGeneric": "통합 로그인이 연결되어 있습니다. 이 방법으로 로그인할 수 있습니다."
   },
   "favorites": {
     "title": "저장한 장소",

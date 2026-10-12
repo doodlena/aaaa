@@ -524,7 +524,15 @@
     "registerIntro": "No necesita una cuenta para buscar comida. La cuenta solo sirve para guardar lugares y preferencias.",
     "passwordHint": "Al menos 10 caracteres.",
     "confirmPassword": "Escriba su contraseña otra vez",
-    "privacyShort": "Solo guardamos su correo electrónico, una contraseña protegida, su idioma y los lugares que guarde. Nunca los compartimos ni los vendemos."
+    "privacyShort": "Solo guardamos su correo electrónico, una contraseña protegida, su idioma y los lugares que guarde. Nunca los compartimos ni los vendemos.",
+    "oauthContinue": "Continuar con {{provider}}",
+    "oauthContinueGeneric": "Continuar con inicio de sesión único",
+    "oauthPrivacy": "Solo recibimos su dirección de correo electrónico del proveedor. Ningún perfil, contactos ni otros datos.",
+    "oauthFailed": "No se completó el inicio de sesión. Inténtelo de nuevo.",
+    "oauthCancelled": "Se canceló el inicio de sesión.",
+    "oauthAccountExists": "Ya existe una cuenta con este correo electrónico. Inicie sesión con su contraseña y luego conecte el proveedor desde la página de su cuenta.",
+    "oauthLinkConflict": "Esa cuenta del proveedor ya está conectada a otra cuenta aquí.",
+    "oauthBackToSignIn": "Volver a iniciar sesión"
   },
   "account": {
     "title": "Su cuenta",
@@ -546,7 +554,13 @@
     "deleteConfirmRequired": "Marque la casilla para confirmar que desea eliminar su cuenta.",
     "deleteButton": "Eliminar mi cuenta",
     "wrongPassword": "La contraseña no es correcta.",
-    "adminCannotDelete": "Las cuentas de administración no se pueden eliminar aquí."
+    "adminCannotDelete": "Las cuentas de administración no se pueden eliminar aquí.",
+    "oauthTitle": "Métodos de inicio de sesión",
+    "oauthIntro": "Conecte un proveedor para iniciar sesión sin su contraseña.",
+    "oauthConnect": "Conectar {{provider}}",
+    "oauthConnectGeneric": "Conectar inicio de sesión único",
+    "oauthLinked": "{{provider}} está conectado. Puede iniciar sesión con él.",
+    "oauthLinkedGeneric": "El inicio de sesión único está conectado. Puede iniciar sesión con él."
   },
   "favorites": {
     "title": "Lugares guardados",

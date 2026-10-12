@@ -7,11 +7,14 @@ import { errorKey, Loading } from '../components/Status';
 import { SUPPORTED_LANGUAGES, type LangCode } from '../i18n';
 import { DEFAULT_FILTERS, ELIGIBILITY_FILTERS, FOOD_GROUPS, kmToMiles, RADII, SERVICE_GROUPS, SORTS, toggle } from '../lib/filters';
 import { useAuth } from '../state/auth';
+import { useOAuth } from '../state/meta';
+import { OAuthButton } from './AuthPages';
 
 export function AccountPage() {
   const { t } = useTranslation();
   const { user, loading, changeLanguage, setUser } = useAuth();
   const navigate = useNavigate();
+  const oauth = useOAuth();
   const id = useId();
   const [prefs, setPrefs] = useState<SavedPreferences>({});
   const [prefsMsg, setPrefsMsg] = useState<string | null>(null);
@@ -46,7 +49,7 @@ export function AccountPage() {
     e.preventDefault();
     setDelMsg(null);
     if (!delConfirm) return setDelMsg(t('account.deleteConfirmRequired'));
-    if (!delPw) return setDelMsg(t('auth.missingFields'));
+    if (user.has_password && !delPw) return setDelMsg(t('auth.missingFields'));
     setBusy(true);
     try {
       await api.deleteAccount(delPw);
@@ -155,14 +158,30 @@ export function AccountPage() {
         </ul>
       </section>
 
+      {oauth && (
+        <section className="card-section" aria-labelledby={`${id}-oauth`}>
+          <h2 id={`${id}-oauth`}>{t('account.oauthTitle')}</h2>
+          {user.oauth_linked ? (
+            <p>{oauth.name ? t('account.oauthLinked', { provider: oauth.name }) : t('account.oauthLinkedGeneric')}</p>
+          ) : (
+            <>
+              <p>{t('account.oauthIntro')}</p>
+              <OAuthButton next="/account" link />
+            </>
+          )}
+        </section>
+      )}
+
       <section className="card-section card-section--danger" aria-labelledby={`${id}-del`}>
         <h2 id={`${id}-del`}>{t('account.deleteTitle')}</h2>
         <p>{t('account.deleteIntro')}</p>
         <form className="form" onSubmit={deleteAccount}>
-          <div className="field">
-            <label htmlFor={`${id}-delpw`}>{t('account.deletePassword')}</label>
-            <input id={`${id}-delpw`} type="password" autoComplete="current-password" value={delPw} onChange={(e) => setDelPw(e.target.value)} />
-          </div>
+          {user.has_password && (
+            <div className="field">
+              <label htmlFor={`${id}-delpw`}>{t('account.deletePassword')}</label>
+              <input id={`${id}-delpw`} type="password" autoComplete="current-password" value={delPw} onChange={(e) => setDelPw(e.target.value)} />
+            </div>
+          )}
           <label className="check">
             <input type="checkbox" checked={delConfirm} onChange={(e) => setDelConfirm(e.target.checked)} />
             <span>{t('account.deleteConfirm')}</span>

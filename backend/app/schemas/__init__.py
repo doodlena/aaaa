@@ -106,6 +106,18 @@ class UserOut(BaseModel):
     role: str
     preferred_language: str
     preferences: dict
+    has_password: bool = True  # false for accounts created through an OAuth provider
+    oauth_linked: bool = False
+
+
+class OAuthStartIn(BaseModel):
+    link: bool = False  # true: connect the provider to the signed-in account instead of signing in
+
+
+class OAuthCallbackIn(BaseModel):
+    code: str = Field(min_length=1, max_length=2000)
+    state: str = Field(min_length=1, max_length=200)
+    preferred_language: Lang = "en"
 
 
 class MeOut(BaseModel):
@@ -131,7 +143,7 @@ class PreferencesIn(BaseModel):
 
 
 class DeleteAccountIn(BaseModel):
-    password: str = Field(max_length=200)
+    password: str = Field(default="", max_length=200)  # not asked of accounts that have no password (OAuth sign-in)
 
 
 # --- admin ----------------------------------------------------------------------------------------------------

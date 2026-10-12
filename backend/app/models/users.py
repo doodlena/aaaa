@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String
+from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db import Base
@@ -31,6 +31,19 @@ class UserSession(Base):
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
     created_at: Mapped[datetime] = created_at()
     expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+
+
+class OAuthIdentity(Base):
+    """A sign-in identity at an OpenID Connect provider, linked to one account. Only issuer + subject are stored."""
+
+    __tablename__ = "oauth_identities"
+    __table_args__ = (UniqueConstraint("issuer", "subject"),)
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    issuer: Mapped[str] = mapped_column(String(255))
+    subject: Mapped[str] = mapped_column(String(255))
+    created_at: Mapped[datetime] = created_at()
 
 
 class Favorite(Base):

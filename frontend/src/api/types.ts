@@ -236,6 +236,9 @@ export interface User {
   role: string;
   preferred_language: string;
   preferences: SavedPreferences;
+  /** False for accounts created through an OAuth provider. */
+  has_password: boolean;
+  oauth_linked: boolean;
 }
 
 export interface FavoriteItem {
@@ -392,6 +395,8 @@ export interface AITestResult {
 export interface Features {
   app_name: string;
   demo_mode: boolean;
+  /** Optional sign-in with an OpenID Connect provider; `provider` is its display name (may be empty). */
+  oauth?: { enabled: boolean; provider: string };
   ai: { search: boolean; announcement_drafts: boolean; structure_suggestions: boolean; translation: boolean; model: string | null };
 }
 

@@ -279,6 +279,16 @@ svg {
 .lang {
   position: relative;
 }
+.oauth {
+  margin-top: var(--sp-4);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--line);
+}
+.card-section .oauth {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
 .lang__more {
   display: inline-flex;
   align-items: center;

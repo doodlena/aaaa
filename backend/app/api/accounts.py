@@ -4,6 +4,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.api.public import load_location
+from app.auth import oauth
 from app.auth.security import (
     burn_verify,
     create_session,
@@ -16,15 +17,17 @@ from app.auth.security import (
 )
 from app.db import get_db
 from app.geospatial.search import public_visibility
-from app.models import Favorite, Location, User, UserSession
-from app.schemas import DeleteAccountIn, LoginIn, MeOut, PreferencesIn, RegisterIn, UserOut
+from app.models import Favorite, Location, OAuthIdentity, User, UserSession
+from app.schemas import DeleteAccountIn, LoginIn, MeOut, OAuthCallbackIn, OAuthStartIn, PreferencesIn, RegisterIn, UserOut
 from app.services.presenter import summary
 
 router = APIRouter(prefix="/api", tags=["accounts"])
 
 
-def user_out(u: User) -> dict:
-    return {"id": u.id, "email": u.email, "role": u.role, "preferred_language": u.preferred_language, "preferences": u.preferences or {}}
+def user_out(u: User, db: Session) -> dict:
+    linked = db.scalar(select(OAuthIdentity.id).where(OAuthIdentity.user_id == u.id).limit(1)) is not None
+    return {"id": u.id, "email": u.email, "role": u.role, "preferred_language": u.preferred_language, "preferences": u.preferences or {},
+            "has_password": u.password_hash != oauth.UNUSABLE_PASSWORD, "oauth_linked": linked}
 
 
 @router.post("/auth/register", response_model=UserOut, status_code=201)
@@ -40,7 +43,7 @@ def register(body: RegisterIn, request: Request, response: Response, db: Session
         db.rollback()
         raise HTTPException(409, "An account with this email already exists") from None
     create_session(db, user, response)
-    return user_out(user)
+    return user_out(user, db)
 
 
 @router.post("/auth/login", response_model=UserOut)
@@ -56,7 +59,7 @@ def login(body: LoginIn, request: Request, response: Response, db: Session = Dep
     if not verify_password(user.password_hash, body.password):
         raise HTTPException(401, "Email or password is incorrect")
     create_session(db, user, response)
-    return user_out(user)
+    return user_out(user, db)
 
 
 @router.post("/auth/logout", status_code=204)
@@ -67,8 +70,54 @@ def logout(request: Request, response: Response, db: Session = Depends(get_db)):
 
 
 @router.get("/auth/me", response_model=MeOut)
-def me(user: User | None = Depends(optional_user)):
-    return {"user": user_out(user) if user else None}
+def me(user: User | None = Depends(optional_user), db: Session = Depends(get_db)):
+    return {"user": user_out(user, db) if user else None}
+
+
+@router.post("/auth/oauth/start")
+def oauth_start(body: OAuthStartIn, request: Request, response: Response):
+    """Begin sign-in with the configured OpenID Connect provider. The browser then goes to the returned URL."""
+    if not oauth.enabled():
+        raise HTTPException(404, "Sign-in with a provider is not enabled")
+    if not login_limiter.allow(f"oauth-start:{request.client.host if request.client else '-'}"):
+        raise HTTPException(429, "Too many attempts. Please wait and try again.")
+    return {"url": oauth.begin(response, body.link)}
+
+
+@router.post("/auth/oauth/callback", response_model=UserOut)
+def oauth_callback(body: OAuthCallbackIn, request: Request, response: Response, db: Session = Depends(get_db)):
+    if not oauth.enabled():
+        raise HTTPException(404, "Sign-in with a provider is not enabled")
+    if not login_limiter.allow(f"oauth-callback:{request.client.host if request.client else '-'}"):
+        raise HTTPException(429, "Too many attempts. Please wait and try again.")
+    ident, link = oauth.complete(request, response, body.code, body.state)
+    known = db.scalar(select(OAuthIdentity).where(OAuthIdentity.issuer == ident.issuer, OAuthIdentity.subject == ident.subject))
+
+    if link:  # connect the provider to the account that is signed in right now
+        user = require_user(request, db)
+        if known and known.user_id != user.id:
+            raise HTTPException(409, "This provider account is already connected to a different account", headers=oauth.CLEAR_FLOW)
+        if not known:
+            db.add(OAuthIdentity(user_id=user.id, issuer=ident.issuer, subject=ident.subject))
+            db.commit()
+        return user_out(user, db)
+
+    if known:
+        user = db.get(User, known.user_id)
+    else:
+        if db.scalar(select(User.id).where(User.email == ident.email)):
+            # Never adopt a password account by email match: local emails are unverified, so whoever registered it
+            # first would keep access. The owner signs in with the password and connects the provider instead.
+            raise HTTPException(409, "An account with this email already exists. Sign in with your password, then "
+                                     "connect the provider from your account page.", headers=oauth.CLEAR_FLOW)
+        user = User(email=ident.email, password_hash=oauth.UNUSABLE_PASSWORD, preferred_language=body.preferred_language,
+                    preferences={})
+        db.add(user)
+        db.flush()
+        db.add(OAuthIdentity(user_id=user.id, issuer=ident.issuer, subject=ident.subject))
+        db.commit()
+    create_session(db, user, response)
+    return user_out(user, db)
 
 
 @router.get("/me/favorites")
@@ -107,13 +156,14 @@ def update_preferences(body: PreferencesIn, user: User = Depends(require_user), 
     if body.preferences is not None:
         user.preferences = body.preferences
     db.commit()
-    return user_out(user)
+    return user_out(user, db)
 
 
 @router.delete("/me", status_code=204)
 def delete_account(body: DeleteAccountIn, request: Request, response: Response, user: User = Depends(require_user),
                    db: Session = Depends(get_db)):
-    if not verify_password(user.password_hash, body.password):
+    # Accounts without a password (OAuth sign-in) confirm with the session and CSRF token alone.
+    if user.password_hash != oauth.UNUSABLE_PASSWORD and not verify_password(user.password_hash, body.password):
         raise HTTPException(401, "Password is incorrect")
     if user.role == "admin":
         raise HTTPException(409, "Administrator accounts must be removed by another administrator via the CLI")

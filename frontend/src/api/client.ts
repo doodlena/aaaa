@@ -139,6 +139,9 @@ export const api = {
   register: (email: string, password: string, preferred_language: string) =>
     request<User>('POST', '/auth/register', { email, password, preferred_language }),
   logout: () => request<void>('POST', '/auth/logout'),
+  oauthStart: (link: boolean) => request<{ url: string }>('POST', '/auth/oauth/start', { link }),
+  oauthCallback: (code: string, state: string, preferred_language: string) =>
+    request<User>('POST', '/auth/oauth/callback', { code, state, preferred_language }),
   favorites: () => request<{ items: FavoriteItem[] }>('GET', '/me/favorites'),
   addFavorite: (id: number) => request<{ id: number; saved: boolean }>('POST', `/me/favorites/${id}`),
   removeFavorite: (id: number) => request<void>('DELETE', `/me/favorites/${id}`),

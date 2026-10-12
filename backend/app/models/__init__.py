@@ -22,5 +22,5 @@ from app.models.resources import (  # noqa: F401
     ServiceFoodType,
     Translation,
 )
-from app.models.users import AppSetting, Favorite, User, UserSession  # noqa: F401
+from app.models.users import AppSetting, Favorite, OAuthIdentity, User, UserSession  # noqa: F401
 from app.models.shelf import CommunityReport, ProviderMembership, ShelfUpdate, SurplusPost  # noqa: F401,E402

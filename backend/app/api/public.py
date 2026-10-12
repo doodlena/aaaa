@@ -10,6 +10,7 @@ from app.db import get_db
 from app.geospatial import geocode as geo
 from app.geospatial.search import ELIGIBILITY_FILTERS, SearchParams, categories, public_visibility, search
 from app.models import DistributionEvent, Jurisdiction, Location, Service, Source, SourceRecord, Translation
+from app.auth import oauth
 from app.auth.security import RateLimiter
 from app.schemas import AISearchIn, GeocodeResponse, ReportIn, SearchResponse
 from app.services import ai
@@ -166,6 +167,7 @@ def meta_features():
     s = get_settings()
     on = ai.enabled()
     return {"app_name": s.app_name, "demo_mode": s.show_synthetic,
+            "oauth": {"enabled": oauth.enabled(), "provider": oauth.provider_name()},
             "ai": {"search": on, "announcement_drafts": on, "structure_suggestions": on,
                    "translation": on and s.translation_provider == "claude", "model": ai.model() if on else None}}
 

@@ -524,7 +524,15 @@
     "registerIntro": "You do not need an account to find food. An account only lets you save places and preferences.",
     "passwordHint": "At least 10 characters.",
     "confirmPassword": "Type your password again",
-    "privacyShort": "We store only your email, a protected password, your language, and the places you save. We never share or sell them."
+    "privacyShort": "We store only your email, a protected password, your language, and the places you save. We never share or sell them.",
+    "oauthContinue": "Continue with {{provider}}",
+    "oauthContinueGeneric": "Continue with single sign-on",
+    "oauthPrivacy": "We receive only your email address from the provider. No profile, contacts or other data.",
+    "oauthFailed": "Sign-in did not finish. Please try again.",
+    "oauthCancelled": "Sign-in was cancelled.",
+    "oauthAccountExists": "An account with this email already exists. Sign in with your password, then connect the provider from your account page.",
+    "oauthLinkConflict": "That provider account is already connected to a different account here.",
+    "oauthBackToSignIn": "Back to sign in"
   },
   "account": {
     "title": "Your account",
@@ -546,7 +554,13 @@
     "deleteConfirmRequired": "Check the box to confirm you want to delete your account.",
     "deleteButton": "Delete my account",
     "wrongPassword": "The password is incorrect.",
-    "adminCannotDelete": "Administrator accounts cannot be deleted here."
+    "adminCannotDelete": "Administrator accounts cannot be deleted here.",
+    "oauthTitle": "Sign-in methods",
+    "oauthIntro": "Connect a provider so you can sign in without your password.",
+    "oauthConnect": "Connect {{provider}}",
+    "oauthConnectGeneric": "Connect single sign-on",
+    "oauthLinked": "{{provider}} is connected. You can sign in with it.",
+    "oauthLinkedGeneric": "Single sign-on is connected. You can sign in with it."
   },
   "favorites": {
     "title": "Saved places",

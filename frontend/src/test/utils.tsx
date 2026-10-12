@@ -128,7 +128,7 @@ export function searchResponse(overrides: Partial<SearchResponse> = {}): SearchR
   };
 }
 
-export const testUser: User = { id: 7, email: 'person@example.com', role: 'user', preferred_language: 'en', preferences: {} };
+export const testUser: User = { id: 7, email: 'person@example.com', role: 'user', preferred_language: 'en', preferences: {}, has_password: true, oauth_linked: false };
 
 export const testFeatures: Features = {
   app_name: 'Lantern',

@@ -524,7 +524,15 @@
     "registerIntro": "Bạn không cần tài khoản để tìm thực phẩm. Tài khoản chỉ giúp bạn lưu địa điểm và tùy chọn.",
     "passwordHint": "Ít nhất 10 ký tự.",
     "confirmPassword": "Nhập lại mật khẩu",
-    "privacyShort": "Chúng tôi chỉ lưu email, mật khẩu đã được bảo vệ, ngôn ngữ và những địa điểm bạn lưu. Chúng tôi không bao giờ chia sẻ hay bán những thông tin đó."
+    "privacyShort": "Chúng tôi chỉ lưu email, mật khẩu đã được bảo vệ, ngôn ngữ và những địa điểm bạn lưu. Chúng tôi không bao giờ chia sẻ hay bán những thông tin đó.",
+    "oauthContinue": "Tiếp tục với {{provider}}",
+    "oauthContinueGeneric": "Tiếp tục bằng đăng nhập một lần",
+    "oauthPrivacy": "Chúng tôi chỉ nhận địa chỉ email của bạn từ nhà cung cấp. Không nhận hồ sơ, danh bạ hay dữ liệu nào khác.",
+    "oauthFailed": "Đăng nhập chưa hoàn tất. Vui lòng thử lại.",
+    "oauthCancelled": "Đã hủy đăng nhập.",
+    "oauthAccountExists": "Đã có tài khoản dùng email này. Hãy đăng nhập bằng mật khẩu, rồi kết nối nhà cung cấp từ trang tài khoản của bạn.",
+    "oauthLinkConflict": "Tài khoản nhà cung cấp đó đã được kết nối với một tài khoản khác ở đây.",
+    "oauthBackToSignIn": "Quay lại đăng nhập"
   },
   "account": {
     "title": "Tài khoản của bạn",
@@ -546,7 +554,13 @@
     "deleteConfirmRequired": "Hãy đánh dấu vào ô để xác nhận bạn muốn xóa tài khoản.",
     "deleteButton": "Xóa tài khoản của tôi",
     "wrongPassword": "Mật khẩu không đúng.",
-    "adminCannotDelete": "Không thể xóa tài khoản quản trị viên ở đây."
+    "adminCannotDelete": "Không thể xóa tài khoản quản trị viên ở đây.",
+    "oauthTitle": "Cách đăng nhập",
+    "oauthIntro": "Kết nối một nhà cung cấp để bạn có thể đăng nhập mà không cần mật khẩu.",
+    "oauthConnect": "Kết nối {{provider}}",
+    "oauthConnectGeneric": "Kết nối đăng nhập một lần",
+    "oauthLinked": "Đã kết nối {{provider}}. Bạn có thể đăng nhập bằng cách này.",
+    "oauthLinkedGeneric": "Đã kết nối đăng nhập một lần. Bạn có thể đăng nhập bằng cách này."
   },
   "favorites": {
     "title": "Địa điểm đã lưu",

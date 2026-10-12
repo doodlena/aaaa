@@ -16,6 +16,7 @@ decisions. Software completion and real-world data verification are tracked **se
 | Verification workflow (verify/publish/reject/flag/close/reopen/edit/merge), audit log, freshness and staleness, publication-rights gate | `test_verification_*`, `test_admin_*`, `test_restricted_source_needs_direct_verification_to_publish` |
 | Public API: radius, viewport, and jurisdiction search; food/service/schedule/eligibility/accessibility filters with an "uncertain" tier; sorting; pagination; detail; events; geocoding; metadata | `tests/test_api.py` |
 | Accounts: Argon2id, HttpOnly session cookie, CSRF, rate limiting, favorites, preferences (allow-listed), account deletion | `tests/test_api.py` |
+| Optional OAuth sign-in (generic OpenID Connect: code flow with PKCE, state, nonce; account linking; off unless configured). Not yet tried against a real provider | `tests/test_oauth.py` (fake provider), `frontend/src/__tests__/oauth.test.tsx` |
 | Frontend: home, explorer (MapLibre with clustering, synced list, filters, mobile toggle), detail, auth, account, favorites, about, full admin dashboard, EN/ES | 43 Vitest tests; Playwright A, B, C, D, F |
 | Quality report, pilot evaluation report, CLI (`foodaccess …`), cron example | `reports/quality`, `reports/pilot_evaluation` |
 | Optional machine-translation pipeline (LibreTranslate/Argos, self-hosted) | `test_translation_pipeline_and_fallback` (fake engine; no real engine was run) |
