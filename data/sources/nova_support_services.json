@@ -1,6 +1,3118 @@
 {
-  "_notice": "Unverified candidate records of NON-FOOD support services in Northern Virginia OUTSIDE Virginia's 8th Congressional District (Loudoun, western/central Fairfax County, City of Fairfax, Manassas, Manassas Park, Prince William), compiled by AI-assisted research from official/primary web pages fetched on 2026-10-12. Every field comes from the cited source_url (or a URL named in notes). Confirm with the provider before publishing. No confidential domestic-violence shelter addresses are included; hotlines are listed in docs/pilot_research/NOVA_SUPPORT_SERVICES_LOG.md and not imported.",
+  "_notice": "Unverified candidate records of NON-FOOD support services in Northern Virginia OUTSIDE Virginia's 8th Congressional District (Loudoun, western/central Fairfax County, City of Fairfax, Manassas Park; Prince William/Manassas low priority), compiled by AI-assisted research from official/primary web pages fetched on 2026-10-12. Every field comes from the cited source_url (or a URL named in notes). Confirm with the provider before publishing. SAMHSA treatment facilities, HRSA health centers and NVRC homeless shelters are imported separately and excluded here. No confidential domestic-violence shelter addresses are included; hotlines are listed in docs/pilot_research/NOVA_SUPPORT_SERVICES_LOG.md and not imported.",
   "retrieved": "2026-10-12",
-  "method": "AI-assisted web research of official/primary sources (curl, UA OpenShelf-research/0.1, >=1 s between requests, robots.txt checked); US Census geocoder (Public_AR_Current); points filtered with shapely to NoVA localities outside VA-08 (TIGERweb CD119); unverified candidates",
-  "records": []
+  "method": "AI-assisted web research of official/primary sources (curl, UA OpenShelf-research/0.1, >=1 s between requests per host, robots.txt checked, blocked hosts not retried); US Census geocoder (Public_AR_Current); points filtered with shapely to NoVA localities (TIGERweb) outside VA-08 (TIGERweb CD119); unverified candidates",
+  "records": [
+    {
+      "external_id": "nova-svc-fairfax-dfs-pennino",
+      "source_url": "https://www.fairfaxcounty.gov/familyservices/office-locations",
+      "organization_name": "Fairfax County Department of Family Services",
+      "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+      "location_name": "Fairfax Human Services Center – Pennino Building",
+      "address1": "12011 Government Center Parkway",
+      "city": "Fairfax",
+      "zip": "22035",
+      "phone": "703-324-7500",
+      "notes": "TTY 711. Listed as a DFS Human Services Center. Secure outdoor drop box for Family Services documents, 24 hours a day (https://www.fairfaxcounty.gov/familyservices/public-assistance-employment-services/outdoor-drop-box-locations). The office-locations page does not list which programs are served in person at this site.",
+      "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.- 4:30 p.m.",
+      "services": [
+        {
+          "service_type": "snap_application_help",
+          "description": "DFS Human Services Center with drop box for benefit documents; in-person application help not explicitly stated for this site.",
+          "offering_status": "unconfirmed",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "medicaid_enrollment_help",
+          "description": "DFS Human Services Center with drop box for benefit documents; in-person application help not explicitly stated for this site.",
+          "offering_status": "unconfirmed",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.854595,
+      "lon": -77.361496,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-dfs-lake-anne",
+      "source_url": "https://www.fairfaxcounty.gov/familyservices/office-locations",
+      "organization_name": "Fairfax County Department of Family Services",
+      "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+      "location_name": "Department of Family Services – Lake Anne (Reston)",
+      "address1": "11484 Washington Plaza West",
+      "city": "Reston",
+      "zip": "20190",
+      "phone": "703-324-7500",
+      "notes": "TTY 711. Programs listed for the Lake Anne building: Food Stamps; General Relief; Medicaid/Famis-Plus; FAMIS; Health Access Assistance Team (HAAT); TANF; Employment and Training; Volunteer Solutions; State-Local Hospitalization; Child Care Assistance and Referral. Outdoor 24-hour document drop box at this address (outdoor-drop-box-locations page).",
+      "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.- 4:30 p.m.",
+      "services": [
+        {
+          "service_type": "snap_application_help",
+          "description": "Food Stamps (SNAP) listed among programs at the Lake Anne building.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "medicaid_enrollment_help",
+          "description": "Medicaid/Famis-Plus, FAMIS and Health Access Assistance Team (HAAT) listed at the Lake Anne building.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "financial_assistance",
+          "description": "Temporary Assistance for Needy Families (TANF) and General Relief listed at the Lake Anne building.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "childcare",
+          "description": "Child Care Assistance and Referral listed at the Lake Anne building.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.968234,
+      "lon": -77.342544,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-dsvs-pennino",
+      "source_url": "https://www.fairfaxcounty.gov/familyservices/office-locations",
+      "organization_name": "Fairfax County Department of Family Services",
+      "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+      "location_name": "Domestic and Sexual Violence Services – Pennino Building",
+      "address1": "12011 Government Center Parkway",
+      "address2": "Suite 740",
+      "city": "Fairfax",
+      "zip": "22035",
+      "phone": "703-324-5730",
+      "notes": "TTY 711. Public county office (not a shelter). 24-hour Domestic and Sexual Violence Hotline 703-360-7273 (listed in log, not imported).",
+      "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.- 4:30 p.m.",
+      "services": [
+        {
+          "service_type": "domestic_violence_support",
+          "description": "Fairfax County Domestic and Sexual Violence Services office.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.854595,
+      "lon": -77.361496,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-dvac",
+      "source_url": "https://www.fairfaxcounty.gov/familyservices/office-locations",
+      "organization_name": "Fairfax County Department of Family Services",
+      "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+      "location_name": "Domestic Violence Action Center (DVAC) – Historic Courthouse",
+      "address1": "4000 Chain Bridge Road",
+      "address2": "Suite 2702",
+      "city": "Fairfax",
+      "zip": "22032",
+      "phone": "703-324-5730",
+      "notes": "TTY 711. 'Walk-in services are temporarily unavailable at DVAC. For assistance, call 703-246-4573 or the Domestic and Sexual Violence 24-Hour Hotline at 703-360-7273.' ZIP shown on the page as 22032.",
+      "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.- 7 p.m. (By appointment only from 4:30 - 7 p.m.) Walk-in services are temporarily unavailable at DVAC.",
+      "services": [
+        {
+          "service_type": "domestic_violence_support",
+          "description": "Domestic Violence Action Center; walk-in services temporarily unavailable – call 703-246-4573.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "19:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "19:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "19:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "19:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "19:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "By appointment only from 4:30 - 7 p.m.; walk-in services temporarily unavailable."
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.846219,
+      "lon": -77.306696,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-csb-sharon-bulova-center",
+      "source_url": "https://www.fairfaxcounty.gov/community-services-board/sharon-bulova-center-community-health",
+      "organization_name": "Fairfax-Falls Church Community Services Board",
+      "organization_website": "https://www.fairfaxcounty.gov/community-services-board/",
+      "location_name": "Sharon Bulova Center for Community Health (formerly Merrifield Center)",
+      "address1": "8221 Willow Oaks Corporate Drive",
+      "city": "Fairfax",
+      "zip": "22031",
+      "phone": "703-559-3000",
+      "email": "csb@fairfaxcounty.gov",
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "notes": "Emergency Services 703-573-5679 (24/7); Medication Clinic 703-207-7700; Genoa Healthcare Pharmacy 703-852-0041. Entry, Assessment & Referral line 703-383-8500 (TTY 711), Mon-Thu 8:30 a.m.-5 p.m., Fri 10 a.m.-5 p.m.; staff take calls in English and Spanish and can access interpreters (https://www.fairfaxcounty.gov/community-services-board/services/non-emergency). The center also has a Peer Resource Center, pharmacy and Neighborhood Health primary care. Walk-in assessment hours differ between pages: center page says Mon-Thu 8-3 and Fri 10-3; non-emergency page says Mon-Thu 8-3 only.",
+      "raw_hours_text": "Screening and assessment services, available Monday through Thursday from 8:00 a.m. to 3:00 p.m. and Friday from 10:00 a.m. to 3:00 p.m. | CSB's 24/7 emergency services and Crisis Response Center | (non-emergency page) Walk-in at the Sharon Bulova Center for Community Health for an assessment, Monday through Thursday from 8:00 a.m. to 3:00 p.m.",
+      "services": [
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Walk-in screening and assessment; outpatient services; psychiatric services and medication management.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "15:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "15:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "15:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "15:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "10:00",
+              "closes": "15:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "crisis_support",
+          "description": "CSB 24/7 emergency services and Crisis Response Center (call Emergency Services 703-573-5679 before arriving if possible).",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "substance_use_treatment",
+          "description": "Medication-assisted substance use disorder treatment; Addiction Medicine Clinic (Suite 1 East).",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "support_groups",
+          "description": "Peer Resource Center.",
+          "offering_status": "regular"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.864122,
+      "lon": -77.232203,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-csb-chantilly",
+      "source_url": "https://www.fairfaxcounty.gov/community-services-board/facility/chantilly-office",
+      "organization_name": "Fairfax-Falls Church Community Services Board",
+      "organization_website": "https://www.fairfaxcounty.gov/community-services-board/",
+      "location_name": "CSB Chantilly Office",
+      "address1": "14150 Parkeast Circle",
+      "address2": "Suite 200",
+      "city": "Chantilly",
+      "zip": "20151",
+      "phone": "703-968-4000",
+      "email": "csb@fairfaxcounty.gov",
+      "notes": "Medication Clinic 703-968-4047; Genoa Healthcare Pharmacy 703-449-6135; TTY 711. New clients start through Entry, Assessment & Referral 703-383-8500 (non-emergency page). The facility page does not list specific services or hours.",
+      "services": [
+        {
+          "service_type": "mental_health_counseling",
+          "description": "CSB outpatient office with Medication Clinic; specific services not listed on the facility page.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.872495,
+      "lon": -77.434013,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-csb-reston-northwest",
+      "source_url": "https://www.fairfaxcounty.gov/community-services-board/facility/reston-northwest-center",
+      "organization_name": "Fairfax-Falls Church Community Services Board",
+      "organization_website": "https://www.fairfaxcounty.gov/community-services-board/",
+      "location_name": "CSB Reston Office – Northwest Center",
+      "address1": "1850 Cameron Glen Drive",
+      "address2": "Suite 600",
+      "city": "Reston",
+      "zip": "20190",
+      "phone": "703-481-4100",
+      "email": "csb@fairfaxcounty.gov",
+      "notes": "Medication Clinic 703-481-4097; Genoa Healthcare Pharmacy 703-467-7467; TTY 711. New clients start through Entry, Assessment & Referral 703-383-8500. The facility page does not list specific services or hours.",
+      "services": [
+        {
+          "service_type": "mental_health_counseling",
+          "description": "CSB outpatient office with Medication Clinic; specific services not listed on the facility page.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.963545,
+      "lon": -77.359397,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-herndon-reston-phc",
+      "source_url": "https://www.fairfaxcounty.gov/health/clinics/herndon-reston-district-office",
+      "organization_name": "Fairfax County Health Department",
+      "organization_website": "https://www.fairfaxcounty.gov/health/",
+      "location_name": "Herndon-Reston Public Health Center",
+      "address1": "1850 Cameron Glen Drive",
+      "address2": "Suite 100",
+      "city": "Reston",
+      "zip": "20190",
+      "phone": "703-246-7100",
+      "email": "HerndonReston.Office@fairfaxcounty.gov",
+      "notes": "TTY 711. Services: Vital Records; HIV testing; immunizations; maternity services; pregnancy testing; newcomer health screening; STI testing; TB testing; WIC. Opens at 10 a.m. on the second Thursday of each month. WIC appointments: 703-246-5599 (https://www.fairfaxcounty.gov/health/women-infants-children).",
+      "raw_hours_text": "Business Hours: Monday 8 a.m.-4:30 p.m.; Tuesday 8 a.m.-6:30 p.m.; Wednesday-Friday 8 a.m.-4:30 p.m. Walk-in service hours (no appointment necessary): Mon 8 a.m.-4 p.m.; Tue 10 a.m.-6 p.m.; Wed 8 a.m.-4 p.m.; Thu 8 a.m.-4 p.m.; Fri 8 a.m.-12 p.m. All Health Department locations will open at 10 a.m. on the second Thursday of each month to accommodate staff learning development.",
+      "raw_eligibility_text": "Fees and eligibility vary by service.",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Public health center: immunizations, maternity services, pregnancy testing, HIV/STI/TB testing, newcomer health screening. Walk-ins available.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "18:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "wic_services",
+          "description": "WIC office (Suite 100). Call 703-246-5599 for appointments.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.963545,
+      "lon": -77.359397,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-franconia-springfield-phc",
+      "source_url": "https://www.fairfaxcounty.gov/health/clinics/franconia-springfield-public-health-center",
+      "organization_name": "Fairfax County Health Department",
+      "organization_website": "https://www.fairfaxcounty.gov/health/",
+      "location_name": "Franconia-Springfield Public Health Center",
+      "address1": "6564 Loisdale Court",
+      "address2": "4th Floor",
+      "city": "Springfield",
+      "zip": "22150",
+      "phone": "703-246-7100",
+      "email": "FranconiaSpringfield.Office@fairfaxcounty.gov",
+      "notes": "TTY 711. Services include speech and hearing, immunizations, maternity, HIV/STI/TB testing, WIC.",
+      "raw_hours_text": "Business Hours: Mon 8 a.m.-4:30 p.m.; Tue 8 a.m.-6:30 p.m.; Wed-Fri 8 a.m.-4:30 p.m.",
+      "raw_eligibility_text": "Fees and eligibility vary by service.",
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Public health center.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "wic_services",
+          "description": "WIC office.",
+          "offering_status": "regular"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.776613,
+      "lon": -77.178555,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-wic-sully-healthworks",
+      "source_url": "https://www.fairfaxcounty.gov/health/women-infants-children",
+      "organization_name": "Fairfax County Health Department",
+      "organization_website": "https://www.fairfaxcounty.gov/health/",
+      "location_name": "WIC at HealthWorks at Sully Community Center",
+      "address1": "13800 Wall Road",
+      "city": "Herndon",
+      "zip": "20170",
+      "phone": "703-246-5599",
+      "notes": "TTY 711. Hybrid in-person and remote appointments. Offices open at 10 a.m. on the second Thursday of each month. Hours may vary by location.",
+      "raw_hours_text": "WIC offices are open Monday to Friday, 8 a.m.-4:30 p.m. unless stated otherwise. *Hours may vary by location.",
+      "raw_eligibility_text": "Participants must meet categorical, income, residential and nutrition risk eligibility requirements. Categorical: Women who are pregnant, breastfeeding up to one year after delivery, or non-breastfeeding postpartum women up to 6 months after delivery or end of pregnancy. Infants and children up to five years. Residential: Resident of Virginia. Income: Meet program income eligibility guidelines or participate in certain programs (SNAP, Medicaid, TANF, National School Lunch Program).",
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Resident of Virginia."
+        },
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Meet program income eligibility guidelines or participate in SNAP, Medicaid, TANF or National School Lunch Program."
+        },
+        {
+          "requirement_type": "other",
+          "status": "required",
+          "details": "Pregnant, breastfeeding (up to 1 year) or postpartum (up to 6 months) women; infants and children up to five years; nutrition risk assessment."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Please call one of the sites for an appointment or assistance (703-246-5599)."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "wic_services",
+          "description": "WIC: supplemental foods, nutrition counseling, breastfeeding support, referrals.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.916993,
+      "lon": -77.422722,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-reston-employment-resource-center",
+      "source_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
+      "organization_name": "Fairfax County Department of Family Services",
+      "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+      "location_name": "Reston Employment Resource Center",
+      "address1": "11484 Washington Plaza",
+      "address2": "Suite 110",
+      "city": "Reston",
+      "zip": "20190",
+      "phone": "703-533-5400",
+      "email": "DFSWorkforceDevelopment@fairfaxcounty.gov",
+      "notes": "TTY 711. Fairfax County Workforce Center.",
+      "raw_hours_text": "Contact a Fairfax County Workforce Center: Call 703-533-5400, TTY 711 or email and a team member will be in touch within two business days. Monday-Thursday 8:30 a.m.-4:30 p.m. Friday 10 a.m.-4:30 p.m.",
+      "eligibility": [
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Please schedule an appointment to meet with a career specialist. One appointment per person each day; available two weeks in advance."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "job_training",
+          "description": "Career services: resume and cover letter review, job search assistance, practice interviews, job application assistance (in person or virtual, by appointment). Services are available in multiple languages.",
+          "offering_status": "regular"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.968234,
+      "lon": -77.342544,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-employment-resource-center-pennino",
+      "source_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
+      "organization_name": "Fairfax County Department of Family Services",
+      "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
+      "location_name": "Fairfax Employment Resource Center – Pennino Building",
+      "address1": "12011 Government Center Parkway",
+      "address2": "Suite 210",
+      "city": "Fairfax",
+      "zip": "22035",
+      "phone": "703-533-5400",
+      "email": "DFSWorkforceDevelopment@fairfaxcounty.gov",
+      "notes": "TTY 711. Fairfax County Workforce Center.",
+      "raw_hours_text": "Contact a Fairfax County Workforce Center: Call 703-533-5400, TTY 711 or email and a team member will be in touch within two business days. Monday-Thursday 8:30 a.m.-4:30 p.m. Friday 10 a.m.-4:30 p.m.",
+      "eligibility": [
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Please schedule an appointment to meet with a career specialist. One appointment per person each day; available two weeks in advance."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "job_training",
+          "description": "Career services: resume and cover letter review, job search assistance, practice interviews, job application assistance (in person or virtual, by appointment). Services are available in multiple languages.",
+          "offering_status": "regular"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.854595,
+      "lon": -77.361496,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-ashburn-senior-center",
+      "source_url": "https://www.loudoun.gov/Facilities/Facility/Details/Ashburn-Senior-Center-177",
+      "organization_name": "Loudoun County Parks, Recreation & Community Services",
+      "organization_website": "https://www.loudoun.gov/prcs",
+      "location_name": "Ashburn Senior Center",
+      "address1": "20880 Marblehead Drive",
+      "city": "Ashburn",
+      "zip": "20147",
+      "phone": "571-367-8340",
+      "notes": "County senior center (https://www.loudoun.gov/1139/Senior-Centers): recreational and educational programs, fitness, trips, volunteer opportunities; daily hot lunch with a 24-hour advance reservation. 'Transportation is provided in selected areas; please contact individual centers for more information about routes and pick-up schedules.'",
+      "raw_hours_text": "Hours M - F 9:00 AM — 5:00 PM Sat 8:00 AM — 12:00 PM Sun Closed",
+      "raw_eligibility_text": "Loudoun County's Senior Centers provide a place for adults 55 and older ... Annual membership for seniors 55 and over allows participation at any Loudoun County senior center. The annual fee is $36 for county residents and $54 for non-residents.",
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "Adults 55 and older."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Annual membership ($36 county residents, $54 non-residents) or drop-in fees; fees vary for programs and events."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "other",
+          "description": "Senior center: recreational, educational, fitness and social programs for adults 55+.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 5,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "transportation_help",
+          "description": "Transportation Services listed as a facility feature; transportation provided in selected areas – contact the center for routes and pick-up schedules.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 39.037914,
+      "lon": -77.46109,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-carver-senior-center",
+      "source_url": "https://www.loudoun.gov/Facilities/Facility/Details/Carver-Center-70",
+      "organization_name": "Loudoun County Parks, Recreation & Community Services",
+      "organization_website": "https://www.loudoun.gov/prcs",
+      "location_name": "Carver Senior Center",
+      "address1": "200 E Willie Palmer Way",
+      "city": "Purcellville",
+      "zip": "20132",
+      "phone": "571-258-3400",
+      "notes": "County senior center (https://www.loudoun.gov/1139/Senior-Centers): recreational and educational programs, fitness, trips, volunteer opportunities; daily hot lunch with a 24-hour advance reservation. 'Transportation is provided in selected areas; please contact individual centers for more information about routes and pick-up schedules.'",
+      "raw_hours_text": "Hours M - F 9:00 AM — 5:00 PM Sat 8:00 AM — 12:00 PM Sun Closed",
+      "raw_eligibility_text": "Loudoun County's Senior Centers provide a place for adults 55 and older ... Annual membership for seniors 55 and over allows participation at any Loudoun County senior center. The annual fee is $36 for county residents and $54 for non-residents.",
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "Adults 55 and older."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Annual membership ($36 county residents, $54 non-residents) or drop-in fees; fees vary for programs and events."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "other",
+          "description": "Senior center: recreational, educational, fitness and social programs for adults 55+.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 5,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "transportation_help",
+          "description": "transportation provided in selected areas – contact the center for routes and pick-up schedules.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 39.129398,
+      "lon": -77.712228,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-dulles-south-senior-center",
+      "source_url": "https://www.loudoun.gov/Facilities/Facility/Details/Dulles-South-Senior-Center-73",
+      "organization_name": "Loudoun County Parks, Recreation & Community Services",
+      "organization_website": "https://www.loudoun.gov/prcs",
+      "location_name": "Dulles South Senior Center",
+      "address1": "24950 Riding Center Drive",
+      "city": "South Riding",
+      "zip": "20152",
+      "phone": "571-258-3883",
+      "notes": "County senior center (https://www.loudoun.gov/1139/Senior-Centers): recreational and educational programs, fitness, trips, volunteer opportunities; daily hot lunch with a 24-hour advance reservation. 'Transportation is provided in selected areas; please contact individual centers for more information about routes and pick-up schedules.'",
+      "raw_hours_text": "Hours M - F 9:00 AM — 5:00 PM Sat 8:00 AM — 12:00 PM Sun Closed",
+      "raw_eligibility_text": "Loudoun County's Senior Centers provide a place for adults 55 and older ... Annual membership for seniors 55 and over allows participation at any Loudoun County senior center. The annual fee is $36 for county residents and $54 for non-residents.",
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "Adults 55 and older."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Annual membership ($36 county residents, $54 non-residents) or drop-in fees; fees vary for programs and events."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "other",
+          "description": "Senior center: recreational, educational, fitness and social programs for adults 55+.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 5,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "transportation_help",
+          "description": "transportation provided in selected areas – contact the center for routes and pick-up schedules.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 38.922538,
+      "lon": -77.526167,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-senior-center-cascades",
+      "source_url": "https://www.loudoun.gov/Facilities/Facility/Details/Loudoun-County-Senior-Center-at-Cascades-72",
+      "organization_name": "Loudoun County Parks, Recreation & Community Services",
+      "organization_website": "https://www.loudoun.gov/prcs",
+      "location_name": "Loudoun County Senior Center at Cascades",
+      "address1": "21060 Whitfield Place",
+      "city": "Sterling",
+      "zip": "20165",
+      "phone": "571-258-3280",
+      "notes": "County senior center (https://www.loudoun.gov/1139/Senior-Centers): recreational and educational programs, fitness, trips, volunteer opportunities; daily hot lunch with a 24-hour advance reservation. 'Transportation is provided in selected areas; please contact individual centers for more information about routes and pick-up schedules.'",
+      "raw_hours_text": "Hours M - F 9:00 AM — 5:00 PM Sat 8:00 AM — 12:00 PM Sun Closed",
+      "raw_eligibility_text": "Loudoun County's Senior Centers provide a place for adults 55 and older ... Annual membership for seniors 55 and over allows participation at any Loudoun County senior center. The annual fee is $36 for county residents and $54 for non-residents.",
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "Adults 55 and older."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Annual membership ($36 county residents, $54 non-residents) or drop-in fees; fees vary for programs and events."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "other",
+          "description": "Senior center: recreational, educational, fitness and social programs for adults 55+.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 5,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "transportation_help",
+          "description": "transportation provided in selected areas – contact the center for routes and pick-up schedules.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 39.033247,
+      "lon": -77.395217,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-senior-center-leesburg",
+      "source_url": "https://www.loudoun.gov/Facilities/Facility/Details/The-Senior-Center-of-Leesburg-74",
+      "organization_name": "Loudoun County Parks, Recreation & Community Services",
+      "organization_website": "https://www.loudoun.gov/prcs",
+      "location_name": "The Senior Center of Leesburg",
+      "address1": "102 North Street NW",
+      "city": "Leesburg",
+      "zip": "20176",
+      "phone": "703-737-8039",
+      "notes": "County senior center (https://www.loudoun.gov/1139/Senior-Centers): recreational and educational programs, fitness, trips, volunteer opportunities; daily hot lunch with a 24-hour advance reservation. 'Transportation is provided in selected areas; please contact individual centers for more information about routes and pick-up schedules.'",
+      "raw_hours_text": "Hours M - F 9:00 AM — 5:00 PM Sat 8:00 AM — 12:00 PM Sun Closed",
+      "raw_eligibility_text": "Loudoun County's Senior Centers provide a place for adults 55 and older ... Annual membership for seniors 55 and over allows participation at any Loudoun County senior center. The annual fee is $36 for county residents and $54 for non-residents.",
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "Adults 55 and older."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Annual membership ($36 county residents, $54 non-residents) or drop-in fees; fees vary for programs and events."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "other",
+          "description": "Senior center: recreational, educational, fitness and social programs for adults 55+.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "09:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 5,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "transportation_help",
+          "description": "transportation provided in selected areas – contact the center for routes and pick-up schedules.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 39.117794,
+      "lon": -77.565302,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-dfs-leesburg-rehau",
+      "source_url": "https://www.loudoun.gov/6385/Shenandoah-Office-Building-Relocation-of",
+      "organization_name": "Loudoun County Department of Family Services",
+      "organization_website": "https://www.loudoun.gov/familyservices",
+      "location_name": "Loudoun Family Services – Rehau Building",
+      "address1": "1501 Edwards Ferry Road NE",
+      "address2": "Suite 301",
+      "city": "Leesburg",
+      "zip": "20176",
+      "phone": "703-777-0353",
+      "notes": "DFS relocated from the Shenandoah Building (102 Heritage Way NE) to the Rehau Building (DFS home page: 'New Leesburg Location (as of August 2026)'; old location 'through 9/11/26'). Services at the Rehau Building: Child Protective Services; Adult Protective Services; Foster Care & Adoption Services; Public Assistance / Public Benefits (SNAP, TANF, Medicaid, Child Care, Energy Assistance, EBT Issuance); Community Support Services; General Inquiries. Visitors pass security screening, sign in at the kiosk and wait to be called to a service window. Served by Loudoun County Transit Route 54 (Safe-T Ride) and fare-free Transit on Demand. Phone and hours are those listed on https://www.loudoun.gov/familyservices for the Leesburg location (listed under the old Shenandoah address) – confirm. Medicaid applications: Cover Virginia 1-855-242-8282 or commonhelp.virginia.gov (https://www.loudoun.gov/4410/Medicaid).",
+      "raw_hours_text": "Hours: Monday- Friday, 8:30 a.m.- 5 p.m.",
+      "services": [
+        {
+          "service_type": "snap_application_help",
+          "description": "Public Assistance / Public Benefits: SNAP, EBT Issuance.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "medicaid_enrollment_help",
+          "description": "Public Assistance / Public Benefits: Medicaid.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "financial_assistance",
+          "description": "TANF.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "utility_assistance",
+          "description": "Energy Assistance.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "childcare",
+          "description": "Child Care (public benefit).",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 39.1138,
+      "lon": -77.529942,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-dfs-sterling",
+      "source_url": "https://www.loudoun.gov/familyservices",
+      "organization_name": "Loudoun County Department of Family Services",
+      "organization_website": "https://www.loudoun.gov/familyservices",
+      "location_name": "Loudoun Family Services – Eastern Family Services Center",
+      "address1": "21641 Ridgetop Circle",
+      "address2": "Suite 101",
+      "city": "Sterling",
+      "zip": "20166",
+      "phone": "703-777-0555",
+      "notes": "Listed as the DFS Sterling Location. The page does not itemize which programs are served in person at this site.",
+      "raw_hours_text": "Hours: Monday- Friday, 8:30 a.m.- 5 p.m.",
+      "services": [
+        {
+          "service_type": "snap_application_help",
+          "description": "Department of Family Services office; specific in-person programs at this site not listed.",
+          "offering_status": "unconfirmed",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "medicaid_enrollment_help",
+          "description": "Department of Family Services office; specific in-person programs at this site not listed.",
+          "offering_status": "unconfirmed",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 39.025845,
+      "lon": -77.408509,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-wic-leesburg",
+      "source_url": "https://www.loudoun.gov/1578/WIC-Program",
+      "organization_name": "Loudoun County Health Department",
+      "organization_website": "https://www.loudoun.gov/health",
+      "location_name": "Loudoun Health Department – Leesburg WIC Clinic",
+      "address1": "50 Sycolin Road",
+      "city": "Leesburg",
+      "zip": "20176",
+      "phone": "703-777-0239",
+      "raw_hours_text": "WIC services are available by appointment at the two offices as follows: In-person: Monday, Tuesday, Thursday: 8:00 a.m. – 4:30 p.m. In-person: Wednesday: 8:00 a.m. – 6:00 p.m. Virtual: Friday: 8:00 a.m. – 3:00 p.m.",
+      "raw_eligibility_text": "helps improve the health of pregnant, postpartum and breastfeeding women, as well as infants and children under 5 years old. Participants must meet income, residential and nutrition-risk eligibility requirements.",
+      "eligibility": [
+        {
+          "requirement_type": "other",
+          "status": "required",
+          "details": "Pregnant, postpartum and breastfeeding women; infants and children under 5; nutrition risk."
+        },
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Must meet income eligibility requirements."
+        },
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Must meet residential eligibility requirements."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "WIC services are by appointment only; call 703-777-0239."
+        }
+      ],
+      "notes": "PDF maps in English, Spanish and Arabic on the WIC page.",
+      "services": [
+        {
+          "service_type": "wic_services",
+          "description": "WIC: nutritious food including formula, nutrition counseling and education, breastfeeding support (peer counselors, classes, supplies like breast pumps), referrals. In person Mon/Tue/Thu 8-4:30, Wed 8-6; virtual Fri 8-3.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "18:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 39.106321,
+      "lon": -77.553885,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-health-ashburn-clinic",
+      "source_url": "https://www.loudoun.gov/1258/Health-Clinics",
+      "organization_name": "Loudoun County Health Department",
+      "organization_website": "https://www.loudoun.gov/health",
+      "location_name": "Loudoun Health Department – Ashburn Clinic",
+      "address1": "45201 Research Place",
+      "address2": "Suite 120",
+      "city": "Ashburn",
+      "zip": "20147",
+      "phone": "703-777-0236",
+      "raw_hours_text": "WIC services are available by appointment at the two offices as follows: In-person: Monday, Tuesday, Thursday: 8:00 a.m. – 4:30 p.m. In-person: Wednesday: 8:00 a.m. – 6:00 p.m. Virtual: Friday: 8:00 a.m. – 3:00 p.m. (WIC page, https://www.loudoun.gov/1578/WIC-Program). Service hours vary by day.",
+      "raw_eligibility_text": "helps improve the health of pregnant, postpartum and breastfeeding women, as well as infants and children under 5 years old. Participants must meet income, residential and nutrition-risk eligibility requirements.",
+      "notes": "Main Clinic Phone 703-777-0236; WIC Services Phone 703-777-0239. Services: Tuberculosis (TB) services including screenings; WIC; Long Term Services Support (Adult Intake 703-771-5742, Child Intake 703-737-8949).",
+      "eligibility": [
+        {
+          "requirement_type": "other",
+          "status": "required",
+          "details": "Pregnant, postpartum and breastfeeding women; infants and children under 5; nutrition risk."
+        },
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Must meet income eligibility requirements."
+        },
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Must meet residential eligibility requirements."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "WIC services are by appointment only; call 703-777-0239."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "wic_services",
+          "description": "WIC: nutritious food including formula, nutrition counseling and education, breastfeeding support (peer counselors, classes, supplies like breast pumps), referrals. In person Mon/Tue/Thu 8-4:30, Wed 8-6; virtual Fri 8-3.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "18:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "health_clinic",
+          "description": "Tuberculosis (TB) services, including screenings; Long Term Services Support screening.",
+          "offering_status": "regular"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 39.051747,
+      "lon": -77.436591,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-health-leesburg-clinic",
+      "source_url": "https://www.loudoun.gov/1258/Health-Clinics",
+      "organization_name": "Loudoun County Health Department",
+      "organization_website": "https://www.loudoun.gov/health",
+      "location_name": "Loudoun Health Department – Leesburg Clinic (Shenandoah Building)",
+      "address1": "102 Heritage Way NE",
+      "address2": "Suites 100 & 101",
+      "city": "Leesburg",
+      "zip": "20176",
+      "phone": "703-777-0236",
+      "notes": "Medical Clinic (Suite 100) 703-777-0236; Dental Clinic (Suite 101) 703-771-5979. Services: dental health; family planning and pregnancy testing; immunizations; maternity care enrollment; school entry physicals (preschool and K-5 only); STI and HIV/AIDS services; car seat distribution for low-income families; tuberculosis screening. Served by Loudoun Transit Routes 57 and 70. Health Department services expected to relocate from the Shenandoah Building in summer 2027 (https://www.loudoun.gov/6385).",
+      "raw_hours_text": "Medical Clinic (Suite 100) Hours: M-F, 8:30 a.m. - 5:00 p.m.* *Hours vary by service. Dental Clinic (Suite 101) Hours: M-Th, 8:30 a.m. - 5:00 p.m.",
+      "raw_eligibility_text": "Appointments are required for services at the Health Department clinics. Services may have age or income restrictions. The Health Department offers an income eligibility screening to determine a sliding scale discount for services. Laboratory costs, immunizations and medications are not eligible for discount.",
+      "eligibility": [
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Appointments are required for services at the Health Department clinics."
+        },
+        {
+          "requirement_type": "income",
+          "status": "not_required",
+          "details": "Income eligibility screening determines a sliding scale discount; services may have age or income restrictions."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Family planning, pregnancy testing, immunizations, maternity care enrollment, school entry physicals, STI/HIV services, TB screening.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "dental_care",
+          "description": "Dental Clinic (Suite 101).",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:30",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 39.114409,
+      "lon": -77.541622,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-mhsads-leesburg",
+      "source_url": "https://www.loudoun.gov/6274/Same-Day-Access",
+      "organization_name": "Loudoun County Department of Mental Health, Substance Abuse and Developmental Services (MHSADS)",
+      "organization_website": "https://www.loudoun.gov/mhsads",
+      "location_name": "MHSADS Leesburg Clinic (Shenandoah Building)",
+      "address1": "102 Heritage Way NE",
+      "address2": "Suite 302",
+      "city": "Leesburg",
+      "zip": "20176",
+      "phone": "703-771-5155",
+      "notes": "Same Day Access: walk in, receive an assessment and be referred to services (process may take up to three hours; no medication dispensed at the assessment). Telehealth assessment appointments: 703-771-5155. Developmental Disability Waiver screening: 703-777-0597. MHSADS Emergency Services 703-777-0320; Established Client Scheduling Line 571-258-3124 (https://www.loudoun.gov/mhsads). Co-Responders and Emergency Services, the Crisis Intervention Team Assessment Center and Outpatient Services remain in the Shenandoah Building; expected to relocate spring 2027 (https://www.loudoun.gov/6385).",
+      "raw_hours_text": "Hours: Monday – Friday, 9:00 a.m. – 2:00 p.m. Services are provided on a first-come, first-served basis. No appointment is required.",
+      "raw_eligibility_text": "There is no fee for the initial Same Day Access Comprehensive Needs Assessment. If you continue with services at MHSADS, a fee assessment will be completed ... no one is denied access to these services based upon an inability to pay. What to Bring: Photo ID; Insurance card; Proof of all forms of household income; Legal guardian and custody documentation (if applicable)",
+      "eligibility": [
+        {
+          "requirement_type": "appointment",
+          "status": "not_required",
+          "details": "No appointment is required for Same Day Access."
+        },
+        {
+          "requirement_type": "first_come_first_served",
+          "status": "required",
+          "details": "Services are provided on a first-come, first-served basis."
+        },
+        {
+          "requirement_type": "photo_id",
+          "status": "required",
+          "details": "Listed under What to Bring."
+        },
+        {
+          "requirement_type": "income_documentation",
+          "status": "required",
+          "details": "Proof of all forms of household income (What to Bring)."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Same Day Access walk-in assessment and referral for mental health, substance use or developmental/intellectual disabilities; outpatient services.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "09:00",
+              "closes": "14:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "substance_use_treatment",
+          "description": "Same Day Access assessment and referral for substance use disorders.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "09:00",
+              "closes": "14:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "crisis_support",
+          "description": "Co-Responders and Emergency Services; Crisis Intervention Team Assessment Center (Emergency Services 703-777-0320).",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 39.114409,
+      "lon": -77.541622,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-mhsads-sterling",
+      "source_url": "https://www.loudoun.gov/mhsads",
+      "organization_name": "Loudoun County Department of Mental Health, Substance Abuse and Developmental Services (MHSADS)",
+      "organization_website": "https://www.loudoun.gov/mhsads",
+      "location_name": "MHSADS Sterling Office – Eastern Loudoun Service Center",
+      "address1": "21641 Ridgetop Circle",
+      "address2": "Suite 210",
+      "city": "Sterling",
+      "zip": "20166",
+      "phone": "703-771-5155",
+      "notes": "Phone is the department's New Client Information and Referrals line (Mon-Fri 9 a.m.-2 p.m.). The page does not list services or hours specific to the Sterling office. Same Day Access walk-ins are only at the Leesburg clinic.",
+      "services": [
+        {
+          "service_type": "mental_health_counseling",
+          "description": "MHSADS office; specific services at this site not listed.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 39.025845,
+      "lon": -77.408509,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-free-clinic",
+      "source_url": "https://loudounfreeclinic.org/location/",
+      "organization_name": "Loudoun Free Clinic",
+      "organization_website": "https://loudounfreeclinic.org/",
+      "location_name": "Loudoun Free Clinic (Inova Loudoun Hospital-Cornwall Campus)",
+      "address1": "224-A Cornwall Street NW",
+      "address2": "Suite 2.115",
+      "city": "Leesburg",
+      "zip": "20176",
+      "phone": "703-779-5416",
+      "website": "https://loudounfreeclinic.org/become-a-patient/",
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "notes": "Free primary and specialty healthcare for low-income, uninsured adults living in Loudoun County. Services: primary care, sick visits, laboratory testing, diagnostic screening, well-women care, specialty care, prescription medication, nutrition counseling, case management, language interpretation, flu vaccines, mental health care. Member-only clinic; no walk-ins. Application available in English and Spanish. Eligibility team calls within 7 to 14 business days after application; membership typically lasts 11 months.",
+      "raw_hours_text": "Monday 8:00 am – 12:00 pm (noon) 1:30 pm – 5:00 pm; Tuesday 8:00 am – 12:00 pm (noon) 1:30 pm – 5:00 pm; Wednesday 8:00 am – 12:00 pm (noon) 1:30 pm – 8:00 pm; Thursday 8:00 am –12:00 pm (noon) 1:30 pm – 8:00 pm. The clinic is closed Friday, Saturday, and Sunday.",
+      "raw_eligibility_text": "You are age 19+ / You have been living in Loudoun County for at least 3 months / You do not have health insurance / You do not qualify for Medicaid or Medicare / You meet our income guidelines (2026: household of 1 $47,880; 2 $64,920; 3 $81,960; 4 $99,000; 5 $116,040; 6 $133,080 ... ). We are a member-only clinic, so patients must be financially eligible and pre-register for our services. We do not accept walk-in patients.",
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "Age 19+."
+        },
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Living in Loudoun County for at least 3 months."
+        },
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Meet 2026 income guidelines (e.g., $47,880 for 1 person; 300% FPL or less)."
+        },
+        {
+          "requirement_type": "other",
+          "status": "required",
+          "details": "No health insurance; do not qualify for Medicaid or Medicare."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Member-only clinic: apply and pre-register; no walk-in patients."
+        },
+        {
+          "requirement_type": "income_documentation",
+          "status": "required",
+          "details": "Gather documents that provide proof of income."
+        },
+        {
+          "requirement_type": "proof_of_address",
+          "status": "required",
+          "details": "Proof that you live in Loudoun County."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "health_clinic",
+          "description": "Free primary care, sick visits, lab testing, diagnostic screening, well-women care, specialty care referrals, flu vaccines, case management.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "13:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "13:30",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "12:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "13:30",
+              "closes": "20:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "13:30",
+              "closes": "20:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "prescription_help",
+          "description": "Prescription medication.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "mental_health_counseling",
+          "description": "Mental health care.",
+          "offering_status": "regular"
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 39.11784,
+      "lon": -77.568204,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-loudoun-workforce-resource-center",
+      "source_url": "https://www.loudoun.gov/1592/Workforce-Resource-Center",
+      "organization_name": "Loudoun County Department of Family Services",
+      "organization_website": "https://www.loudoun.gov/familyservices",
+      "location_name": "Loudoun Workforce Resource Center",
+      "address1": "705 East Market Street",
+      "address2": "Suite E",
+      "city": "Leesburg",
+      "zip": "20176",
+      "phone": "703-777-0150",
+      "notes": "A program of the Department of Family Services and a Virginia Career Works Affiliate. Provides no-cost resources and equipment to job seekers and businesses; job fairs and events, regional job board, workshops and career development, Workforce Innovation & Opportunity Act (WIOA) services, financial literacy and entrepreneur resources. Virginia Relay 711. Fax 703-737-8421.",
+      "raw_hours_text": "Center Hours: Monday, Tuesday, Thursday, Friday: 9:00 a.m. - 4:30 p.m. Wednesday: 9:00 a.m.- 12:00 p.m.",
+      "services": [
+        {
+          "service_type": "job_training",
+          "description": "No-cost job search resources and equipment, workshops and career development, job fairs, WIOA services.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "09:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "12:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 39.106881,
+      "lon": -77.548921,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-herndon-senior-center",
+      "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+      "organization_name": "Fairfax County Neighborhood and Community Services",
+      "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
+      "location_name": "Herndon Senior Center",
+      "address1": "873 Grace Street",
+      "city": "Herndon",
+      "zip": "20170",
+      "phone": "703-464-6200",
+      "notes": "TTY 711. NCS Senior Center members can attend programs at any Senior Center in Fairfax County.",
+      "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.-4 p.m.",
+      "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available.",
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "Persons 50 years of age and older."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Senior Center membership; annual membership fees apply."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "other",
+          "description": "Senior center: social, educational and enrichment programs (hobbies, fitness, art, music, technology) for adults 50+.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "transportation_help",
+          "description": "Senior center page: 'Meals and transportation options are available' to members; details not listed per center.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 38.9737,
+      "lon": -77.389077,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-lorton-senior-center",
+      "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+      "organization_name": "Fairfax County Neighborhood and Community Services",
+      "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
+      "location_name": "Lorton Senior Center",
+      "address1": "9520 Richmond Highway",
+      "city": "Lorton",
+      "zip": "22079",
+      "phone": "703-550-7195",
+      "notes": "TTY 711. NCS Senior Center members can attend programs at any Senior Center in Fairfax County.",
+      "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.-4 p.m.",
+      "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available.",
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "Persons 50 years of age and older."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Senior Center membership; annual membership fees apply."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "other",
+          "description": "Senior center: social, educational and enrichment programs (hobbies, fitness, art, music, technology) for adults 50+.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "transportation_help",
+          "description": "Senior center page: 'Meals and transportation options are available' to members; details not listed per center.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 38.701004,
+      "lon": -77.210514,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-sully-senior-center",
+      "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+      "organization_name": "Fairfax County Neighborhood and Community Services",
+      "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
+      "location_name": "Sully Senior Center",
+      "address1": "13800 Wall Road",
+      "city": "Herndon",
+      "zip": "20171",
+      "phone": "703-322-4475",
+      "notes": "TTY 711. NCS Senior Center members can attend programs at any Senior Center in Fairfax County.",
+      "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.-4 p.m.",
+      "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available.",
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "Persons 50 years of age and older."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Senior Center membership; annual membership fees apply."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "other",
+          "description": "Senior center: social, educational and enrichment programs (hobbies, fitness, art, music, technology) for adults 50+.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "transportation_help",
+          "description": "Senior center page: 'Meals and transportation options are available' to members; details not listed per center.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 38.916993,
+      "lon": -77.422722,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-wakefield-senior-center",
+      "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+      "organization_name": "Fairfax County Neighborhood and Community Services",
+      "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
+      "location_name": "Wakefield Senior Center at Audrey Moore RECenter",
+      "address1": "8100 Braddock Road",
+      "city": "Annandale",
+      "zip": "22003",
+      "phone": "703-321-3000",
+      "notes": "TTY 711. NCS Senior Center members can attend programs at any Senior Center in Fairfax County.",
+      "raw_hours_text": "Operating Hours: Monday-Friday, 8 a.m.-4 p.m.",
+      "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available.",
+      "eligibility": [
+        {
+          "requirement_type": "age",
+          "status": "required",
+          "details": "Persons 50 years of age and older."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Senior Center membership; annual membership fees apply."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "other",
+          "description": "Senior center: social, educational and enrichment programs (hobbies, fitness, art, music, technology) for adults 50+.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "transportation_help",
+          "description": "Senior center page: 'Meals and transportation options are available' to members; details not listed per center.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 38.81134,
+      "lon": -77.224718,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-burke-springfield-center-active-adults",
+      "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+      "organization_name": "Fairfax County Neighborhood and Community Services",
+      "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
+      "location_name": "Burke Springfield Center for Active Adults",
+      "address1": "7541 Huntsman Boulevard",
+      "city": "Springfield",
+      "zip": "22153",
+      "phone": "703-803-3879",
+      "notes": "TTY 711. NCS Senior Center members can attend programs at any Senior Center in Fairfax County.",
+      "raw_hours_text": "Operating Hours: Monday - Friday, 9 a.m.-4 p.m.",
+      "services": [
+        {
+          "service_type": "other",
+          "description": "Community center offering programs specific to older adults.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "09:00",
+              "closes": "16:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 38.752407,
+      "lon": -77.266355,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-arbor-row-center",
+      "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+      "organization_name": "Fairfax County Neighborhood and Community Services",
+      "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
+      "location_name": "Arbor Row Center",
+      "address1": "7927B Westpark Drive",
+      "city": "Tysons",
+      "zip": "22102",
+      "phone": "571-617-0311",
+      "notes": "TTY 711. NCS Senior Center members can attend programs at any Senior Center in Fairfax County.",
+      "raw_hours_text": "Operating Hours: Monday-Friday, 9 a.m.-4 p.m.",
+      "services": [
+        {
+          "service_type": "other",
+          "description": "Community center offering programs specific to older adults.",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "09:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "09:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "09:00",
+              "closes": "16:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "09:00",
+              "closes": "16:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 38.925492,
+      "lon": -77.219472,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fairfax-human-services-mobility-management",
+      "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/transportation/tops",
+      "organization_name": "Fairfax County Neighborhood and Community Services",
+      "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
+      "location_name": "Human Services Mobility Management (TOPS / Fastran) – Pennino Building",
+      "address1": "12011 Government Center Parkway",
+      "address2": "10th Floor",
+      "city": "Fairfax",
+      "zip": "22035",
+      "phone": "703-222-9764",
+      "email": "NCSHST-TOPS@fairfaxcounty.gov",
+      "website": "https://www.fairfaxcounty.gov/neighborhood-community-services/transportation",
+      "notes": "TTY 711. Program office, not a transit stop. TOPS: subsidized transportation funds on a debit card (each subsidy $100 in benefits for $20) usable with taxicabs, Uber/Lyft, bus and rail via SmarTrip, Capital BikeShare; in-person payments by appointment at the Pennino Building. Fastran (https://www.fairfaxcounty.gov/transportation/fastran; contact block lists 703-222-9764, Mon-Fri 8 AM-4:30 PM): specialized transportation for residents of Fairfax County and the Cities of Fairfax and Falls Church participating in human services programs (critical medical care such as dialysis/chemotherapy on a space-available basis, adult day health care, CSB programs, senior centers – arranged through centers only, senior residences, therapeutic recreation); riders must be certified by a program/agency; sliding-scale fees may apply. Fastran cancellation line 703-324-7068.",
+      "raw_hours_text": "In Person (by appointment only) at the Pennino Building, Monday - Friday, 8 AM to 4:30 PM. (Fastran contact block: Hours: 8 AM - 4:30 PM, Monday - Friday)",
+      "raw_eligibility_text": "Eligibility: Must be a resident of Fairfax County, the City of Fairfax or the City of Falls Church, and meet one of the following criteria: 50 years of age or older, with an annual income of $50,000 or less per individual. Registered user of MetroAccess. Recipient of Supplemental Security Income (SSI) or Social Security Disability Insurance (SSDI). Annual income that meets the 225% federal poverty levels by household size.",
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Resident of Fairfax County, the City of Fairfax or the City of Falls Church."
+        },
+        {
+          "requirement_type": "other",
+          "status": "required",
+          "details": "TOPS: one of – age 50+ with income $50,000 or less; MetroAccess user; SSI/SSDI recipient; income within 225% FPL. Fastran: certified by a participating human services program."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "In-person visits by appointment only (703-222-9764)."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "transportation_help",
+          "description": "TOPS subsidized transportation debit card and Fastran specialized human-services transportation (medical, senior center, adult day health care, CSB).",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "08:00",
+              "closes": "16:30",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "state": "VA",
+      "lat": 38.854595,
+      "lon": -77.361496,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fcps-adult-esol-chantilly-hs",
+      "source_url": "https://www.fcps.edu/academics/adult-and-community-education-ace/adult-esol",
+      "organization_name": "Fairfax County Public Schools – Adult and Community Education (Adult ESOL)",
+      "organization_website": "https://www.fcps.edu/school-center/adult-and-community-education-ace",
+      "location_name": "FCPS Adult ESOL – Chantilly High School",
+      "address1": "4201 Stringfellow Rd",
+      "city": "Chantilly",
+      "zip": "20151",
+      "phone": "703-658-2777",
+      "notes": "Fall 2026 classes begin September 14, 2026 and run 9 weeks; all classes in-person. Questions line answered Mon-Fri 9 a.m.-4 p.m.; weather line 703-658-1274. Winter class information after November 1, 2026.",
+      "raw_hours_text": "Class Schedule: Tues and Thurs 7 to 9:30 p.m. (Fall 2026; test September 8 at 6 p.m.)",
+      "raw_eligibility_text": "All new students must take an intake test before registering for a class. ... Go to the testing for that location and class time. No appointment is necessary. You must attend testing at the location and time you want classes. Bring payment (credit card, money order, check) to complete registration. ... We do not accept cash. AM Classes: $340 + $45 (books) PM Classes: $175 + $45 (books)",
+      "eligibility": [
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "New students must take an intake test (no appointment) at the chosen location and time, then register; fees apply (AM $340 + $45 books; PM $175 + $45 books; no cash)."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "not_required",
+          "details": "No appointment necessary for intake testing."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "esl_classes",
+          "description": "Adult English (ESOL) classes; fee-based.",
+          "offering_status": "seasonal"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.87971,
+      "lon": -77.408561,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fcps-adult-esol-herndon-learning-center",
+      "source_url": "https://www.fcps.edu/academics/adult-and-community-education-ace/adult-esol",
+      "organization_name": "Fairfax County Public Schools – Adult and Community Education (Adult ESOL)",
+      "organization_website": "https://www.fcps.edu/school-center/adult-and-community-education-ace",
+      "location_name": "FCPS Adult ESOL – Herndon Learning Center",
+      "address1": "465 Springpark Place",
+      "city": "Herndon",
+      "zip": "20170",
+      "phone": "703-658-2777",
+      "notes": "Fall 2026 classes begin September 14, 2026 and run 9 weeks; all classes in-person. Questions line answered Mon-Fri 9 a.m.-4 p.m.; weather line 703-658-1274. Winter class information after November 1, 2026. Specialty classes here: Conversation High Intermediate Plus (Mon/Wed 12:15-2:45 p.m.); English for Employment Success (Mon/Wed 7-9:30 p.m.).",
+      "raw_hours_text": "Class Schedule: Mon, Tues, Wed, Thurs, and Fri 9 a.m. to noon; Mon and Wed 7 to 9:30 p.m. (Fall 2026)",
+      "raw_eligibility_text": "All new students must take an intake test before registering for a class. ... Go to the testing for that location and class time. No appointment is necessary. You must attend testing at the location and time you want classes. Bring payment (credit card, money order, check) to complete registration. ... We do not accept cash. AM Classes: $340 + $45 (books) PM Classes: $175 + $45 (books)",
+      "eligibility": [
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "New students must take an intake test (no appointment) at the chosen location and time, then register; fees apply (AM $340 + $45 books; PM $175 + $45 books; no cash)."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "not_required",
+          "details": "No appointment necessary for intake testing."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "esl_classes",
+          "description": "Adult English (ESOL) classes; fee-based.",
+          "offering_status": "seasonal"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.962321,
+      "lon": -77.378128,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-fcps-adult-esol-woodson-hs",
+      "source_url": "https://www.fcps.edu/academics/adult-and-community-education-ace/adult-esol",
+      "organization_name": "Fairfax County Public Schools – Adult and Community Education (Adult ESOL)",
+      "organization_website": "https://www.fcps.edu/school-center/adult-and-community-education-ace",
+      "location_name": "FCPS Adult ESOL – Woodson High School",
+      "address1": "9525 Main St",
+      "city": "Fairfax",
+      "zip": "22031",
+      "phone": "703-658-2777",
+      "notes": "Fall 2026 classes begin September 14, 2026 and run 9 weeks; all classes in-person. Questions line answered Mon-Fri 9 a.m.-4 p.m.; weather line 703-658-1274. Winter class information after November 1, 2026. English for Employment Success also offered here (Mon/Wed 7-9:30 p.m.).",
+      "raw_hours_text": "Class Schedule: Mon and Wed 7 to 9:30pm (Fall 2026; test September 9 at 6 p.m.)",
+      "raw_eligibility_text": "All new students must take an intake test before registering for a class. ... Go to the testing for that location and class time. No appointment is necessary. You must attend testing at the location and time you want classes. Bring payment (credit card, money order, check) to complete registration. ... We do not accept cash. AM Classes: $340 + $45 (books) PM Classes: $175 + $45 (books)",
+      "eligibility": [
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "New students must take an intake test (no appointment) at the chosen location and time, then register; fees apply (AM $340 + $45 books; PM $175 + $45 books; no cash)."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "not_required",
+          "details": "No appointment necessary for intake testing."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "esl_classes",
+          "description": "Adult English (ESOL) classes; fee-based.",
+          "offering_status": "seasonal"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.841265,
+      "lon": -77.273666,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-lsnv-loudoun",
+      "source_url": "https://www.vplc.org/legal-services-of-northern-virginia/",
+      "organization_name": "Legal Services of Northern Virginia",
+      "organization_website": "https://www.lsnv.org/",
+      "location_name": "Legal Services of Northern Virginia – Loudoun Office",
+      "address1": "8A South Street SW",
+      "city": "Leesburg",
+      "zip": "20175",
+      "phone": "703-778-6800",
+      "notes": "Source is the Virginia Poverty Law Center legal aid directory (lsnv.org returned HTTP 403 to this research client and was not retried). Primary issues: landlord/tenant and eviction prevention, foreclosures, expungements, urgent family law, protective orders, guardianship, money/debt/consumer, nursing home, public assistance/benefits, tax, unemployment, veterans, bankruptcy, wills and powers of attorney. Does not handle immigration cases or criminal matters. Services are completely free. Phone is the general number listed for the Fairfax office; no separate Loudoun number given.",
+      "raw_hours_text": "Walk-ins: Wednesdays 9:30 AM-4:00 PM",
+      "raw_eligibility_text": "Must meet low-income eligibility requirements for elderly, disabled, or low-income residents. Services are completely free with no fees charged. Does not handle immigration cases or criminal matters",
+      "eligibility": [
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Must meet low-income eligibility requirements (elderly, disabled, or low-income residents)."
+        },
+        {
+          "requirement_type": "service_area",
+          "status": "required",
+          "details": "Northern Virginia: Alexandria; Arlington, Fairfax, Loudoun, Prince William and Stafford counties; adjacent cities and towns."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "legal_aid",
+          "description": "Free civil legal aid (housing/eviction, family/protective orders, benefits, consumer/debt, elder law, etc.).",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "09:30",
+              "closes": "16:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 39.112565,
+      "lon": -77.566035,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-lsnv-prince-william",
+      "source_url": "https://www.vplc.org/legal-services-of-northern-virginia/",
+      "organization_name": "Legal Services of Northern Virginia",
+      "organization_website": "https://www.lsnv.org/",
+      "location_name": "Legal Services of Northern Virginia – Prince William Office",
+      "address1": "9240 Center Street",
+      "city": "Manassas",
+      "zip": "20110",
+      "notes": "Source is the Virginia Poverty Law Center legal aid directory (lsnv.org returned HTTP 403 to this research client and was not retried). Primary issues: landlord/tenant and eviction prevention, foreclosures, expungements, urgent family law, protective orders, guardianship, money/debt/consumer, nursing home, public assistance/benefits, tax, unemployment, veterans, bankruptcy, wills and powers of attorney. Does not handle immigration cases or criminal matters. Services are completely free. No hours or phone listed for this office.",
+      "raw_eligibility_text": "Must meet low-income eligibility requirements for elderly, disabled, or low-income residents. Services are completely free with no fees charged. Does not handle immigration cases or criminal matters",
+      "eligibility": [
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Must meet low-income eligibility requirements (elderly, disabled, or low-income residents)."
+        },
+        {
+          "requirement_type": "service_area",
+          "status": "required",
+          "details": "Northern Virginia: Alexandria; Arlington, Fairfax, Loudoun, Prince William and Stafford counties; adjacent cities and towns."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "legal_aid",
+          "description": "Free civil legal aid (housing/eviction, family/protective orders, benefits, consumer/debt, elder law, etc.).",
+          "offering_status": "regular"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.750761,
+      "lon": -77.475503,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-svc-wfcm-chantilly-client-services",
+      "source_url": "https://www.wfcmva.org/get-help",
+      "organization_name": "Western Fairfax Christian Ministries",
+      "organization_website": "https://www.wfcmva.org/",
+      "location_name": "WFCM Operations / Client Services (Chantilly)",
+      "address1": "4511 Daly Drive",
+      "address2": "Suite H (back door)",
+      "city": "Chantilly",
+      "zip": "20151",
+      "phone": "703-988-9656",
+      "email": "clientservices@wfcmva.org",
+      "languages": [
+        "English",
+        "Spanish",
+        "Korean"
+      ],
+      "notes": "Non-food services only (Free Food Markets are covered by the food layer). Connects clients with rent and utility funds; free budgeting/financial workshops with Britepaths in English and Spanish (also https://www.wfcmva.org/our-services). Partner services requested via clientservices@wfcmva.org: Shepherd's Center transportation for clients 50+ to WFCM or medical/dental/therapy; CUMC GRACE Ministries clothing & household items (second Saturday monthly); Women Giving Back free clothing for women and small children; Greater DC Diaper Bank; St. Vincent de Paul (St. Timothy's) limited financial aid. Appointments scheduled by phone in English or Spanish; certification by phone in English, Korean or Spanish.",
+      "raw_hours_text": "HOURS OF OPERATION Monday, Tuesday & Thursday - 9:30 am-7 pm Wednesday & Friday - 9:30 am-3 pm. Clients served by appointment only: Chantilly: Monday-Friday 10 am-2 pm and Monday, Tuesday & Thursday 4:30 pm-6:45 pm 1 Saturday per month 9 am-12 pm. Call 703-988-9656 between 9:30 am to 2:30 pm Monday-Friday, or from 4:30 pm to 6:30 pm Monday, Tuesday, Wednesday, or Thursday to schedule an appointment",
+      "raw_eligibility_text": "Those eligible to apply for assistance are: Residents of Centreville (20120, 20121), Clifton (20124), Chantilly (20151), Fairfax Station (22039), Fairfax (22030), Oak Hill (20171), Herndon (20170) and Fair Oaks (22033). ... Photo ID for everyone 18 or older in the household; Current school records ...; Birth certificates for children ...; Proof of all income for all adults ...; Proof of residence for all adults in household",
+      "eligibility": [
+        {
+          "requirement_type": "zip_restriction",
+          "status": "required",
+          "details": "ZIPs 20120, 20121, 20124, 20151, 22039, 22030, 20171, 20170, 22033; others referred elsewhere."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Clients served by appointment only; call 703-988-9656."
+        },
+        {
+          "requirement_type": "photo_id",
+          "status": "required",
+          "details": "Photo ID for everyone 18 or older in the household."
+        },
+        {
+          "requirement_type": "income_documentation",
+          "status": "required",
+          "details": "Proof of all income for all adults (2 paystubs, bank statement, or benefits letters)."
+        },
+        {
+          "requirement_type": "proof_of_address",
+          "status": "required",
+          "details": "Proof of residence for all adults (e.g., lease)."
+        }
+      ],
+      "services": [
+        {
+          "service_type": "financial_assistance",
+          "description": "Connects clients with rent and utility funds; free budgeting and financial workshops (with Britepaths).",
+          "offering_status": "regular",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "10:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "10:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "10:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "10:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "10:00",
+              "closes": "14:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "16:30",
+              "closes": "18:45",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "16:30",
+              "closes": "18:45",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "16:30",
+              "closes": "18:45",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "utility_assistance",
+          "description": "Connects clients with grants/funding for utility bills.",
+          "offering_status": "regular"
+        },
+        {
+          "service_type": "clothing",
+          "description": "Partner referrals: CUMC GRACE Ministries clothing & household items (2nd Saturday monthly); Women Giving Back free clothing. Request via clientservices@wfcmva.org.",
+          "offering_status": "unconfirmed"
+        },
+        {
+          "service_type": "transportation_help",
+          "description": "Partner referral: Shepherd's Center transportation for clients 50+ to medical, dental or therapy services.",
+          "offering_status": "unconfirmed"
+        }
+      ],
+      "state": "VA",
+      "needs_primary_confirmation": true,
+      "lat": 38.884905,
+      "lon": -77.443366,
+      "geocode_source": "census_geocoder"
+    }
+  ]
 }
