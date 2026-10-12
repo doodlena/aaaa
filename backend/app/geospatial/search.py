@@ -38,6 +38,7 @@ class SearchParams:
     radius_km: float | None = 16.09  # 10 miles; None = no distance limit (results are still sorted from lat/lon)
     bbox: tuple[float, float, float, float] | None = None  # min_lon, min_lat, max_lon, max_lat
     jurisdiction: str | None = None
+    q: str | None = None  # name search (place or organization), e.g. "church", "catholic charities"
     food_groups: list[str] = field(default_factory=list)
     food_types: list[str] = field(default_factory=list)
     service_groups: list[str] = field(default_factory=list)
@@ -129,6 +130,13 @@ def search(db: Session, p: SearchParams, now: datetime | None = None) -> dict:
         conds.append(func.ST_Intersects(Location.geom, cast(func.ST_MakeEnvelope(*p.bbox, 4326), Geography)))
     if p.jurisdiction:
         conds.append(Location.jurisdiction_id == p.jurisdiction)
+    if p.q:
+        from app.models import Organization
+
+        for term in p.q.lower().split()[:6]:  # every word must match the place or organization name
+            like = f"%{term}%"
+            conds.append(or_(func.lower(Location.name).like(like),
+                             exists(select(1).where(Organization.id == Location.organization_id, func.lower(Organization.name).like(like)))))
     # Each selected food group / service group must be offered (AND across selections, any code within a group),
     # unless need_match="any" makes the selected needs alternatives.
     food = [_food_filter([c for c, grp in FOOD_TYPES.items() if grp == g]) for g in p.food_groups]

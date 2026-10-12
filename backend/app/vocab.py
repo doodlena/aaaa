@@ -103,6 +103,8 @@ SERVICE_TYPES = {
     "childcare": "family",
     "domestic_violence_support": "family",
     "transportation_help": "transportation",
+    "reproductive_health": "reproductive_health",
+    "prenatal_care": "reproductive_health",
     "pet_food": "pets",
     "veterinary_care": "pets",
     "pet_friendly_shelter": "pets",

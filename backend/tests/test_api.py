@@ -334,3 +334,12 @@ def test_search_responses_are_never_served_stale(client, published):
     r = client.get("/api/resources/search", params={**ARL, "radius_km": 5})
     assert r.headers["cache-control"] == "no-cache"  # counts/live status must revalidate
     assert client.get("/api/auth/me").headers["cache-control"] == "no-store"
+
+
+def test_name_search_and_map_pins(client, published):
+    r = client.get("/api/resources/search", params={**ARL, "radius_km": 60, "q": "cedar family"}).json()
+    assert r["total"] == 2 and all("Cedar" in i["name"] for i in r["items"])
+    assert client.get("/api/resources/search", params={"q": "TEST maple"}).json()["total"] == 1  # words AND'ed, case-insensitive
+    pins = client.get("/api/resources/search", params={**ARL, "radius_km": 60, "page_size": 3, "fields": "pins"}).json()
+    assert len(pins["items"]) == pins["total"] == 8  # every match, not just one page
+    assert set(pins["items"][0]) >= {"id", "name", "lat", "lon", "verification_label"}

@@ -233,7 +233,8 @@
     "work_learning": "Empleo y clases de inglés",
     "family": "Familia y niños",
     "transportation": "Transporte",
-    "pets": "Mascotas"
+    "pets": "Mascotas",
+    "reproductive_health": "Salud sexual y reproductiva"
   },
   "serviceType": {
     "pantry_pickup": "Recogida en despensa",
@@ -281,7 +282,9 @@
     "pet_food": "Comida para mascotas",
     "veterinary_care": "Atención veterinaria gratuita o de bajo costo",
     "pet_friendly_shelter": "Albergue que acepta mascotas",
-    "pet_supplies": "Artículos para mascotas"
+    "pet_supplies": "Artículos para mascotas",
+    "reproductive_health": "Atención de salud sexual y reproductiva",
+    "prenatal_care": "Cuidado prenatal"
   },
   "offering": {
     "regular": "Regular",
@@ -348,7 +351,12 @@
     "errorTitle": "No pudimos cargar los resultados",
     "hideSearch": "Ocultar opciones de búsqueda",
     "showSearch": "Mostrar opciones de búsqueda",
-    "radiusAny": "Sin límite"
+    "radiusAny": "Sin límite",
+    "nameSearch": "Buscar por nombre",
+    "nameSearchPlaceholder": "p. ej., iglesia, Catholic Charities, clínica",
+    "nameSearchGo": "Buscar",
+    "nameSearchClear": "Borrar",
+    "regionCenter": "Norte de Virginia (centro)"
   },
   "filters": {
     "title": "Filtros",
@@ -1348,7 +1356,11 @@
       "label": "Mascotas",
       "hint": "Comida para mascotas, veterinario de bajo costo"
     },
-    "multiHint": "Elija una o más."
+    "multiHint": "Elija una o más.",
+    "reproductive_health": {
+      "label": "Salud sexual y reproductiva",
+      "hint": "Planificación familiar, anticonceptivos, pruebas de ITS, cuidado prenatal"
+    }
   },
   "crisis": {
     "title": "¿En crisis?",

@@ -233,7 +233,8 @@
     "work_learning": "Việc làm và lớp tiếng Anh",
     "family": "Gia đình và trẻ em",
     "transportation": "Đi lại",
-    "pets": "Thú cưng"
+    "pets": "Thú cưng",
+    "reproductive_health": "Sức khỏe tình dục & sinh sản"
   },
   "serviceType": {
     "pantry_pickup": "Nhận thực phẩm tại điểm phát",
@@ -281,7 +282,9 @@
     "pet_food": "Thức ăn cho thú cưng",
     "veterinary_care": "Chăm sóc thú y miễn phí hoặc giá rẻ",
     "pet_friendly_shelter": "Nơi tạm trú cho phép mang thú cưng",
-    "pet_supplies": "Đồ dùng cho thú cưng"
+    "pet_supplies": "Đồ dùng cho thú cưng",
+    "reproductive_health": "Chăm sóc sức khỏe tình dục & sinh sản",
+    "prenatal_care": "Chăm sóc tiền sản"
   },
   "offering": {
     "regular": "Thường xuyên",
@@ -348,7 +351,12 @@
     "errorTitle": "Chúng tôi không tải được kết quả",
     "hideSearch": "Ẩn tùy chọn tìm kiếm",
     "showSearch": "Hiện tùy chọn tìm kiếm",
-    "radiusAny": "Không giới hạn"
+    "radiusAny": "Không giới hạn",
+    "nameSearch": "Tìm theo tên",
+    "nameSearchPlaceholder": "vd: nhà thờ, Catholic Charities, phòng khám",
+    "nameSearchGo": "Tìm",
+    "nameSearchClear": "Xóa",
+    "regionCenter": "Bắc Virginia (trung tâm)"
   },
   "filters": {
     "title": "Bộ lọc",
@@ -1348,7 +1356,11 @@
       "label": "Thú cưng",
       "hint": "Thức ăn thú cưng, thú y giá rẻ"
     },
-    "multiHint": "Chọn một hoặc nhiều mục."
+    "multiHint": "Chọn một hoặc nhiều mục.",
+    "reproductive_health": {
+      "label": "Sức khỏe tình dục & sinh sản",
+      "hint": "Kế hoạch hóa gia đình, tránh thai, xét nghiệm STI, chăm sóc tiền sản"
+    }
   },
   "crisis": {
     "title": "Đang gặp khủng hoảng?",

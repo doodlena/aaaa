@@ -30,6 +30,7 @@ export const NEEDS: Need[] = [
   { id: 'work_learning', icon: 'book', service_group: 'work_learning', food: false },
   { id: 'family', icon: 'family', service_group: 'family', food: false },
   { id: 'transportation', icon: 'bus', service_group: 'transportation', food: false },
+  { id: 'reproductive_health', icon: 'health', service_group: 'reproductive_health', food: false },
   { id: 'pets', icon: 'paw', service_group: 'pets', food: false },
 ];
 

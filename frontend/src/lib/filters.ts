@@ -26,6 +26,7 @@ export const SERVICE_GROUPS = [
   'work_learning',
   'family',
   'transportation',
+  'reproductive_health',
   'pets',
   'other',
 ] as const;
@@ -88,6 +89,8 @@ export const SERVICE_TYPES: Record<string, string> = {
   childcare: 'family',
   domestic_violence_support: 'family',
   transportation_help: 'transportation',
+  reproductive_health: 'reproductive_health',
+  prenatal_care: 'reproductive_health',
   pet_food: 'pets',
   veterinary_care: 'pets',
   pet_friendly_shelter: 'pets',
@@ -119,7 +122,9 @@ export const ELIGIBILITY_FILTERS = [
 ] as const;
 export const SORTS = ['distance', 'next_distribution', 'relevance', 'name'] as const;
 /** Distance choices shown to people, in miles; the API takes kilometres. */
-export const RADII_MILES = [1, 3, 5, 10, 25] as const;
+export const RADII_MILES = [1, 3, 5, 10, 25, 50] as const;
+/** Used when someone picks a distance before entering an address: the middle of Northern Virginia. */
+export const REGION_CENTER = { lat: 38.85, lon: -77.3 };
 export const milesToKm = (mi: number) => Math.round(mi * 1.609344 * 100) / 100;
 export const kmToMiles = (km: number) => Math.round((km / 1.609344) * 10) / 10;
 export const RADII = RADII_MILES.map(milesToKm);
@@ -136,6 +141,8 @@ export interface Filters {
   radius_km: number;
   bbox: [number, number, number, number] | null;
   jurisdiction: string;
+  /** Name search: words that must appear in the place or organization name. */
+  q: string;
   food_groups: string[];
   service_groups: string[];
   eligibility: string[];
@@ -158,6 +165,7 @@ export const DEFAULT_FILTERS: Filters = {
   radius_km: milesToKm(10),
   bbox: null,
   jurisdiction: '',
+  q: '',
   food_groups: [],
   service_groups: [],
   eligibility: [],
@@ -201,6 +209,7 @@ export function filtersFromURL(sp: URLSearchParams): Filters {
     radius_km: sp.get('radius_km') === 'any' ? ANY_DISTANCE : radius && radius > 0 && radius <= 80 ? radius : DEFAULT_FILTERS.radius_km,
     bbox,
     jurisdiction: sp.get('jurisdiction') || '',
+    q: (sp.get('q') || '').slice(0, 100),
     food_groups: list(sp.get('food_group'), FOOD_GROUPS),
     service_groups: list(sp.get('service_group'), SERVICE_GROUPS),
     eligibility: list(sp.get('eligibility'), ELIGIBILITY_FILTERS),
@@ -226,6 +235,7 @@ export function filtersToURL(f: Filters): URLSearchParams {
   if (f.radius_km !== DEFAULT_FILTERS.radius_km) sp.set('radius_km', f.radius_km === ANY_DISTANCE ? 'any' : String(f.radius_km));
   if (f.bbox) sp.set('bbox', f.bbox.map(round).join(','));
   if (f.jurisdiction) sp.set('jurisdiction', f.jurisdiction);
+  if (f.q) sp.set('q', f.q);
   if (f.food_groups.length) sp.set('food_group', f.food_groups.join(','));
   if (f.service_groups.length) sp.set('service_group', f.service_groups.join(','));
   if (f.eligibility.length) sp.set('eligibility', f.eligibility.join(','));
@@ -251,6 +261,7 @@ export function buildSearchQuery(f: Filters, pageSize = 50): string {
   }
   if (f.bbox) sp.set('bbox', f.bbox.join(','));
   if (f.jurisdiction) sp.set('jurisdiction', f.jurisdiction);
+  if (f.q.trim()) sp.set('q', f.q.trim());
   if (f.food_groups.length) sp.set('food_group', f.food_groups.join(','));
   if (f.service_groups.length) sp.set('service_group', f.service_groups.join(','));
   // Several needs are alternatives: show places that offer any of them (food groups together count as one need).

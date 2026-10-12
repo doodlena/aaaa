@@ -233,7 +233,8 @@
     "work_learning": "Jobs and English classes",
     "family": "Family and children",
     "transportation": "Transportation",
-    "pets": "Pets"
+    "pets": "Pets",
+    "reproductive_health": "Sexual & reproductive health"
   },
   "serviceType": {
     "pantry_pickup": "Food pantry pickup",
@@ -281,7 +282,9 @@
     "pet_food": "Pet food",
     "veterinary_care": "Low-cost or free vet care",
     "pet_friendly_shelter": "Pet-friendly shelter",
-    "pet_supplies": "Pet supplies"
+    "pet_supplies": "Pet supplies",
+    "reproductive_health": "Sexual & reproductive health care",
+    "prenatal_care": "Prenatal care"
   },
   "offering": {
     "regular": "Regular",
@@ -348,7 +351,12 @@
     "errorTitle": "We could not load results",
     "hideSearch": "Hide search options",
     "showSearch": "Show search options",
-    "radiusAny": "No limit"
+    "radiusAny": "No limit",
+    "nameSearch": "Search by name",
+    "nameSearchPlaceholder": "e.g. church, Catholic Charities, clinic",
+    "nameSearchGo": "Search",
+    "nameSearchClear": "Clear",
+    "regionCenter": "Northern Virginia (center)"
   },
   "filters": {
     "title": "Filters",
@@ -1348,7 +1356,11 @@
       "label": "Pets",
       "hint": "Pet food, low-cost vet care"
     },
-    "multiHint": "Choose one or more."
+    "multiHint": "Choose one or more.",
+    "reproductive_health": {
+      "label": "Sexual & reproductive health",
+      "hint": "Family planning, birth control, STI testing, prenatal care"
+    }
   },
   "crisis": {
     "title": "In crisis?",

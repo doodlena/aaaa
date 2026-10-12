@@ -1,6 +1,7 @@
 from datetime import UTC, date, datetime, timedelta
 from typing import Annotated
 
+from fastapi.responses import JSONResponse
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session, selectinload
@@ -77,6 +78,8 @@ def search_resources(
     any_distance: bool = Query(False, description="No distance limit around lat/lon (radius_km is ignored)"),
     bbox: str | None = Query(None, description="min_lon,min_lat,max_lon,max_lat (viewport search)"),
     jurisdiction: str | None = None,
+    q: str | None = Query(None, max_length=100, description="Name search (place or organization)"),
+    fields: str | None = Query(None, pattern="^pins$", description="'pins' returns every match (up to 1000) with minimal fields for the map"),
     food_group: CSV = None,
     food_type: CSV = None,
     service_group: CSV = None,
@@ -113,12 +116,19 @@ def search_resources(
         if bad:
             raise HTTPException(422, f"unknown {name}: {bad}")
     params = SearchParams(
-        lat=lat, lon=lon, radius_km=None if any_distance else radius_km, bbox=box, jurisdiction=jurisdiction, food_groups=fg, food_types=_split(food_type),
+        lat=lat, lon=lon, radius_km=None if any_distance else radius_km, bbox=box, jurisdiction=jurisdiction, q=(q or "").strip() or None, food_groups=fg, food_types=_split(food_type),
         service_groups=sg, service_types=_split(service_type), need_match=need_match, on_date=date_, open_today=open_today,
         upcoming_days=upcoming_days, eligibility=el, wheelchair=wheelchair, live_open=live_open, live_food_groups=lfg,
         language=language, sort=sort,
         include_uncertain=include_uncertain, page=page, page_size=page_size,
     )
+    if fields == "pins":
+        params.page, params.page_size = 1, 1000
+        res = search(db, params)
+        slim = lambda i: {k: i.get(k) for k in ("id", "name", "lat", "lon", "verification_label", "is_synthetic", "service_types")} | {  # noqa: E731
+            "live": {"status": i["live"]["status"]} if i.get("live") else None}
+        return JSONResponse({"items": [slim(i) for i in res["items"]], "uncertain": [slim(i) for i in res["uncertain"]],
+                             "total": res["total"], "truncated": res["truncated"]})
     return search(db, params)
 
 

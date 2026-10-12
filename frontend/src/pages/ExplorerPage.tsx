@@ -20,6 +20,7 @@ import {
   filtersFromURL,
   filtersToURL,
   RADII,
+  REGION_CENTER,
   kmToMiles,
   SORTS,
   type Filters,
@@ -48,6 +49,11 @@ export default function ExplorerPage() {
   const viewId = Number(sp.get('view')) || null;
   const query = buildSearchQuery(filters, PAGE_SIZE);
   const { data, error, loading, reload } = useAsync((signal) => api.search(query, signal), [query]);
+  // The map shows every match (not just this page of the list): a lightweight "pins" request with the same filters.
+  const pinsQuery = `${buildSearchQuery({ ...filters, page: 1 }, PAGE_SIZE)}&fields=pins`;
+  const pins = useAsync((signal) => api.search(pinsQuery, signal), [pinsQuery]);
+  const [nameDraft, setNameDraft] = useState(filters.q);
+  useEffect(() => setNameDraft(filters.q), [filters.q]);
   const store = useMemo(() => createSelectionStore(), []);
   const sel = useSelection(store);
   const narrow = useMediaQuery('(max-width: 899px)');
@@ -127,8 +133,8 @@ export default function ExplorerPage() {
     filters.service_groups.includes('mental_health') ||
     !!data?.items.some((r) => offersCrisisServices(r.service_types)) ||
     !!data?.uncertain.some((r) => offersCrisisServices(r.service_types));
-  const mapItems = data?.items || [];
-  const mapOffset = data ? (data.page - 1) * data.page_size + 1 : 1;
+  const mapItems = pins.data?.items || data?.items || [];
+  const mapOffset = pins.data ? 1 : data ? (data.page - 1) * data.page_size + 1 : 1;
 
   return (
     <div className={`explorer ${narrow ? `explorer--${mobileView}` : ''}`}>
@@ -151,9 +157,35 @@ export default function ExplorerPage() {
         <div className="explorer__controls">
           {barOpen && (
           <>
+          <form
+            className="field field--inline name-search"
+            role="search"
+            onSubmit={(e) => {
+              e.preventDefault();
+              update({ q: nameDraft.trim() });
+            }}
+          >
+            <label htmlFor="name-q">{t('explorer.nameSearch')}</label>
+            <input id="name-q" type="search" value={nameDraft} maxLength={100} placeholder={t('explorer.nameSearchPlaceholder')} onChange={(e) => setNameDraft(e.target.value)} />
+            <button type="submit" className="btn btn--secondary btn--sm">{t('explorer.nameSearchGo')}</button>
+            {filters.q && (
+              <button type="button" className="btn btn--ghost btn--sm" onClick={() => update({ q: '' })}>
+                {t('explorer.nameSearchClear')}
+              </button>
+            )}
+          </form>
           <div className="field field--inline">
             <label htmlFor="radius">{t('explorer.radius')}</label>
-            <select id="radius" value={filters.radius_km} disabled={!center || !!filters.bbox} onChange={(e) => update({ radius_km: Number(e.target.value) })}>
+            <select
+              id="radius"
+              value={filters.radius_km}
+              disabled={!!filters.bbox}
+              onChange={(e) => {
+                const radius_km = Number(e.target.value);
+                // No address yet: measure from the middle of Northern Virginia so the distance still applies.
+                update(center ? { radius_km } : { radius_km, lat: REGION_CENTER.lat, lon: REGION_CENTER.lon, label: t('explorer.regionCenter'), sort: 'distance' });
+              }}
+            >
               {(RADII.includes(filters.radius_km) || filters.radius_km === ANY_DISTANCE ? RADII : [...RADII, filters.radius_km].sort((a, b) => a - b)).map((r) => (
                 <option key={r} value={r}>
                   {t('explorer.radiusOption', { miles: kmToMiles(r) })}
@@ -269,7 +301,7 @@ export default function ExplorerPage() {
           <Suspense fallback={<Loading label={t('map.loading')} />}>
             <MapView
               items={mapItems}
-              uncertain={data?.uncertain || []}
+              uncertain={pins.data?.uncertain || data?.uncertain || []}
               indexOffset={mapOffset}
               center={center}
               radiusKm={filters.bbox || filters.radius_km === ANY_DISTANCE ? null : filters.radius_km}

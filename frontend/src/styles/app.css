@@ -3656,3 +3656,6 @@ form.is-ai-drafted select {
 .getting-there__modes { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-bottom: var(--sp-2); }
 .getting-there__list { margin: 0 0 var(--sp-2); padding-left: 1.1rem; }
 .getting-there__list li { margin: 4px 0; overflow-wrap: anywhere; }
+
+.name-search { flex-wrap: wrap; gap: var(--sp-2); }
+.name-search input { min-width: 0; flex: 1 1 220px; }
