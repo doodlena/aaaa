@@ -274,7 +274,9 @@ async function main(argv) {
   const demo = !cli && argv.includes('--demo');
   ensureBackend();
   if (!cli) ensureFrontend();
-  const env = { ...process.env, FOODACCESS_DATABASE_URL: await ensureDatabase() };
+  const localEnvPath = path.join(ROOT, '.env');
+  const localEnv = existsSync(localEnvPath) ? parseEnv(readFileSync(localEnvPath, 'utf8')) : {};
+  const env = { ...localEnv, ...process.env, FOODACCESS_DATABASE_URL: await ensureDatabase() };
 
   if (cli) return foodaccess(argv.slice(1), env);
 

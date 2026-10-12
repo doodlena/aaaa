@@ -21,6 +21,18 @@ services:
         value: production
       - key: FOODACCESS_COOKIE_SECURE
         value: "true"
+      - key: FOODACCESS_CORS_ORIGINS
+        value: '["https://aaaa-delta-eight.vercel.app"]'
+      - key: FOODACCESS_OIDC_REDIRECT_URL
+        value: https://aaaa-delta-eight.vercel.app/auth/callback
+      - key: FOODACCESS_OIDC_ISSUER
+        value: https://accounts.google.com
+      - key: FOODACCESS_OIDC_PROVIDER_NAME
+        value: Google
+      - key: FOODACCESS_OIDC_CLIENT_ID
+        sync: false
+      - key: FOODACCESS_OIDC_CLIENT_SECRET
+        sync: false
       - key: FOODACCESS_SHOW_SYNTHETIC
         value: "false"
 
