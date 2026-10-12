@@ -1,0 +1,405 @@
+{
+  "run_id": 5,
+  "source": {
+    "id": "va08-support-services",
+    "name": "Inner Northern Virginia support services (mental health, benefits, health, housing, legal\u2026) \u2014 research of official sources (cited)",
+    "url": "snapshot://va08-support-services.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "AI-assisted research of official/primary sources on the retrieval date; every record cites source_url. Not verified.",
+      "Hotlines without a physical location are listed in docs/pilot_research/VA08_SUPPORT_SERVICES_LOG.md, not imported.",
+      "Confidential shelter addresses are never collected."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T19:29:29.440568+00:00",
+  "finished_at": "2026-10-12T19:29:30.415905+00:00",
+  "counts": {
+    "discovered": 41,
+    "inserted": 30,
+    "updated": 1,
+    "unchanged": 0,
+    "rejected": 0,
+    "duplicate_candidates": 10,
+    "conflicts": 0,
+    "needs_review": 107,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {
+      "auto_linked": 1
+    }
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "va08svc-arlington-public-health-clinics",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-arlington-wic",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-arlington-homeless-services-center",
+      "status": "linked",
+      "location_id": 80,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-arlington-residential-program-center",
+      "status": "linked",
+      "location_id": 81,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-fairfax-annandale-public-health-center-wic",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-arlington-reep",
+      "status": "linked",
+      "location_id": 82,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-sequoia-1",
+      "status": "linked",
+      "location_id": 84,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-arlington-pediatric-center",
+      "status": "linked",
+      "location_id": 85,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-casey",
+      "status": "linked",
+      "location_id": 86,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-east-glebe",
+      "status": "linked",
+      "location_id": 87,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-mark-center",
+      "status": "linked",
+      "location_id": 88,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-gartlan",
+      "status": "linked",
+      "location_id": 89,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-richmond-highway",
+      "status": "linked",
+      "location_id": 90,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-sherwood-hall",
+      "status": "linked",
+      "location_id": 91,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-south-county",
+      "status": "linked",
+      "location_id": 92,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-annandale",
+      "status": "linked",
+      "location_id": 93,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-neighborhood-health-annandale-dental",
+      "status": "linked",
+      "location_id": 94,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-lsnv-arlington",
+      "status": "linked",
+      "location_id": 95,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-alexandria-dchs-benefits-customer-service",
+      "status": "linked",
+      "location_id": 96,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-alexandria-dchs-behavioral-health",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-alexandria-workforce-development-center",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-alexandria-health-department-del-pepper",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-carpenters-shelter-hoffman-center",
+      "status": "linked",
+      "location_id": 97,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-alexandria-community-shelter",
+      "status": "linked",
+      "location_id": 98,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-lsnv-alexandria",
+      "status": "linked",
+      "location_id": 99,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-falls-church-housing-human-services",
+      "status": "linked",
+      "location_id": 100,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-fairfax-dfs-hyland",
+      "status": "linked",
+      "location_id": 101,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-fairfax-dfs-annandale",
+      "status": "linked",
+      "location_id": 102,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-fairfax-mount-vernon-public-health-center",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-fairfax-csb-gartlan-center",
+      "status": "linked",
+      "location_id": 103,
+      "issues": []
+    },
+    {
+      "external_id": "va08svc-fairfax-csb-hyland-outpatient",
+      "status": "linked",
+      "location_id": 101,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-vcw-cherokee-avenue-center",
+      "status": "linked",
+      "location_id": 104,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-fairfax-vcw-alexandria-center",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-fairfax-vcw-annandale-center",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-baileys-shelter-supportive-housing",
+      "status": "linked",
+      "location_id": 105,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-united-community-hyland",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-united-community-progreso-center",
+      "status": "linked",
+      "location_id": 106,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08svc-united-community-early-learning-center",
+      "status": "linked",
+      "location_id": 107,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

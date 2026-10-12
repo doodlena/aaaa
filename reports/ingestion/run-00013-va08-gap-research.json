@@ -1,0 +1,216 @@
+{
+  "run_id": 13,
+  "source": {
+    "id": "va08-gap-research",
+    "name": "Inner Northern Virginia additions (clothing, transport, DV offices, Falls Church, more mental health & pantries) \u2014 AI-assisted research (cited)",
+    "url": "snapshot://va08-gap-research.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "AI-assisted research of pages fetched on the retrieval date; each record cites source_url. Not verified.",
+      "Blocked sites were skipped, not circumvented; see the matching research log in docs/pilot_research/."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T19:29:40.205968+00:00",
+  "finished_at": "2026-10-12T19:29:41.040137+00:00",
+  "counts": {
+    "discovered": 28,
+    "inserted": 24,
+    "updated": 0,
+    "unchanged": 0,
+    "rejected": 0,
+    "duplicate_candidates": 4,
+    "conflicts": 0,
+    "needs_review": 329,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "va08gap-alexandria-dot-paratransit",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-cathedral-st-thomas-more-esl",
+      "status": "linked",
+      "location_id": 308,
+      "issues": []
+    },
+    {
+      "external_id": "va08gap-ccda-counseling-good-shepherd",
+      "status": "linked",
+      "location_id": 310,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-ccda-counseling-our-lady-of-lourdes",
+      "status": "linked",
+      "location_id": 311,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-ccda-counseling-st-charles-borromeo",
+      "status": "linked",
+      "location_id": 312,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-clothesline-arlington-kids",
+      "status": "linked",
+      "location_id": 313,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-eec-esl-drew-community-center",
+      "status": "linked",
+      "location_id": 318,
+      "issues": []
+    },
+    {
+      "external_id": "va08gap-eec-esl-rising-hope",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "va08gap-falls-church-city-senior-center",
+      "status": "linked",
+      "location_id": 319,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-ffo-hollywood",
+      "status": "linked",
+      "location_id": 320,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-ffo-patrick-henry",
+      "status": "linked",
+      "location_id": 321,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-ffo-willston",
+      "status": "linked",
+      "location_id": 322,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-olqp-matthew-25-free-store",
+      "status": "linked",
+      "location_id": 327,
+      "issues": []
+    },
+    {
+      "external_id": "va08gap-senior-services-alexandria-transportation",
+      "status": "linked",
+      "location_id": 328,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-tahirih-justice-center-greater-dc",
+      "status": "linked",
+      "location_id": 329,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-vita-hyland-government-center",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08gap-vita-vcw-annandale",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

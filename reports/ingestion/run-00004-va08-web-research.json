@@ -1,0 +1,412 @@
+{
+  "run_id": 4,
+  "source": {
+    "id": "va08-web-research",
+    "name": "Inner Northern Virginia food assistance \u2014 AI-assisted web research (cited)",
+    "url": "snapshot://va08-web-research.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "Compiled by an AI research agent from pages fetched on the retrieval date; every record cites source_url. Not verified.",
+      "Records marked needs_primary_confirmation came from a secondary directory and have only the fields it stated.",
+      "Hours/eligibility text is kept verbatim; structured schedules only where stated unambiguously.",
+      "See docs/pilot_research/VA08_RESEARCH_LOG.md for sources consulted and exclusions."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T19:29:28.036877+00:00",
+  "finished_at": "2026-10-12T19:29:29.413615+00:00",
+  "counts": {
+    "discovered": 52,
+    "inserted": 45,
+    "updated": 6,
+    "unchanged": 0,
+    "rejected": 0,
+    "duplicate_candidates": 1,
+    "conflicts": 0,
+    "needs_review": 77,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {
+      "auto_linked": 6
+    }
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "va08-open-table-blue-white-carry-out",
+      "status": "linked",
+      "location_id": 51,
+      "issues": []
+    },
+    {
+      "external_id": "va08-open-table-old-town-community-church",
+      "status": "linked",
+      "location_id": 52,
+      "issues": []
+    },
+    {
+      "external_id": "va08-dchs-agape-chick-armstrong",
+      "status": "linked",
+      "location_id": 34,
+      "issues": []
+    },
+    {
+      "external_id": "va08-alive-fresh-market-chick-armstrong",
+      "status": "linked",
+      "location_id": 34,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-alive-fresh-market-ramsay",
+      "status": "linked",
+      "location_id": 37,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-alive-dchs-mark-center",
+      "status": "linked",
+      "location_id": 38,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-alive-fairlington-umc",
+      "status": "linked",
+      "location_id": 39,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-alive-hammond-ms",
+      "status": "linked",
+      "location_id": 40,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-alive-uncut-jefferson-houston",
+      "status": "linked",
+      "location_id": 41,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-west-end-food-pantry",
+      "status": "linked",
+      "location_id": 44,
+      "issues": []
+    },
+    {
+      "external_id": "va08-oakland-baptist-alexandria",
+      "status": "linked",
+      "location_id": 45,
+      "issues": []
+    },
+    {
+      "external_id": "va08-mt-jezreel-baptist-pantry",
+      "status": "linked",
+      "location_id": 46,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-ruby-tucker-family-center-pantry",
+      "status": "linked",
+      "location_id": 47,
+      "issues": []
+    },
+    {
+      "external_id": "va08-christ-house-evening-meal",
+      "status": "linked",
+      "location_id": 48,
+      "issues": []
+    },
+    {
+      "external_id": "va08-open-table-wsumc",
+      "status": "linked",
+      "location_id": 50,
+      "issues": []
+    },
+    {
+      "external_id": "va08-open-table-old-presbyterian-meeting-house",
+      "status": "linked",
+      "location_id": 53,
+      "issues": []
+    },
+    {
+      "external_id": "va08-st-martins-senior-center",
+      "status": "linked",
+      "location_id": 54,
+      "issues": []
+    },
+    {
+      "external_id": "va08-lfp-fairlington-presbyterian",
+      "status": "linked",
+      "location_id": 57,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-charles-houston-senior-center",
+      "status": "linked",
+      "location_id": 55,
+      "issues": []
+    },
+    {
+      "external_id": "va08-lfp-ramsay-rec",
+      "status": "linked",
+      "location_id": 56,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-lfp-duke-street",
+      "status": "linked",
+      "location_id": 58,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-lfp-first-christian-alexandria",
+      "status": "linked",
+      "location_id": 59,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-lfp-alexandria-country-day",
+      "status": "linked",
+      "location_id": 60,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-lfp-casa-chirilagua",
+      "status": "linked",
+      "location_id": 61,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-lfp-st-ritas",
+      "status": "linked",
+      "location_id": 62,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-lfp-dale-st-garden",
+      "status": "linked",
+      "location_id": 63,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-lfp-del-ray-pantry",
+      "status": "linked",
+      "location_id": 64,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-lfp-george-washington",
+      "status": "linked",
+      "location_id": 65,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-lfp-yellow-blessing-box",
+      "status": "linked",
+      "location_id": 66,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-lfp-charles-houston-rec",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-lfp-old-presbyterian-meeting-house",
+      "status": "linked",
+      "location_id": 67,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-united-community-mm-mount-vernon-woods",
+      "status": "linked",
+      "location_id": 69,
+      "issues": []
+    },
+    {
+      "external_id": "va08-united-community-mm-walt-whitman",
+      "status": "linked",
+      "location_id": 70,
+      "issues": []
+    },
+    {
+      "external_id": "va08-groveton-baptist-food-pantry",
+      "status": "linked",
+      "location_id": 72,
+      "issues": []
+    },
+    {
+      "external_id": "va08-acca-food-pantry",
+      "status": "linked",
+      "location_id": 73,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-culmore-umc-food-ministry",
+      "status": "linked",
+      "location_id": 74,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-fcs-knox-presbyterian",
+      "status": "linked",
+      "location_id": 75,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "va08-poor-sisters-st-joseph-pantry",
+      "status": "linked",
+      "location_id": 76,
+      "issues": []
+    },
+    {
+      "external_id": "va08-st-philip-food-pantry",
+      "status": "linked",
+      "location_id": 77,
+      "issues": []
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}
