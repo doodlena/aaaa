@@ -1,4 +1,4 @@
-"""reconcile: make sure both the provider-portal columns (0010) and account-data encryption (0011) are present
+"""reconcile: make sure both account-data encryption (0010) and the provider-portal columns (0011) are present
 
 For a while the repository had two migrations sharing one revision id, so a database may be stamped at a revision
 whose sibling never ran. Both steps are idempotent; this applies whichever is missing.
@@ -26,8 +26,8 @@ def _load(name: str):
 
 
 def upgrade() -> None:
-    _load("0010_provider_portal_membership_details").upgrade()
-    _load("0011_encrypt_account_data").upgrade()
+    _load("0010_encrypt_account_data").upgrade()
+    _load("0011_provider_portal_membership_details").upgrade()
 
 
 def downgrade() -> None:
