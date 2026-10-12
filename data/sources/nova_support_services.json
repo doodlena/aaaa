@@ -1,0 +1,6 @@
+{
+  "_notice": "Unverified candidate records of NON-FOOD support services in Northern Virginia OUTSIDE Virginia's 8th Congressional District (Loudoun, western/central Fairfax County, City of Fairfax, Manassas, Manassas Park, Prince William), compiled by AI-assisted research from official/primary web pages fetched on 2026-10-12. Every field comes from the cited source_url (or a URL named in notes). Confirm with the provider before publishing. No confidential domestic-violence shelter addresses are included; hotlines are listed in docs/pilot_research/NOVA_SUPPORT_SERVICES_LOG.md and not imported.",
+  "retrieved": "2026-10-12",
+  "method": "AI-assisted web research of official/primary sources (curl, UA OpenShelf-research/0.1, >=1 s between requests, robots.txt checked); US Census geocoder (Public_AR_Current); points filtered with shapely to NoVA localities outside VA-08 (TIGERweb CD119); unverified candidates",
+  "records": []
+}

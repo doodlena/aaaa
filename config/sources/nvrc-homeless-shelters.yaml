@@ -1,0 +1,17 @@
+id: nvrc-homeless-shelters
+name: Northern Virginia Regional Commission — homeless shelters
+owner: Northern Virginia Regional Commission
+url: https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1
+adapter: nvrc_shelters
+retrieval: http
+formats: [arcgis-geojson]
+jurisdictions: [arlington-county, alexandria-city, falls-church-city, fairfax-county, fairfax-city, loudoun-county, prince-william-county, manassas-city, manassas-park-city]
+enabled: true
+request_urls:
+  - "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=geojson"
+store_raw: true
+publication: permitted_with_attribution   # public item; licenseInfo is a no-warranty disclaimer only
+verified_on: "2026-10-12"
+known_limitations: ["Regional compilation; confirm intake process with each shelter."]
+terms_notes: "NVRC disclaimer: no warranty; no use restriction stated. Attribute NVRC."
+refresh: "0 5 * * 1"

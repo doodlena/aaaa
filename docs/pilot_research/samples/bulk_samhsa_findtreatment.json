@@ -1,0 +1,295 @@
+{
+ "_source": "https://findtreatment.gov/locator/exportsAsJson/v2 (public domain, US Gov)",
+ "rows": [
+  {
+   "_irow": 2,
+   "name1": "Inova Kellar Center",
+   "name2": "",
+   "street1": "11204 Waples Mill Road",
+   "city": "Fairfax",
+   "street2": "",
+   "state": "VA",
+   "zip": "22030",
+   "phone": "703-218-8500",
+   "intake1": null,
+   "hotline1": null,
+   "website": "https://www.inova.org",
+   "latitude": "38.8589495",
+   "longitude": "-77.3324589",
+   "miles": 1.1,
+   "services": [
+    {
+     "f1": "Type of Care",
+     "f2": "TC",
+     "f3": "Substance use treatment; Mental health treatment; Treatment for co-occurring disorders plus serious emotional disturbance (SED) in children"
+    },
+    {
+     "f1": "Service Setting",
+     "f2": "SET",
+     "f3": "Outpatient; Partial hospitalization/day treatment"
+    },
+    {
+     "f1": "Pharmacotherapies",
+     "f2": "PHR",
+     "f3": "Nicotine replacement; Non-nicotine smoking/tobacco cessation"
+    },
+    {
+     "f1": "Treatment Approaches",
+     "f2": "TAP",
+     "f3": "Cognitive behavioral therapy; Couples/family therapy; Dialectical behavior therapy; Group therapy; Integrated Mental and Substance Use Disorder treatment; Individual psychotherapy; Telemedicine/telehealth therapy"
+    },
+    {
+     "f1": "Facility Operation (e.g., Private, Public)",
+     "f2": "FOP",
+     "f3": "Private non-profit organization"
+    },
+    {
+     "f1": "Payment/Insurance/Funding Accepted",
+     "f2": "PAY",
+     "f3": "County or local government funds; Medicaid; Private health insurance; Private or Community foundation; Cash or self-payment; State welfare or child and family services funds"
+    },
+    {
+     "f1": "Special Programs/Groups Offered",
+     "f2": "SG",
+     "f3": "Clients with co-occurring mental and substance use disorders"
+    },
+    {
+     "f1": "Education and Counseling Services",
+     "f2": "ECS",
+     "f3": "Smoking/vaping/tobacco cessation counseling"
+    },
+    {
+     "f1": "Facility Smoking Policy ",
+     "f2": "SMP",
+     "f3": "Smoking not permitted"
+    },
+    {
+     "f1": "Age Groups Accepted",
+     "f2": "AGE",
+     "f3": "Children/Adolescents; Young Adults"
+    },
+    {
+     "f1": "Facility Vaping Policy",
+     "f2": "FVP",
+     "f3": "Vaping not permitted"
+    },
+    {
+     "f1": "Ancillary Services",
+     "f2": "AS",
+     "f3": "Family psychoeducation; Suicide prevention services"
+    }
+   ],
+   "typeFacility": "MH"
+  },
+  {
+   "_irow": 1,
+   "name1": "Inova Kellar Center",
+   "name2": "",
+   "street1": "11204 Waples Mill Road",
+   "city": "Fairfax",
+   "street2": "",
+   "state": "VA",
+   "zip": "22030",
+   "phone": "703-218-8500",
+   "intake1": null,
+   "hotline1": null,
+   "website": "https://www.inova.org",
+   "latitude": "38.8589495",
+   "longitude": "-77.3324589",
+   "miles": 1.1,
+   "services": [
+    {
+     "f1": "Type of Care",
+     "f2": "TC",
+     "f3": "Substance use treatment; Treatment for co-occurring disorders plus serious emotional disturbance (SED) in children"
+    },
+    {
+     "f1": "Service Setting",
+     "f2": "SET",
+     "f3": "Outpatient; Outpatient day treatment or partial hospitalization; Intensive outpatient treatment; Regular outpatient treatment"
+    },
+    {
+     "f1": "Hospitals",
+     "f2": "HOSP",
+     "f3": "General Hospital (including VA hospital)"
+    },
+    {
+     "f1": "External Opioid Medications Source",
+     "f2": "OMSC",
+     "f3": "No formal relationship with prescribing entity"
+    },
+    {
+     "f1": "Type of Alcohol Use Disorder Treatment",
+     "f2": "AUT",
+     "f3": "Does not use medication assisted treatment for alcohol use disorder"
+    },
+    {
+     "f1": "Type of Opioid Treatment",
+     "f2": "OT",
+     "f3": "Accepts clients using MAT but prescribed elsewhere"
+    },
+    {
+     "f1": "Treatment Approaches",
+     "f2": "TAP",
+     "f3": "Cognitive behavioral therapy; Contingency management/motivational incentives; Motivational interviewing; Relapse prevention; Substance use disorder counseling"
+    },
+    {
+     "f1": "Facility Operation (e.g., Private, Public)",
+     "f2": "FOP",
+     "f3": "Private non-profit organization"
+    },
+    {
+     "f1": "License/Certification/Accreditation",
+     "f2": "LCA",
+     "f3": "State substance use treatment agency; State mental health department; The Joint Commission"
+    },
+    {
+     "f1": "Payment/Insurance/Funding Accepted",
+     "f2": "PAY",
+     "f3": "Medicaid; Private health insurance; Cash or self-payment"
+    },
+    {
+     "f1": "Special Programs/Groups Offered",
+     "f2": "SG",
+     "f3": "Adolescents; Clients with co-occurring mental and substance use disorders"
+    },
+    {
+     "f1": "Assessment/Pre-treatment",
+     "f2": "ASPT",
+     "f3": "Comprehensive mental health assessment; Comprehensive substance use assessment; Interim services for clients; Outreach to persons in the community; Screening for tobacco use; Screening for substance use; Screening for mental disorders"
+    },
+    {
+     "f1": "Testing",
+     "f2": "SCR",
+     "f3": "Breathalyzer or blood alcohol testing; Drug or alcohol urine screening"
+    },
+    {
+     "f1": "Transitional Services",
+     "f2": "TRSRV",
+     "f3": "Aftercare/continuing care; Discharge Planning; Naloxone and overdose education"
+    },
+    {
+     "f1": "Education and Counseling Services",
+     "f2": "ECS",
+     "f3": "Substance use disorder education; Smoking/vaping/tobacco cessation counseling; Individual counseling; Group counseling; Family counseling"
+    },
+    {
+     "f1": "Facility Smoking Policy ",
+     "f2": "SMP",
+     "f3": "Smoking not permitted"
+    },
+    {
+     "f1": "Age Groups Accepted",
+     "f2": "AGE",
+     "f3": "Children/Adolescents; Young Adults"
+    },
+    {
+     "f1": "Sex Accepted",
+     "f2": "SN",
+     "f3": "Female; Male"
+    },
+    {
+     "f1": "Language Services",
+     "f2": "SL",
+     "f3": "Sign language services for the deaf and hard of hearing"
+    },
+    {
+     "f1": "Facility Vaping Policy",
+     "f2": "FVP",
+     "f3": "Vaping not permitted"
+    },
+    {
+     "f1": "Ancillary Services",
+     "f2": "AS",
+     "f3": "Mental health services; Social skills development; Suicide prevention services"
+    }
+   ],
+   "typeFacility": "SA"
+  },
+  {
+   "_irow": 3,
+   "name1": "Center for Discovery",
+   "name2": "Fairfax",
+   "street1": "5343 Summit Drive",
+   "city": "Fairfax",
+   "street2": "",
+   "state": "VA",
+   "zip": "22030",
+   "phone": "714-828-1800",
+   "intake1": "855-818-2029",
+   "hotline1": null,
+   "website": "https://centerfordiscovery.com/locations/fairfax/",
+   "latitude": "38.8371431",
+   "longitude": "-77.3870558",
+   "miles": 2.2,
+   "services": [
+    {
+     "f1": "Type of Care",
+     "f2": "TC",
+     "f3": "Mental health treatment"
+    },
+    {
+     "f1": "Service Setting",
+     "f2": "SET",
+     "f3": "Residential/24-hour residential"
+    },
+    {
+     "f1": "Facility Type",
+     "f2": "FT",
+     "f3": "Residential treatment center (RTC) for children"
+    },
+    {
+     "f1": "Treatment Approaches",
+     "f2": "TAP",
+     "f3": "Cognitive behavioral therapy; Couples/family therapy; Dialectical behavior therapy; Group therapy; Individual psychotherapy"
+    },
+    {
+     "f1": "Facility Operation (e.g., Private, Public)",
+     "f2": "FOP",
+     "f3": "Private for-profit organization"
+    },
+    {
+     "f1": "Payment/Insurance/Funding Accepted",
+     "f2": "PAY",
+     "f3": "Federal military insurance (e.g., TRICARE); Private health insurance; Cash or self-payment; U.S. Department of VA funds"
+    },
+    {
+     "f1": "Special Programs/Groups Offered",
+     "f2": "SG",
+     "f3": "Young adults; Veterans; Active duty military; Members of military families; Clients who have experienced intimate partner violence, domestic violence; Clients who have experienced trauma; Persons with eating disorders; Persons with post-traumatic stress disorder (PTSD)"
+    },
+    {
+     "f1": "Testing",
+     "f2": "SCR",
+     "f3": "Metabolic syndrome monitoring"
+    },
+    {
+     "f1": "Recovery Support Services",
+     "f2": "RSS",
+     "f3": "Housing services"
+    },
+    {
+     "f1": "Facility Smoking Policy ",
+     "f2": "SMP",
+     "f3": "Smoking not permitted"
+    },
+    {
+     "f1": "Age Groups Accepted",
+     "f2": "AGE",
+     "f3": "Children/Adolescents; Adults"
+    },
+    {
+     "f1": "Facility Vaping Policy",
+     "f2": "FVP",
+     "f3": "Vaping not permitted"
+    },
+    {
+     "f1": "Ancillary Services",
+     "f2": "AS",
+     "f3": "Diet and exercise counseling; Family psychoeducation; Case management service"
+    }
+   ],
+   "typeFacility": "MH"
+  }
+ ]
+}

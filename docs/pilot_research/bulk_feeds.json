@@ -1,0 +1,354 @@
+{
+  "generated": "2026-10-12",
+  "scope": "Structured public human-services location feeds for Northern Virginia (Lantern bulk import). Excludes already-integrated CAFB Get_Help, Fairfax food-access survey, PWC CMN_Public_Resource_Locations, Manassas Food_Resources_WFL1.",
+  "feeds": [
+    {
+      "id": "fairfax_hsrg_service_points",
+      "name": "Fairfax County Human Service Resource Guide (HSRG) service points (Fairfax_Service_Points_Updated)",
+      "owner": "Fairfax County Neighborhood and Community Services (ArcGIS owner FX.HSRG)",
+      "landing_url": "https://www.arcgis.com/home/item.html?id=850356301ffe4c268fc621003c5ad24f",
+      "query_url": "https://services1.arcgis.com/ioennV6PpG5Xodq0/arcgis/rest/services/Human_Service_Resources/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "format": "ArcGIS FeatureServer -> GeoJSON (point)",
+      "license_terms": "Fairfax County GIS licenseInfo: 'provided as a public resource' with no warranty; 'Copyright by Fairfax County. Except as provided herein, all rights are reserved. Authorization to reproduce material for internal or personal use ... is granted.' NOT an open license: public republication in Lantern needs written permission from Fairfax County (GIS.HelpQ@fairfaxcounty.gov / NCS). See https://www.fairfaxcounty.gov/maps/disclaimer",
+      "robots_ok": "n/a (ArcGIS REST API on services1.arcgis.com; public, no auth)",
+      "est_records_in_nova": "801 total rows; 762 inside NoVA bbox (rest are statewide/out-of-area providers e.g. Charlottesville). One row per service x location, so far fewer unique sites.",
+      "fields": {
+        "name": "Service_Name (+ Organization_Name)",
+        "address": "Service_Address (single string incl. city/state/zip)",
+        "city": "parse from Service_Address",
+        "zip": "parse from Service_Address",
+        "phone": null,
+        "website": "HumanServiceLink (county HSRG profile page)",
+        "hours": null,
+        "category": "Basic_Need",
+        "id": "ServiceTypeId (GUID of HSRG service profile; OBJECTID not stable)",
+        "coords": "Latitude/Longitude + geometry"
+      },
+      "suggested_service_type_mapping": {
+        "Basic_Need=Food": "food_referral (refine by Service_Name: 'pantry'->pantry_pickup, 'meal'->community_meal)",
+        "Basic_Need=Clothing": "clothing",
+        "Basic_Need=Furniture": "household_essentials",
+        "Basic_Need=Financial Assistance": "financial_assistance (Service_Name contains 'utility'->utility_assistance, 'rent'->housing_assistance)",
+        "Basic_Need=Housing/Shelters": "housing_assistance (Service_Name contains 'shelter'->shelter)",
+        "Basic_Need=Health/Behavioral Health": "health_clinic (Service_Name contains 'mental','counsel'->mental_health_counseling; 'substance'->substance_use_treatment; 'crisis'->crisis_support)",
+        "Basic_Need=Dental Health": "dental_care",
+        "Basic_Need=Child Health": "health_clinic",
+        "Basic_Need=Employment & Financial Literacy": "job_training",
+        "Basic_Need=Personal Safety/Domestic Violence": "crisis_support",
+        "Basic_Need=Parenting Concerns": "childcare (review)",
+        "Basic_Need=Family & Community Support": "food_referral/review",
+        "Basic_Need=Transportation": "(no SERVICE_TYPES key - skip or review)",
+        "Basic_Need=Veterans": "(review per row)"
+      },
+      "id_field": "ServiceTypeId",
+      "last_updated": "layer editingInfo lastEditDate 1791780755236 (~2026-10); item modified 2024-11-25",
+      "notes": "Richest NoVA multi-category feed found (14 Basic_Need categories: Health/Behavioral 223, Financial 108, Housing 93, Food 79, Employment 69, Clothing 53...). No phone/hours columns; join to HSRG profile page for those. Counts by Basic_Need from groupBy stats query. Licensing is the blocker for public display."
+    },
+    {
+      "id": "fairfax_ncs_senior_centers",
+      "name": "Fairfax County NCS Senior Centers",
+      "owner": "Fairfax County Neighborhood and Community Services",
+      "landing_url": "https://www.arcgis.com/home/item.html?id=3736805fb5d84f36aef4a71401808ff0",
+      "query_url": "https://services1.arcgis.com/ioennV6PpG5Xodq0/arcgis/rest/services/Senior_Center_1/FeatureServer/4/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "format": "ArcGIS FeatureServer -> GeoJSON",
+      "license_terms": "Fairfax County GIS licenseInfo: 'provided as a public resource' with no warranty; 'Copyright by Fairfax County. Except as provided herein, all rights are reserved. Authorization to reproduce material for internal or personal use ... is granted.' NOT an open license: public republication in Lantern needs written permission from Fairfax County (GIS.HelpQ@fairfaxcounty.gov / NCS). See https://www.fairfaxcounty.gov/maps/disclaimer",
+      "robots_ok": "n/a (ArcGIS REST)",
+      "est_records_in_nova": "14",
+      "fields": {
+        "name": "NAME",
+        "address": "ADDRESS (full string)",
+        "city": "parse",
+        "zip": "parse",
+        "phone": "PHONE",
+        "website": "WEBSITE",
+        "hours": "OPERATING_HOURS",
+        "category": "TYPE, DESCRIPTION",
+        "id": "OBJECTID"
+      },
+      "suggested_service_type_mapping": {
+        "TYPE=Senior Center": "senior_meals (DESCRIPTION lists Nutrition programming; confirm lunch program per site)"
+      },
+      "id_field": "OBJECTID",
+      "last_updated": "lastEditDate 1756923563685 (2025-09-03)",
+      "notes": "Small, clean, has phone+hours."
+    },
+    {
+      "id": "fairfax_ncs_multiservice_sites",
+      "name": "Fairfax County NCS Multi-Service Sites (community centers)",
+      "owner": "Fairfax County Neighborhood and Community Services",
+      "landing_url": "https://www.arcgis.com/home/item.html?id=7d3d39aff7844f35bf431b9b655b0f4c",
+      "query_url": "https://services1.arcgis.com/ioennV6PpG5Xodq0/arcgis/rest/services/MultiServiceSitesUpdate/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "format": "ArcGIS FeatureServer -> GeoJSON",
+      "license_terms": "Fairfax County GIS licenseInfo: 'provided as a public resource' with no warranty; 'Copyright by Fairfax County. Except as provided herein, all rights are reserved. Authorization to reproduce material for internal or personal use ... is granted.' NOT an open license: public republication in Lantern needs written permission from Fairfax County (GIS.HelpQ@fairfaxcounty.gov / NCS). See https://www.fairfaxcounty.gov/maps/disclaimer",
+      "robots_ok": "n/a (ArcGIS REST)",
+      "est_records_in_nova": "13",
+      "fields": {
+        "name": "NAME",
+        "address": "Address",
+        "city": "parse",
+        "zip": "parse",
+        "phone": "Phone",
+        "website": null,
+        "hours": "Comm_Hours, Senior_Hours, Teen_Hours, HS_Hours, Neighb_Hours, Com_Tech_Hours, Res_Hours",
+        "category": "Descripton (sic)",
+        "id": "OBJECTID"
+      },
+      "suggested_service_type_mapping": {
+        "Senior_Hours not null": "senior_meals (verify)",
+        "HS_Hours not null (Human Services hours)": "food_referral / snap_application_help (verify)",
+        "default": "no direct key; community center - use as host location only"
+      },
+      "id_field": "OBJECTID",
+      "last_updated": "lastEditDate 1744229224813 (2025-04-09)",
+      "notes": "Useful as host locations with hours; not service-specific."
+    },
+    {
+      "id": "fairfax_human_services_offices",
+      "name": "Fairfax County Human Services Offices (OpenData_S2 layer 11)",
+      "owner": "Fairfax County",
+      "landing_url": "https://www.arcgis.com/home/item.html?id= (OpenData_S2) - https://services1.arcgis.com/ioennV6PpG5Xodq0/ArcGIS/rest/services/OpenData_S2/FeatureServer/11",
+      "query_url": "https://services1.arcgis.com/ioennV6PpG5Xodq0/ArcGIS/rest/services/OpenData_S2/FeatureServer/11/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "format": "ArcGIS FeatureServer -> GeoJSON",
+      "license_terms": "Fairfax County GIS licenseInfo: 'provided as a public resource' with no warranty; 'Copyright by Fairfax County. Except as provided herein, all rights are reserved. Authorization to reproduce material for internal or personal use ... is granted.' NOT an open license: public republication in Lantern needs written permission from Fairfax County (GIS.HelpQ@fairfaxcounty.gov / NCS). See https://www.fairfaxcounty.gov/maps/disclaimer (item licenseInfo: 'https://www.fairfaxcounty.gov/maps/disclaimer')",
+      "robots_ok": "n/a",
+      "est_records_in_nova": "5",
+      "fields": {
+        "name": "OFFICE",
+        "address": "ADDRESS",
+        "city": "CITY",
+        "zip": null,
+        "phone": null,
+        "website": null,
+        "hours": null,
+        "category": "DFS_AREA, HS_REGION",
+        "id": "OBJECTID"
+      },
+      "suggested_service_type_mapping": {
+        "all": "snap_application_help + medicaid_enrollment_help (DFS public assistance offices)"
+      },
+      "id_field": "OBJECTID",
+      "last_updated": "lastEditDate 1789880662954 (2026-09)",
+      "notes": "Fairfax DFS/human services office locations - effectively the local DSS offices for Fairfax County. No phone/zip."
+    },
+    {
+      "id": "fairfax_community_centers",
+      "name": "Fairfax County Community Centers (OpenData_S1 layer 9)",
+      "owner": "Fairfax County",
+      "landing_url": "https://services1.arcgis.com/ioennV6PpG5Xodq0/ArcGIS/rest/services/OpenData_S1/FeatureServer/9",
+      "query_url": "https://services1.arcgis.com/ioennV6PpG5Xodq0/ArcGIS/rest/services/OpenData_S1/FeatureServer/9/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "format": "ArcGIS FeatureServer -> GeoJSON",
+      "license_terms": "Fairfax County GIS licenseInfo: 'provided as a public resource' with no warranty; 'Copyright by Fairfax County. Except as provided herein, all rights are reserved. Authorization to reproduce material for internal or personal use ... is granted.' NOT an open license: public republication in Lantern needs written permission from Fairfax County (GIS.HelpQ@fairfaxcounty.gov / NCS). See https://www.fairfaxcounty.gov/maps/disclaimer",
+      "robots_ok": "n/a",
+      "est_records_in_nova": "60 (incl. Park Authority rec centers, TYPE=RC etc.)",
+      "fields": {
+        "name": "DESCRIPTION",
+        "address": "STREET_NUMBER + STREET_NAME",
+        "city": "CITY",
+        "zip": "ZIP",
+        "phone": "ERC_PHONE",
+        "website": "WEB_ADDRESS",
+        "hours": null,
+        "category": "TYPE, AGENCY",
+        "id": "GlobalID"
+      },
+      "suggested_service_type_mapping": {
+        "all": "no direct key; host locations only"
+      },
+      "id_field": "GlobalID",
+      "last_updated": "2026-03 (created_date 1772949755522)",
+      "notes": "Low priority; mostly rec centers."
+    },
+    {
+      "id": "nvrc_nova_homeless_shelters",
+      "name": "NOVA Homeless Shelters",
+      "owner": "Northern Virginia Regional Commission (rmurphy_NVRC)",
+      "landing_url": "https://www.arcgis.com/home/item.html?id=177314fc11d04998b6b5505cc6e728a2",
+      "query_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "format": "ArcGIS FeatureServer -> GeoJSON",
+      "license_terms": "NVRC licenseInfo is a liability/no-warranty disclaimer only ('NVRC is not liable for any use of or reliance upon this map or data...'); no use restriction stated. Public item. Not a formal open license - attribute NVRC.",
+      "robots_ok": "n/a",
+      "est_records_in_nova": "26",
+      "fields": {
+        "name": "Name",
+        "address": "Full_Address",
+        "city": "parse",
+        "zip": "parse",
+        "phone": "Phone (free text, may contain several numbers)",
+        "website": "Website",
+        "hours": null,
+        "category": "Populations_Served, Minimum_Requirements, Mean_of_Referral, Number_Beds",
+        "id": "ObjectID"
+      },
+      "suggested_service_type_mapping": {
+        "all": "shelter",
+        "Name contains 'Assessment Center' / intake": "housing_assistance"
+      },
+      "id_field": "ObjectID",
+      "last_updated": "2023-11-06 (lastEditDate 1699299190770) - STALE, verify each row",
+      "notes": "Region-wide (Alexandria, Arlington, Fairfax, Loudoun, PW). Good intake/referral text. Shelter addresses for DV shelters must not be published - check rows."
+    },
+    {
+      "id": "nvrc_nova_community_centers",
+      "name": "Community Centers NOVA",
+      "owner": "Northern Virginia Regional Commission (rmurphy_NVRC)",
+      "landing_url": "https://www.arcgis.com/home/item.html?id=af282354586e439d84d56272c4a8d94e",
+      "query_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/Community_Centers_NOVA/FeatureServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "format": "ArcGIS FeatureServer -> GeoJSON",
+      "license_terms": "NVRC no-warranty disclaimer only; compiled from jurisdictions' open data portals. Attribute NVRC.",
+      "robots_ok": "n/a",
+      "est_records_in_nova": "106",
+      "fields": {
+        "name": "NAME",
+        "address": "ADDRESS (full string)",
+        "city": "parse",
+        "zip": "parse",
+        "phone": null,
+        "website": null,
+        "hours": null,
+        "category": null,
+        "id": "OBJECTID_12"
+      },
+      "suggested_service_type_mapping": {
+        "all": "no direct key; host-location gazetteer for all NoVA jurisdictions"
+      },
+      "id_field": "OBJECTID_12",
+      "last_updated": "Date_Updated 7/9/2024",
+      "notes": "Thin attributes; useful only for geocoding/host locations."
+    },
+    {
+      "id": "pwc_community_resources",
+      "name": "Prince William County CommunityResources",
+      "owner": "Prince William County (bfetzer@pwcgov.org)",
+      "landing_url": "https://www.arcgis.com/home/item.html?id=74262344db9e4a80bfa9ce87757e89c2",
+      "query_url": "https://services2.arcgis.com/0Q7l03Ls62VG0fy4/arcgis/rest/services/CommunityResources/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "format": "ArcGIS FeatureServer -> GeoJSON",
+      "license_terms": "licenseInfo: 'https://www.pwcva.gov/disclaimer' (county disclaimer; no open license stated)",
+      "robots_ok": "n/a",
+      "est_records_in_nova": "196",
+      "fields": {
+        "name": "ResourceName",
+        "address": "Address (full string)",
+        "city": "parse",
+        "zip": "parse",
+        "phone": "PhoneNumber",
+        "website": "WebsiteURL",
+        "hours": "in ResourceDescription free text",
+        "category": "ResourceType",
+        "id": "OBJECTID"
+      },
+      "suggested_service_type_mapping": {
+        "ResourceType=Food (24)": "pantry_pickup / food_referral",
+        "ResourceType=Clothing (3)": "clothing",
+        "ResourceType=Family (56)": "childcare (review per row)",
+        "ResourceType=Health / Medical / Dental (28)": "health_clinic (dental_care if name/desc contains 'dental')",
+        "ResourceType=Hotline Crisis (17)": "crisis_support",
+        "ResourceType=Housing (5)": "housing_assistance",
+        "ResourceType=Housing Utilities Finances (18)": "financial_assistance / utility_assistance",
+        "ResourceType=Utilities (7)": "utility_assistance",
+        "ResourceType=Mental Health / Substance Abuse (17)": "mental_health_counseling / substance_use_treatment",
+        "ResourceType=MH/SA, DD, Child/Youth, Crisis & Homeless Services (2)": "crisis_support (PW CSB)",
+        "ResourceType=Criminal Justice (12)": "legal_aid (review)",
+        "ResourceType=Veteran Services (7)": "(review)"
+      },
+      "id_field": "OBJECTID",
+      "last_updated": "lastEditDate 1748458469867 (2025-05-28)",
+      "notes": "DIFFERENT service from already-integrated CMN_Public_Resource_Locations (same org); likely overlapping rows - dedupe on name+address."
+    },
+    {
+      "id": "usda_fns_summer_sites_2026",
+      "name": "USDA FNS Summer Meals Site Finder 2026 (SummerSiteFinder2026_Point Layer)",
+      "owner": "USDA Food and Nutrition Service (ArcGIS owner william.staggs_USDA_FNS)",
+      "landing_url": "https://experience.arcgis.com/experience/bded45358b994a8fa009e1f88133eb03 (item b246de0489e04ff89aa597e7c75cb7ee)",
+      "query_url": "https://services1.arcgis.com/RLQu0rK7h4kbsBq5/arcgis/rest/services/Summer_Meals_Site_Finder_2026_(Testing)/FeatureServer/0/query?where=Site_State%3D%27VA%27+AND+County+IN+%28%27Fairfax+County%27%2C%27Fairfax+city%27%2C%27Arlington+County%27%2C%27Alexandria+city%27%2C%27Falls+Church+city%27%2C%27Loudoun+County%27%2C%27Prince+William+County%27%2C%27Manassas+city%27%2C%27Manassas+Park+city%27%29&outFields=MasterID%2CSite_Name%2CSite_Type%2CService_Model%2CSite_Address1%2CSite_Address2%2CSite_City%2CSite_Zip%2CSite_Phone%2CSponsoring_Organization%2CStart_date%2CEnd_date%2CDays_of_operation%2CBreakfast_Time2%2CLunch_Time2%2CSnack_Time_AM2%2CSnack_Time_PM2%2CDinner_Supper_Time2%2CSite_Program%2CSeason%2CCounty%2CDropped%2CExpired&outSR=4326&f=geojson",
+      "format": "ArcGIS FeatureServer -> GeoJSON",
+      "license_terms": "No licenseInfo on item. Produced by a US federal agency (USDA FNS) -> US government work, generally public domain (17 USC 105). Data supplied by state agency (VDOE SNP). Exclude Contact_First_Name/Contact_Last_Name (personal data) - query_url selects only site fields.",
+      "robots_ok": "n/a (ArcGIS REST)",
+      "est_records_in_nova": "204 (Fairfax Co 101, Prince William 51, Loudoun 32, Arlington 9, Alexandria 6, Manassas 4, Manassas Park 1; Falls Church/Fairfax City 0). 1851 VA rows total.",
+      "fields": {
+        "name": "Site_Name",
+        "address": "Site_Address1, Site_Address2",
+        "city": "Site_City",
+        "zip": "Site_Zip",
+        "phone": "Site_Phone (mostly null)",
+        "website": null,
+        "hours": "Days_of_operation + Breakfast_Time2/Lunch_Time2/Snack_Time_AM2/Snack_Time_PM2/Dinner_Supper_Time2; Start_date/End_date (epoch ms)",
+        "category": "Site_Type (OPEN/...), Service_Model (CONGREGATE / non-congregate), Site_Program (SFSP/SSO)",
+        "id": "MasterID (e.g. 'Cycle 03_VA_SFSP_0389')",
+        "other": "Sponsoring_Organization, County, Dropped, Expired"
+      },
+      "suggested_service_type_mapping": {
+        "all": "kids_meals",
+        "Service_Model=CONGREGATE": "kids_meals (offering_status=seasonal)",
+        "Service_Model non-congregate / grab-and-go": "kids_meals + seasonal_program"
+      },
+      "id_field": "MasterID",
+      "last_updated": "layer lastEditDate 1788966895194 (2026-09); item modified 2026-07",
+      "notes": "Service name contains '(Testing)' but it is the source behind USDA's public 2026 Site Finder experience. Summer 2026 season has ENDED (End_date ~Aug 2026) - import as seasonal/expired or wait for 2027 layer. Filter Dropped='False'. County name values are lower-case 'city' (e.g. 'Alexandria city')."
+    },
+    {
+      "id": "hrsa_health_center_sites",
+      "name": "HRSA Health Center Service Delivery and Look-Alike Sites (CSV)",
+      "owner": "HRSA Bureau of Primary Health Care (data.hrsa.gov)",
+      "landing_url": "https://data.hrsa.gov/data/download",
+      "query_url": "https://data.hrsa.gov/DataDownload/DD_Files/Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
+      "format": "CSV (national, ~14 MB, 19,387 rows); filter column 'State and County Federal Information Processing Standard Code' IN (51013,51059,51600,51610,51510,51107,51153,51683,51685)",
+      "license_terms": "US federal government work (public domain, 17 USC 105); HRSA publishes as open data download.",
+      "robots_ok": "NO for AI agents: data.hrsa.gov/robots.txt has 'Disallow: /' for ClaudeBot, Claude-User, Claude-Web, anthropic-ai, GPTBot, etc. (no rule for generic agents). Fetched once (single request) during this research before reading robots; no further automated fetches and no sample saved. Recommend a human or the Lantern backend (non-AI, identified UA) download it.",
+      "est_records_in_nova": "29 active sites (Fairfax Co 13, Alexandria 5, Arlington 4, Manassas 2, Prince William 2, Loudoun 2, Fairfax City 1); grantees: Neighborhood Health 19, Loudoun Community Health Center 6, Greater Prince William Area CHC 4",
+      "fields": {
+        "name": "Site Name (+ Health Center Name)",
+        "address": "Site Address",
+        "city": "Site City",
+        "zip": "Site Postal Code",
+        "phone": "Site Telephone Number",
+        "website": "Site Web Address",
+        "hours": "Operating Hours per Week, Health Center Operational Schedule Description",
+        "category": "Health Center Type Description, Health Center Location Type Description, Health Center Service Delivery Site Location Setting Description",
+        "id": "BPHC Assigned Number",
+        "coords": "Geocoding Artifact Address Primary X/Y Coordinate"
+      },
+      "suggested_service_type_mapping": {
+        "all": "health_clinic",
+        "+": "medicaid_enrollment_help (FQHCs offer enrollment assistance - verify)",
+        "Site Name contains 'Dental'": "dental_care"
+      },
+      "id_field": "BPHC Assigned Number",
+      "last_updated": "Data Warehouse Record Create Date column (daily refresh per HRSA)",
+      "notes": "Highest-quality federal health-clinic feed: phone, web, hours. Sliding-fee FQHCs - ideal for Lantern."
+    },
+    {
+      "id": "samhsa_findtreatment",
+      "name": "SAMHSA FindTreatment.gov locator (behavioral health treatment facilities)",
+      "owner": "SAMHSA (findtreatment.gov)",
+      "landing_url": "https://findtreatment.gov/",
+      "query_url": "https://findtreatment.gov/locator/exportsAsJson/v2?sAddr=38.85,-77.35&limitType=2&limitValue=48280&pageSize=400&page=1&sort=0",
+      "format": "JSON (radius query: sAddr=lat,lon, limitType=2 means radius in meters; paged via page/pageSize)",
+      "license_terms": "US federal government data (SAMHSA N-SUMHSS/locator) - public domain (17 USC 105). No explicit license on the endpoint.",
+      "robots_ok": "yes - findtreatment.gov/robots.txt: 'User-agent: * Disallow:' (allow all)",
+      "est_records_in_nova": "~110: radius 30 mi from (38.85,-77.35) returned 334 rows, 113 in VA (incl. 2 Warrenton + 2 Stafford outside scope). typeFacility MH 64, SA 46, OTP 3. Western Loudoun may need a second radius query (e.g. sAddr=39.1,-77.6).",
+      "fields": {
+        "name": "name1 (+name2)",
+        "address": "street1, street2",
+        "city": "city",
+        "zip": "zip",
+        "phone": "phone, intake1, hotline1",
+        "website": "website",
+        "hours": null,
+        "category": "typeFacility (MH/SA/OTP/BUPREN), services[] (f2 codes: TC type of care, SET setting, PAY payment, AGE, SG special groups, ...)",
+        "id": "none stable - build hash of name1+street1+zip+typeFacility",
+        "coords": "latitude, longitude"
+      },
+      "suggested_service_type_mapping": {
+        "typeFacility=SA": "substance_use_treatment",
+        "typeFacility=OTP": "substance_use_treatment",
+        "typeFacility=BUPREN": "substance_use_treatment",
+        "typeFacility=MH": "mental_health_counseling",
+        "services f2=PAY contains 'Medicaid'": "(attribute, not type)",
+        "services contains 'crisis'": "crisis_support"
+      },
+      "id_field": "(none - synthesize)",
+      "last_updated": "live API (SAMHSA updates continuously)",
+      "notes": "Same facility can appear twice (once per typeFacility). Many private-pay providers; use PAY codes to prefer sliding-fee/Medicaid/free. Filter state=='VA' and NoVA zips."
+    }
+  ]
+}

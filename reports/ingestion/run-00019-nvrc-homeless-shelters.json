@@ -1,0 +1,349 @@
+{
+  "run_id": 19,
+  "source": {
+    "id": "nvrc-homeless-shelters",
+    "name": "Northern Virginia Regional Commission \u2014 homeless shelters",
+    "url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+    "adapter": "nvrc_shelters",
+    "is_synthetic": false,
+    "known_limitations": [
+      "Regional compilation; confirm intake process with each shelter."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T14:04:46.361018-04:00",
+  "finished_at": "2026-10-12T18:04:46.985830+00:00",
+  "counts": {
+    "discovered": 26,
+    "inserted": 18,
+    "updated": 2,
+    "unchanged": 0,
+    "rejected": 0,
+    "duplicate_candidates": 6,
+    "conflicts": 0,
+    "needs_review": 274,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {
+      "auto_linked": 2
+    }
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "nvrc-1",
+      "status": "linked",
+      "location_id": 201,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-2",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-3",
+      "status": "linked",
+      "location_id": 265,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-4",
+      "status": "linked",
+      "location_id": 266,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-5",
+      "status": "linked",
+      "location_id": 267,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-6",
+      "status": "linked",
+      "location_id": 185,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-7",
+      "status": "linked",
+      "location_id": 268,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-8",
+      "status": "linked",
+      "location_id": 269,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-9",
+      "status": "linked",
+      "location_id": 270,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-11",
+      "status": "linked",
+      "location_id": 271,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-12",
+      "status": "linked",
+      "location_id": 272,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-13",
+      "status": "linked",
+      "location_id": 273,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-14",
+      "status": "linked",
+      "location_id": 274,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-15",
+      "status": "linked",
+      "location_id": 275,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-16",
+      "status": "linked",
+      "location_id": 276,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-17",
+      "status": "linked",
+      "location_id": 277,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-18",
+      "status": "linked",
+      "location_id": 278,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-19",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-20",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-21",
+      "status": "linked",
+      "location_id": 279,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-22",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-23",
+      "status": "linked",
+      "location_id": 280,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-24",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-25",
+      "status": "linked",
+      "location_id": 281,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-26",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nvrc-27",
+      "status": "linked",
+      "location_id": 282,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

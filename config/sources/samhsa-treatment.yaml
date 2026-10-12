@@ -1,0 +1,20 @@
+id: samhsa-treatment
+name: SAMHSA FindTreatment.gov — mental health & substance use treatment facilities
+owner: Substance Abuse and Mental Health Services Administration (US HHS)
+url: https://findtreatment.gov/
+adapter: samhsa_locator
+retrieval: http
+formats: [json]
+jurisdictions: [arlington-county, alexandria-city, falls-church-city, fairfax-county, fairfax-city, loudoun-county, prince-william-county, manassas-city, manassas-park-city]
+enabled: true
+min_seconds_between_requests: 3
+cache_ttl_hours: 168
+store_raw: true
+publication: permitted_with_attribution   # US Government work (17 USC 105)
+verified_on: "2026-10-12"
+options:
+  centers: [[38.85, -77.35], [39.10, -77.60]]   # Fairfax + western Loudoun; out-of-NoVA rows are dropped by scope
+  radius_m: 48280
+known_limitations: ["Facility-level listing; services, payment and ages kept in notes verbatim from the locator."]
+terms_notes: "Federal public-domain data. Attribute SAMHSA / FindTreatment.gov."
+refresh: "0 5 1 * *"

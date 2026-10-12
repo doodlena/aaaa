@@ -1,0 +1,15 @@
+id: hrsa-health-centers
+name: HRSA health center sites (community health centers, sliding-fee care)
+owner: Health Resources and Services Administration (US HHS)
+url: file://data/sources/hrsa_nova_sites.json
+adapter: hrsa_health_centers
+retrieval: file
+formats: [json]
+jurisdictions: [arlington-county, alexandria-city, falls-church-city, fairfax-county, fairfax-city, loudoun-county, prince-william-county, manassas-city, manassas-park-city]
+enabled: true
+store_raw: true
+publication: permitted_with_attribution   # US Government work
+verified_on: "2026-10-12"
+known_limitations: ["Extract of the national CSV (data.hrsa.gov) filtered to NoVA county FIPS on 2026-10-12; refresh by re-running the extract."]
+terms_notes: "Federal public-domain data. Attribute HRSA."
+refresh: null
