@@ -1,0 +1,42 @@
+id: arlington-food-resources
+name: Arlington County — Food Resources map
+owner: Arlington County Government
+url: https://my.arlingtonva.us/foodresources
+adapter: arlington_food_resources
+retrieval: http
+formats: [json]
+jurisdictions: [arlington-county, fairfax-county]
+enabled: true
+min_seconds_between_requests: 5
+cache_ttl_hours: 24
+request_urls:
+  - "https://datahub-datasets.s3.amazonaws.com/Uploads/AutomatedJobs/FoodResources.json"
+store_raw: false
+rows_are_distinct: true   # one row per program; several organizations share a venue (e.g. Arlington Mill Community Center)
+publication: permitted_with_attribution
+publication_note: "Set 2026-10-12 by analogy with the county flyer in ai-manual-files (factual listing, attributed and linked). No license or reuse terms are stated on the page; the project owner should confirm."
+verified_on: "2026-10-12"
+options:
+  organization_aliases:
+    AFAC: Arlington Food Assistance Center
+  city_by_zip:   # USPS city for the ZIP codes in the file (the file has no city column)
+    "22201": Arlington
+    "22202": Arlington
+    "22203": Arlington
+    "22204": Arlington
+    "22205": Arlington
+    "22206": Arlington
+    "22207": Arlington
+    "22209": Arlington
+    "22041": Falls Church
+    "22044": Falls Church
+expected_fields: [Organization, Type, Location name, Location address, Zip Code, Times, Day, Eligibility requirements, Lat, Lng]
+known_limitations:
+  - "The page is a JavaScript app; the adapter reads the JSON file it loads. The file was last modified 2026-01-09 and some rows look older (e.g. a farmers market season of 'May 5 - Oct. 27' with no year)."
+  - "Flag columns are only trusted when 'True'. Several rows leave every flag 'False' although their text says otherwise."
+  - "Seasonal rows, multi-line times, single start times ('6:00:00 PM') and monthly rows without an ordinal keep hours as raw text only."
+  - "'Discount groceries' rows (farmers markets with SNAP matching, SHARE food boxes) are not free food; they are imported as service type 'other'."
+  - "'Delivery Available' is kept as a note only: the file does not say who qualifies."
+  - "The contact person's name column is not imported. Two rows (ZIP 22041, 22044) are just outside Arlington, in Fairfax County."
+terms_notes: "my.arlingtonva.us has no robots.txt (the app shell is returned); the S3 bucket returns 403 for robots.txt, i.e. none published. Page footer: 'Copyright © Arlington County Virginia'; no data license stated. Facts only; attribute and link back to the county page."
+refresh: "0 5 * * 1"

@@ -47,6 +47,7 @@ export function AIDraftedNotice({ things }: { things: string[] }) {
 export function ShelfForm({
   locationId,
   foodTypes,
+  food = true,
   prefill,
   aiDrafted = false,
   thingsToCheck = [],
@@ -54,6 +55,8 @@ export function ShelfForm({
 }: {
   locationId: number;
   foodTypes?: string[];
+  /** False for listings that offer no food: no "Out of food" status and no shelf items. */
+  food?: boolean;
   prefill?: ShelfPrefill | null;
   aiDrafted?: boolean;
   thingsToCheck?: string[];
@@ -98,7 +101,7 @@ export function ShelfForm({
       const live = await api.provider.postShelf(locationId, {
         status,
         message: message.trim() || null,
-        items: status === 'closed' ? [] : itemList.map(({ food_type, level }) => ({ food_type, level })),
+        items: !food || status === 'closed' ? [] : itemList.map(({ food_type, level }) => ({ food_type, level })),
         expires_at: localInputToISO(expires),
         ai_assisted: aiDrafted,
       });
@@ -119,7 +122,7 @@ export function ShelfForm({
       <fieldset className="fgroup">
         <legend>{t('portal.shelf.statusLegend')}</legend>
         <div className="status-buttons" role="group">
-          {STATUSES.map((s) => (
+          {STATUSES.filter((s) => food || s !== 'out').map((s) => (
             <button
               key={s}
               type="button"
@@ -134,7 +137,7 @@ export function ShelfForm({
         </div>
       </fieldset>
 
-      {status !== 'closed' && (
+      {food && status !== 'closed' && (
         <fieldset className="fgroup">
           <legend>{t('portal.shelf.itemsLegend')}</legend>
           <p className="fgroup__hint">{t('portal.shelf.itemsHint')}</p>

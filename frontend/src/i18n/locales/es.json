@@ -14,7 +14,7 @@
     "account": "Cuenta",
     "signOut": "Cerrar sesión",
     "signIn": "Iniciar sesión",
-    "forPantries": "Para despensas",
+    "forPantries": "Para servicios",
     "home": "Inicio de {{app}}"
   },
   "lang": {
@@ -29,7 +29,7 @@
     "about": "Acerca de este sitio",
     "privacy": "Privacidad",
     "mapCredit": "Mapas: OpenFreeMap y © colaboradores de OpenStreetMap.",
-    "forPantries": "Para despensas",
+    "forPantries": "Para servicios",
     "crisisLead": "¿En crisis?",
     "call988": "Llame al 988",
     "text988": "Envíe un texto al 988",
@@ -94,8 +94,8 @@
     "findTitle": "Buscar cerca de una dirección",
     "findLead": "Escriba una dirección o código postal para ver horarios, qué llevar e indicaciones para todo tipo de ayuda cercana.",
     "liveLegend": "Las actualizaciones en vivo las publica el propio proveedor y muestran cuánto queda: tres barras = mucho, dos = algo, una = poco.",
-    "pantryTitle": "¿Dirige una despensa de alimentos o un programa de ayuda?",
-    "pantryBody": "Publique el estado de hoy y lo que hay en sus estantes en menos de un minuto para que las familias lo vean de inmediato.",
+    "pantryTitle": "¿Dirige una despensa de alimentos, una clínica u otro programa de ayuda?",
+    "pantryBody": "Publique el estado de hoy en menos de un minuto para que las familias lo vean de inmediato.",
     "browseAll": "Explore todos los recursos disponibles"
   },
   "verification": {
@@ -143,8 +143,8 @@
     "temporarily_closed": "Cerrado temporalmente",
     "permanently_closed": "Cerrado permanentemente",
     "synthetic": "Datos de prueba",
-    "closed_today_by_pantry": "La despensa dice que hoy está cerrada",
-    "out_today_by_pantry": "La despensa dice que hoy no tiene comida",
+    "closed_today_by_pantry": "El proveedor indica que hoy está cerrado",
+    "out_today_by_pantry": "El proveedor indica que hoy no le queda comida",
     "not_yet_verified": "Un revisor de Lantern aún no lo ha comprobado — llame antes de ir"
   },
   "matchReason": {
@@ -153,8 +153,8 @@
     "service_group": "Ofrece {{value}}",
     "distributes_on": "Reparte comida el {{date}}",
     "upcoming": "Próxima entrega: {{date}}",
-    "on_shelf_today": "Hoy hay {{value}} (confirmado por la despensa)",
-    "open_today_by_pantry": "Abierto hoy (confirmado por la despensa)"
+    "on_shelf_today": "{{value}} en el estante hoy (confirmado por el proveedor)",
+    "open_today_by_pantry": "Abierto hoy (confirmado por el proveedor)"
   },
   "eligibilityFilter": {
     "no_id_required": "No se requiere identificación (confirmado)",
@@ -375,9 +375,9 @@
     "wheelchair": "Accesible en silla de ruedas (confirmado)",
     "language": "El personal habla",
     "languageAny": "Cualquier idioma",
-    "today": "Hoy, según la despensa",
-    "todayHint": "Solo despensas que publicaron hoy. Las que no han publicado no aparecen.",
-    "liveOpen": "Abierto hoy (confirmado por la despensa)",
+    "today": "Hoy, según el proveedor",
+    "todayHint": "Solo proveedores que publicaron hoy. Los que no han publicado no aparecen.",
+    "liveOpen": "Abierto hoy (confirmado por el proveedor)",
     "onShelfToday": "En los estantes hoy",
     "supportGroups": "Otros tipos de ayuda",
     "serviceGroupsHint": "Se muestran los lugares que ofrecen cualquiera de los tipos de ayuda que marque.",
@@ -503,8 +503,8 @@
     "noSources": "No hay ninguna fuente indicada para esta información.",
     "verifiedExplain": "Una persona del equipo confirmó esta información con la organización o con una fuente oficial el {{date}}.",
     "staleExplain": "Esta información no se ha vuelto a revisar recientemente. Algunos datos podrían no estar al día.",
-    "stockSeeToday": "Lo que hay hoy aparece en “Hoy en esta despensa”, según lo publicó la despensa.",
-    "typicalNotToday": "Esto es lo que la despensa suele ofrecer, no lo que tiene hoy.",
+    "stockSeeToday": "Los artículos de hoy aparecen en «Hoy en este lugar», tal como los publicó el proveedor.",
+    "typicalNotToday": "Esto es lo que el proveedor suele ofrecer, no las existencias de hoy.",
     "sourceReportedExplain": "Esta información proviene de una lista pública (ver Fuentes) y un revisor de Lantern todavía no la ha comprobado. Llame al proveedor para confirmar el horario y los requisitos antes de ir."
   },
   "auth": {
@@ -590,7 +590,7 @@
     "reviewTitle": "Con qué frecuencia revisamos la información",
     "review": "Intentamos volver a revisar cada lugar por lo menos cada {{days}} días. Los que no se han vuelto a revisar aparecen como “Necesita revisión”.",
     "changesTitle": "Por qué cambia la disponibilidad",
-    "changes": "Los bancos de alimentos dependen de donaciones y voluntarios. Los horarios, los tipos de comida y lo que hay disponible pueden cambiar de una semana a otra, y algunos eventos se cancelan con poco aviso. Solo mostramos lo que hay hoy cuando la propia despensa lo ha publicado.",
+    "changes": "Los bancos de alimentos dependen de donaciones y voluntarios. Los horarios, los tipos de alimentos y las existencias pueden cambiar de una semana a otra, y algunos eventos se cancelan con poco aviso. Solo mostramos las existencias de hoy cuando el propio proveedor las ha publicado.",
     "contactTitle": "Comuníquese directamente con la organización",
     "contact": "Siempre llame o visite el sitio web de la organización antes de ir. Ellos tienen la información más reciente y pueden decirle qué debe llevar.",
     "disclaimerTitle": "Aviso",
@@ -600,9 +600,9 @@
     "privacy2": "Si usa “Usar mi ubicación”, su ubicación solo se usa para esa búsqueda en su navegador y nunca se guarda.",
     "privacy3": "No necesita una cuenta. Si crea una, solo guardamos su correo electrónico, su contraseña (cifrada), su idioma, los lugares guardados y sus preferencias de búsqueda.",
     "privacy4": "El idioma que elija se recuerda solo en este dispositivo.",
-    "liveTitle": "Publicaciones en vivo de las despensas",
-    "live": "El personal aprobado de cada despensa puede publicar cómo está hoy (abierta, con poca comida, sin comida, cerrada) y qué hay en los estantes. Cada publicación lleva la etiqueta “Publicado por la despensa” con la hora, y desaparece sola cuando caduca. Confirmamos a cada persona con la despensa antes de que pueda publicar.",
-    "reportsInfo": "Cualquier persona puede reportar un problema con un lugar. Los reportes llegan a la despensa y a nuestro equipo; varios reportes parecidos devuelven el lugar a revisión.",
+    "liveTitle": "Publicaciones en vivo de los proveedores",
+    "live": "El personal aprobado puede publicar el estado de hoy (abierto, limitado o cerrado; las despensas de alimentos también pueden publicar «sin comida» y lo que hay en el estante). Cada publicación lleva la etiqueta «Publicado por el proveedor» con la hora, y desaparece sola cuando vence. Confirmamos a cada miembro del personal con el proveedor antes de que pueda publicar.",
+    "reportsInfo": "Cualquier persona puede informar de un problema con un listado. Los informes llegan al proveedor y a nuestros revisores; varios informes similares devuelven el listado a revisión.",
     "privacy5": "Los reportes de problemas guardan solo lo que usted eligió y escribió. No se guarda ningún nombre, cuenta ni ubicación.",
     "privacy6": "Las funciones de IA, cuando están activadas, reciben solo las palabras que usted escribe. Nunca se envían su ubicación ni su cuenta.",
     "labelReported": "Importado de una lista pública (ver Fuentes). Un revisor de Lantern aún no lo ha comprobado: llame antes de ir.",
@@ -849,10 +849,10 @@
     "openReports_other": "{{count}} reportes de la comunidad",
     "origin": {
       "import": "De importación",
-      "provider": "De la despensa",
+      "provider": "Del proveedor",
       "ai": "Sugerido por IA — revise la cita de evidencia",
       "aiNote": "Una IA leyó el texto de la fuente y sugirió esto. Acéptelo solo si la cita realmente lo dice.",
-      "providerNote": "Propuesto por personal aprobado de la despensa. Confirme con la despensa si algo parece raro."
+      "providerNote": "Propuesto por personal aprobado del proveedor. Confirme con el proveedor si algo parece inusual."
     },
     "ai": {
       "button": "Pedir sugerencias a la IA",
@@ -862,9 +862,9 @@
       "none": "La IA no encontró nada que pudiera respaldar con una cita."
     },
     "claims": {
-      "nav": "Acceso de despensas",
-      "title": "Solicitudes de acceso de despensas",
-      "guidance": "Llame a la despensa para confirmar a esta persona antes de aprobar. Use el teléfono del lugar, no uno que le haya dado la persona.",
+      "nav": "Acceso de proveedores",
+      "title": "Solicitudes de acceso de proveedores",
+      "guidance": "Llame al proveedor para confirmar a esta persona antes de aprobarla. Use el número de teléfono del listado, no uno que le haya dado la persona.",
       "filter": "Filtrar por estado",
       "forListing": "Para el lugar:",
       "listingPhone": "Teléfono del lugar",
@@ -879,7 +879,7 @@
       "title": "Reportes de la comunidad",
       "lead": "Reportes anónimos del público. Varios reportes de “estaba cerrado” o “información equivocada” en una semana devuelven el lugar a revisión automáticamente.",
       "filter": "Filtrar por estado",
-      "pantryResponse": "Respuesta de la despensa",
+      "pantryResponse": "Respuesta del proveedor",
       "resolve": "Resolver",
       "dismiss": "Descartar"
     },
@@ -977,7 +977,7 @@
     }
   },
   "offline": {
-    "banner": "No tiene conexión. Los lugares guardados y vistos recientemente se pueden abrir, pero lo que ve podría no estar al día."
+    "banner": "No tiene conexión. Los lugares guardados y vistos recientemente aún se abren, pero lo que ve puede no estar actualizado."
   },
   "time": {
     "justNow": "justo ahora",
@@ -987,13 +987,13 @@
   },
   "feed": {
     "title": "Actualizaciones en vivo de los proveedores",
-    "scopeAll": "Publicadas hoy por despensas de todo el norte de Virginia",
-    "scopeNear": "Publicadas hoy por despensas a menos de 10 millas de usted",
-    "useLocation": "Ver despensas cerca de mí",
+    "scopeAll": "Publicado hoy por proveedores de todo el norte de Virginia",
+    "scopeNear": "Publicado hoy por proveedores a menos de 10 millas de usted",
+    "useLocation": "Mostrar proveedores cerca de mí",
     "loading": "Cargando las publicaciones de hoy…",
     "emptyTitle": "Ningún proveedor ha publicado una actualización hoy.",
     "emptyBody": "Busque arriba para ver los horarios habituales y lo que suele ofrecer cada lugar.",
-    "seeAllOpen": "Ver en el mapa todas las despensas abiertas hoy (confirmado por la despensa)"
+    "seeAllOpen": "Ver en el mapa todos los lugares abiertos hoy (confirmado por el proveedor)"
   },
   "live": {
     "status": {
@@ -1013,17 +1013,17 @@
       "some": "Algo",
       "low": "Poco"
     },
-    "postedByPantry": "Publicado por la despensa",
+    "postedByPantry": "Publicado por el proveedor",
     "until": "hasta {{time}}",
-    "aiAssisted": "Redactado con ayuda de IA y revisado por la despensa",
+    "aiAssisted": "Redactado con ayuda de IA, revisado por el proveedor",
     "itemsLabel": "En los estantes hoy"
   },
   "today": {
-    "title": "Hoy en esta despensa",
-    "itemsLabel": "En los estantes hoy, según la despensa",
-    "noItems": "La despensa no indicó alimentos específicos.",
-    "notPosted": "La despensa no ha publicado lo que tiene hoy. Los alimentos de abajo son lo que suele ofrecer.",
-    "levelsNote": "Las cantidades son un cálculo de la propia despensa y pueden cambiar durante el día."
+    "title": "Hoy en este lugar",
+    "itemsLabel": "En el estante hoy, según lo publicó el proveedor",
+    "noItems": "El proveedor no indicó artículos específicos.",
+    "notPosted": "El proveedor no ha publicado el estante de hoy. Los alimentos que aparecen abajo son los que suele ofrecer.",
+    "levelsNote": "Las cantidades son una estimación del propio proveedor y pueden cambiar durante el día."
   },
   "reports": {
     "open": "Reportar un problema",
@@ -1038,10 +1038,10 @@
     },
     "chooseKind": "Elija qué pasó.",
     "note": "Cuéntenos más",
-    "privacy": "No se guarda ningún nombre, cuenta ni ubicación. Su reporte llega a la despensa y a nuestro equipo de revisión.",
+    "privacy": "No se guarda ningún nombre, cuenta ni ubicación. Su informe llega al proveedor y a nuestros revisores.",
     "send": "Enviar reporte",
     "thanks": "Gracias. Su reporte fue enviado.",
-    "whatNext": "La despensa y una persona del equipo lo revisarán. Si varias personas reportan el mismo problema, el lugar vuelve a revisión.",
+    "whatNext": "El proveedor y un revisor lo comprobarán. Si varias personas informan del mismo problema, el listado vuelve a revisión.",
     "rateLimited": "Ha enviado varios reportes hace poco. Inténtelo de nuevo en una hora.",
     "recent_one": "{{count}} reporte reciente — en revisión",
     "recent_other": "{{count}} reportes recientes — en revisión"
@@ -1050,14 +1050,14 @@
     "title": "Planee su visita",
     "loading": "Cargando el plan de visita…",
     "nextTimes": "Próximos horarios",
-    "noTimes": "No hay horarios próximos confirmados. Llame a la despensa antes de ir.",
+    "noTimes": "No hay próximos horarios confirmados. Llame al proveedor antes de ir.",
     "whatToBring": "Qué llevar",
-    "checklistIntro": "Basado solo en lo que la despensa ha confirmado. “Pregunte” significa que no lo sabemos; no quiere decir que no lo necesite.",
+    "checklistIntro": "Se basa solo en lo que el proveedor ha confirmado. «Preguntar» significa que no lo sabemos; no significa que no lo necesite.",
     "action": {
       "bring": "Llevar",
       "do": "Necesario — hágalo antes",
       "not_needed": "No hace falta (confirmado)",
-      "ask": "Pregunte a la despensa — no confirmado"
+      "ask": "Pregunte al proveedor: no confirmado"
     },
     "item": {
       "photo_id": "Identificación con foto",
@@ -1116,25 +1116,25 @@
     }
   },
   "portal": {
-    "eyebrow": "Portal para despensas",
-    "title": "Para despensas",
-    "lead": "Cuénteles a las familias qué hay hoy en sus estantes. Sus publicaciones aparecen enseguida, con la etiqueta “Publicado por la despensa”, y caducan solas.",
+    "eyebrow": "Portal de servicios",
+    "title": "Para servicios",
+    "lead": "Cuente a las familias qué hay disponible hoy. Sus publicaciones aparecen de inmediato, con la etiqueta «Publicado por el proveedor», y vencen solas.",
     "dashboardTitle": "Administrar {{name}}",
-    "myPantries": "Sus despensas",
+    "myPantries": "Sus servicios",
     "myRequests": "Sus solicitudes de acceso",
-    "noneYet": "Todavía no administra ninguna despensa aquí. Busque su lugar abajo y solicite acceso.",
-    "manage": "Publicar los estantes de hoy",
+    "noneYet": "Todavía no administra ningún listado aquí. Busque su listado abajo y solicite acceso.",
+    "manage": "Publicar el estado de hoy",
     "openReports_one": "{{count}} reporte abierto",
     "openReports_other": "{{count}} reportes abiertos",
     "pendingChanges_one": "{{count}} corrección en revisión",
     "pendingChanges_other": "{{count}} correcciones en revisión",
-    "pendingHint": "Una persona del equipo llamará al teléfono de la despensa que aparece en el sitio para confirmarle.",
-    "surplusLink": "Tablero de excedentes: comparta comida extra con otras despensas",
-    "backToPortal": "Volver al portal para despensas",
+    "pendingHint": "Un revisor llamará al número de teléfono del listado para confirmar su identidad.",
+    "surplusLink": "Tablero de excedentes: comparta comida sobrante con otros proveedores",
+    "backToPortal": "Volver al portal de servicios",
     "viewPublic": "Ver lo que ven las familias",
-    "notApprovedTitle": "Todavía no puede administrar esta despensa",
+    "notApprovedTitle": "Todavía no puede administrar este listado",
     "notApproved": "Su acceso a este lugar no ha sido aprobado.",
-    "trust": "Las publicaciones de estado, eventos y cierres aparecen enseguida con la etiqueta de su despensa. Los cambios de horario, requisitos o datos de contacto los revisa primero una persona del equipo.",
+    "trust": "Las publicaciones de estado, los eventos y los cierres se publican de inmediato y llevan la etiqueta de publicados por su organización. Los cambios de horario, requisitos o datos de contacto los revisa primero un revisor.",
     "claimStatus": {
       "pending": "En espera de revisión",
       "approved": "Aprobado",
@@ -1142,26 +1142,26 @@
       "revoked": "Acceso retirado"
     },
     "claim": {
-      "title": "Solicite acceso a la página de su despensa",
-      "lead": "Busque su despensa, díganos su función y una persona del equipo le confirmará con la despensa antes de que pueda publicar.",
-      "findLabel": "Dirección o código postal de su despensa",
+      "title": "Solicitar acceso al listado de su organización",
+      "lead": "Busque su listado, díganos su función y un revisor confirmará su identidad con la organización antes de que pueda publicar.",
+      "findLabel": "Dirección o código postal de su servicio",
       "find": "Buscar lugares",
       "filterName": "Filtrar por nombre",
       "resultsLabel": "Lugares cerca de esa dirección",
       "noneFound": "No hay coincidencias. Pruebe con otra dirección o código postal.",
       "request": "Solicitar acceso",
-      "role": "Su función en la despensa",
+      "role": "Su función en la organización",
       "rolePlaceholder": "p. ej.: Coordinadora de voluntarios",
-      "roleMissing": "Díganos cuál es su función en la despensa.",
+      "roleMissing": "Díganos su función en la organización.",
       "note": "Algo que nos ayude a confirmarle",
-      "howVerified": "Confirmamos cada solicitud llamando al teléfono de la despensa que aparece en el sitio.",
+      "howVerified": "Confirmamos cada solicitud llamando al número de teléfono del listado.",
       "send": "Enviar solicitud",
-      "sent": "Solicitud enviada para {{name}}. La confirmaremos con la despensa.",
+      "sent": "Solicitud enviada para {{name}}. La confirmaremos con la organización.",
       "alreadyRequested": "Ya solicitado"
     },
     "tabs": {
       "label": "¿Qué quiere publicar?",
-      "shelf": "Estantes de hoy",
+      "shelf": "Estado de hoy",
       "event": "Evento especial",
       "closure": "Cierre",
       "correction": "Sugerir una corrección",
@@ -1175,7 +1175,7 @@
       "retracted": "retirada"
     },
     "shelf": {
-      "title": "Estantes de hoy",
+      "title": "Estado de hoy",
       "statusLegend": "Hoy ustedes están…",
       "statusButton": {
         "open": "Abiertos",
@@ -1192,15 +1192,15 @@
       "preview": "Vista previa — lo que verán las familias",
       "post": "Publicar para las familias",
       "posted": "Publicado. Las familias ya pueden verlo.",
-      "chooseStatus": "Elija Abiertos, Con poca comida, Sin comida o Cerrados hoy.",
+      "chooseStatus": "Elija primero un estado.",
       "clear": "Borrar el estado",
       "clearConfirm": "¿Quitar el estado de hoy? Las familias volverán a ver “no confirmado”.",
       "clearYes": "Sí, borrarlo",
       "cleared": "Estado borrado."
     },
     "event": {
-      "title": "Evento especial de distribución",
-      "lead": "Una distribución de una sola vez, por ejemplo una despensa móvil o un reparto de fiestas.",
+      "title": "Evento único",
+      "lead": "Un evento único, por ejemplo una despensa móvil, una clínica temporal o una entrega por las fiestas.",
       "name": "Nombre del evento",
       "date": "Fecha",
       "start": "Empieza",
@@ -1262,7 +1262,7 @@
     },
     "surplus": {
       "title": "Tablero de excedentes",
-      "lead": "Ofrezca comida extra a otras despensas o reclame la que ellas tengan. Solo el personal de despensas aprobado puede ver este tablero.",
+      "lead": "Ofrezca comida sobrante a otros proveedores o reclame lo que ellos tienen. Solo el personal aprobado puede ver este tablero.",
       "offerTitle": "Ofrecer comida extra",
       "from": "De",
       "what": "Qué tiene",
@@ -1278,7 +1278,7 @@
       "availableUntil": "hasta {{date}}",
       "claim": "Reclamar",
       "claimFor": "Reclamar para",
-      "claimed": "Reclamado. Comuníquese con la despensa para coordinar la recogida.",
+      "claimed": "Reclamado. Comuníquese con el proveedor para coordinar la recogida.",
       "close": "Cerrar oferta",
       "closed": "Oferta cerrada.",
       "status": {

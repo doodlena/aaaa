@@ -13,7 +13,7 @@ describe('live shelf status', () => {
   it('badge names the pantry as source with a relative time, and levels are text (not colour only)', () => {
     render(<LiveSummary live={liveOpen()} />);
     expect(screen.getByText('Open today')).toBeInTheDocument();
-    expect(screen.getByTestId('posted-by')).toHaveTextContent(/Posted by the pantry\s*·\s*2 h ago/);
+    expect(screen.getByTestId('posted-by')).toHaveTextContent(/Posted by the provider\s*·\s*2 h ago/);
     const shelf = screen.getByRole('list', { name: 'On the shelf today' });
     const tags = within(shelf).getAllByRole('listitem');
     expect(tags).toHaveLength(3);
@@ -41,7 +41,7 @@ describe('live shelf status', () => {
         </ul>
       </MemoryRouter>,
     );
-    expect(screen.getByTestId('live-summary')).toHaveTextContent('Posted by the pantry');
+    expect(screen.getByTestId('live-summary')).toHaveTextContent('Posted by the provider');
     expect(screen.getByText('2 recent reports — being checked')).toBeInTheDocument();
   });
 
@@ -62,15 +62,15 @@ describe('live shelf status', () => {
     expect(within(feed).queryByText('No post')).toBeNull();
   });
 
-  it('detail: "Today at this pantry" shows live items; without a post it says stock is not confirmed', async () => {
+  it('detail: "Today at this location" shows live items; without a post it says stock is not confirmed', async () => {
     mockFetch([
       { path: '/api/resources/1', body: detailFixture({ live: liveOpen(), current_inventory: liveOpen().items }) },
       { path: '/api/resources/1/visit-plan', body: visitPlan },
     ]);
     const { unmount } = renderApp(<ResourcePage />, { route: '/resource/1', path: '/resource/:id' });
     const today = await screen.findByTestId('today-section');
-    expect(within(today).getByRole('heading', { name: 'Today at this pantry' })).toBeInTheDocument();
-    expect(within(today).getByText('Posted by the pantry')).toBeInTheDocument();
+    expect(within(today).getByRole('heading', { name: 'Today at this location' })).toBeInTheDocument();
+    expect(within(today).getByText('Posted by the provider')).toBeInTheDocument();
     expect(within(today).getByText('Plenty')).toBeInTheDocument();
     expect(within(today).queryByText('Current stock has not been confirmed.')).toBeNull();
     unmount();
@@ -82,6 +82,6 @@ describe('live shelf status', () => {
     renderApp(<ResourcePage />, { route: '/resource/1', path: '/resource/:id' });
     const none = await screen.findByTestId('today-section');
     expect(within(none).getByText('Current stock has not been confirmed.')).toBeInTheDocument();
-    expect(within(none).queryByText('Posted by the pantry')).toBeNull();
+    expect(within(none).queryByText('Posted by the provider')).toBeNull();
   });
 });

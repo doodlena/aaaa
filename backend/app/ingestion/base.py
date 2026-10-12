@@ -48,6 +48,7 @@ class SourceConfig(BaseModel):
     publication: str = "not_assessed"
     publication_note: str | None = None  # why/when the publication status was set (e.g. owner decision)
     is_synthetic: bool = False
+    rows_are_distinct: bool = False  # the source lists each program at a venue as its own row: never auto-merge two of them
     verified_on: str | None = None  # date a human confirmed URL/terms
 
 

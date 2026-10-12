@@ -44,7 +44,7 @@ from app.services import ai
 from app.services.resource_writer import structures_of
 from app.services.schedule import TZ
 from app.services.shelf import current_shelf, end_of_local_day, shelf_dict
-from app.vocab import FOOD_TYPES
+from app.vocab import FOOD_SERVICE_GROUPS, FOOD_TYPES, SERVICE_TYPES
 
 router = APIRouter(prefix="/api/provider", tags=["pantry portal"])
 ai_limiter = RateLimiter(60, 3600)
@@ -84,6 +84,13 @@ def request_access(body: ClaimIn, user: User = Depends(require_user), db: Sessio
     return {"id": m.id, "status": m.status}
 
 
+def offers_food(loc: Location) -> bool:
+    """Whether the food-only controls (shelf items, "out of food") apply. Listings with no services recorded keep them."""
+    if not loc.services:
+        return True
+    return any(s.food_types or SERVICE_TYPES.get(s.service_type) in (*FOOD_SERVICE_GROUPS, "non_food") for s in loc.services)
+
+
 @router.get("/me")
 def my_pantries(user: User = Depends(require_user), db: Session = Depends(get_db)):
     rows = db.execute(select(ProviderMembership, Location).join(Location, Location.id == ProviderMembership.location_id)
@@ -92,7 +99,7 @@ def my_pantries(user: User = Depends(require_user), db: Session = Depends(get_db
     out = []
     for m, loc in rows:
         item = {"membership_id": m.id, "status": m.status, "role_title": m.role_title, "location_id": loc.id,
-                "name": loc.name, "address1": loc.address1, "city": loc.city}
+                "name": loc.name, "address1": loc.address1, "city": loc.city, "offers_food": offers_food(loc)}
         if m.status == "approved":
             item.update({
                 "live": shelf_dict(shelves.get(loc.id)),

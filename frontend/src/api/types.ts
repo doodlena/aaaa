@@ -420,6 +420,8 @@ export interface ProviderPantry {
   name: string;
   address1: string | null;
   city: string | null;
+  /** False for listings with no food service: the portal then hides the food-only controls. */
+  offers_food?: boolean;
   live?: LiveShelf | null;
   open_reports?: number;
   pending_changes?: number;

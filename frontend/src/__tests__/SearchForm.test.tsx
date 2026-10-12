@@ -1,6 +1,6 @@
 import { screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { SearchForm } from '../components/SearchForm';
 import { mockFetch, renderApp } from '../test/utils';
 
@@ -30,7 +30,7 @@ describe('SearchForm', () => {
       path: '/find',
     });
     await userEvent.type(screen.getByLabelText('Your address or ZIP code'), '20147');
-    await userEvent.click(screen.getByRole('button', { name: /search/i }));
+    await userEvent.click(screen.getByRole('button', { name: 'Search' }));
     await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('ZIP+20147'));
     const loc = new URLSearchParams(screen.getByTestId('location').textContent!.split('?')[1]);
     expect(loc.get('lat')).toBe('39.04'); // the new place replaces the old one…
@@ -39,6 +39,36 @@ describe('SearchForm', () => {
     expect(loc.get('eligibility')).toBe('no_id_required');
     expect(loc.get('sort')).toBe('name');
     expect(loc.get('page')).toBeNull(); // back to the first page of the new results
+  });
+
+  it('the results page has "Use my location", which searches from the browser position and keeps the chosen options', async () => {
+    mockFetch([]);
+    vi.stubGlobal('navigator', {
+      ...navigator,
+      geolocation: { getCurrentPosition: (ok: PositionCallback) => ok({ coords: { latitude: 38.8816, longitude: -77.091 } } as GeolocationPosition) },
+    });
+    renderApp(<SearchForm compact />, { route: '/find?service_group=health&radius_km=any', path: '/find' });
+    const btn = screen.getByRole('button', { name: 'Use my location' });
+    expect(btn).toHaveAccessibleDescription(/used only for this search and is never saved/);
+    await userEvent.click(btn);
+    await waitFor(() => expect(screen.getByTestId('location')).toHaveTextContent('lat=38.8816'));
+    const loc = new URLSearchParams(screen.getByTestId('location').textContent!.split('?')[1]);
+    expect(loc.get('lon')).toBe('-77.091');
+    expect(loc.get('label')).toBe('your location');
+    expect(loc.get('service_group')).toBe('health');
+    expect(loc.get('radius_km')).toBe('any');
+  });
+
+  it('explains when location permission is refused, and still lets the person type a ZIP', async () => {
+    mockFetch([]);
+    vi.stubGlobal('navigator', {
+      ...navigator,
+      geolocation: { getCurrentPosition: (_ok: PositionCallback, fail: PositionErrorCallback) => fail({ code: 1, PERMISSION_DENIED: 1 } as GeolocationPositionError) },
+    });
+    renderApp(<SearchForm compact />, { route: '/find', path: '/find' });
+    await userEvent.click(screen.getByRole('button', { name: 'Use my location' }));
+    expect(await screen.findByText('Location permission was not given. You can type your ZIP code instead.')).toBeInTheDocument();
+    expect(screen.getByLabelText('Your address or ZIP code')).toBeEnabled();
   });
 
   it('applies a signed-in user’s saved preferences to the new search', async () => {

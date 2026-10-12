@@ -1,6 +1,8 @@
 """Database + pipeline tests: idempotency, verified-data preservation, duplicates, provenance, failure isolation."""
 import json
+from pathlib import Path
 
+import pytest
 from sqlalchemy import func, select
 
 from app.ingestion.base import Fetcher, SourceConfig
@@ -184,6 +186,28 @@ def test_verification_requires_method_and_records_reviewer(db, imported, admin):
     assert v.reviewer_id == admin.id and v.snapshot["name"] == loc.name
 
 
+def test_verify_source_cli_is_attributed_and_respects_publication_gate(db, admin, tmp_path, capsys):
+    from app.cli import main
+
+    cfg = SourceConfig(id="arlington-food-resources", name="x", url="https://example.org/x", adapter="arlington_food_resources",
+                       jurisdictions=["arlington-county"], publication="not_assessed")
+    fixture = Path(__file__).parent / "fixtures" / "arlington_schema_synthetic.json"
+    run_source(db, cfg, Fetcher(fixtures={cfg.url: fixture}))
+    assert _count(db, Location) == 3 and _count(db, Location, Location.review_status == "verified") == 0  # import never verifies
+    args = ["verify-source", "--source", cfg.id, "--method", "official_source", "--notes", "checked against the file", "--publish"]
+    with pytest.raises(SystemExit):
+        main([*args, "--reviewer-email", "nobody@example.org"])
+    main([*args, "--reviewer-email", "admin@example.org"])
+    db.expire_all()
+    # a source without publication rights: nothing is verified-and-published on an official_source check
+    assert _count(db, Location, Location.published.is_(True)) == 0 and "3 skipped" in capsys.readouterr().out
+    main([a for a in args if a != "--publish"] + ["--reviewer-email", "admin@example.org"])
+    db.expire_all()
+    recs = db.scalars(select(VerificationRecord).where(VerificationRecord.action == "verify")).all()
+    assert _count(db, Location, Location.review_status == "verified") == 3 and _count(db, Location, Location.published.is_(True)) == 0
+    assert {(r.reviewer_id, r.method, r.notes) for r in recs} == {(admin.id, "official_source", "checked against the file")}
+
+
 def test_eligibility_unique_scope_constraint(db, imported):
     import pytest
     from sqlalchemy.exc import IntegrityError
@@ -211,6 +235,20 @@ def test_two_records_same_site_keep_both_services(db, tmp_path):
     assert _count(db, Location) == 1
     assert {s.service_type for s in loc.services} == {"pantry_pickup", "mobile_pantry"}
     assert [e.status for e in loc.eligibility if e.requirement_type == "photo_id"] == ["required"]  # conservative merge
+
+
+def test_rows_are_distinct_sends_co_located_programs_to_review(db, admin, tmp_path):
+    f = tmp_path / "venue.json"
+    base = {"location_name": "[TEST] Mill Community Center", "address1": "1 Test Way", "zip": "22204", "lat": 38.861, "lon": -77.1,
+            "services": [{"service_type": "pantry_pickup"}]}
+    f.write_text(json.dumps({"records": [{**base, "external_id": "a", "organization_name": "[TEST] Org A"},
+                                         {**base, "external_id": "b", "organization_name": "[TEST] Org B"}]}))
+    cfg = SourceConfig(id="syn-venue", name="venue", url="file://venue", adapter="structured_json", jurisdictions=["arlington-county"],
+                       is_synthetic=True, rows_are_distinct=True)
+    run = run_source(db, cfg, Fetcher(fixtures={"file://venue": f}))
+    assert (run.counts["inserted"], run.counts["duplicate_candidates"]) == (1, 1) and _count(db, Location) == 1
+    decide_duplicate(db, db.scalar(select(DuplicateCandidate)), admin, merge=False)
+    assert {loc.organization.name for loc in db.scalars(select(Location)).all()} == {"[TEST] Org A", "[TEST] Org B"}
 
 
 def test_flagged_verified_listing_stays_public_as_needs_recheck(db, imported, admin, client):

@@ -66,7 +66,7 @@ describe('visit planner', () => {
     expect(row('income_documentation')).toHaveTextContent('Proof of incomeBring');
     expect(row('appointment')).toHaveTextContent('Required — do this first');
     for (const key of ['proof_of_address', 'benefit_documentation', 'referral', 'registration']) {
-      expect(row(key)).toHaveTextContent('Ask the pantry — not confirmed');
+      expect(row(key)).toHaveTextContent('Ask the provider — not confirmed');
       expect(row(key)).not.toHaveTextContent('Not needed');
     }
     expect(screen.getByText('Suggestion: bring bags or a box.')).toBeInTheDocument();
@@ -99,6 +99,29 @@ describe('pantry portal', () => {
     expect(screen.getByText('Waiting for review')).toBeInTheDocument();
   });
 
+  it('a listing with no food service gets a status form without "Out of food" or shelf items', async () => {
+    document.cookie = 'nfa_csrf=pantry-csrf; path=/';
+    const clinic = { ...me, items: [{ ...me.items[0], name: '[TEST] Elm Clinic', offers_food: false }] };
+    const { calls } = mockFetch(
+      [
+        { path: '/api/provider/me', body: clinic },
+        { path: '/api/provider/locations/1/shelf/history', body: { items: [] } },
+        { method: 'POST', path: '/api/provider/locations/1/shelf', status: 201, body: { status: 'limited', message: null, items: [], posted_at: new Date().toISOString(), expires_at: new Date().toISOString(), source: 'pantry', ai_assisted: false } },
+      ],
+      { user: staff },
+    );
+    renderApp(<PantryRoutes />, { route: '/pantry/1', path: '/pantry/*' });
+    await screen.findByRole('heading', { level: 1, name: '[TEST] Elm Clinic' });
+    expect(screen.getByRole('button', { name: 'Open' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Closed today' })).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Out of food' })).toBeNull();
+    expect(screen.queryByRole('checkbox', { name: 'Fresh vegetables' })).toBeNull();
+    await userEvent.click(screen.getByRole('button', { name: 'Limited' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Post to families' }));
+    await waitFor(() => expect(calls.some((c) => c.method === 'POST')).toBe(true));
+    expect(calls.find((c) => c.method === 'POST')!.body).toMatchObject({ status: 'limited', items: [] });
+  });
+
   it('posts "Open" with items, levels and message', async () => {
     document.cookie = 'nfa_csrf=pantry-csrf; path=/';
     const { calls } = mockFetch(
@@ -112,7 +135,7 @@ describe('pantry portal', () => {
     renderApp(<PantryRoutes />, { route: '/pantry/1', path: '/pantry/*' });
     await screen.findByRole('heading', { level: 1, name: '[TEST] Maple' });
     await userEvent.click(screen.getByRole('button', { name: 'Post to families' }));
-    expect(screen.getByText(/Choose Open, Limited/)).toBeInTheDocument();
+    expect(screen.getByText('Choose a status first.')).toBeInTheDocument();
     await userEvent.click(screen.getByRole('button', { name: 'Open' }));
     expect(screen.getByRole('button', { name: 'Open' })).toHaveAttribute('aria-pressed', 'true');
     await userEvent.click(screen.getByRole('checkbox', { name: 'Fresh vegetables' }));
@@ -120,7 +143,7 @@ describe('pantry portal', () => {
     await userEvent.click(screen.getByRole('checkbox', { name: 'Eggs' }));
     await userEvent.type(screen.getByLabelText(/Short message for families/), 'Greens are in');
     // the preview shows what families will see
-    expect(screen.getByText('Preview — what families will see').parentElement).toHaveTextContent('Posted by the pantry');
+    expect(screen.getByText('Preview — what families will see').parentElement).toHaveTextContent('Posted by the provider');
     await userEvent.click(screen.getByRole('button', { name: 'Post to families' }));
     await waitFor(() => expect(calls.some((c) => c.method === 'POST')).toBe(true));
     const post = calls.find((c) => c.method === 'POST')!;
@@ -241,7 +264,7 @@ describe('admin: pantry access & reports', () => {
     );
     renderApp(<AdminRoutes />, { route: '/admin/claims', path: '/admin/*' });
     expect(await screen.findByText('pantry@example.com')).toBeInTheDocument();
-    expect(screen.getByText(/Call the pantry to confirm this person before approving/)).toBeInTheDocument();
+    expect(screen.getByText(/Call the provider to confirm this person before approving/)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: '(555) 010-0001' })).toHaveAttribute('href', 'tel:5550100001');
     await userEvent.click(screen.getByRole('button', { name: 'Approve — pantry@example.com' }));
     await waitFor(() => expect(calls.some((c) => c.url.pathname === '/api/admin/claims/4/decision')).toBe(true));

@@ -14,7 +14,7 @@
     "account": "Tài khoản",
     "signOut": "Đăng xuất",
     "signIn": "Đăng nhập",
-    "forPantries": "Dành cho điểm phát thực phẩm",
+    "forPantries": "Dành cho nơi cung cấp dịch vụ",
     "home": "Trang chủ {{app}}"
   },
   "lang": {
@@ -29,7 +29,7 @@
     "about": "Giới thiệu về trang này",
     "privacy": "Quyền riêng tư",
     "mapCredit": "Bản đồ: OpenFreeMap và © những người đóng góp cho OpenStreetMap.",
-    "forPantries": "Dành cho điểm phát thực phẩm",
+    "forPantries": "Dành cho nơi cung cấp dịch vụ",
     "crisisLead": "Đang gặp khủng hoảng?",
     "call988": "Gọi 988",
     "text988": "Nhắn tin 988",
@@ -94,8 +94,8 @@
     "findTitle": "Tìm gần một địa chỉ",
     "findLead": "Nhập địa chỉ hoặc mã ZIP để xem giờ mở cửa, những thứ cần mang theo và đường đi đến mọi loại trợ giúp gần đó.",
     "liveLegend": "Cập nhật trực tiếp do chính nơi cung cấp đăng và cho biết còn lại bao nhiêu: ba vạch = nhiều, hai vạch = còn một ít, một vạch = sắp hết.",
-    "pantryTitle": "Bạn điều hành điểm phát thực phẩm hoặc chương trình trợ giúp?",
-    "pantryBody": "Đăng tình trạng hôm nay và những gì đang có trên kệ trong chưa đầy một phút để các gia đình thấy ngay.",
+    "pantryTitle": "Bạn điều hành điểm phát thực phẩm, phòng khám hoặc chương trình trợ giúp khác?",
+    "pantryBody": "Đăng tình trạng hôm nay trong chưa đầy một phút để các gia đình thấy ngay.",
     "browseAll": "Khám phá tất cả nguồn trợ giúp hiện có"
   },
   "verification": {
@@ -143,8 +143,8 @@
     "temporarily_closed": "Tạm thời đóng cửa",
     "permanently_closed": "Đóng cửa vĩnh viễn",
     "synthetic": "Dữ liệu thử nghiệm",
-    "closed_today_by_pantry": "Điểm phát cho biết hôm nay đóng cửa",
-    "out_today_by_pantry": "Điểm phát cho biết hôm nay đã hết thực phẩm",
+    "closed_today_by_pantry": "Nơi cung cấp cho biết hôm nay đóng cửa",
+    "out_today_by_pantry": "Nơi cung cấp cho biết hôm nay đã hết thực phẩm",
     "not_yet_verified": "Chưa được người duyệt của Lantern kiểm tra — hãy gọi điện trước khi đi"
   },
   "matchReason": {
@@ -153,8 +153,8 @@
     "service_group": "Có {{value}}",
     "distributes_on": "Phát thực phẩm vào {{date}}",
     "upcoming": "Đợt phát tiếp theo {{date}}",
-    "on_shelf_today": "{{value}} có trên kệ hôm nay (điểm phát xác nhận)",
-    "open_today_by_pantry": "Mở cửa hôm nay (điểm phát xác nhận)"
+    "on_shelf_today": "{{value}} có trên kệ hôm nay (nơi cung cấp xác nhận)",
+    "open_today_by_pantry": "Mở cửa hôm nay (nơi cung cấp xác nhận)"
   },
   "eligibilityFilter": {
     "no_id_required": "Không cần giấy tờ tùy thân (đã xác nhận)",
@@ -375,9 +375,9 @@
     "wheelchair": "Xe lăn vào được (đã xác nhận)",
     "language": "Nhân viên nói",
     "languageAny": "Bất kỳ ngôn ngữ nào",
-    "today": "Hôm nay, từ điểm phát",
-    "todayHint": "Chỉ những điểm phát đã đăng hôm nay. Những điểm chưa đăng sẽ không được hiển thị.",
-    "liveOpen": "Mở cửa hôm nay (điểm phát xác nhận)",
+    "today": "Hôm nay, từ nơi cung cấp",
+    "todayHint": "Chỉ những nơi cung cấp đã đăng hôm nay. Những nơi chưa đăng sẽ không được hiển thị.",
+    "liveOpen": "Mở cửa hôm nay (nơi cung cấp xác nhận)",
     "onShelfToday": "Có trên kệ hôm nay",
     "supportGroups": "Các loại trợ giúp khác",
     "serviceGroupsHint": "Hiển thị những địa điểm cung cấp bất kỳ loại trợ giúp nào bạn đánh dấu.",
@@ -503,8 +503,8 @@
     "noSources": "Không có nguồn nào được ghi cho thông tin này.",
     "verifiedExplain": "Một người duyệt đã xác nhận mục này với tổ chức hoặc một nguồn chính thức vào {{date}}.",
     "staleExplain": "Mục này gần đây chưa được kiểm tra lại. Một số chi tiết có thể đã cũ.",
-    "stockSeeToday": "Các món hôm nay được liệt kê trong mục “Hôm nay tại điểm phát này”, do điểm phát đăng.",
-    "typicalNotToday": "Đây là những gì điểm phát thường có, không phải lượng hàng hôm nay.",
+    "stockSeeToday": "Các món hôm nay được liệt kê trong mục “Hôm nay tại địa điểm này”, do nơi cung cấp đăng.",
+    "typicalNotToday": "Đây là những gì nơi cung cấp thường có, không phải lượng hàng hôm nay.",
     "sourceReportedExplain": "Mục này lấy từ một danh sách công khai (xem trong phần Nguồn) và chưa được người duyệt của Lantern kiểm tra. Hãy gọi nơi cung cấp để xác nhận giờ mở cửa và yêu cầu trước khi đi."
   },
   "auth": {
@@ -590,7 +590,7 @@
     "reviewTitle": "Các mục được xem xét thường xuyên thế nào",
     "review": "Chúng tôi cố gắng kiểm tra lại mỗi mục ít nhất {{days}} ngày một lần. Những mục chưa được kiểm tra lại sẽ được đánh dấu “Cần kiểm tra lại”.",
     "changesTitle": "Vì sao tình hình thay đổi",
-    "changes": "Các ngân hàng thực phẩm phụ thuộc vào quyên góp và tình nguyện viên. Giờ mở cửa, loại thực phẩm và lượng hàng có thể thay đổi theo từng tuần, và một số sự kiện bị hủy sát giờ. Chúng tôi chỉ hiển thị lượng hàng hôm nay khi chính điểm phát đã đăng.",
+    "changes": "Các ngân hàng thực phẩm phụ thuộc vào quyên góp và tình nguyện viên. Giờ mở cửa, loại thực phẩm và lượng hàng có thể thay đổi theo từng tuần, và một số sự kiện bị hủy sát giờ. Chúng tôi chỉ hiển thị lượng hàng hôm nay khi chính nơi cung cấp đã đăng.",
     "contactTitle": "Liên hệ trực tiếp với tổ chức",
     "contact": "Luôn gọi điện hoặc xem trang web của tổ chức trước khi đi. Họ có thông tin mới nhất và có thể cho bạn biết cần mang theo những gì.",
     "disclaimerTitle": "Tuyên bố miễn trừ trách nhiệm",
@@ -600,9 +600,9 @@
     "privacy2": "Nếu bạn dùng “Dùng vị trí của tôi”, vị trí của bạn chỉ được dùng cho lần tìm kiếm đó trong trình duyệt và không bao giờ được lưu.",
     "privacy3": "Bạn không cần tài khoản. Nếu bạn tạo tài khoản, chúng tôi chỉ lưu email, mật khẩu (đã băm), ngôn ngữ, các địa điểm đã lưu và tùy chọn tìm kiếm.",
     "privacy4": "Lựa chọn ngôn ngữ của bạn chỉ được ghi nhớ trên thiết bị này.",
-    "liveTitle": "Bài đăng trực tiếp từ các điểm phát",
-    "live": "Nhân viên điểm phát đã được duyệt có thể đăng tình trạng hôm nay (mở cửa, hạn chế, hết thực phẩm, đóng cửa) và những gì có trên kệ. Mỗi bài đăng đều ghi “Do điểm phát đăng” kèm thời gian, và tự biến mất khi hết hạn. Chúng tôi xác nhận từng nhân viên với điểm phát trước khi họ được đăng.",
-    "reportsInfo": "Bất kỳ ai cũng có thể báo cáo vấn đề của một mục. Báo cáo được gửi đến điểm phát và người duyệt của chúng tôi; nếu có nhiều báo cáo tương tự, mục đó sẽ được đưa trở lại để xem xét.",
+    "liveTitle": "Bài đăng trực tiếp từ các nơi cung cấp",
+    "live": "Nhân viên đã được duyệt có thể đăng tình trạng hôm nay (mở cửa, hạn chế hoặc đóng cửa; điểm phát thực phẩm còn có thể đăng “hết thực phẩm” và những gì có trên kệ). Mỗi bài đăng đều ghi “Do nơi cung cấp đăng” kèm thời gian, và tự biến mất khi hết hạn. Chúng tôi xác nhận từng nhân viên với nơi cung cấp trước khi họ được đăng.",
+    "reportsInfo": "Bất kỳ ai cũng có thể báo cáo vấn đề của một mục. Báo cáo được gửi đến nơi cung cấp và người duyệt của chúng tôi; nếu có nhiều báo cáo tương tự, mục đó sẽ được đưa trở lại để xem xét.",
     "privacy5": "Báo cáo vấn đề chỉ lưu những gì bạn đã chọn và viết. Không lưu tên, tài khoản hay vị trí.",
     "privacy6": "Các tính năng AI, khi được bật, chỉ nhận những chữ bạn gõ. Vị trí và tài khoản của bạn không bao giờ được gửi đi.",
     "labelReported": "Được nhập từ một danh sách công khai (xem phần Nguồn). Người duyệt của Lantern chưa kiểm tra — hãy gọi điện trước khi đi.",
@@ -849,10 +849,10 @@
     "openReports_other": "{{count}} báo cáo từ cộng đồng",
     "origin": {
       "import": "Từ dữ liệu nhập",
-      "provider": "Từ điểm phát",
+      "provider": "Từ nơi cung cấp",
       "ai": "AI gợi ý — hãy kiểm tra bằng chứng được trích dẫn",
       "aiNote": "AI đã đọc văn bản nguồn và gợi ý điều này. Chỉ chấp nhận nếu bằng chứng được trích dẫn thật sự nói như vậy.",
-      "providerNote": "Do nhân viên điểm phát đã được duyệt đề xuất. Hãy xác nhận với điểm phát nếu có gì bất thường."
+      "providerNote": "Do nhân viên đã được duyệt của nơi cung cấp đề xuất. Hãy xác nhận với nơi cung cấp nếu có gì bất thường."
     },
     "ai": {
       "button": "Lấy gợi ý từ AI",
@@ -862,9 +862,9 @@
       "none": "AI không tìm thấy điều gì có thể dẫn chứng bằng trích dẫn."
     },
     "claims": {
-      "nav": "Quyền quản lý điểm phát",
-      "title": "Yêu cầu cấp quyền quản lý điểm phát",
-      "guidance": "Hãy gọi điểm phát để xác nhận người này trước khi duyệt. Dùng số điện thoại trong mục, không dùng số người đó cung cấp.",
+      "nav": "Quyền quản lý của nơi cung cấp",
+      "title": "Yêu cầu cấp quyền của nơi cung cấp",
+      "guidance": "Hãy gọi nơi cung cấp để xác nhận người này trước khi duyệt. Dùng số điện thoại trong mục, không dùng số người đó cung cấp.",
       "filter": "Lọc theo trạng thái",
       "forListing": "Cho mục:",
       "listingPhone": "Điện thoại trong mục",
@@ -879,7 +879,7 @@
       "title": "Báo cáo từ cộng đồng",
       "lead": "Báo cáo ẩn danh từ công chúng. Nếu trong một tuần có nhiều báo cáo “đã đóng cửa” hoặc “thông tin sai”, mục sẽ tự động được đưa trở lại để xem xét.",
       "filter": "Lọc theo trạng thái",
-      "pantryResponse": "Phản hồi của điểm phát",
+      "pantryResponse": "Phản hồi của nơi cung cấp",
       "resolve": "Đã giải quyết",
       "dismiss": "Bỏ qua"
     },
@@ -977,7 +977,7 @@
     }
   },
   "offline": {
-    "banner": "Bạn đang ngoại tuyến. Các điểm phát đã lưu và mới xem gần đây vẫn mở được, nhưng những gì bạn thấy có thể không còn mới."
+    "banner": "Bạn đang ngoại tuyến. Các địa điểm đã lưu và mới xem gần đây vẫn mở được, nhưng những gì bạn thấy có thể không còn mới."
   },
   "time": {
     "justNow": "vừa xong",
@@ -987,13 +987,13 @@
   },
   "feed": {
     "title": "Cập nhật trực tiếp từ các nơi cung cấp",
-    "scopeAll": "Do các điểm phát khắp Bắc Virginia đăng hôm nay",
-    "scopeNear": "Do các điểm phát trong vòng 10 dặm quanh bạn đăng hôm nay",
-    "useLocation": "Hiện các điểm phát gần tôi",
+    "scopeAll": "Do các nơi cung cấp khắp Bắc Virginia đăng hôm nay",
+    "scopeNear": "Do các nơi cung cấp trong vòng 10 dặm quanh bạn đăng hôm nay",
+    "useLocation": "Hiện các nơi cung cấp gần tôi",
     "loading": "Đang tải các bài đăng hôm nay…",
     "emptyTitle": "Hôm nay chưa có nơi cung cấp nào đăng cập nhật.",
     "emptyBody": "Hãy tìm kiếm ở trên để xem giờ mở cửa thường lệ và những gì mỗi nơi thường có.",
-    "seeAllOpen": "Xem trên bản đồ tất cả điểm phát mở cửa hôm nay (điểm phát xác nhận)"
+    "seeAllOpen": "Xem trên bản đồ tất cả địa điểm mở cửa hôm nay (nơi cung cấp xác nhận)"
   },
   "live": {
     "status": {
@@ -1013,17 +1013,17 @@
       "some": "Còn một ít",
       "low": "Sắp hết"
     },
-    "postedByPantry": "Do điểm phát đăng",
+    "postedByPantry": "Do nơi cung cấp đăng",
     "until": "đến {{time}}",
-    "aiAssisted": "Soạn với sự trợ giúp của AI, đã được điểm phát kiểm tra",
+    "aiAssisted": "Soạn với sự trợ giúp của AI, đã được nơi cung cấp kiểm tra",
     "itemsLabel": "Có trên kệ hôm nay"
   },
   "today": {
-    "title": "Hôm nay tại điểm phát này",
-    "itemsLabel": "Có trên kệ hôm nay, do điểm phát đăng",
-    "noItems": "Điểm phát không liệt kê món cụ thể.",
-    "notPosted": "Điểm phát chưa đăng tình hình kệ hàng hôm nay. Các thực phẩm liệt kê bên dưới là những gì nơi này thường có.",
-    "levelsNote": "Số lượng là ước tính của chính điểm phát và có thể thay đổi trong ngày."
+    "title": "Hôm nay tại địa điểm này",
+    "itemsLabel": "Có trên kệ hôm nay, do nơi cung cấp đăng",
+    "noItems": "Nơi cung cấp không liệt kê món cụ thể.",
+    "notPosted": "Nơi cung cấp chưa đăng tình hình kệ hàng hôm nay. Các thực phẩm liệt kê bên dưới là những gì nơi này thường có.",
+    "levelsNote": "Số lượng là ước tính của chính nơi cung cấp và có thể thay đổi trong ngày."
   },
   "reports": {
     "open": "Báo cáo vấn đề",
@@ -1038,10 +1038,10 @@
     },
     "chooseKind": "Hãy chọn chuyện đã xảy ra.",
     "note": "Cho chúng tôi biết thêm",
-    "privacy": "Không lưu tên, tài khoản hay vị trí. Báo cáo của bạn được gửi đến điểm phát và người duyệt của chúng tôi.",
+    "privacy": "Không lưu tên, tài khoản hay vị trí. Báo cáo của bạn được gửi đến nơi cung cấp và người duyệt của chúng tôi.",
     "send": "Gửi báo cáo",
     "thanks": "Cảm ơn bạn. Báo cáo của bạn đã được gửi.",
-    "whatNext": "Điểm phát và một người duyệt sẽ kiểm tra. Nếu nhiều người báo cáo cùng một vấn đề, mục này sẽ được đưa trở lại để xem xét.",
+    "whatNext": "Nơi cung cấp và một người duyệt sẽ kiểm tra. Nếu nhiều người báo cáo cùng một vấn đề, mục này sẽ được đưa trở lại để xem xét.",
     "rateLimited": "Gần đây bạn đã gửi nhiều báo cáo. Vui lòng thử lại sau một giờ.",
     "recent_one": "{{count}} báo cáo gần đây — đang được kiểm tra",
     "recent_other": "{{count}} báo cáo gần đây — đang được kiểm tra"
@@ -1050,14 +1050,14 @@
     "title": "Lên kế hoạch đến nhận",
     "loading": "Đang tải kế hoạch…",
     "nextTimes": "Các giờ tiếp theo",
-    "noTimes": "Chưa có giờ sắp tới nào được xác nhận. Hãy gọi điểm phát trước khi đi.",
+    "noTimes": "Chưa có giờ sắp tới nào được xác nhận. Hãy gọi nơi cung cấp trước khi đi.",
     "whatToBring": "Cần mang theo gì",
-    "checklistIntro": "Chỉ dựa trên những gì điểm phát đã xác nhận. “Hỏi” nghĩa là chúng tôi không biết — không có nghĩa là bạn không cần.",
+    "checklistIntro": "Chỉ dựa trên những gì nơi cung cấp đã xác nhận. “Hỏi” nghĩa là chúng tôi không biết — không có nghĩa là bạn không cần.",
     "action": {
       "bring": "Mang theo",
       "do": "Bắt buộc — làm việc này trước",
       "not_needed": "Không cần (đã xác nhận)",
-      "ask": "Hỏi điểm phát — chưa xác nhận"
+      "ask": "Hỏi nơi cung cấp — chưa xác nhận"
     },
     "item": {
       "photo_id": "Giấy tờ tùy thân có ảnh",
@@ -1116,25 +1116,25 @@
     }
   },
   "portal": {
-    "eyebrow": "Cổng dành cho điểm phát",
-    "title": "Dành cho điểm phát thực phẩm",
-    "lead": "Cho các gia đình biết hôm nay trên kệ của bạn có gì. Bài đăng của bạn hiện ngay, có ghi “Do điểm phát đăng”, và tự hết hạn.",
+    "eyebrow": "Cổng dành cho nơi cung cấp dịch vụ",
+    "title": "Dành cho nơi cung cấp dịch vụ",
+    "lead": "Cho các gia đình biết hôm nay có những gì. Bài đăng của bạn hiện ngay, có ghi “Do nơi cung cấp đăng”, và tự hết hạn.",
     "dashboardTitle": "Quản lý {{name}}",
-    "myPantries": "Các điểm phát của bạn",
+    "myPantries": "Các dịch vụ của bạn",
     "myRequests": "Các yêu cầu cấp quyền của bạn",
-    "noneYet": "Bạn chưa quản lý điểm phát nào ở đây. Hãy tìm mục của bạn bên dưới và yêu cầu cấp quyền.",
-    "manage": "Đăng tình hình kệ hàng hôm nay",
+    "noneYet": "Bạn chưa quản lý mục nào ở đây. Hãy tìm mục của bạn bên dưới và yêu cầu cấp quyền.",
+    "manage": "Đăng tình trạng hôm nay",
     "openReports_one": "{{count}} báo cáo chưa xử lý",
     "openReports_other": "{{count}} báo cáo chưa xử lý",
     "pendingChanges_one": "{{count}} chỉnh sửa đang được xem xét",
     "pendingChanges_other": "{{count}} chỉnh sửa đang được xem xét",
-    "pendingHint": "Người duyệt sẽ gọi số điện thoại được ghi của điểm phát để xác nhận bạn.",
-    "surplusLink": "Bảng thực phẩm dư: chia sẻ thực phẩm dư với các điểm phát khác",
-    "backToPortal": "Quay lại cổng điểm phát",
+    "pendingHint": "Người duyệt sẽ gọi số điện thoại trong mục để xác nhận bạn.",
+    "surplusLink": "Bảng thực phẩm dư: chia sẻ thực phẩm dư với các nơi cung cấp khác",
+    "backToPortal": "Quay lại cổng dịch vụ",
     "viewPublic": "Xem những gì các gia đình thấy",
-    "notApprovedTitle": "Bạn chưa thể quản lý điểm phát này",
+    "notApprovedTitle": "Bạn chưa thể quản lý mục này",
     "notApproved": "Quyền của bạn đối với mục này chưa được duyệt.",
-    "trust": "Bài đăng tình trạng, sự kiện và thông báo đóng cửa có hiệu lực ngay và được ghi là do điểm phát của bạn đăng. Thay đổi về giờ giấc, yêu cầu hoặc thông tin liên hệ sẽ được người duyệt kiểm tra trước.",
+    "trust": "Bài đăng tình trạng, sự kiện và thông báo đóng cửa có hiệu lực ngay và được ghi là do tổ chức của bạn đăng. Thay đổi về giờ giấc, yêu cầu hoặc thông tin liên hệ sẽ được người duyệt kiểm tra trước.",
     "claimStatus": {
       "pending": "Đang chờ xem xét",
       "approved": "Đã duyệt",
@@ -1142,26 +1142,26 @@
       "revoked": "Đã thu hồi quyền"
     },
     "claim": {
-      "title": "Yêu cầu quyền quản lý mục của điểm phát",
-      "lead": "Tìm mục của bạn, cho chúng tôi biết vai trò của bạn, và người duyệt sẽ xác nhận bạn với điểm phát trước khi bạn có thể đăng.",
-      "findLabel": "Địa chỉ hoặc mã ZIP của điểm phát",
+      "title": "Yêu cầu quyền quản lý mục của tổ chức bạn",
+      "lead": "Tìm mục của bạn, cho chúng tôi biết vai trò của bạn, và người duyệt sẽ xác nhận bạn với tổ chức trước khi bạn có thể đăng.",
+      "findLabel": "Địa chỉ hoặc mã ZIP của dịch vụ",
       "find": "Tìm mục",
       "filterName": "Lọc theo tên",
       "resultsLabel": "Các mục gần nơi đó",
       "noneFound": "Không có mục nào phù hợp. Hãy thử địa chỉ hoặc mã ZIP khác.",
       "request": "Yêu cầu cấp quyền",
-      "role": "Vai trò của bạn tại điểm phát",
+      "role": "Vai trò của bạn tại tổ chức",
       "rolePlaceholder": "ví dụ: Điều phối viên tình nguyện",
-      "roleMissing": "Hãy cho chúng tôi biết vai trò của bạn tại điểm phát.",
+      "roleMissing": "Hãy cho chúng tôi biết vai trò của bạn tại tổ chức.",
       "note": "Bất cứ điều gì giúp chúng tôi xác nhận bạn",
-      "howVerified": "Chúng tôi xác nhận mọi yêu cầu bằng cách gọi số điện thoại được ghi của điểm phát.",
+      "howVerified": "Chúng tôi xác nhận mọi yêu cầu bằng cách gọi số điện thoại trong mục.",
       "send": "Gửi yêu cầu",
-      "sent": "Đã gửi yêu cầu cho {{name}}. Chúng tôi sẽ xác nhận với điểm phát.",
+      "sent": "Đã gửi yêu cầu cho {{name}}. Chúng tôi sẽ xác nhận với tổ chức.",
       "alreadyRequested": "Đã yêu cầu"
     },
     "tabs": {
       "label": "Bạn muốn đăng gì?",
-      "shelf": "Kệ hàng hôm nay",
+      "shelf": "Tình trạng hôm nay",
       "event": "Sự kiện đột xuất",
       "closure": "Đóng cửa",
       "correction": "Đề xuất chỉnh sửa",
@@ -1175,7 +1175,7 @@
       "retracted": "đã xóa"
     },
     "shelf": {
-      "title": "Kệ hàng hôm nay",
+      "title": "Tình trạng hôm nay",
       "statusLegend": "Hôm nay bạn…",
       "statusButton": {
         "open": "Mở cửa",
@@ -1192,15 +1192,15 @@
       "preview": "Xem trước — những gì các gia đình sẽ thấy",
       "post": "Đăng cho các gia đình",
       "posted": "Đã đăng. Các gia đình có thể thấy ngay bây giờ.",
-      "chooseStatus": "Hãy chọn Mở cửa, Hạn chế, Hết thực phẩm hoặc Đóng cửa hôm nay.",
+      "chooseStatus": "Hãy chọn một tình trạng trước.",
       "clear": "Xóa tình trạng",
       "clearConfirm": "Xóa tình trạng hôm nay? Các gia đình sẽ lại thấy “chưa xác nhận”.",
       "clearYes": "Có, xóa đi",
       "cleared": "Đã xóa tình trạng."
     },
     "event": {
-      "title": "Sự kiện phát thực phẩm đột xuất",
-      "lead": "Một đợt phát chỉ diễn ra một lần, ví dụ điểm phát lưu động hoặc đợt tặng quà dịp lễ.",
+      "title": "Sự kiện một lần",
+      "lead": "Một sự kiện chỉ diễn ra một lần, ví dụ điểm phát lưu động, phòng khám lưu động hoặc đợt tặng quà dịp lễ.",
       "name": "Tên sự kiện",
       "date": "Ngày",
       "start": "Bắt đầu",
@@ -1262,7 +1262,7 @@
     },
     "surplus": {
       "title": "Bảng thực phẩm dư",
-      "lead": "Tặng thực phẩm dư cho các điểm phát khác, hoặc nhận những gì họ có. Chỉ nhân viên điểm phát đã được duyệt mới thấy bảng này.",
+      "lead": "Tặng thực phẩm dư cho các nơi cung cấp khác, hoặc nhận những gì họ có. Chỉ nhân viên đã được duyệt mới thấy bảng này.",
       "offerTitle": "Tặng thực phẩm dư",
       "from": "Từ",
       "what": "Bạn có gì",
@@ -1278,7 +1278,7 @@
       "availableUntil": "đến {{date}}",
       "claim": "Nhận",
       "claimFor": "Nhận cho",
-      "claimed": "Đã nhận. Hãy liên hệ điểm phát để sắp xếp việc đến lấy.",
+      "claimed": "Đã nhận. Hãy liên hệ nơi cung cấp để sắp xếp việc đến lấy.",
       "close": "Đóng bài đăng",
       "closed": "Đã đóng bài đăng.",
       "status": {

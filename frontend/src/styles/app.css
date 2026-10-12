@@ -749,7 +749,10 @@ input[type='radio'] {
   margin-bottom: var(--sp-2);
 }
 .search--compact {
-  max-width: 560px;
+  max-width: 760px;
+}
+.search__locate-btn {
+  white-space: nowrap;
 }
 .search--compact .search__label {
   font-size: var(--fs-sm);

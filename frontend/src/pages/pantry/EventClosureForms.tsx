@@ -13,12 +13,14 @@ const TRI: Tristate[] = ['unknown', 'required', 'not_required'];
 export function EventForm({
   locationId,
   foodTypes,
+  food = true,
   prefill,
   aiDrafted = false,
   thingsToCheck = [],
 }: {
   locationId: number;
   foodTypes?: string[];
+  food?: boolean;
   prefill?: AnnouncementDraft['event'] | null;
   aiDrafted?: boolean;
   thingsToCheck?: string[];
@@ -105,6 +107,7 @@ export function EventForm({
           </select>
         </div>
       </div>
+      {food && (
       <fieldset className="fgroup">
         <legend>
           {t('portal.event.offerings')} <span className="muted">({t('common.optional')})</span>
@@ -118,6 +121,7 @@ export function EventForm({
           ))}
         </div>
       </fieldset>
+      )}
       <div className="field">
         <label htmlFor={`${id}-notes`}>
           {t('portal.event.notes')} <span className="muted">({t('common.optional')})</span>

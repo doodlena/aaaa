@@ -14,7 +14,7 @@
     "account": "Account",
     "signOut": "Sign out",
     "signIn": "Sign in",
-    "forPantries": "For pantries",
+    "forPantries": "For services",
     "home": "{{app}} home"
   },
   "lang": {
@@ -29,7 +29,7 @@
     "about": "About this site",
     "privacy": "Privacy",
     "mapCredit": "Maps: OpenFreeMap and © OpenStreetMap contributors.",
-    "forPantries": "For pantries",
+    "forPantries": "For services",
     "crisisLead": "In crisis?",
     "call988": "Call 988",
     "text988": "Text 988",
@@ -94,8 +94,8 @@
     "findTitle": "Search near an address",
     "findLead": "Type an address or ZIP code to see hours, what to bring and directions for every kind of help nearby.",
     "liveLegend": "Live updates are posted by the provider itself and show how much is left: three bars = plenty, two = some, one = low.",
-    "pantryTitle": "Run a food pantry or help program?",
-    "pantryBody": "Post today's status and what's on your shelves in under a minute so families can see it right away.",
+    "pantryTitle": "Run a food pantry, clinic or other help program?",
+    "pantryBody": "Post today's status in under a minute so families can see it right away.",
     "browseAll": "Explore all available resources"
   },
   "verification": {
@@ -143,8 +143,8 @@
     "temporarily_closed": "Temporarily closed",
     "permanently_closed": "Permanently closed",
     "synthetic": "Test data",
-    "closed_today_by_pantry": "The pantry says it is closed today",
-    "out_today_by_pantry": "The pantry says it is out of food today",
+    "closed_today_by_pantry": "The provider says it is closed today",
+    "out_today_by_pantry": "The provider says it is out of food today",
     "not_yet_verified": "Not yet checked by a Lantern reviewer — call before you go"
   },
   "matchReason": {
@@ -153,8 +153,8 @@
     "service_group": "Offers {{value}}",
     "distributes_on": "Gives out food on {{date}}",
     "upcoming": "Next distribution {{date}}",
-    "on_shelf_today": "{{value}} on the shelf today (pantry-confirmed)",
-    "open_today_by_pantry": "Open today (pantry-confirmed)"
+    "on_shelf_today": "{{value}} on the shelf today (provider-confirmed)",
+    "open_today_by_pantry": "Open today (provider-confirmed)"
   },
   "eligibilityFilter": {
     "no_id_required": "No ID required (confirmed)",
@@ -375,9 +375,9 @@
     "wheelchair": "Wheelchair accessible (confirmed)",
     "language": "Staff speak",
     "languageAny": "Any language",
-    "today": "Today, from the pantry",
-    "todayHint": "Only pantries that posted today. Pantries that haven't posted are left out.",
-    "liveOpen": "Open today (pantry-confirmed)",
+    "today": "Today, from the provider",
+    "todayHint": "Only providers that posted today. Providers that haven't posted are left out.",
+    "liveOpen": "Open today (provider-confirmed)",
     "onShelfToday": "On the shelf today",
     "supportGroups": "Other kinds of help",
     "serviceGroupsHint": "Places that offer any of the kinds of help you check are shown.",
@@ -503,8 +503,8 @@
     "noSources": "No source is listed for this information.",
     "verifiedExplain": "A reviewer confirmed this listing with the organization or an official source on {{date}}.",
     "staleExplain": "This listing has not been re-checked recently. Some details may be out of date.",
-    "stockSeeToday": "Today's items are listed in “Today at this pantry”, as posted by the pantry.",
-    "typicalNotToday": "This is what the pantry usually offers, not today's stock.",
+    "stockSeeToday": "Today's items are listed in “Today at this location”, as posted by the provider.",
+    "typicalNotToday": "This is what the provider usually offers, not today's stock.",
     "sourceReportedExplain": "This listing comes from a public list (shown under Sources) and has not been checked by a Lantern reviewer yet. Call the provider to confirm hours and requirements before you go."
   },
   "auth": {
@@ -590,7 +590,7 @@
     "reviewTitle": "How often listings are reviewed",
     "review": "We aim to re-check every listing at least every {{days}} days. Listings that have not been re-checked are marked “Needs re-check”.",
     "changesTitle": "Why availability changes",
-    "changes": "Food banks depend on donations and volunteers. Hours, food types and stock can change from week to week, and some events are cancelled at short notice. We only show today's stock when the pantry itself has posted it.",
+    "changes": "Food banks depend on donations and volunteers. Hours, food types and stock can change from week to week, and some events are cancelled at short notice. We only show today's stock when the provider itself has posted it.",
     "contactTitle": "Contact the organization directly",
     "contact": "Always call or check the organization's website before you travel. They have the most up-to-date information, and they can tell you what to bring.",
     "disclaimerTitle": "Disclaimer",
@@ -600,9 +600,9 @@
     "privacy2": "If you use “Use my location”, your location is used only for that search in your browser and is never stored.",
     "privacy3": "You do not need an account. If you create one, we store only your email, password (hashed), language, saved places, and search preferences.",
     "privacy4": "Your language choice is remembered on this device only.",
-    "liveTitle": "Live posts from pantries",
-    "live": "Approved pantry staff can post today's status (open, limited, out of food, closed) and what's on the shelf. Every post is labelled “Posted by the pantry” with the time, and it disappears on its own when it expires. We confirm each staff member with the pantry before they can post.",
-    "reportsInfo": "Anyone can report a problem with a listing. Reports go to the pantry and to our reviewers; several similar reports send the listing back for review.",
+    "liveTitle": "Live posts from providers",
+    "live": "Approved staff can post today's status (open, limited or closed; food pantries can also post “out of food” and what's on the shelf). Every post is labelled “Posted by the provider” with the time, and it disappears on its own when it expires. We confirm each staff member with the provider before they can post.",
+    "reportsInfo": "Anyone can report a problem with a listing. Reports go to the provider and to our reviewers; several similar reports send the listing back for review.",
     "privacy5": "Problem reports store only what you chose and wrote. No name, account or location is stored.",
     "privacy6": "AI features, when turned on, receive only the words you type. Your location and account are never sent.",
     "labelReported": "Imported from a public list (see Sources). A Lantern reviewer has not checked it yet — call before you go.",
@@ -849,10 +849,10 @@
     "openReports_other": "{{count}} community reports",
     "origin": {
       "import": "From import",
-      "provider": "From the pantry",
+      "provider": "From the provider",
       "ai": "AI-suggested — check the quoted evidence",
       "aiNote": "An AI read the source text and suggested this. Accept it only if the quoted evidence really says so.",
-      "providerNote": "Proposed by approved pantry staff. Confirm with the pantry if anything looks unusual."
+      "providerNote": "Proposed by approved provider staff. Confirm with the provider if anything looks unusual."
     },
     "ai": {
       "button": "Get AI suggestions",
@@ -862,9 +862,9 @@
       "none": "The AI found nothing it could back with a quote."
     },
     "claims": {
-      "nav": "Pantry access",
-      "title": "Pantry access requests",
-      "guidance": "Call the pantry to confirm this person before approving. Use the listing's phone number, not one the person gave you.",
+      "nav": "Provider access",
+      "title": "Provider access requests",
+      "guidance": "Call the provider to confirm this person before approving. Use the listing's phone number, not one the person gave you.",
       "filter": "Filter by status",
       "forListing": "For listing:",
       "listingPhone": "Listing phone",
@@ -879,7 +879,7 @@
       "title": "Community reports",
       "lead": "Anonymous reports from the public. Several “was closed” or “wrong info” reports in a week send a listing back to review automatically.",
       "filter": "Filter by status",
-      "pantryResponse": "Pantry's response",
+      "pantryResponse": "Provider's response",
       "resolve": "Resolve",
       "dismiss": "Dismiss"
     },
@@ -977,7 +977,7 @@
     }
   },
   "offline": {
-    "banner": "You're offline. Saved and recently viewed pantries still open, but what you see may not be current."
+    "banner": "You're offline. Saved and recently viewed places still open, but what you see may not be current."
   },
   "time": {
     "justNow": "just now",
@@ -987,13 +987,13 @@
   },
   "feed": {
     "title": "Live updates from providers",
-    "scopeAll": "Posted today by pantries across Northern Virginia",
-    "scopeNear": "Posted today by pantries within 10 miles of you",
-    "useLocation": "Show pantries near me",
+    "scopeAll": "Posted today by providers across Northern Virginia",
+    "scopeNear": "Posted today by providers within 10 miles of you",
+    "useLocation": "Show providers near me",
     "loading": "Loading today's posts…",
     "emptyTitle": "No provider has posted an update yet today.",
     "emptyBody": "Search above to see regular hours and what each place usually offers.",
-    "seeAllOpen": "See all pantries open today (pantry-confirmed) on the map"
+    "seeAllOpen": "See all places open today (provider-confirmed) on the map"
   },
   "live": {
     "status": {
@@ -1013,17 +1013,17 @@
       "some": "Some",
       "low": "Low"
     },
-    "postedByPantry": "Posted by the pantry",
+    "postedByPantry": "Posted by the provider",
     "until": "until {{time}}",
-    "aiAssisted": "Drafted with AI help, checked by the pantry",
+    "aiAssisted": "Drafted with AI help, checked by the provider",
     "itemsLabel": "On the shelf today"
   },
   "today": {
-    "title": "Today at this pantry",
-    "itemsLabel": "On the shelf today, as posted by the pantry",
-    "noItems": "The pantry did not list specific items.",
-    "notPosted": "The pantry hasn't posted today's shelf. The foods listed below are what it usually offers.",
-    "levelsNote": "Amounts are the pantry's own estimate and can change during the day."
+    "title": "Today at this location",
+    "itemsLabel": "On the shelf today, as posted by the provider",
+    "noItems": "The provider did not list specific items.",
+    "notPosted": "The provider hasn't posted today's shelf. The foods listed below are what it usually offers.",
+    "levelsNote": "Amounts are the provider's own estimate and can change during the day."
   },
   "reports": {
     "open": "Report a problem",
@@ -1038,10 +1038,10 @@
     },
     "chooseKind": "Choose what happened.",
     "note": "Tell us more",
-    "privacy": "No name, account or location is stored. Your report goes to the pantry and to our reviewers.",
+    "privacy": "No name, account or location is stored. Your report goes to the provider and to our reviewers.",
     "send": "Send report",
     "thanks": "Thank you. Your report was sent.",
-    "whatNext": "The pantry and a reviewer will check it. If several people report the same problem, the listing goes back to review.",
+    "whatNext": "The provider and a reviewer will check it. If several people report the same problem, the listing goes back to review.",
     "rateLimited": "You've sent several reports recently. Please try again in an hour.",
     "recent_one": "{{count}} recent report — being checked",
     "recent_other": "{{count}} recent reports — being checked"
@@ -1050,14 +1050,14 @@
     "title": "Plan your visit",
     "loading": "Loading visit plan…",
     "nextTimes": "Next times",
-    "noTimes": "No upcoming times are confirmed. Call the pantry before you go.",
+    "noTimes": "No upcoming times are confirmed. Call the provider before you go.",
     "whatToBring": "What to bring",
-    "checklistIntro": "Based only on what the pantry has confirmed. “Ask” means we don't know — it does not mean you don't need it.",
+    "checklistIntro": "Based only on what the provider has confirmed. “Ask” means we don't know — it does not mean you don't need it.",
     "action": {
       "bring": "Bring",
       "do": "Required — do this first",
       "not_needed": "Not needed (confirmed)",
-      "ask": "Ask the pantry — not confirmed"
+      "ask": "Ask the provider — not confirmed"
     },
     "item": {
       "photo_id": "Photo ID",
@@ -1116,25 +1116,25 @@
     }
   },
   "portal": {
-    "eyebrow": "Pantry portal",
-    "title": "For pantries",
-    "lead": "Tell families what's on your shelves today. Your posts appear right away, labelled “Posted by the pantry”, and expire on their own.",
+    "eyebrow": "Service portal",
+    "title": "For services",
+    "lead": "Tell families what's available today. Your posts appear right away, labelled “Posted by the provider”, and expire on their own.",
     "dashboardTitle": "Manage {{name}}",
-    "myPantries": "Your pantries",
+    "myPantries": "Your services",
     "myRequests": "Your access requests",
-    "noneYet": "You don't manage a pantry here yet. Find your listing below and request access.",
-    "manage": "Post today's shelf",
+    "noneYet": "You don't manage a listing here yet. Find your listing below and request access.",
+    "manage": "Post today's status",
     "openReports_one": "{{count}} open report",
     "openReports_other": "{{count}} open reports",
     "pendingChanges_one": "{{count}} correction in review",
     "pendingChanges_other": "{{count}} corrections in review",
-    "pendingHint": "A reviewer will call the pantry's listed phone number to confirm you.",
-    "surplusLink": "Surplus board: share extra food with other pantries",
-    "backToPortal": "Back to the pantry portal",
+    "pendingHint": "A reviewer will call the listing's phone number to confirm you.",
+    "surplusLink": "Surplus board: share extra food with other providers",
+    "backToPortal": "Back to the service portal",
     "viewPublic": "See what families see",
-    "notApprovedTitle": "You can't manage this pantry yet",
+    "notApprovedTitle": "You can't manage this listing yet",
     "notApproved": "Your access hasn't been approved for this listing.",
-    "trust": "Status posts, events and closures go live right away and are labelled as posted by your pantry. Changes to hours, requirements or contact details are checked by a reviewer first.",
+    "trust": "Status posts, events and closures go live right away and are labelled as posted by your organization. Changes to hours, requirements or contact details are checked by a reviewer first.",
     "claimStatus": {
       "pending": "Waiting for review",
       "approved": "Approved",
@@ -1142,26 +1142,26 @@
       "revoked": "Access removed"
     },
     "claim": {
-      "title": "Request access to your pantry's listing",
-      "lead": "Find your listing, tell us your role, and a reviewer will confirm you with the pantry before you can post.",
-      "findLabel": "Address or ZIP code of your pantry",
+      "title": "Request access to your organization's listing",
+      "lead": "Find your listing, tell us your role, and a reviewer will confirm you with the organization before you can post.",
+      "findLabel": "Address or ZIP code of your service",
       "find": "Find listings",
       "filterName": "Filter by name",
       "resultsLabel": "Listings near that place",
       "noneFound": "No listings match. Try a different address or ZIP code.",
       "request": "Request access",
-      "role": "Your role at the pantry",
+      "role": "Your role at the organization",
       "rolePlaceholder": "e.g. Volunteer coordinator",
-      "roleMissing": "Tell us your role at the pantry.",
+      "roleMissing": "Tell us your role at the organization.",
       "note": "Anything that helps us confirm you",
-      "howVerified": "We confirm every request by calling the pantry's listed phone number.",
+      "howVerified": "We confirm every request by calling the listing's phone number.",
       "send": "Send request",
-      "sent": "Request sent for {{name}}. We'll confirm it with the pantry.",
+      "sent": "Request sent for {{name}}. We'll confirm it with the organization.",
       "alreadyRequested": "Already requested"
     },
     "tabs": {
       "label": "What do you want to post?",
-      "shelf": "Today's shelf",
+      "shelf": "Today's status",
       "event": "Pop-up event",
       "closure": "Closure",
       "correction": "Suggest a correction",
@@ -1175,7 +1175,7 @@
       "retracted": "cleared"
     },
     "shelf": {
-      "title": "Today's shelf",
+      "title": "Today's status",
       "statusLegend": "Today you are…",
       "statusButton": {
         "open": "Open",
@@ -1192,15 +1192,15 @@
       "preview": "Preview — what families will see",
       "post": "Post to families",
       "posted": "Posted. Families can see it now.",
-      "chooseStatus": "Choose Open, Limited, Out of food or Closed today.",
+      "chooseStatus": "Choose a status first.",
       "clear": "Clear status",
       "clearConfirm": "Remove today's status? Families will see “not confirmed” again.",
       "clearYes": "Yes, clear it",
       "cleared": "Status cleared."
     },
     "event": {
-      "title": "Pop-up distribution event",
-      "lead": "A one-time distribution, e.g. a mobile pantry or holiday giveaway.",
+      "title": "One-time event",
+      "lead": "A one-time event, e.g. a mobile pantry, pop-up clinic or holiday giveaway.",
       "name": "Event name",
       "date": "Date",
       "start": "Starts",
@@ -1262,7 +1262,7 @@
     },
     "surplus": {
       "title": "Surplus board",
-      "lead": "Offer extra food to other pantries, or claim what they have. Only approved pantry staff can see this board.",
+      "lead": "Offer extra food to other providers, or claim what they have. Only approved staff can see this board.",
       "offerTitle": "Offer surplus food",
       "from": "From",
       "what": "What you have",
@@ -1278,7 +1278,7 @@
       "availableUntil": "until {{date}}",
       "claim": "Claim",
       "claimFor": "Claim for",
-      "claimed": "Claimed. Contact the pantry to arrange pickup.",
+      "claimed": "Claimed. Contact the provider to arrange pickup.",
       "close": "Close offer",
       "closed": "Offer closed.",
       "status": {

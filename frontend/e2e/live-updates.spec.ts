@@ -59,13 +59,13 @@ test.afterAll(async () => {
   }
 });
 
-test('G: pantry staff posts "Open" with produce; a guest sees "Posted by the pantry"', async ({ page: anon, browser }) => {
+test('G: pantry staff posts "Open" with produce; a guest sees "Posted by the provider"', async ({ page: anon, browser }) => {
   await anon.goto('/pantry');
   await expect(anon).toHaveURL(/\/login\?next=%2Fpantry/);
   const staff = await browser.newContext({ storageState: session('staff'), locale: 'en-US' });
   const page = await staff.newPage();
   await page.goto(`${BASE}/pantry`);
-  await expect(page.getByRole('heading', { level: 1, name: 'For pantries' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: 'For services' })).toBeVisible();
 
   await page.getByRole('link', { name: MAPLE, exact: true }).click();
   await expect(page.getByRole('heading', { level: 1, name: MAPLE })).toBeVisible();
@@ -82,7 +82,7 @@ test('G: pantry staff posts "Open" with produce; a guest sees "Posted by the pan
     await page.getByLabel(`How much ${food}`).selectOption(level);
   }
   await page.getByLabel(/Short message for families/).fill(ORIGINAL_SHELF.message);
-  await expect(page.locator('.preview')).toContainText('Posted by the pantry');
+  await expect(page.locator('.preview')).toContainText('Posted by the provider');
   await page.getByRole('button', { name: 'Post to families' }).click();
   await expect(page.getByText('Posted. Families can see it now.')).toBeVisible();
 
@@ -92,7 +92,7 @@ test('G: pantry staff posts "Open" with produce; a guest sees "Posted by the pan
   const id = await testListingId(guest.request, MAPLE);
   await g.goto(`${BASE}/resource/${id}`);
   const today = g.getByTestId('today-section');
-  await expect(today.getByText('Posted by the pantry')).toBeVisible();
+  await expect(today.getByText('Posted by the provider')).toBeVisible();
   await expect(today.getByText('Open today')).toBeVisible();
   await expect(today.getByText('Fresh vegetables')).toBeVisible();
   await expect(today.getByText('Plenty')).toBeVisible();
@@ -123,7 +123,7 @@ test('I: the visit planner shows a checklist and a calendar link', async ({ page
   await expect(list.locator('li')).toHaveCount(7);
   // unknown requirements are "ask", never "not needed"
   for (const row of await list.locator('li[data-action="ask"]').all()) {
-    await expect(row).toContainText('Ask the pantry — not confirmed');
+    await expect(row).toContainText('Ask the provider — not confirmed');
     await expect(row).not.toContainText('Not needed');
   }
   const cal = planner.getByTestId('calendar-link');

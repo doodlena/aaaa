@@ -120,6 +120,24 @@ export function SearchForm({ compact = false }: { compact?: boolean }) {
             <Icon name="search" />
             {phase === 'geocoding' ? t('search.searching') : t('search.submit')}
           </button>
+          {compact && (
+            <>
+              <button
+                type="button"
+                className="btn btn--secondary btn--lg search__locate-btn"
+                onClick={useMyLocation}
+                disabled={phase !== 'idle'}
+                title={t('search.locationNote')}
+                aria-describedby={`${id}-locnote`}
+              >
+                <Icon name="locate" />
+                {phase === 'locating' ? t('search.locating') : t('search.useLocation')}
+              </button>
+              <span id={`${id}-locnote`} className="visually-hidden">
+                {t('search.locationNote')}
+              </span>
+            </>
+          )}
         </div>
         <div id={`${id}-msg`} aria-live="polite" className="search__msg">
           {message && <p className="form-msg">{message}</p>}

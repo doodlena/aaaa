@@ -51,6 +51,15 @@ manually verified first (`foodaccess evaluate-pilot` checks this). Also: CAFB an
 permission or direct provider verification before publication. Eligibility documentation (37%) and official websites
 (33%) are below their targets.
 
+**Arlington County food resources (2026-10-12).** New source `arlington-food-resources` (adapter
+`arlington_food_resources`, `rows_are_distinct: true` so programs sharing a venue go to duplicate review instead of
+auto-merging). 69 rows imported as 68 unverified candidates; 11 same-venue duplicate flags decided in the dev database
+(10 distinct, 1 merged). **None are verified.** The county file disagrees with AFAC's own page on hours at Arlington Mill
+(9–11 vs 9:30–11:30 Mon) and Westover (3–5:30 vs 3:30–5 Wed); both sets are stored until a reviewer picks one.
+`foodaccess verify-source --source … --reviewer-email … --method … --notes … [--publish]` records a named admin's
+verification of a source's listings (same gates as the admin UI). Verification lives only in the database; snapshots
+do not carry it. `data/snapshots/` has not been re-exported for this source.
+
 ## Architectural decisions (see docs/architecture/ARCHITECTURE.md)
 
 1. Modular monolith: FastAPI, PostGIS, React SPA, and a cron-driven CLI. No brokers.

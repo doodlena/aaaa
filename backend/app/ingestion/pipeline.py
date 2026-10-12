@@ -349,6 +349,12 @@ def stage(db: Session, cfg: SourceConfig, run: IngestionRun, c: CandidateResourc
     matches = find_duplicates(db, c)
     auto = [m for m in matches if classify(m[1]) == "auto_link"]
     review = [m for m in matches if classify(m[1]) == "review"]
+    if cfg.rows_are_distinct and auto:
+        # a listing that already carries another row of this source is a co-located program: a reviewer decides
+        taken = set(db.scalars(select(SourceRecord.location_id).where(SourceRecord.source_id == cfg.id,
+                                                                      SourceRecord.location_id.in_([m[0].id for m in auto]))))
+        review += [m for m in auto if m[0].id in taken]
+        auto = [m for m in auto if m[0].id not in taken]
     if len(auto) == 1 and not review:
         outcome = attach_record_to_location(db, rec, auto[0][0], f"ingestion:{cfg.id}")
         counts.updated += outcome == "updated"

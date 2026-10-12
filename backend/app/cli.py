@@ -10,6 +10,7 @@ from sqlalchemy import select
 
 from app.config import REPO_ROOT, get_settings
 from app.db import session_factory
+from app.vocab import VERIFICATION_METHODS
 
 
 def _db():
@@ -235,6 +236,46 @@ def cmd_demo(a):
         if a.pantry_email:
             _demo_live(db, a.pantry_email.lower())
     print("Synthetic demo records published. They are only visible when FOODACCESS_SHOW_SYNTHETIC=true and are labelled as test data.")
+
+
+def cmd_verify_source(a):
+    """A named admin attests that they checked a source's listings against it (one verification record each). The import
+    itself never verifies. Listings with pending source changes or undecided duplicates are skipped."""
+    from fastapi import HTTPException
+
+    from app.ingestion.base import load_source_configs
+    from app.ingestion.verification.workflow import apply_action
+    from app.models import DuplicateCandidate, Location, SourceRecord, User
+
+    cfg = load_source_configs().get(a.source)
+    if not cfg or cfg.is_synthetic:
+        sys.exit(f"unknown or synthetic source {a.source}")
+    done, skipped = 0, []
+    with _db() as db:
+        admin = db.scalar(select(User).where(User.email == a.reviewer_email.lower(), User.role == "admin"))
+        if not admin:
+            sys.exit("reviewer must be an existing admin (foodaccess create-admin)")
+        ids = db.scalars(select(Location.id).join(SourceRecord, SourceRecord.location_id == Location.id).where(
+            SourceRecord.source_id == a.source, SourceRecord.status == "linked", Location.merged_into_id.is_(None),
+            Location.review_status.in_(("candidate", "needs_review"))).distinct().order_by(Location.id)).all()
+        for lid in ids:
+            loc = db.get(Location, lid)
+            if db.scalar(select(DuplicateCandidate.id).where(DuplicateCandidate.location_id == lid, DuplicateCandidate.status == "pending").limit(1)):
+                skipped.append((lid, loc.name, "undecided duplicate"))
+                continue
+            step = "not verified"
+            try:
+                apply_action(db, loc, admin, "verify", a.method, a.notes)
+                step = "verified, not published"
+                if a.publish:
+                    apply_action(db, loc, admin, "publish", "none", a.notes)
+                done += 1
+            except HTTPException as e:
+                db.rollback()
+                skipped.append((lid, loc.name, f"{step}: {e.detail}"))
+    print(f"{done} listings verified{' and published' if a.publish else ''} by {a.reviewer_email.lower()} ({a.method}); {len(skipped)} skipped")
+    for lid, name, why in skipped:
+        print(f"  skipped {lid} {name}: {why}")
 
 
 def _demo_live(db, email):
@@ -559,6 +600,13 @@ def main(argv=None):
     d.add_argument("--reviewer-email", required=True)
     d.add_argument("--pantry-email", help="also create a demo pantry-staff account with live shelf posts (needs FOODACCESS_DEMO_PASSWORD)")
     d.set_defaults(fn=cmd_demo)
+    vs = sub.add_parser("verify-source", help="record a named admin's verification of the listings backed by one source")
+    vs.add_argument("--source", required=True)
+    vs.add_argument("--reviewer-email", required=True)
+    vs.add_argument("--method", required=True, choices=VERIFICATION_METHODS)
+    vs.add_argument("--notes", required=True, help="what was checked, against what, and when")
+    vs.add_argument("--publish", action="store_true", help="also publish (same gates as the admin UI)")
+    vs.set_defaults(fn=cmd_verify_source)
     tr = sub.add_parser("translate", help="machine-translate external descriptions (self-hosted provider)")
     tr.add_argument("--lang", default="es")
     tr.add_argument("--limit", type=int, default=200)

@@ -206,6 +206,7 @@ export function PantryDashboard() {
                 key={`shelf-${draftKey}`}
                 locationId={p.location_id}
                 foodTypes={me.data?.food_types}
+                food={p.offers_food !== false}
                 prefill={drafted('shelf_update') ? { status: draft!.status, message: draft!.message, items: draft!.items } : null}
                 aiDrafted={drafted('shelf_update')}
                 thingsToCheck={drafted('shelf_update') ? draft!.things_to_check : []}
@@ -221,6 +222,7 @@ export function PantryDashboard() {
                 key={`event-${draftKey}`}
                 locationId={p.location_id}
                 foodTypes={me.data?.food_types}
+                food={p.offers_food !== false}
                 prefill={drafted('event') ? draft!.event : null}
                 aiDrafted={drafted('event')}
                 thingsToCheck={drafted('event') ? draft!.things_to_check : []}

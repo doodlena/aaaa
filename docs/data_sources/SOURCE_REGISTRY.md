@@ -11,6 +11,7 @@ and `source_discovery.json`. Configs live in `config/sources/`.
 | `fairfax-food-access` | Fairfax County NCS | ArcGIS FeatureServer (Survey123 layer) | Fairfax County | **permission_required**: county disclaimer allows internal or personal use only. Read-only queries. Raw records not stored. | Imported 2026-10-12: 45 |
 | `pwc-cmn-resources` | Prince William County | ArcGIS FeatureServer | PWC (+ Manassas area) | permitted_with_attribution: PWC disclaimer, no reuse restriction stated | Imported 2026-10-12: 16 discovered, 13 in scope |
 | `manassas-food-resources` | City of Manassas | ArcGIS FeatureServer | Manassas area | permitted_with_attribution: "reference purposes only", no accuracy guarantee | Imported 2026-10-12: 18 (layer last edited 2024-08) |
+| `arlington-food-resources` | Arlington County Government | JSON file behind the `my.arlingtonva.us/foodresources` map (file last modified 2026-01-09) | Arlington County (+2 sites just over the Fairfax line) | permitted_with_attribution, **owner to confirm**: no license or reuse terms on the page (footer copyright only); set by analogy with the county flyer already used | Imported 2026-10-12: 69 rows → 68 listings (62 new, 6 existing AFAC sites). Not verified: for 2 of the 6 AFAC sites the county's hours differ from AFAC's own page |
 | `synthetic-fixtures` | Project test suite | JSON | Fictional | **Synthetic. Never real.** | Tests and demo only |
 
 The publication flag is enforced in code. A listing backed only by `permission_required` or `not_assessed` sources

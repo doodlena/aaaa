@@ -101,3 +101,37 @@ def test_afac_html_adapter_expands_day_abbreviations():
     got = {(s.weekday, s.opens, s.closes) for s in c.services[0].schedules}
     assert got == {(d, "09:00", "13:00") for d in range(5)} | {(1, "18:00", "19:00"), (3, "18:00", "19:00"), (5, "08:30", "12:30")}
     assert c.eligibility[0].requirement_type == "residency" and c.zip == "22204" and c.lat == 38.86
+
+
+def test_arlington_food_resources_trusts_only_true_flags_and_explicit_text():
+    cfg = load_source_configs()["arlington-food-resources"]
+    ad = get_adapter(cfg)
+    doc = FetchedDocument("x", 200, (FIXTURES / "arlington_schema_synthetic.json").read_bytes(), "application/json", None)
+    raws = list(ad.parse(doc))
+    pantry, senior, market = (ad.normalize(r) for r in raws[:3])
+
+    state = {e.requirement_type: e.status for e in pantry.eligibility}
+    # "No Photo ID Required: False" alone says nothing; "required" comes from the sentence
+    assert state == {"photo_id": "required", "proof_of_address": "required", "referral": "required", "residency": "required",
+                     "visit_limit": "required"}
+    assert "registration" not in state  # flag "False" + "N/A" contact stays unknown
+    assert [(s.weekday, s.opens, s.closes) for s in pantry.services[0].schedules] == [(0, "09:00", "11:00")]
+    assert [s.service_type for s in pantry.services] == ["pantry_pickup", "diapers"]
+    assert {"general_groceries", "fresh_fruits", "fresh_vegetables"} <= set(pantry.services[0].food_types)
+    assert pantry.city == "Arlington" and pantry.zip == "22204" and pantry.phone == "(703) 555-0100"
+    assert pantry.languages == ["es"] and "Aramaic" in pantry.notes and "Test Person" not in pantry.model_dump_json()
+    assert pantry.organization_website is None  # the file's Website column is the listing's link, not a stated org site
+
+    # every flag "False", but the text states the restrictions; monthly + plain "Friday" must not become every Friday
+    assert {e.requirement_type: e.status for e in senior.eligibility} == {"residency": "required", "age": "required", "income": "required"}
+    assert senior.services[0].schedules == [] and "Friday" in senior.raw_hours_text and senior.services[0].food_types == []
+    assert senior.location_name == "[TEST] Food Bank – [TEST] Senior House"
+
+    # discount groceries are not free food; a seasonal row keeps raw hours; "Senior ... Program" is not an age limit
+    m = {e.requirement_type: e.status for e in market.eligibility}
+    assert market.services[0].service_type == "other" and market.services[0].offering_status == "seasonal"
+    assert market.services[0].schedules == [] and "May 5 - Oct. 27" in market.notes and "Accepts SNAP." in market.notes
+    assert m == {"photo_id": "not_required", "registration": "not_required", "residency": "not_required"}
+
+    with pytest.raises(ValueError, match="unmapped Type"):
+        ad.normalize(raws[3])

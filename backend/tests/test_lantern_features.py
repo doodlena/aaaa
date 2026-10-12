@@ -49,6 +49,22 @@ def test_claim_needs_account_and_admin_approval(client, db, published, admin):
     assert client.post(f"/api/admin/claims/{cid}/decision", json={"decision": "approve"}).json()["status"] == "approved"
 
 
+def test_portal_marks_listings_without_food_so_food_only_controls_can_be_hidden(staff, db):
+    """The portal serves every kind of provider: /provider/me says whether the food-only controls apply."""
+    from app.models import Service
+
+    client, maple = staff
+    assert client.get("/api/provider/me").json()["items"][0]["offers_food"] is True  # a food pantry
+    for s in list(maple.services):
+        db.delete(s)
+    db.flush()
+    db.add(Service(location_id=maple.id, service_type="health_clinic"))
+    db.commit()
+    assert client.get("/api/provider/me").json()["items"][0]["offers_food"] is False
+    # a non-food provider can still post a plain status
+    assert client.post(f"/api/provider/locations/{maple.id}/shelf", json={"status": "limited"}).status_code == 201
+
+
 def test_live_shelf_shows_in_search_and_expires(staff, db):
     client, maple = staff
     r = client.post(f"/api/provider/locations/{maple.id}/shelf", json={
