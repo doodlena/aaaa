@@ -179,6 +179,7 @@ def detail(loc: Location, sources: list[dict], translations: dict, now: datetime
         "sources": sources,
         "translations": translations,
         "directions": directions(out["lat"], out["lon"]),
+        "getting_there": _getting_there(out["lat"], out["lon"]),
     })
     return out
 
@@ -188,7 +189,17 @@ def directions(lat, lon) -> dict | None:
         return None
     return {
         "osm": f"https://www.openstreetmap.org/directions?route=%3B{lat}%2C{lon}",
+        "osm_walk": f"https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&route=%3B{lat}%2C{lon}",
         "geo": f"geo:{lat},{lon}",
         "apple": f"https://maps.apple.com/?daddr={lat},{lon}",
+        "apple_transit": f"https://maps.apple.com/?daddr={lat},{lon}&dirflg=r",
         "google": f"https://www.google.com/maps/dir/?api=1&destination={lat},{lon}",
+        "google_transit": f"https://www.google.com/maps/dir/?api=1&destination={lat},{lon}&travelmode=transit",
+        "google_walk": f"https://www.google.com/maps/dir/?api=1&destination={lat},{lon}&travelmode=walking",
     }
+
+
+def _getting_there(lat, lon):
+    from app.research.transit import getting_there
+
+    return getting_there(lat, lon)

@@ -422,3 +422,18 @@ def duplicate_ai_opinion(dup_id: int, db: Session = Depends(get_db)):
     except ai.AIUnavailable as e:
         raise HTTPException(503, str(e)) from None
     return {"verdict": op.verdict, "reasons": op.reasons, "advisory": True}
+
+
+@router.get("/refresh")
+def refresh_status():
+    from app.services import scheduler
+
+    return scheduler.status()
+
+
+@router.post("/refresh")
+def refresh_run():
+    """Run a refresh now (blocks until done; unchanged sources are cheap)."""
+    from app.services import scheduler
+
+    return scheduler.refresh_now()

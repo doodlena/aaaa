@@ -45,6 +45,10 @@ class Settings(BaseSettings):
     # only, refused when environment=production. "off": verified listings only.
     source_reported: str = "permitted"
 
+    # Automatic daily refresh of all enabled sources (runs inside the API; one worker at a time)
+    auto_refresh: bool = True
+    refresh_hour: int = 4  # local time (America/New_York)
+
     # Branding (single place to rename the app; the UI reads it from /api/meta/features)
     app_name: str = "Lantern"
 

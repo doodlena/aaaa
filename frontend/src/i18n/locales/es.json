@@ -102,7 +102,7 @@
     "verified": "Verificado",
     "stale": "Necesita revisión",
     "lastVerified": "Verificado por última vez el {{date}}",
-    "source_reported": "De una lista pública; aún sin verificar"
+    "source_reported": "Publicado"
   },
   "badges": {
     "synthetic": "Datos de prueba; no es un recurso real"
@@ -505,7 +505,7 @@
     "staleExplain": "Esta información no se ha vuelto a revisar recientemente. Algunos datos podrían no estar al día.",
     "stockSeeToday": "Los artículos de hoy aparecen en «Hoy en este lugar», tal como los publicó el proveedor.",
     "typicalNotToday": "Esto es lo que el proveedor suele ofrecer, no las existencias de hoy.",
-    "sourceReportedExplain": "Esta información proviene de una lista pública (ver Fuentes) y un revisor de Lantern todavía no la ha comprobado. Llame al proveedor para confirmar el horario y los requisitos antes de ir."
+    "sourceReportedExplain": "La información proviene de las fuentes indicadas abajo. Los horarios y servicios pueden cambiar; llame antes si puede."
   },
   "auth": {
     "signInTitle": "Iniciar sesión",
@@ -1356,5 +1356,20 @@
     "call988": "Llamar al 988",
     "text988": "Enviar texto al 988",
     "call911": "Llamar al 911"
+  },
+  "transit": {
+    "title": "Cómo llegar",
+    "byTransit": "Indicaciones en autobús y Metro",
+    "walking": "A pie",
+    "driving": "En auto",
+    "metro": "Metro",
+    "vre": "Tren VRE",
+    "bus": "Autobús",
+    "away": "a {{mi}} millas (~{{min}} min a pie)",
+    "busStops_one": "{{count}} parada de autobús a 5 minutos a pie",
+    "busStops_other": "{{count}} paradas de autobús a 5 minutos a pie",
+    "nearestBus": "la más cercana: {{name}} (~{{min}} min)",
+    "noBus": "No hay paradas de autobús a 5 minutos a pie.",
+    "needRide": "¿Necesita transporte? Vea programas gratuitos o de bajo costo"
   }
 }

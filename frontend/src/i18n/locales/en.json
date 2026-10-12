@@ -102,7 +102,7 @@
     "verified": "Verified",
     "stale": "Needs re-check",
     "lastVerified": "Last verified {{date}}",
-    "source_reported": "From a public list; not yet verified"
+    "source_reported": "Listed"
   },
   "badges": {
     "synthetic": "Test data; not a real resource"
@@ -505,7 +505,7 @@
     "staleExplain": "This listing has not been re-checked recently. Some details may be out of date.",
     "stockSeeToday": "Today's items are listed in “Today at this location”, as posted by the provider.",
     "typicalNotToday": "This is what the provider usually offers, not today's stock.",
-    "sourceReportedExplain": "This listing comes from a public list (shown under Sources) and has not been checked by a Lantern reviewer yet. Call the provider to confirm hours and requirements before you go."
+    "sourceReportedExplain": "Information comes from the sources listed below. Hours and services can change, so call ahead if you can."
   },
   "auth": {
     "signInTitle": "Sign in",
@@ -1356,5 +1356,20 @@
     "call988": "Call 988",
     "text988": "Text 988",
     "call911": "Call 911"
+  },
+  "transit": {
+    "title": "Getting there",
+    "byTransit": "Bus & Metro directions",
+    "walking": "Walking",
+    "driving": "Driving",
+    "metro": "Metro",
+    "vre": "VRE train",
+    "bus": "Bus",
+    "away": "{{mi}} mi away (~{{min}} min walk)",
+    "busStops_one": "{{count}} bus stop within a 5-minute walk",
+    "busStops_other": "{{count}} bus stops within a 5-minute walk",
+    "nearestBus": "closest: {{name}} (~{{min}} min)",
+    "noBus": "No bus stop within a 5-minute walk.",
+    "needRide": "Need a ride? See free and low-cost transportation programs"
   }
 }

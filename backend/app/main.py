@@ -1,4 +1,5 @@
 import logging
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
@@ -12,9 +13,19 @@ from app.config import get_settings
 log = logging.getLogger("api")
 
 
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    from app.services import scheduler
+
+    scheduler.start()  # daily automatic refresh (no-op in tests or when disabled)
+    yield
+    scheduler.stop()
+
+
 def create_app() -> FastAPI:
     s = get_settings()
     app = FastAPI(
+        lifespan=lifespan,
         title=f"{s.app_name} API",
         version="0.1.0",
         description="Lantern: live food, mental-health and community support resources for Northern Virginia — public search, provider portal, community reports, and a verification API.",

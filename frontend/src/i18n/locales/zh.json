@@ -102,7 +102,7 @@
     "verified": "已核实",
     "stale": "需要重新核查",
     "lastVerified": "上次核实：{{date}}",
-    "source_reported": "来自公开名单；尚未核实"
+    "source_reported": "已收录"
   },
   "badges": {
     "synthetic": "测试数据；不是真实的资源"
@@ -505,7 +505,7 @@
     "staleExplain": "这个条目最近没有重新核查。部分内容可能已过时。",
     "stockSeeToday": "今天的物品列在“这个地点的今日情况”中，由服务机构发布。",
     "typicalNotToday": "这是服务机构通常提供的内容，不是今天的库存。",
-    "sourceReportedExplain": "这个条目来自一份公开名单（见“来源”），尚未经 Lantern 审核员核查。出发前请打电话给服务机构，确认开放时间和要求。"
+    "sourceReportedExplain": "信息来自下方列出的来源。时间和服务可能变化，如可能请先致电确认。"
   },
   "auth": {
     "signInTitle": "登录",
@@ -1356,5 +1356,20 @@
     "call988": "拨打 988",
     "text988": "发短信到 988",
     "call911": "拨打 911"
+  },
+  "transit": {
+    "title": "如何到达",
+    "byTransit": "公交和地铁路线",
+    "walking": "步行",
+    "driving": "驾车",
+    "metro": "地铁",
+    "vre": "VRE 火车",
+    "bus": "公交",
+    "away": "距离 {{mi}} 英里（步行约 {{min}} 分钟）",
+    "busStops_one": "步行5分钟内有 {{count}} 个公交站",
+    "busStops_other": "步行5分钟内有 {{count}} 个公交站",
+    "nearestBus": "最近：{{name}}（约 {{min}} 分钟）",
+    "noBus": "步行5分钟内没有公交站。",
+    "needRide": "需要交通？查看免费或低价交通项目"
   }
 }

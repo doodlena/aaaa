@@ -252,6 +252,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
             </a>
           </p>
         )}
+        <GettingThereSection r={r} />
         {r.operating_status === 'temporarily_closed' && <p className="notice notice--alert">{t('detail.temporarilyClosed')}</p>}
         {r.operating_status === 'permanently_closed' && <p className="notice notice--alert">{t('detail.permanentlyClosed')}</p>}
         <p className="notice">
@@ -625,4 +626,57 @@ export function ResourceDetailView({ id, headingLevel = 1 }: { id: number; headi
   if (error) return <ErrorMessage error={error} onRetry={reload} title={t('detail.errorTitle')} />;
   if (!data) return null;
   return <ResourceDetailBody r={data} level={headingLevel} />;
+}
+
+/** "Getting there": transit / walking / driving directions, nearest Metro or VRE, nearby bus stops, ride programs. */
+function GettingThereSection({ r }: { r: ResourceDetail }) {
+  const { t } = useTranslation();
+  const d = r.directions;
+  const g = r.getting_there;
+  if (!d) return null;
+  const mi = (km: number) => (km * 0.621371).toFixed(1);
+  return (
+    <section className="getting-there" aria-labelledby={`gt-${r.id}`}>
+      <h2 id={`gt-${r.id}`} className="getting-there__title">
+        <Icon name="bus" size={18} /> {t('transit.title')}
+      </h2>
+      <div className="getting-there__modes">
+        {d.google_transit && (
+          <a className="btn btn--secondary btn--sm" href={d.google_transit} target="_blank" rel="noopener noreferrer">
+            <Icon name="bus" size={16} /> {t('transit.byTransit')}
+          </a>
+        )}
+        {(d.osm_walk || d.google_walk) && (
+          <a className="btn btn--secondary btn--sm" href={d.osm_walk || d.google_walk} target="_blank" rel="noopener noreferrer">
+            <Icon name="route" size={16} /> {t('transit.walking')}
+          </a>
+        )}
+        <a className="btn btn--secondary btn--sm" href={d.osm} target="_blank" rel="noopener noreferrer">
+          <Icon name="pin" size={16} /> {t('transit.driving')}
+        </a>
+      </div>
+      {g && (
+        <ul className="getting-there__list">
+          {g.rail.map((s) => (
+            <li key={`r-${s.name}`}>
+              <strong>{s.kind === 'vre' ? t('transit.vre') : t('transit.metro')}:</strong> {s.name}
+              {s.lines ? ` (${s.lines})` : ''} · {t('transit.away', { mi: mi(s.distance_km), min: s.walk_minutes })}
+            </li>
+          ))}
+          {g.bus_stops_within_400m > 0 ? (
+            <li>
+              <strong>{t('transit.bus')}:</strong> {t('transit.busStops', { count: g.bus_stops_within_400m })}
+              {g.nearest_bus[0] ? ` — ${t('transit.nearestBus', { name: g.nearest_bus[0].name, min: g.nearest_bus[0].walk_minutes })}` : ''}
+            </li>
+          ) : (
+            <li>{t('transit.noBus')}</li>
+          )}
+        </ul>
+      )}
+      <p className="small">
+        <Link to="/find?service_group=transportation">{t('transit.needRide')}</Link>
+      </p>
+      {g && <p className="muted small">{g.attribution}</p>}
+    </section>
+  );
 }

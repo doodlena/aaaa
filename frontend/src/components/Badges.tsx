@@ -11,6 +11,7 @@ export function VerificationBadge({ label, lastVerifiedAt }: { label: string; la
   const { t, i18n } = useTranslation();
   const stale = label !== 'verified';
   const reported = label === 'source_reported';
+  if (reported) return null; // imported listings show their source in the detail page instead of a "pending" badge
   return (
     <span
       className={`badge ${reported ? 'badge--reported' : stale ? 'badge--unknown' : 'badge--ok'}`}
@@ -58,7 +59,7 @@ export function TriChip({ state, children }: { state: Tristate; children?: React
 
 export function WarningList({ warnings }: { warnings: string[] }) {
   const { t } = useTranslation();
-  const shown = warnings.filter((w) => w !== 'synthetic' && w !== 'stale'); // those have dedicated badges
+  const shown = warnings.filter((w) => w !== 'synthetic' && w !== 'stale' && w !== 'not_yet_verified');
   if (!shown.length) return null;
   return (
     <ul className="warnings" aria-label={t('card.warningsLabel')}>

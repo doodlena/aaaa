@@ -468,3 +468,22 @@ def test_ai_discovery_uses_search_results_and_skips_aggregators(ai_on):
     leads = ai.discover_leads("Falls Church", "food pantries")
     assert [x["url"] for x in leads] == ["https://city.example.gov/food", "https://church.example.org/pantry"]
     assert ai.discover_leads("falls church", "Food Pantries") == leads and f.n == 1  # cached
+
+
+def test_auto_refresh_cycle_and_admin_status(admin_client, db, monkeypatch, tmp_path):
+    from app.ingestion import pipeline
+    from app.services import scheduler
+
+    calls = {}
+
+    def fake_run_all(db_, scope, only=None, fetcher=None, do_geocode=False, configs=None):
+        calls["scope"] = scope
+        return []
+
+    monkeypatch.setattr(pipeline, "run_all", fake_run_all)
+    r = admin_client.post("/api/admin/refresh").json()
+    assert r["sources"] == 0 and "marked_stale" in r and calls["scope"]
+    st = admin_client.get("/api/admin/refresh").json()
+    assert st["last_run"] and st["hour_local"] == 4
+    nxt = scheduler._next_run(datetime(2026, 10, 12, 12, 0, tzinfo=UTC))
+    assert nxt.astimezone(TZ).hour == 4 and nxt > datetime(2026, 10, 12, 12, 0, tzinfo=UTC)

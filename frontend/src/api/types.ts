@@ -184,7 +184,11 @@ export interface ResourceDetail extends ResourceSummary {
   current_inventory: ShelfItem[] | null;
   sources: SourceRef[];
   translations: Record<string, Translation>;
-  directions: { osm: string; apple: string; google: string; geo: string } | null;
+  directions: {
+    osm: string; apple: string; google: string; geo: string;
+    osm_walk?: string; apple_transit?: string; google_transit?: string; google_walk?: string;
+  } | null;
+  getting_there?: GettingThere | null;
 }
 
 export interface GeocodeResult {
@@ -499,4 +503,19 @@ export interface DuplicateAIOpinion {
   verdict: 'same_place' | 'different_places' | 'unsure';
   reasons: string[];
   advisory: boolean;
+}
+
+export interface TransitStop {
+  kind: 'metro' | 'vre' | 'bus';
+  name: string;
+  lines?: string | null;
+  routes?: string | null;
+  distance_km: number;
+  walk_minutes: number;
+}
+export interface GettingThere {
+  rail: TransitStop[];
+  bus_stops_within_400m: number;
+  nearest_bus: TransitStop[];
+  attribution: string;
 }

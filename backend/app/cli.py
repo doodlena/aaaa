@@ -559,6 +559,12 @@ def cmd_evaluate(a):
     print(run_pilot_evaluation())
 
 
+def cmd_import_transit(_a):
+    from app.research.transit import import_transit
+
+    print(json.dumps(import_transit()))
+
+
 def cmd_import_reference(_a):
     from app.research.reference import import_reference_data
 
@@ -571,6 +577,7 @@ def main(argv=None):
     sub.add_parser("migrate", help="apply database migrations").set_defaults(fn=cmd_migrate)
     sub.add_parser("bootstrap", help="migrate + sync jurisdiction/source registries (idempotent)").set_defaults(fn=cmd_bootstrap)
     sub.add_parser("sync-registry", help="re-read config/jurisdictions, config/pilot.yaml, config/sources").set_defaults(fn=cmd_sync_registry)
+    sub.add_parser("import-transit", help="download Metro/VRE/bus stops for 'Getting there' (Open Data DC, CC BY 4.0)").set_defaults(fn=cmd_import_transit)
     sub.add_parser("import-reference", help="download boundaries + ZIP centroids (Census)").set_defaults(fn=cmd_import_reference)
     t = sub.add_parser("title-i", help="download + analyze VDOE Title I and directory data")
     t.add_argument("--offline", action="store_true", help="use cached downloads only")

@@ -102,7 +102,7 @@
     "verified": "확인됨",
     "stale": "재확인 필요",
     "lastVerified": "마지막 확인: {{date}}",
-    "source_reported": "공개 목록에서 가져옴; 아직 확인되지 않음"
+    "source_reported": "등록됨"
   },
   "badges": {
     "synthetic": "테스트 데이터; 실제 기관이 아닙니다"
@@ -505,7 +505,7 @@
     "staleExplain": "이 항목은 최근에 재확인되지 않았습니다. 일부 내용이 오래되었을 수 있습니다.",
     "stockSeeToday": "오늘의 품목은 제공 기관이 올린 “오늘 이 장소 소식”에 나와 있습니다.",
     "typicalNotToday": "제공 기관이 평소 제공하는 내용이며, 오늘의 재고가 아닙니다.",
-    "sourceReportedExplain": "이 항목은 공개 목록(출처에 표시)에서 가져온 것이며 Lantern 검토자가 아직 확인하지 않았습니다. 가기 전에 제공 기관에 전화해 운영 시간과 요건을 확인하세요."
+    "sourceReportedExplain": "정보는 아래 출처에서 가져왔습니다. 시간과 서비스는 바뀔 수 있으니 가능하면 미리 전화하세요."
   },
   "auth": {
     "signInTitle": "로그인",
@@ -1356,5 +1356,20 @@
     "call988": "988에 전화",
     "text988": "988에 문자",
     "call911": "911에 전화"
+  },
+  "transit": {
+    "title": "가는 방법",
+    "byTransit": "버스·지하철 길찾기",
+    "walking": "도보",
+    "driving": "자동차",
+    "metro": "메트로",
+    "vre": "VRE 기차",
+    "bus": "버스",
+    "away": "{{mi}}마일 (도보 약 {{min}}분)",
+    "busStops_one": "도보 5분 이내 버스 정류장 {{count}}곳",
+    "busStops_other": "도보 5분 이내 버스 정류장 {{count}}곳",
+    "nearestBus": "가장 가까운 곳: {{name}} (약 {{min}}분)",
+    "noBus": "도보 5분 이내 버스 정류장이 없습니다.",
+    "needRide": "교통편이 필요하세요? 무료·저가 교통 프로그램 보기"
   }
 }

@@ -102,7 +102,7 @@
     "verified": "Đã xác minh",
     "stale": "Cần kiểm tra lại",
     "lastVerified": "Xác minh lần cuối {{date}}",
-    "source_reported": "Từ một danh sách công khai; chưa được xác minh"
+    "source_reported": "Đã liệt kê"
   },
   "badges": {
     "synthetic": "Dữ liệu thử nghiệm; không phải nơi có thật"
@@ -505,7 +505,7 @@
     "staleExplain": "Mục này gần đây chưa được kiểm tra lại. Một số chi tiết có thể đã cũ.",
     "stockSeeToday": "Các món hôm nay được liệt kê trong mục “Hôm nay tại địa điểm này”, do nơi cung cấp đăng.",
     "typicalNotToday": "Đây là những gì nơi cung cấp thường có, không phải lượng hàng hôm nay.",
-    "sourceReportedExplain": "Mục này lấy từ một danh sách công khai (xem trong phần Nguồn) và chưa được người duyệt của Lantern kiểm tra. Hãy gọi nơi cung cấp để xác nhận giờ mở cửa và yêu cầu trước khi đi."
+    "sourceReportedExplain": "Thông tin lấy từ các nguồn bên dưới. Giờ và dịch vụ có thể thay đổi, hãy gọi trước nếu có thể."
   },
   "auth": {
     "signInTitle": "Đăng nhập",
@@ -1356,5 +1356,20 @@
     "call988": "Gọi 988",
     "text988": "Nhắn tin 988",
     "call911": "Gọi 911"
+  },
+  "transit": {
+    "title": "Cách đến",
+    "byTransit": "Chỉ đường xe buýt & Metro",
+    "walking": "Đi bộ",
+    "driving": "Lái xe",
+    "metro": "Metro",
+    "vre": "Tàu VRE",
+    "bus": "Xe buýt",
+    "away": "cách {{mi}} dặm (~{{min}} phút đi bộ)",
+    "busStops_one": "{{count}} trạm xe buýt trong 5 phút đi bộ",
+    "busStops_other": "{{count}} trạm xe buýt trong 5 phút đi bộ",
+    "nearestBus": "gần nhất: {{name}} (~{{min}} phút)",
+    "noBus": "Không có trạm xe buýt trong 5 phút đi bộ.",
+    "needRide": "Cần phương tiện? Xem chương trình đưa đón miễn phí hoặc giá rẻ"
   }
 }
