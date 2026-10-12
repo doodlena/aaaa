@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router';
 import '@fontsource/atkinson-hyperlegible/latin-400.css';
 import '@fontsource/atkinson-hyperlegible/latin-700.css';
 import '@fontsource/young-serif/latin-400.css';
+import '@fontsource/nunito/latin-900.css';
 import '@fontsource/atkinson-hyperlegible-mono/latin-400';
 import '@fontsource/atkinson-hyperlegible-mono/latin-700';
 import './i18n';

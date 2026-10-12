@@ -32,7 +32,7 @@ export default function MiniMap({ lat, lon }: { lat: number; lon: number }) {
       }
     });
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
-    new maplibregl.Marker({ color: '#1f5140' }).setLngLat([lon, lat]).addTo(map);
+    new maplibregl.Marker({ color: '#14203f' }).setLngLat([lon, lat]).addTo(map);
     return () => map.remove();
   }, [lat, lon]);
   return (

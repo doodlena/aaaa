@@ -102,12 +102,12 @@ export default function MapView({ items, uncertain, center, radiusKm, store, onS
     const ensureLayers = () => {
       if (!map.getSource(RADIUS_SRC)) {
         map.addSource(RADIUS_SRC, { type: 'geojson', data: radiusRef.current || { type: 'FeatureCollection', features: [] } });
-        map.addLayer({ id: 'radius-fill', type: 'fill', source: RADIUS_SRC, paint: { 'fill-color': '#1f5140', 'fill-opacity': 0.06 } });
+        map.addLayer({ id: 'radius-fill', type: 'fill', source: RADIUS_SRC, paint: { 'fill-color': '#14203f', 'fill-opacity': 0.06 } });
         map.addLayer({
           id: 'radius-line',
           type: 'line',
           source: RADIUS_SRC,
-          paint: { 'line-color': '#1f5140', 'line-width': 2, 'line-dasharray': [2, 2] },
+          paint: { 'line-color': '#14203f', 'line-width': 2, 'line-dasharray': [2, 2] },
         });
       }
       if (!map.getSource(SRC)) {
