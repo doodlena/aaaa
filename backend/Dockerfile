@@ -5,7 +5,7 @@ COPY backend/pyproject.toml backend/pyproject.toml
 COPY backend/app backend/app
 # Editable install: the app must run from /app/backend so it finds migrations/, config/ and data/ beside it
 # (a copied install resolves those paths inside site-packages, where they do not exist).
-RUN pip install --no-cache-dir -e ./backend
+RUN pip install --no-cache-dir -e "./backend[ai]"
 COPY backend/ backend/
 COPY config/ config/
 COPY data/ data/
