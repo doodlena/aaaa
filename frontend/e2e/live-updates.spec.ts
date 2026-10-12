@@ -1,11 +1,10 @@
 import { expect, request, test, type APIRequestContext } from '@playwright/test';
+import { BASE, requireSyntheticData, session } from './support';
 
 /**
- * Open Shelf scenarios against the REAL backend. They only ever touch fictional "[TEST]" listings.
+ * Live updates from providers, against the REAL backend. They only ever touch fictional "[TEST]" listings, so the
+ * whole file skips itself unless the API shows synthetic data (demo_mode). Sessions come from global-setup.ts.
  */
-const BASE = 'http://localhost:5173';
-const STAFF = { email: process.env.E2E_PANTRY_EMAIL || 'pantry@localhost.test', password: process.env.E2E_PANTRY_PASSWORD || 'demo-pantry-password' };
-const ADMIN = { email: process.env.E2E_ADMIN_EMAIL || 'admin@localhost.test', password: process.env.E2E_ADMIN_PASSWORD || 'dev-admin-password-1' };
 const MAPLE = '[TEST] Maple Community Pantry — Main Site';
 const ORIGINAL_SHELF = {
   status: 'open',
@@ -27,18 +26,19 @@ async function testListingId(ctx: APIRequestContext, name: string): Promise<numb
   return hit.id;
 }
 
-async function signedIn(who: { email: string; password: string }) {
-  const ctx = await request.newContext({ baseURL: BASE });
-  const r = await ctx.post('/api/auth/login', { data: who });
-  if (!r.ok()) throw new Error(`login failed for ${who.email}`);
+async function signedIn(who: 'admin' | 'staff') {
+  const ctx = await request.newContext({ baseURL: BASE, storageState: session(who) });
   const csrf = (await ctx.storageState()).cookies.find((c) => c.name === 'nfa_csrf')?.value || '';
   return { ctx, h: { 'X-CSRF-Token': csrf } };
 }
 
+test.describe.configure({ mode: 'serial' });
+requireSyntheticData();
+
 test.afterAll(async () => {
   // Safety net: put Maple's live shelf back to the demo state, and resolve the e2e report.
   try {
-    const { ctx, h } = await signedIn(STAFF);
+    const { ctx, h } = await signedIn('staff');
     const id = await testListingId(ctx, MAPLE);
     await ctx.post(`/api/provider/locations/${id}/shelf`, { headers: h, data: ORIGINAL_SHELF });
     await ctx.dispose();
@@ -46,7 +46,7 @@ test.afterAll(async () => {
     /* reported by the test itself */
   }
   try {
-    const { ctx, h } = await signedIn(ADMIN);
+    const { ctx, h } = await signedIn('admin');
     const reports = await (await ctx.get('/api/admin/reports?status=open')).json();
     for (const r of reports.items || []) {
       if (r.note === REPORT_NOTE && String(r.location_name).startsWith('[TEST]')) {
@@ -59,12 +59,12 @@ test.afterAll(async () => {
   }
 });
 
-test('G: pantry staff posts "Open" with produce; a guest sees "Posted by the pantry"', async ({ page, browser }) => {
-  await page.goto('/pantry');
-  await expect(page).toHaveURL(/\/login\?next=%2Fpantry/);
-  await page.getByLabel('Email').fill(STAFF.email);
-  await page.getByLabel('Password').fill(STAFF.password);
-  await page.getByRole('button', { name: 'Sign in' }).click();
+test('G: pantry staff posts "Open" with produce; a guest sees "Posted by the pantry"', async ({ page: anon, browser }) => {
+  await anon.goto('/pantry');
+  await expect(anon).toHaveURL(/\/login\?next=%2Fpantry/);
+  const staff = await browser.newContext({ storageState: session('staff'), locale: 'en-US' });
+  const page = await staff.newPage();
+  await page.goto(`${BASE}/pantry`);
   await expect(page.getByRole('heading', { level: 1, name: 'For pantries' })).toBeVisible();
 
   await page.getByRole('link', { name: MAPLE, exact: true }).click();
@@ -97,6 +97,7 @@ test('G: pantry staff posts "Open" with produce; a guest sees "Posted by the pan
   await expect(today.getByText('Fresh vegetables')).toBeVisible();
   await expect(today.getByText('Plenty')).toBeVisible();
   await guest.close();
+  await staff.close();
 });
 
 test('H: a guest reports a problem on a [TEST] pantry and sees a confirmation', async ({ page }) => {

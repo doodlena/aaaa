@@ -57,6 +57,10 @@ export function AboutPage() {
           <dd>{t('about.labelStale')}</dd>
         </div>
         <div>
+          <dt><VerificationBadge label="source_reported" /></dt>
+          <dd>{t('about.labelReported')}</dd>
+        </div>
+        <div>
           <dt><TriChip state="not_required" /></dt>
           <dd>{t('home.legend.not_required')}</dd>
         </div>

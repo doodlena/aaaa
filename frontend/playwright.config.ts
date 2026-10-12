@@ -1,11 +1,16 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * E2E tests run against the REAL backend (http://localhost:8000, dev DB with synthetic [TEST] data) through the Vite
- * dev server proxy. Start the backend first; Playwright starts (or reuses) Vite on :5173.
+ * E2E tests run against the REAL backend (http://localhost:8000) through the Vite dev server proxy. Start the backend
+ * first; Playwright starts (or reuses) Vite on :5173.
+ * - real-data.spec.ts is read-only and works on the real imported listings.
+ * - Scenarios that need the fictional [TEST] data skip themselves unless /api/meta/features reports demo_mode
+ *   (API started with FOODACCESS_SHOW_SYNTHETIC=true).
+ * - global-setup.ts signs in once per account and saves the sessions (sign-ins are rate-limited per IP).
  */
 export default defineConfig({
   testDir: './e2e',
+  globalSetup: './e2e/global-setup.ts',
   timeout: 60_000,
   expect: { timeout: 10_000 },
   fullyParallel: false,

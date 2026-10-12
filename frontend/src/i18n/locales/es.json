@@ -312,7 +312,7 @@
     "resultsCount_other": "{{count}} lugares coinciden con su búsqueda",
     "uncertainCount_one": "{{count}} más podría coincidir",
     "uncertainCount_other": "{{count}} más podrían coincidir",
-    "coverage": "Todavía estamos agregando lugares en esta zona. Puede haber más ayuda con alimentos cerca que aún no aparece.",
+    "coverage": "Todavía estamos añadiendo recursos en esta zona. Puede haber más ayuda cercana que aún no aparece.",
     "truncated": "Hay muchos resultados. Acerque el mapa o agregue filtros para verlos todos.",
     "confirmedListLabel": "Lugares que coinciden",
     "empty": "No encontramos lugares aquí",
@@ -581,7 +581,8 @@
     "live": "El personal aprobado de cada despensa puede publicar cómo está hoy (abierta, con poca comida, sin comida, cerrada) y qué hay en los estantes. Cada publicación lleva la etiqueta “Publicado por la despensa” con la hora, y desaparece sola cuando caduca. Confirmamos a cada persona con la despensa antes de que pueda publicar.",
     "reportsInfo": "Cualquier persona puede reportar un problema con un lugar. Los reportes llegan a la despensa y a nuestro equipo; varios reportes parecidos devuelven el lugar a revisión.",
     "privacy5": "Los reportes de problemas guardan solo lo que usted eligió y escribió. No se guarda ningún nombre, cuenta ni ubicación.",
-    "privacy6": "Las funciones de IA, cuando están activadas, reciben solo las palabras que usted escribe. Nunca se envían su ubicación ni su cuenta."
+    "privacy6": "Las funciones de IA, cuando están activadas, reciben solo las palabras que usted escribe. Nunca se envían su ubicación ni su cuenta.",
+    "labelReported": "Importado de una lista pública (ver Fuentes). Un revisor de Lantern aún no lo ha comprobado: llame antes de ir."
   },
   "reviewStatus": {
     "candidate": "Candidato",

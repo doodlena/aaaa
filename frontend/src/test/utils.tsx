@@ -131,7 +131,7 @@ export function searchResponse(overrides: Partial<SearchResponse> = {}): SearchR
 export const testUser: User = { id: 7, email: 'person@example.com', role: 'user', preferred_language: 'en', preferences: {} };
 
 export const testFeatures: Features = {
-  app_name: 'Open Shelf',
+  app_name: 'Lantern',
   demo_mode: false,
   ai: { search: false, announcement_drafts: false, structure_suggestions: false, translation: false, model: null },
 };

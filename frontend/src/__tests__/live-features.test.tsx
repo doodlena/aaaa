@@ -267,16 +267,16 @@ describe('admin: pantry access & reports', () => {
 describe('i18n catalogs', () => {
   const flat = (o: Record<string, unknown>, p = ''): string[] =>
     Object.entries(o).flatMap(([k, v]) => (v && typeof v === 'object' ? flat(v as Record<string, unknown>, `${p}${k}.`) : [`${p}${k}`]));
-  it('en and es have identical keys, including every Open Shelf namespace', () => {
+  it('en and es have identical keys, including every live/needs/crisis namespace', () => {
     expect(flat(es).sort()).toEqual(flat(en).sort());
-    for (const ns of ['live', 'today', 'feed', 'reports', 'visit', 'ai', 'portal', 'offline', 'time']) expect(en).toHaveProperty(ns);
+    for (const ns of ['live', 'today', 'feed', 'reports', 'visit', 'ai', 'portal', 'offline', 'time', 'needs', 'crisis', 'area']) expect(en).toHaveProperty(ns);
   });
   it('no old brand strings remain and no value is empty', () => {
     const values = (o: Record<string, unknown>): string[] => Object.values(o).flatMap((v) => (v && typeof v === 'object' ? values(v as Record<string, unknown>) : [String(v)]));
     for (const cat of [en, es]) {
       for (const v of values(cat)) {
         expect(v.trim()).not.toBe('');
-        expect(v).not.toMatch(/Food Access|FoodFinder|Acceso a Alimentos/);
+        expect(v).not.toMatch(/Food Access|FoodFinder|Acceso a Alimentos|Open Shelf/);
       }
     }
   });
