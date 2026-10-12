@@ -1,0 +1,1793 @@
+{
+ "_notice": "Unverified candidate records compiled by AI-assisted web research for the Lantern app (Northern Virginia outside VA-08: Loudoun, Prince William, Manassas, Manassas Park, western/central Fairfax County, City of Fairfax). Every field was transcribed from the cited source_url fetched on the retrieval date; hours and eligibility change often - verify with the provider before publishing. Coordinates are from the U.S. Census geocoder; points inside VA-08 were excluded.",
+ "retrieved": "2026-10-12",
+ "method": "AI-assisted web research (Claude Code session); pages fetched with a robots.txt-checking client at <=1 req/s per host; blocked or robots-disallowed sources were logged and not retried; each record cites its source_url; unverified candidates",
+ "records": [
+  {
+   "external_id": "nova-food-wfcm-chantilly",
+   "source_url": "https://www.wfcmva.org/get-help",
+   "organization_name": "Western Fairfax Christian Ministries (WFCM)",
+   "organization_website": "https://www.wfcmva.org/",
+   "location_name": "WFCM Chantilly Free Food Market",
+   "address1": "4511 Daly Drive",
+   "address2": "Suite J",
+   "city": "Chantilly",
+   "state": "VA",
+   "zip": "20151",
+   "phone": "703-988-9656",
+   "email": "clientservices@wfcmva.org",
+   "website": "https://www.wfcmva.org/get-help",
+   "languages": [
+    "English",
+    "Spanish",
+    "Korean"
+   ],
+   "notes": "Contact page: https://www.wfcmva.org/contact-us. Scheduling calls in English or Spanish; certification appointment by phone in English, Korean, or Spanish. Contact page lists two differing Chantilly client-hour blocks (body: Mon-Fri 10:30 am-2 pm; footer: Mon-Fri 10 am-2 pm), so schedules were not parsed. USDA TEFAP provider. Online ordering for home delivery mentioned.",
+   "raw_hours_text": "Clients served by appointment only: Chantilly Free Food Market: Monday-Friday 10:30 am-2 pm Monday, Tuesday & Thursday 4:30 pm-6:45 pm 1 Saturday per month 9 am-12 pm [footer of same page: Chantilly: Monday-Friday 10 am-2 pm and Monday, Tuesday & Thursday 4:30 pm-6:45 pm 1 Saturday per month 9 am-12 pm]",
+   "raw_eligibility_text": "Those eligible to apply for assistance are: Residents of Centreville (20120, 20121), Clifton (20124), Chantilly (20151), Fairfax Station (22039), Fairfax (22030), Oak Hill (20171), Herndon (20170) and Fair Oaks (22033). We will connect individuals and families who do not reside in the zip codes we serve with the appropriate organization that can provide help. USDA TEFAP is available to all VA residents and does not require the documents listed below to be provided. ... Send the following documents to clientservices@wfcmva.org : Photo ID for everyone 18 or older in the household Current school records for everyone of school age in the household Birth certificates for children in the household Proof of all income for all adults in the household 2 Paystubs or Bank statement showing deposits (cross through any account numbers or sensitive information), and/or Benefits letter(s) Proof of residence for all adults in household: Lease",
+   "services": [
+    {
+     "service_type": "appointment_distribution",
+     "description": "Choice-model Free Food Market (Chantilly); private appointment, clients select groceries every 30 days (about two weeks of food). Also online ordering for home delivery.",
+     "food_types": [
+      "pantry_staples",
+      "bread",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "meat",
+      "dairy",
+      "halal",
+      "culturally_specific",
+      "infant_food"
+     ],
+     "offering_status": "regular"
+    },
+    {
+     "service_type": "diapers",
+     "description": "Baby-specific items such as diapers and baby food for clients with infants",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "zip_restriction",
+     "status": "required",
+     "details": "Residents of ZIP codes 20120, 20121, 20124, 20151, 22039, 22030, 20171, 20170, 22033 (USDA TEFAP available to all VA residents without the documents)"
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "Clients served by appointment only; call 703-988-9656 to schedule a certification appointment"
+    },
+    {
+     "requirement_type": "photo_id",
+     "status": "required",
+     "details": "Photo ID for everyone 18 or older in the household (not required for USDA TEFAP)"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "required",
+     "details": "Proof of all income for all adults: 2 paystubs or bank statement and/or benefits letter(s) (not required for USDA TEFAP)"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "required",
+     "details": "Proof of residence for all adults in household: lease (not required for USDA TEFAP)"
+    },
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "Clients select food in the markets every 30 days"
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 38.884905,
+   "lon": -77.443366,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-wfcm-centreville",
+   "source_url": "https://www.wfcmva.org/get-help",
+   "organization_name": "Western Fairfax Christian Ministries (WFCM)",
+   "organization_website": "https://www.wfcmva.org/",
+   "location_name": "WFCM Centreville Free Food Market",
+   "address1": "5948 Centreville Crest Lane",
+   "city": "Centreville",
+   "state": "VA",
+   "zip": "20121",
+   "phone": "703-988-9656",
+   "email": "clientservices@wfcmva.org",
+   "website": "https://www.wfcmva.org/get-help",
+   "languages": [
+    "English",
+    "Spanish",
+    "Korean"
+   ],
+   "notes": "Contact page: https://www.wfcmva.org/contact-us. Contact page lists two differing Centreville client-hour blocks (body: Monday 2 pm-6:45 pm; footer: Monday 3-6:30 pm), so schedules were not parsed. USDA TEFAP provider.",
+   "raw_hours_text": "Centreville Free Food Market: Monday 2 pm - 6:45 pm Tuesday - Wednesday - 10:30 am - 2pm & 4:30 pm - 6:30 pm [footer of same page: Centreville: Monday 3-6:30 pm Tuesday & Wednesday 10 am-2 pm and 4:30 pm-6:30 pm]",
+   "raw_eligibility_text": "Those eligible to apply for assistance are: Residents of Centreville (20120, 20121), Clifton (20124), Chantilly (20151), Fairfax Station (22039), Fairfax (22030), Oak Hill (20171), Herndon (20170) and Fair Oaks (22033). We will connect individuals and families who do not reside in the zip codes we serve with the appropriate organization that can provide help. USDA TEFAP is available to all VA residents and does not require the documents listed below to be provided. ... Send the following documents to clientservices@wfcmva.org : Photo ID for everyone 18 or older in the household Current school records for everyone of school age in the household Birth certificates for children in the household Proof of all income for all adults in the household 2 Paystubs or Bank statement showing deposits (cross through any account numbers or sensitive information), and/or Benefits letter(s) Proof of residence for all adults in household: Lease",
+   "services": [
+    {
+     "service_type": "appointment_distribution",
+     "description": "Choice-model Free Food Market (Centreville); private appointment, clients select groceries every 30 days (about two weeks of food). Also online ordering for home delivery.",
+     "food_types": [
+      "pantry_staples",
+      "bread",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "meat",
+      "dairy",
+      "halal",
+      "culturally_specific",
+      "infant_food"
+     ],
+     "offering_status": "regular"
+    },
+    {
+     "service_type": "diapers",
+     "description": "Baby-specific items such as diapers and baby food for clients with infants",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "zip_restriction",
+     "status": "required",
+     "details": "Residents of ZIP codes 20120, 20121, 20124, 20151, 22039, 22030, 20171, 20170, 22033 (USDA TEFAP available to all VA residents without the documents)"
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "Clients served by appointment only; call 703-988-9656 to schedule a certification appointment"
+    },
+    {
+     "requirement_type": "photo_id",
+     "status": "required",
+     "details": "Photo ID for everyone 18 or older in the household (not required for USDA TEFAP)"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "required",
+     "details": "Proof of all income for all adults: 2 paystubs or bank statement and/or benefits letter(s) (not required for USDA TEFAP)"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "required",
+     "details": "Proof of residence for all adults in household: lease (not required for USDA TEFAP)"
+    },
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "Clients select food in the markets every 30 days"
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 38.836778,
+   "lon": -77.434388,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-freedom-community-pantry",
+   "source_url": "https://findfreedomtoday.org/",
+   "organization_name": "Freedom Community Pantry",
+   "organization_website": "https://findfreedomtoday.org/",
+   "location_name": "Freedom Community Pantry (Loch Lomond Freedom Center warehouse)",
+   "address1": "9325 Mace St",
+   "city": "Manassas Park",
+   "state": "VA",
+   "notes": "Distributes food, clothing, and household items every two weeks from warehouse at Loch Lomond Freedom Center. Distribution dates posted on the pantry's Facebook page; no times stated on website.",
+   "raw_hours_text": "We serve hundreds of people every other Monday! Distribution Dates on our Facebook Page",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Bi-weekly free food distribution (every other Monday)",
+     "offering_status": "regular"
+    },
+    {
+     "service_type": "household_essentials",
+     "description": "Free clothing and household items at bi-weekly distributions",
+     "offering_status": "regular"
+    },
+    {
+     "service_type": "clothing",
+     "description": "Free clothing at bi-weekly distributions",
+     "offering_status": "regular"
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 38.781376,
+   "lon": -77.47808,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-dulles-south-food-pantry",
+   "source_url": "https://dsfp.org/get-assistance",
+   "organization_name": "Dulles South Food Pantry",
+   "organization_website": "https://dsfp.org/",
+   "location_name": "Dulles South Food Pantry",
+   "address1": "24757 Arcola Mills Drive",
+   "city": "Dulles",
+   "state": "VA",
+   "zip": "20166",
+   "phone": "703-507-2795",
+   "email": "appointments@dsfp.org",
+   "website": "https://dsfp.org/get-assistance",
+   "notes": "Appointments: call 703-507-2795 x1 or email appointments@dsfp.org. Guest Registration Forms available in English, Spanish, Arabic. Service area (https://dsfp.org/service-area): Loudoun County residents within the school boundaries of Freedom, John Champe, Briar Woods, Rock Ridge, Independence or Lightridge High Schools. Backpack Buddies weekend food for eligible LCPS students via school Family Liaison. U.S. Census geocoder returned no match for this address (tried Dulles 20166 and Aldie); coordinates omitted.",
+   "raw_hours_text": "The Pantry is open to guests on Tuesdays and Wednesdays. Eligible guests may visit the Pantry up to twice a month. Please call the Pantry at 703-507-2795 x1 or email appointments@dsfp.org to schedule an appointment. An appointment is required.",
+   "raw_eligibility_text": "Guests can reduce their wait by bringing the Guest Registration Form filled out ahead of time, along with two required pieces of information: 1) Proof of Identity and 2) Proof of Residence. ... Guest Registration requires a photo ID for proof of identity, which can be any one of the following valid IDs: Driver's License ID Card Passport (U.S. or foreign) ... Guest Registration requires a proof of residence. Some examples are: Household bill or letter dated within last two months Lease agreement signed within the last two months | The Pantry serves residents of Loudoun County who live within the school boundaries of Freedom, John Champe, Briar Woods, Rock Ridge, Independence or Lightridge High Schools",
+   "services": [
+    {
+     "service_type": "appointment_distribution",
+     "description": "Food pantry open to guests Tuesdays and Wednesdays by appointment; up to twice a month",
+     "offering_status": "regular"
+    },
+    {
+     "service_type": "kids_meals",
+     "description": "Backpack Buddies weekend food support for eligible guests with students in Loudoun County Public Schools (contact school Family Liaison)",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "Call 703-507-2795 x1 or email appointments@dsfp.org"
+    },
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "Loudoun County residents within Freedom, John Champe, Briar Woods, Rock Ridge, Independence or Lightridge High School boundaries"
+    },
+    {
+     "requirement_type": "registration",
+     "status": "required",
+     "details": "Guest Registration Form (English, Spanish, Arabic)"
+    },
+    {
+     "requirement_type": "photo_id",
+     "status": "required",
+     "details": "Driver's License, ID Card, or Passport (U.S. or foreign)"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "required",
+     "details": "Household bill or letter dated within last two months, or lease signed within last two months"
+    },
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "Up to twice a month"
+    }
+   ],
+   "needs_primary_confirmation": false
+  },
+  {
+   "external_id": "nova-food-tol-western-loudoun-pantry",
+   "source_url": "https://www.tolministries.org/food-pantry/",
+   "organization_name": "Tree of Life Ministries",
+   "organization_website": "https://www.tolministries.org/",
+   "location_name": "Tree of Life Western Loudoun Pantry",
+   "address1": "115 East Main Street",
+   "city": "Purcellville",
+   "state": "VA",
+   "zip": "20132",
+   "phone": "540-441-7920",
+   "email": "info@tolministries.org",
+   "website": "https://www.tolministries.org/branches/food/",
+   "notes": "Food Pantry serves all of Loudoun + Northern Fauquier and Clarke Counties (https://www.tolministries.org/branches/food/). Clients call 540-441-7920 once a month to request food; in most cases food is delivered to the home. The 'Mon - Fri 9AM - 2PM' hours appear in the donation section of the pantry page, so they are not confirmed as client pickup hours.",
+   "raw_hours_text": "WESTERN LOUDOUN PANTRY 115 East Main Street, Purcellville Mon - Fri 9AM - 2PM",
+   "raw_eligibility_text": "Once a month, those in need can call in to request food and receive two to three weeks' worth of groceries from one our regional Food Pantries. In most cases, we are able to deliver the food directly to the home of the person in need.",
+   "services": [
+    {
+     "service_type": "home_delivery",
+     "description": "Up to three weeks' worth of groceries delivered to the residence once a month; food preferences and allergies considered. Call 540-441-7920.",
+     "food_types": [
+      "general_groceries"
+     ],
+     "offering_status": "regular"
+    },
+    {
+     "service_type": "pantry_pickup",
+     "description": "Regional food pantry providing 2-3 weeks' worth of groceries once a month",
+     "food_types": [
+      "general_groceries"
+     ],
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "Once a month"
+    },
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "Serving all of Loudoun + Northern Fauquier and Clarke Counties"
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 39.136771,
+   "lon": -77.714537,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-tol-eastern-loudoun-pantry",
+   "source_url": "https://www.tolministries.org/food-pantry/",
+   "organization_name": "Tree of Life Ministries",
+   "organization_website": "https://www.tolministries.org/",
+   "location_name": "Tree of Life Eastern Loudoun Pantry",
+   "address1": "45189 Research Place",
+   "address2": "Bldg A",
+   "city": "Ashburn",
+   "state": "VA",
+   "phone": "540-441-7920",
+   "email": "info@tolministries.org",
+   "website": "https://www.tolministries.org/branches/food/",
+   "notes": "Food Pantry serves all of Loudoun + Northern Fauquier and Clarke Counties. Clients call 540-441-7920 once a month to request food; in most cases food is delivered to the home. Boxes of Blessings (Eastern Loudoun) provides fresh foods weekly; request via website or info@tolministries.org. 'Mon - Fri 9am - 2pm' hours appear in the donation section, not confirmed as client hours.",
+   "raw_hours_text": "EASTERN LOUDOUN PANTRY 45189 Research Place, Bldg A, Ashburn Mon - Fri 9am - 2pm",
+   "raw_eligibility_text": "Once a month, those in need can call in to request food and receive two to three weeks' worth of groceries from one our regional Food Pantries. In most cases, we are able to deliver the food directly to the home of the person in need.",
+   "services": [
+    {
+     "service_type": "home_delivery",
+     "description": "Up to three weeks' worth of groceries delivered to the residence once a month. Call 540-441-7920.",
+     "food_types": [
+      "general_groceries"
+     ],
+     "offering_status": "regular"
+    },
+    {
+     "service_type": "pantry_pickup",
+     "description": "Boxes of Blessings: fresh/perishable foods made available weekly (Eastern Loudoun)",
+     "food_types": [
+      "general_groceries"
+     ],
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "Pantry groceries once a month"
+    },
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "Serving all of Loudoun + Northern Fauquier and Clarke Counties"
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 39.05175,
+   "lon": -77.436618,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-tol-dinner-purcellville",
+   "source_url": "https://www.tolministries.org/branches/food/",
+   "organization_name": "Tree of Life Ministries",
+   "organization_website": "https://www.tolministries.org/",
+   "location_name": "Tree of Life Purcellville Center (Community Dinner)",
+   "address1": "115 East Main Street",
+   "city": "Purcellville",
+   "state": "VA",
+   "zip": "20132",
+   "phone": "540-441-7920",
+   "email": "info@tolministries.org",
+   "notes": "Tree of Life Community Dinners: free, weekly dinners to anyone who would benefit. Page gives a start time only ('until supplies last'), so no structured schedule.",
+   "raw_hours_text": "Join us every THURSDAY evening for a sit-down FREE MEAL. We are on site serving meals starting at 5:30 pm until supplies last.",
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": "Free weekly sit-down dinner, Thursdays from 5:30 pm",
+     "food_types": [
+      "community_meals"
+     ],
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "Free weekly dinners to anyone who would benefit"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 39.136771,
+   "lon": -77.714537,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-tol-dinner-leesburg",
+   "source_url": "https://www.tolministries.org/branches/food/",
+   "organization_name": "Tree of Life Ministries",
+   "organization_website": "https://www.tolministries.org/",
+   "location_name": "Crossroads Baptist Church (Tree of Life Community Dinner)",
+   "address1": "850 Edwards Ferry Rd NE",
+   "city": "Leesburg",
+   "state": "VA",
+   "zip": "20176",
+   "phone": "540-441-7920",
+   "email": "info@tolministries.org",
+   "notes": "Tree of Life Community Dinners: free, weekly dinners to anyone who would benefit. Page gives a start time only ('until supplies last'), so no structured schedule.",
+   "raw_hours_text": "Join us every TUESDAY evening for a sit down FREE MEAL. We are on site serving meals starting at 6:00PM until supplies last.",
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": "Free weekly sit-down dinner, Tuesdays from 6:00 pm",
+     "food_types": [
+      "community_meals"
+     ],
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "Free weekly dinners to anyone who would benefit"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 39.113656,
+   "lon": -77.543679,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-tol-dinner-sterling",
+   "source_url": "https://www.tolministries.org/branches/food/",
+   "organization_name": "Tree of Life Ministries",
+   "organization_website": "https://www.tolministries.org/",
+   "location_name": "Sterling Community Center (Tree of Life Community Dinner)",
+   "address1": "120 Enterprise St",
+   "city": "Sterling",
+   "state": "VA",
+   "zip": "20164",
+   "phone": "540-441-7920",
+   "email": "info@tolministries.org",
+   "notes": "Tree of Life Community Dinners: free, weekly dinners to anyone who would benefit. Start time only ('until supplies last'), so no structured schedule.",
+   "raw_hours_text": "Join us every TUESDAY evening for a sit down FREE MEAL. We are on site serving meals starting at 6:30PM until supplies last.",
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": "Free weekly sit-down dinner, Tuesdays from 6:30 pm",
+     "food_types": [
+      "community_meals"
+     ],
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "Free weekly dinners to anyone who would benefit"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 38.999163,
+   "lon": -77.402759,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-loudoun-hunger-relief-leesburg",
+   "source_url": "https://www.loudounfeeds.org/get-help",
+   "organization_name": "Loudoun Hunger Relief (LHR)",
+   "location_name": "Loudoun Hunger Relief",
+   "address1": "750 Miller Drive",
+   "address2": "Suite 110",
+   "city": "Leesburg",
+   "state": "VA",
+   "phone": "703-777-5911",
+   "notes": "Source is the Loudoun Feeds coalition directory (Loudoun Food Providers Group with Blue Ridge Area Food Bank). LHR's own site (loudounhunger.org) refused automated access (robots.txt HTTP 403) and was not consulted; organization_website omitted. Regular pantry: all by appointment via LHR website. Emergency one-time food supply available during listed hours. USDA Foods available; ID/residency documents are needed for non-USDA foods only.",
+   "raw_hours_text": "If you are in urgent need of food and unable to access a pantry during operating hours, you can visit Loudoun Hunger Relief (LHR) for a one-time, emergency food supply. LHR is located at 750 Miller Drive, Suite 110 in Leesburg. Emergency food pick-up is available Monday-Thursday 9 a.m. -4 p.m., Friday 9 a.m.-3 p.m., and Saturday 9 a.m. -Noon.",
+   "raw_eligibility_text": "703-777-5911. All by appointment, visit website to schedule; proof of Loudoun County residency and picture ID required*. (USDA Foods Available). ... *These documents are needed for non-USDA foods only. Proof of residency and IDs are not required for USDA foods.",
+   "services": [
+    {
+     "service_type": "emergency_food",
+     "description": "One-time emergency food supply pick-up",
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "09:00",
+       "closes": "16:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "09:00",
+       "closes": "16:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "09:00",
+       "closes": "16:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "09:00",
+       "closes": "16:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "09:00",
+       "closes": "15:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 5,
+       "opens": "09:00",
+       "closes": "12:00",
+       "week_of_month": null
+      }
+     ]
+    },
+    {
+     "service_type": "appointment_distribution",
+     "description": "Food pantry, all by appointment (schedule via LHR website); USDA Foods available",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "All by appointment, visit website to schedule"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "required",
+     "details": "Proof of Loudoun County residency (non-USDA foods only)"
+    },
+    {
+     "requirement_type": "photo_id",
+     "status": "required",
+     "details": "Picture ID (non-USDA foods only; not required for USDA foods)"
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 39.082115,
+   "lon": -77.555523,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-seven-loaves-middleburg",
+   "source_url": "https://www.sevenloavesmiddleburg.org/regular-distrubution/",
+   "organization_name": "Seven Loaves Services, Inc.",
+   "organization_website": "https://www.sevenloavesmiddleburg.org/",
+   "location_name": "Seven Loaves Food Pantry",
+   "address1": "15 W. Washington St.",
+   "city": "Middleburg",
+   "state": "VA",
+   "zip": "20117",
+   "phone": "(540) 687-3489",
+   "email": "sevenloavesservices@gmail.com",
+   "notes": "Partner of the Blue Ridge Area Food Bank. Regular distribution bags usually contain bread and a pastry, fresh produce, cereal/oatmeal, milk, eggs/dairy, meat/poultry/fish, frozen meals and non-perishables. Holiday closures listed on site (incl. Columbus Day/Indigenous Peoples' Day 10/12/2026); closed when Loudoun County Schools close for inclement weather.",
+   "raw_hours_text": "Food distributions: Monday, Wednesday, Friday 10am-12pm",
+   "raw_eligibility_text": "This program provides fresh produce, bread and bakery, meat and refrigerated items and various non-perishable products to any household on Monday, Wednesday, or Friday, from 10:00 a.m. to 12:00 noon. Patrons for regular distribution may come as often as once a week. A registration form is required to be filled out for regular distribution and should be completed on a Patron's first visit to the Pantry, where the Patron will state his name and address and the names and ages of each member of his household.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Regular distribution of supplemental groceries to any household, up to once a week",
+     "food_types": [
+      "fresh_fruits",
+      "fresh_vegetables",
+      "bread",
+      "baked_goods",
+      "dairy",
+      "eggs",
+      "meat",
+      "poultry",
+      "fish",
+      "frozen_foods",
+      "pantry_staples"
+     ],
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "10:00",
+       "closes": "12:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "10:00",
+       "closes": "12:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "10:00",
+       "closes": "12:00",
+       "week_of_month": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "registration",
+     "status": "required",
+     "details": "Registration form on first visit (name, address, names and ages of household members)"
+    },
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "As often as once a week"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "Provided to any household"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 38.968864,
+   "lon": -77.735681,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-link-mobile-pantry-sterling",
+   "source_url": "https://www.linkagainsthunger.org/get-help",
+   "organization_name": "LINK, Inc. (LINK Against Hunger)",
+   "organization_website": "https://www.linkagainsthunger.org/",
+   "location_name": "LINK Mobile Food Pantry - Christ the Redeemer Church (rear parking lot)",
+   "address1": "46833 Harry Byrd Highway",
+   "city": "Sterling",
+   "state": "VA",
+   "phone": "703-437-1776",
+   "website": "https://www.linkagainsthunger.org/get-help",
+   "notes": "Food donated by the Capital Area Food Bank. Start time varies based on delivery arrival; runs until all food is distributed (no end time, so no structured schedule).",
+   "raw_hours_text": "Every second Tuesday of the month, LINK hosts a Mobile Food Pantry in the rear parking lot of Christ the Redeemer Church, located at 46833 Harry Byrd Highway, Sterling. The event takes place from 9am until all food has been distributed. The start time varies based on the delivery arrival.",
+   "raw_eligibility_text": "There are no eligibility restrictions; all individuals who attend are welcome to receive food.",
+   "services": [
+    {
+     "service_type": "mobile_pantry",
+     "description": "Monthly mobile food pantry, second Tuesday from 9am until all food is distributed",
+     "food_types": [
+      "fresh_vegetables",
+      "fresh_fruits",
+      "pantry_staples"
+     ],
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "There are no eligibility restrictions"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 39.018415,
+   "lon": -77.37941,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-link-produce-trinity-presbyterian-herndon",
+   "source_url": "https://www.linkagainsthunger.org/get-help",
+   "organization_name": "LINK, Inc. (LINK Against Hunger)",
+   "organization_website": "https://www.linkagainsthunger.org/",
+   "location_name": "LINK Herndon Produce Distribution - Trinity Presbyterian Church",
+   "address1": "651 Dranesville Road",
+   "city": "Herndon",
+   "state": "VA",
+   "phone": "703-437-1776",
+   "notes": "Monthly Herndon produce distribution alternates between Trinity Presbyterian Church and Holy Cross Lutheran Church; often the last Saturday of the month. Dates listed on the page were May 30 and June 27 (Trinity) and July 25, Aug 29, Sept 19 (Holy Cross); no later dates were posted at retrieval.",
+   "raw_hours_text": "Fresh produce and other food is distributed one Saturday a month in Herndon at Trinity Presbyterian Church, 651 Dranesville Road, or Holy Cross Lutheran Church, 1090 Sterling Road. The event is often the last Saturday of the month, from 9 am until all items have been distributed.",
+   "raw_eligibility_text": "There are no eligibility restrictions.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Monthly produce and food distribution (rotating Herndon host site)",
+     "food_types": [
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "offering_status": "event_specific"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "There are no eligibility restrictions"
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 38.976401,
+   "lon": -77.37829,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-link-produce-holy-cross-herndon",
+   "source_url": "https://www.linkagainsthunger.org/get-help",
+   "organization_name": "LINK, Inc. (LINK Against Hunger)",
+   "organization_website": "https://www.linkagainsthunger.org/",
+   "location_name": "LINK Herndon Produce Distribution - Holy Cross Lutheran Church",
+   "address1": "1090 Sterling Road",
+   "city": "Herndon",
+   "state": "VA",
+   "phone": "703-437-1776",
+   "notes": "Monthly Herndon produce distribution alternates between Trinity Presbyterian Church and Holy Cross Lutheran Church; often the last Saturday of the month. LINK also delivers food to Herndon and Sterling residents: call 703-437-1776 and leave a message (deliveries Tuesday-Friday 4pm-8pm and Saturdays 1pm-4pm per https://www.linkagainsthunger.org/what-we-do).",
+   "raw_hours_text": "Fresh produce and other food is distributed one Saturday a month in Herndon at Trinity Presbyterian Church, 651 Dranesville Road, or Holy Cross Lutheran Church, 1090 Sterling Road. The event is often the last Saturday of the month, from 9 am until all items have been distributed.",
+   "raw_eligibility_text": "There are no eligibility restrictions.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Monthly produce and food distribution (rotating Herndon host site)",
+     "food_types": [
+      "fresh_fruits",
+      "fresh_vegetables"
+     ],
+     "offering_status": "event_specific"
+    },
+    {
+     "service_type": "home_delivery",
+     "description": "LINK food deliveries to Herndon and Sterling residents (not Ashburn); call 703-437-1776 and leave a message",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "There are no eligibility restrictions"
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 38.97005,
+   "lon": -77.397383,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-round-hill-umc-pantry",
+   "source_url": "https://www.roundhillumc.org/food-pantry",
+   "organization_name": "Round Hill United Methodist Church",
+   "organization_website": "https://www.roundhillumc.org/",
+   "location_name": "Round Hill UMC Food Pantry and Blessings Box",
+   "address1": "11 W. Loudoun Street",
+   "city": "Round Hill",
+   "state": "VA",
+   "zip": "20141",
+   "phone": "(540) 338-4445",
+   "email": "foodpantry@roundhillumc.org",
+   "notes": "Pantry is in the trailer adjacent to the church building on the west side of the back gravel parking lot. Orders taken in advance; regular clients receive a monthly order form by email or text and return it the week before distribution. Food packed and delivered to the vehicle in the church parking lot. Blessings Box refreshed daily with nonperishable items, available any time of day. Loudoun Feeds lists this pantry as 'By appointment.'",
+   "raw_hours_text": "...return the form the week before our monthly distribution, which is normally the third full weekend of every month. ... We also have a Blessings Box which is refreshed daily with nonperishable items providing needed food available any time of day.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Monthly pre-ordered client-choice distribution (canned goods, pasta, rice, beans, protein, fresh produce, dairy), delivered to vehicle; normally third full weekend of the month",
+     "food_types": [
+      "pantry_staples",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "dairy"
+     ],
+     "offering_status": "regular"
+    },
+    {
+     "service_type": "walk_up",
+     "description": "Blessings Box with nonperishable food, available any time of day",
+     "food_types": [
+      "pantry_staples"
+     ],
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "registration",
+     "status": "required",
+     "details": "Orders taken in advance via monthly order form (email/text to regular clients)"
+    },
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "Monthly distribution"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 39.132327,
+   "lon": -77.770717,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-lcac-lorton-pantry",
+   "source_url": "https://lortonaction.org/food-pantry/",
+   "organization_name": "Lorton Community Action Center (LCAC)",
+   "organization_website": "https://lortonaction.org/",
+   "location_name": "LCAC Food Pantry (Lorton Community Center)",
+   "address1": "9520 Richmond Hwy",
+   "city": "Lorton",
+   "state": "VA",
+   "zip": "22079",
+   "phone": "(703) 339-5161",
+   "email": "info@lortonaction.org",
+   "notes": "Client choice pantry; each weekly visit provides around 30 meals worth of groceries. Also distributes hygiene and household essentials, health resources, pet food, diapers, period products, prenatal vitamins when available. Volunteers pack bags for home deliveries. Client Registration Hours Monday-Friday 8:30 a.m.-3:30 p.m. Pantry questions: Joshua@LortonAction.org or (703) 339-5161 Ext 4.",
+   "raw_hours_text": "Food Pantry Distribution Hours: Tuesday: 4:00 p.m. – 7:00 p.m. Wednesday: 11:00 a.m. – 5:00 p.m. Thursday: 10:00 a.m. – 12:00 p.m.",
+   "raw_eligibility_text": "The LCAC food pantry serves individuals and families in Lorton. Registered clients are eligible to attend one of three distributions each week, where they select food and other items for their families.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Weekly client-choice food distribution for registered clients",
+     "food_types": [
+      "fresh_fruits",
+      "fresh_vegetables",
+      "bread",
+      "meat",
+      "pantry_staples"
+     ],
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "16:00",
+       "closes": "19:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "11:00",
+       "closes": "17:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "10:00",
+       "closes": "12:00",
+       "week_of_month": null
+      }
+     ]
+    },
+    {
+     "service_type": "hygiene_supplies",
+     "description": "Hygiene and household essentials, diapers, period products when available",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "registration",
+     "status": "required",
+     "details": "Registered clients; registration Monday-Friday 8:30 a.m.-3:30 p.m."
+    },
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "Serves individuals and families in Lorton"
+    },
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "One of three distributions each week"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 38.701004,
+   "lon": -77.210514,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-haymarket-regional-food-pantry",
+   "source_url": "https://haymarketfoodpantry.org/find-help/",
+   "organization_name": "Haymarket Regional Food Pantry (HRFP)",
+   "organization_website": "https://haymarketfoodpantry.org/",
+   "location_name": "Haymarket Regional Food Pantry",
+   "address1": "7669 Limestone Drive",
+   "address2": "#105",
+   "city": "Gainesville",
+   "state": "VA",
+   "zip": "20155",
+   "phone": "(703) 754-5990",
+   "website": "https://haymarketfoodpantry.org/find-help/",
+   "notes": "Shopping-cart client choice. Appointment requests online or by phone (leave a message; volunteer calls back within 1-2 business days). Volunteers answer phones M-F 9:30 am-3:30 pm. New clients often receive food the same day. Emergencies can be addressed any time when originated by a pastor or social worker. Enrollment valid one year; re-enroll every calendar year.",
+   "raw_hours_text": "Our Hours - By Appointment Only We are open to assist clients and distribute food on the following days/times by appointment only: Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm Sat Mornings: By appointment between 9:00 am and 12:00 noon",
+   "raw_eligibility_text": "If you live in Prince William County and in these zip codes: We Can Help You! Haymarket (20168, 20169) Gainesville (20155, 20156) Catharpin (20143) Bristow (20136) Nokesville (20181, 20182) ... Unlike most food pantries that require clients to demonstrate financial need, the Haymarket Regional Food Pantry, due to its strong faith-based nature, will feed anyone in our Service Area who comes in need of food. ... Present Proof of Address – a current utility bill, lease, home owners insurance or real estate tax statement with a name that matches the Photo ID and with an address located within the HRFP Service Area Present a government issued Photo ID (such as a driver's license, green card, or passport) for each adult resident in your household. ... Our registered clients may visit the pantry only once every seven days.",
+   "services": [
+    {
+     "service_type": "appointment_distribution",
+     "description": "Client-choice food pantry by appointment",
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "17:30",
+       "closes": "20:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "17:30",
+       "closes": "20:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "17:30",
+       "closes": "20:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "17:30",
+       "closes": "20:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 5,
+       "opens": "09:00",
+       "closes": "12:00",
+       "week_of_month": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "zip_restriction",
+     "status": "required",
+     "details": "Prince William County residents in ZIPs 20168, 20169, 20155, 20156, 20143, 20136, 20181, 20182"
+    },
+    {
+     "requirement_type": "income",
+     "status": "not_required",
+     "details": "Will feed anyone in the service area who comes in need of food; no demonstration of financial need"
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "Call 703-754-5990 or request online"
+    },
+    {
+     "requirement_type": "registration",
+     "status": "required",
+     "details": "Signed client application form listing household members with birthdates; re-enroll every calendar year; one household account per address"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "required",
+     "details": "Utility bill, lease, mortgage statement, homeowners insurance, real estate tax statement, or USPS change of address confirmation"
+    },
+    {
+     "requirement_type": "photo_id",
+     "status": "required",
+     "details": "Government-issued photo ID for each adult; present at every appointment"
+    },
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "Once every seven days"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 38.790934,
+   "lon": -77.598844,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-western-loudoun-food-pantry-njlc",
+   "source_url": "https://njlclovettsville.org/food-pantry",
+   "organization_name": "New Jerusalem Lutheran Church",
+   "organization_website": "https://njlclovettsville.org/",
+   "location_name": "Western Loudoun Food Pantry",
+   "address1": "12942 Lutheran Church Rd.",
+   "city": "Lovettsville",
+   "state": "VA",
+   "zip": "20180",
+   "phone": "540-822-5576",
+   "email": "officenjlc@gmail.com",
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "notes": "Shopping pantry hosted at New Jerusalem Lutheran Church. Appointments for other days/times via church office (volunteer responds within a few days). Large staple items (flour, sugar, oil) limited to one per month per household. Confidential help via school Parent Liaison (Lovettsville School District), Loudoun County Mental Health / Arc of Loudoun case worker, or pastor. Loudoun Feeds lists phone 540-882-5576; the church site lists 540-822-5576.",
+   "raw_hours_text": "Shopping hours Wednesday's from 2-5pm | or by appointment (Miercoles de 1400 horas-1700 hoas| Solo con cita)",
+   "raw_eligibility_text": "Do I have to make an appointment to shop? No appointment required during open hours. ... We require no proof of residency or eligibility. We seek to work with our community based on the honor system. If you truly have a need, we want to help as we are able. We only ask for your last name for inventory purposes. ... We only limit large staple items (like flour, sugar, oil, etc.) to one per month per household to ensure as many familes as possible can be served.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Shopping-style food pantry for all in need; other times by appointment",
+     "food_types": [
+      "pantry_staples"
+     ],
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "14:00",
+       "closes": "17:00",
+       "week_of_month": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "appointment",
+     "status": "not_required",
+     "details": "No appointment required during open hours"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "not_required",
+     "details": "No proof of residency or eligibility required; honor system"
+    },
+    {
+     "requirement_type": "quantity_limit",
+     "status": "required",
+     "details": "Large staple items (flour, sugar, oil, etc.) limited to one per month per household"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 39.259809,
+   "lon": -77.639709,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-ffo-warehouse-prosperity",
+   "source_url": "https://foodforothers.org/get-help/",
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org/",
+   "location_name": "Food for Others Warehouse",
+   "address1": "2938 Prosperity Ave",
+   "city": "Fairfax",
+   "state": "VA",
+   "zip": "22031",
+   "phone": "703-207-9173",
+   "email": "info@foodforothers.org",
+   "notes": "Office phone hours M-F 9:30am-5:00pm (site header). Closed whenever Fairfax County Government is closed; 2026 holiday closures listed on site.",
+   "raw_eligibility_text": "Emergency Referral Program – Free emergency food is provided to individuals and families referred to Food for Others by social service providers including social workers, clergy, hospitals, and schools. ... USDA TEFAP monthly program – The Emergency Food Assistance Program (TEFAP) of the U.S. Department of Agriculture provides monthly food for clients who meet income guidelines. If you are a Northern Virginia resident, you may walk in and apply. Bring a photo ID. If the ID does not have your current address on it, please also bring in a lease or a piece of mail addressed to you.",
+   "services": [
+    {
+     "service_type": "emergency_food",
+     "description": "Emergency Referral Program: free emergency food for those referred by social workers, clergy, hospitals, schools",
+     "offering_status": "regular"
+    },
+    {
+     "service_type": "pantry_pickup",
+     "description": "USDA TEFAP monthly food for Northern Virginia residents meeting income guidelines; walk in and apply",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "referral",
+     "status": "required",
+     "details": "Emergency Referral Program requires referral from a social service provider (social workers, clergy, hospitals, schools)"
+    },
+    {
+     "requirement_type": "income",
+     "status": "required",
+     "details": "TEFAP: must meet USDA income guidelines"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "required",
+     "details": "TEFAP: Northern Virginia resident"
+    },
+    {
+     "requirement_type": "photo_id",
+     "status": "required",
+     "details": "TEFAP: bring a photo ID"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "required",
+     "details": "TEFAP: if ID lacks current address, bring a lease or mail addressed to you"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 38.872675,
+   "lon": -77.236544,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-ffo-burke-summit-oaks",
+   "source_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org/",
+   "location_name": "Food for Others Neighborhood Site - Burke (Summit Oaks)",
+   "address1": "10550 Oak Bluff Court",
+   "city": "Burke",
+   "state": "VA",
+   "phone": "703-207-9173",
+   "email": "info@foodforothers.org",
+   "notes": "Evening supplemental food distribution by Food for Others volunteers; start time only given, so no structured schedule. Closed whenever Fairfax County Government is closed.",
+   "raw_hours_text": "Burke: Thursday Summit Oaks: Summit Oaks 10550 Oak Bluff Court 6:30pm",
+   "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, \"How many people are in your household?\" Please bring your own grocery bags.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Neighborhood site supplemental food distribution; bring your own grocery bags",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "referral",
+     "status": "not_required",
+     "details": "No referral is necessary"
+    },
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "Only question asked: how many people are in your household"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 38.79794,
+   "lon": -77.308304,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-ffo-fairfax-yorkville",
+   "source_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org/",
+   "location_name": "Food for Others Neighborhood Site - Fairfax (Yorkville Apartments)",
+   "address1": "9753 Alwaes Dr",
+   "city": "Fairfax",
+   "state": "VA",
+   "zip": "22031",
+   "phone": "703-207-9173",
+   "email": "info@foodforothers.org",
+   "notes": "Evening supplemental food distribution by Food for Others volunteers; start time only given, so no structured schedule. Closed whenever Fairfax County Government is closed.",
+   "raw_hours_text": "Fairfax : Monday, Thursday 9753 Alwaes Dr, Fairfax, VA 22031, west of Circle ¼ mile on US 50, then north on Draper Dr. to end at Kingsbridge. Parking lot of Yorkville Apartments, facing Kingsbridge. 6:00pm",
+   "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, \"How many people are in your household?\" Please bring your own grocery bags.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Neighborhood site supplemental food distribution; bring your own grocery bags",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "referral",
+     "status": "not_required",
+     "details": "No referral is necessary"
+    },
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "Only question asked: how many people are in your household"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 38.868202,
+   "lon": -77.282053,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-ffo-springfield-gardens",
+   "source_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org/",
+   "location_name": "Food for Others Neighborhood Site - Springfield Gardens",
+   "address1": "7224 Commerce Street",
+   "city": "Springfield",
+   "state": "VA",
+   "phone": "703-207-9173",
+   "email": "info@foodforothers.org",
+   "notes": "Evening supplemental food distribution by Food for Others volunteers; start time only given, so no structured schedule. Closed whenever Fairfax County Government is closed.",
+   "raw_hours_text": "Springfield Gardens: Friday Community Center behind Springfield Plaza at 7224 Commerce Street, opposite SunTrust Bank, Springfield. 6:00pm",
+   "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, \"How many people are in your household?\" Please bring your own grocery bags.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Neighborhood site supplemental food distribution; bring your own grocery bags",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "referral",
+     "status": "not_required",
+     "details": "No referral is necessary"
+    },
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "Only question asked: how many people are in your household"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 38.78217,
+   "lon": -77.190344,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-ffo-springfield-chelsea-square",
+   "source_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+   "organization_name": "Food for Others",
+   "organization_website": "https://foodforothers.org/",
+   "location_name": "Food for Others Neighborhood Site - Springfield - Chelsea Square (St. Mark's Lutheran Church)",
+   "address1": "5800 Backlick Road",
+   "city": "Springfield",
+   "state": "VA",
+   "phone": "703-207-9173",
+   "email": "info@foodforothers.org",
+   "notes": "Evening supplemental food distribution by Food for Others volunteers; start time only given, so no structured schedule. Closed whenever Fairfax County Government is closed.",
+   "raw_hours_text": "Springfield – Chelsea Square: Tuesday St. Mark's Lutheran Church, 5800 Backlick Road, in the basement of Fellowship Hall, on side adjacent to Chelsea Square Apartments . 6:00pm",
+   "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, \"How many people are in your household?\" Please bring your own grocery bags.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Neighborhood site supplemental food distribution; bring your own grocery bags",
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "referral",
+     "status": "not_required",
+     "details": "No referral is necessary"
+    },
+    {
+     "requirement_type": "other",
+     "status": "not_required",
+     "details": "Only question asked: how many people are in your household"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 38.79349,
+   "lon": -77.186463,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-house-of-mercy-manassas",
+   "source_url": "https://www.poweredbyspark.org/programs/other_pwc_food_resources",
+   "organization_name": "House of Mercy",
+   "location_name": "House of Mercy Food Pantry",
+   "address1": "8150 Flannery Court",
+   "city": "Manassas",
+   "state": "VA",
+   "notes": "Source: SPARK (Prince William County Public Schools education foundation) food pantry list, 'Information up to date as of November 2025'. Not confirmed with the provider's own site.",
+   "raw_hours_text": "House of Mercy , located at 8150 Flannery Court in Manassas, helps twice a month, Monday through Friday from 10 a.m. to 4 p.m. The pantry requires residents to book an appointment to receive help.",
+   "raw_eligibility_text": "House of Mercy , located at 8150 Flannery Court in Manassas, helps twice a month, Monday through Friday from 10 a.m. to 4 p.m. The pantry requires residents to book an appointment to receive help.",
+   "services": [
+    {
+     "service_type": "appointment_distribution",
+     "description": "Food pantry by appointment",
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "10:00",
+       "closes": "16:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "10:00",
+       "closes": "16:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "10:00",
+       "closes": "16:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "10:00",
+       "closes": "16:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "10:00",
+       "closes": "16:00",
+       "week_of_month": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "Residents must book an appointment"
+    },
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "Helps twice a month"
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 38.781246,
+   "lon": -77.555983,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-streetlight-woodbridge",
+   "source_url": "https://www.poweredbyspark.org/programs/other_pwc_food_resources",
+   "organization_name": "StreetLight Community Outreach Ministries",
+   "location_name": "StreetLight Community Outreach Ministries Food Pantry",
+   "address1": "14806 Blackburn Road",
+   "city": "Woodbridge",
+   "state": "VA",
+   "notes": "Source: SPARK (Prince William County Public Schools education foundation) food pantry list, 'Information up to date as of November 2025'. Not confirmed with the provider's own site.",
+   "raw_hours_text": "StreetLight Community Outreach Ministries provides help as often as residents need, every Tuesday and Thursday morning from 9:30 a.m. to 11:30 a.m. at 14806 Blackburn Road in Woodbridge. Proof of current address is required to be helped.",
+   "raw_eligibility_text": "StreetLight Community Outreach Ministries provides help as often as residents need, every Tuesday and Thursday morning from 9:30 a.m. to 11:30 a.m. at 14806 Blackburn Road in Woodbridge. Proof of current address is required to be helped.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Food pantry, as often as needed",
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "09:30",
+       "closes": "11:30",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "09:30",
+       "closes": "11:30",
+       "week_of_month": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "proof_of_address",
+     "status": "required",
+     "details": "Proof of current address"
+    },
+    {
+     "requirement_type": "visit_limit",
+     "status": "not_required",
+     "details": "Help as often as residents need"
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 38.631482,
+   "lon": -77.267671,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-praise-center-dumfries",
+   "source_url": "https://www.poweredbyspark.org/programs/other_pwc_food_resources",
+   "organization_name": "Praise Center Church",
+   "location_name": "Praise Center Church Food Pantry",
+   "address1": "3813 Graham Park Road",
+   "city": "Dumfries",
+   "state": "VA",
+   "notes": "Source: SPARK (Prince William County Public Schools education foundation) food pantry list, 'Information up to date as of November 2025'. Not confirmed with the provider's own site. Census geocoder matched the address as 3813 GRAHAM PARK RD, TRIANGLE, VA 22172 (source says Dumfries).",
+   "raw_hours_text": "Praise Center Church , located at 3813 Graham Park Road in Dumfries, offers food assistance every first Saturday of each month from 11 a.m. to 1 p.m.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Monthly food assistance",
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 5,
+       "opens": "11:00",
+       "closes": "13:00",
+       "week_of_month": 1
+      }
+     ]
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 38.558042,
+   "lon": -77.325716,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-triangle-baptist",
+   "source_url": "https://www.poweredbyspark.org/programs/other_pwc_food_resources",
+   "organization_name": "Triangle Baptist Church",
+   "location_name": "Triangle Baptist Church Food Pantry",
+   "address1": "4345 Inn St.",
+   "city": "Triangle",
+   "state": "VA",
+   "notes": "Source: SPARK (Prince William County Public Schools education foundation) food pantry list, 'Information up to date as of November 2025'. Not confirmed with the provider's own site.",
+   "raw_hours_text": "Triangle Baptist Church provides food for residents of Triangle, Dumfries and Quantico every Tuesday from 11 a.m. to 12 p.m. at 4345 Inn St. in Triangle.",
+   "raw_eligibility_text": "Triangle Baptist Church provides food for residents of Triangle, Dumfries and Quantico every Tuesday from 11 a.m. to 12 p.m. at 4345 Inn St. in Triangle.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Weekly food distribution",
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "11:00",
+       "closes": "12:00",
+       "week_of_month": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "Residents of Triangle, Dumfries and Quantico"
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 38.552663,
+   "lon": -77.340611,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-concordia-lutheran-triangle",
+   "source_url": "https://www.poweredbyspark.org/programs/other_pwc_food_resources",
+   "organization_name": "Concordia Lutheran Church",
+   "location_name": "Concordia Lutheran Church Food Pantry",
+   "address1": "3637 Graham Park Road",
+   "city": "Triangle",
+   "state": "VA",
+   "notes": "Source: SPARK (Prince William County Public Schools education foundation) food pantry list, 'Information up to date as of November 2025'. Not confirmed with the provider's own site.",
+   "raw_hours_text": "Concordia Lutheran Church food pantry is open on Wednesdays from 5 p.m. to 6 p.m. at 3637 Graham Park Road in Triangle.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Weekly food pantry",
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "17:00",
+       "closes": "18:00",
+       "week_of_month": null
+      }
+     ]
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 38.556649,
+   "lon": -77.32366,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-grace-church-bag-of-hope-dumfries",
+   "source_url": "https://www.poweredbyspark.org/programs/other_pwc_food_resources",
+   "organization_name": "Grace Church",
+   "location_name": "Grace Church Bag of Hope Pantry",
+   "address1": "17100 Van Buren Road",
+   "city": "Dumfries",
+   "state": "VA",
+   "notes": "Source: SPARK (Prince William County Public Schools education foundation) food pantry list, 'Information up to date as of November 2025'. Not confirmed with the provider's own site.",
+   "raw_hours_text": "Grace Church's Bag of Hope pantry is open every Wednesday from 6 p.m. to 7 p.m. at 17100 Van Buren Road in Dumfries.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Bag of Hope weekly pantry",
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "18:00",
+       "closes": "19:00",
+       "week_of_month": null
+      }
+     ]
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 38.583747,
+   "lon": -77.330888,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-cornerstones-asapp-reston",
+   "source_url": "https://www.cornerstonesva.org/get-help",
+   "organization_name": "Cornerstones",
+   "organization_website": "https://www.cornerstonesva.org/",
+   "location_name": "Cornerstones Assistance Services and Pantry Program (ASAPP)",
+   "address1": "11484 Washington Plaza West",
+   "address2": "Suite 120",
+   "city": "Reston",
+   "state": "VA",
+   "phone": "(571) 323-9555",
+   "email": "info@cornerstonesva.org",
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "notes": "Described as the largest food pantry in northwest Fairfax County open on weekdays and one Saturday morning a month. Get Help line (571) 323-9555 (Spanish line text also on page). Homebound food delivery available to seniors and residents of local low-income housing communities. SNAP at Market assistance at Reston Farmers Market (Saturday mornings in season). Eligibility documents not stated on the page.",
+   "raw_hours_text": "11484 Washington Plaza West, Suite 120 Mon-Thu: 8:30 am – 4:30 pm Fri: 8:30 am – 1:30 pm 1st Sat monthly: 9:00 am -1:00 pm",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "ASAPP food pantry",
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "08:30",
+       "closes": "16:30",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "08:30",
+       "closes": "16:30",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "08:30",
+       "closes": "16:30",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "08:30",
+       "closes": "16:30",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 4,
+       "opens": "08:30",
+       "closes": "13:30",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 5,
+       "opens": "09:00",
+       "closes": "13:00",
+       "week_of_month": 1
+      }
+     ]
+    },
+    {
+     "service_type": "home_delivery",
+     "description": "Homebound food delivery for seniors and residents of local low-income housing communities",
+     "offering_status": "regular"
+    },
+    {
+     "service_type": "snap_application_help",
+     "description": "SNAP at Market: Cornerstones table at Reston Farmers Market helps stretch SNAP/EBT benefits (seasonal incentives)",
+     "offering_status": "seasonal"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 38.968234,
+   "lon": -77.342544,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-grace-to-go-leesburg",
+   "source_url": "https://www.stjamesleesburg.org/grace-to-go",
+   "organization_name": "St. James' Episcopal Church (Grace to Go)",
+   "organization_website": "https://www.stjamesleesburg.org/",
+   "location_name": "Grace to Go meal distribution - Leesburg Apartments",
+   "address1": "75 Plaza Street",
+   "city": "Leesburg",
+   "state": "VA",
+   "notes": "Free prepared meals cooked by community volunteers and distributed weekly; start time only (no end time), so no structured schedule. Contacts: Grace To Go Co-Leads Jeff Jones (703-608-0017) or Charlie Greenhough (617-851-1306).",
+   "raw_hours_text": "Meals are distributed every Sunday at 4 pm at the Leesburg Apartments at 75 Plaza Street.",
+   "raw_eligibility_text": "The meals are available to anyone in the Leesburg community on a first-come, first served basis.",
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": "Prepared to-go meals distributed Sundays at 4 pm",
+     "food_types": [
+      "prepared_meals"
+     ],
+     "offering_status": "regular"
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "first_come_first_served",
+     "status": "required",
+     "details": "First-come, first-served"
+    },
+    {
+     "requirement_type": "service_area",
+     "status": "required",
+     "details": "Anyone in the Leesburg community"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 39.105588,
+   "lon": -77.5523,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-ccda-sterling-pantry",
+   "source_url": "https://ccda.net/find-help/food/sterling-food-pantry/",
+   "organization_name": "Catholic Charities of the Diocese of Arlington",
+   "organization_website": "https://ccda.net/",
+   "location_name": "Loudoun Regional Food Pantry - Sterling",
+   "address1": "113 Executive Drive",
+   "address2": "Building #2, Suite 110",
+   "city": "Sterling",
+   "state": "VA",
+   "zip": "20166",
+   "phone": "703-443-6693",
+   "email": "LROpantry@ccda.net",
+   "notes": "By appointment only via online scheduling link on the page. USDA food distribution site; USDA eligibility determined at check-in. Loudoun Feeds describes it as serving all of Northern Virginia.",
+   "raw_hours_text": "By appointment only: Daytime hours: Monday, Tuesday, Thursday: 10 a.m. – 2 p.m. Wednesday: 10 a.m. – 12 p.m. Evening hours: Tuesday and Wednesday, 5:15 – 7 p.m.",
+   "raw_eligibility_text": "All Appointments have to be scheduled within 28 -30 days apart from each other. You will not be eligible to schedule an appointment if your last appointment was less than 28 days ago. ... Clients are eligible to receive food once every 30 days. Picture ID and Proof of current address required at every visit. Sterling Food Pantry is also a distribution site for USDA food.* Eligibility is determined at check-in with USDA food received at the time of your visit.",
+   "services": [
+    {
+     "service_type": "appointment_distribution",
+     "description": "Perishable and non-perishable food including fresh produce, dairy, meat, and staples; USDA food for eligible clients",
+     "food_types": [
+      "fresh_fruits",
+      "fresh_vegetables",
+      "dairy",
+      "meat",
+      "pantry_staples"
+     ],
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 0,
+       "opens": "10:00",
+       "closes": "14:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "10:00",
+       "closes": "14:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 3,
+       "opens": "10:00",
+       "closes": "14:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "10:00",
+       "closes": "12:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 1,
+       "opens": "17:15",
+       "closes": "19:00",
+       "week_of_month": null
+      },
+      {
+       "kind": "distribution",
+       "weekday": 2,
+       "opens": "17:15",
+       "closes": "19:00",
+       "week_of_month": null
+      }
+     ]
+    }
+   ],
+   "eligibility": [
+    {
+     "requirement_type": "appointment",
+     "status": "required",
+     "details": "By appointment only (online scheduling)"
+    },
+    {
+     "requirement_type": "visit_limit",
+     "status": "required",
+     "details": "Once every 30 days; appointments at least 28 days apart"
+    },
+    {
+     "requirement_type": "photo_id",
+     "status": "required",
+     "details": "Picture ID at every visit"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "required",
+     "details": "Proof of current address at every visit"
+    }
+   ],
+   "needs_primary_confirmation": false,
+   "lat": 38.986909,
+   "lon": -77.445555,
+   "geocode_source": "census_geocoder"
+  },
+  {
+   "external_id": "nova-food-sterling-umc-grace-ministries",
+   "source_url": "https://www.sterlingumc.org/grace",
+   "organization_name": "Sterling United Methodist Church (Grace Ministries)",
+   "organization_website": "https://www.sterlingumc.org/",
+   "location_name": "Sterling United Methodist Church",
+   "address1": "304 East Church Road",
+   "city": "Sterling",
+   "state": "VA",
+   "zip": "20164",
+   "phone": "703-430-6455",
+   "email": "grace.sumc@gmail.com",
+   "raw_hours_text": "On the 2nd Saturday of every month we provide food and diapers for those in need in our community. Distribution runs from 8:00 – 10:00 AM.",
+   "notes": "Page links to 'UMC Grace Ministries Locations'; distribution location assumed at church address but not explicitly stated.",
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Monthly food distribution",
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 5,
+       "opens": "08:00",
+       "closes": "10:00",
+       "week_of_month": 2
+      }
+     ]
+    },
+    {
+     "service_type": "diapers",
+     "description": "Diapers distributed at monthly distribution",
+     "offering_status": "regular",
+     "schedules": [
+      {
+       "kind": "distribution",
+       "weekday": 5,
+       "opens": "08:00",
+       "closes": "10:00",
+       "week_of_month": 2
+      }
+     ]
+    }
+   ],
+   "needs_primary_confirmation": true,
+   "lat": 39.007482,
+   "lon": -77.394206,
+   "geocode_source": "census_geocoder"
+  }
+ ]
+}

@@ -1,0 +1,921 @@
+{
+  "_notice": "Unverified candidate records of PET SUPPORT resources (pet food pantries, low-cost/income-based veterinary, vaccine and spay/neuter programs, temporary pet housing in a crisis) in Northern Virginia, compiled by AI-assisted research from official/primary web pages fetched on 2026-10-12. Every field comes from the cited source_url (or a URL named in notes). Confirm with the provider before publishing. No confidential domestic-violence shelter addresses are included.",
+  "retrieved": "2026-10-12",
+  "method": "AI-assisted web research of official/primary sources (curl, UA OpenShelf-research/0.1, >=1 s between requests, robots.txt checked and Crawl-delay honored); US Census geocoder (Public_AR_Current); points filtered with shapely to data/boundaries/nova_localities_tigerweb.geojson; weekday 0 = Monday; unverified candidates",
+  "records": [
+    {
+      "organization_name": "Animal Welfare League of Arlington",
+      "organization_website": "https://www.awla.org/",
+      "location_name": "Animal Welfare League of Arlington shelter",
+      "address1": "2650 S. Arlington Mill Dr.",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22206",
+      "phone": "(703) 931-9241",
+      "website": "https://www.awla.org/",
+      "external_id": "nova-pet-awla-pet-pantry",
+      "source_url": "https://www.awla.org/services/for-you/pet-support-pantry/",
+      "email": "communitysupport@awla.org",
+      "notes": "Items are picked up at AWLA's Animal Services desk. Pantry relies on donations; specific brands and varieties are not guaranteed. Supports approximately 450 families each month (per page). Non-residents are referred to pantries in Alexandria City, Fairfax County and Washington D.C.",
+      "raw_hours_text": "Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk: Monday: CLOSED Tuesday: CLOSED Wednesday: 12pm - 3pm Thursday: CLOSED Friday: 4pm - 6pm Saturday: 12pm - 3pm Sunday: 12pm - 3pm. Deliveries are on the 1st Friday of each month from 9-11 am. A one-time registration for the year is required.",
+      "raw_eligibility_text": "Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk. For Arlington County and Falls Church City residents who are homebound or physically unable to pick up supplies at the shelter, AWLA offers a select delivery day where supplies can be dropped off at your home.",
+      "services": [
+        {
+          "service_type": "pet_food",
+          "offering_status": "regular",
+          "description": "Pet Pantry: pet care essentials including food, enrichment items, preventatives, and more, picked up at the Animal Services desk.",
+          "schedules": [
+            {
+              "kind": "distribution",
+              "weekday": 2,
+              "opens": "12:00",
+              "closes": "15:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "distribution",
+              "weekday": 4,
+              "opens": "16:00",
+              "closes": "18:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "distribution",
+              "weekday": 5,
+              "opens": "12:00",
+              "closes": "15:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "distribution",
+              "weekday": 6,
+              "opens": "12:00",
+              "closes": "15:00",
+              "week_of_month": null
+            }
+          ]
+        },
+        {
+          "service_type": "pet_food",
+          "offering_status": "regular",
+          "description": "Pet Pantry home delivery for homebound Arlington County and Falls Church City residents, 1st Friday of each month 9-11 am; typical delivery can include wet and dry food for cats and dogs. One-time registration for the year required."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Arlington County or Falls Church City residents."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Home delivery only: one-time registration for the year is required; for homebound residents or those physically unable to pick up."
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "lat": 38.844173,
+      "lon": -77.093043,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "organization_name": "Animal Welfare League of Arlington",
+      "organization_website": "https://www.awla.org/",
+      "location_name": "Animal Welfare League of Arlington shelter",
+      "address1": "2650 S. Arlington Mill Dr.",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22206",
+      "phone": "(703) 931-9241",
+      "website": "https://www.awla.org/",
+      "external_id": "nova-pet-awla-vaccine-microchip-clinics",
+      "source_url": "https://www.awla.org/services/for-pets/clinics/",
+      "notes": "Rabies shots $20, distemper shots free, microchips $35; payment due at the clinic. 2026 clinic dates listed: Jan 10, Mar 14, Apr 11, Jun 20, Jul 18, Aug 22, Oct 17, Dec 12 (registration opens about a week before at noon). Free microchip scanning/registration (Check The Chip) during business hours. Clinic venue is not stated on the page; shelter address used.",
+      "raw_hours_text": "Clinics are held eight times a year for any and all pet owners in need of low-cost vaccines and microchips. ... These clinics are by reservation only. You must sign up in advance for a designated time. Sign-ups for each date will open about a week before the clinic date at noon, unless otherwise specified.",
+      "raw_eligibility_text": "Clinics are held eight times a year for any and all pet owners in need of low-cost vaccines and microchips.",
+      "services": [
+        {
+          "service_type": "veterinary_care",
+          "offering_status": "event_specific",
+          "description": "Low-cost vaccine & microchip clinics: rabies ($20), distemper (DAPPv and HCPCh, free) vaccines and microchips ($35). By reservation only."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "By reservation only; sign up in advance for a designated time."
+        }
+      ],
+      "needs_primary_confirmation": true,
+      "lat": 38.844173,
+      "lon": -77.093043,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "organization_name": "Animal Welfare League of Arlington",
+      "organization_website": "https://www.awla.org/",
+      "location_name": "Animal Welfare League of Arlington shelter",
+      "address1": "2650 S. Arlington Mill Dr.",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22206",
+      "phone": "(703) 931-9241",
+      "website": "https://www.awla.org/",
+      "external_id": "nova-pet-awla-community-care-clinics",
+      "source_url": "https://www.awla.org/services/for-pets/communitycare/",
+      "notes": "Clinics are held at different locations around the county; location announced approximately two weeks in advance. Shelter address used as contact location. Free or low-cost services; specific prices not stated.",
+      "services": [
+        {
+          "service_type": "veterinary_care",
+          "offering_status": "event_specific",
+          "description": "Community Care (OneHealth) clinics: free or low-cost wellness exam, rabies vaccine, standard vaccines (DA2PP, FVRCP), deworming, flea/tick preventatives, behavior consultation, grooming, plus human support services and referrals."
+        },
+        {
+          "service_type": "pet_supplies",
+          "offering_status": "event_specific",
+          "description": "Pet food and supplies offered at Community Care clinics."
+        }
+      ],
+      "needs_primary_confirmation": true,
+      "lat": 38.844173,
+      "lon": -77.093043,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "organization_name": "Animal Welfare League of Arlington",
+      "organization_website": "https://www.awla.org/",
+      "location_name": "Animal Welfare League of Arlington shelter",
+      "address1": "2650 S. Arlington Mill Dr.",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22206",
+      "phone": "(703) 931-9241",
+      "website": "https://www.awla.org/",
+      "external_id": "nova-pet-awla-spay-neuter-vouchers",
+      "source_url": "https://www.awla.org/services/for-pets/spay-neuter-vouchers/",
+      "email": "communitysupport@awla.org",
+      "notes": "Voucher prices: dog spay $200, cat spay $145, dog neuter $185, cat neuter $80. Vouchers valid 90 days, non-transferable, no refunds; surgery at partner clinics (Anicira Veterinary Center - Manassas, Arlington Animal Hospital, Caring Hands Animal Hospital - Alexandria and - Arlington, Columbia Pike Animal Hospital, Shirlington Animal Hospital). Pets must be current on rabies and distemper vaccines or purchase them ($10-25 each) at the appointment. Vouchers can also be purchased in person at the shelter.",
+      "raw_eligibility_text": "Pet owners with an annual household income of $60,000 or less are eligible. There are further income-based discounts available, please email communitysupport@awla.org for more information. ... Some vouchers are available only to Arlington County residents.",
+      "services": [
+        {
+          "service_type": "veterinary_care",
+          "offering_status": "regular",
+          "description": "Low-cost spay/neuter vouchers (anesthesia, surgery and post-op pain medication) for income-eligible pet owners; surgery at participating partner veterinary clinics."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Annual household income of $60,000 or less; further income-based discounts available."
+        },
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Some vouchers are available only to Arlington County residents."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Must purchase and receive a voucher before calling the participating vet to schedule."
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "lat": 38.844173,
+      "lon": -77.093043,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "organization_name": "Animal Welfare League of Arlington",
+      "organization_website": "https://www.awla.org/",
+      "location_name": "Animal Welfare League of Arlington shelter",
+      "address1": "2650 S. Arlington Mill Dr.",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22206",
+      "phone": "(703) 931-9241",
+      "website": "https://www.awla.org/",
+      "external_id": "nova-pet-awla-veterinary-assistance",
+      "source_url": "https://www.awla.org/services/for-pets/veterinary-assistance/",
+      "notes": "Covers emergencies case-by-case and listed chronic conditions (e.g., allergies, arthritis, diabetes, kidney disease, seizures). Not covered: routine/wellness care, vaccines, dental, orthopedic surgeries, cancer, euthanasia, among others.",
+      "raw_eligibility_text": "The League's Veterinary Assistance Program helps low-income Arlington County pet owners who need veterinary care for their pets' emergency or chronic conditions but cannot afford the costs. ... Pet owners must be residents of Arlington County, VA to qualify for this program.",
+      "services": [
+        {
+          "service_type": "veterinary_care",
+          "offering_status": "regular",
+          "description": "Veterinary Assistance Program: financial help for emergency or chronic veterinary conditions for low-income Arlington County pet owners. Call the shelter for more information."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Must be residents of Arlington County, VA."
+        },
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Low-income pet owners who cannot afford the costs."
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "lat": 38.844173,
+      "lon": -77.093043,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "organization_name": "Animal Welfare League of Arlington",
+      "organization_website": "https://www.awla.org/",
+      "location_name": "Animal Welfare League of Arlington shelter",
+      "address1": "2650 S. Arlington Mill Dr.",
+      "city": "Arlington",
+      "state": "VA",
+      "zip": "22206",
+      "phone": "(703) 931-9241",
+      "website": "https://www.awla.org/",
+      "external_id": "nova-pet-awla-help-program",
+      "source_url": "https://www.awla.org/services/for-you/help-program/",
+      "notes": "Common situations: emergency home evacuation (fire, flood, natural disaster), unexpected hospitalization, domestic abuse admission into a shelter. Owners encouraged first to explore friends, family or local boarding. Some pets may be placed in a temporary foster home. Call the Pet Resource Center.",
+      "raw_eligibility_text": "The H.E.L.P. Program provides short-term pet housing for Arlington County or Falls Church City residents facing a health or housing crisis. Temporary housing is available for up to two weeks. Approval is based on space and capacity at the shelter. ... All animals in the H.E.L.P. Program must be spayed or neutered.",
+      "services": [
+        {
+          "service_type": "other",
+          "offering_status": "regular",
+          "description": "H.E.L.P. Program: short-term pet housing (up to two weeks) at the shelter or in temporary foster for residents facing a health or housing crisis."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Arlington County or Falls Church City residents facing a health or housing crisis."
+        },
+        {
+          "requirement_type": "other",
+          "status": "required",
+          "details": "All animals must be spayed or neutered; approval based on space and capacity."
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "lat": 38.844173,
+      "lon": -77.093043,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "organization_name": "Fairfax County Animal Services",
+      "organization_website": "https://www.fairfaxcounty.gov/animalservices/",
+      "location_name": "Fairfax County Animal Shelter - Lorton Campus",
+      "address1": "8875 Lorton Road",
+      "city": "Lorton",
+      "state": "VA",
+      "zip": "22079",
+      "phone": "703-324-0299",
+      "website": "https://www.fairfaxcounty.gov/animalservices/petresources",
+      "external_id": "nova-pet-fairfax-pet-pantry",
+      "source_url": "https://www.fairfaxcounty.gov/animalservices/petresources",
+      "email": "PetResourceCenter@fairfaxcounty.gov",
+      "notes": "Requests are made through the Pet Pantry Request Form (https://forms.office.com/g/pAmT2x5MRV). Pickup location/schedule not stated on the page; Lorton Campus (the open shelter) used as contact location. The Michael R. Frey Campus (4500 West Ox Road, Fairfax) is listed as temporarily closed (https://www.fairfaxcounty.gov/animalservices/locations). Census geocoder returned no match; coordinates omitted.",
+      "raw_hours_text": "Shelter hours (contact info block): Open Tuesdays and Wednesdays 12-5 p.m., Thursdays and Fridays 12-7 p.m., Saturdays and Sundays 11 a.m.-5 p.m., closed Mondays.",
+      "raw_eligibility_text": "If you're a Fairfax County resident experiencing hardship and need pet food or other supplies, our Pet Resource Center's Pet Pantry is here to help.",
+      "services": [
+        {
+          "service_type": "pet_food",
+          "offering_status": "regular",
+          "description": "Pet Pantry: canned and dry pet food for Fairfax County residents experiencing hardship; request via online form."
+        },
+        {
+          "service_type": "pet_supplies",
+          "offering_status": "regular",
+          "description": "Pet Pantry supplies such as leashes, collars, and more."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Fairfax County residents experiencing hardship."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Fill out the Pet Pantry Request Form to request supplies."
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "organization_name": "Fairfax County Animal Services",
+      "organization_website": "https://www.fairfaxcounty.gov/animalservices/",
+      "location_name": "Fairfax County Animal Shelter - Lorton Campus",
+      "address1": "8875 Lorton Road",
+      "city": "Lorton",
+      "state": "VA",
+      "zip": "22079",
+      "phone": "703-324-0299",
+      "website": "https://www.fairfaxcounty.gov/animalservices/petresources",
+      "external_id": "nova-pet-fairfax-spay-neuter-vouchers",
+      "source_url": "https://www.fairfaxcounty.gov/animalservices/spay-and-neuter-voucher-program",
+      "email": "PetResourceCenter@fairfaxcounty.gov",
+      "notes": "Voucher costs: cat spay/neuter $90 to $130; dog spay/neuter $180 to $210 (per pet). Includes routine post-op care; also covers DHPP or FVRCP, rabies vaccines and/or microchips if redeemed. Apply online or in person at Fairfax or Lorton shelter; eligibility determined in 5-7 business days; vouchers redeemed within 60 days at partner vets (Anicira - Manassas; Columbia Pike Animal Hospital - Annandale; Caring Hands - Merrifield; Fairfax Animal Hospital - Falls Church; FCAS Lorton Campus). Limited monthly supply, no waiting list; cash, Visa, Mastercard. The Michael R. Frey Campus (4500 West Ox Road, Fairfax) is listed as temporarily closed (https://www.fairfaxcounty.gov/animalservices/locations). Census geocoder returned no match; coordinates omitted.",
+      "raw_hours_text": "...they can apply in person at either of our shelter locations in Fairfax or Lorton during open hours. Shelter hours: Open Tuesdays and Wednesdays 12-5 p.m., Thursdays and Fridays 12-7 p.m., Saturdays and Sundays 11 a.m.-5 p.m., closed Mondays.",
+      "raw_eligibility_text": "Fairfax County pet guardians who qualify for social services (such as WIC, Medicaid, TANF, SNAP or Food Stamps, Social Security and Unemployment Benefits) or whose annual household income falls below these thresholds are eligible for spay/neuter vouchers: Household Size 1 $34,572; 2 $47,608; 3 $60,104; 4 $72,600; 5 $85,096; 6 $97,592; 7 $110,088; 8 $122,584. For families with more than 8 persons, add $6,248 for each additional person.",
+      "services": [
+        {
+          "service_type": "veterinary_care",
+          "offering_status": "regular",
+          "description": "Low-cost spay/neuter vouchers for income-eligible Fairfax County residents, redeemed at partner veterinary practices."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Fairfax County residents."
+        },
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Household income below the FCAS chart (e.g., $34,572 for 1 person; $72,600 for 4), effective May 2026, or qualifying for social services such as WIC, Medicaid, TANF, SNAP, Social Security or Unemployment Benefits."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Apply online or in person; staff determine eligibility within 5-7 business days."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Pet guardians schedule surgery directly with the veterinary facility; redeem within 60 days."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "organization_name": "Fairfax County Animal Services",
+      "organization_website": "https://www.fairfaxcounty.gov/animalservices/",
+      "location_name": "Fairfax County Animal Shelter - Lorton Campus",
+      "address1": "8875 Lorton Road",
+      "city": "Lorton",
+      "state": "VA",
+      "zip": "22079",
+      "phone": "703-324-0299",
+      "website": "https://www.fairfaxcounty.gov/animalservices/petresources",
+      "external_id": "nova-pet-fairfax-vaccine-clinic-lorton",
+      "source_url": "https://www.fairfaxcounty.gov/animalservices/petresources/vaccine-and-microchip-clinic",
+      "notes": "Prices: rabies $20; DHPPi (dogs) $20; FVRCP (cats) $20; microchip $20; Fairfax County dog license $10. Cash only. Walk-up, no appointment. Limited exams only. Clinics alternate between Lorton Campus and Fairfax Center Fire Station 40; the page lists Friday and Wednesday dates without clearly pairing each list to a location, so no structured schedule is given. Census geocoder returned no match; coordinates omitted.",
+      "raw_hours_text": "Friday, July 24 | 9 to 11 a.m. Friday, Aug. 28 | 9 to 11 a.m. Friday, Sept. 18 | 9 to 11 a.m. Friday, Oct. 16 | 9 to 11 a.m. Friday, Nov. 13 | 9 to 11 a.m. Friday, Dec. 11 | 9 to 11 a.m. Wednesday, July 1 | 9 to 11 a.m. Wednesday, Aug. 5 | 9 to 11 a.m. Wednesday, Sept. 2 | 9 to 11 a.m. Wednesday, Oct. 7 | 9 to 11 a.m. Wednesday, Nov. 4 | 9 to 11 a.m. Wednesday, Dec. 6 | 9 to 11 a.m.",
+      "raw_eligibility_text": "Our Pet Resource Center offers Fairfax County residents low-cost pet vaccinations and microchipping, without the added expense of a veterinary exam. All clinics are first-come, first-served and are cash only.",
+      "services": [
+        {
+          "service_type": "veterinary_care",
+          "offering_status": "event_specific",
+          "description": "Low-cost walk-up vaccine and microchip clinic (dogs and cats), 9-11 a.m. on scheduled dates."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "first_come_first_served",
+          "status": "required",
+          "details": "All clinics are first-come, first-served."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "not_required",
+          "details": "Walk-up; no pre-registration or appointment required."
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "organization_name": "Fairfax County Animal Services",
+      "organization_website": "https://www.fairfaxcounty.gov/animalservices/",
+      "location_name": "Fairfax Center Fire Station 40",
+      "address1": "4621 Legato Road",
+      "city": "Fairfax",
+      "state": "VA",
+      "zip": "22030",
+      "phone": "703-324-0299",
+      "website": "https://www.fairfaxcounty.gov/animalservices/petresources",
+      "external_id": "nova-pet-fairfax-vaccine-clinic-station40",
+      "source_url": "https://www.fairfaxcounty.gov/animalservices/petresources/vaccine-and-microchip-clinic",
+      "notes": "Fairfax County Animal Services vaccine and microchip clinic venue. Prices: rabies $20; DHPPi (dogs) $20; FVRCP (cats) $20; microchip $20; dog license $10. Cash only, walk-up. The page lists Friday and Wednesday dates without clearly pairing each list to a location. Census geocoder returned no match; coordinates omitted.",
+      "raw_hours_text": "Friday, July 24 | 9 to 11 a.m. Friday, Aug. 28 | 9 to 11 a.m. Friday, Sept. 18 | 9 to 11 a.m. Friday, Oct. 16 | 9 to 11 a.m. Friday, Nov. 13 | 9 to 11 a.m. Friday, Dec. 11 | 9 to 11 a.m. Wednesday, July 1 | 9 to 11 a.m. Wednesday, Aug. 5 | 9 to 11 a.m. Wednesday, Sept. 2 | 9 to 11 a.m. Wednesday, Oct. 7 | 9 to 11 a.m. Wednesday, Nov. 4 | 9 to 11 a.m. Wednesday, Dec. 6 | 9 to 11 a.m.",
+      "raw_eligibility_text": "Our Pet Resource Center offers Fairfax County residents low-cost pet vaccinations and microchipping, without the added expense of a veterinary exam. All clinics are first-come, first-served and are cash only.",
+      "services": [
+        {
+          "service_type": "veterinary_care",
+          "offering_status": "event_specific",
+          "description": "Low-cost walk-up vaccine and microchip clinic (dogs and cats), 9-11 a.m. on scheduled dates."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "first_come_first_served",
+          "status": "required",
+          "details": "All clinics are first-come, first-served."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "not_required",
+          "details": "Walk-up; no pre-registration or appointment required."
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "organization_name": "Fairfax County Animal Services",
+      "organization_website": "https://www.fairfaxcounty.gov/animalservices/",
+      "location_name": "Fairfax County Animal Shelter - Lorton Campus",
+      "address1": "8875 Lorton Road",
+      "city": "Lorton",
+      "state": "VA",
+      "zip": "22079",
+      "phone": "703-830-1100",
+      "website": "https://www.fairfaxcounty.gov/animalservices/petresources",
+      "external_id": "nova-pet-fairfax-pethaven",
+      "source_url": "https://www.fairfaxcounty.gov/animalservices/petresources/PetHaven",
+      "email": "AnimalServices@fairfaxcounty.gov",
+      "notes": "For pet owners leaving domestic violence or other unsafe situations. Shelter provides food, veterinary care, spay/neuter and supplies; required vaccinations and spay/neuter provided free of charge; can help rehome if needed. Referral to Fairfax County Domestic and Sexual Violence Services for people. The Michael R. Frey Campus (4500 West Ox Road, Fairfax) is listed as temporarily closed (https://www.fairfaxcounty.gov/animalservices/locations). Census geocoder returned no match; coordinates omitted.",
+      "raw_eligibility_text": "Our PetHaven Program offers an option for short-term temporary care for pets whose owners need to get out of a bad situation. No questions, no advance notice, full discretion. ... so Fairfax County residents seeking safety for themselves have the peace of mind to know their pets are safe, too.",
+      "services": [
+        {
+          "service_type": "other",
+          "offering_status": "regular",
+          "description": "PetHaven: short-term temporary shelter care for pets of Fairfax County residents who need to get to a safe place; email, call, or just come in with the pets."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Fairfax County residents seeking safety."
+        },
+        {
+          "requirement_type": "other",
+          "status": "required",
+          "details": "Animals entering the shelter must be vaccinated and spayed/neutered; provided free of charge if needed."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "nova-pet-hsfc-ani-meals",
+      "source_url": "https://hsfc.org/outreach/ani-meals-program/",
+      "organization_name": "Humane Society of Fairfax County",
+      "organization_website": "https://hsfc.org/",
+      "location_name": "Humane Society of Fairfax County main office",
+      "address1": "4057 Chain Bridge Road",
+      "city": "Fairfax",
+      "state": "VA",
+      "zip": "22030",
+      "phone": "703-385-7387",
+      "email": "pets@hsfc.org",
+      "website": "https://hsfc.org/outreach/ani-meals-program/",
+      "notes": "Fill out the Ani-Meals Application and call the office for pick-up dates and locations (pickup location not stated; main office used as contact location). Office hours per https://hsfc.org/about/hours-and-directions/; homepage notes administrative hours temporarily Monday, Wednesday, Thursday 10 am-4 pm.",
+      "raw_hours_text": "Main Office 4057 Chain Bridge Rd Fairfax, VA 22030 Hours: Monday , Wednesday, Thursday 10 am to 4 pm Saturday closed Sunday Closed Major Holidays Closed",
+      "raw_eligibility_text": "When families fall on hard times, they sometimes struggle to feed their pets. ... Ani-Meals provides food and pet care items to people in Fairfax County and surrounding areas. ... Please fill out the Ani-Meals Application and call our office for pick-up dates and locations.",
+      "services": [
+        {
+          "service_type": "pet_food",
+          "offering_status": "regular",
+          "description": "Ani-Meals pet food pantry: food and pet care items for families facing hard times; apply, then call for pick-up dates and locations."
+        },
+        {
+          "service_type": "pet_supplies",
+          "offering_status": "regular",
+          "description": "Pet care items provided through Ani-Meals."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "service_area",
+          "status": "required",
+          "details": "People in Fairfax County and surrounding areas."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Fill out the Ani-Meals Application and call for pick-up dates and locations."
+        }
+      ],
+      "needs_primary_confirmation": true,
+      "lat": 38.844726,
+      "lon": -77.307395,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "organization_name": "Loudoun County Animal Services",
+      "organization_website": "https://www.loudoun.gov/animalservices",
+      "location_name": "Loudoun County Animal Services (LCAS)",
+      "address1": "42225 Adoption Drive",
+      "city": "Leesburg",
+      "state": "VA",
+      "zip": "20175",
+      "phone": "703-777-0406",
+      "website": "https://www.loudoun.gov/3906/Low-Cost-Resources",
+      "external_id": "nova-pet-lcas-vaccine-microchip-clinics",
+      "source_url": "https://www.loudoun.gov/3906/Low-Cost-Resources",
+      "notes": "Prices: microchips $15 (free for Loudoun County residents); rabies (cat & dog) $10; DHPP (dogs) $10; FVRCP (cats) $10; dog license $10/year. Max four pets per family per clinic; translation services available on-site. Off-site clinic listed: Saturday, October 17, 2026, 10 a.m.-12 p.m., Lovettsville Community Park, 39550 Lovettsville Park Dr, Lovettsville. Payment: cash, check, major cards, tap to pay. Census geocoder returned no match; coordinates omitted.",
+      "raw_hours_text": "Thursday, October 8, 2026 | 9:00 a.m. - 11:00 a.m. | LCAS, 42225 Adoption Drive, Leesburg, VA 20175 Thursday, October 22, 2026 | 9:00 a.m. - 11:00 a.m. | LCAS, 42225 Adoption Drive, Leesburg, VA 20175",
+      "services": [
+        {
+          "service_type": "veterinary_care",
+          "offering_status": "event_specific",
+          "description": "Low-cost vaccination and microchip clinics for cats and dogs (drive-up; stay in vehicle)."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "quantity_limit",
+          "status": "required",
+          "details": "No more than four pets per family per clinic."
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "organization_name": "Loudoun County Animal Services",
+      "organization_website": "https://www.loudoun.gov/animalservices",
+      "location_name": "Loudoun County Animal Services (LCAS)",
+      "address1": "42225 Adoption Drive",
+      "city": "Leesburg",
+      "state": "VA",
+      "zip": "20175",
+      "phone": "703-777-0406",
+      "website": "https://www.loudoun.gov/3906/Low-Cost-Resources",
+      "external_id": "nova-pet-lcas-income-qualified-spay-neuter",
+      "source_url": "https://www.loudoun.gov/3906/Low-Cost-Resources",
+      "notes": "Cats $100, dogs $175 (payment due at drop-off); includes spay/neuter, microchip, vaccines and pain medication. Next clinic listed October 14, 2026 (sign-ups open October 1). Separate low-cost barn/outdoor cat spay/neuter clinic (October 28, 2026) requires registration, humane trap and proof of Loudoun residency. Census geocoder returned no match; coordinates omitted.",
+      "raw_eligibility_text": "Proof of Loudoun residency is required. Income qualifications are required. You must sign up to reserve a surgery spot. ... Loudoun County residents who qualify for social services, such as the WIC (Women, Infants and Children) program, Medicaid, Temporary Assistance for Needy Families (TANF), Supplemental Nutrition Assistance Program (SNAP), the free Loudoun County school lunch program or Social Security benefits or meet income qualifications (50% median income - view the 2026 Area Median Income Chart (PDF) are eligible for this income-qualified spay/neuter clinic.",
+      "services": [
+        {
+          "service_type": "veterinary_care",
+          "offering_status": "event_specific",
+          "description": "Income-qualified low-cost spay/neuter clinic for cats and dogs at LCAS."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Loudoun County residents."
+        },
+        {
+          "requirement_type": "proof_of_address",
+          "status": "required",
+          "details": "Proof of Loudoun residency is required."
+        },
+        {
+          "requirement_type": "income",
+          "status": "required",
+          "details": "Qualify for WIC, Medicaid, TANF, SNAP, free school lunch or Social Security, or income at or below 50% of area median income."
+        },
+        {
+          "requirement_type": "registration",
+          "status": "required",
+          "details": "Must sign up to reserve a surgery spot."
+        }
+      ],
+      "needs_primary_confirmation": false
+    },
+    {
+      "external_id": "nova-pet-loudoun-pet-pantry-lhr",
+      "source_url": "https://www.loudoun.gov/3020/Pet-Pantry",
+      "organization_name": "Loudoun Pet Pantry (Loudoun Hunger Relief / Loudoun County Animal Services / Humane Society of Loudoun County)",
+      "organization_website": "https://www.loudoun.gov/3020/Pet-Pantry",
+      "location_name": "Loudoun Hunger Relief",
+      "address1": "750 Miller Drive, SE",
+      "city": "Leesburg",
+      "state": "VA",
+      "zip": "20175",
+      "phone": "703-777-5911",
+      "notes": "Loudoun Pet Pantry is a partnership between Loudoun County Animal Services, The Humane Society of Loudoun County and Loudoun Hunger Relief (LHR); for pet food contact LHR at 703-777-5911. Hours for pet food pickup not stated on the county page.",
+      "raw_eligibility_text": "Cat and dog food is distributed to families in need at Loudoun Hunger Relief and at pop-up pet pantries throughout the county.",
+      "services": [
+        {
+          "service_type": "pet_food",
+          "offering_status": "regular",
+          "description": "Cat and dog food kits distributed to families in need through the Loudoun Pet Pantry at Loudoun Hunger Relief."
+        }
+      ],
+      "needs_primary_confirmation": true,
+      "lat": 39.082115,
+      "lon": -77.555523,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-pet-loudoun-mobile-pet-pantry-sterling-cc",
+      "source_url": "https://www.loudoun.gov/3906/Low-Cost-Resources",
+      "organization_name": "Loudoun Pet Pantry (Loudoun County Animal Services / Humane Society of Loudoun County / Loudoun Hunger Relief)",
+      "organization_website": "https://www.loudoun.gov/3020/Pet-Pantry",
+      "location_name": "Sterling Community Center (mobile pet pantry)",
+      "address1": "120 Enterprise St.",
+      "city": "Sterling",
+      "state": "VA",
+      "phone": "703-777-5911",
+      "notes": "Loudoun Pet Pantry is a partnership between Loudoun County Animal Services, The Humane Society of Loudoun County and Loudoun Hunger Relief (LHR); for pet food contact LHR at 703-777-5911. Dates subject to change; end time subject to food availability.",
+      "raw_hours_text": "The second Monday of the month - Sterling Community Center (120 Enterprise St. Sterling) | 1:00 p.m. - 2:30 p.m. (end time subject to food availability)",
+      "raw_eligibility_text": "Loudoun residents may also pick up pet food at one of two mobile pantry locations. Dates and locations below. Dates subject to change.",
+      "services": [
+        {
+          "service_type": "pet_food",
+          "offering_status": "regular",
+          "description": "Mobile pet pantry: pet food pickup for Loudoun residents.",
+          "schedules": [
+            {
+              "kind": "distribution",
+              "weekday": 0,
+              "opens": "13:00",
+              "closes": "14:30",
+              "week_of_month": 2
+            }
+          ]
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Loudoun residents."
+        }
+      ],
+      "needs_primary_confirmation": true,
+      "lat": 38.999163,
+      "lon": -77.402759,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-pet-loudoun-mobile-pet-pantry-sugarland-es",
+      "source_url": "https://www.loudoun.gov/3906/Low-Cost-Resources",
+      "organization_name": "Loudoun Pet Pantry (Loudoun County Animal Services / Humane Society of Loudoun County / Loudoun Hunger Relief)",
+      "organization_website": "https://www.loudoun.gov/3020/Pet-Pantry",
+      "location_name": "Sugarland Elementary School (mobile pet pantry)",
+      "city": "Sterling",
+      "state": "VA",
+      "phone": "703-777-5911",
+      "notes": "Loudoun Pet Pantry is a partnership between Loudoun County Animal Services, The Humane Society of Loudoun County and Loudoun Hunger Relief (LHR); for pet food contact LHR at 703-777-5911. Street address not given on the source page; not geocoded. Dates subject to change; end time subject to food availability.",
+      "raw_hours_text": "The third Thursday of the month - Sugarland Elementary School in Sterling | 10:00 a.m. - 12:00 p.m. (end time subject to food availability)",
+      "raw_eligibility_text": "Loudoun residents may also pick up pet food at one of two mobile pantry locations. Dates and locations below. Dates subject to change.",
+      "services": [
+        {
+          "service_type": "pet_food",
+          "offering_status": "regular",
+          "description": "Mobile pet pantry: pet food pickup for Loudoun residents.",
+          "schedules": [
+            {
+              "kind": "distribution",
+              "weekday": 3,
+              "opens": "10:00",
+              "closes": "12:00",
+              "week_of_month": 3
+            }
+          ]
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "residency",
+          "status": "required",
+          "details": "Loudoun residents."
+        }
+      ],
+      "needs_primary_confirmation": true
+    },
+    {
+      "external_id": "nova-pet-anicira-manassas",
+      "source_url": "https://anicira.org/locations/anicira-manassas/",
+      "organization_name": "Anicira",
+      "organization_website": "https://anicira.org/",
+      "location_name": "Anicira Manassas Veterinary Center",
+      "address1": "9975 Pennsylvania Avenue",
+      "city": "Manassas",
+      "state": "VA",
+      "zip": "20110",
+      "phone": "571-208-0199",
+      "email": "manassas@anicira.org",
+      "website": "https://anicira.org/locations/anicira-manassas/",
+      "notes": "Nonprofit veterinary hospital 'open to all' offering medical, surgical and dental care with published prices. Page states it is unable to accept new patients at this time for sick and wellness care (established clients only). Accepts cash, Visa, Mastercard (no checks); payment plans offered. Financial assistance details also at https://anicira.org/manassas-financial-assistance/. Listed as a partner clinic for AWLA and Fairfax County spay/neuter vouchers. Conflicting criteria: the Prince William SPCA (https://pwspca.org/resources-2/) describes Sashi's Fund eligibility as income at or below 150% of the Federal Poverty Level or SNAP/Medicaid participation, with proof of residency and income/assistance; the PW SPCA page also says Anicira is no longer accepting new clients for medical or wellness appointments, only surgical and dentistry cases.",
+      "raw_hours_text": "Hours Monday - Friday; 7:00am-5:00pm",
+      "raw_eligibility_text": "Sashi's Fund provides assistance to pet families in Manassas, Manassas Park, and Prince William County who qualify for Medicaid in accessing veterinary care. Proof of eligibility is required. ... Pit Bull Terriers and Pit Bull mixes residing in Manassas, Manassas Park, and Prince William County are eligible to receive a $40 spay/neuter surgery through the Pit Fix program.",
+      "services": [
+        {
+          "service_type": "veterinary_care",
+          "offering_status": "regular",
+          "description": "Nonprofit low-cost veterinary hospital: spay/neuter, vaccinations, general surgery, dentistry; Sashi's Fund financial assistance for Medicaid-eligible Manassas/Manassas Park/Prince William families; $40 Pit Fix spay/neuter for pit bull-type dogs.",
+          "schedules": [
+            {
+              "kind": "operating_hours",
+              "weekday": 0,
+              "opens": "07:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 1,
+              "opens": "07:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 2,
+              "opens": "07:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 3,
+              "opens": "07:00",
+              "closes": "17:00",
+              "week_of_month": null
+            },
+            {
+              "kind": "operating_hours",
+              "weekday": 4,
+              "opens": "07:00",
+              "closes": "17:00",
+              "week_of_month": null
+            }
+          ]
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "service_area",
+          "status": "required",
+          "details": "Sashi's Fund and Pit Fix: residents of Manassas, Manassas Park, and Prince William County."
+        },
+        {
+          "requirement_type": "benefit_documentation",
+          "status": "required",
+          "details": "Sashi's Fund: must qualify for Medicaid; proof of eligibility is required."
+        }
+      ],
+      "needs_primary_confirmation": false,
+      "lat": 38.736937,
+      "lon": -77.523695,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-pet-pwc-animal-services-pet-pantry",
+      "source_url": "https://pwspca.org/food/",
+      "organization_name": "Prince William County Animal Services",
+      "organization_website": "https://www.pwcva.gov/department/animal-services/overview",
+      "location_name": "Prince William County Animal Services Center",
+      "address1": "14807 Bristow Road",
+      "city": "Manassas",
+      "state": "VA",
+      "zip": "20112",
+      "phone": "(703) 792-6465",
+      "website": "https://www.pwcva.gov/department/animal-services/contact-us",
+      "notes": "Pantry information comes from the Prince William SPCA's pet food resource page, not from the county; no pantry page was found on pwcva.gov. Also listed as a pet food provider by Pets of the Homeless (https://petsofthehomeless.org/get-help/find-locations/prince-william-county-animal-shelter/). Official hours from https://www.pwcva.gov/department/animal-services/contact-us (Tue-Fri 11 a.m.-5 p.m., Sat 10 a.m.-4 p.m., Sun noon-4 p.m., Mon closed). The PW SPCA page lists different hours (no Sunday).",
+      "raw_hours_text": "Monday CLOSED* Tuesday 11 a.m. to 5 p.m. Wednesday 11 a.m. to 5 p.m. Thursday 11 a.m. to 5 p.m. Friday 11 a.m. to 5 p.m. Saturday 10 a.m. to 4 p.m. Sunday Noon to 4 p.m. *On Mondays owners may reclaim stray pets or may leave donations. The Center is closed for all other business on Mondays. (pwcva.gov)",
+      "raw_eligibility_text": "The shelter accepts donations of pet food and supplies. What cannot be used at the shelter is donated to the community. The pantry is in the shelter. Ask the front desk staff for information. (Prince William SPCA)",
+      "services": [
+        {
+          "service_type": "pet_food",
+          "offering_status": "unconfirmed",
+          "description": "Pet food pantry inside the county shelter (donated food not used by the shelter is given to the community); ask the front desk."
+        }
+      ],
+      "needs_primary_confirmation": true,
+      "lat": 38.634126,
+      "lon": -77.432227,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-pet-serve-campus-pet-food",
+      "source_url": "https://pwspca.org/food/",
+      "organization_name": "Northern Virginia Family Service - SERVE",
+      "location_name": "SERVE Campus",
+      "address1": "10056 Dean Dr.",
+      "city": "Manassas",
+      "state": "VA",
+      "zip": "20110",
+      "phone": "571-748-2680",
+      "notes": "Per the Prince William SPCA, its volunteers donate pet food to SERVE on a regular basis. SERVE's own pantry page (nvfs.org) was not fetched (host returned HTTP 403 in prior research); confirm pet food availability with SERVE.",
+      "raw_eligibility_text": "Food assistance is provided by appointment only. To schedule an appointment, please call 571.748.2680 and please leave a message if no one is immediately available to take your call.",
+      "services": [
+        {
+          "service_type": "pet_food",
+          "offering_status": "unconfirmed",
+          "description": "Pet food donated by Prince William SPCA volunteers, available through SERVE's food assistance (by appointment)."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "Food assistance is provided by appointment only; call 571-748-2680."
+        }
+      ],
+      "needs_primary_confirmation": true,
+      "lat": 38.746436,
+      "lon": -77.495723,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-pet-manassas-city-animal-adoption-center",
+      "source_url": "https://pwspca.org/food/",
+      "organization_name": "Manassas City Animal Adoption Center",
+      "location_name": "Manassas City Animal Adoption Center",
+      "address1": "10039 Dean Drive",
+      "city": "Manassas",
+      "state": "VA",
+      "zip": "20110",
+      "phone": "703-257-2420",
+      "notes": "Listed by the Prince William SPCA under 'local resources for pet food' with hours only; the page does not describe what pet food help is offered here. Also listed under 'Food and Supplies' by Pets of the Homeless (https://petsofthehomeless.org/get-help/find-locations/manassas-city-animal-adoption-center/), which is the source of the phone number. Official site not fetched.",
+      "raw_hours_text": "Monday, Tuesday, Thursday and Friday: 10 a.m. – 1 p.m.; 4-6 p.m. Wednesday: 5 – 7 p.m. Saturday: 10 a.m. – 1 p.m. Sunday and Holidays: Closed",
+      "services": [
+        {
+          "service_type": "pet_food",
+          "offering_status": "unconfirmed",
+          "description": "Listed as a local pet food resource by the Prince William SPCA; details not stated."
+        }
+      ],
+      "needs_primary_confirmation": true,
+      "lat": 38.74587,
+      "lon": -77.497464,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-pet-awl-alexandria-pet-pantry",
+      "source_url": "https://petsofthehomeless.org/get-help/find-locations/animal-welfare-league-of-alexandria/",
+      "organization_name": "Animal Welfare League of Alexandria",
+      "location_name": "Animal Welfare League of Alexandria",
+      "address1": "4101 Eisenhower Ave.",
+      "city": "Alexandria",
+      "state": "VA",
+      "zip": "22304",
+      "phone": "703-746-4774",
+      "notes": "Listed under 'Food and Supplies' by Pets of the Homeless. AWLA (Arlington) also refers non-residents to an Alexandria pet pantry at https://alexandriaanimals.org/communitypetpantry/. The organization's own site (alexandriaanimals.org) returned HTTP 403 to our client, so program details, eligibility and pickup hours were not verified.",
+      "raw_hours_text": "Monday – Friday 9am – 7 pm (Pets of the Homeless listing)",
+      "services": [
+        {
+          "service_type": "pet_food",
+          "offering_status": "unconfirmed",
+          "description": "Community pet pantry / pet food and supplies (per third-party listing)."
+        }
+      ],
+      "needs_primary_confirmation": true,
+      "lat": 38.80442,
+      "lon": -77.102652,
+      "geocode_source": "census_geocoder"
+    },
+    {
+      "external_id": "nova-pet-dulles-south-food-pantry",
+      "source_url": "https://petsofthehomeless.org/get-help/find-locations/dulles-south-food-pantry/",
+      "organization_name": "Dulles South Food Pantry",
+      "organization_website": "https://dsfp.org/",
+      "location_name": "Dulles South Food Pantry",
+      "address1": "24757 Arcola Mills Drive",
+      "city": "Dulles",
+      "state": "VA",
+      "zip": "20166",
+      "phone": "703-507-2795",
+      "email": "info@dsfp.org",
+      "website": "https://dsfp.org/get-assistance/",
+      "notes": "Listed as a 'Food and Supplies' pet food provider by Pets of the Homeless (address there: 24757 Evergreen Mills Road; schedule there: 1st & 3rd Wednesdays 5-7 pm). The pantry's own site (https://dsfp.org/get-assistance/) does not mention pet food and gives a different schedule (Tuesdays and Wednesdays by appointment) and address (24757 Arcola Mills Drive, used here). Appointments: 703-507-2795 x1 or appointments@dsfp.org. Census geocoder returned no match; coordinates omitted.",
+      "raw_hours_text": "The Pantry is open to guests on Tuesdays and Wednesdays. Eligible guests may visit the Pantry up to twice a month. Please call the Pantry at 703-507-2795 x1 or email appointments@dsfp.org to schedule an appointment. An appointment is required. (dsfp.org)",
+      "raw_eligibility_text": "Do you live in our Service Area? ... Guest Registration requires a photo ID for proof of identity ... Guest Registration requires a proof of residence. (dsfp.org; applies to the food pantry generally)",
+      "services": [
+        {
+          "service_type": "pet_food",
+          "offering_status": "unconfirmed",
+          "description": "Pet food listed as available at this human food pantry by Pets of the Homeless; not confirmed on the pantry's own site."
+        }
+      ],
+      "eligibility": [
+        {
+          "requirement_type": "service_area",
+          "status": "required",
+          "details": "Must live in the pantry's service area."
+        },
+        {
+          "requirement_type": "appointment",
+          "status": "required",
+          "details": "An appointment is required."
+        },
+        {
+          "requirement_type": "photo_id",
+          "status": "required",
+          "details": "Photo ID required for guest registration."
+        },
+        {
+          "requirement_type": "proof_of_address",
+          "status": "required",
+          "details": "Proof of residence required."
+        },
+        {
+          "requirement_type": "visit_limit",
+          "status": "required",
+          "details": "Eligible guests may visit up to twice a month."
+        }
+      ],
+      "needs_primary_confirmation": true
+    }
+  ]
+}
