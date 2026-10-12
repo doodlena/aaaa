@@ -86,6 +86,9 @@ permission or direct provider verification before publication. Eligibility docum
   and Arabic needs extra plural forms).
 - "What do you need?" chips in the explorer are multi-select. Several needs are sent with `need_match=any`, so results
   are places that offer any of them (selected food groups together count as one need). The API default stays `all`.
+- The congressional-district view was removed: no `area` search parameter, `/api/coverage-areas` endpoint or
+  `coverage_areas` table (migration `0007`). Source ids, data files and research logs keep their `va08` names because
+  imported records reference them. The default search radius is 10 miles (frontend and API).
 - No automated accessibility audit (axe) has been run. WCAG practices were applied and checked by hand.
 - Development environment notes: the Homebrew `node` 26.5 binary is broken (missing `libsimdjson`), so `/usr/local/bin`
   node 22 was used, with `npm_config_cache` pointed at a writable directory.

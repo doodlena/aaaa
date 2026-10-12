@@ -984,6 +984,7 @@ input[type='radio'] {
   grid-template-columns: 280px minmax(340px, 460px) 1fr;
 }
 .explorer__filters {
+  position: relative;
   overflow-y: auto;
   padding: var(--sp-4);
   border-right: 1px solid var(--line);
@@ -998,6 +999,9 @@ input[type='radio'] {
   margin: 0 0 var(--sp-3);
 }
 .explorer__list {
+  /* Containing block for the cards' .visually-hidden text: without it those absolutely positioned spans sit at their
+     un-scrolled position on the page and make the whole document as tall as the list. */
+  position: relative;
   overflow-y: auto;
   padding: var(--sp-3) var(--sp-4) var(--sp-6);
   border-right: 1px solid var(--line);
@@ -1023,6 +1027,13 @@ input[type='radio'] {
   .explorer {
     flex: 1;
     height: auto;
+    min-height: 0;
+  }
+  /* The list and map share one row that is exactly as tall as the space left; each scrolls or resizes inside it. */
+  .explorer__body {
+    grid-template-rows: minmax(0, 1fr);
+  }
+  .explorer__map {
     min-height: 0;
   }
 }

@@ -1,0 +1,1100 @@
+{
+  "run_id": 7,
+  "source": {
+    "id": "pwc-cmn-support-services",
+    "name": "Prince William County \u2014 Community Mobilization Network resource locations (non-food services)",
+    "url": "snapshot://pwc-cmn-support-services.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "One service type per record, mapped from the county's Service_Category; descriptions kept verbatim.",
+      "Hotlines, faith-based, athletic, animal and other non-assistance categories are not imported."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T18:46:44.708743+00:00",
+  "finished_at": "2026-10-12T18:46:48.584695+00:00",
+  "counts": {
+    "discovered": 130,
+    "inserted": 44,
+    "updated": 75,
+    "unchanged": 0,
+    "rejected": 0,
+    "duplicate_candidates": 11,
+    "conflicts": 0,
+    "needs_review": 151,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {
+      "auto_linked": 75
+    }
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "e9fb1ce9-587e-46c3-8b56-d8b35953704a",
+      "status": "linked",
+      "location_id": 117,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "4964c629-d834-463b-8c85-4ade5f7a232d",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "5bac6d57-3d7a-42d6-9ad3-88d98a9c4fd7",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "360b8ec0-36ef-4763-983a-4313b831a8ae",
+      "status": "linked",
+      "location_id": 118,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "78bdfa81-fae1-4d6a-ab80-950a1405c18d",
+      "status": "linked",
+      "location_id": 119,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "95b08b09-6389-422f-b2d8-c994d713cf08",
+      "status": "linked",
+      "location_id": 121,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "be23d54c-f155-4741-947f-c01507f540a0",
+      "status": "linked",
+      "location_id": 121,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "61097183-fce4-43b4-ad98-eb9e7a470566",
+      "status": "linked",
+      "location_id": 123,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "dd93fc38-1805-4f12-b378-5f05d62b0784",
+      "status": "linked",
+      "location_id": 124,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "071f2e19-32b1-4de9-84f1-973a319a7f92",
+      "status": "linked",
+      "location_id": 126,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "a1d0de62-b781-49cf-811c-3ffd822244d6",
+      "status": "linked",
+      "location_id": 126,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "b0c632a8-c401-42cb-9d4a-302ab7d506be",
+      "status": "linked",
+      "location_id": 126,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "af87b5aa-d2e9-4f82-b897-1b62742ad4cf",
+      "status": "linked",
+      "location_id": 126,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "fdd15bdf-f07d-4217-b0e6-af04c6935718",
+      "status": "linked",
+      "location_id": 126,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "f25de7a7-d62b-48e6-a63e-d84d5b8d72f7",
+      "status": "linked",
+      "location_id": 30,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "fb086a98-7102-48ec-ad2d-b6a196de49f7",
+      "status": "linked",
+      "location_id": 30,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "d6ab7274-3e94-4938-b014-1aceba34125b",
+      "status": "linked",
+      "location_id": 127,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "44567e54-2b0d-4e45-bcbd-59e699006317",
+      "status": "linked",
+      "location_id": 128,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "f731959e-c56b-4848-90a5-6d827d7ca36b",
+      "status": "linked",
+      "location_id": 130,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "df786925-49e5-4377-993f-5e00c086f831",
+      "status": "linked",
+      "location_id": 27,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "1ca09167-8207-4fd8-8dc3-8f5ea251c350",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "2e383faa-e063-4a89-b72f-7ee51dcf209e",
+      "status": "linked",
+      "location_id": 131,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "57c11683-999e-4cf2-a369-552ef47e50a2",
+      "status": "linked",
+      "location_id": 132,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "b559f15c-4e96-4ee6-bc4f-e39d3bca2b99",
+      "status": "linked",
+      "location_id": 133,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "f758877c-cbbe-4828-9948-b8b6caeb9ab0",
+      "status": "linked",
+      "location_id": 27,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "5e2ee2ba-1754-462e-8519-0463683c6103",
+      "status": "linked",
+      "location_id": 133,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "9756d073-8d70-4586-97d4-61e4bb2a1b54",
+      "status": "linked",
+      "location_id": 134,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "53ab118d-1b77-4495-a120-687bf634050a",
+      "status": "linked",
+      "location_id": 135,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "e2a89d0c-df09-4782-a804-c3153a8d0404",
+      "status": "linked",
+      "location_id": 135,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "61fc9572-c40b-44f5-87ad-59d98111a126",
+      "status": "linked",
+      "location_id": 136,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "73484a65-8dfc-4f8e-a636-83c04b35bb01",
+      "status": "linked",
+      "location_id": 137,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "b0dae78c-a75f-4acf-90b5-33437fe1e30a",
+      "status": "linked",
+      "location_id": 138,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "a0bf5ea6-81d3-43e8-86a1-4d7c09bc9b3a",
+      "status": "linked",
+      "location_id": 139,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "b9c0f9e3-26b6-4710-ac7b-88af573bfb9d",
+      "status": "linked",
+      "location_id": 9,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "0c8b85b6-c154-477f-9556-a24a9a0e3648",
+      "status": "linked",
+      "location_id": 140,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "8a8f91c3-4aba-449f-b23e-352c45860e4f",
+      "status": "linked",
+      "location_id": 141,
+      "issues": []
+    },
+    {
+      "external_id": "8e2ec2fc-ea9d-4522-9efe-4ab3ca86f6e0",
+      "status": "linked",
+      "location_id": 141,
+      "issues": []
+    },
+    {
+      "external_id": "39ac79a1-502a-487d-9ad7-b159b51d2942",
+      "status": "linked",
+      "location_id": 143,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "dafd5bb3-48fb-491f-9af9-77ca4e29e29a",
+      "status": "linked",
+      "location_id": 143,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "4d8d3b70-fc5c-4f5c-b2a3-dd8e60c3a9d7",
+      "status": "linked",
+      "location_id": 144,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "7c6f72b4-50d6-4f89-842e-eba6f66eeb0b",
+      "status": "linked",
+      "location_id": 144,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "5f475806-7674-4cdd-bf12-578dfc0f6666",
+      "status": "linked",
+      "location_id": 144,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "9cd856bb-a2c1-435a-acc5-b17752e7a4c0",
+      "status": "linked",
+      "location_id": 146,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "adeabb4d-a8d6-41f2-a86f-b242dbabe963",
+      "status": "linked",
+      "location_id": 146,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "d6f8387a-a965-4842-a494-011e6d07a9ec",
+      "status": "linked",
+      "location_id": 147,
+      "issues": []
+    },
+    {
+      "external_id": "8964a257-b449-4204-94e2-573e669f6ecd",
+      "status": "linked",
+      "location_id": 148,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "061ffb49-e340-4d42-a22e-f9e89dee86c3",
+      "status": "linked",
+      "location_id": 147,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "3d6afe42-a4c3-45a7-98fa-8acc8a33292e",
+      "status": "linked",
+      "location_id": 148,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "a029825f-14d2-407c-b759-209c224dfa71",
+      "status": "linked",
+      "location_id": 149,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "bd3829c5-b4c5-40d2-adf7-afd0a6d7fadb",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "0a9c671a-23a9-42f9-be81-81a80a968af9",
+      "status": "linked",
+      "location_id": 148,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "e1778857-5f0b-42c9-8e7a-71f820b55721",
+      "status": "linked",
+      "location_id": 149,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "3fe29a0f-ff69-4e5a-8ef5-a0712da34d05",
+      "status": "linked",
+      "location_id": 148,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "45e53665-187b-44d5-8530-760d65729610",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "45a50c55-01b0-4788-a17a-0311cc07a94b",
+      "status": "linked",
+      "location_id": 148,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "bb721ce7-09c1-42ca-a7c8-e6f7913c7a6a",
+      "status": "linked",
+      "location_id": 149,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "bd130a55-4202-4472-9a8a-1e211e714077",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "61bd96ad-08fd-4bde-8eb9-24da4f01feb7",
+      "status": "linked",
+      "location_id": 148,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "0306af48-9809-47ed-b129-553971760244",
+      "status": "linked",
+      "location_id": 149,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "22b507e6-68c0-4d1b-bbe6-dbd8a393de80",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "c5cfcfb2-0a42-44fd-bb59-5742b5474c02",
+      "status": "linked",
+      "location_id": 148,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "f5fe13c5-a5c7-4dd4-9fd3-4dd9658d4989",
+      "status": "linked",
+      "location_id": 148,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "b52141e1-5784-4318-8f54-0a11d171d6af",
+      "status": "linked",
+      "location_id": 148,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "9b67bf6e-bbc4-4065-875b-b6ee50e56389",
+      "status": "linked",
+      "location_id": 150,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "8810afcc-62fa-4c8a-b84a-6270f3257d03",
+      "status": "linked",
+      "location_id": 150,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "5237cb6c-66ad-402a-a75f-4ceb11aa9075",
+      "status": "linked",
+      "location_id": 149,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "11df2785-e8b5-445c-86e0-70988fcbda02",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "71cffb70-183b-4b7f-941c-8b860f23fc64",
+      "status": "linked",
+      "location_id": 149,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "bbc7ebb3-f1a8-4017-88d2-516436c71263",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "735a3fbb-44fb-4d38-9a05-a385be92204d",
+      "status": "linked",
+      "location_id": 149,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "66fad462-1e09-440d-b83f-fc549d12bb25",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "11969c70-1677-40b8-8a48-c5941333a183",
+      "status": "linked",
+      "location_id": 25,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "88d36f9b-a5c6-4584-919c-d91a7e1959e3",
+      "status": "linked",
+      "location_id": 152,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "e23c8136-40c2-4b40-84cc-22e9a60a4257",
+      "status": "linked",
+      "location_id": 152,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "0f4f163c-8b34-4612-9cef-3c1d58af9541",
+      "status": "linked",
+      "location_id": 153,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "9f1cd938-05b3-4d11-8bb6-d7590cac4570",
+      "status": "linked",
+      "location_id": 154,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "bbf375b0-f51f-445d-b805-6d7d194e6ea1",
+      "status": "linked",
+      "location_id": 155,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "8e75b339-39fa-439f-8633-de47a2161cff",
+      "status": "linked",
+      "location_id": 155,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "03977c9f-ff45-4003-b141-315bc0cd46ea",
+      "status": "linked",
+      "location_id": 156,
+      "issues": []
+    },
+    {
+      "external_id": "66359f8e-8e33-431b-886b-d64853aa0717",
+      "status": "linked",
+      "location_id": 156,
+      "issues": []
+    },
+    {
+      "external_id": "5234f2b6-1123-4b74-9f2a-3a7bf238e208",
+      "status": "linked",
+      "location_id": 156,
+      "issues": []
+    },
+    {
+      "external_id": "2756234b-f501-47c1-af82-fde407254643",
+      "status": "linked",
+      "location_id": 156,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "0be9825d-3678-4b03-866d-540069551488",
+      "status": "linked",
+      "location_id": 156,
+      "issues": []
+    },
+    {
+      "external_id": "fab2b4e0-11b9-4239-a64f-c57cf55b65e7",
+      "status": "linked",
+      "location_id": 156,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "2e0db46d-38bb-4973-bd3c-5714da503498",
+      "status": "linked",
+      "location_id": 156,
+      "issues": []
+    },
+    {
+      "external_id": "aece6491-45f1-4919-b6a2-65359b7f056e",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "09631faa-521c-44c4-b46b-7f0c2f35411f",
+      "status": "linked",
+      "location_id": 157,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "3dd760ba-7c80-44c4-9504-d2c8bd4945f1",
+      "status": "linked",
+      "location_id": 157,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "f6655048-83e4-4224-bc73-0d2554886574",
+      "status": "linked",
+      "location_id": 157,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "88e4ebbb-0361-4d6c-acfa-96566013628f",
+      "status": "linked",
+      "location_id": 157,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "caaa098c-46c0-4a21-a9a9-0321aff42fae",
+      "status": "linked",
+      "location_id": 116,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "509e11ee-3cae-4034-90dd-6c93044d7f4e",
+      "status": "linked",
+      "location_id": 116,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "5bc81214-2824-4004-bfa5-de83d88601a1",
+      "status": "linked",
+      "location_id": 116,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "80f59d37-9653-4ddb-a08a-2ef16f82419d",
+      "status": "linked",
+      "location_id": 116,
+      "issues": []
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

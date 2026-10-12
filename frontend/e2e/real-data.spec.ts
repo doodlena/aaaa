@@ -53,4 +53,16 @@ test.describe('real data (read-only)', () => {
     await expect(page.getByText(/Food filters are hidden/)).toBeVisible();
   });
 
+  test('R5: on desktop the explorer fits the window — the list scrolls inside its panel, the page does not', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/find?lat=38.86&lon=-77.1&label=ZIP%2022204');
+    await expect(page.locator('.results__count')).toBeVisible();
+    await expect(page.locator('.explorer__list li').first()).toBeVisible();
+    const m = await page.evaluate(() => {
+      const list = document.querySelector('.explorer__list')!;
+      return { page: document.documentElement.scrollHeight, window: innerHeight, list: list.scrollHeight, listBox: list.clientHeight };
+    });
+    expect(m.list).toBeGreaterThan(m.listBox); // there is more list than fits…
+    expect(m.page).toBeLessThanOrEqual(m.window); // …but only the list panel scrolls
+  });
 });

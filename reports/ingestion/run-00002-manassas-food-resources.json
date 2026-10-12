@@ -1,0 +1,199 @@
+{
+  "run_id": 2,
+  "source": {
+    "id": "manassas-food-resources",
+    "name": "City of Manassas \u2014 Manassas Area Food Resources",
+    "url": "snapshot://manassas-food-resources.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "Last edited 2024-08; may be stale.",
+      "Comments mix food hours with other services (e.g. thrift); non-food lines are ignored and the raw text is kept for review.",
+      "No service description: listed sites are assumed to be pantry pickup *candidates* until verified."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T18:46:40.903119+00:00",
+  "finished_at": "2026-10-12T18:46:41.514583+00:00",
+  "counts": {
+    "discovered": 18,
+    "inserted": 18,
+    "updated": 0,
+    "unchanged": 0,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 18,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "1",
+      "status": "linked",
+      "location_id": 9,
+      "issues": []
+    },
+    {
+      "external_id": "2",
+      "status": "linked",
+      "location_id": 10,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "3",
+      "status": "linked",
+      "location_id": 11,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "4",
+      "status": "linked",
+      "location_id": 12,
+      "issues": []
+    },
+    {
+      "external_id": "5",
+      "status": "linked",
+      "location_id": 13,
+      "issues": []
+    },
+    {
+      "external_id": "6",
+      "status": "linked",
+      "location_id": 14,
+      "issues": []
+    },
+    {
+      "external_id": "7",
+      "status": "linked",
+      "location_id": 15,
+      "issues": []
+    },
+    {
+      "external_id": "8",
+      "status": "linked",
+      "location_id": 16,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "15",
+      "status": "linked",
+      "location_id": 17,
+      "issues": []
+    },
+    {
+      "external_id": "17",
+      "status": "linked",
+      "location_id": 18,
+      "issues": []
+    },
+    {
+      "external_id": "19",
+      "status": "linked",
+      "location_id": 19,
+      "issues": []
+    },
+    {
+      "external_id": "20",
+      "status": "linked",
+      "location_id": 20,
+      "issues": []
+    },
+    {
+      "external_id": "23",
+      "status": "linked",
+      "location_id": 21,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "24",
+      "status": "linked",
+      "location_id": 22,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "25",
+      "status": "linked",
+      "location_id": 23,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "26",
+      "status": "linked",
+      "location_id": 24,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "27",
+      "status": "linked",
+      "location_id": 25,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "28",
+      "status": "linked",
+      "location_id": 26,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

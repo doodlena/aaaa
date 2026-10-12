@@ -109,9 +109,6 @@ Key decisions
   the filter panel ("Places must offer every kind of help you check"). Baby & family supplies = `non_food` only (ANDing
   `food_group=infant` would hide diaper banks without formula). Food filters (type of food, "on the shelf today") are
   hidden — and cleared — when every selected need is non-food.
-- **Area view:** `/find?area=va-08&bbox=-77.24,38.6,-77.03,38.97&sort=name` (from `GET /api/coverage-areas`, the
-  explorer's "Area" select, or the home link). The list stays paginated (25); the map fetches every listing in the area
-  (pages of 100, up to 500) so all pins show.
 - **AI settings (/admin/ai):** the key is write-only (password input, autocomplete off, cleared after sending; only the
   server's `…WXYZ` hint is shown). Removing it uses an in-page confirmation (no `window.confirm`). Every change re-fetches
   `/api/meta/features` (`useMeta().refreshFeatures`) so AI search / drafts / suggestions appear without a reload.

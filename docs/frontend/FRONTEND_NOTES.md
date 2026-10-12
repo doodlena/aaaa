@@ -34,7 +34,7 @@ Developer documentation lives in `frontend/README.md`. This file records status 
 - PWA: manifest + small service worker (production builds only), offline banner.
 - Tests: Vitest 65 (was 43); Playwright 8 (A–D, F + new G, H, I), all against the real dev API.
 
-### Lantern: rename, needs chooser, crisis safety, district view, AI settings (2026-10-12)
+### Lantern: rename, needs chooser, crisis safety, AI settings (2026-10-12)
 
 - Renamed **Open Shelf → Lantern** (name still from `/api/meta/features` → `app_name`; fallback "Lantern"): titles,
   manifest, favicon/maskable icon, package name (`lantern-frontend`), service worker comment, catalogs, tests.
@@ -47,8 +47,7 @@ Developer documentation lives in `frontend/README.md`. This file records status 
   into "Other kinds of help" (10 new groups) and "Food help"; food filters only for food needs. All 25 new service
   types + 10 groups in en/es.
 - 988/911 crisis callout (explorer + listing page, not dismissable) and a 988 line in the footer.
-- District view: "Area" select in the explorer + "Explore all of Virginia's 8th District" on home (area + bbox; map
-  shows the whole district, list paginated).
+- "Explore all available resources" on home opens `/find` with no place (sorted by name, paginated).
 - `/admin/ai`: status card (Active / Off / No key), Save & test, key hint, test result, enable switch, model select,
   remove with in-page confirmation, explanation of what AI does / doesn't / what is sent.
 - `source_reported` polish: dotted badge with list icon (+ About page label).
