@@ -47,12 +47,15 @@ def queue(
     q: str | None = Query(None, max_length=100),
     published: bool | None = None,
     stale_only: bool = False,
+    unverified: bool = False,
     page: int = Query(1, ge=1),
     page_size: int = Query(25, ge=1, le=200),
 ):
     if status and status not in REVIEW_STATUSES:
         raise HTTPException(422, "unknown status")
     conds = [Location.merged_into_id.is_(None)]
+    if unverified:  # everything no reviewer has confirmed yet
+        conds.append(Location.review_status.in_(("candidate", "needs_review")))
     if status:
         conds.append(Location.review_status == status)
     if jurisdiction:
@@ -85,7 +88,8 @@ def queue(
             "verification_label": verification_label(loc), "published": loc.published, "operating_status": loc.operating_status,
             "has_coordinates": loc.geom is not None, "last_seen_at": _iso(loc.last_seen_at), "last_verified_at": _iso(loc.last_verified_at),
             "sources": sorted(set(srcs.get(loc.id, []))), "pending_changes": pc.get(loc.id, 0), "pending_duplicates": dc.get(loc.id, 0), "open_reports": rc.get(loc.id, 0),
-            "is_synthetic": loc.is_synthetic,
+            "is_synthetic": loc.is_synthetic, "phone": loc.phone or loc.organization.phone,
+            "website": loc.website or loc.organization.website,
         } for loc in locs],
         "total": total, "page": page, "page_size": page_size, "counts_by_status": counts,
     }

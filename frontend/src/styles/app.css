@@ -2035,6 +2035,55 @@ input[type='radio'] {
   font-variant-numeric: tabular-nums;
   text-align: right;
 }
+.unverified__list {
+  list-style: none;
+  padding: 0;
+  margin: var(--sp-4) 0;
+  display: grid;
+  gap: var(--sp-3);
+}
+.unverified__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  gap: var(--sp-5);
+  padding: var(--sp-4);
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.unverified__name {
+  margin: 0;
+  font-family: var(--font);
+  font-size: var(--fs-md);
+}
+.unverified__facts {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: var(--sp-1) var(--sp-4);
+  margin: var(--sp-3) 0;
+  font-size: var(--fs-sm);
+}
+.unverified__facts dt {
+  color: var(--ink-soft);
+}
+.unverified__facts dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.unverified__form {
+  display: grid;
+  gap: var(--sp-3);
+  align-content: start;
+}
+.unverified__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+@media (max-width: 699px) {
+  .unverified__item {
+    grid-template-columns: 1fr;
+  }
+}
 .overview section {
   margin-top: var(--sp-6);
 }

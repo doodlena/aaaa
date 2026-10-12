@@ -48,13 +48,43 @@ describe('admin', () => {
     );
     renderApp(<AdminRoutes />, { route: '/admin/overview', path: '/admin/*' });
     expect(await screen.findByRole('link', { name: '5 Provider access requests' })).toHaveAttribute('href', '/admin/claims');
-    expect(screen.getByRole('link', { name: '32 Listings not yet verified' })).toHaveAttribute('href', '/admin');
+    expect(screen.getByRole('link', { name: '32 Listings not yet verified' })).toHaveAttribute('href', '/admin/unverified');
     expect(screen.getByRole('link', { name: '7 Conflicts and possible duplicates' })).toHaveAttribute('href', '/admin/conflicts');
     expect(within(screen.getByRole('row', { name: /With a complete address/ })).getByText('95.5%')).toBeInTheDocument();
     // a metric the server could not compute is shown as missing, never as 0%
     expect(within(screen.getByRole('row', { name: /With documented eligibility/ })).getByText('—')).toBeInTheDocument();
     const week = screen.getByRole('row', { name: /Oct 12/ });
     expect(within(week).getByText('6')).toBeInTheDocument();
+  });
+
+  it('unverified: each listing is verified on its own, with a method, and then leaves the list', async () => {
+    document.cookie = 'nfa_csrf=adm-csrf; path=/';
+    const item = (id: number, name: string, pending_changes = 0) => ({ id, name, organization_name: 'Org', address1: '1 St', city: 'X', zip: '22000', jurisdiction_id: null, review_status: 'candidate', verification_label: 'unverified', published: false, operating_status: 'open', has_coordinates: true, last_seen_at: null, last_verified_at: null, sources: ['src-a'], pending_changes, pending_duplicates: 0, is_synthetic: true, phone: '(555) 010-0001', website: 'https://example.org/a' });
+    const { calls } = mockFetch(
+      [
+        { path: '/api/admin/queue', body: { items: [item(3, '[TEST] Willow'), item(4, '[TEST] Maple', 2)], total: 2, page: 1, page_size: 25, counts_by_status: { candidate: 2 } } },
+        { method: 'POST', path: '/api/admin/resources/3/actions', body: { id: 3, review_status: 'verified', published: false, operating_status: 'open' } },
+      ],
+      { user: admin },
+    );
+    renderApp(<AdminRoutes />, { route: '/admin/unverified', path: '/admin/*' });
+    expect(await screen.findByText('2 listings to verify')).toBeInTheDocument();
+    expect(calls.some((c) => c.url.searchParams.get('unverified') === 'true')).toBe(true);
+    expect(screen.queryByRole('button', { name: /verify all/i })).not.toBeInTheDocument();
+    // a listing with unresolved source changes cannot be verified from here
+    expect(screen.getByText(/Resolve 2 pending source changes/)).toBeInTheDocument();
+    expect(screen.getAllByRole('button', { name: 'Verify' })).toHaveLength(1);
+
+    await userEvent.click(screen.getByRole('button', { name: 'Verify' }));
+    expect(await screen.findByRole('alert')).toHaveTextContent('Choose how you verified');
+    expect(calls.filter((c) => c.method === 'POST')).toHaveLength(0);
+
+    await userEvent.selectOptions(screen.getByLabelText('Verification method'), 'phone');
+    await userEvent.click(screen.getByRole('button', { name: 'Verify' }));
+    expect(await screen.findByText('Verified: [TEST] Willow.')).toBeInTheDocument();
+    expect(calls.find((c) => c.method === 'POST')!.body).toEqual({ action: 'verify', method: 'phone', notes: null });
+    expect(screen.queryByRole('link', { name: '[TEST] Willow' })).not.toBeInTheDocument();
+    expect(screen.getByText('1 listing to verify')).toBeInTheDocument();
   });
 
   it('queue shows status counts and records', async () => {

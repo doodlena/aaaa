@@ -368,6 +368,19 @@ def test_admin_quality_and_runs(admin_client, imported):
     assert admin_client.get("/api/admin/sources").json()["items"][0]["is_synthetic"]
 
 
+def test_admin_queue_unverified_lists_only_unconfirmed_listings(admin_client, imported):
+    q = admin_client.get("/api/admin/queue", params={"unverified": "true"}).json()
+    assert q["total"] == 8 and {"phone", "website"} <= set(q["items"][0])
+    first, second = q["items"][0]["id"], q["items"][1]["id"]
+    # a verification without a method is refused, so a listing cannot leave this list unattributed
+    assert admin_client.post(f"/api/admin/resources/{first}/actions", json={"action": "verify"}).status_code == 422
+    assert admin_client.post(f"/api/admin/resources/{first}/actions", json={"action": "verify", "method": "phone"}).status_code == 200
+    assert admin_client.post(f"/api/admin/resources/{second}/actions", json={"action": "flag"}).status_code == 200
+    q = admin_client.get("/api/admin/queue", params={"unverified": "true"}).json()
+    ids = {i["id"] for i in q["items"]}
+    assert q["total"] == 7 and first not in ids and second in ids  # needs_review still counts as unverified
+
+
 def test_admin_overview_counts_real_listings_only(admin_client, published, db):
     from app.models import ProviderMembership
 

@@ -272,6 +272,8 @@ export interface QueueItem {
   pending_duplicates: number;
   open_reports?: number;
   is_synthetic: boolean;
+  phone?: string | null;
+  website?: string | null;
 }
 
 export interface QueueResponse {

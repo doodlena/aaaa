@@ -11,6 +11,7 @@ import { AdminQueue } from './AdminQueue';
 import { AdminReview } from './AdminReview';
 import { AdminRuns } from './AdminRuns';
 import { AdminSources } from './AdminSources';
+import { AdminUnverified } from './AdminUnverified';
 
 /**
  * Client-side guard only improves UX: every /api/admin call is still authorized server-side (401/403 are surfaced by
@@ -36,6 +37,9 @@ export default function AdminRoutes() {
         <ul>
           <li>
             <NavLink to="/admin/overview">{t('admin.overview.nav')}</NavLink>
+          </li>
+          <li>
+            <NavLink to="/admin/unverified">{t('admin.unverified.nav')}</NavLink>
           </li>
           <li>
             <NavLink to="/admin" end>
@@ -71,6 +75,7 @@ export default function AdminRoutes() {
         <Routes>
           <Route index element={<AdminQueue />} />
           <Route path="overview" element={<AdminOverview />} />
+          <Route path="unverified" element={<AdminUnverified />} />
           <Route path="resources/:id" element={<AdminReview />} />
           <Route path="claims" element={<AdminClaims />} />
           <Route path="reports" element={<AdminReports />} />

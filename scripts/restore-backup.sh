@@ -3,8 +3,8 @@
 #
 #   scripts/restore-backup.sh <backup-file.dump.gpg> <target-database-url>
 #
-# The target database is EMPTIED first (everything in its "public" schema is dropped) and then rebuilt from the backup.
-# Stop the API service before running this and start it again afterwards. You are asked for the backup passphrase and
+# The target database is emptied and rebuilt from the backup in a single transaction, so a failed restore changes
+# nothing. Stop the API service before running this and start it again afterwards. You are asked for the backup passphrase and
 # to confirm the target. Needs gpg and Docker (pg_restore runs in the postgres image, matching the server version).
 set -euo pipefail
 
@@ -43,9 +43,26 @@ run_pg() { docker run --rm -i ${DOCKER_NETWORK:+--network "$DOCKER_NETWORK"} -e 
 # Fail before touching the target if the file is not a readable dump.
 run_pg pg_restore --list < "$work/lantern.dump" > /dev/null
 
-echo "Emptying the target database…"
-run_pg sh -c 'psql "$TARGET" -v ON_ERROR_STOP=1 -q -c "DROP SCHEMA IF EXISTS public CASCADE" -c "CREATE SCHEMA public"'
-echo "Restoring…"
-run_pg sh -c 'pg_restore --dbname "$TARGET" --no-owner --no-acl --exit-on-error' < "$work/lantern.dump"
+# Empty the target and load the backup in ONE transaction: if anything fails, the database is left exactly as it was.
+# Emptying removes every extension and schema this role may drop (ones it may not, e.g. platform-owned, are skipped).
+echo "Restoring (all-or-nothing)…"
+run_pg sh -c '
+  {
+    cat <<"SQL"
+DO $$
+DECLARE r record;
+BEGIN
+  FOR r IN SELECT extname FROM pg_extension WHERE extname <> $q$plpgsql$q$ LOOP
+    BEGIN EXECUTE format($q$DROP EXTENSION IF EXISTS %I CASCADE$q$, r.extname); EXCEPTION WHEN OTHERS THEN NULL; END;
+  END LOOP;
+  FOR r IN SELECT nspname FROM pg_namespace WHERE nspname !~ $q$^pg_$q$ AND nspname <> $q$information_schema$q$ LOOP
+    BEGIN EXECUTE format($q$DROP SCHEMA IF EXISTS %I CASCADE$q$, r.nspname); EXCEPTION WHEN OTHERS THEN NULL; END;
+  END LOOP;
+END $$;
+CREATE SCHEMA IF NOT EXISTS public;
+SQL
+    pg_restore --no-owner --no-acl -f -
+  } | psql "$TARGET" -v ON_ERROR_STOP=1 --single-transaction -q -o /dev/null
+' < "$work/lantern.dump"
 echo "Done. Accounts in the restored database: $(run_pg sh -c 'psql "$TARGET" -tAc "SELECT count(*) FROM users"')"
 echo "Start the API service again. It needs the same FOODACCESS_SECRET_KEY as before, or saved preferences stay unreadable."

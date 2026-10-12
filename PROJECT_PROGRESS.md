@@ -68,6 +68,17 @@ listings are left out and a metric the server cannot compute shows as "—". No 
 `test_admin_overview_*`, `admin.test.tsx`, `auth.test.tsx`. Not yet deployed; the production admin account is created by
 setting `FOODACCESS_ADMIN_EMAIL` and `FOODACCESS_ADMIN_PASSWORD` on Render (`backend/render-start.sh`).
 
+**Unverified section (2026-10-12).** `/admin/unverified` lists every listing no reviewer has confirmed (`candidate` or
+`needs_review`; `GET /api/admin/queue?unverified=true`, which now also returns phone and website) with a verify form on
+each row: method required, optional "verify and publish" through the usual publish gates. There is deliberately no
+"verify all": each verification is one named reviewer's check of one listing. Rows with pending source changes send the
+reviewer to the full record. Tests: `test_admin_queue_unverified_*`, `admin.test.tsx`.
+
+**Migration numbering fix (2026-10-12).** Two migrations were both revision `0010` (provider portal and account
+encryption), so `alembic upgrade head` failed with "multiple heads" and Render could not start any build after the
+provider-portal one. The encryption migration is now `0011` (revises `0010`). The local dev database, which had run it
+under the old number, was given the two provider-portal columns and stamped `0011` by hand.
+
 ## Architectural decisions (see docs/architecture/ARCHITECTURE.md)
 
 1. Modular monolith: FastAPI, PostGIS, React SPA, and a cron-driven CLI. No brokers.
@@ -109,9 +120,12 @@ setting `FOODACCESS_ADMIN_EMAIL` and `FOODACCESS_ADMIN_PASSWORD` on Render (`bac
 - The staff portal is labelled "For services" and serves every kind of provider. `/api/provider/me` reports
   `offers_food` per listing; when false the portal hides the food-only controls ("Out of food", shelf items, event food
   offerings). The URL is still `/pantry`, and the surplus board remains food-only.
-- Search preferences and saved places are encrypted at rest with `FOODACCESS_SECRET_KEY` (migration `0010`; the
+- Search preferences and saved places are encrypted at rest with `FOODACCESS_SECRET_KEY` (migration `0011`; the
   `favorites` table is gone, saved places live in `users.saved_places`). Emails and preferred language are not
   encrypted. Without the key in production the data is stored in the clear with a logged warning.
+- Daily encrypted database backup to private Backblaze B2 storage (`.github/workflows/backup.yml`, restore with
+  `scripts/restore-backup.sh`, guide in `docs/deployment/BACKUPS.md`). Dump, encryption and restore were rehearsed
+  locally; the upload step has not run yet because it needs the repository secrets.
 - No automated accessibility audit (axe) has been run. WCAG practices were applied and checked by hand.
 - Development environment notes: the Homebrew `node` 26.5 binary is broken (missing `libsimdjson`), so `/usr/local/bin`
   node 22 was used, with `npm_config_cache` pointed at a writable directory.

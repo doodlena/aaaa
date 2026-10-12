@@ -46,7 +46,7 @@ export function AdminOverview() {
 
   const waiting = [
     { key: 'claims', value: ov.pending_claims, to: '/admin/claims' },
-    { key: 'unverified', value: (byStatus.candidate ?? 0) + (byStatus.needs_review ?? 0), to: '/admin' },
+    { key: 'unverified', value: (byStatus.candidate ?? 0) + (byStatus.needs_review ?? 0), to: '/admin/unverified' },
     { key: 'conflicts', value: num('pending_conflicts') + num('pending_duplicates'), to: '/admin/conflicts' },
     { key: 'reports', value: ov.open_reports, to: '/admin/reports' },
     { key: 'stale', value: num('stale'), to: '/admin?stale_only=true' },
