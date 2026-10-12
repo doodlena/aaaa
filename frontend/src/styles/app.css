@@ -950,12 +950,12 @@ input[type='radio'] {
   }
 }
 
-/* ---------- explorer ---------- */
+/* ---------- explorer ----------
+   The whole page scrolls (no inner scrollbars). --sticky-top (height of the sticky site header) and --toggle-h (phone
+   list/map toggle) are measured by ExplorerPage. */
 .explorer {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - var(--header-h));
-  min-height: 560px;
+  --sticky-top: var(--header-h);
+  --toggle-h: 0px;
 }
 .explorer__bar {
   padding: var(--sp-3) var(--sp-4);
@@ -1007,17 +1007,16 @@ input[type='radio'] {
   display: none;
 }
 .explorer__body {
-  flex: 1;
-  min-height: 0;
   display: grid;
   grid-template-columns: 280px minmax(340px, 460px) 1fr;
+  align-items: start;
 }
 .explorer__filters {
   position: relative;
-  overflow-y: auto;
   padding: var(--sp-4);
   border-right: 1px solid var(--line);
   background: var(--surface);
+  align-self: stretch;
 }
 .explorer__filters-head {
   display: flex;
@@ -1028,73 +1027,59 @@ input[type='radio'] {
   margin: 0 0 var(--sp-3);
 }
 .explorer__list {
-  /* Containing block for the cards' .visually-hidden text: without it those absolutely positioned spans sit at their
-     un-scrolled position on the page and make the whole document as tall as the list. */
+  /* Containing block for the cards' .visually-hidden text. */
   position: relative;
-  overflow-y: auto;
   padding: var(--sp-3) var(--sp-4) var(--sp-6);
   border-right: 1px solid var(--line);
+  align-self: stretch;
+  scroll-margin-top: var(--sticky-top);
+}
+/* Cards brought into view (a marker was picked) land below the sticky header, not under it. */
+.explorer .card {
+  scroll-margin-top: calc(var(--sticky-top) + var(--toggle-h) + var(--sp-3));
+  scroll-margin-bottom: var(--sp-4);
 }
 .explorer__map {
   position: relative;
   min-height: 320px;
 }
-/* Desktop explorer fills the viewport below header + optional demo banner. */
+/* Desktop: the map stays in view (sticky) while the filters and the list flow with the page. */
 @media (min-width: 900px) {
-  .app:has(.explorer) {
-    height: 100vh;
-    height: 100dvh;
-  }
-  .app:has(.explorer) > main {
-    min-height: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  .app:has(.explorer) .site-footer {
-    display: none;
-  }
-  .explorer {
-    flex: 1;
-    height: auto;
-    min-height: 0;
-  }
-  /* The list and map share one row that is exactly as tall as the space left; each scrolls or resizes inside it. */
-  .explorer__body {
-    grid-template-rows: minmax(0, 1fr);
-  }
-  /* Same side gutter as the bar and the panels, so the map does not run to the window edge. */
   .explorer__map {
-    min-height: 0;
-    margin: 0 var(--sp-4) var(--sp-3);
+    position: sticky;
+    top: calc(var(--sticky-top) + var(--sp-3));
+    height: calc(100vh - var(--sticky-top) - 2 * var(--sp-3));
+    height: calc(100dvh - var(--sticky-top) - 2 * var(--sp-3));
+    min-height: 420px;
+    margin: var(--sp-3) var(--sp-4);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
   }
 }
 @media (max-width: 1199px) and (min-width: 900px) {
   .explorer__body {
     grid-template-columns: minmax(340px, 440px) 1fr;
   }
+  /* Filters open as a drawer over the list, pinned below the header. */
   .explorer__filters {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 30;
+    top: var(--sticky-top);
+    bottom: 0;
+    left: 0;
     width: 320px;
-    height: calc(100% - 0px);
+    overflow-y: auto;
     box-shadow: var(--shadow);
   }
   .explorer__filters.is-open {
     display: block;
-  }
-  .explorer__body {
-    position: relative;
   }
   .explorer__filters-btn {
     display: inline-flex;
   }
 }
 @media (max-width: 899px) {
-  .explorer {
-    height: auto;
-    min-height: 0;
-  }
   .explorer__body {
     display: block;
   }
@@ -1106,6 +1091,7 @@ input[type='radio'] {
     inset: 0;
     z-index: 100;
     border: 0;
+    overflow-y: auto;
     padding: var(--sp-4) var(--sp-4) calc(var(--sp-6) + env(safe-area-inset-bottom, 0px));
   }
   .explorer__filters-done {
@@ -1115,7 +1101,6 @@ input[type='radio'] {
   }
   .explorer__list {
     border: 0;
-    overflow: visible;
   }
   .explorer--list .explorer__map {
     display: none;
@@ -1123,15 +1108,17 @@ input[type='radio'] {
   .explorer--map .explorer__list {
     display: none;
   }
+  /* Map mode: the map fills the screen below the header and the sticky toggle. */
   .explorer--map .explorer__map {
-    height: calc(100vh - 220px);
-    min-height: 380px;
-    margin: 0 var(--sp-4) var(--sp-3);
+    height: calc(100vh - var(--sticky-top) - var(--toggle-h));
+    height: calc(100dvh - var(--sticky-top) - var(--toggle-h));
+    min-height: 70vh;
+    margin: 0;
   }
   .explorer__bar {
     gap: var(--sp-3);
   }
-  /* On a phone the folded title keeps its own full-width row; Filters and List/Map sit below it. */
+  /* On a phone the folded title keeps its own full-width row; Filters sit below it. */
   .explorer__bar.is-collapsed .explorer__head {
     width: 100%;
     flex: none;
@@ -1139,6 +1126,15 @@ input[type='radio'] {
   .search--compact {
     width: 100%;
   }
+}
+.explorer__toggle {
+  position: sticky;
+  top: var(--sticky-top);
+  z-index: 40;
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: var(--sticky-top);
 }
 .viewtoggle {
   display: flex;
@@ -1204,7 +1200,8 @@ input[type='radio'] {
   border: 2px dashed var(--slate);
   box-shadow: none;
 }
-.card--fav {
+.card--fav,
+.card--nodate {
   grid-template-columns: 1fr;
 }
 .card--gone {
@@ -1314,22 +1311,6 @@ input[type='radio'] {
   font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
-.stub--unknown {
-  border-style: dashed;
-  border-color: var(--slate);
-  background: var(--surface);
-  color: var(--slate);
-  min-height: 72px;
-}
-.stub--unknown::before,
-.stub--unknown::after {
-  display: none;
-}
-.stub__q {
-  font-size: 1.75rem;
-  font-weight: 700;
-}
-
 .next {
   display: flex;
   gap: var(--sp-2);
@@ -1444,13 +1425,14 @@ input[type='radio'] {
   position: absolute;
   left: var(--sp-3);
   right: var(--sp-3);
+  /* above the map attribution line */
   bottom: calc(var(--sp-6) + env(safe-area-inset-bottom, 0px));
   background: var(--surface);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: 0 6px 24px rgba(11, 20, 43, 0.28);
   padding: var(--sp-3);
   border: 2px solid var(--talker);
-  z-index: 5;
+  z-index: 6;
 }
 .peek__name {
   font-weight: 700;
@@ -1462,6 +1444,7 @@ input[type='radio'] {
 }
 .peek__actions {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--sp-2);
 }
 
@@ -1496,21 +1479,61 @@ input[type='radio'] {
   left: var(--sp-3);
   bottom: 34px;
   z-index: 3;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-1) var(--sp-3);
-  background: rgba(255, 255, 255, 0.94);
-  padding: var(--sp-2) var(--sp-3);
+  background: rgba(255, 255, 255, 0.96);
   border-radius: var(--radius-sm);
   font-size: var(--fs-xs);
   font-weight: 700;
   box-shadow: var(--shadow);
   max-width: calc(100% - 2 * var(--sp-3));
 }
-.map__legend > span {
+.map__legend-toggle {
   display: inline-flex;
   align-items: center;
   gap: var(--sp-1);
+  min-height: 36px;
+  padding: 0 var(--sp-3);
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--ink);
+  cursor: pointer;
+}
+.map__legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1) var(--sp-3);
+  padding: 0 var(--sp-3) var(--sp-2);
+}
+.map__legend-items[hidden] {
+  display: none;
+}
+.map__legend > .map__legend-items > span {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+}
+/* Phones: the key sits top-left (folded by default); the bottom belongs to the selected-place card. */
+@media (max-width: 899px) {
+  .map__legend {
+    top: var(--sp-3);
+    bottom: auto;
+    max-width: calc(100% - 2 * var(--sp-3) - 56px);
+  }
+  .map__legend-toggle {
+    min-height: var(--tap);
+  }
+  .map__legend.is-open {
+    z-index: 5;
+  }
+  /* "Search this area" sits below the folded key instead of on top of it. */
+  .map__search-area {
+    top: calc(var(--sp-3) + var(--tap) + var(--sp-2));
+  }
+  /* Bigger zoom buttons (top-right) for fingers. */
+  .map .maplibregl-ctrl-group button {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 /* markers: a pin-like disc + tail. verified = solid, stale = dashed ring, uncertain = dashed + "?" */
@@ -1548,11 +1571,18 @@ input[type='radio'] {
   border-color: var(--slate);
   border-style: dashed;
 }
+/* The button around a pin is at least 44 x 44 px so it is easy to tap; the pin's tip stays at the bottom (anchor). */
 .mk-wrap {
   background: none;
   border: 0;
   padding: 0 0 4px;
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 .mk-wrap.is-selected {
   z-index: 10;
@@ -1576,8 +1606,8 @@ input[type='radio'] {
   font-size: 10px;
 }
 .mk-cluster {
-  min-width: 40px;
-  height: 40px;
+  min-width: 44px;
+  height: 44px;
   padding: 0 8px;
   border-radius: 999px;
   background: var(--surface);
@@ -3659,3 +3689,172 @@ form.is-ai-drafted select {
 
 .name-search { flex-wrap: wrap; gap: var(--sp-2); }
 .name-search input { min-width: 0; flex: 1 1 220px; }
+
+/* ---------- AI-found listing info (detail page) ----------
+   Always labelled with the "AI-found" badge (text, not colour alone) and a dotted left rule — distinct from confirmed
+   (solid) and unknown (dashed) information. */
+.ai-badge--found {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 0;
+  white-space: nowrap;
+}
+.aifacts {
+  margin: var(--sp-3) 0;
+  padding: var(--sp-2) var(--sp-3);
+  border-left: 4px dotted var(--berry);
+  background: var(--surface);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.aifacts--compact {
+  margin: var(--sp-1) 0 0;
+  padding: var(--sp-1) var(--sp-2);
+}
+.aifacts__more {
+  margin: 0 0 var(--sp-2);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+.aifact + .aifact {
+  margin-top: var(--sp-2);
+}
+.aifact__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+  margin: 0 0 2px;
+  font-size: var(--fs-sm);
+}
+.aifact__value {
+  margin: 0;
+  white-space: pre-line;
+}
+.aifact__sources {
+  margin: 2px 0 0;
+  font-size: var(--fs-sm);
+  overflow-wrap: anywhere;
+}
+.aifact__sources a {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.aifacts__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-1);
+  margin: var(--sp-2) 0 0;
+  font-size: var(--fs-xs);
+  color: var(--ink-soft);
+}
+.aifacts__notice .icon {
+  flex: none;
+  margin-top: 2px;
+}
+.checklist__ai {
+  grid-column: 1 / -1;
+  font-weight: 400;
+}
+.ailookup {
+  margin: 0 0 var(--sp-4);
+  padding: var(--sp-3);
+  border: 2px solid var(--glow);
+  border-radius: var(--radius);
+  background: var(--glow-soft, #fdeac2);
+}
+.ailookup__btn {
+  background: var(--night, #14203f);
+  color: #fff;
+  border-color: var(--night, #14203f);
+  font-weight: 700;
+  min-height: var(--tap);
+}
+.ailookup__btn:hover:not(:disabled) {
+  background: var(--night-deep, #0b142b);
+}
+.ailookup__btn .ai-badge {
+  margin-left: var(--sp-1);
+}
+.ailookup__hint {
+  margin: var(--sp-2) 0 0;
+  font-size: var(--fs-sm);
+  color: var(--ink);
+}
+.ailookup__status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin: var(--sp-2) 0 0;
+  font-weight: 700;
+}
+.ailookup__status--error {
+  color: var(--brick);
+}
+.ailookup__status:focus-visible {
+  outline: var(--focus, 3px solid var(--berry));
+  outline-offset: 2px;
+}
+.ailookup:not(:has(.ailookup__btn)) {
+  padding: var(--sp-2) var(--sp-3);
+}
+.ailookup:not(:has(.ailookup__btn)) .ailookup__status {
+  margin: 0;
+}
+
+/* Find help: the address search and the AI box share one row on desktop — same label size and height, same input and
+   button height, both aligned to the top of the row (the AI privacy line hangs below). Stacked full-width on phones. */
+.explorer__bar .search--compact,
+.explorer__bar .aisearch--compact {
+  align-self: flex-start;
+  margin-top: 0;
+}
+.search--compact .search__label,
+.aisearch--compact .aisearch__label {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  min-height: 24px;
+  margin: 0 0 var(--sp-1);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.aisearch--compact .aisearch__label .ai-badge {
+  margin-left: 0;
+}
+.aisearch--compact .search__row input {
+  min-height: var(--tap);
+  font-size: var(--fs-md);
+}
+.aisearch--compact .search__row .btn {
+  min-height: var(--tap);
+  white-space: nowrap;
+}
+.aisearch--compact .aisearch__result {
+  margin-top: 0;
+}
+@media (max-width: 640px) {
+  .aisearch--compact .search__row {
+    flex-direction: column;
+  }
+  .aisearch--compact .search__row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Align the "Describe what you need" box with the address search row (same input top, height and button line). */
+.aisearch--compact .search__row { align-items: stretch; margin: 0; }
+.aisearch--compact .search__row input,
+.aisearch--compact .search__row .btn { margin: 0; height: 46px; box-sizing: border-box; }
+.aisearch--compact .aisearch__label { display: flex; align-items: center; gap: 6px; line-height: 1.25; min-height: 24px; margin: 0 0 4px; }
+.aisearch--compact .aisearch__form { margin: 0; }
+
+.home-name-search { margin-top: var(--sp-4); padding-top: var(--sp-3); border-top: 1px dashed var(--line); }
+.home-name-search label { display: block; font-weight: 700; margin-bottom: var(--sp-2); }
+.home-name-search .search__row { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
+.home-name-search input { flex: 1 1 260px; min-width: 0; }

@@ -10,6 +10,7 @@ import { useAsync } from '../lib/useAsync';
 import { useAuth } from '../state/auth';
 import { useDocumentTitle } from '../state/meta';
 import { OperatingBadge, SyntheticBadge, TriChip, VerificationBadge } from './Badges';
+import { AIFacts, AIInfoProvider } from './AIInfo';
 import { Icon } from './Icon';
 import { LiveStatusTag, PostedBy, ReportsNotice, ShelfTags } from './Live';
 import { ReportProblem } from './ReportDialog';
@@ -201,6 +202,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
   };
 
   return (
+    <AIInfoProvider id={r.id}>
     <article className="detail" aria-labelledby={`detail-${r.id}-title`}>
       <header className="detail__head">
         <div className="card__badges">
@@ -296,6 +298,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
           )}
           <Row label={t('detail.organization')}>{r.organization.public_name || r.organization.name}</Row>
         </dl>
+        <AIFacts fields={['phone']} confirmed={!!r.phone} />
         {r.organization.description && (
           <TranslatableText original={r.organization.description} translation={findTranslation(tr, 'organization', '*', 'description')} />
         )}
@@ -358,6 +361,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
             </ul>
           </>
         )}
+        <AIFacts fields={['services']} confirmed={r.services.length > 0 || r.food_types.length > 0} />
       </section>
 
       <section className="detail__section" aria-labelledby={`s-sched-${r.id}`}>
@@ -396,6 +400,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
             <Unknown>{r.events.length ? t('detail.onlyEvents') : t('detail.distributionUnknown')}</Unknown>
           </p>
         )}
+        <AIFacts fields={['hours', 'dates']} confirmed={r.schedules.distribution.length > 0 || r.upcoming_windows.length > 0} />
 
         {r.upcoming_windows.length > 0 && (
           <>
@@ -518,6 +523,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
             ))}
           </tbody>
         </table>
+        <AIFacts fields={['eligibility']} confirmed={!allUnknown} />
       </section>
 
       <section className="detail__section" aria-labelledby={`s-access-${r.id}`}>
@@ -534,6 +540,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
           {r.accessibility.notes && <Row label={t('detail.accessNotes')}>{r.accessibility.notes}</Row>}
           <Row label={t('detail.languages')}>{r.languages.length ? r.languages.map((l) => languageName(l, lang)).join(', ') : <Unknown />}</Row>
         </dl>
+        <AIFacts fields={['languages']} confirmed={r.languages.length > 0} />
       </section>
 
       <section className="detail__section" aria-labelledby={`s-src-${r.id}`}>
@@ -572,6 +579,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
         </div>
       </section>
     </article>
+    </AIInfoProvider>
   );
 }
 

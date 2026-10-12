@@ -406,7 +406,8 @@
     "clusterTitle": "{{count}} 个地点——请放大",
     "kindUncertain": "可能符合（未确认）",
     "youAreHere": "搜索的位置",
-    "livePosted": "今天已发布"
+    "livePosted": "今天已发布",
+    "legend": "地图图例"
   },
   "schedule": {
     "weekOfMonth": {
@@ -1383,5 +1384,35 @@
     "nearestBus": "最近：{{name}}（约 {{min}} 分钟）",
     "noBus": "步行5分钟内没有公交站。",
     "needRide": "需要交通？查看免费或低价交通项目"
+  },
+  "aiInfo": {
+    "badge": "AI 查得",
+    "button": "用 AI 查找缺少的信息",
+    "hint": "AI 会在网上查找此地的开放时间、证件要求、需携带的物品等，并列出每个来源。大约需要一分钟。",
+    "searching": "正在网上搜索…",
+    "found_one": "AI 找到 {{count}} 条信息，已显示在下方相应部分，并标注“AI 查得”。",
+    "found_other": "AI 找到 {{count}} 条信息，已显示在下方相应部分，并标注“AI 查得”。",
+    "nothingFound": "AI 没有找到此地的其他信息。",
+    "moreDetails": "更多详情（AI 查得）",
+    "notice": "由 AI 从所链接的来源中找到——请向服务提供方确认。",
+    "sources_one": "来源：",
+    "sources_other": "来源：",
+    "opensSource": "在新标签页中打开来源",
+    "field": {
+      "what_to_bring": "需携带的物品",
+      "id_required": "证件",
+      "eligibility": "谁可以获得帮助",
+      "hours": "开放时间",
+      "dates": "日期",
+      "services": "服务",
+      "languages": "语言",
+      "phone": "电话"
+    },
+    "error": {
+      "rateLimited": "目前 AI 查询过多。请稍后再试，或致电服务提供方。",
+      "unavailable": "AI 查询暂时不可用。请稍后再试，或致电服务提供方。",
+      "off": "AI 查询已关闭。",
+      "generic": "AI 查询失败。请稍后再试。"
+    }
   }
 }

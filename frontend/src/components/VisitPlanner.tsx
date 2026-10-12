@@ -4,6 +4,7 @@ import { api, API_BASE } from '../api/client';
 import type { ChecklistAction, ResourceDetail, VisitPlan, Window } from '../api/types';
 import { formatAddress, formatDate, formatTimeRange } from '../lib/format';
 import { useAsync } from '../lib/useAsync';
+import { AIFacts, AILookupPanel, useAIInfo } from './AIInfo';
 import { Icon } from './Icon';
 import { ErrorMessage, Loading } from './Status';
 
@@ -32,6 +33,8 @@ function WindowLine({ w }: { w: Window }) {
 
 export function Checklist({ plan }: { plan: VisitPlan }) {
   const { t } = useTranslation();
+  const { fields } = useAIInfo();
+  const aiId = fields.some((f) => f.field === 'id_required');
   return (
     <ul className="checklist" aria-label={t('visit.whatToBring')}>
       {plan.checklist.map((c) => (
@@ -41,6 +44,12 @@ export function Checklist({ plan }: { plan: VisitPlan }) {
           </span>
           <span className="checklist__label">{t(`visit.item.${c.key}`, { defaultValue: c.key })}</span>
           <span className="checklist__action">{actionText(c.key, c.action, t)}</span>
+          {/* Unknown ID rule: show what the AI found about ID right on the item (labelled, with sources). */}
+          {c.key === 'photo_id' && c.action === 'ask' && aiId && (
+            <div className="checklist__ai">
+              <AIFacts fields={['id_required']} confirmed={false} compact />
+            </div>
+          )}
         </li>
       ))}
     </ul>
@@ -119,12 +128,14 @@ function PrintCard({ r, plan }: { r: ResourceDetail; plan: VisitPlan }) {
 
 export function VisitPlanner({ r, headingLevel = 2 }: { r: ResourceDetail; headingLevel?: number }) {
   const { t } = useTranslation();
+  const ai = useAIInfo();
   const { data: plan, error, loading, reload } = useAsync((signal) => api.visitPlan(r.id, signal), [r.id]);
   const H = `h${Math.min(headingLevel, 6)}` as 'h2';
   const H3 = `h${Math.min(headingLevel + 1, 6)}` as 'h3';
   return (
     <section className="detail__section visit" aria-labelledby={`s-visit-${r.id}`} data-testid="visit-planner">
       <H id={`s-visit-${r.id}`}>{t('visit.title')}</H>
+      <AILookupPanel />
       {loading && !plan && <Loading label={t('visit.loading')} />}
       {!!error && <ErrorMessage error={error} onRetry={reload} />}
       {plan && (
@@ -142,15 +153,23 @@ export function VisitPlanner({ r, headingLevel = 2 }: { r: ResourceDetail; headi
               ))}
             </ul>
           ) : (
-            <p className="unknown-text">
-              <Icon name="question" size={14} />
-              {t('visit.noTimes')}
-            </p>
+            <>
+              <p className="unknown-text">
+                <Icon name="question" size={14} />
+                {t('visit.noTimes')}
+              </p>
+              <AIFacts fields={['hours', 'dates']} confirmed={false} />
+            </>
           )}
 
           <H3>{t('visit.whatToBring')}</H3>
           <p className="muted">{t('visit.checklistIntro')}</p>
           <Checklist plan={plan} />
+          <AIFacts fields={['what_to_bring']} confirmed={!plan.checklist.some((c) => c.action === 'ask')} />
+          {/* ID info not already shown on an "ask" photo-ID item: it adds to confirmed rules, never replaces them. */}
+          {ai.fields.some((f) => f.field === 'id_required') && !plan.checklist.some((c) => c.key === 'photo_id' && c.action === 'ask') && (
+            <AIFacts fields={['id_required']} confirmed />
+          )}
           {plan.suggestions.length > 0 && (
             <ul className="suggestions" aria-label={t('visit.suggestionsLabel')}>
               {plan.suggestions.map((s) => (

@@ -8,17 +8,12 @@ import { MatchReasons, OperatingBadge, SyntheticBadge, VerificationBadge, Warnin
 import { Icon } from './Icon';
 import { LiveSummary, ReportsNotice } from './Live';
 
-/** "Ticket stub" showing the next distribution date — or a dashed, explicit "schedule not confirmed". */
+/** "Ticket stub" showing the next distribution date. Without a date nothing is rendered (the card text uses the
+ * space); the "schedule not confirmed" line in the card body still says so in words. */
 export function DateStub({ item }: { item: ResourceSummary }) {
   const { i18n } = useTranslation();
   const nd = item.next_distribution;
-  if (!nd) {
-    return (
-      <div className="stub stub--unknown" aria-hidden="true">
-        <span className="stub__q">?</span>
-      </div>
-    );
-  }
+  if (!nd) return null;
   const d = parseDate(nd.date);
   const loc = localeOf(i18n.language);
   return (
@@ -70,7 +65,7 @@ export const ResultCard = forwardRef<HTMLLIElement, Props>(function ResultCard({
   return (
     <li
       ref={ref}
-      className={`card ${selected ? 'is-selected' : ''} ${uncertain ? 'card--uncertain' : ''} ${item.live ? `card--live card--live-${item.live.status}` : ''}`}
+      className={`card ${item.next_distribution ? '' : 'card--nodate'} ${selected ? 'is-selected' : ''} ${uncertain ? 'card--uncertain' : ''} ${item.live ? `card--live card--live-${item.live.status}` : ''}`}
       data-resource-id={item.id}
       aria-labelledby={headingId}
       aria-current={selected ? 'true' : undefined}

@@ -68,6 +68,36 @@ export default function ExplorerPage() {
   });
   const filtersBtnRef = useRef<HTMLButtonElement>(null);
   const drawerRef = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLDivElement>(null);
+  const listRef = useRef<HTMLElement>(null);
+
+  // The whole page scrolls. Sticky pieces (desktop map, phone list/map toggle) sit just below the sticky site header,
+  // whose height changes with wrapping and zoom, so measure it (and the toggle) into CSS variables.
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+    const header = document.querySelector<HTMLElement>('.site-header');
+    const measure = () => {
+      root.style.setProperty('--sticky-top', `${header ? Math.round(header.getBoundingClientRect().height) : 0}px`);
+      root.style.setProperty('--toggle-h', `${toggleRef.current ? Math.round(toggleRef.current.getBoundingClientRect().height) : 0}px`);
+    };
+    measure();
+    if (typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(measure);
+    if (header) ro.observe(header);
+    if (toggleRef.current) ro.observe(toggleRef.current);
+    return () => ro.disconnect();
+  }, [narrow]);
+
+  /** Phone list/map switch. The map view brings the toggle up under the header so the map fills the screen. */
+  const showView = useCallback((view: 'list' | 'map') => {
+    setMobileView(view);
+    const el = toggleRef.current;
+    if (el && el.getBoundingClientRect().top > 0) {
+      requestAnimationFrame(() => el.scrollIntoView?.({ block: 'start' }));
+    }
+  }, []);
 
   const update = useCallback(
     (patch: Partial<Filters>) => {
@@ -119,8 +149,14 @@ export default function ExplorerPage() {
 
   // "Show on map" from the list on a phone switches to the map view.
   useEffect(() => {
-    if (narrow && sel.origin === 'list' && sel.id !== null) setMobileView('map');
-  }, [narrow, sel.id, sel.origin, sel.seq]);
+    if (narrow && sel.origin === 'list' && sel.id !== null) showView('map');
+  }, [narrow, sel.id, sel.origin, sel.seq, showView]);
+
+  // Opening a listing in the panel: if the page is scrolled past the top of the list, bring the panel's top into view.
+  useEffect(() => {
+    const el = listRef.current;
+    if (viewId && el && el.getBoundingClientRect().top < 0) el.scrollIntoView?.({ block: 'start' });
+  }, [viewId]);
 
   const jurisdictions = useAsync(() => api.jurisdictions(), []);
   const jurisdictionName = (Array.isArray(jurisdictions.data) ? jurisdictions.data : []).find((j) => j.id === filters.jurisdiction)?.name || filters.jurisdiction;
@@ -137,7 +173,7 @@ export default function ExplorerPage() {
   const mapOffset = pins.data ? 1 : data ? (data.page - 1) * data.page_size + 1 : 1;
 
   return (
-    <div className={`explorer ${narrow ? `explorer--${mobileView}` : ''}`}>
+    <div ref={rootRef} className={`explorer ${narrow ? `explorer--${mobileView}` : ''}`}>
       <div className={`explorer__bar ${barOpen ? '' : 'is-collapsed'}`}>
         <div className="explorer__head">
           <h1 className="explorer__title">
@@ -223,23 +259,27 @@ export default function ExplorerPage() {
             {nFilters ? t('filters.buttonCount', { count: nFilters }) : t('filters.button')}
           </button>
         </div>
-        {narrow && (
-          <div className="viewtoggle" role="group" aria-label={t('explorer.viewToggle')}>
-            <button type="button" aria-pressed={mobileView === 'list'} onClick={() => setMobileView('list')}>
-              <Icon name="list" />
-              {t('explorer.showList')}
-            </button>
-            <button type="button" aria-pressed={mobileView === 'map'} onClick={() => setMobileView('map')}>
-              <Icon name="map" />
-              {t('explorer.showMap')}
-            </button>
-          </div>
-        )}
       </div>
 
       {showCrisis && (
         <div className="explorer__crisis">
           <CrisisCallout compact />
+        </div>
+      )}
+
+      {narrow && (
+        // Its own block (not inside the bar) so it can stay stuck under the header while the page scrolls.
+        <div className="explorer__toggle" ref={toggleRef}>
+          <div className="viewtoggle" role="group" aria-label={t('explorer.viewToggle')}>
+            <button type="button" aria-pressed={mobileView === 'list'} onClick={() => showView('list')}>
+              <Icon name="list" />
+              {t('explorer.showList')}
+            </button>
+            <button type="button" aria-pressed={mobileView === 'map'} onClick={() => showView('map')}>
+              <Icon name="map" />
+              {t('explorer.showMap')}
+            </button>
+          </div>
         </div>
       )}
 
@@ -269,7 +309,7 @@ export default function ExplorerPage() {
           )}
         </aside>
 
-        <section className="explorer__list" aria-label={t('explorer.resultsLabel')}>
+        <section ref={listRef} className="explorer__list" aria-label={t('explorer.resultsLabel')}>
           {viewId ? (
             <div className="panel">
               <button type="button" className="btn btn--ghost btn--sm" onClick={closeDetail}>
@@ -310,14 +350,24 @@ export default function ExplorerPage() {
             />
           </Suspense>
           {narrow && mobileView === 'map' && selected && (
-            <div className="peek">
+            <div className="peek" role="region" aria-label={selected.name}>
               <p className="peek__name">{selected.name}</p>
               <p className="peek__addr">{formatAddress(selected.address)}</p>
               <div className="peek__actions">
                 <Link className="btn btn--primary btn--sm" to={`/resource/${selected.id}`}>
                   {t('card.details')}
                 </Link>
-                <button type="button" className="btn btn--ghost btn--sm" onClick={() => setMobileView('list')}>
+                <button
+                  type="button"
+                  className="btn btn--ghost btn--sm"
+                  onClick={() => {
+                    showView('list');
+                    // The list was hidden when the marker was picked; bring the selected card into view now.
+                    requestAnimationFrame(() =>
+                      document.querySelector(`.explorer__list [data-resource-id="${selected.id}"]`)?.scrollIntoView?.({ block: 'center' }),
+                    );
+                  }}
+                >
                   {t('explorer.showInList')}
                 </button>
               </div>

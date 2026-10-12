@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router';
 import { AISearch } from '../components/AISearch';
 import { TriChip } from '../components/Badges';
 import { Icon } from '../components/Icon';
@@ -44,6 +45,7 @@ export function HomePage() {
           </h2>
           <p className="muted">{t('home.findLead')}</p>
           <SearchForm />
+          <NameSearch />
         </div>
       </section>
 
@@ -97,5 +99,31 @@ export function HomePage() {
         </div>
       </section>
     </div>
+  );
+}
+
+/** Search for a specific place or organization by name (e.g. a church or clinic), from the home page. */
+function NameSearch() {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const [q, setQ] = useState('');
+  return (
+    <form
+      className="home-name-search"
+      role="search"
+      onSubmit={(e) => {
+        e.preventDefault();
+        const v = q.trim();
+        if (v) navigate(`/find?q=${encodeURIComponent(v)}&sort=name`);
+      }}
+    >
+      <label htmlFor="home-name-q">{t('explorer.nameSearch')}</label>
+      <div className="search__row">
+        <input id="home-name-q" type="search" value={q} maxLength={100} placeholder={t('explorer.nameSearchPlaceholder')} onChange={(e) => setQ(e.target.value)} />
+        <button type="submit" className="btn btn--secondary">
+          <Icon name="search" size={16} /> {t('explorer.nameSearchGo')}
+        </button>
+      </div>
+    </form>
   );
 }

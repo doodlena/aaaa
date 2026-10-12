@@ -1,4 +1,5 @@
 import type { DuplicateAIOpinion,
+  AIInfo,
   AdminClaim,
   AdminReport,
   AISearchResult,
@@ -127,6 +128,8 @@ export const api = {
   jurisdictions: () => request<Jurisdiction[]>('GET', '/jurisdictions'),
   verificationMeta: () => request<VerificationMeta>('GET', '/meta/verification'),
   features: () => request<Features>('GET', '/meta/features'),
+  aiInfo: (id: number | string, signal?: AbortSignal) => request<AIInfo>('GET', `/resources/${id}/ai-info`, undefined, signal),
+  aiInfoLookup: (id: number | string) => request<AIInfo>('POST', `/resources/${id}/ai-info`),
   visitPlan: (id: number | string, signal?: AbortSignal) => request<VisitPlan>('GET', `/resources/${id}/visit-plan`, undefined, signal),
   report: (id: number | string, kind: ReportKind, note?: string) =>
     request<{ id: number; status: string }>('POST', `/resources/${id}/reports`, { kind, note: note?.trim() || null }),

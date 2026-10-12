@@ -396,7 +396,7 @@ export interface Features {
   demo_mode: boolean;
   /** Optional sign-in with an OpenID Connect provider; `provider` is its display name (may be empty). */
   oauth?: { enabled: boolean; provider: string };
-  ai: { search: boolean; announcement_drafts: boolean; structure_suggestions: boolean; translation: boolean; model: string | null };
+  ai: { search: boolean; listing_lookup?: boolean; announcement_drafts: boolean; structure_suggestions: boolean; translation: boolean; model: string | null };
 }
 
 export type ChecklistKey =
@@ -519,3 +519,19 @@ export interface GettingThere {
   nearest_bus: TransitStop[];
   attribution: string;
 }
+
+/** AI web lookup for one listing (GET/POST /api/resources/{id}/ai-info). Cached server-side for 30 days. */
+export type AIInfoFieldName = 'what_to_bring' | 'id_required' | 'eligibility' | 'hours' | 'dates' | 'services' | 'languages' | 'phone';
+export interface AIInfoSource {
+  url: string;
+  title?: string | null;
+  quote?: string | null;
+}
+export interface AIInfoField {
+  field: AIInfoFieldName | string;
+  value: string | string[];
+  sources: AIInfoSource[];
+}
+export type AIInfo =
+  | { status: 'none'; available: boolean }
+  | { status: 'ready'; fields: AIInfoField[]; generated_at?: string; model?: string; notice?: string };

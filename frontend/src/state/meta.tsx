@@ -5,7 +5,7 @@ import type { Features, VerificationMeta } from '../api/types';
 /** Brand fallback when /api/meta/features is unreachable. The real name always comes from the API (one config change). */
 export const DEFAULT_APP_NAME = 'Lantern';
 
-export const NO_AI: Features['ai'] = { search: false, announcement_drafts: false, structure_suggestions: false, translation: false, model: null };
+export const NO_AI: Features['ai'] = { search: false, listing_lookup: false, announcement_drafts: false, structure_suggestions: false, translation: false, model: null };
 
 interface MetaValue {
   meta: VerificationMeta | null;

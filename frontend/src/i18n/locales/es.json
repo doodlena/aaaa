@@ -406,7 +406,8 @@
     "clusterTitle": "{{count}} lugares — acerque el mapa",
     "kindUncertain": "Podría coincidir (no confirmado)",
     "youAreHere": "Lugar buscado",
-    "livePosted": "Publicado hoy"
+    "livePosted": "Publicado hoy",
+    "legend": "Leyenda del mapa"
   },
   "schedule": {
     "weekOfMonth": {
@@ -1383,5 +1384,35 @@
     "nearestBus": "la más cercana: {{name}} (~{{min}} min)",
     "noBus": "No hay paradas de autobús a 5 minutos a pie.",
     "needRide": "¿Necesita transporte? Vea programas gratuitos o de bajo costo"
+  },
+  "aiInfo": {
+    "badge": "Hallado por IA",
+    "button": "Buscar información que falta con IA",
+    "hint": "La IA busca en la web el horario de este lugar, si piden identificación, qué llevar y más, y muestra cada fuente. Tarda alrededor de un minuto.",
+    "searching": "Buscando en la web…",
+    "found_one": "La IA encontró {{count}} dato. Se muestra en su sección abajo, marcado «Hallado por IA».",
+    "found_other": "La IA encontró {{count}} datos. Se muestran en sus secciones abajo, marcados «Hallado por IA».",
+    "nothingFound": "La IA no encontró información adicional sobre este lugar.",
+    "moreDetails": "Más detalles (hallados por IA)",
+    "notice": "Encontrado por IA en las fuentes enlazadas: confírmelo con el proveedor.",
+    "sources_one": "Fuente:",
+    "sources_other": "Fuentes:",
+    "opensSource": "abre la fuente en una pestaña nueva",
+    "field": {
+      "what_to_bring": "Qué llevar",
+      "id_required": "Identificación",
+      "eligibility": "Quién puede recibir ayuda",
+      "hours": "Horario",
+      "dates": "Fechas",
+      "services": "Servicios",
+      "languages": "Idiomas",
+      "phone": "Teléfono"
+    },
+    "error": {
+      "rateLimited": "Demasiadas búsquedas con IA en este momento. Inténtelo más tarde o llame al proveedor.",
+      "unavailable": "La búsqueda con IA no está disponible ahora. Inténtelo más tarde o llame al proveedor.",
+      "off": "La búsqueda con IA está desactivada.",
+      "generic": "La búsqueda con IA no funcionó. Inténtelo más tarde."
+    }
   }
 }

@@ -406,7 +406,8 @@
     "clusterTitle": "{{count}} địa điểm — hãy phóng to",
     "kindUncertain": "Có thể phù hợp (chưa xác nhận)",
     "youAreHere": "Vị trí đã tìm",
-    "livePosted": "Đã đăng hôm nay"
+    "livePosted": "Đã đăng hôm nay",
+    "legend": "Chú thích bản đồ"
   },
   "schedule": {
     "weekOfMonth": {
@@ -1383,5 +1384,35 @@
     "nearestBus": "gần nhất: {{name}} (~{{min}} phút)",
     "noBus": "Không có trạm xe buýt trong 5 phút đi bộ.",
     "needRide": "Cần phương tiện? Xem chương trình đưa đón miễn phí hoặc giá rẻ"
+  },
+  "aiInfo": {
+    "badge": "AI tìm thấy",
+    "button": "Tìm thông tin còn thiếu bằng AI",
+    "hint": "AI tìm trên web giờ mở cửa, quy định về giấy tờ tùy thân, những thứ cần mang và hơn thế nữa, kèm theo mọi nguồn. Mất khoảng một phút.",
+    "searching": "Đang tìm trên web…",
+    "found_one": "AI đã tìm thấy {{count}} thông tin. Thông tin hiển thị trong mục tương ứng bên dưới, có nhãn “AI tìm thấy”.",
+    "found_other": "AI đã tìm thấy {{count}} thông tin. Thông tin hiển thị trong các mục tương ứng bên dưới, có nhãn “AI tìm thấy”.",
+    "nothingFound": "AI không tìm thấy thêm thông tin nào về nơi này.",
+    "moreDetails": "Thêm chi tiết (AI tìm thấy)",
+    "notice": "AI tìm thấy từ các nguồn được liên kết — hãy xác nhận với nhà cung cấp.",
+    "sources_one": "Nguồn:",
+    "sources_other": "Nguồn:",
+    "opensSource": "mở nguồn trong thẻ mới",
+    "field": {
+      "what_to_bring": "Cần mang theo",
+      "id_required": "Giấy tờ tùy thân",
+      "eligibility": "Ai được giúp",
+      "hours": "Giờ mở cửa",
+      "dates": "Ngày",
+      "services": "Dịch vụ",
+      "languages": "Ngôn ngữ",
+      "phone": "Điện thoại"
+    },
+    "error": {
+      "rateLimited": "Hiện có quá nhiều yêu cầu tìm bằng AI. Vui lòng thử lại sau hoặc gọi cho nhà cung cấp.",
+      "unavailable": "Hiện không thể tìm bằng AI. Vui lòng thử lại sau hoặc gọi cho nhà cung cấp.",
+      "off": "Tính năng tìm bằng AI đang tắt.",
+      "generic": "Tìm bằng AI không thành công. Vui lòng thử lại sau."
+    }
   }
 }

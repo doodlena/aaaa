@@ -406,7 +406,8 @@
     "clusterTitle": "장소 {{count}}곳 — 확대하세요",
     "kindUncertain": "일치할 수 있음(확인되지 않음)",
     "youAreHere": "검색한 위치",
-    "livePosted": "오늘 게시됨"
+    "livePosted": "오늘 게시됨",
+    "legend": "지도 범례"
   },
   "schedule": {
     "weekOfMonth": {
@@ -1383,5 +1384,35 @@
     "nearestBus": "가장 가까운 곳: {{name}} (약 {{min}}분)",
     "noBus": "도보 5분 이내 버스 정류장이 없습니다.",
     "needRide": "교통편이 필요하세요? 무료·저가 교통 프로그램 보기"
+  },
+  "aiInfo": {
+    "badge": "AI 검색",
+    "button": "AI로 누락된 정보 찾기",
+    "hint": "AI가 웹에서 이곳의 운영 시간, 신분증 규정, 준비물 등을 찾아 모든 출처와 함께 보여 줍니다. 약 1분 정도 걸립니다.",
+    "searching": "웹 검색 중…",
+    "found_one": "AI가 정보 {{count}}건을 찾았습니다. 아래 각 섹션에 “AI 검색”으로 표시됩니다.",
+    "found_other": "AI가 정보 {{count}}건을 찾았습니다. 아래 각 섹션에 “AI 검색”으로 표시됩니다.",
+    "nothingFound": "AI가 이곳에 대한 추가 정보를 찾지 못했습니다.",
+    "moreDetails": "추가 정보 (AI 검색)",
+    "notice": "링크된 출처에서 AI가 찾은 정보입니다 — 제공 기관에 확인하세요.",
+    "sources_one": "출처:",
+    "sources_other": "출처:",
+    "opensSource": "새 탭에서 출처 열기",
+    "field": {
+      "what_to_bring": "준비물",
+      "id_required": "신분증",
+      "eligibility": "지원 대상",
+      "hours": "운영 시간",
+      "dates": "날짜",
+      "services": "서비스",
+      "languages": "언어",
+      "phone": "전화"
+    },
+    "error": {
+      "rateLimited": "지금은 AI 검색 요청이 너무 많습니다. 나중에 다시 시도하거나 기관에 전화하세요.",
+      "unavailable": "지금은 AI 검색을 사용할 수 없습니다. 나중에 다시 시도하거나 기관에 전화하세요.",
+      "off": "AI 검색이 꺼져 있습니다.",
+      "generic": "AI 검색이 실패했습니다. 나중에 다시 시도하세요."
+    }
   }
 }

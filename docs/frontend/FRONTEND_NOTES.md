@@ -57,6 +57,22 @@ Developer documentation lives in `frontend/README.md`. This file records status 
 - Results (2026-10-12): Vitest 76/76. Playwright against the dev API (real data, demo_mode=false): 5 passed, 7 skipped,
   0 failed. Against a temporary second API with `FOODACCESS_SHOW_SYNTHETIC=true` (:8001 via Vite :5174): 12/12 passed.
 
+### Explorer scrolling, mobile map, AI-found listing info (2026-10-12)
+
+- /find now scrolls as one page: filters and list flow (no inner scrollbars); on desktop the map is `position: sticky`
+  below the measured header (`--sticky-top`, set by ExplorerPage). Picking a marker scrolls the page to the card
+  (`scroll-margin-top` clears the header).
+- Phones (≤ 899px): the List/Map toggle is its own sticky block below the crisis callout; Map mode fills
+  `100dvh − header − toggle` (min 70vh) with the selected-place card overlaid at the bottom. Markers/clusters are ≥ 44px
+  tap targets, zoom buttons 44px (top-right), the map key is a collapsible button (folded by default on phones).
+- Result cards: no "?" date tile when there is no next date (`card--nodate`, text uses the full width).
+- AI search box on /find aligned with the address search (same label size/height, 44px inputs/buttons, one row).
+- Detail page: `components/AIInfo.tsx` loads `GET /api/resources/{id}/ai-info` and merges AI facts into What to bring
+  (+ inline on an "ask" Photo ID item), Next times/Schedule, Eligibility, Services, Languages, Phone — each with an
+  "AI-found" badge, source links (quote in `title`) and the "confirm with the provider" notice. Next to confirmed data
+  they appear as "More details (AI-found)". "✨ Find missing info with AI" (flag `ai.listing_lookup`) POSTs; loading/result
+  are in an aria-live region; 429/503/404 have their own messages. New strings in en/es/ko/vi/zh.
+
 ## Open issues
 
 1. ~~Backend blocked the dev admin login (`EmailStr` rejected `.test`).~~ **Fixed 2026-10-12**: login now takes a plain

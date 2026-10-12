@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import type { ResourceSummary } from '../api/types';
 import { circlePolygon, FALLBACK_STYLE, MAP_ATTRIBUTION, NOVA_CENTER, primaryStyleUrl, reducedMotion } from '../lib/mapStyle';
 import { useSelection, type SelectionStore } from '../state/selection';
+import { useMediaQuery } from '../lib/useMediaQuery';
 import { Icon } from './Icon';
 
 export interface MapViewProps {
@@ -61,6 +62,10 @@ export default function MapView({ items, uncertain, center, radiusKm, store, onS
   const radiusRef = useRef<GeoJSON.Feature | null>(null);
   const [moved, setMoved] = useState(false);
   const [failed, setFailed] = useState(false);
+  // The key is folded away by default on phones so it doesn't cover the map; one tap opens it.
+  const narrow = useMediaQuery('(max-width: 899px)');
+  const [legendOpen, setLegendOpen] = useState<boolean | null>(null);
+  const showLegend = legendOpen ?? !narrow;
   const sel = useSelection(store);
   const selRef = useRef(sel.id);
   selRef.current = sel.id;
@@ -296,13 +301,18 @@ export default function MapView({ items, uncertain, center, radiusKm, store, onS
           {t('map.searchArea')}
         </button>
       )}
-      <div className="map__legend" aria-hidden="true">
-        <span><span className="mk mk--verified mk--legend"><span className="mk__label">1</span></span>{t('verification.verified')}</span>
-        <span><span className="mk mk--stale mk--legend"><span className="mk__label">2</span></span>{t('verification.stale')}</span>
+      <div className={`map__legend ${showLegend ? 'is-open' : ''}`}>
+        <button type="button" className="map__legend-toggle" aria-expanded={showLegend} aria-controls="map-legend-items" onClick={() => setLegendOpen(!showLegend)}>
+          <Icon name={showLegend ? 'chevronDown' : 'chevronUp'} size={16} />
+          {t('map.legend')}
+        </button>
+        <div id="map-legend-items" className="map__legend-items" hidden={!showLegend}>
+        <span><span className="mk mk--verified mk--legend" aria-hidden="true"><span className="mk__label">1</span></span>{t('verification.verified')}</span>
+        <span><span className="mk mk--stale mk--legend" aria-hidden="true"><span className="mk__label">2</span></span>{t('verification.stale')}</span>
         {items.some((r) => r.verification_label === 'source_reported') && (
-          <span><span className="mk mk--reported mk--legend"><span className="mk__label">3</span></span>{t('verification.source_reported')}</span>
+          <span><span className="mk mk--reported mk--legend" aria-hidden="true"><span className="mk__label">3</span></span>{t('verification.source_reported')}</span>
         )}
-        <span><span className="mk mk--uncertain mk--legend"><span className="mk__label">?</span></span>{t('map.kindUncertain')}</span>
+        <span><span className="mk mk--uncertain mk--legend" aria-hidden="true"><span className="mk__label">?</span></span>{t('map.kindUncertain')}</span>
         {items.some((r) => r.live) && (
           <span className="map__legend-live">
             {t('map.livePosted')}:
@@ -313,6 +323,7 @@ export default function MapView({ items, uncertain, center, radiusKm, store, onS
             ))}
           </span>
         )}
+        </div>
       </div>
     </div>
   );

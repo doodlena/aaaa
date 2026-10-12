@@ -406,7 +406,8 @@
     "clusterTitle": "{{count}} places — zoom in",
     "kindUncertain": "May match (not confirmed)",
     "youAreHere": "Searched location",
-    "livePosted": "Posted today"
+    "livePosted": "Posted today",
+    "legend": "Map key"
   },
   "schedule": {
     "weekOfMonth": {
@@ -1383,5 +1384,35 @@
     "nearestBus": "closest: {{name}} (~{{min}} min)",
     "noBus": "No bus stop within a 5-minute walk.",
     "needRide": "Need a ride? See free and low-cost transportation programs"
+  },
+  "aiInfo": {
+    "badge": "AI-found",
+    "button": "Find missing info with AI",
+    "hint": "AI searches the web for this place's hours, ID rules, what to bring and more, and shows every source. It takes about a minute.",
+    "searching": "Searching the web…",
+    "found_one": "AI found {{count}} detail. It is shown in its section below, marked “AI-found”.",
+    "found_other": "AI found {{count}} details. They are shown in their sections below, marked “AI-found”.",
+    "nothingFound": "AI did not find any extra information for this place.",
+    "moreDetails": "More details (AI-found)",
+    "notice": "Found by AI from the linked sources — confirm with the provider.",
+    "sources_one": "Source:",
+    "sources_other": "Sources:",
+    "opensSource": "opens the source in a new tab",
+    "field": {
+      "what_to_bring": "What to bring",
+      "id_required": "ID",
+      "eligibility": "Who can get help",
+      "hours": "Hours",
+      "dates": "Dates",
+      "services": "Services",
+      "languages": "Languages",
+      "phone": "Phone"
+    },
+    "error": {
+      "rateLimited": "Too many AI lookups right now. Please try again later, or call the provider.",
+      "unavailable": "The AI lookup isn't available right now. Please try again later, or call the provider.",
+      "off": "The AI lookup is turned off.",
+      "generic": "The AI lookup didn't work. Please try again later."
+    }
   }
 }
