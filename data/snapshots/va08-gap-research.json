@@ -168,7 +168,7 @@
    "phone": "703.746.5222",
    "state": "VA",
    "website": "https://www.alexandriava.gov/Paratransit",
-   "address1": "123 N. Pitt Street",
+   "address1": "421 King St.",
    "address2": "Suite 230",
    "services": [
     {
@@ -190,7 +190,71 @@
     "Arabic",
     "Farsi"
    ],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:30",
+     "closes": "16:30",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:30",
+     "closes": "16:30",
+     "weekday": 6,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.alexandriava.gov/Paratransit",
    "eligibility": [
     {
@@ -221,6 +285,22 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/Paratransit",
+     "evidence_quote": "421 King St. Suite 230 || 421 King St. Suite 230"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/Paratransit",
+     "evidence_quote": "The DOT Call Center is staffed Monday through Friday 8:00 a.m. to 5:00 p.m. || staffed Monday through Friday 8:00 a.m. to 5:00 p.m. || Monday through Friday 8:00 a.m. to 5:00 p.m. and weekends 8:30 a.m. to 4:30 p.m."
+    }
+   ],
    "organization_name": "City of Alexandria – DOT Paratransit",
    "organization_website": "https://www.alexandriava.gov/",
    "raw_eligibility_text": "DOT Paratransit is a specialized transportation service for residents and visitors who cannot use fixed routed public transit due to their disability. In order to use the service, residents must submit an application to the Paratransit Coordinator. Upon approval, reservations may be made for specific trips.",
@@ -388,38 +468,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://annandalechurch.com/foodministry",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Food ministry serves community members living in the 22003 Annandale zip code.",
-     "requirement_type": "zip_restriction"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Clients must register for food.",
-     "requirement_type": "registration"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Evidence (utility bill, driver’s license, etc.) of living in the service area.",
-     "requirement_type": "proof_of_address"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "One registration card/food pickup per household per week.",
-     "requirement_type": "visit_limit"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "ESL classes are for parents with children in the Fairfax County Public Schools system.",
-     "requirement_type": "other"
-    }
-   ],
+   "eligibility": [],
    "external_id": "va08gap-annandale-umc-mission-center",
    "location_name": "Annandale UMC Mission Center",
    "parking_notes": null,
@@ -429,6 +478,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://annandalechurch.com/foodministry",
+     "evidence_quote": "Clients must register showing evidence (utility bill, driver's license, etc.) of living in our service area. || \"Thursday_Notes1\":\"Photo ID and proof of residency in 22003 ZIPcode. One food pickup per week per household.\" || This mission serves community members living in the 22003 Annandale zip code. Clients must register showing evidence (utility bill, driver's license, etc.) of living in our service area. One registration card/food pickup per household per week."
+    }
+   ],
    "organization_name": "Annandale United Methodist Church",
    "organization_website": "https://annandalechurch.com/",
    "raw_eligibility_text": "Important: This mission serves community members living in the 22003 Annandale zip code. Clients must register showing evidence (utility bill, driver’s license, etc.) of living in our service area. One registration card/food pickup per household per week. Persons living outside zip code 22003 will be given a small bag of food with information about other food sites in Fairfax County.",
@@ -768,20 +826,14 @@
     {
      "status": "required",
      "values": {},
-     "details": "Students and their families must make an appointment at The Clothesline in advance.",
+     "details": "Appointment must be made in advance",
      "requirement_type": "appointment"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Children attending school in Arlington (kindergarten to 12th grade); pre-school students not served.",
+     "details": "Child attends school in Arlington (K-12)",
      "requirement_type": "student_affiliation"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Free & Reduced Meal qualification letter from APS, a referral letter, or ParentVue schedule from a community eligibility school.",
-     "requirement_type": "income_documentation"
     }
    ],
    "external_id": "va08gap-clothesline-arlington-kids",
@@ -793,6 +845,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.clotheslinearlington.org/get-clothing/",
+     "evidence_quote": "Present a referral letter from a school social worker, a local social services organization, or a place of worship. || students and their families must make an appointment at The Clothesline in advance. || The Clothesline serves qualifying children attending school in Arlington (kindergarten to 12th grade)."
+    }
+   ],
    "organization_name": "The Clothesline for Arlington Kids",
    "organization_website": "https://www.clotheslinearlington.org/",
    "raw_eligibility_text": "The Clothesline serves qualifying children attending school in Arlington (kindergarten to 12th grade). At this time, we do not serve pre-school students. There are three ways to qualify: Present a current Free & Reduced Meal qualification letter from Arlington Public Schools indicating your child’s name. Present a referral letter from a school social worker, a local social services organization, or a place of worship. If your child attends a community eligibility school you may present a screenshot of their current class schedule in ParentVue.",
@@ -805,7 +866,7 @@
    "city": "Falls Church",
    "email": "info@culmoreclinic.org",
    "notes": "Nonprofit, heavily volunteer-run clinic offering free medical care, counseling (licensed volunteer mental health professionals), and specialty referrals to uninsured adults in the Bailey's Crossroads/Falls Church area. Also HIV and STD testing, physical therapy, EKGs and dental services (https://www.culmoreclinic.org/care). New patients register by calling 703-260-8429 (enrollment page); appointment line on contact page is 703-260-8413. 8-10 week wait list for new patients. Sources conflict on days (three vs four days a week) and on the 200% FPL example amounts ($2,600/month vs $2,265/month for an individual). Follows Fairfax County Schools for weather/holiday closures. Mailing: PO Box 8332, Falls Church, VA 22041. Hours from https://www.culmoreclinic.org/contact.",
-   "phone": "703-260-8413",
+   "phone": "(703) 260-8429",
    "state": "VA",
    "website": "https://www.culmoreclinic.org/",
    "address1": "6400 Arlington Blvd.",
@@ -907,31 +968,31 @@
     {
      "status": "required",
      "values": {},
-     "details": "Income at 200% of Federal Poverty Level or below.",
+     "details": "At or below 200% FPL",
      "requirement_type": "income"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Adult patients only (18+ years old).",
+     "details": "Adults 18+ only",
      "requirement_type": "age"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Proof of Fairfax County residence.",
+     "details": "Proof of Fairfax County residence",
      "requirement_type": "residency"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Proof of income (pay stub, W2 form, or a letter from an employer stating rate of pay).",
+     "details": "Pay stub, W-2, or employer letter",
      "requirement_type": "income_documentation"
     },
     {
      "status": "required",
      "values": {},
-     "details": "By appointment only; register as a patient by calling 703-260-8429.",
+     "details": "By appointment only; register by phone; 8-10 week wait list",
      "requirement_type": "appointment"
     },
     {
@@ -939,6 +1000,18 @@
      "values": {},
      "details": "Uninsured adults.",
      "requirement_type": "other"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Bring photo ID",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Proof of Fairfax County residence",
+     "requirement_type": "proof_of_address"
     }
    ],
    "external_id": "va08gap-culmore-clinic",
@@ -950,6 +1023,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.culmoreclinic.org/patient-enrollment",
+     "evidence_quote": "(703) 260-8429 || Phone: (703) 260-8429"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.culmoreclinic.org/patient-enrollment",
+     "evidence_quote": "Clinic patients' income must be at 200% of Federal Poverty Level or below. || Culmore Clinic is open three days per week and serves adult patients only (18+ years old) by appointment only. || a photo ID, proof of income (such as a pay stub, W-2, or a letter from an employer stating the rate of pay), and proof of Fairfax County residence"
+    }
+   ],
    "organization_name": "Culmore Clinic",
    "organization_website": "https://www.culmoreclinic.org/",
    "raw_eligibility_text": "Clinic patients’ income must be at 200% of Federal Poverty Level or below (e.g. $2,600/month or $31,200/year for an individual and $4,625/month or $55,500/year for a family of 4). ... Culmore Clinic is open three days per week and serves adult patients only (18+ years old) by appointment only. All patients are required to bring the following to their registration appointment: Proof of income (pay stub, W2 form, or a letter from an employer stating rate of pay) Proof of Fairfax County residence",
@@ -1191,7 +1280,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://englishempowermentcenter.org/for-students/in-person-classes/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Walk-ins welcome; free",
+     "requirement_type": "registration"
+    }
+   ],
    "external_id": "va08gap-eec-esl-drew-community-center",
    "location_name": "English Empowerment Center – Charles Drew Community Center",
    "parking_notes": null,
@@ -1201,6 +1297,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://englishempowermentcenter.org/for-students/in-person-classes/",
+     "evidence_quote": "No registration required. Walk-ins welcome. FREE. || No registration required. Walk-ins welcome. FREE. || No registration required. Walk-ins welcome. FREE."
+    }
+   ],
    "organization_name": "English Empowerment Center (formerly Literacy Council of Northern Virginia)",
    "organization_website": "https://englishempowermentcenter.org/",
    "raw_eligibility_text": null,
@@ -1290,7 +1395,26 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:30",
+       "closes": "19:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:30",
+       "closes": "19:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [],
      "description": "Neighborhood site distribution of supplemental food; the only question asked is household size.",
      "eligibility": [],
@@ -1313,6 +1437,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+     "evidence_quote": "Wednesdays and Fridays, 6:30pm || Wednesday and Friday, 6:30pm"
+    }
+   ],
    "organization_name": "Food for Others",
    "organization_website": "https://foodforothers.org/",
    "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, “How many people are in your household?” Please bring your own grocery bags.",
@@ -1333,7 +1466,26 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:30",
+       "closes": "19:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:30",
+       "closes": "19:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [],
      "description": "Neighborhood site distribution of supplemental food; the only question asked is household size.",
      "eligibility": [],
@@ -1356,6 +1508,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+     "evidence_quote": "Tuesdays and Thursdays, 6:30pm || Tuesday and Thursday, 6:30pm"
+    }
+   ],
    "organization_name": "Food for Others",
    "organization_website": "https://foodforothers.org/",
    "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, “How many people are in your household?” Please bring your own grocery bags.",
@@ -1376,7 +1537,26 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:00",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "18:00",
+       "closes": "18:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [],
      "description": "Neighborhood site distribution of supplemental food; the only question asked is household size.",
      "eligibility": [],
@@ -1399,6 +1579,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+     "evidence_quote": "Tuesdays and Thursdays, 6:00pm || Tuesday and Thursday, 6:00pm"
+    }
+   ],
    "organization_name": "Food for Others",
    "organization_website": "https://foodforothers.org/",
    "raw_eligibility_text": "If you are in need of food, one of the ways you can receive food is through our neighborhood sites. Neighborhood sites provide supplemental food. You may come to one of the following neighborhood sites at the times specified. The only question that is asked is, “How many people are in your household?” Please bring your own grocery bags.",
@@ -1482,20 +1671,14 @@
     {
      "status": "required",
      "values": {},
-     "details": "Senior Center membership is open to persons 50 years of age and older.",
+     "details": "50 and older",
      "requirement_type": "age"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Senior Center membership required for programs; annual membership fees apply.",
+     "details": "Senior center membership; annual fee",
      "requirement_type": "registration"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Lunch reservations must be made at least one day in advance at the center where you want to be served.",
-     "requirement_type": "appointment"
     }
    ],
    "external_id": "va08gap-ffx-baileys-senior-center",
@@ -1507,6 +1690,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+     "evidence_quote": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. || NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements."
+    }
+   ],
    "organization_name": "Fairfax County Department of Neighborhood and Community Services (NCS)",
    "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
    "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available. Senior Centers offer prepared lunches for participants and guests. Reservations must be made at least one day in advance at the center where you want to be served. The cost of lunch for all guests and for participants ages 50 to 59 is $8.50 per meal. The suggested meal donation (between $2 and $6) for participants ages 60 and over is based on a sliding scale depending on individual income",
@@ -1615,22 +1807,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The ZIP code is 22042, not 22041. The CAFB source also gives 22042.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/james-lee-community-center",
-     "evidence_quote": "2855 Annandale Road Falls Church, VA 22042"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP code is 22042, not 22041. The CAFB source also gives 22042.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/james-lee-community-center",
-     "evidence_quote": "2855 Annandale Road Falls Church, VA 22042"
-    }
-   ],
    "organization_name": "Fairfax County Department of Neighborhood and Community Services (NCS)",
    "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
    "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available. Senior Centers offer prepared lunches for participants and guests. Reservations must be made at least one day in advance at the center where you want to be served. The cost of lunch for all guests and for participants ages 50 to 59 is $8.50 per meal. The suggested meal donation (between $2 and $6) for participants ages 60 and over is based on a sliding scale depending on individual income",
@@ -1714,20 +1890,14 @@
     {
      "status": "required",
      "values": {},
-     "details": "Senior Center membership is open to persons 50 years of age and older.",
+     "details": "50 and older",
      "requirement_type": "age"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Senior Center membership required for programs; annual membership fees apply.",
+     "details": "Annual membership; fees apply",
      "requirement_type": "registration"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Lunch reservations must be made at least one day in advance at the center where you want to be served.",
-     "requirement_type": "appointment"
     }
    ],
    "external_id": "va08gap-ffx-kingstowne-center-active-adults",
@@ -1739,6 +1909,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+     "evidence_quote": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. || Annual membership fees apply. || NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements."
+    }
+   ],
    "organization_name": "Fairfax County Department of Neighborhood and Community Services (NCS)",
    "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
    "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available. Senior Centers offer prepared lunches for participants and guests. Reservations must be made at least one day in advance at the center where you want to be served. The cost of lunch for all guests and for participants ages 50 to 59 is $8.50 per meal. The suggested meal donation (between $2 and $6) for participants ages 60 and over is based on a sliding scale depending on individual income",
@@ -1822,20 +2001,14 @@
     {
      "status": "required",
      "values": {},
-     "details": "Senior Center membership is open to persons 50 years of age and older.",
+     "details": "50 and older",
      "requirement_type": "age"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Senior Center membership required for programs; annual membership fees apply.",
+     "details": "Annual membership; fees apply",
      "requirement_type": "registration"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Lunch reservations must be made at least one day in advance at the center where you want to be served.",
-     "requirement_type": "appointment"
     }
    ],
    "external_id": "va08gap-ffx-lincolnia-senior-center",
@@ -1847,6 +2020,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/senior-centers",
+     "evidence_quote": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. || Annual membership fees apply. || NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements."
+    }
+   ],
    "organization_name": "Fairfax County Department of Neighborhood and Community Services (NCS)",
    "organization_website": "https://www.fairfaxcounty.gov/neighborhood-community-services/",
    "raw_eligibility_text": "NCS Senior Center membership is open to persons 50 years of age and older who meet eligibility requirements. Annual membership fees apply. Meals and transportation options are available. Senior Centers offer prepared lunches for participants and guests. Reservations must be made at least one day in advance at the center where you want to be served. The cost of lunch for all guests and for participants ages 50 to 59 is $8.50 per meal. The suggested meal donation (between $2 and $6) for participants ages 60 and over is based on a sliding scale depending on individual income",
@@ -1981,6 +2163,18 @@
      "values": {},
      "details": "DOT Paratransit is for residents who find it difficult or are unable to use public transportation (disability).",
      "requirement_type": "other"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Alexandria residents",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Must apply to program to determine eligibility",
+     "requirement_type": "registration"
     }
    ],
    "external_id": "va08gap-senior-services-alexandria-transportation",
@@ -1992,6 +2186,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://seniorservicesalex.org/programs/transportation/",
+     "evidence_quote": "Alexandria residents age 60 and older who have a yearly household income of $48,508 or less. || residents who find it difficult or are unable to use public transportation"
+    }
+   ],
    "organization_name": "Senior Services of Alexandria",
    "organization_website": "https://seniorservicesalex.org/",
    "raw_eligibility_text": "Senior Taxi Yellow Card Program is available to Alexandria residents age 60 and older who have a yearly household income of $48,508 or less. ... Interested individuals must apply to the program to determine eligibility and then purchase fares in advance at a discounted cost.",

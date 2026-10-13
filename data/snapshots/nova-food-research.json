@@ -55,44 +55,7 @@
    ],
    "schedules": [],
    "source_url": "https://www.wfcmva.org/get-help",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Residents of ZIP codes 20120, 20121, 20124, 20151, 22039, 22030, 20171, 20170, 22033 (USDA TEFAP available to all VA residents without the documents)",
-     "requirement_type": "zip_restriction"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Clients served by appointment only; call 703-988-9656 to schedule a certification appointment",
-     "requirement_type": "appointment"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Photo ID for everyone 18 or older in the household (not required for USDA TEFAP)",
-     "requirement_type": "photo_id"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Proof of all income for all adults: 2 paystubs or bank statement and/or benefits letter(s) (not required for USDA TEFAP)",
-     "requirement_type": "income_documentation"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Proof of residence for all adults in household: lease (not required for USDA TEFAP)",
-     "requirement_type": "proof_of_address"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Clients select food in the markets every 30 days",
-     "requirement_type": "visit_limit"
-    }
-   ],
+   "eligibility": [],
    "external_id": "nova-food-wfcm-chantilly",
    "location_name": "WFCM Chantilly Free Food Market",
    "parking_notes": null,
@@ -102,6 +65,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.wfcmva.org/get-help",
+     "evidence_quote": "Monday-Friday 10 am-2 pm and Monday, Tuesday & Thursday 4:30 pm-6:45 pm || Monday-Friday 10 am-2 pm and Monday, Tuesday & Thursday 4:30 pm-6:45 pm"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.wfcmva.org/get-help",
+     "evidence_quote": "Residents of Centreville (20120, 20121), Clifton (20124), Chantilly (20151), Fairfax Station (22039), Fairfax (22030), || \"ACCEPT_WALK_INS\": \"Yes\" || Residents of these zip codes may apply: 20120, 20121, 20124, 20151, 22039, 22030, 20171, 20170, and 22033."
+    }
+   ],
    "organization_name": "Western Fairfax Christian Ministries (WFCM)",
    "organization_website": "https://www.wfcmva.org/",
    "raw_eligibility_text": "Those eligible to apply for assistance are: Residents of Centreville (20120, 20121), Clifton (20124), Chantilly (20151), Fairfax Station (22039), Fairfax (22030), Oak Hill (20171), Herndon (20170) and Fair Oaks (22033). We will connect individuals and families who do not reside in the zip codes we serve with the appropriate organization that can provide help. USDA TEFAP is available to all VA residents and does not require the documents listed below to be provided. ... Send the following documents to clientservices@wfcmva.org : Photo ID for everyone 18 or older in the household Current school records for everyone of school age in the household Birth certificates for children in the household Proof of all income for all adults in the household 2 Paystubs or Bank statement showing deposits (cross through any account numbers or sensitive information), and/or Benefits letter(s) Proof of residence for all adults in household: Lease",
@@ -160,44 +139,7 @@
    ],
    "schedules": [],
    "source_url": "https://www.wfcmva.org/get-help",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Residents of ZIP codes 20120, 20121, 20124, 20151, 22039, 22030, 20171, 20170, 22033 (USDA TEFAP available to all VA residents without the documents)",
-     "requirement_type": "zip_restriction"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Clients served by appointment only; call 703-988-9656 to schedule a certification appointment",
-     "requirement_type": "appointment"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Photo ID for everyone 18 or older in the household (not required for USDA TEFAP)",
-     "requirement_type": "photo_id"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Proof of all income for all adults: 2 paystubs or bank statement and/or benefits letter(s) (not required for USDA TEFAP)",
-     "requirement_type": "income_documentation"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Proof of residence for all adults in household: lease (not required for USDA TEFAP)",
-     "requirement_type": "proof_of_address"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Clients select food in the markets every 30 days",
-     "requirement_type": "visit_limit"
-    }
-   ],
+   "eligibility": [],
    "external_id": "nova-food-wfcm-centreville",
    "location_name": "WFCM Centreville Free Food Market",
    "parking_notes": null,
@@ -207,6 +149,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.wfcmva.org/get-help",
+     "evidence_quote": "Tuesday & Wednesday 10 am-2 pm and 4:30 pm-6:30 pm || Tuesday & Wednesday 10 am-2 pm and 4:30 pm-6:30 pm"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.wfcmva.org/get-help",
+     "evidence_quote": "Residents of Centreville (20120, 20121), Clifton (20124), Chantilly (20151), Fairfax Station (22039), Fairfax (22030), || \"ACCEPT_WALK_INS\": \"Yes\" || Residents of these zip codes may apply: 20120, 20121, 20124, 20151, 22039, 22030, 20171, 20170, and 22033."
+    }
+   ],
    "organization_name": "Western Fairfax Christian Ministries (WFCM)",
    "organization_website": "https://www.wfcmva.org/",
    "raw_eligibility_text": "Those eligible to apply for assistance are: Residents of Centreville (20120, 20121), Clifton (20124), Chantilly (20151), Fairfax Station (22039), Fairfax (22030), Oak Hill (20171), Herndon (20170) and Fair Oaks (22033). We will connect individuals and families who do not reside in the zip codes we serve with the appropriate organization that can provide help. USDA TEFAP is available to all VA residents and does not require the documents listed below to be provided. ... Send the following documents to clientservices@wfcmva.org : Photo ID for everyone 18 or older in the household Current school records for everyone of school age in the household Birth certificates for children in the household Proof of all income for all adults in the household 2 Paystubs or Bank statement showing deposits (cross through any account numbers or sensitive information), and/or Benefits letter(s) Proof of residence for all adults in household: Lease",
@@ -292,7 +250,53 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "14:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "14:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "14:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "14:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "14:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "general_groceries"
      ],
@@ -343,6 +347,15 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.tolministries.org/food-pantry/",
+     "evidence_quote": "Mon - Fri 9AM - 2PM || Mon - Fri 9AM - 2PM"
+    }
+   ],
    "organization_name": "Tree of Life Ministries",
    "organization_website": "https://www.tolministries.org/",
    "raw_eligibility_text": "Once a month, those in need can call in to request food and receive two to three weeks' worth of groceries from one our regional Food Pantries. In most cases, we are able to deliver the food directly to the home of the person in need.",
@@ -363,7 +376,53 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "14:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "14:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "14:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "14:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "14:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "general_groceries"
      ],
@@ -414,6 +473,15 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.tolministries.org/food-pantry/",
+     "evidence_quote": "Mon - Fri 9am - 2pm || Mon - Fri 9am - 2pm"
+    }
+   ],
    "organization_name": "Tree of Life Ministries",
    "organization_website": "https://www.tolministries.org/",
    "raw_eligibility_text": "Once a month, those in need can call in to request food and receive two to three weeks' worth of groceries from one our regional Food Pantries. In most cases, we are able to deliver the food directly to the home of the person in need.",
@@ -775,7 +843,7 @@
     {
      "status": "required",
      "values": {},
-     "details": "Registration form on first visit (name, address, names and ages of household members)",
+     "details": "Registration form on first visit",
      "requirement_type": "registration"
     },
     {
@@ -800,6 +868,15 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.sevenloavesmiddleburg.org/regular-distrubution/",
+     "evidence_quote": "A registration form is required to be filled out for regular distribution. || Patrons for regular distribution may come as often as once a week."
+    }
+   ],
    "organization_name": "Seven Loaves Services, Inc.",
    "organization_website": "https://www.sevenloavesmiddleburg.org/",
    "raw_eligibility_text": "This program provides fresh produce, bread and bakery, meat and refrigerated items and various non-perishable products to any household on Monday, Wednesday, or Friday, from 10:00 a.m. to 12:00 noon. Patrons for regular distribution may come as often as once a week. A registration form is required to be filled out for regular distribution and should be completed on a Patron's first visit to the Pantry, where the Patron will state his name and address and the names and ages of each member of his household.",
@@ -843,6 +920,18 @@
      "values": {},
      "details": "There are no eligibility restrictions",
      "requirement_type": "other"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No eligibility restrictions",
+     "requirement_type": "income"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "All who attend are welcome",
+     "requirement_type": "residency"
     }
    ],
    "external_id": "nova-food-link-mobile-pantry-sterling",
@@ -854,6 +943,15 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.linkagainsthunger.org/get-help",
+     "evidence_quote": "There are no eligibility restrictions; all individuals who attend are welcome to receive food. || There are no eligibility restrictions."
+    }
+   ],
    "organization_name": "LINK, Inc. (LINK Against Hunger)",
    "organization_website": "https://www.linkagainsthunger.org/",
    "raw_eligibility_text": "There are no eligibility restrictions; all individuals who attend are welcome to receive food.",
@@ -896,6 +994,12 @@
      "values": {},
      "details": "There are no eligibility restrictions",
      "requirement_type": "other"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No eligibility restrictions",
+     "requirement_type": "income"
     }
    ],
    "external_id": "nova-food-link-produce-trinity-presbyterian-herndon",
@@ -907,6 +1011,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.linkagainsthunger.org/get-help",
+     "evidence_quote": "There are no eligibility restrictions. || There are no eligibility restrictions."
+    }
+   ],
    "organization_name": "LINK, Inc. (LINK Against Hunger)",
    "organization_website": "https://www.linkagainsthunger.org/",
    "raw_eligibility_text": "There are no eligibility restrictions.",
@@ -938,17 +1051,6 @@
      "offering_status": "event_specific",
      "appointment_required": "unknown",
      "registration_required": "unknown"
-    },
-    {
-     "frequency": null,
-     "schedules": [],
-     "food_types": [],
-     "description": "LINK food deliveries to Herndon and Sterling residents (not Ashburn); call 703-437-1776 and leave a message",
-     "eligibility": [],
-     "service_type": "home_delivery",
-     "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
     }
    ],
    "languages": [],
@@ -960,6 +1062,12 @@
      "values": {},
      "details": "There are no eligibility restrictions",
      "requirement_type": "other"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No eligibility restrictions",
+     "requirement_type": "income"
     }
    ],
    "external_id": "nova-food-link-produce-holy-cross-herndon",
@@ -971,6 +1079,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.linkagainsthunger.org/get-help",
+     "evidence_quote": "Call LINK at 703-437-1776 and leave a message. A volunteer will contact you. || There are no eligibility restrictions."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.linkagainsthunger.org/get-help",
+     "evidence_quote": "There are no eligibility restrictions. || There are no eligibility restrictions."
+    }
+   ],
    "organization_name": "LINK, Inc. (LINK Against Hunger)",
    "organization_website": "https://www.linkagainsthunger.org/",
    "raw_eligibility_text": "There are no eligibility restrictions.",
@@ -1105,6 +1229,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "household_essentials"
     }
    ],
    "languages": [],
@@ -1139,6 +1268,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://lortonaction.org/food-pantry/",
+     "evidence_quote": "hygiene and household essentials || distribute hygiene and household essentials"
+    }
+   ],
    "organization_name": "Lorton Community Action Center (LCAC)",
    "organization_website": "https://lortonaction.org/",
    "raw_eligibility_text": "The LCAC food pantry serves individuals and families in Lorton. Registered clients are eligible to attend one of three distributions each week, where they select food and other items for their families.",
@@ -1227,32 +1365,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The unit number is repeated twice.",
-     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
-    },
-    {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "hours",
-     "reason": "Each weekday shows two overlapping time blocks. The pantry's own site gives 5:30-8:00 PM, by appointment.",
+     "reason": "2 of 3 independent checkers agree",
      "evidence_url": "https://haymarketfoodpantry.org/find-help/",
-     "evidence_quote": "Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm Sat Mornings: By appointment between 9:00 am and 12:00 noon"
-    },
-    {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "The pantry's own site says food is distributed by appointment only, which contradicts walk_up.",
-     "evidence_url": "https://haymarketfoodpantry.org/find-help/",
-     "evidence_quote": "Our Hours - By Appointment Only"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The unit number is repeated twice.",
-     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
+     "evidence_quote": "By appointment between 5:30 pm and 8:00 pm. || Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm"
     }
    ],
    "organization_name": "Haymarket Regional Food Pantry (HRFP)",
@@ -1376,20 +1493,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://foodforothers.org/get-help/",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "TEFAP monthly program: Northern Virginia residents who meet income guidelines can walk in and apply, no referral needed. Bring a photo ID, plus a lease or a piece of mail if the ID does not show your current address. The Emergency Referral Program requires a referral from a social worker, clergy, hospital or school.",
-     "requirement_type": "photo_id"
-    },
-    {
-     "status": "not_required",
-     "values": {},
-     "details": "TEFAP monthly program: Northern Virginia residents who meet income guidelines can walk in and apply, no referral needed. Bring a photo ID, plus a lease or a piece of mail if the ID does not show your current address. The Emergency Referral Program requires a referral from a social worker, clergy, hospital or school.",
-     "requirement_type": "referral"
-    }
-   ],
+   "eligibility": [],
    "external_id": "nova-food-ffo-warehouse-prosperity",
    "location_name": "Food for Others Warehouse",
    "parking_notes": null,
@@ -1401,11 +1505,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "eligibility",
-     "reason": "A referral is required only for the Emergency Referral Program. The TEFAP monthly program is walk-in for Northern Virginia residents who meet income guidelines. Photo ID is still requested, and a lease or piece of mail is needed only if the ID lacks a current address.",
+     "reason": "3 of 3 independent checkers agree",
      "evidence_url": "https://foodforothers.org/get-help/",
-     "evidence_quote": "If you are a Northern Virginia resident, you may walk in and apply. Bring a photo ID. If the ID does not have your current address on it, please also bring in a lease or a piece of mail addressed to you."
+     "evidence_quote": "individuals and families referred to Food for Others by social service providers || We ask for ID or a piece of mail  to verify Virginia residency. || Free emergency food is provided to individuals and families referred to Food for Others by social service providers"
     }
    ],
    "organization_name": "Food for Others",
@@ -1922,6 +2026,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.poweredbyspark.org/programs/other_pwc_food_resources",
+     "evidence_quote": "provides food for residents of Triangle, Dumfries and Quantico || residents of Triangle, Dumfries and Quantico"
+    }
+   ],
    "organization_name": "Triangle Baptist Church",
    "organization_website": null,
    "raw_eligibility_text": "Triangle Baptist Church provides food for residents of Triangle, Dumfries and Quantico every Tuesday from 11 a.m. to 12 p.m. at 4345 Inn St. in Triangle.",
@@ -2048,62 +2161,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "16:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "16:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "16:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "16:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "13:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "13:00",
-       "weekday": 5,
-       "week_of_month": 1,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "ASAPP food pantry",
      "eligibility": [],
@@ -2151,6 +2209,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.cornerstonesva.org/get-help",
+     "evidence_quote": "Friday: 8:30 am to 1:30 pm || Fri: 8:30 am – 1:30 pm"
+    }
+   ],
    "organization_name": "Cornerstones",
    "organization_website": "https://www.cornerstonesva.org/",
    "raw_eligibility_text": null,
@@ -2313,7 +2380,7 @@
     {
      "status": "required",
      "values": {},
-     "details": "Once every 30 days; appointments at least 28 days apart",
+     "details": "Once every 28-30 days",
      "requirement_type": "visit_limit"
     },
     {
@@ -2338,6 +2405,15 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://ccda.net/find-help/food/sterling-food-pantry/",
+     "evidence_quote": "All Appointments have to be scheduled within 28 -30 days apart from each other. || You will not be eligible to schedule an appointment if your last appointment was less than 28 days ago."
+    }
+   ],
    "organization_name": "Catholic Charities of the Diocese of Arlington",
    "organization_website": "https://ccda.net/",
    "raw_eligibility_text": "All Appointments have to be scheduled within 28 -30 days apart from each other. You will not be eligible to schedule an appointment if your last appointment was less than 28 days ago. ... Clients are eligible to receive food once every 30 days. Picture ID and Proof of current address required at every visit. Sterling Food Pantry is also a distribution site for USDA food.* Eligibility is determined at check-in with USDA food received at the time of your visit.",

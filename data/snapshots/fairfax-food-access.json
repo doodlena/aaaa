@@ -110,62 +110,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "16:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "16:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "16:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "16:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "13:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "13:00",
-       "weekday": 5,
-       "week_of_month": 1,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "general_groceries",
       "pantry_staples",
@@ -249,6 +194,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.cornerstonesva.org/get-help",
+     "evidence_quote": "Friday: 8:30 am to 1:30 pm || Fri: 8:30 am – 1:30 pm"
+    }
+   ],
    "organization_name": "Cornerstones, Inc.",
    "organization_website": "https://www.cornerstonesva.org",
    "raw_eligibility_text": null,
@@ -264,8 +218,8 @@
    "phone": "(703) 273-8829",
    "state": "VA",
    "website": "https://britepaths.org",
-   "address1": "3959 PENDER DR",
-   "address2": null,
+   "address1": "3959 Pender Drive",
+   "address2": "Suite 200",
    "services": [
     {
      "frequency": null,
@@ -290,10 +244,27 @@
      "registration_required": "unknown"
     },
     {
+     "frequency": null,
+     "schedules": [],
+     "food_types": [],
+     "description": null,
+     "eligibility": [],
+     "service_type": "grocery_voucher",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
      "schedules": [],
      "food_types": [],
      "eligibility": [],
-     "service_type": "grocery_voucher"
+     "service_type": "pet_food"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "household_essentials"
     }
    ],
    "languages": [
@@ -305,8 +276,20 @@
     {
      "status": "required",
      "values": {},
-     "details": "Referral required (from local nonprofits, school social workers, or CSP). Scheduled appointments only. One time per fiscal year, for families in a temporary crisis.",
+     "details": "Referral by County or other social worker for food/financial help",
      "requirement_type": "referral"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Fairfax County residents only",
+     "requirement_type": "service_area"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "One time per fiscal year",
+     "requirement_type": "visit_limit"
     }
    ],
    "external_id": "27c3553b-9d68-486f-8ff4-410acfd0e0da",
@@ -320,18 +303,25 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "The food help is a one-time grocery gift card given by referral, not pantry pickup.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-     "evidence_quote": "Britepaths takes referrals from local nonprofits, school social workers, and CSP to provide a $400 grocery gift card to families in a temporary crisis one time per fiscal year."
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://britepaths.org",
+     "evidence_quote": "3959 Pender Drive, Suite 200 || \"LOCATION_DESCRIPTION\": \"Suite 200, scheduled appointments only\" || 3959 Pender Drive, Suite 200, Fairfax, VA 22030"
     },
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://britepaths.org/get-help/",
+     "evidence_quote": "Britepaths offers walk-ins and appointment-based distributions of infant care supplies, pet food, || \"TYPES_OF_FOODS\": \"Diapers,Toiletries_and_household_supplies,Other\" || Household and personal care items that SNAP doesn't cover, such as menstrual products, infant supplies, pet food, and hygiene essentials."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
      "field": "eligibility",
-     "reason": "The listing omits that a referral is required and that the help is limited to once per fiscal year.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-     "evidence_quote": "Britepaths takes referrals from local nonprofits, school social workers, and CSP"
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://britepaths.org/get-help/",
+     "evidence_quote": "Britepaths is only able to provide food and financial assistance to Fairfax County residents who are referred to us || Britepaths takes referrals from local nonprofits, school social workers, and CSP to provide a $400 grocery gift card to families in a temporary crisis one time per fiscal year. || serves Northern Virginia residents and requires a referral from"
     }
    ],
    "organization_name": "Britepaths",
@@ -358,7 +348,7 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:30",
+       "opens": "10:00",
        "closes": "14:00",
        "weekday": 0,
        "week_of_month": null,
@@ -367,26 +357,8 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:30",
-       "closes": "14:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:30",
-       "closes": "14:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
        "opens": "16:30",
-       "closes": "19:00",
+       "closes": "18:45",
        "weekday": 0,
        "week_of_month": null,
        "appointment_only": false
@@ -394,8 +366,8 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "16:30",
-       "closes": "19:00",
+       "opens": "10:00",
+       "closes": "14:00",
        "weekday": 1,
        "week_of_month": null,
        "appointment_only": false
@@ -404,15 +376,15 @@
        "kind": "distribution",
        "notes": null,
        "opens": "16:30",
-       "closes": "19:00",
-       "weekday": 3,
+       "closes": "18:45",
+       "weekday": 1,
        "week_of_month": null,
        "appointment_only": false
       },
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:30",
+       "opens": "10:00",
        "closes": "14:00",
        "weekday": 2,
        "week_of_month": null,
@@ -421,7 +393,25 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:30",
+       "opens": "10:00",
+       "closes": "14:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "16:30",
+       "closes": "18:45",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
        "closes": "14:00",
        "weekday": 4,
        "week_of_month": null,
@@ -498,10 +488,8 @@
     },
     {
      "status": "required",
-     "values": {
-      "zips": []
-     },
-     "details": "Yes",
+     "values": {},
+     "details": "20120, 20121, 20124, 20151, 22039, 22030, 20171, 20170, 22033 (TEFAP open to all VA residents)",
      "requirement_type": "zip_restriction"
     }
    ],
@@ -514,6 +502,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.wfcmva.org/get-help",
+     "evidence_quote": "Monday-Friday 10 am-2 pm and Monday, Tuesday & Thursday 4:30 pm-6:45 pm || Monday-Friday 10 am-2 pm and Monday, Tuesday & Thursday 4:30 pm-6:45 pm"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.wfcmva.org/get-help",
+     "evidence_quote": "Residents of Centreville (20120, 20121), Clifton (20124), Chantilly (20151), Fairfax Station (22039), Fairfax (22030), || \"ACCEPT_WALK_INS\": \"Yes\" || Residents of these zip codes may apply: 20120, 20121, 20124, 20151, 22039, 22030, 20171, 20170, and 22033."
+    }
+   ],
    "organization_name": "Western Fairfax Christian Ministries",
    "organization_website": "https://wfcmva.org",
    "raw_eligibility_text": null,
@@ -539,7 +543,7 @@
        "kind": "distribution",
        "notes": null,
        "opens": "15:00",
-       "closes": "19:00",
+       "closes": "18:30",
        "weekday": 0,
        "week_of_month": null,
        "appointment_only": false
@@ -547,7 +551,7 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:30",
+       "opens": "10:00",
        "closes": "14:00",
        "weekday": 1,
        "week_of_month": null,
@@ -556,7 +560,16 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:30",
+       "opens": "16:30",
+       "closes": "18:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
        "closes": "14:00",
        "weekday": 2,
        "week_of_month": null,
@@ -566,16 +579,7 @@
        "kind": "distribution",
        "notes": null,
        "opens": "16:30",
-       "closes": "19:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "16:30",
-       "closes": "19:00",
+       "closes": "18:30",
        "weekday": 2,
        "week_of_month": null,
        "appointment_only": false
@@ -639,10 +643,8 @@
     },
     {
      "status": "required",
-     "values": {
-      "zips": []
-     },
-     "details": "Yes",
+     "values": {},
+     "details": "20120, 20121, 20124, 20151, 22039, 22030, 20171, 20170, 22033 (TEFAP open to all VA residents)",
      "requirement_type": "zip_restriction"
     }
    ],
@@ -655,6 +657,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.wfcmva.org/get-help",
+     "evidence_quote": "Tuesday & Wednesday 10 am-2 pm and 4:30 pm-6:30 pm || Tuesday & Wednesday 10 am-2 pm and 4:30 pm-6:30 pm"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.wfcmva.org/get-help",
+     "evidence_quote": "Residents of Centreville (20120, 20121), Clifton (20124), Chantilly (20151), Fairfax Station (22039), Fairfax (22030), || \"ACCEPT_WALK_INS\": \"Yes\" || Residents of these zip codes may apply: 20120, 20121, 20124, 20151, 22039, 22030, 20171, 20170, and 22033."
+    }
+   ],
    "organization_name": "Western Fairfax Christian Ministries",
    "organization_website": "https://wfcmva.org",
    "raw_eligibility_text": null,
@@ -802,20 +820,7 @@
    ],
    "schedules": [],
    "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-   "eligibility": [
-    {
-     "status": "not_required",
-     "values": {},
-     "details": null,
-     "requirement_type": "photo_id"
-    },
-    {
-     "status": "not_required",
-     "values": {},
-     "details": null,
-     "requirement_type": "income"
-    }
-   ],
+   "eligibility": [],
    "external_id": "1f4f6037-9bdf-44ae-803a-f82914b99e3e",
    "location_name": "Abiding Presence Lutheran Church",
    "parking_notes": null,
@@ -825,6 +830,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.abidingpresence.net/needhelp",
+     "evidence_quote": "can only be picked up by adults over the age of 18 || Only adults 18 and older can pick up food."
+    }
+   ],
    "organization_name": "Abiding Presence Food Pantry",
    "organization_website": "https://www.abidingpresence.net/needhelp",
    "raw_eligibility_text": null,
@@ -886,6 +900,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "hygiene_supplies"
     }
    ],
    "languages": [],
@@ -914,6 +933,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.stmatthewsumc.org/food",
+     "evidence_quote": "Feminine hygiene products the following 2 weeks. || Feminine hygiene products the following 2 weeks."
+    }
+   ],
    "organization_name": "St. Matthew's UMC",
    "organization_website": "https://www.stmatthewsumc.org",
    "raw_eligibility_text": null,
@@ -963,28 +991,7 @@
    ],
    "schedules": [],
    "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": null,
-     "requirement_type": "photo_id"
-    },
-    {
-     "status": "not_required",
-     "values": {},
-     "details": null,
-     "requirement_type": "income"
-    },
-    {
-     "status": "required",
-     "values": {
-      "zips": []
-     },
-     "details": "Yes",
-     "requirement_type": "zip_restriction"
-    }
-   ],
+   "eligibility": [],
    "external_id": "9baf0509-422e-45cf-87ba-045ec090a090",
    "location_name": "Annandale UMC Mission Center",
    "parking_notes": null,
@@ -994,6 +1001,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://annandalechurch.com/foodministry",
+     "evidence_quote": "Clients must register showing evidence (utility bill, driver's license, etc.) of living in our service area. || \"Thursday_Notes1\":\"Photo ID and proof of residency in 22003 ZIPcode. One food pickup per week per household.\" || This mission serves community members living in the 22003 Annandale zip code. Clients must register showing evidence (utility bill, driver's license, etc.) of living in our service area. One registration card/food pickup per household per week."
+    }
+   ],
    "organization_name": "Annandale United Methodist Church",
    "organization_website": "https://annandalechurch.com",
    "raw_eligibility_text": null,
@@ -1105,30 +1121,9 @@
    ],
    "schedules": [],
    "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": null,
-     "requirement_type": "photo_id"
-    },
-    {
-     "status": "not_required",
-     "values": {},
-     "details": null,
-     "requirement_type": "income"
-    },
-    {
-     "status": "required",
-     "values": {
-      "zips": []
-     },
-     "details": "Yes",
-     "requirement_type": "zip_restriction"
-    }
-   ],
+   "eligibility": [],
    "external_id": "6aeea443-55d2-47e7-8203-803a46f9bfeb",
-   "location_name": "Cynthia Hall Community Market",
+   "location_name": "Cynthia Hull Food Pantry",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "fairfax_county",
@@ -1136,6 +1131,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.unitedcommunity.org/locations/",
+     "evidence_quote": "Our Cynthia Hull Food Pantry provides a wide variety of food assistance on a regular basis. || Located at our Fordson Road site, the Cynthia Hull Food Pantry serves hundreds of Alexandria residents each week with nutritious groceries."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.unitedcommunity.org/food/",
+     "evidence_quote": "we collect basic information to confirm service area and understand household size || \"Monday_Notes1\": \"22303, 22306, 22307, 23308, 22309, 22310.\" || Neighbors experiencing food insecurity who live in our service ZIP codes ... For the pantry, we collect basic information to confirm service area and understand household size."
+    }
+   ],
    "organization_name": "United Community",
    "organization_website": "https://www.unitedcommunity.org/",
    "raw_eligibility_text": null,
@@ -1238,28 +1249,7 @@
    ],
    "schedules": [],
    "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": null,
-     "requirement_type": "photo_id"
-    },
-    {
-     "status": "not_required",
-     "values": {},
-     "details": null,
-     "requirement_type": "income"
-    },
-    {
-     "status": "required",
-     "values": {
-      "zips": []
-     },
-     "details": "Yes",
-     "requirement_type": "zip_restriction"
-    }
-   ],
+   "eligibility": [],
    "external_id": "0fba99ad-9161-4a15-819a-f99e517d3523",
    "location_name": "Lorton Community Action Center",
    "parking_notes": null,
@@ -1269,6 +1259,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.lortonaction.org",
+     "evidence_quote": "low-income individuals, senior citizens, and families residing in Fort Belvoir, Lorton, Newington, and other portions of southeast Fairfax County || Tuesday_ApptOnly1 = False ... Tuesday_Notes1 = 22060, 22079 || Registered clients are eligible to attend one of three distributions each week."
+    }
+   ],
    "organization_name": "Lorton Community Action Center",
    "organization_website": "https://www.lortonaction.org",
    "raw_eligibility_text": "Contact client services to register - 703-339-5161",
@@ -1459,6 +1458,30 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "clothing"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "household_essentials"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "financial_assistance"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "appointment_distribution"
     }
    ],
    "languages": [
@@ -1470,7 +1493,7 @@
     {
      "status": "required",
      "values": {},
-     "details": null,
+     "details": "Photo ID at every appointment",
      "requirement_type": "photo_id"
     },
     {
@@ -1481,11 +1504,27 @@
     },
     {
      "status": "required",
-     "values": {
-      "zips": []
-     },
-     "details": "Yes",
+     "values": {},
+     "details": "22151, 22152, 22153, 22015, part of 22150 (west of I-95), small part of 22312",
      "requirement_type": "zip_restriction"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Issued within last 2 months",
+     "requirement_type": "proof_of_address"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Call 703-569-9160",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Up to 6 times per year",
+     "requirement_type": "visit_limit"
     }
    ],
    "external_id": "f574823d-9609-4dc1-81f4-70e0c14190b5",
@@ -1497,6 +1536,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.echo-inc.org",
+     "evidence_quote": "provides food, clothing, housewares and financial assistance to individuals and families in need || Food, clothing, household items, limited financial assitance for housing, utilities or other vital expenses, school supplies, NOVA scholarships, holiday meals and gifts for children. || provides food, clothing, housewares and financial assistance"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.echo-inc.org/get-help",
+     "evidence_quote": "To qualify for assistance from ECHO you must live in one of these ZIP code areas: || \"CRITERIA_TO_RECEIVE\": \"ID,Proof_Residence,Other\", \"CRITERIA_OTHER\": \"By appoinment only\" || 22151, 22152, 22153, 22015, parts of 22150 (West of I - 95)"
+    }
+   ],
    "organization_name": "ECHO, Inc.",
    "organization_website": "https://www.echo-inc.org",
    "raw_eligibility_text": "Portions of 22150 (west of I-95) and 22312",
@@ -1583,8 +1638,8 @@
    "phone": "(571) 575-3707",
    "state": "VA",
    "website": null,
-   "address1": "5515 CHEROKEE AVE",
-   "address2": null,
+   "address1": "5515 Cherokee Ave",
+   "address2": "Suite 102",
    "services": [
     {
      "frequency": null,
@@ -1639,6 +1694,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.foodhelpline.org/resources/maranatha-springfield",
+     "evidence_quote": "5515 Cherokee Ave Suite 102 || 5515 Cherokee Ave Suite 102"
+    }
+   ],
    "organization_name": "Maranatha Springfield Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1681,6 +1745,11 @@
      "offering_status": "regular",
      "appointment_required": "not_required",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "clothing"
     }
    ],
    "languages": [
@@ -1711,6 +1780,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.culmoreumc.org/food--clothing-ministry.html",
+     "evidence_quote": "packages of food and clothing || DISTRIBUTION_MODEL : Client_choice_model,Walk_up_in_the_parking_lot; FOOD_QUANTITY : Supplemental_food_assistance || to distribute packages of food and clothing"
+    }
+   ],
    "organization_name": "Culmore United Methodist Church",
    "organization_website": "https://www.capitalareafoodbank.org",
    "raw_eligibility_text": null,
@@ -1755,9 +1833,15 @@
      "registration_required": "unknown"
     },
     {
+     "frequency": null,
      "schedules": [],
      "food_types": [],
-     "service_type": "mobile_pantry"
+     "description": null,
+     "eligibility": [],
+     "service_type": "mobile_pantry",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
     }
    ],
    "languages": [
@@ -1789,15 +1873,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "This is a Capital Area Food Bank mobile market held once a month (2nd Monday) at a community center. It is a mobile pantry, but that food category is missing.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-     "evidence_quote": "CAFB Mobile Market"
-    }
-   ],
    "organization_name": "James Lee Community Center",
    "organization_website": "https://www.capitalareafoodbank.org",
    "raw_eligibility_text": null,
@@ -1813,7 +1888,7 @@
    "phone": "(703) 772-3132",
    "state": "VA",
    "website": "https://www.capitalareafoodbank.org",
-   "address1": "4100 WADSWORTH CT, APT 1-204",
+   "address1": "4137 Wadsworth Ct",
    "address2": null,
    "services": [
     {
@@ -1870,6 +1945,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+     "evidence_quote": "4137 Wadsworth Court, off Little River Turnpike at the end of Wadsworth Court || 4137 Wadsworth Court, off Little River Turnpike at the end of Wadsworth Court"
+    }
+   ],
    "organization_name": "Legal Aid Justice Center",
    "organization_website": "https://www.capitalareafoodbank.org",
    "raw_eligibility_text": null,
@@ -2034,9 +2118,9 @@
      "requirement_type": "photo_id"
     },
     {
-     "status": "not_required",
+     "status": "required",
      "values": {},
-     "details": null,
+     "details": "Families qualify based on income",
      "requirement_type": "income"
     },
     {
@@ -2046,6 +2130,18 @@
      },
      "details": "No",
      "requirement_type": "zip_restriction"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Once a month",
+     "requirement_type": "visit_limit"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No appointment needed",
+     "requirement_type": "appointment"
     }
    ],
    "external_id": "80672fb8-4a28-4db3-8ce3-2aed706ddd0d",
@@ -2057,6 +2153,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://foodforothers.org/get-help/ineedassistance/",
+     "evidence_quote": "Our USDA Program is 1x a month. || CRITERIA_TO_RECEIVE : Proof_Residence,Income_Proof; ASSISTANCE_PERTIME : Monthly; ASSISTANCE_FREQUENCY : 1; IDENTIFICATION_REQUIREMENTS : No || Families qualify based on income. ... Our USDA Program is 1x a month. ... You do not need to schedule an appointment to receive food."
+    }
+   ],
    "organization_name": "Food for Others",
    "organization_website": "https://foodforothers.org",
    "raw_eligibility_text": null,
@@ -2272,17 +2377,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "09:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "general_groceries",
       "pantry_staples",
@@ -2325,6 +2420,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.thefoundrychurch.com/food-pantry",
+     "evidence_quote": "The Foundry Food Pantry is open every Thursday from 8:00 AM to 9:30 AM. || Thursday_Hours = 8:00 AM-9:30 AM (Every week) || The Foundry Food Pantry is open every Thursday from 8:00 AM to 9:30 AM."
+    }
+   ],
    "organization_name": "The Foundry Church",
    "organization_website": "https://www.thefoundrychurch.com",
    "raw_eligibility_text": null,
@@ -2337,7 +2441,7 @@
    "city": "Alexandria",
    "email": null,
    "notes": "We operate in the parking lot of the Community Center.",
-   "phone": "(571) 384-8845",
+   "phone": "(703) 324-9270",
    "state": "VA",
    "website": "https://www.arcadiafood.org",
    "address1": "7950 AUDUBON AVE",
@@ -2401,6 +2505,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/hybla-valley-community-center",
+     "evidence_quote": "703-324-9270 || 703-324-9270"
+    }
+   ],
    "organization_name": "Arcadia Center for Sustainable Food & Agriculture",
    "organization_website": "https://www.arcadiafood.org",
    "raw_eligibility_text": null,
@@ -2626,7 +2739,7 @@
    "phone": "(703) 820-7111",
    "state": "VA",
    "website": "https://www.stanthonyparish.org",
-   "address1": "3303 GLEN CARLYN RD",
+   "address1": "3305 Glen Carlyn Rd",
    "address2": null,
    "services": [
     {
@@ -2699,6 +2812,12 @@
      },
      "details": "No",
      "requirement_type": "zip_restriction"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "New members register on Wednesdays only",
+     "requirement_type": "registration"
     }
    ],
    "external_id": "7a753305-8db0-4d06-8adb-8adabda71555",
@@ -2712,11 +2831,18 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The listing shows no hours. The parish pantry page gives Monday and Wednesday, 10am-1pm. New-client registration is only on Wednesdays, which matches the county source's 'Walk-in only Wednesdays'.",
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
      "evidence_url": "https://www.stanthonyparish.org/food-pantry/",
-     "evidence_quote": "The Food Pantry operates two days a week (Monday and Wednesday) from 10am to 1pm."
+     "evidence_quote": "3305 Glen Carlyn Rd., Falls Church, VA 22041 || 3305 Glen Carlyn Rd."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.stanthonyparish.org/food-pantry/",
+     "evidence_quote": "If you are new to the food pantry, registration for new members is only available on Wednesdays. || If you are new to the food pantry, registration for new members is only available on Wednesdays."
     }
    ],
    "organization_name": "St. Anthony Church",
@@ -2890,6 +3016,11 @@
      "offering_status": "regular",
      "appointment_required": "not_required",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "drive_through"
     }
    ],
    "languages": [],
@@ -2918,6 +3049,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://services1.arcgis.com/ioennV6PpG5Xodq0/arcgis/rest/services/service_28906b317c7e44cab3c60a88f8dc6dc3_form/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
+     "evidence_quote": "DISTRIBUTION_MODEL : Drive_through_in_the_parking_lot,Prepacked_food_bag_or_box || Touchless, drive-by pickup is offered from 4:00PM to 6:00PM every Tuesday afternoon"
+    }
+   ],
    "organization_name": "Community of Faith Food Pantry",
    "organization_website": "https://www.cofumc.org/food-pantry",
    "raw_eligibility_text": null,
@@ -3085,26 +3225,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "15:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "12:00",
-       "closes": "15:00",
-       "weekday": 0,
-       "week_of_month": 4,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "general_groceries",
       "pantry_staples",
@@ -3181,6 +3302,13 @@
      "reason": "The 4th-Monday drive-through distribution is explicit in the source (CAFB also tags drive_through), but drive_through is missing.",
      "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
      "evidence_quote": "Wed 9am-3pm; 4th Monday 12-3pm drive thru dist."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://southernusa.salvationarmy.org/nca/fairfax/",
+     "evidence_quote": "Food Assistance- Wednesdays from 9:00 a.m. to 12:00 p.m. || Wednesdays from 9:00 a.m. to 12:00 p.m."
     }
    ],
    "organization_name": "Salvation Army Fairfax",
@@ -3239,6 +3367,12 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "clothing"
     }
    ],
    "languages": [
@@ -3249,12 +3383,6 @@
    "source_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
    "eligibility": [
     {
-     "status": "required",
-     "values": {},
-     "details": null,
-     "requirement_type": "photo_id"
-    },
-    {
      "status": "not_required",
      "values": {},
      "details": null,
@@ -3262,11 +3390,15 @@
     },
     {
      "status": "required",
-     "values": {
-      "zips": []
-     },
-     "details": "Yes",
+     "values": {},
+     "details": "ZIPs 22043 (part), 22066, 22101, 22102; call for info",
      "requirement_type": "zip_restriction"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Twice a month",
+     "requirement_type": "visit_limit"
     }
    ],
    "external_id": "672795e6-490e-4ad0-8c62-40301c5388e3",
@@ -3278,6 +3410,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.shareofmclean.org/",
+     "evidence_quote": "FOOD & CLOTHING || SERVICE : Groceries, emergency assistance, clothing room, and furniture; DISTRIBUTION_MODEL : Client_choice_model,Grocery_store_gift_cards || Food Pantry and Clothing Room at McLean Baptist Church, Door #8"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.shareofmclean.org/recipients",
+     "evidence_quote": "you must register each year || CRITERIA_TO_RECEIVE : ID,Proof_Residence; LIVING_ZIP : Yes; REGION_ALL_ZIP : 22043,22066,22101,22102; ELIGIBILITY_REQUIREMENTS_DETAIL : Part of 22043 is eligible. Call for more info; ASSISTANCE_PERTIME : Monthly; ASSISTANCE_FREQUENCY : 2 || Services are available for clients in zip codes 22101, 22102, 22066, and the Pimmit section of 22043"
+    }
+   ],
    "organization_name": "Share of McLean",
    "organization_website": "https://www.shareofmclean.org/",
    "raw_eligibility_text": "Part of 22043 is eligible. Call for more info",
@@ -3553,6 +3701,12 @@
      "values": {},
      "details": "Must reside in Fairfax, Burke, or Springfield",
      "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "After first visit, once per month ($5 membership fee, waivable)",
+     "requirement_type": "visit_limit"
     }
    ],
    "external_id": "c30bf32e-7ab2-407a-8f11-fe29e2fe01f6",
@@ -3564,6 +3718,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.burkeumc.org/co-op",
+     "evidence_quote": "We serve neighbors who live in Burke, Springfield, or Fairfax (city). || After the first visit, shoppers can shop once a month with a $5 membership fee"
+    }
+   ],
    "organization_name": "Burke United Methodist Church",
    "organization_website": "https://www.burkeumc.org/co-op",
    "raw_eligibility_text": "Must reside in Fairfax, Burke, or Springfield",
@@ -3745,8 +3908,8 @@
    "phone": "(703) 324-5409",
    "state": "VA",
    "website": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
-   "address1": "12011 GOVERNMENT CENTER PKWY",
-   "address2": null,
+   "address1": "12011 Government Center Pkwy",
+   "address2": "Suite 708",
    "services": [
     {
      "frequency": null,
@@ -3760,9 +3923,15 @@
      "registration_required": "unknown"
     },
     {
+     "frequency": null,
      "schedules": [],
      "food_types": [],
-     "service_type": "senior_meals"
+     "description": null,
+     "eligibility": [],
+     "service_type": "senior_meals",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
     }
    ],
    "languages": [
@@ -3793,6 +3962,18 @@
      },
      "details": "Yes",
      "requirement_type": "zip_restriction"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "60+ or adults with a disability, homebound",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Fairfax County, City of Fairfax, or City of Falls Church residents",
+     "requirement_type": "residency"
     }
    ],
    "external_id": "42ed5b4b-ad2d-4172-89de-890c82f9fa8c",
@@ -3806,11 +3987,25 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "This is a home-delivered meals program for homebound older adults, so senior_meals is missing.",
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "3 of 3 independent checkers agree",
      "evidence_url": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
-     "evidence_quote": "Adults over the age of 60, or adults with a disability, who are homebound"
+     "evidence_quote": "12011 Government Center Parkway, Suite 708 || 12011 Government Center Parkway, Suite 708, Fairfax, VA 22035 || 12011 Government Center Parkway, Suite 708, Fairfax, VA 22035"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
+     "evidence_quote": "Each participant receives six frozen meals and five refrigerated meals per week. || SERVICE : Home Delivered Meals are provided to homebound adults, ages 60+ or adults with a disability, who are unable to prepare their own meals and have no able-bodied caregivers in the home. || Each participant receives six frozen meals and five refrigerated meals per week."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
+     "evidence_quote": "Residents of Fairfax County, City of Fairfax, and City of Falls Church. || Residents of Fairfax County, City of Fairfax, and City of Falls Church. || Adults over the age of 60, or adults with a disability, who are homebound"
     }
    ],
    "organization_name": "Fairfax County Home Delivered Meals",
@@ -3891,6 +4086,13 @@
      "reason": "The grocery pickup is by appointment only, so walk_up is wrong. The community lunch is already covered by community_meal.",
      "evidence_url": "https://www.risinghopeumc.org/programs",
      "evidence_quote": "Food Market: by appointment only Tuesday-Thursday from 1:30pm-4:30pm."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.risinghopeumc.org/programs",
+     "evidence_quote": "Guests can fill out an application for assistance through the closet Monday - Friday during drop-in hours. || Hope Closet: For people without housing, offering hygiene items, clothing, and basic resources... Hypothermia Shelter: In partnership with Ventures in Community and New Hope Housing, overnight shelter for up to 50 people from December through March."
     }
    ],
    "organization_name": "Rising Hope Mission",
@@ -4030,6 +4232,16 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "clothing"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "drive_through"
     }
    ],
    "languages": [
@@ -4064,25 +4276,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "name",
-     "reason": "The name is a spreadsheet artifact ('Same as above'). The address and website (ststephensfairfax.org) are St. Stephen's UMC, which also appears to duplicate listing 34.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "St. Stephen's UMC | 9203 Braddock Rd Burke 22015"
-    },
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The source gives a schedule, but no hours are displayed. End times come from the CAFB record for the same church (listing 34): '5:00 PM-6:00 PM (1st of the Month); 7:00 AM-9:00 AM (4th of the Month)'.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-     "evidence_quote": "4th Saturday of the month from 7:00 am until food is gone and 1st Friday of the month from 5:00pm until food is gone"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "name",
-     "reason": "The name is a spreadsheet artifact ('Same as above'). The address and website (ststephensfairfax.org) are St. Stephen's UMC, which also appears to duplicate listing 34.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "St. Stephen's UMC | 9203 Braddock Rd Burke 22015"
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.ststephensfairfax.org/get-involved/food-clothing-donations/",
+     "evidence_quote": "free food, diaper and clothing distribution event || Free distribution of food and diapers and also clothing 7 AM.; DISTRIBUTION_MODEL : Drive_through_in_the_parking_lot,Prepacked_food_bag_or_box,Walk_up_in_the_parking_lot; FOOD_QUANTITY : Emergency_food_assistance || Free fresh produce from the Capital Area Food Bank, held as a drive-thru in the church parking lot ... Free food, diapers, and clothing"
     }
    ],
    "organization_name": "St Stephens United Methodist Church",
@@ -4240,22 +4438,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "name",
-     "reason": "'Food Distribution' is a generic label, not a place name. The site is Second Story's Culmore Family Resource Center (website second-story.org). It may also duplicate listing 22, Second Story Culmore.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-     "evidence_quote": "You will also see a sign with the name Culmore Family Resource Center at the entrance."
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "name",
-     "reason": "'Food Distribution' is a generic label, not a place name. The site is Second Story's Culmore Family Resource Center (website second-story.org). It may also duplicate listing 22, Second Story Culmore.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-     "evidence_quote": "You will also see a sign with the name Culmore Family Resource Center at the entrance."
-    }
-   ],
    "organization_name": "Second Story",
    "organization_website": "https://second-story.org/",
    "raw_eligibility_text": null,
@@ -4334,29 +4516,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The source gives weekly distribution hours, but none are displayed.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-     "evidence_quote": "12-2 pm Wednesday and 6pm to 7:30pm Thursday"
-    },
-    {
-     "date": "2026-10-12",
-     "field": "name",
-     "reason": "The name includes entrance directions, which belong in the notes.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-     "evidence_quote": "Go to back parking lot-Door 8 and ring bell"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "name",
-     "reason": "The name includes entrance directions, which belong in the notes.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-     "evidence_quote": "Go to back parking lot-Door 8 and ring bell"
-    }
-   ],
    "organization_name": "Providence Presbyterian Church",
    "organization_website": "https://www.providencechurch.org",
    "raw_eligibility_text": null,
@@ -4431,8 +4590,20 @@
     {
      "status": "required",
      "values": {},
-     "details": "Pre-register online first. Bring a picture ID and proof of address to receive a registration card, which is needed for food distribution.",
+     "details": "Proof of address needed to receive card",
      "requirement_type": "proof_of_address"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Pre-register online before visiting",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Picture ID needed to receive card",
+     "requirement_type": "photo_id"
     }
    ],
    "external_id": "4ab94922-e75e-44d1-8b95-7c882be73f2c",
@@ -4446,25 +4617,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The address is missing. The parish's own page (the listing's website) gives the pantry address.",
-     "evidence_url": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
-     "evidence_quote": "13807 Poplar Tree Rd., Chantilly, VA 20151"
-    },
-    {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "eligibility",
-     "reason": "The pantry requires online pre-registration plus photo ID and proof of address for a registration card, which contradicts 'photo ID not required'.",
+     "reason": "3 of 3 independent checkers agree",
      "evidence_url": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
-     "evidence_quote": "Please bring a picture ID and proof of address in order to validate and receive your card."
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The address is missing. The parish's own page (the listing's website) gives the pantry address.",
-     "evidence_url": "https://sttimothyparish.org/outreach-and-ministries/st-vincent-de-paul/",
-     "evidence_quote": "13807 Poplar Tree Rd., Chantilly, VA 20151"
+     "evidence_quote": "Please bring a picture ID and proof of address in order to validate and receive your card. || 'IDENTIFICATION_REQUIREMENTS': 'No', 'CRITERIA_OTHER': 'Must register first with organization. Please call 1-800-873-0613 or email svdp.st.timz@gmail.com ', 'LIVING_ZIP': 'Yes' || Beginning August 16, 2025 all visitors to the Food Pantry will be asked to pre-register online."
     }
    ],
    "organization_name": "Society of St. Vincent de Paul, St. Timothy Conference",

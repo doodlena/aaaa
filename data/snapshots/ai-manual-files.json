@@ -17,26 +17,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "11:00",
-       "closes": "13:00",
-       "weekday": 2,
-       "week_of_month": 2,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "11:00",
-       "closes": "13:00",
-       "weekday": 2,
-       "week_of_month": 4,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "prepared_meals"
      ],
@@ -61,6 +42,22 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "Every 2nd and 4th Wednesday of the month from 11am -1pm we provide lunch bags that do not require cooking. || Every 2nd and 4th Wednesday of the month from 11am -1pm we provide lunch bags that do not require cooking."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "Food Ministry at Trinity serves the Manassas community, no questions, no sign up, no proof of need or status. || Food Ministry at Trinity serves the Manassas community, no questions, no sign up, no proof of need or status."
+    }
+   ],
    "organization_name": "Trinity Episcopal Church",
    "organization_website": null,
    "raw_eligibility_text": "no questions, no sign up, no proof of need or status",
@@ -73,7 +70,7 @@
    "city": "Dumfries",
    "email": null,
    "notes": "AI-extracted; quotes: Do offer: Home Delivery Program once a month who are homebound senior, age 65 years or older, and/or a person with a disability that prohibits coming into our office in person.",
-   "phone": null,
+   "phone": "(703) 441-8606",
    "state": "VA",
    "website": null,
    "address1": "3900 Acts Lane",
@@ -164,8 +161,14 @@
     {
      "status": "required",
      "values": {},
-     "details": "*Only serve residents of Eastern Prince William County (Dale City, Dumfries, Lake Ridge, Montclair, Occoquan, Quantico, Triangle, and Woodbridge)",
+     "details": "Eastern Prince William County (Dale City, Dumfries, Lake Ridge, Montclair, Occoquan, Quantico, Triangle, Woodbridge)",
      "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "New client enrollment 1st/2nd Wed 10-12:45, 3rd/4th Tue 5-6:30pm",
+     "requirement_type": "registration"
     }
    ],
    "external_id": "d1a18fad3ade00f3",
@@ -179,11 +182,18 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The source lists food assistance hours, but the listing shows none. New-client enrollment hours are separate and are not included here.",
-     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "Food Assistance Hours: Monday 9:00 AM 11:30 AM/ 1:00 PM 3:00 PM Tuesday 1:00 PM 3:30PM / 5:00 PM 7:00 PM Thursday 9:00 AM 11:30 AM / 1:00 PM 3:00 PM"
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://cms7files.revize.com/manassasparkva/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "703. 441. 8606 || 703. 441. 8606 || 703. 441. 8606"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://actspwc.org/food-assistance/",
+     "evidence_quote": "Provide photo identification that has current address. || *Only serve residents of Eastern Prince William County (Dale City, Dumfries, Lake Ridge, Montclair, Occoquan,"
     }
    ],
    "organization_name": "ACTS Food Pantry",
@@ -249,32 +259,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The unit number is repeated twice.",
-     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
-    },
-    {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "hours",
-     "reason": "Each weekday shows two overlapping time blocks. The pantry's own site gives 5:30-8:00 PM, by appointment.",
+     "reason": "2 of 3 independent checkers agree",
      "evidence_url": "https://haymarketfoodpantry.org/find-help/",
-     "evidence_quote": "Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm Sat Mornings: By appointment between 9:00 am and 12:00 noon"
-    },
-    {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "The pantry's own site says food is distributed by appointment only, which contradicts walk_up.",
-     "evidence_url": "https://haymarketfoodpantry.org/find-help/",
-     "evidence_quote": "Our Hours - By Appointment Only"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The unit number is repeated twice.",
-     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
+     "evidence_quote": "By appointment between 5:30 pm and 8:00 pm. || Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm"
     }
    ],
    "organization_name": "Haymarket Regional Food Pantry",
@@ -320,6 +309,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "If assistance is needed, it will be necessary for you to call 703-361-8791 select option #3, and state what assistance is being requested. We will respond within 24 hours. ... *Serve residents of Manassas Park, Manassas, and Prince William County || *Serve residents of Manassas Park, Manassas, and Prince William County"
+    }
+   ],
    "organization_name": "First AME Church of Manassas",
    "organization_website": null,
    "raw_eligibility_text": "*ServeresidentsofManassasPark,Manassas,andPrinceWilliamCounty",
@@ -385,6 +383,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.sacredheartmanassas.org/food-pantry",
+     "evidence_quote": "We are a drive-through pantry open to anyone in need. || Food Drive thru is every Saturday at 8:00 AM-9:30 AM, assistance during the week is available as by appointment. Call (703) 590-0030 Clothing Pantry Saturday 8:00 AM 9:30 AM"
+    }
+   ],
    "organization_name": "Sacred Heart Catholic Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -430,18 +437,18 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "hours",
-     "reason": "The Wednesday evening and Friday sessions happen only every other week, but the site shows them every week, so families could show up on a week with no distribution. An alternating-week schedule can't be written as a week_of_month value, so the corrected schedule keeps only the weekly Tue/Thu sessions. The every-other-Wednesday and every-other-Friday sessions should go in the description as text. Distribution is also by appointment only.",
+     "reason": "2 of 3 independent checkers agree",
      "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM"
+     "evidence_quote": "Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM || Tuesdays: 9:30 – 11:30 a.m. and 1 – 3 p.m. ... Every other Wednesday: 5 – 7:30 p.m. ... Thursdays: 9:30 – 11:30 a.m. and 1 – 3 p.m. ... Every other Friday: 9:30 – 11:30 a.m."
     },
     {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "SERVE's food assistance is by appointment only, so appointment_distribution should be added. pantry_pickup stays, because the vocabulary defines it as a general pantry pickup, not walk-in (walk-in is walk_up), and SERVE still runs a pantry; appointment is also recorded in eligibility.",
-     "evidence_url": "https://pwspca.org/food/",
-     "evidence_quote": "Food assistance is provided by appointment only. To schedule an appointment, please call 571.748.2680"
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "*Serving Manassas Park, Manassas City and West End Prince William County. || No income verification required. ... New client registration appointments are held every Wednesday & Friday 1:00 - 2:30 PM ... Valid photo ID ... Proof of Prince William County residency issued within the past 30 days"
     }
    ],
    "organization_name": "SERVE Northern Virginia Family Services (NVFS) SERVE Campus",
@@ -464,7 +471,26 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "08:00",
+       "closes": "10:30",
+       "weekday": 5,
+       "week_of_month": 1,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "15:00",
+       "closes": "17:30",
+       "weekday": 3,
+       "week_of_month": 3,
+       "appointment_only": false
+      }
+     ],
      "food_types": [],
      "description": null,
      "eligibility": [],
@@ -524,11 +550,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "eligibility",
-     "reason": "The source limits service to three ZIP codes and requires ID and proof of address. The listing shows no requirements, so people could be turned away.",
-     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "*Servicingzipcodes22191-22193. YoumustbringandIDandproofofaddress."
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://stpaul-umc.org/outreach-and-advocacy/",
+     "evidence_quote": "open on the first Saturday each month 8 a.m. to 10:30 a.m. || -1st Saturday of the month from 8:00 AM-10:30 AM\n3rd Thursday of the month from 3:00-5:30 pm"
     }
    ],
    "organization_name": "St Paul United Methodist Church",
@@ -643,7 +669,7 @@
    "source_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
    "eligibility": [],
    "external_id": "39eef2ec8ff493ff",
-   "location_name": "MP High School",
+   "location_name": "Manassas Park Family Market (Manassas Park High School)",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "census_geocoder",
@@ -651,6 +677,15 @@
    "jurisdiction_id": "manassas-park-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://cms7files.revize.com/manassasparkva/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "Manassas Park- Family Market (2025-2026) || Manassas Park- Family Market (2025-2026) || Manassas Park- Family Market (2025-2026)"
+    }
+   ],
    "organization_name": "Manassas Park- Family Market (2025-2026)",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -671,62 +706,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "13:00",
-       "closes": "15:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "17:00",
-       "closes": "19:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "13:00",
-       "closes": "15:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Emergency food assistance, nutrition information, and healthy eating resources for families in Prince William County.",
      "eligibility": [],
@@ -773,18 +753,18 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The address is garbled: the city is repeated in the street line and the street number is used as the ZIP.",
-     "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
-     "evidence_quote": "10058 Dean Drive Manassas 20110"
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM || Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM"
     },
     {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The address is garbled: the city is repeated in the street line and the street number is used as the ZIP.",
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
      "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
-     "evidence_quote": "10058 Dean Drive Manassas 20110"
+     "evidence_quote": "Proof of Prince William County residency issued within the past 30 days. || Proof of Prince William County residency issued within the past 30 days"
     }
    ],
    "organization_name": "NVFS",
@@ -886,7 +866,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "AI-extracted; quotes: AFAC Headquarters in Shirlington - 2708 S. Nelson St. | Fruits and vegetables, milk, eggs, choice of meat, and shelf stable food.",
-   "phone": "(571) 384-1448",
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": null,
    "address1": "2708 S. Nelson St.",
@@ -924,6 +904,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "703-845-8486 || 703-845-8486"
+    }
+   ],
    "organization_name": "AFAC",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -944,17 +933,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "11:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "fresh_fruits",
       "fresh_vegetables",
@@ -984,6 +963,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "Monday: 9:30 – 11:30 AM || M: 9:30 – 11:30am"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Choose 1 location and visit once a week || limit client visits to one time per week"
+    }
+   ],
    "organization_name": "AFAC",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -996,7 +991,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "AI-extracted; quotes: Gilliam Place Apartments – 918 S. Lincoln St. Monday, 4:00 - 5:30 PM",
-   "phone": "(571) 384-1448",
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": null,
    "address1": "918 S. Lincoln St.",
@@ -1044,6 +1039,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "call 571-384-1448 to ask about home delivery. || call 571-384-1448 to ask about home delivery."
+    }
+   ],
    "organization_name": "AFAC",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1056,7 +1060,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "AI-extracted; quotes: Westover at Fisher House - 5705 Washington Blvd. Wednesday, 3:30 - 5:00 PM",
-   "phone": "(571) 384-1448",
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": null,
    "address1": "5705 Washington Blvd.",
@@ -1104,6 +1108,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "call 571-384-1448 to ask about home delivery. || call 571-384-1448 to ask about home delivery."
+    }
+   ],
    "organization_name": "AFAC",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1116,7 +1129,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "AI-extracted; quotes: Gates of Ballston Community Center – 4108 4th St N. Friday, 11:00 AM - 1:00 PM",
-   "phone": "(571) 384-1448",
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": null,
    "address1": "4108 4th St N.",
@@ -1164,6 +1177,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "call 571-384-1448 to ask about home delivery. || call 571-384-1448 to ask about home delivery."
+    }
+   ],
    "organization_name": "AFAC",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1176,7 +1198,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "AI-extracted; quotes: Clarendon United Methodist Church - 606 N. Irving St. Saturday, 8:30 - 10:30 AM",
-   "phone": "(571) 384-1448",
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": null,
    "address1": "606 N. Irving St.",
@@ -1224,6 +1246,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "call 571-384-1448 to ask about home delivery. || call 571-384-1448 to ask about home delivery."
+    }
+   ],
    "organization_name": "AFAC",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1304,26 +1335,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "12:00",
-       "closes": "15:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "12:00",
-       "closes": "15:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "pantry_staples",
       "fresh_fruits",
@@ -1363,6 +1375,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Mission: NOVA Tuesday and Friday 5401 7th Road S. 703-975-6584 12:00 - 3:30 PM || Tuesday and Friday 12:00 - 3:30 PM || Tuesday and Friday 12:00 - 3:30 PM"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Clothing available. Visit once per week. || Visit once per week. || Visit once per week."
+    }
+   ],
    "organization_name": "Mission: NOVA",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1429,7 +1457,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Once per week",
+     "requirement_type": "visit_limit"
+    }
+   ],
    "external_id": "e1e4ec9f8f34c72d",
    "location_name": null,
    "parking_notes": null,
@@ -1439,6 +1474,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Visit once per week. || Shelf stable food, fresh produce and meat. Visit once per week. || Shelf stable food, fresh produce and meat. Visit once per week."
+    }
+   ],
    "organization_name": "Arlington Bridge Builders",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1543,7 +1587,17 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "12:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "pantry_staples",
       "fresh_fruits",
@@ -1570,6 +1624,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "St. Charles Catholic Church                                                           Tuesday\n      3304 Washington Blvd.       703-527-5500                                 10:00 AM - 12:00 PM || 10:00 AM - 12:00 PM || St. Charles Catholic Church Tuesday 3304 Washington Blvd. 703-527-5500 10:00 AM - 12:00 PM"
+    }
+   ],
    "organization_name": "St. Charles Catholic Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1590,44 +1653,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:30",
-       "weekday": 3,
-       "week_of_month": 1,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:30",
-       "weekday": 3,
-       "week_of_month": 2,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "13:30",
-       "closes": "15:30",
-       "weekday": 3,
-       "week_of_month": 1,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "13:30",
-       "closes": "15:30",
-       "weekday": 3,
-       "week_of_month": 2,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "pantry_staples",
       "fresh_fruits",
@@ -1655,6 +1681,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Salvation Army 1st & 2nd Thursday of the month 518 S. Glebe Road 703-979-3380 9:30 - 11:30 AM and 1:30 - 3:30 PM || 1st & 2nd Thursday of the month 9:30 - 11:30 AM and 1:30 - 3:30 PM || 1st & 2nd Thursday of the month 9:30 - 11:30 AM and 1:30 - 3:30 PM"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Visit once per month. Open until food is gone. || Visit once per month. Open until food is gone. || Visit once per month. Open until food is gone."
+    }
+   ],
    "organization_name": "Salvation Army",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1675,17 +1717,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "10:30",
-       "weekday": 5,
-       "week_of_month": 4,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "fresh_fruits",
       "fresh_vegetables",
@@ -1713,6 +1745,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "Monday: 9:30 – 11:30 AM || M: 9:30 – 11:30am"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Choose 1 location and visit once a week || limit client visits to one time per week"
+    }
+   ],
    "organization_name": "CAFB Community Marketplace",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1733,7 +1781,17 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "14:30",
+       "closes": "16:00",
+       "weekday": 2,
+       "week_of_month": 1,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "fresh_fruits",
       "fresh_vegetables"
@@ -1759,6 +1817,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "1st Wednesday of the month || 1st Wednesday of the month || Park Shirlington Apartments 1st Wednesday of the month 4510 31st Street S. 2:30 - 4:00 PM"
+    }
+   ],
    "organization_name": "CAFB Mobile Markets",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1778,18 +1845,9 @@
    "address2": null,
    "services": [
     {
-     "frequency": null,
      "schedules": [],
-     "food_types": [
-      "fresh_fruits",
-      "fresh_vegetables"
-     ],
-     "description": "Fresh produce. Closed July & August",
-     "eligibility": [],
-     "service_type": "pantry_pickup",
-     "offering_status": "unconfirmed",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
+     "food_types": [],
+     "service_type": "mobile_pantry"
     }
    ],
    "languages": [],
@@ -1805,6 +1863,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "2nd Thursday of the month || 2nd Thursday of the month || Communities in Schools of NOVA & Barcroft School 2nd Thursday of the month 700 S. Buchanan Street 3:00 - 5:00 PM Fresh produce. Closed July & August"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "CAFB Mobile Markets || CAFB Mobile Markets || CAFB Mobile Markets ... Communities in Schools of NOVA & Barcroft School 2nd Thursday of the month"
+    }
+   ],
    "organization_name": "Communities in Schools of NOVA & Barcroft School",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1851,6 +1925,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Mount Olivet United Methodist Church 2nd Saturday of the month 1500 N. Glebe Road 10:00 AM - 12:00 PM || 2nd Saturday of the month 10:00 AM - 12:00 PM"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "CAFB Mobile Markets ... Mount Olivet United Methodist Church || CAFB Mobile Markets || CAFB Mobile Markets"
+    }
+   ],
    "organization_name": "Mount Olivet United Methodist Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1898,6 +1988,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "CAFB Mobile Markets || CAFB Mobile Markets"
+    }
+   ],
    "organization_name": "Mount Olive Baptist Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1922,9 +2021,36 @@
       {
        "kind": "distribution",
        "notes": null,
+       "opens": "17:00",
+       "closes": "18:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
        "opens": "15:00",
        "closes": "17:00",
        "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "18:30",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:00",
+       "closes": "18:30",
+       "weekday": 4,
        "week_of_month": null,
        "appointment_only": false
       }
@@ -1970,11 +2096,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "hours",
-     "reason": "The source gives the grocery pickup time, but the listing shows no hours. No time is published for the hot dinner.",
+     "reason": "3 of 3 independent checkers agree",
      "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
-     "evidence_quote": "Free groceries available on Tuesdays from 3:00 - 5:00 PM."
+     "evidence_quote": "Monday, Wednesday, and Friday 5:00 - 6:30 PM || Free groceries available on Tuesdays from 3:00 - 5:00 PM.\nMonday, Wednesday, and Friday\n5:00 - 6:30 PM || Hot dinner, either homemade or donations from local stores & restaurants."
     }
    ],
    "organization_name": "Arlington Assembly of God",
@@ -2089,7 +2215,7 @@
    "source_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
    "eligibility": [],
    "external_id": "4f78ea8a26a5ad47",
-   "location_name": "Ballston Metro Station (outside)",
+   "location_name": "Food Not Bombs NOVA",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "census_geocoder",
@@ -2097,6 +2223,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Ballston Metro Station (outside) - 4230 Fairfax Drive 2:30 - 5:00 PM\nFree homemade vegan meals.\nFood Not Bombs NOVA || Food Not Bombs NOVA                                                                  Sunday"
+    }
+   ],
    "organization_name": "Food Not Bombs NOVA",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2117,7 +2252,71 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 6,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "pantry_staples"
      ],
@@ -2142,6 +2341,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "These food shelves contain shelf-stable foods and are available at all times. || These food shelves contain shelf-stable foods and are available at all times."
+    }
+   ],
    "organization_name": "Campbell Elementary School",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2162,7 +2370,71 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 6,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "pantry_staples"
      ],
@@ -2187,6 +2459,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "These food shelves contain shelf-stable foods and are available at all times. || These food shelves contain shelf-stable foods and are available at all times."
+    }
+   ],
    "organization_name": "Hoffman-Boston Elementary School",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2207,7 +2488,71 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 6,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "pantry_staples"
      ],
@@ -2232,6 +2577,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "These food shelves contain shelf-stable foods and are available at all times. || These food shelves contain shelf-stable foods and are available at all times."
+    }
+   ],
    "organization_name": "St. John’s Episcopal Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2252,7 +2606,71 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 6,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "pantry_staples"
      ],
@@ -2277,6 +2695,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "These food shelves contain shelf-stable foods and are available at all times. || These food shelves contain shelf-stable foods and are available at all times."
+    }
+   ],
    "organization_name": "The Yellow House",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2297,7 +2724,71 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "00:00",
+       "closes": "23:59",
+       "weekday": 6,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "pantry_staples"
      ],
@@ -2322,6 +2813,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "These food shelves contain shelf-stable foods and are available at all times. || These food shelves contain shelf-stable foods and are available at all times."
+    }
+   ],
    "organization_name": "Unitarian Universalist Church of Arlington",
    "organization_website": null,
    "raw_eligibility_text": null,

@@ -12,7 +12,7 @@
    "phone": "(703) 441-8606",
    "state": "VA",
    "website": "https://www.actspwc.org",
-   "address1": "3900 Acts Ln",
+   "address1": "3901 ACTS Lane",
    "address2": null,
    "services": [
     {
@@ -54,18 +54,18 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "Several non-food times are shown as food pickup: the housing Coordinated Entry intake hours (Mon-Fri 8:30-5:30, Wednesday and Friday included) and the new-client enrollment slots. Food pickup is closed on Fridays.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-     "evidence_quote": "Food distribution: Monday 9-11:30 a.m. and 1-3 p.m.; Tuesday 1-3:30 p.m. and 5-7 p.m.; Thursday 9-11:30 a.m. and 1-3 p.m.; Friday CLOSED."
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.actspwc.org/food-assistance",
+     "evidence_quote": "3901 ACTS Lane, Dumfries || 3901 ACTS Lane, Dumfries"
     },
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "eligibility",
-     "reason": "The appointment and referral requirements belong to the utility and housing programs, not to food. Food is walk-in once enrolled. Photo ID is still required for new food clients, according to the same PWC food record.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-     "evidence_quote": "Walk-in during distribution hours; no appointment needed. New clients must enroll in person during enrollment hours (arrive by 12:45 p.m. on Wednesdays)."
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.actspwc.org/food-assistance",
+     "evidence_quote": "Call (703) 441-8606 ext 288 for enrollment details || 'ACTS Hunger Prevention Center provides food assistance to enrolled households once per month.' / 'New clients must present photo identification showing a current address, or photo ID plus a bill or lease proving Eastern Prince William County residency (Dale City, Dumfries, Lake Ridge, Montclair, Occoquan, Quantico, Triangle, Woodbridge).' / 'New clients must enroll in person during enrollment hours' || Client households may receive assistance once per month."
     }
    ],
    "organization_name": "Acts (Action In Community Through Service)",
@@ -126,15 +126,15 @@
   {
    "lat": 38.6526300427461,
    "lon": -77.2707315053561,
-   "zip": "22191",
-   "city": "Woodbridge",
+   "zip": "22201",
+   "city": "Arlington",
    "email": "fazal@saharaprograms.org",
    "notes": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability.",
    "phone": "(757) 394-0737",
    "state": "VA",
    "website": "https://www.saharaprograms.org",
-   "address1": "13958 Hollow Wind Way",
-   "address2": "201",
+   "address1": "3434 Washington Boulevard",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -216,25 +216,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "address",
-     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
-    },
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "Mon-Fri 9-5 is the organization's general office hours, repeated for every service. It is not a food pickup schedule.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-     "evidence_quote": "Walk-in, appointment, referral, or virtual access depending on the service. Contact Sahara Programs for current availability."
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The address is garbled: the city is missing, the street number is used as the ZIP, and the unit (201) is stuck to the street line. The raw PWC CMN record gives Woodbridge VA 22191.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-     "evidence_quote": "13958 Hollow Wind Way 201, Woodbridge VA 22191"
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.saharaprograms.org/contact",
+     "evidence_quote": "3434 Washington Boulevard Arlington, VA 22201 || 3434 Washington Boulevard, Arlington, VA 22201"
     }
    ],
    "organization_name": "Sahara Programs",
@@ -257,17 +243,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "11:00",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "general_groceries",
       "pantry_staples",
@@ -330,6 +306,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.stthomasumc.org/serveinthefoodpantry",
+     "evidence_quote": "The Food Pantry distributes food every Saturday morning from 9 - 11 am. || Every Saturday, 9:00–11:00 AM. Participants who are in line by 11:00 AM will receive food that day. || The Pantry is open every Saturday morning from 9 to 11 am for drive-thru distribution."
+    }
+   ],
    "organization_name": "St Thomas United Methodist Church",
    "organization_website": "https://www.stthomasumc.org",
    "raw_eligibility_text": "Walk-in / drive-through. No appointment is required for the regular Saturday food pantry. Families may also sign up for TEFAP food to receive additional staple items",
@@ -369,8 +354,8 @@
     {
      "status": "required",
      "values": {},
-     "details": "Yes",
-     "requirement_type": "photo_id"
+     "details": "Services by appointment only",
+     "requirement_type": "appointment"
     }
    ],
    "external_id": "bd1fad9e-d839-4306-9f6f-046093ca9b17",
@@ -382,6 +367,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.tgnck.org",
+     "evidence_quote": "Services are available by APPOINTMENT ONLY. || APPOINTMENT ONLY"
+    }
+   ],
    "organization_name": "The Good News Community Kitchen",
    "organization_website": "https://www.tgnck.org",
    "raw_eligibility_text": "Contact TGNCK through the website or by email for assistance. Virginia Mobile Meals serves families referred through partnered Fairfax and Prince William County schools and individuals/families who contact TGNCK through its website.",
@@ -406,46 +400,19 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "09:00",
-       "closes": "15:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "15:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "15:00",
+       "opens": "11:00",
+       "closes": "13:00",
        "weekday": 2,
-       "week_of_month": null,
+       "week_of_month": 2,
        "appointment_only": false
       },
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "09:00",
-       "closes": "15:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "15:00",
-       "weekday": 4,
-       "week_of_month": null,
+       "opens": "11:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": 4,
        "appointment_only": false
       }
      ],
@@ -467,8 +434,20 @@
     {
      "status": "not_required",
      "values": {},
-     "details": "No",
+     "details": "No questions asked",
      "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No sign up",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No proof of need or status",
+     "requirement_type": "income_documentation"
     }
    ],
    "external_id": "af2c10e0-5d87-4053-a282-62a2d3eb3d53",
@@ -480,6 +459,22 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "Every 2nd and 4th Wednesday of the month from 11am -1pm we provide lunch bags that do not require cooking. || Every 2nd and 4th Wednesday of the month from 11am -1pm we provide lunch bags that do not require cooking."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "Food Ministry at Trinity serves the Manassas community, no questions, no sign up, no proof of need or status. || Food Ministry at Trinity serves the Manassas community, no questions, no sign up, no proof of need or status."
+    }
+   ],
    "organization_name": "Trinity Episcopal Church",
    "organization_website": null,
    "raw_eligibility_text": "Walk in during scheduled grocery distributions. Individuals needing ready-to-eat food may visit the church office Monday–Friday during available food ministry hours.",
@@ -660,14 +655,14 @@
   {
    "lat": 38.6301460061786,
    "lon": -77.3009249645253,
-   "zip": "22193",
+   "zip": "22192",
    "city": "Woodbridge",
    "email": "office@allsaintswoodbridge.org",
    "notes": "Walk in during scheduled food giveaways or contact the church office for weekday food availability. Calling ahead is recommended for assistance outside scheduled giveaway events.",
    "phone": "(703) 670-0093",
    "state": "VA",
    "website": "https://allsaintswoodbridge.org",
-   "address1": "14851 Gideon Dr",
+   "address1": "14851 Gideon Drive",
    "address2": null,
    "services": [
     {
@@ -741,25 +736,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "address",
-     "reason": "The ZIP is the street number repeated (14851), which is not a valid Virginia ZIP. The PWC food distribution sites layer lists the same address with ZIP 22193.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-     "evidence_quote": "14851 Gideon Dr Woodbridge 14851"
-    },
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The source says weekday food help is available through the office during these hours, but no hours are shown. The monthly Saturday giveaway has no stated time, so it is left off.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-     "evidence_quote": "Regular church office hours provided by the organization are Monday–Thursday, 9:00 AM–5:00 PM; for weekday food assistance, arriving by approximately 4:30 PM is recommended."
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP is the street number repeated (14851), which is not a valid Virginia ZIP. The PWC food distribution sites layer lists the same address with ZIP 22193.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-     "evidence_quote": "14851 Gideon Dr Woodbridge 14851"
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://allsaintswoodbridge.org",
+     "evidence_quote": "All Saints' Church, 14851 Gideon Drive, Woodbridge, VA, 22192, United States || All Saints' Church, 14851 Gideon Drive, Woodbridge, VA, 22192, United States"
     }
    ],
    "organization_name": "All Saints Anglican Church",
@@ -873,12 +854,22 @@
    "phone": "(703) 303-2130",
    "state": "VA",
    "website": "https://humanityfirstusa.org/portfolio/manassas-food-pantry/",
-   "address1": "Masroor Mosque 5640 Hoadly Rd",
+   "address1": "5640 Hoadly Rd",
    "address2": null,
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "12:00",
+       "closes": "13:00",
+       "weekday": 5,
+       "week_of_month": 4,
+       "appointment_only": false
+      }
+     ],
      "food_types": [],
      "description": "Provides free monthly food assistance to individuals and families experiencing food insecurity through Humanity First USA’s Manassas food distribution program. The program is part of Humanity First USA’s broader Food Security initiative, which provides food staples and nutritional support to people in need.",
      "eligibility": [],
@@ -914,6 +905,22 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/assets/2024-06/COC_ResourceGuide_FINAL.pdf",
+     "evidence_quote": "Humanity First USA - Masroor Mosque\n   5640 Hoadly Road, Manassas, VA 20112 || Masroor Mosque, 5640 Hoadly Road, Manassas, VA 20112"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://humanityfirstusa.org/portfolio/manassas-food-pantry/",
+     "evidence_quote": "Monthly on the fourth Saturday, 12:00-1:00 PM || Monthly on the fourth Saturday, 12:00-1:00 PM."
+    }
+   ],
    "organization_name": "Humanity First USA – Manassas Food Distribution",
    "organization_website": "https://humanityfirstusa.org/portfolio/manassas-food-pantry/",
    "raw_eligibility_text": "Appointment/registration required. The registration link opens in advance of each distribution date. Residents should register online through the Manassas Food Distribution page.",
@@ -990,17 +997,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "18:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "general_groceries",
       "pantry_staples",
@@ -1023,20 +1020,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Enrollment and appointment required. Contact NVFS to enroll and schedule food assistance. The Hunger Resource Center serves enrolled clients rather than operating as a general walk-in pantry.",
-     "requirement_type": "appointment"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Yes",
-     "requirement_type": "photo_id"
-    }
-   ],
+   "eligibility": [],
    "external_id": "bfa69a9a-b9a6-43ac-ab9a-0787dd1b35f6",
    "location_name": null,
    "parking_notes": null,
@@ -1048,18 +1032,18 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The address is garbled: the city is repeated in the street line and the street number is used as the ZIP.",
-     "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
-     "evidence_quote": "10058 Dean Drive Manassas 20110"
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM || Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM"
     },
     {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The address is garbled: the city is repeated in the street line and the street number is used as the ZIP.",
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
      "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
-     "evidence_quote": "10058 Dean Drive Manassas 20110"
+     "evidence_quote": "Proof of Prince William County residency issued within the past 30 days. || Proof of Prince William County residency issued within the past 30 days"
     }
    ],
    "organization_name": "Northern Virginia Family Service (NVFS) – Hunger Resource Center",

@@ -9,7 +9,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "Weekly supplemental groceries. Choose one site and visit once a week (per Arlington County 2026 flyer). Home delivery for homebound clients: call 571-384-1448. Document questions: 571-384-1440. AFAC strives to provide every week: milk, eggs, one serving of protein (choice of chicken, ground beef, fish, or hot dogs), fresh fruit, fresh vegetables, cereal or oatmeal, canned goods, rice/pasta/dry beans, bread, baked goods.",
-   "phone": "703-845-8486",
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": "https://afac.org/get-groceries/",
    "address1": "2708 S Nelson St",
@@ -160,6 +160,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "703-845-8486 || 703-845-8486"
+    }
+   ],
    "organization_name": "Arlington Food Assistance Center (AFAC)",
    "organization_website": "https://afac.org/",
    "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
@@ -180,17 +189,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "dairy",
       "eggs",
@@ -214,32 +213,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://afac.org/get-groceries/",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "live in Arlington",
-     "requirement_type": "residency"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "get a referral from an Arlington County social service agency. AFAC referrals last for 6 months",
-     "requirement_type": "referral"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "you must provide ONE photo identification",
-     "requirement_type": "photo_id"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "ONE proof of your address in Arlington ... A post office box or business address is not acceptable.",
-     "requirement_type": "proof_of_address"
-    }
-   ],
+   "eligibility": [],
    "external_id": "va08-afac-arlington-mill",
    "location_name": "AFAC at Arlington Mill Community Center",
    "parking_notes": null,
@@ -249,6 +223,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "Monday: 9:30 – 11:30 AM || M: 9:30 – 11:30am"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Choose 1 location and visit once a week || limit client visits to one time per week"
+    }
+   ],
    "organization_name": "Arlington Food Assistance Center (AFAC)",
    "organization_website": "https://afac.org/",
    "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
@@ -261,7 +251,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "AFAC grocery distribution site (referral required). Please let your social worker know which site you prefer.",
-   "phone": "703-845-8486",
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": "https://afac.org/get-groceries/",
    "address1": "918 S Lincoln St",
@@ -338,6 +328,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "call 571-384-1448 to ask about home delivery. || call 571-384-1448 to ask about home delivery."
+    }
+   ],
    "organization_name": "Arlington Food Assistance Center (AFAC)",
    "organization_website": "https://afac.org/",
    "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
@@ -350,7 +349,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "AFAC grocery distribution site (referral required). Please let your social worker know which site you prefer.",
-   "phone": "703-845-8486",
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": "https://afac.org/get-groceries/",
    "address1": "5705 Washington Blvd",
@@ -427,6 +426,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "call 571-384-1448 to ask about home delivery. || call 571-384-1448 to ask about home delivery."
+    }
+   ],
    "organization_name": "Arlington Food Assistance Center (AFAC)",
    "organization_website": "https://afac.org/",
    "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
@@ -439,7 +447,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "AFAC grocery distribution site (referral required). Please let your social worker know which site you prefer.",
-   "phone": "703-845-8486",
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": "https://afac.org/get-groceries/",
    "address1": "4108 4th St N",
@@ -516,6 +524,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "call 571-384-1448 to ask about home delivery. || call 571-384-1448 to ask about home delivery."
+    }
+   ],
    "organization_name": "Arlington Food Assistance Center (AFAC)",
    "organization_website": "https://afac.org/",
    "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
@@ -528,7 +545,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "AFAC grocery distribution site (referral required). Please let your social worker know which site you prefer.",
-   "phone": "703-845-8486",
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": "https://afac.org/get-groceries/",
    "address1": "606 N Irving St",
@@ -605,6 +622,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "call 571-384-1448 to ask about home delivery. || call 571-384-1448 to ask about home delivery."
+    }
+   ],
    "organization_name": "Arlington Food Assistance Center (AFAC)",
    "organization_website": "https://afac.org/",
    "raw_eligibility_text": "To receive weekly groceries from AFAC, you must: (1) live in Arlington and (2) get a referral from an Arlington County social service agency. AFAC referrals last for 6 months ... To apply for AFAC services, you must provide ONE photo identification and ONE proof of your address in Arlington",
@@ -648,15 +674,6 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The ALIVE! market is on the LAST Saturday, not the 4th. The second-Friday seasonal distribution is correct. The source notes also flag an address conflict: the ALIVE! page lists 3600 Commonwealth Ave.",
-     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-     "evidence_quote": "Last Saturday of the month from 8:30 am – 10:30 am."
-    }
-   ],
    "organization_name": "City of Alexandria DCHS and Agape Church",
    "organization_website": null,
    "raw_eligibility_text": "Seasonal food distribution open to all, bring a bag.",
@@ -780,20 +797,14 @@
     {
      "status": "required",
      "values": {},
-     "details": "provide Alexandria residents with free groceries",
+     "details": "City of Alexandria residents",
      "requirement_type": "residency"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Neighbors are welcome to visit once a month",
+     "details": "Once a month",
      "requirement_type": "visit_limit"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "proof of residency in the City of Alexandria may be requested.",
-     "requirement_type": "proof_of_address"
     }
    ],
    "external_id": "va08-alive-west-end-food-hub",
@@ -805,6 +816,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "Neighbors are welcome to visit once a month, and proof of residency in the City of Alexandria may be requested. || Neighbors are welcome to visit once a month, and proof of residency in the City of Alexandria may be requested."
+    }
+   ],
    "organization_name": "ALIVE! (Alexandrians Involved Ecumenically)",
    "organization_website": "https://www.alive-inc.org/",
    "raw_eligibility_text": "The ALIVE! Community Food Hubs provide Alexandria residents with free groceries ... Neighbors are welcome to visit once a month, and proof of residency in the City of Alexandria may be requested.",
@@ -928,20 +948,14 @@
     {
      "status": "required",
      "values": {},
-     "details": "provide Alexandria residents with free groceries",
+     "details": "City of Alexandria residents",
      "requirement_type": "residency"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Neighbors are welcome to visit once a month",
+     "details": "Once a month",
      "requirement_type": "visit_limit"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "proof of residency in the City of Alexandria may be requested.",
-     "requirement_type": "proof_of_address"
     }
    ],
    "external_id": "va08-alive-del-ray-food-hub",
@@ -953,6 +967,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "Neighbors are welcome to visit once a month, and proof of residency in the City of Alexandria may be requested. || Neighbors are welcome to visit once a month, and proof of residency in the City of Alexandria may be requested."
+    }
+   ],
    "organization_name": "ALIVE! (Alexandrians Involved Ecumenically)",
    "organization_website": "https://www.alive-inc.org/",
    "raw_eligibility_text": "The ALIVE! Community Food Hubs provide Alexandria residents with free groceries ... Neighbors are welcome to visit once a month, and proof of residency in the City of Alexandria may be requested.",
@@ -1128,7 +1151,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "City of Alexandria residents; proof of residency or ALIVE! Client Card may be requested",
+     "requirement_type": "residency"
+    }
+   ],
    "external_id": "va08-alive-dchs-mark-center",
    "location_name": "City of Alexandria Department of Community & Human Services (Mark Center)",
    "parking_notes": null,
@@ -1140,11 +1170,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "eligibility",
-     "reason": "Source says proof of residency OR an ALIVE! Client Card 'may be requested' - not a hard requirement; showing it as required may turn people away.",
+     "reason": "3 of 3 independent checkers agree",
      "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-     "evidence_quote": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested."
+     "evidence_quote": "ALIVE! food distributions are for City of Alexandria residents. || ALIVE! food distributions are for City of Alexandria residents. || Proof of residency in the City of Alexandria  or an ALIVE! Client Card may be requested."
     }
    ],
    "organization_name": "ALIVE! with City of Alexandria DCHS",
@@ -1190,7 +1220,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "City of Alexandria residents; proof of residency or ALIVE! Client Card may be requested",
+     "requirement_type": "residency"
+    }
+   ],
    "external_id": "va08-alive-fairlington-umc",
    "location_name": "Fairlington United Methodist Church",
    "parking_notes": null,
@@ -1202,18 +1239,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "eligibility",
-     "reason": "Source says proof of residency OR an ALIVE! Client Card 'may be requested' - not a hard requirement; showing it as required may turn people away.",
+     "reason": "3 of 3 independent checkers agree",
      "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-     "evidence_quote": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested."
-    },
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "Listing shows no hours. Oct 21, Nov 18 and Dec 16, 2026 are all 3rd Wednesdays, 5-6:30pm.",
-     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-     "evidence_quote": "In partnership with Fairlington United Methodist Church (3900 King St) at 5 – 6:30 p.m. Dates for the rest of the year: October 21st, November 18th, December 16th"
+     "evidence_quote": "ALIVE! food distributions are for City of Alexandria residents. || ALIVE! food distributions are for City of Alexandria residents. || Proof of residency in the City of Alexandria  or an ALIVE! Client Card may be requested."
     }
    ],
    "organization_name": "ALIVE! with Fairlington United Methodist Church",
@@ -1266,6 +1296,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "Hosted by Communities in Schools at Hammond Middle School (4646 Seminary Road) at 4 – 6 p.m. || Hosted by Communities in Schools at Hammond Middle School (4646 Seminary Road) at 4 – 6 p.m."
+    }
+   ],
    "organization_name": "ALIVE! with Communities in Schools",
    "organization_website": "https://www.alive-inc.org/",
    "raw_eligibility_text": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested.",
@@ -1309,15 +1348,6 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "eligibility",
-     "reason": "Source says proof of residency OR an ALIVE! Client Card 'may be requested' - not a hard requirement; showing it as required may turn people away.",
-     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-     "evidence_quote": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested."
-    }
-   ],
    "organization_name": "ALIVE! with UNCUT Youth",
    "organization_website": "https://www.alive-inc.org/",
    "raw_eligibility_text": "Proof of City of Alexandria residency or an ALIVE! Client Card may be requested (not strictly required).",
@@ -1649,15 +1679,6 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "Listing shows no hours. The remaining 2026 dates (Aug 21, Sep 18, Oct 16, Nov 20, Dec 18) all fall on the 3rd Friday, 9:30am-2pm; registration by phone is required.",
-     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-     "evidence_quote": "Dates through the end of the year: June 26th, July 24th, August 21st, September 18th, October 16th, November 20th, December 18th. 9:30 am- 2:00 pm"
-    }
-   ],
    "organization_name": "Mt. Jezreel Baptist Church",
    "organization_website": null,
    "raw_eligibility_text": "call 1.800.268.0448 to register for food pickup",
@@ -2248,9 +2269,15 @@
      "registration_required": "unknown"
     },
     {
+     "frequency": null,
      "schedules": [],
      "food_types": [],
-     "service_type": "senior_meals"
+     "description": null,
+     "eligibility": [],
+     "service_type": "senior_meals",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
     }
    ],
    "languages": [],
@@ -2279,15 +2306,6 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "Source describes this as the Senior Congregate Nutrition Program (pre-registered senior lunch); the food category senior_meals is missing.",
-     "evidence_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
-     "evidence_quote": "Senior Congregate Nutrition Program"
-    }
-   ],
    "organization_name": "City of Alexandria Division of Aging & Adult Services",
    "organization_website": null,
    "raw_eligibility_text": "Pre-registration required.",
@@ -2411,9 +2429,15 @@
      "registration_required": "unknown"
     },
     {
+     "frequency": null,
      "schedules": [],
      "food_types": [],
-     "service_type": "senior_meals"
+     "description": null,
+     "eligibility": [],
+     "service_type": "senior_meals",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
     }
    ],
    "languages": [],
@@ -2442,15 +2466,6 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "Source describes this as the Senior Congregate Nutrition Program (pre-registered senior breakfast/lunch); the food category senior_meals is missing.",
-     "evidence_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
-     "evidence_quote": "Senior Congregate Nutrition Program"
-    }
-   ],
    "organization_name": "City of Alexandria Division of Aging & Adult Services",
    "organization_website": null,
    "raw_eligibility_text": "Pre-registration required.",
@@ -3098,7 +3113,7 @@
     {
      "status": "required",
      "values": {},
-     "details": "For the pantry, we collect basic information to confirm service area and understand household size.",
+     "details": "Basic info collected to confirm service area and household size",
      "requirement_type": "registration"
     }
    ],
@@ -3111,6 +3126,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.unitedcommunity.org/food/",
+     "evidence_quote": "Neighbors experiencing food insecurity who live in our service ZIP codes || Neighbors experiencing food insecurity who live in our service ZIP codes."
+    }
+   ],
    "organization_name": "United Community",
    "organization_website": "https://www.unitedcommunity.org/",
    "raw_eligibility_text": "Neighbors experiencing food insecurity who live in our service ZIP codes (22306, 22307, 22308, 22309, and east of Telegraph: 22303, 22310). For the pantry, we collect basic information to confirm service area and understand household size. Some USDA programs (like TEFAP) may not require registration.",
@@ -3327,6 +3351,13 @@
      "reason": "The grocery pickup is by appointment only, so walk_up is wrong. The community lunch is already covered by community_meal.",
      "evidence_url": "https://www.risinghopeumc.org/programs",
      "evidence_quote": "Food Market: by appointment only Tuesday-Thursday from 1:30pm-4:30pm."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.risinghopeumc.org/programs",
+     "evidence_quote": "Guests can fill out an application for assistance through the closet Monday - Friday during drop-in hours. || Hope Closet: For people without housing, offering hygiene items, clothing, and basic resources... Hypothermia Shelter: In partnership with Ventures in Community and New Hope Housing, overnight shelter for up to 50 people from December through March."
     }
    ],
    "organization_name": "Rising Hope Mission Church",
@@ -3503,6 +3534,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.culmoreumc.org/food--clothing-ministry.html",
+     "evidence_quote": "packages of food and clothing || DISTRIBUTION_MODEL : Client_choice_model,Walk_up_in_the_parking_lot; FOOD_QUANTITY : Supplemental_food_assistance || to distribute packages of food and clothing"
+    }
+   ],
    "organization_name": "Culmore United Methodist Church",
    "organization_website": "https://www.culmoreumc.org/",
    "raw_eligibility_text": null,

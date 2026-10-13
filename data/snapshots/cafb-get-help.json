@@ -110,7 +110,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Fill out online request form (form.jotform.com/201683252901046) to receive food help",
+     "requirement_type": "registration"
+    }
+   ],
    "external_id": "21874-PART-01",
    "location_name": "DMV Food Justice Initiative",
    "parking_notes": null,
@@ -120,6 +127,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://services.arcgis.com/oCjyzxNy34f0pJCV/arcgis/rest/services/Get_Help_Map_Source_Data/FeatureServer/0/query?where=1%3D1&outFields=*&f=json",
+     "evidence_quote": "Para recibir ayuda de comida, por favor llena este formulario: https://form.jotform.com/201683252901046 || Call in advance for services."
+    }
+   ],
    "organization_name": "DMV Food Justice Initiative",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -165,7 +181,20 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Food must be picked up by an adult 18+",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Entry numbers handed out starting 7:00 a.m.",
+     "requirement_type": "first_come_first_served"
+    }
+   ],
    "external_id": "21950-PART-01",
    "location_name": "Lutheran Church of the Abiding Presence",
    "parking_notes": null,
@@ -175,6 +204,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.abidingpresence.net/needhelp",
+     "evidence_quote": "can only be picked up by adults over the age of 18 || Only adults 18 and older can pick up food."
+    }
+   ],
    "organization_name": "Lutheran Church of the Abiding Presence",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -230,22 +268,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The ZIP code is 22042, not 22041. The CAFB source also gives 22042.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/james-lee-community-center",
-     "evidence_quote": "2855 Annandale Road Falls Church, VA 22042"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP code is 22042, not 22041. The CAFB source also gives 22042.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/james-lee-community-center",
-     "evidence_quote": "2855 Annandale Road Falls Church, VA 22042"
-    }
-   ],
    "organization_name": "James Lee Community Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -301,6 +323,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/hybla-valley-community-center",
+     "evidence_quote": "703-324-9270 || 703-324-9270"
+    }
+   ],
    "organization_name": "Hybla Valley Community Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -364,7 +395,26 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Burke, Springfield, or Fairfax (city) residents; others get 2 bags of staples",
+     "requirement_type": "service_area"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Register on arrival at first visit, shop same day",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "One shop per month after first visit",
+     "requirement_type": "visit_limit"
+    }
+   ],
    "external_id": "22207-PART-01",
    "location_name": "Burke United Methodist Church",
    "parking_notes": null,
@@ -374,6 +424,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.burkeumc.org/co-op",
+     "evidence_quote": "We serve neighbors who live in Burke, Springfield, or Fairfax (city). || Zip code in Burke, Springfield, or Fairfax (not all of Fairfax County) || Open to residents of Burke, Springfield, or the City of Fairfax."
+    }
+   ],
    "organization_name": "Burke United Methodist Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -438,15 +497,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The 3rd-Saturday distribution is missing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "9:30 AM-11:00 AM (1st and 3rd of the Month)"
-    }
-   ],
    "organization_name": "Buddhist Tzu Chi Foundation",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -459,7 +509,7 @@
    "city": "Lorton",
    "email": null,
    "notes": "Saturday: Every one is welcome to the pantry, no discrimination. We count across county line. As long as they can find their way to the pantry on 2nd and 4th Saturday of the month.",
-   "phone": "(804) 625-9423",
+   "phone": "(703) 459-9434",
    "state": "VA",
    "website": null,
    "address1": "7218 Lockport Place",
@@ -526,11 +576,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The 4th-Saturday distribution is missing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "As long as they can find their way to the pantry on 2nd and 4th Saturday of the month."
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://victorytempleva.org/pantry/",
+     "evidence_quote": "703-459-9434(3) || 703-459-9434"
     }
    ],
    "organization_name": "The Redeemed Christian Church of God - Victory Temple",
@@ -610,14 +660,14 @@
    "lat": 38.819537,
    "lon": -77.445715,
    "zip": "20121",
-   "city": "Centerville",
+   "city": "Centreville",
    "email": null,
    "notes": null,
    "phone": "(571) 216-4861",
    "state": "VA",
    "website": null,
-   "address1": "6600 Old Centerville Rd",
-   "address2": "n/a",
+   "address1": "6600 Old Centreville Rd",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -689,11 +739,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The 4th-Tuesday 1-3 PM distribution is missing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "1:00 PM-3:00 PM (2nd and 4th of the Month); 9:00 AM-10:00 AM (3rd of the Month)"
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.mountolive-church.org",
+     "evidence_quote": "6600 Old Centreville Road, Centreville, VA 20121 || Mount Olive Baptist Church 6600 Old Centreville Rd, Centreville, VA 20121 || 6600 Old Centerville Rd, Centerville, VA 20121"
     }
    ],
    "organization_name": "Mount Olive Baptist Church",
@@ -751,22 +801,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The ZIP is missing. The county source for the same site (listing 91, CBC Blesses Mobile Market) gives 20151. Listing 91 also looks like a duplicate of this one.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-     "evidence_quote": "14312 CHANTILLY BAPTIST LN Chantilly 20151"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP is missing. The county source for the same site (listing 91, CBC Blesses Mobile Market) gives 20151. Listing 91 also looks like a duplicate of this one.",
-     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
-     "evidence_quote": "14312 CHANTILLY BAPTIST LN Chantilly 20151"
-    }
-   ],
    "organization_name": "Chantilly Baptist Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -857,10 +891,10 @@
    "city": "Falls Church",
    "email": null,
    "notes": null,
-   "phone": "(703) 506-9191",
+   "phone": "(703) 379-5217",
    "state": "VA",
    "website": null,
-   "address1": "3404-B Culmore Court",
+   "address1": "3304B Culmore Court",
    "address2": null,
    "services": [
     {
@@ -900,6 +934,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://second-story.org/community/",
+     "evidence_quote": "703.379.5217; TTY 711 || \"FOOD_PROVIDER_SITE_PHONE\":\"703-379-5217\" || 703.379.5217; TTY 711"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://second-story.org/community/",
+     "evidence_quote": "3304B Culmore Court / Falls Church, VA 22041 || 3304B Culmore Court\nFalls Church, VA 22041"
+    }
+   ],
    "organization_name": "Second Story Culmore",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -912,7 +962,7 @@
    "city": "Springfield",
    "email": null,
    "notes": null,
-   "phone": "(703) 506-9191",
+   "phone": "(703) 644-0000",
    "state": "VA",
    "website": null,
    "address1": "7224 Commerce St., Apt T-2",
@@ -955,6 +1005,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://second-story.org/community/",
+     "evidence_quote": "703.644.0000; TTY 711 || 703.644.0000; TTY 711"
+    }
+   ],
    "organization_name": "Second Story Springfield",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -967,7 +1026,7 @@
    "city": "Fairfax",
    "email": null,
    "notes": "Saturday: Food distribution in Alexandria",
-   "phone": null,
+   "phone": "(703) 352-5090",
    "state": "VA",
    "website": null,
    "address1": "10700 Page Avenue",
@@ -1008,6 +1067,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://facetscares.org/contact-us/",
+     "evidence_quote": "703-352-5090 || 703-352-5090"
+    }
+   ],
    "organization_name": "FACETS",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1024,7 +1092,7 @@
    "state": "VA",
    "website": null,
    "address1": "5515 Cherokee Ave",
-   "address2": null,
+   "address2": "Suite 102",
    "services": [
     {
      "frequency": null,
@@ -1063,6 +1131,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.foodhelpline.org/resources/maranatha-springfield",
+     "evidence_quote": "5515 Cherokee Ave Suite 102 || 5515 Cherokee Ave Suite 102"
+    }
+   ],
    "organization_name": "Maranatha Springfield Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1108,7 +1185,20 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "One pickup per household per week",
+     "requirement_type": "visit_limit"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Must reside in ZIP 22003",
+     "requirement_type": "zip_restriction"
+    }
+   ],
    "external_id": "22555-PART-02",
    "location_name": "Annandale UMC",
    "parking_notes": null,
@@ -1118,6 +1208,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://annandalechurch.com/foodministry",
+     "evidence_quote": "Clients must register showing evidence (utility bill, driver's license, etc.) of living in our service area. || \"Thursday_Notes1\":\"Photo ID and proof of residency in 22003 ZIPcode. One food pickup per week per household.\" || This mission serves community members living in the 22003 Annandale zip code. Clients must register showing evidence (utility bill, driver's license, etc.) of living in our service area. One registration card/food pickup per household per week."
+    }
+   ],
    "organization_name": "Annandale UMC",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1167,6 +1266,16 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "diapers"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "hygiene_supplies"
     }
    ],
    "languages": [],
@@ -1182,6 +1291,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.stmatthewsumc.org/food",
+     "evidence_quote": "Baby diapers during the first 2 weeks of the month. || diapers the first 2 weeks of the month and feminine hygiene products the following 2 weeks."
+    }
+   ],
    "organization_name": "St. Matthews Ken Jackson Food Closet",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1347,9 +1465,25 @@
    "address2": null,
    "services": [
     {
+     "frequency": null,
      "schedules": [],
      "food_types": [],
-     "service_type": "other"
+     "description": null,
+     "eligibility": [],
+     "service_type": "other",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "clothing"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "hygiene_supplies"
     }
    ],
    "languages": [],
@@ -1367,11 +1501,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "categories",
-     "reason": "The grocery pickup is by appointment only, so walk_up is wrong. The community lunch is already covered by community_meal.",
+     "reason": "2 of 3 independent checkers agree",
      "evidence_url": "https://www.risinghopeumc.org/programs",
-     "evidence_quote": "Food Market: by appointment only Tuesday-Thursday from 1:30pm-4:30pm."
+     "evidence_quote": "Guests can fill out an application for assistance through the closet Monday - Friday during drop-in hours. || Hope Closet: For people without housing, offering hygiene items, clothing, and basic resources... Hypothermia Shelter: In partnership with Ventures in Community and New Hope Housing, overnight shelter for up to 50 people from December through March."
     }
    ],
    "organization_name": "Rising Hope Methodist Mission Church",
@@ -1412,24 +1546,6 @@
        "weekday": 2,
        "week_of_month": null,
        "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "14:00",
-       "weekday": 2,
-       "week_of_month": 1,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "14:00",
-       "weekday": 2,
-       "week_of_month": 3,
-       "appointment_only": false
       }
      ],
      "food_types": [
@@ -1458,11 +1574,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "hours",
-     "reason": "The source gives the 1st AND 3rd of the month, but only week 1 is shown. The weekday (Wednesday) is taken from the current listing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "10:00 AM-2:00 PM (1st and 3rd of the Month)"
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.stanthonyparish.org/food-pantry/",
+     "evidence_quote": "operates two days a week (Monday and Wednesday) from 10am to 1pm || Mondays and Wednesdays, 10am to 1pm"
     }
    ],
    "organization_name": "St. Anthony of Padua Catholic Church",
@@ -1525,11 +1641,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "hours",
-     "reason": "The source gives the 1st AND 3rd of the month, but only week 1 is shown. The weekday (Wednesday) is taken from the current listing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "10:00 AM-2:00 PM (1st and 3rd of the Month)"
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.stanthonyparish.org/food-pantry/",
+     "evidence_quote": "operates two days a week (Monday and Wednesday) from 10am to 1pm || Mondays and Wednesdays, 10am to 1pm"
     }
    ],
    "organization_name": "St. Anthony of Padua Catholic Church",
@@ -1594,9 +1710,15 @@
      "registration_required": "unknown"
     },
     {
+     "frequency": null,
      "schedules": [],
      "food_types": [],
-     "service_type": "appointment_distribution"
+     "description": null,
+     "eligibility": [],
+     "service_type": "appointment_distribution",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
     }
    ],
    "languages": [],
@@ -1625,29 +1747,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The 4th-Tuesday distribution is missing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "3:00 PM-5:30 PM (2nd and 4th of the Month)"
-    },
-    {
-     "date": "2026-10-12",
-     "field": "eligibility",
-     "reason": "The source requires an appointment and restricts service to Springfield ZIP codes. Neither is shown.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "Tuesday: Call for appointment, 703-703-3665. Serving only Springfield residents, 22150, 22151, 22152, 22153."
-    },
-    {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "Food pickup is by appointment, so appointment_distribution is missing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "Call 703-703-3665 for an appointment."
-    }
-   ],
    "organization_name": "Sydenstricker UMC",
    "organization_website": null,
    "raw_eligibility_text": "Appointment required (call 703-703-3665). Springfield residents only (ZIPs 22150, 22151, 22152, 22153). Can pick up for one family only.",
@@ -1660,7 +1759,7 @@
    "city": "Burke",
    "email": null,
    "notes": "Friday: Distribution of fresh vegetables sorted and packaged into family offerings; frozen halal chicken or other meat when available; Saturday: Perishable/Non-perishable food, bread, diapers, household goods",
-   "phone": "(240) 381-1307",
+   "phone": "(703) 978-8724",
    "state": "VA",
    "website": null,
    "address1": "9203 Braddock Rd",
@@ -1729,12 +1828,31 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "diapers"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "clothing"
     }
    ],
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "First Friday drive-thru: no pre-registration",
+     "requirement_type": "registration"
+    }
+   ],
    "external_id": "19402-PART-01",
    "location_name": "St. Stephen's UMC",
    "parking_notes": null,
@@ -1744,6 +1862,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.ststephensfairfax.org/get-involved/food-clothing-donations/",
+     "evidence_quote": "(703) 978-8724 || \"FOOD_PROVIDER_SITE_PHONE\":\"703-978-8724\" || (703) 978-8724"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.ststephensfairfax.org/get-involved/food-clothing-donations/",
+     "evidence_quote": "free food, diaper and clothing distribution event open to all || Free distribution of food and diapers and also clothing 7 AM. || free food, diaper and clothing distribution event open to all"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.ststephensfairfax.org/get-involved/food-clothing-donations/",
+     "evidence_quote": "no pre-registration is required. || \"ACCEPT_WALK_INS\":\"Yes\",\"ELIGIBILITY_REQUIREMENTS\":\"No\",\"INCOME_REQUIREMENTS\":\"No\",\"IDENTIFICATION_REQUIREMENTS\":\"No\" || no pre-registration is required"
+    }
+   ],
    "organization_name": "St. Stephen's UMC",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1756,11 +1897,11 @@
    "city": "Herndon",
    "email": null,
    "notes": null,
-   "phone": "(571) 345-4241",
+   "phone": "(571) 323-2198",
    "state": "VA",
    "website": null,
-   "address1": "795 Center St",
-   "address2": "#2A",
+   "address1": "795 Center Street",
+   "address2": "Unit 2",
    "services": [
     {
      "frequency": null,
@@ -1768,7 +1909,16 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:00",
+       "opens": "11:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
        "closes": "13:00",
        "weekday": 3,
        "week_of_month": null,
@@ -1777,7 +1927,16 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:00",
+       "opens": "11:00",
+       "closes": "13:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "11:00",
        "closes": "13:00",
        "weekday": 5,
        "week_of_month": null,
@@ -1809,17 +1968,7 @@
     },
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:00",
-       "closes": "13:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "0",
      "eligibility": [],
@@ -1832,7 +1981,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No income limits",
+     "requirement_type": "income"
+    }
+   ],
    "external_id": "19454-PART-01",
    "location_name": "Faith Social Services",
    "parking_notes": null,
@@ -1842,6 +1998,36 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.faithus.org/how-we-serve/food-programs/",
+     "evidence_quote": "(571) 323-2198 || (571) 323-2198"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.faithus.org/how-we-serve/food-programs/",
+     "evidence_quote": "795 Center Street Unit 2 Herndon, VA 20170 || 795 Center Street, Unit 2, Herndon, VA 20170"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.faithus.org/how-we-serve/food-programs/",
+     "evidence_quote": "Food Distribution (Walk-In): Wednesday- Saturday 11am to 1pm || Wednesday- Saturday 11am to 1pm"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.faithus.org/how-we-serve/food-programs/",
+     "evidence_quote": "Our Food Pantry operates without income limits or restrictions, welcoming all individuals in need. || Our Food Pantry operates without income limits or restrictions, welcoming all individuals in need."
+    }
+   ],
    "organization_name": "Faith Social Services",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1857,7 +2043,7 @@
    "phone": "(703) 971-1991",
    "state": "VA",
    "website": null,
-   "address1": "6107 Franconia Road",
+   "address1": "6037 Franconia Road",
    "address2": null,
    "services": [
     {
@@ -1962,7 +2148,20 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Must have identification",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Franconia, East Springfield, Newington, Kingstowne",
+     "requirement_type": "service_area"
+    }
+   ],
    "external_id": "19488-PART-01",
    "location_name": "Koinonia Foundation, Inc.",
    "parking_notes": null,
@@ -1972,6 +2171,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/c2e7106e-ac87-563d-b2ae-6c952c9226cc",
+     "evidence_quote": "6037 Franconia Road, Alexandria, VA 22310 || \"FOOD_PROVIDER_SITE_ADDRESS\":\"6037 FRANCONIA RD\" || 6037 Franconia Road, Alexandria, VA 22310"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/c2e7106e-ac87-563d-b2ae-6c952c9226cc",
+     "evidence_quote": "Must have identification. Residents of Franconia, East Springfield, Newington, and Kingstowne in Fairfax County. || \"CRITERIA_TO_RECEIVE\":\"ID,Proof_Residence,Income_Proof\",\"LIVING_ZIP\":\"Yes\",\"HHS_REGION\":\"1\",\"REGION_ALL_ZIP\":\"22150,22303,22304,22310,22312,22315\" || Must have identification."
+    }
+   ],
    "organization_name": "Koinonia Foundation, Inc.",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2039,7 +2254,7 @@
    "city": "Reston",
    "email": null,
    "notes": "Tuesday: 1 pre-packed bag of non-perishable food will. be available for each person.",
-   "phone": "(925) 323-7084",
+   "phone": "(703) 437-6530",
    "state": "VA",
    "website": null,
    "address1": "1700 Wainwright Drive",
@@ -2108,7 +2323,7 @@
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
    "eligibility": [],
    "external_id": "19618-PART-01",
-   "location_name": "St. Anne's Episcopal Church ( Food Pantry)",
+   "location_name": "St. Anne's Episcopal Church Food Pantry",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "cafb",
@@ -2116,6 +2331,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.stannes-reston.org/hunger-ministry",
+     "evidence_quote": "Grocery bags of pantry essentials are available from St. Anne's during usual business hours || \"FOOD_ORGANIZATION\":\"St. Anne's of Reston Food Pantry\""
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.stannes-reston.org/hunger-ministry",
+     "evidence_quote": "(703) 437-6530 || \"FOOD_PROVIDER_SITE_PHONE\":\"703-437-6530\" || (703) 437-6530"
+    }
+   ],
    "organization_name": "St. Anne's Episcopal Church ( Food Pantry)",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2257,6 +2488,16 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "mobile_pantry"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "clothing"
     }
    ],
    "languages": [],
@@ -2272,6 +2513,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.culmoreumc.org/food--clothing-ministry.html",
+     "evidence_quote": "2nd Friday of each month || \"FOOD_PROVIDER_SITE_NAME\":\"CAFB Mobile Market\" || packages of food and clothing"
+    }
+   ],
    "organization_name": "Culmore UMC",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2395,6 +2645,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.thefoundrychurch.com/food-pantry",
+     "evidence_quote": "The Foundry Food Pantry is open every Thursday from 8:00 AM to 9:30 AM. || Thursday_Hours = 8:00 AM-9:30 AM (Every week) || The Foundry Food Pantry is open every Thursday from 8:00 AM to 9:30 AM."
+    }
+   ],
    "organization_name": "The Foundry Food Pantry",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2529,7 +2788,7 @@
    "city": "Herndon",
    "email": null,
    "notes": null,
-   "phone": "(571) 232-8819",
+   "phone": "(571) 715-3696",
    "state": "VA",
    "website": null,
    "address1": "13224 Franklin Farm Rd",
@@ -2585,7 +2844,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No registration needed; just show up",
+     "requirement_type": "registration"
+    }
+   ],
    "external_id": "19751-PART-01",
    "location_name": "Grains of Hope",
    "parking_notes": null,
@@ -2595,6 +2861,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.gohopenova.org/",
+     "evidence_quote": "571-715-3696 || 571-715-3696"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.gohopenova.org/",
+     "evidence_quote": "no registration needed || You're welcome here, no registration needed."
+    }
+   ],
    "organization_name": "Grains of Hope",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2703,15 +2985,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The 3rd-Thursday 2-3:30 PM distribution is missing. The source notes also say distributions rotate between several locations, including Falls Church and Woodbridge.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "2:00 PM-3:30 PM (1st and 3rd of the Month)"
-    }
-   ],
    "organization_name": "ICNA Relief USA",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2736,6 +3009,15 @@
       {
        "kind": "distribution",
        "notes": null,
+       "opens": "09:00",
+       "closes": "12:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
        "opens": "12:00",
        "closes": "15:00",
        "weekday": 0,
@@ -2755,17 +3037,7 @@
     },
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "16:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "general_groceries"
      ],
@@ -2797,6 +3069,13 @@
      "reason": "The 4th-Monday drive-through distribution is explicit in the source (CAFB also tags drive_through), but drive_through is missing.",
      "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/food-access",
      "evidence_quote": "Wed 9am-3pm; 4th Monday 12-3pm drive thru dist."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://southernusa.salvationarmy.org/nca/fairfax/",
+     "evidence_quote": "Food Assistance- Wednesdays from 9:00 a.m. to 12:00 p.m. || Wednesdays from 9:00 a.m. to 12:00 p.m."
     }
    ],
    "organization_name": "Salvation Army Fairfax Corps",
@@ -2875,7 +3154,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Must register during client hours (M-F 8:30am-3:30pm) before attending a distribution",
+     "requirement_type": "registration"
+    }
+   ],
    "external_id": "14065-PART-01",
    "location_name": "Lorton Community Action Center",
    "parking_notes": null,
@@ -2885,6 +3171,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.lortonaction.org",
+     "evidence_quote": "low-income individuals, senior citizens, and families residing in Fort Belvoir, Lorton, Newington, and other portions of southeast Fairfax County || Tuesday_ApptOnly1 = False ... Tuesday_Notes1 = 22060, 22079 || Registered clients are eligible to attend one of three distributions each week."
+    }
+   ],
    "organization_name": "Lorton Community Action Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2978,9 +3273,9 @@
      "requirement_type": "photo_id"
     },
     {
-     "status": "not_required",
+     "status": "required",
      "values": {},
-     "details": "TEFAP monthly program: Northern Virginia residents who meet income guidelines can walk in and apply, no referral needed. Bring a photo ID, plus a lease or a piece of mail if the ID does not show your current address. The Emergency Referral Program requires a referral from a social worker, clergy, hospital or school.",
+     "details": "Emergency Referral Program at warehouse requires referral from social worker, clergy, hospital, or school",
      "requirement_type": "referral"
     }
    ],
@@ -2995,11 +3290,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "eligibility",
-     "reason": "A referral is required only for the Emergency Referral Program. The TEFAP monthly program is walk-in for Northern Virginia residents who meet income guidelines. Photo ID is still requested, and a lease or piece of mail is needed only if the ID lacks a current address.",
+     "reason": "3 of 3 independent checkers agree",
      "evidence_url": "https://foodforothers.org/get-help/",
-     "evidence_quote": "If you are a Northern Virginia resident, you may walk in and apply. Bring a photo ID. If the ID does not have your current address on it, please also bring in a lease or a piece of mail addressed to you."
+     "evidence_quote": "individuals and families referred to Food for Others by social service providers || We ask for ID or a piece of mail  to verify Virginia residency. || Free emergency food is provided to individuals and families referred to Food for Others by social service providers"
     }
    ],
    "organization_name": "Food For Others",
@@ -3062,6 +3357,15 @@
       {
        "kind": "distribution",
        "notes": null,
+       "opens": "08:30",
+       "closes": "13:30",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
        "opens": "09:00",
        "closes": "13:00",
        "weekday": 5,
@@ -3106,6 +3410,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.cornerstonesva.org/get-help",
+     "evidence_quote": "Friday: 8:30 am to 1:30 pm || Fri: 8:30 am – 1:30 pm"
+    }
+   ],
    "organization_name": "Cornerstones Food Pantry",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -3191,9 +3504,22 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "22306, 22307, 22308, 22309, and east of Telegraph in 22303 and 22310",
+     "requirement_type": "zip_restriction"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Basic info collected to confirm service area and household size (some USDA/TEFAP items may not require it)",
+     "requirement_type": "registration"
+    }
+   ],
    "external_id": "15830-PART-01",
-   "location_name": "United Community Ministry",
+   "location_name": "Cynthia Hull Food Pantry",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "cafb",
@@ -3201,6 +3527,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.unitedcommunity.org/locations/",
+     "evidence_quote": "Our Cynthia Hull Food Pantry provides a wide variety of food assistance on a regular basis. || Located at our Fordson Road site, the Cynthia Hull Food Pantry serves hundreds of Alexandria residents each week with nutritious groceries."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.unitedcommunity.org/food/",
+     "evidence_quote": "we collect basic information to confirm service area and understand household size || \"Monday_Notes1\": \"22303, 22306, 22307, 23308, 22309, 22310.\" || Neighbors experiencing food insecurity who live in our service ZIP codes ... For the pantry, we collect basic information to confirm service area and understand household size."
+    }
+   ],
    "organization_name": "United Community Ministry",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -3213,7 +3555,7 @@
    "city": "Chantilly",
    "email": null,
    "notes": null,
-   "phone": "(571) 599-2877",
+   "phone": "(703) 988-9656",
    "state": "VA",
    "website": null,
    "address1": "4511 Daly Dr",
@@ -3225,74 +3567,74 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "16:30",
-       "closes": "19:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": true
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:30",
+       "opens": "10:00",
        "closes": "14:00",
        "weekday": 0,
        "week_of_month": null,
-       "appointment_only": true
+       "appointment_only": false
       },
       {
        "kind": "distribution",
        "notes": null,
        "opens": "16:30",
-       "closes": "19:00",
-       "weekday": 1,
+       "closes": "18:45",
+       "weekday": 0,
        "week_of_month": null,
-       "appointment_only": true
+       "appointment_only": false
       },
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:30",
+       "opens": "10:00",
        "closes": "14:00",
        "weekday": 1,
        "week_of_month": null,
-       "appointment_only": true
+       "appointment_only": false
       },
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:30",
+       "opens": "16:30",
+       "closes": "18:45",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
        "closes": "14:00",
        "weekday": 2,
        "week_of_month": null,
-       "appointment_only": true
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:00",
+       "closes": "14:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
       },
       {
        "kind": "distribution",
        "notes": null,
        "opens": "16:30",
-       "closes": "19:00",
+       "closes": "18:45",
        "weekday": 3,
        "week_of_month": null,
-       "appointment_only": true
+       "appointment_only": false
       },
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:30",
-       "closes": "14:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": true
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:30",
+       "opens": "10:00",
        "closes": "14:00",
        "weekday": 4,
        "week_of_month": null,
-       "appointment_only": true
+       "appointment_only": false
       },
       {
        "kind": "distribution",
@@ -3301,22 +3643,9 @@
        "closes": "12:00",
        "weekday": 5,
        "week_of_month": 2,
-       "appointment_only": true
+       "appointment_only": false
       }
      ],
-     "food_types": [
-      "general_groceries"
-     ],
-     "description": "Loose groceries, Pre-bagged or boxed groceries",
-     "eligibility": [],
-     "service_type": "walk_up",
-     "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
-    },
-    {
-     "frequency": null,
-     "schedules": [],
      "food_types": [
       "general_groceries"
      ],
@@ -3326,14 +3655,39 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "appointment_distribution"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "home_delivery"
     }
    ],
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Clients served by appointment only",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Western Fairfax County",
+     "requirement_type": "service_area"
+    }
+   ],
    "external_id": "16245-PART-01",
-   "location_name": "WFCM Food Pantry",
+   "location_name": "WFCM Chantilly Free Food Market",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "cafb",
@@ -3341,6 +3695,43 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.wfcmva.org/our-services",
+     "evidence_quote": "703-988-9656 || 703-988-9656"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.wfcmva.org/our-services",
+     "evidence_quote": "Clients served by appointment only: || \"Monday_Dmodel1\": \"Walk up, Home Delivery\" || Clients served by appointment only ... Home delivery with online ordering available on a limited basis."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.wfcmva.org/our-services",
+     "evidence_quote": "We serve qualified individuals and families in western Fairfax County. || \"Monday_ApptOnly1\": \"True\" || We serve qualified individuals and families in western Fairfax County ... Clients served by appointment only"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree (values reconciled: WFCM's official services page names this site 'Chantilly Free Food Market' at 4511 Daly Drive, Suite J, which matches the listing address. The WFCM prefix keeps the organization identifiable.)",
+     "evidence_url": "https://www.wfcmva.org/our-services",
+     "evidence_quote": "Chantilly Free Food Market || Chantilly Free Food Market ... 4511 Daly Drive, Suite J"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree (values reconciled: I opened the official WFCM page. It lists Chantilly as 'Monday-Friday 10 am-2 pm and Monday, Tuesday & Thursday 4:30 pm-6:45 pm, 1 Saturday per month 9 am-12 pm'. Strategy C's value matches this and keeps the monthly Saturday that strategy A dropped. The page does not say which Saturday. Week 2 is kept from the existing listing and fits the page's '2nd Saturday' donation schedule.)",
+     "evidence_url": "https://www.wfcmva.org/our-services",
+     "evidence_quote": "Monday-Friday 10 am-2 pm and Monday, Tuesday & Thursday 4:30 pm-6:45 pm || Monday-Friday 10 am-2 pm and Monday, Tuesday & Thursday 4:30 pm-6:45 pm ... 1 Saturday per month 9 am-12 pm"
+    }
+   ],
    "organization_name": "WFCM Food Pantry",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -3405,15 +3796,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The source says the distribution happens in both the 1st and 4th week, but the listing shows only the 1st week. The 4th-week occurrence is missing. I kept the displayed Tuesday; the source text does not name the day.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "11:00 AM-1:00 PM (1st and 4th of the Month)"
-    }
-   ],
    "organization_name": "Culmore Community Library",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -3429,7 +3811,7 @@
    "phone": "(703) 772-3132",
    "state": "VA",
    "website": null,
-   "address1": "4100 Wadsworth Ct",
+   "address1": "4137 Wadsworth Ct",
    "address2": null,
    "services": [
     {
@@ -3469,6 +3851,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://foodforothers.org/get-help/neighborhood-sites/",
+     "evidence_quote": "4137 Wadsworth Court, off Little River Turnpike at the end of Wadsworth Court || 4137 Wadsworth Court, off Little River Turnpike at the end of Wadsworth Court"
+    }
+   ],
    "organization_name": "Fairmont Gardens Apartments",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -3515,7 +3906,7 @@
    "phone": "(703) 220-5907",
    "state": "VA",
    "website": null,
-   "address1": "5901 Lessburg Pike",
+   "address1": "5901 Leesburg Pike",
    "address2": null,
    "services": [
     {
@@ -3555,6 +3946,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://thegraceministriesumc.org/locations/",
+     "evidence_quote": "5901 Leesburg Pike, Falls Church, VA 22041 || 5901 Leesburg Pike"
+    }
+   ],
    "organization_name": "Grace Ministries - Culmore",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -3710,15 +4110,6 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The 3rd-Friday distribution is missing. The notes say the day moves from Thursday to Friday in summer.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "5:00 PM-6:00 PM (1st and 3rd of the Month)"
-    }
-   ],
    "organization_name": "Love Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -3764,7 +4155,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "No pre-registration required",
+     "requirement_type": "registration"
+    }
+   ],
    "external_id": "223417-PART-01",
    "location_name": "Parkway Church",
    "parking_notes": null,
@@ -3774,6 +4172,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://tryparkway.com/food-pantry/",
+     "evidence_quote": "a valid ID and/or proof of residency for Prince William County || No pre-registration required ... Please bring a valid ID and/or proof of residency for Prince William County."
+    }
+   ],
    "organization_name": "Parkway Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -3828,7 +4235,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Serves ZIPs 22191, 22192, 22193, 22079, 22125",
+     "requirement_type": "zip_restriction"
+    }
+   ],
    "external_id": "223433-PART-01",
    "location_name": "Our Lady of Angels Conference Society of St Vincent de Paul",
    "parking_notes": null,
@@ -3840,11 +4254,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The 4th-Saturday distribution is missing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "10:00 AM-12:00 PM (2nd and 4th of the Month)"
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://services.arcgis.com/oCjyzxNy34f0pJCV/arcgis/rest/services/Get_Help_Map_Source_Data/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
+     "evidence_quote": "Assistance available to neighbors living in the following zip code: 22191, 22192, 22193, 22079, and 22125. || Serves residents of ZIP codes 22191, 22192, 22193, 22079, and 22125. Assistance is available \"once a month.\""
     }
    ],
    "organization_name": "Our Lady of Angels Conference Society of St Vincent de Paul",
@@ -4006,15 +4420,6 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The Mon-Fri 9-5 hours are CASA's general office/legal-services hours ('Monday–Friday, 9:00 AM–5:00 PM.' in the PWC source), but they are shown as food pickup. Food is only once a month, 10 AM-12 PM.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "10:00 AM-12:00 PM (2nd of the Month)"
-    }
-   ],
    "organization_name": "CASA Woodbridge",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -4027,7 +4432,7 @@
    "city": "Woodbridge",
    "email": null,
    "notes": null,
-   "phone": null,
+   "phone": "(703) 792-8330",
    "state": "VA",
    "website": null,
    "address1": "2201 Opitz Blvd",
@@ -4070,6 +4475,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/library/branch-locations-hours",
+     "evidence_quote": "703-792-8330 || 703-792-8330"
+    }
+   ],
    "organization_name": "Potomac Library",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -4078,11 +4492,11 @@
   {
    "lat": 38.6451299,
    "lon": -77.3034998,
-   "zip": "22193",
+   "zip": "22192",
    "city": "Woodbridge",
    "email": null,
    "notes": "Tuesday: Every Other Week 6:30 PM–8:30 PM",
-   "phone": null,
+   "phone": "(703) 670-2252",
    "state": "VA",
    "website": null,
    "address1": "14001 Smoketown Road",
@@ -4105,7 +4519,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Register on site during distribution hours; first-timers complete a form",
+     "requirement_type": "registration"
+    }
+   ],
    "external_id": "23055-PART-01",
    "location_name": "Woodbridge Church of the Nazarene",
    "parking_notes": null,
@@ -4115,6 +4536,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.woodbridgenaz.com/Community-Connection",
+     "evidence_quote": "703-670-2252 || 703-670-2252"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.woodbridgenaz.com/Community-Connection",
+     "evidence_quote": "14001 Smoketown Road, Woodbridge, VA 22192 || 14001 Smoketown Road, Woodbridge, VA 22192"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.woodbridgenaz.com/foodpantry",
+     "evidence_quote": "Register during food distribution hours (Tuesdays, 6:30–8:30 PM). || Register during food distribution hours (Tuesdays, 6:30–8:30 PM)."
+    }
+   ],
    "organization_name": "Woodbridge Church of the Nazarene",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -4127,49 +4571,36 @@
    "city": "Dale City",
    "email": null,
    "notes": "Monday: Zip code 22191,22192, 22193; Wednesday: zip codes 22191,22192, 22193",
-   "phone": null,
+   "phone": "(703) 730-1791",
    "state": "VA",
    "website": null,
    "address1": "14160 Ferndale Road",
    "address2": null,
    "services": [
     {
-     "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "16:00",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": true
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "15:30",
-       "closes": "16:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": true
-      }
-     ],
-     "food_types": [
-      "general_groceries"
-     ],
-     "description": "Pre-bagged or boxed groceries",
+     "schedules": [],
+     "food_types": [],
      "eligibility": [],
-     "service_type": "walk_up",
-     "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
+     "service_type": "appointment_distribution"
     }
    ],
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Appointment by phone 703-730-1791",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "ZIP codes 22191, 22192, 22193 only",
+     "requirement_type": "zip_restriction"
+    }
+   ],
    "external_id": "23200-PART-01",
    "location_name": "Holy Family Catholic Church Food Pantry",
    "parking_notes": null,
@@ -4179,6 +4610,36 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.holyfamilycatholicchurchdalecity.org/apps/pages/index.jsp?uREC_ID=3469337&type=d&pREC_ID=2390625",
+     "evidence_quote": "Food Pantry Number: 703-730-1791 || Holy Family Catholic Church\n   703-730-1791 || Food Pantry Number: 703-730-1791"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.holyfamilycatholicchurchdalecity.org/apps/pages/index.jsp?uREC_ID=3469337&type=d&pREC_ID=2390625",
+     "evidence_quote": "Food Pantry Distribution: Monday and Wednesday, 4:00 PM - 5:15 PM. || Food Pantry Distribution: Monday and Wednesday, 4:00 PM - 5:15 PM."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.holyfamilycatholicchurchdalecity.org/apps/pages/index.jsp?uREC_ID=3469337&type=d&pREC_ID=2390625",
+     "evidence_quote": "Our Food Pantry operates on an appointment basis only. || Food Pantry operates on an appointment basis only. Appointments can be made exclusively by calling. || Our Food Pantry operates on an appointment basis only."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.holyfamilycatholicchurchdalecity.org/apps/pages/index.jsp?uREC_ID=3469337&type=d&pREC_ID=2390625",
+     "evidence_quote": "Our Pantry provides food for those living in ZIP Codes 22191, 22192, and 22193. || Food Pantry operates on an appointment basis only. Appointments can be made exclusively by calling. ... The pantry provides food for those living in zip codes 22191, 22192 and 22193. || Our Pantry provides food for those living in ZIP Codes 22191, 22192, and 22193."
+    }
+   ],
    "organization_name": "Holy Family Catholic Church Food Pantry",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -4198,27 +4659,9 @@
    "address2": null,
    "services": [
     {
-     "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "09:30",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
-     "food_types": [
-      "general_groceries"
-     ],
-     "description": "Pre-bagged or boxed groceries",
-     "eligibility": [],
-     "service_type": "walk_up",
-     "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
+     "schedules": [],
+     "food_types": [],
+     "service_type": "other"
     }
    ],
    "languages": [],
@@ -4234,6 +4677,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.sacredheartmanassas.org/food-pantry",
+     "evidence_quote": "We are a drive-through pantry open to anyone in need. || Food Drive thru is every Saturday at 8:00 AM-9:30 AM, assistance during the week is available as by appointment. Call (703) 590-0030 Clothing Pantry Saturday 8:00 AM 9:30 AM"
+    }
+   ],
    "organization_name": "Sacred Heart Catholic Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -4246,7 +4698,7 @@
    "city": "Woodbridge",
    "email": null,
    "notes": null,
-   "phone": "(301) 328-3292",
+   "phone": "(703) 372-5440",
    "state": "VA",
    "website": null,
    "address1": "13923 Minnieville Road",
@@ -4312,6 +4764,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://mycaf.org/",
+     "evidence_quote": "Phone: (703) 372-5440 / Fax (703) 372-5445 || 703-372-5440 || Phone: (703) 372-5440 / Fax (703) 372-5445"
+    }
+   ],
    "organization_name": "Centro de Apoyo Familiar (CAF)",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -4466,7 +4927,32 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Photo ID for account holder; ID with DOB for all household members",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "In-person intake appointment to open Food Pantry account",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Utility bill, lease, or voter registration card",
+     "requirement_type": "proof_of_address"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Once every 15 days",
+     "requirement_type": "visit_limit"
+    }
+   ],
    "external_id": "19467-PART-01",
    "location_name": "House of Mercy",
    "parking_notes": null,
@@ -4476,6 +4962,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://houseofmercyva.org/new-client-appointments/",
+     "evidence_quote": "must register for an in-person intake appointment to set up their Food Pantry account. || Idenitification: Each person in the household (spouse, children, parents, etc.) must provide ID that includes the individual’s date of birth. ... Proof of Address: Examples include current utility bill or some form of “official mail,” ... Food is distributed twice a month (every 15 days). ... New clients must register online first at houseofmercyva.org/food-pantry-service."
+    }
+   ],
    "organization_name": "House of Mercy",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -4574,7 +5069,53 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [],
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:30",
+       "closes": "20:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:30",
+       "closes": "20:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:30",
+       "closes": "20:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:30",
+       "closes": "20:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "12:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [
       "general_groceries"
      ],
@@ -4614,32 +5155,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The unit number is repeated twice.",
-     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
-    },
-    {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "hours",
-     "reason": "Each weekday shows two overlapping time blocks. The pantry's own site gives 5:30-8:00 PM, by appointment.",
+     "reason": "2 of 3 independent checkers agree",
      "evidence_url": "https://haymarketfoodpantry.org/find-help/",
-     "evidence_quote": "Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm Sat Mornings: By appointment between 9:00 am and 12:00 noon"
-    },
-    {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "The pantry's own site says food is distributed by appointment only, which contradicts walk_up.",
-     "evidence_url": "https://haymarketfoodpantry.org/find-help/",
-     "evidence_quote": "Our Hours - By Appointment Only"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The unit number is repeated twice.",
-     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
+     "evidence_quote": "By appointment between 5:30 pm and 8:00 pm. || Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm"
     }
    ],
    "organization_name": "Haymarket Regional Food Pantry",
@@ -4654,7 +5174,7 @@
    "city": "Woodbridge",
    "email": null,
    "notes": "Monday: Able to receive food every 30 days; Wednesday: Able to receive food every 30 days",
-   "phone": "(678) 832-5822",
+   "phone": "(703) 580-8991",
    "state": "VA",
    "website": null,
    "address1": "1483 Old Bridge Road",
@@ -4706,6 +5226,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.salvationarmyusa.org/va/woodbridge/",
+     "evidence_quote": "+1 (703)580-8991 || (703) 580-8991"
+    }
+   ],
    "organization_name": "Salvation Army Prince William Service Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -4749,6 +5278,16 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "clothing"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "household_essentials"
     }
    ],
    "languages": [],
@@ -4756,7 +5295,7 @@
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
    "eligibility": [],
    "external_id": "19757-PART-01",
-   "location_name": "Freedom Community Church",
+   "location_name": "Freedom Community Pantry",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "cafb",
@@ -4764,6 +5303,22 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://findfreedomtoday.org/",
+     "evidence_quote": "Freedom Community Pantry || Freedom Community Pantry"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://findfreedomtoday.org/",
+     "evidence_quote": "distributes food, clothing, and household items || food, clothing, and household items"
+    }
+   ],
    "organization_name": "Freedom Community Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -4776,7 +5331,7 @@
    "city": "Woodbridge",
    "email": null,
    "notes": "Tuesday: Our Food Pantry operates on Tuesday and Thursday of every week from 10:00 am to 12:30pm. Sunday at 12 Noon By Appointment and some walk-ups.; Thursday: By appointment only; Friday: Distribution is 10:45am. We close at 1:00pm.; Sunday: Pantry Food Only",
-   "phone": "(703) 221-3323",
+   "phone": "(703) 494-2669",
    "state": "VA",
    "website": null,
    "address1": "13020 Telegraph Road",
@@ -4788,29 +5343,11 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "10:30",
-       "closes": "12:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": true
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:30",
-       "closes": "12:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": true
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:30",
-       "closes": "12:00",
-       "weekday": 6,
-       "week_of_month": null,
-       "appointment_only": true
+       "opens": "10:45",
+       "closes": "12:45",
+       "weekday": 4,
+       "week_of_month": 4,
+       "appointment_only": false
       }
      ],
      "food_types": [
@@ -4825,17 +5362,7 @@
     },
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "10:30",
-       "closes": "13:00",
-       "weekday": 4,
-       "week_of_month": 4,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "general_groceries"
      ],
@@ -4860,6 +5387,22 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://ebenezerbc.org/connect/outreach-ministries/missionary-ministry",
+     "evidence_quote": "Phone: 703-494-2669 || 703-494-2669"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://ebenezerbc.org/connect/outreach-ministries/missionary-ministry",
+     "evidence_quote": "on the 4th Friday of every month from 10:45am to 12:45pm || We perform food distribution on the 4th Friday of every month from 10:45am to 12:45pm"
+    }
+   ],
    "organization_name": "Ebenezer Baptist Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -4963,7 +5506,38 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "New clients must live in Eastern Prince William County (Dale City, Dumfries, Lake Ridge, Montclair, Occoquan, Quantico, Triangle, Woodbridge)",
+     "requirement_type": "service_area"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Photo ID with current address for new clients",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Photo ID with current address, or bill/lease showing Eastern PWC address",
+     "requirement_type": "proof_of_address"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Food assistance once per month",
+     "requirement_type": "visit_limit"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Walk-in basis",
+     "requirement_type": "appointment"
+    }
+   ],
    "external_id": "14590-PART-01",
    "location_name": "ACTS",
    "parking_notes": null,
@@ -4975,18 +5549,18 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "Several non-food times are shown as food pickup: the housing Coordinated Entry intake hours (Mon-Fri 8:30-5:30, Wednesday and Friday included) and the new-client enrollment slots. Food pickup is closed on Fridays.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-     "evidence_quote": "Food distribution: Monday 9-11:30 a.m. and 1-3 p.m.; Tuesday 1-3:30 p.m. and 5-7 p.m.; Thursday 9-11:30 a.m. and 1-3 p.m.; Friday CLOSED."
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.actspwc.org/food-assistance",
+     "evidence_quote": "3901 ACTS Lane, Dumfries || 3901 ACTS Lane, Dumfries"
     },
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "eligibility",
-     "reason": "The appointment and referral requirements belong to the utility and housing programs, not to food. Food is walk-in once enrolled. Photo ID is still required for new food clients, according to the same PWC food record.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
-     "evidence_quote": "Walk-in during distribution hours; no appointment needed. New clients must enroll in person during enrollment hours (arrive by 12:45 p.m. on Wednesdays)."
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.actspwc.org/food-assistance",
+     "evidence_quote": "Call (703) 441-8606 ext 288 for enrollment details || 'ACTS Hunger Prevention Center provides food assistance to enrolled households once per month.' / 'New clients must present photo identification showing a current address, or photo ID plus a bill or lease proving Eastern Prince William County residency (Dale City, Dumfries, Lake Ridge, Montclair, Occoquan, Quantico, Triangle, Woodbridge).' / 'New clients must enroll in person during enrollment hours' || Client households may receive assistance once per month."
     }
    ],
    "organization_name": "ACTS",
@@ -5053,15 +5627,6 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The 4th-Monday distribution is missing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "3:00 PM-5:00 PM (2nd and 4th of the Month)"
-    }
-   ],
    "organization_name": "Church of Christ of Dale City",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -5193,7 +5758,7 @@
    "city": "Woodbridge",
    "email": null,
    "notes": "Thursday: Income requirement is only to receive TEFAP food; Saturday: Income requirement is only to receive TEFAP food",
-   "phone": "(703) 568-5694",
+   "phone": "(703) 494-2445",
    "state": "VA",
    "website": null,
    "address1": "1400 G St",
@@ -5205,7 +5770,7 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "14:30",
+       "opens": "15:00",
        "closes": "17:30",
        "weekday": 3,
        "week_of_month": 3,
@@ -5214,7 +5779,7 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "07:30",
+       "opens": "08:00",
        "closes": "10:30",
        "weekday": 5,
        "week_of_month": 1,
@@ -5233,26 +5798,7 @@
     },
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "14:30",
-       "closes": "17:30",
-       "weekday": 3,
-       "week_of_month": 3,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "07:30",
-       "closes": "10:30",
-       "weekday": 5,
-       "week_of_month": 1,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "general_groceries"
      ],
@@ -5267,7 +5813,20 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Information is self-declared",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "not_required",
+     "values": {},
+     "details": "Information is self-declared",
+     "requirement_type": "proof_of_address"
+    }
+   ],
    "external_id": "19071-PART-01",
    "location_name": "St. Paul United Methodist Church",
    "parking_notes": null,
@@ -5277,6 +5836,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://stpaul-umc.org/outreach-and-advocacy/",
+     "evidence_quote": "Feel free to stop by or call 703-494-2445 for assistance. || 703-494-2445"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://stpaul-umc.org/outreach-and-advocacy/",
+     "evidence_quote": "open on the first Saturday each month 8 a.m. to 10:30 a.m. || the first Saturday each month 8 a.m. to 10:30 a.m."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://stpaul-umc.org/outreach-and-advocacy/",
+     "evidence_quote": "no proof of identification or proof of address is required || 'Thursday_Notes1': 'Income requirement is only to receive TEFAP food' || no proof of identification or proof of address is required"
+    }
+   ],
    "organization_name": "St. Paul United Methodist Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -5289,7 +5871,7 @@
    "city": "Manassas",
    "email": null,
    "notes": "Monday: must call to make an appointment 571-201-6226; Wednesday: must call to make an appointment 571-201-6226; Thursday: must call to make an appointment 571-201-6226; Friday: Every Other Week 5:00 PM–7:00 PM",
-   "phone": null,
+   "phone": "(703) 221-4510",
    "state": "VA",
    "website": null,
    "address1": "9021 Centreville Road",
@@ -5337,9 +5919,15 @@
      "registration_required": "unknown"
     },
     {
+     "frequency": null,
      "schedules": [],
      "food_types": [],
-     "service_type": "appointment_distribution"
+     "description": null,
+     "eligibility": [],
+     "service_type": "appointment_distribution",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
     }
    ],
    "languages": [],
@@ -5364,18 +5952,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "eligibility",
-     "reason": "An appointment is required for the Monday, Wednesday and Thursday pickups, but no requirement is shown.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "Monday: must call to make an appointment 571-201-6226"
-    },
-    {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "The Monday, Wednesday and Thursday pickups are by appointment, so appointment_distribution is missing. walk_up stays, because the Friday every-other-week session has no stated appointment requirement.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "Wednesday: must call to make an appointment 571-201-6226"
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://cfhva.org/food-pantry/",
+     "evidence_quote": "703.221.4510 || +1 (703) 221-4510"
     }
    ],
    "organization_name": "CFH Inc.",
@@ -5402,8 +5983,8 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "17:00",
-       "closes": "20:00",
+       "opens": "17:30",
+       "closes": "19:30",
        "weekday": 2,
        "week_of_month": 1,
        "appointment_only": false
@@ -5411,8 +5992,8 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "17:00",
-       "closes": "20:00",
+       "opens": "17:30",
+       "closes": "19:30",
        "weekday": 2,
        "week_of_month": 3,
        "appointment_only": false
@@ -5444,11 +6025,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "hours",
-     "reason": "The 3rd-Wednesday distribution is missing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "5:00 PM-8:00 PM (1st and 3rd of the Month)"
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://mbcnova.org/serve",
+     "evidence_quote": "Guests are welcomed on a walk-in basis || 'Hours_of_Service': '1st and 3rd Wednesdays, 5:30–7:30 PM. Closed on holidays.' || Our Pantry is open for food distribution on the first and third Wednesdays"
     }
    ],
    "organization_name": "Manassas Baptist Church",
@@ -5475,11 +6056,20 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "09:00",
-       "closes": "11:00",
+       "opens": "09:30",
+       "closes": "11:30",
        "weekday": 1,
        "week_of_month": 2,
-       "appointment_only": true
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "11:30",
+       "weekday": 1,
+       "week_of_month": 4,
+       "appointment_only": false
       }
      ],
      "food_types": [
@@ -5506,6 +6096,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree (values reconciled: The official BRUU page says that distributions for both pantries now take place on the 2nd and 4th Tuesday from 9:30 to 11:30 am. This is the organization's own and most recent source, so it outranks the county ArcGIS 9-11 entry.)",
+     "evidence_url": "https://services.arcgis.com/oCjyzxNy34f0pJCV/arcgis/rest/services/Get_Help_Map_Source_Data/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
+     "evidence_quote": "\"Tuesday_Hours\":\"9:00 AM-11:00 AM (2nd and 4th of the Month)\" || Food distributions for both food pantries will take place on the 2nd and 4th Tuesday of each month from 9:30 am to 11:30 am."
+    }
+   ],
    "organization_name": "Bull Run Unitarian Universalists",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -5561,6 +6160,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.stthomasumc.org/serveinthefoodpantry",
+     "evidence_quote": "The Food Pantry distributes food every Saturday morning from 9 - 11 am. || Every Saturday, 9:00–11:00 AM. Participants who are in line by 11:00 AM will receive food that day. || The Pantry is open every Saturday morning from 9 to 11 am for drive-thru distribution."
+    }
+   ],
    "organization_name": "St. Thomas United Methodist Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -5589,15 +6197,6 @@
        "closes": "16:00",
        "weekday": 3,
        "week_of_month": 2,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "13:30",
-       "closes": "16:00",
-       "weekday": 3,
-       "week_of_month": 4,
        "appointment_only": false
       }
      ],
@@ -5640,11 +6239,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "hours",
-     "reason": "The 4th-Thursday distribution is missing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "1:30 PM-4:00 PM (2nd and 4th of the Month)"
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://georgetownsouth.org/food/",
+     "evidence_quote": "The Georgetown South Community Council Food Pantry will distribute food every 2nd Thursday of the month || every 2nd Thursday of the month"
     }
    ],
    "organization_name": "Georgetown South Community Council",
@@ -5659,7 +6258,7 @@
    "city": "Manassas",
    "email": null,
    "notes": "Wednesday: Every Other Week 5:00 PM–7:00 PM",
-   "phone": "(571) 234-9450",
+   "phone": "(571) 748-2680",
    "state": "VA",
    "website": null,
    "address1": "10058 Dean Dr",
@@ -5671,20 +6270,20 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "13:00",
-       "closes": "15:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": true
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
        "opens": "09:30",
        "closes": "11:30",
        "weekday": 1,
        "week_of_month": null,
-       "appointment_only": true
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "15:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
       },
       {
        "kind": "distribution",
@@ -5693,7 +6292,7 @@
        "closes": "11:30",
        "weekday": 3,
        "week_of_month": null,
-       "appointment_only": true
+       "appointment_only": false
       },
       {
        "kind": "distribution",
@@ -5702,16 +6301,7 @@
        "closes": "15:00",
        "weekday": 3,
        "week_of_month": null,
-       "appointment_only": true
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": true
+       "appointment_only": false
       }
      ],
      "food_types": [
@@ -5723,14 +6313,45 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "appointment_distribution"
     }
    ],
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Valid photo ID",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Issued within past 30 days; no photocopies",
+     "requirement_type": "proof_of_address"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "New client registration Wed/Fri 1-2:30pm by appointment",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Pickup by appointment; call 571-748-2680",
+     "requirement_type": "appointment"
+    }
+   ],
    "external_id": "16475-PART-01",
-   "location_name": "Northern Virginia Family Services SERVE",
+   "location_name": "NVFS Hunger Resource Center (SERVE Campus)",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "cafb",
@@ -5738,6 +6359,43 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
+     "evidence_quote": "571.748.2680 || (571) 748-2680"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
+     "evidence_quote": "Tuesdays: 9:30 – 11:30 a.m. and 1 – 3 p.m. || Enrollment and appointment required. Contact NVFS to enroll and schedule food assistance. || Food assistance is provided to registered clients, by appointment only."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
+     "evidence_quote": "Proof of Prince William County residency issued within the past 30 days || Enrollment and appointment required. Contact NVFS to enroll and schedule food assistance. The Hunger Resource Center serves enrolled clients rather than operating as a general walk-in pantry. || Must be able to provide proof of residency in Prince William County, City of Manassas or City of Manassas Park."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree (values reconciled: The official NVFS page names the site Hunger Resource Center on the SERVE Campus, and 211 Virginia confirms it. The current name also misspells the agency name (Services instead of Service).)",
+     "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
+     "evidence_quote": "Hunger Resource Center || Food Pantry - Manassas, SERVE, Hunger Resource Center, Northern Virginia Family Service"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree (values reconciled: The official NVFS page lists weekly Tuesday and Thursday slots at 9:30-11:30 and 1-3, plus every-other-Wednesday 5-7:30 pm and every-other-Friday 9:30-11:30. The schema can't express every-other-week, so the current listing is wrong to show Friday as weekly. Strategy A keeps only the confirmed weekly slots and adds nothing false. Strategy C's empty array would wipe out valid hours.)",
+     "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
+     "evidence_quote": "Every other Friday: 9:30 – 11:30 a.m. || Every other Wednesday: 5PM – 7:30PM"
+    }
+   ],
    "organization_name": "Northern Virginia Family Services SERVE",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -5778,6 +6436,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "mobile_pantry"
     }
    ],
    "languages": [],
@@ -5793,6 +6456,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "CAFB Mobile Markets || CAFB Mobile Markets"
+    }
+   ],
    "organization_name": "Barcroft Elementary School",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -5856,6 +6528,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "mobile_pantry"
     }
    ],
    "languages": [],
@@ -5871,6 +6548,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "CAFB Mobile Markets || CAFB Mobile Markets"
+    }
+   ],
    "organization_name": "Mount Olive Baptist Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -5886,7 +6572,7 @@
    "phone": "(202) 210-7025",
    "state": "VA",
    "website": null,
-   "address1": "4510 S 31st St S",
+   "address1": "4510 31st Street S",
    "address2": null,
    "services": [
     {
@@ -5895,7 +6581,7 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "14:00",
+       "opens": "14:30",
        "closes": "16:00",
        "weekday": 2,
        "week_of_month": 1,
@@ -5911,6 +6597,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "mobile_pantry"
     }
    ],
    "languages": [],
@@ -5926,6 +6617,29 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "4510 31st Street S. || 4510 31st Street S. || Park Shirlington Apartments 4510 31st Street S. Fresh produce and protein."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Park Shirlington Apartments 1st Wednesday of the month 4510 31st Street S. 2:30 - 4:00 PM || 1st Wednesday of the month 2:30 - 4:00 PM"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "CAFB Mobile Markets Park Shirlington Apartments || CAFB Mobile Markets Park Shirlington Apartments || CAFB Mobile Markets"
+    }
+   ],
    "organization_name": "Park Shirlington Apartments",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -5950,8 +6664,8 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "08:00",
-       "closes": "11:00",
+       "opens": "10:00",
+       "closes": "12:00",
        "weekday": 5,
        "week_of_month": 2,
        "appointment_only": false
@@ -5966,6 +6680,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "mobile_pantry"
     }
    ],
    "languages": [],
@@ -5981,6 +6700,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Mount Olivet United Methodist Church 2nd Saturday of the month 1500 N. Glebe Road 10:00 AM - 12:00 PM || 2nd Saturday of the month 10:00 AM - 12:00 PM"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "CAFB Mobile Markets ... Mount Olivet United Methodist Church || CAFB Mobile Markets || CAFB Mobile Markets"
+    }
+   ],
    "organization_name": "Mount Olivet UMC",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -6083,9 +6818,27 @@
        "kind": "distribution",
        "notes": null,
        "opens": "13:30",
-       "closes": "15:00",
+       "closes": "15:30",
        "weekday": 3,
        "week_of_month": 1,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "11:30",
+       "weekday": 3,
+       "week_of_month": 2,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:30",
+       "closes": "15:30",
+       "weekday": 3,
+       "week_of_month": 2,
        "appointment_only": false
       }
      ],
@@ -6103,7 +6856,20 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Once per month",
+     "requirement_type": "visit_limit"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Open until food is gone",
+     "requirement_type": "first_come_first_served"
+    }
+   ],
    "external_id": "19661-PART-01",
    "location_name": "Salvation Army Arlington Corps",
    "parking_notes": null,
@@ -6113,6 +6879,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Salvation Army 1st & 2nd Thursday of the month 518 S. Glebe Road 703-979-3380 9:30 - 11:30 AM and 1:30 - 3:30 PM || 1st & 2nd Thursday of the month 9:30 - 11:30 AM and 1:30 - 3:30 PM || 1st & 2nd Thursday of the month 9:30 - 11:30 AM and 1:30 - 3:30 PM"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Visit once per month. Open until food is gone. || Visit once per month. Open until food is gone. || Visit once per month. Open until food is gone."
+    }
+   ],
    "organization_name": "Salvation Army Arlington Corps",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -6138,7 +6920,7 @@
        "kind": "distribution",
        "notes": null,
        "opens": "12:00",
-       "closes": "15:00",
+       "closes": "15:30",
        "weekday": 1,
        "week_of_month": null,
        "appointment_only": false
@@ -6147,7 +6929,7 @@
        "kind": "distribution",
        "notes": null,
        "opens": "12:00",
-       "closes": "15:00",
+       "closes": "15:30",
        "weekday": 4,
        "week_of_month": null,
        "appointment_only": false
@@ -6167,7 +6949,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Once per week",
+     "requirement_type": "visit_limit"
+    }
+   ],
    "external_id": "14500-PART-03",
    "location_name": "Central Union Mission-Mission NOVA",
    "parking_notes": null,
@@ -6177,6 +6966,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Mission: NOVA Tuesday and Friday 5401 7th Road S. 703-975-6584 12:00 - 3:30 PM || Tuesday and Friday 12:00 - 3:30 PM || Tuesday and Friday 12:00 - 3:30 PM"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Clothing available. Visit once per week. || Visit once per week. || Visit once per week."
+    }
+   ],
    "organization_name": "Central Union Mission-Mission NOVA",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -6201,6 +7006,15 @@
       {
        "kind": "distribution",
        "notes": null,
+       "opens": "09:30",
+       "closes": "11:30",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
        "opens": "08:30",
        "closes": "10:30",
        "weekday": 5,
@@ -6220,7 +7034,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "AFAC: choose 1 location, visit once a week",
+     "requirement_type": "visit_limit"
+    }
+   ],
    "external_id": "18134-COMK-02",
    "location_name": "Arlington Mill Community Center",
    "parking_notes": null,
@@ -6230,6 +7051,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "Monday: 9:30 – 11:30 AM || M: 9:30 – 11:30am"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Choose 1 location and visit once a week || limit client visits to one time per week"
+    }
+   ],
    "organization_name": "Arlington Mill Community Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -6242,7 +7079,7 @@
    "city": "Alexandria",
    "email": null,
    "notes": null,
-   "phone": "(703) 508-5289",
+   "phone": "(703) 307-5902",
    "state": "VA",
    "website": null,
    "address1": "421 Clifford Ave",
@@ -6328,6 +7165,16 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "clothing"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "household_essentials"
     }
    ],
    "languages": [],
@@ -6343,6 +7190,22 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.motheroflightcenter.org/",
+     "evidence_quote": "703-307-5902 || 703-307-5902"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.motheroflightcenter.org/",
+     "evidence_quote": "CLOTHING & HOUSEHOLD GOODS || CLOTHING & HOUSEHOLD GOODS"
+    }
+   ],
    "organization_name": "Mother of Light Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -6363,17 +7226,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "16:00",
-       "closes": "18:00",
-       "weekday": 3,
-       "week_of_month": 3,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "general_groceries"
      ],
@@ -6386,17 +7239,7 @@
     },
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "16:00",
-       "closes": "18:00",
-       "weekday": 3,
-       "week_of_month": 3,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "general_groceries"
      ],
@@ -6421,6 +7264,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
+     "evidence_quote": "Hosted by Communities in Schools at Hammond Middle School (4646 Seminary Road) at 4 – 6 p.m. || Hosted by Communities in Schools at Hammond Middle School (4646 Seminary Road) at 4 – 6 p.m."
+    }
+   ],
    "organization_name": "Francis C. Hammond Middle School",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -6531,9 +7383,43 @@
    "address2": null,
    "services": [
     {
-     "schedules": [],
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "13:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:00",
+       "closes": "12:00",
+       "weekday": 4,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [],
-     "service_type": "appointment_distribution"
+     "description": null,
+     "eligibility": [],
+     "service_type": "appointment_distribution",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
     }
    ],
    "languages": [],
@@ -6558,18 +7444,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "eligibility",
-     "reason": "The appointment requirement and the registered-clients-only rule are not shown.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "Appointments are required and can be scheduled at ccda.net under the Alexandria Food Pantry page. Wednesday and Thursday distributions are for registered clients only. New clients must schedule a Friday appointment using the same system."
-    },
-    {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "All distributions need an appointment, so walk_up is misleading and appointment_distribution is missing.",
-     "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
-     "evidence_quote": "Wednesday: Appointments are required and can be scheduled at ccda.net under the Alexandria Food Pantry page."
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree (values reconciled: I checked the Capital Area Food Bank map record for 4725A Eisenhower Ave (agency 19395-PART-01), which is the listing's own source. It gives Wed and Thu 9:00 AM-1:00 PM and Fri 9:00 AM-12:00 PM, every week, by appointment. Its notes say Wed/Thu are for registered clients and new clients must book a Friday appointment. The ALIVE! page confirms Wed-Thu 9am-1pm but leaves out Friday, likely because it only lists the regular-client days. Vote B is the most complete and best-sourced, so I applied it.)",
+     "evidence_url": "https://services.arcgis.com/oCjyzxNy34f0pJCV/arcgis/rest/services/Get_Help_Map_Source_Data/FeatureServer/0",
+     "evidence_quote": "Wednesday_Hours: 9:00 AM-1:00 PM (Every week); Thursday_Hours: 9:00 AM-1:00 PM (Every week); Friday_Hours: 9:00 AM-12:00 PM (Every week) || Wednesdays–Thursdays, 9am–1pm; arrive by 12:30pm"
     }
    ],
    "organization_name": "Alexandria Food Pantry",
@@ -6647,62 +7526,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "11:00",
-       "closes": "18:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "11:00",
-       "closes": "18:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "11:00",
-       "closes": "18:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "15:00",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:00",
-       "weekday": 5,
-       "week_of_month": 3,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "10:30",
-       "weekday": 5,
-       "week_of_month": -1,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "0",
      "eligibility": [],
@@ -6725,6 +7549,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+     "evidence_quote": "West End: 510-F South Van Dorn St, Tuesday-Thursday, 11 a.m.-6 p.m. (Closed 2-3 p.m.), Saturday, 9 a.m.-3 p.m. || West End: 510-F South Van Dorn St, Tuesday-Thursday, 11 a.m.-6 p.m. (Closed"
+    }
+   ],
    "organization_name": "ALIVE!",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -6740,7 +7573,7 @@
    "phone": "(703) 837-9300",
    "state": "VA",
    "website": null,
-   "address1": "619 South Pickett Street",
+   "address1": "510-F South Van Dorn St",
    "address2": null,
    "services": [
     {
@@ -6814,6 +7647,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alive-inc.org/our-locations",
+     "evidence_quote": "West End Food Hub: 510-F South Van Dorn St, Alexandria, VA 22304 || 510-F South Van Dorn Street"
+    }
+   ],
    "organization_name": "ALIVE!",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -6869,15 +7711,6 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The market is on the LAST Saturday, not the 4th. In months with five Saturdays (for example October 31) the listing sends people a week early. The city directory notes that the market moves to the second Saturday in May, November and December.",
-     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-     "evidence_quote": "Last Saturday of the month from 8:30 am – 10:30 am."
-    }
-   ],
    "organization_name": "William Ramsay Recreation Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -6942,15 +7775,6 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The ALIVE! market is on the LAST Saturday, not the 4th. The second-Friday seasonal distribution is correct. The source notes also flag an address conflict: the ALIVE! page lists 3600 Commonwealth Ave.",
-     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-     "evidence_quote": "Last Saturday of the month from 8:30 am – 10:30 am."
-    }
-   ],
    "organization_name": "Chick Armstrong Recreation Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -7029,15 +7853,6 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "eligibility",
-     "reason": "Source says proof of residency OR an ALIVE! Client Card 'may be requested' - not a hard requirement; showing it as required may turn people away.",
-     "evidence_url": "https://www.alive-inc.org/food-program-in-alexandria-virginia/",
-     "evidence_quote": "Proof of residency in the City of Alexandria or an ALIVE! Client Card may be requested."
-    }
-   ],
    "organization_name": "Jefferson-Houston Elementary School",
    "organization_website": null,
    "raw_eligibility_text": "Proof of City of Alexandria residency or an ALIVE! Client Card may be requested (not strictly required).",
@@ -7165,15 +7980,15 @@
   {
    "lat": 38.827683,
    "lon": -77.058771,
-   "zip": "22301",
+   "zip": "22305",
    "city": "Alexandria",
    "email": null,
    "notes": null,
-   "phone": "(703) 505-2913",
+   "phone": "(703) 887-4992",
    "state": "VA",
    "website": null,
-   "address1": "2423 Mt. Vernon Ave",
-   "address2": null,
+   "address1": "25 W Reed Ave",
+   "address2": "Chick Armstrong Recreation Center",
    "services": [
     {
      "frequency": null,
@@ -7212,6 +8027,22 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+     "evidence_quote": "DCHS and Agape Church Seasonal food distribution open to all, bring a bag. Chick Armstrong Rec Center - 25 W Reed Ave | 703.887.4992 Second Friday each month, 11 a.m.-1 p.m. || Chick Armstrong Rec Center - 25 W Reed Ave | 703.887.4992"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree (values reconciled: The official Alexandria Food Resource Directory (Jan 2026) lists the DCHS and Agape Church second-Friday 11am-1pm distribution at 'Chick Armstrong Rec Center - 25 W Reed Ave'. That matches this listing's hours, and both checkers agree on the street, city and zip. I merged in the site name as address2.)",
+     "evidence_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+     "evidence_quote": "DCHS and Agape Church Seasonal food distribution open to all, bring a bag. Chick Armstrong Rec Center - 25 W Reed Ave | 703.887.4992 Second Friday each month, 11 a.m.-1 p.m. || Chick Armstrong Rec Center - 25 W Reed Ave | 703.887.4992"
+    }
+   ],
    "organization_name": "First Agape Baptist Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -7236,7 +8067,7 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "08:00",
+       "opens": "09:00",
        "closes": "10:00",
        "weekday": 3,
        "week_of_month": null,
@@ -7265,6 +8096,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "pantry_pickup"
     }
    ],
    "languages": [],
@@ -7272,7 +8108,7 @@
    "source_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
    "eligibility": [],
    "external_id": "19002-PART-02",
-   "location_name": "Christ Church Lazarus Ministry",
+   "location_name": "Historic Christ Church Lazarus Food Pantry",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "cafb",
@@ -7280,6 +8116,29 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+     "evidence_quote": "Historic Christ Church Lazarus Food Pantry || Historic Christ Church Lazarus Food Pantry"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/sites/default/files/2026-01/Alexandria%20Food%20Resource%20Directory.pdf",
+     "evidence_quote": "118 N. Washington St Thursday, 9-10 a.m. || Thursday, 9-10 a.m."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.historicchristchurch.org/outreach",
+     "evidence_quote": "financial counseling and support for people living in the city of Alexandria facing financial emergencies || Provides perishable and non-perishable food (and toiletries once a month). Requires sign-in by name, bring a bag."
+    }
+   ],
    "organization_name": "Christ Church Lazarus Ministry",
    "organization_website": null,
    "raw_eligibility_text": null,

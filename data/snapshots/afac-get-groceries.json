@@ -9,7 +9,7 @@
    "city": "Arlington",
    "email": null,
    "notes": null,
-   "phone": null,
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": null,
    "address1": "2708 South Nelson Street",
@@ -126,6 +126,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "703-845-8486 || 703-845-8486"
+    }
+   ],
    "organization_name": "Arlington Food Assistance Center",
    "organization_website": "https://afac.org/",
    "raw_eligibility_text": null,
@@ -146,17 +155,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "11:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [
       "general_groceries"
      ],
@@ -171,18 +170,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://afac.org/get-groceries/",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {
-      "jurisdictions": [
-       "arlington-county"
-      ]
-     },
-     "details": "The Arlington Food Assistance Center (AFAC) is committed to providing free supplemental groceries to any Arlington County resident who cannot afford to purchase enough food for themselves or their families.",
-     "requirement_type": "residency"
-    }
-   ],
+   "eligibility": [],
    "external_id": "0b819f7aed41284c",
    "location_name": "Arlington Mill Community Center",
    "parking_notes": null,
@@ -192,6 +180,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "Monday: 9:30 – 11:30 AM || M: 9:30 – 11:30am"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
+     "evidence_quote": "Choose 1 location and visit once a week || limit client visits to one time per week"
+    }
+   ],
    "organization_name": "Arlington Food Assistance Center",
    "organization_website": "https://afac.org/",
    "raw_eligibility_text": null,
@@ -204,7 +208,7 @@
    "city": "Arlington",
    "email": null,
    "notes": null,
-   "phone": null,
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": null,
    "address1": "918 South Lincoln Street",
@@ -258,6 +262,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "call 571-384-1448 to ask about home delivery. || call 571-384-1448 to ask about home delivery."
+    }
+   ],
    "organization_name": "Arlington Food Assistance Center",
    "organization_website": "https://afac.org/",
    "raw_eligibility_text": null,
@@ -270,7 +283,7 @@
    "city": "Arlington",
    "email": null,
    "notes": null,
-   "phone": null,
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": null,
    "address1": "606 North Irving Street",
@@ -324,6 +337,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "call 571-384-1448 to ask about home delivery. || call 571-384-1448 to ask about home delivery."
+    }
+   ],
    "organization_name": "Arlington Food Assistance Center",
    "organization_website": "https://afac.org/",
    "raw_eligibility_text": null,
@@ -336,7 +358,7 @@
    "city": "Arlington",
    "email": null,
    "notes": null,
-   "phone": null,
+   "phone": "(703) 845-8486",
    "state": "VA",
    "website": null,
    "address1": "5705 Washington Boulevard",
@@ -390,6 +412,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://afac.org/get-groceries/",
+     "evidence_quote": "call 571-384-1448 to ask about home delivery. || call 571-384-1448 to ask about home delivery."
+    }
+   ],
    "organization_name": "Arlington Food Assistance Center",
    "organization_website": "https://afac.org/",
    "raw_eligibility_text": null,

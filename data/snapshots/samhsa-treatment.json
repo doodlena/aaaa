@@ -28,9 +28,62 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "07:30",
+     "closes": "18:30",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "07:30",
+     "closes": "18:30",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "07:30",
+     "closes": "18:30",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "07:30",
+     "closes": "18:30",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "07:30",
+     "closes": "16:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Children and adolescents",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "43542ca8b857fa0b",
    "location_name": null,
    "parking_notes": null,
@@ -40,6 +93,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-kellar-center",
+     "evidence_quote": "Mon 7:30AM-6:30PM || Mon: 7:30AM-6:30PM ... Fri: 7:30AM-4:00PM ... Closed"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-kellar-center",
+     "evidence_quote": "Providing Outpatient Services for Children and Adolescents || behavioral health services for children, adolescents and their families"
+    }
+   ],
    "organization_name": "Inova Kellar Center",
    "organization_website": "https://www.inova.org",
    "raw_eligibility_text": null,
@@ -94,6 +163,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-kellar-center",
+     "evidence_quote": "Mon 7:30AM-6:30PM || Mon: 7:30AM-6:30PM ... Fri: 7:30AM-4:00PM ... Closed"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-kellar-center",
+     "evidence_quote": "Providing Outpatient Services for Children and Adolescents || behavioral health services for children, adolescents and their families"
+    }
+   ],
    "organization_name": "Inova Kellar Center",
    "organization_website": "https://www.inova.org",
    "raw_eligibility_text": null,
@@ -106,7 +191,7 @@
    "city": "Fairfax",
    "email": null,
    "notes": "Type of Care: Mental health treatment; Service Setting: Residential/24-hour residential; Payment/Insurance/Funding Accepted: Federal military insurance (e.g., TRICARE); Private health insurance; Cash or self-payment; U.S. Department of VA funds; Age Groups Accepted: Children/Adolescents; Adults",
-   "phone": "(855) 818-2029",
+   "phone": "(800) 760-3934",
    "state": "VA",
    "website": "https://centerfordiscovery.com/locations/fairfax/",
    "address1": "5343 Summit Drive",
@@ -127,7 +212,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Adolescents ages 10-17 (residential eating disorder program)",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "36f73403dcb249d6",
    "location_name": null,
    "parking_notes": null,
@@ -137,6 +229,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://centerfordiscovery.com/locations/fairfax/",
+     "evidence_quote": "PH 800.760.3934 || 800.760.3934"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://centerfordiscovery.com/locations/fairfax/",
+     "evidence_quote": "Ages 10-17 || Ages 10-17"
+    }
+   ],
    "organization_name": "Center for Discovery Fairfax",
    "organization_website": "https://centerfordiscovery.com/locations/fairfax/",
    "raw_eligibility_text": null,
@@ -153,7 +261,7 @@
    "state": "VA",
    "website": "https://www.careclinicmd.com",
    "address1": "4017 Williamsburg Court",
-   "address2": "Suite 100",
+   "address2": "Suite 200",
    "services": [
     {
      "frequency": null,
@@ -183,7 +291,7 @@
    "source_url": "https://findtreatment.gov/",
    "eligibility": [],
    "external_id": "ad9e82d1f3badc4b",
-   "location_name": null,
+   "location_name": "Resova Health",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "samhsa",
@@ -191,6 +299,22 @@
    "jurisdiction_id": "fairfax-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.resovahealth.com/",
+     "evidence_quote": "4017 Williamsburg Court Suite 200, Fairfax, Virginia 22032 USA || 4017 Williamsburg Court, Suite 200, Fairfax, Virginia 22032"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree (values reconciled: Both checkers quote the official site (resovahealth.com) saying 'The Care Clinic is now Resova Health!'. Their votes differ only in whether to keep the 'formerly' note, so I used the clean current name.)",
+     "evidence_url": "https://www.resovahealth.com/",
+     "evidence_quote": "The Care Clinic is now Resova Health! New name, same high standard of care. || The Care Clinic is now Resova Health!"
+    }
+   ],
    "organization_name": "Care Clinic",
    "organization_website": "https://www.careclinicmd.com",
    "raw_eligibility_text": null,
@@ -310,7 +434,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Men and male-identifying individuals only (residential)",
+     "requirement_type": "other"
+    }
+   ],
    "external_id": "e606558aaa8ff90a",
    "location_name": null,
    "parking_notes": null,
@@ -320,6 +451,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://amfmtreatment.com/virginia/vienna-rtc-for-men",
+     "evidence_quote": "Men and male-identifying individuals. || Men and male-identifying individuals."
+    }
+   ],
    "organization_name": "AMFM Mental Health Treatment A Mission for Michael",
    "organization_website": "https://amfmtreatment.com/virginia/vienna-rtc-for-men",
    "raw_eligibility_text": null,
@@ -418,7 +558,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Adolescents ages 11-17",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "05944f369af881af",
    "location_name": null,
    "parking_notes": null,
@@ -428,6 +575,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://discoverymood.com/locations/fairfax-station/",
+     "evidence_quote": "Adolescents 11-17 || Adolescents 11-17"
+    }
+   ],
    "organization_name": "Discovery Mood and Anxiety Program Fairfax Station",
    "organization_website": "https://discoverymood.com",
    "raw_eligibility_text": null,
@@ -510,12 +666,89 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "crisis_support"
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 6,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Young adults and adults only (no children/adolescents)",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "75905b227129a275",
    "location_name": null,
    "parking_notes": null,
@@ -525,6 +758,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://connectionshs.com/chantilly",
+     "evidence_quote": "Every day, 24 hours a day, seven days a week. || Every day, 24 hours a day, seven days a week."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://connectionshs.com/chantilly",
+     "evidence_quote": "open 24/7/365 || provides care and focused treatment to adults experiencing a mental health crisis in a safe, open, and therapeutic setting"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://findtreatment.gov/locator/exportsAsJson/v2?sAddr=38.87,-77.23&limitType=2&limitValue=40000&pageSize=100&page=1&sort=0",
+     "evidence_quote": "\"f1\":\"Age Groups Accepted\",\"f2\":\"AGE\",\"f3\":\"Young Adults; Adults; Seniors\" || provides care and focused treatment to adults experiencing a mental health crisis"
+    }
+   ],
    "organization_name": "Connections Chantilly",
    "organization_website": "https://connectionshs.com/chantilly",
    "raw_eligibility_text": null,
@@ -806,7 +1062,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Children/adolescents (teens) only",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "b18d566d8df8628c",
    "location_name": null,
    "parking_notes": null,
@@ -816,6 +1079,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://findtreatment.gov/locator/exportsAsJson/v2?sAddr=38.87,-77.23&limitType=2&limitValue=40000&pageSize=100&page=1&sort=0",
+     "evidence_quote": "\"f1\":\"Age Groups Accepted\",\"f2\":\"AGE\",\"f3\":\"Children/Adolescents\" || Teen IOP (Ages 12–18)"
+    }
+   ],
    "organization_name": "Newport Academy Teen and Adolescent Outpatient",
    "organization_website": "https://www.newportacademy.com",
    "raw_eligibility_text": null,
@@ -1041,9 +1313,80 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 6,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Women and female-identifying individuals only (8-bed residential)",
+     "requirement_type": "other"
+    }
+   ],
    "external_id": "7c48dfc1f53b1b91",
    "location_name": null,
    "parking_notes": null,
@@ -1053,6 +1396,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://amfmtreatment.com/virginia/residential-mental-health-treatment-in-annandale-virginia",
+     "evidence_quote": "24/7 inpatient clinical care || 24/7 inpatient clinical care"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://amfmtreatment.com/virginia/residential-mental-health-treatment-in-annandale-virginia",
+     "evidence_quote": "women and female-identifying individuals || Women and female-identifying individuals"
+    }
+   ],
    "organization_name": "AMFM Mental Health Treatment A Mission for Michael",
    "organization_website": "https://amfmtreatment.com/virginia/residential-mental-health-treatment-in-annandale-virginia",
    "raw_eligibility_text": null,
@@ -1097,7 +1456,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Adults 18+ only",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "e59b1f68ec7c3567",
    "location_name": null,
    "parking_notes": null,
@@ -1107,6 +1473,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.sandstonecare.com/locations/virginia-detox-center/",
+     "evidence_quote": "our Chantilly Detox location only treats adults and young adults, not adolescents || \"f1\":\"Age Groups Accepted\",\"f2\":\"AGE\",\"f3\":\"Young Adults; Adults; Seniors\" || only treats adults and young adults, not adolescents"
+    }
+   ],
    "organization_name": "Sandstone Care Detox Center",
    "organization_website": "https://www.sandstonecare.com/locations/virginia-detox-center/",
    "raw_eligibility_text": null,
@@ -1150,6 +1525,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.sandstonecare.com/locations/virginia-detox-center/",
+     "evidence_quote": "our Chantilly Detox location only treats adults and young adults, not adolescents || \"f1\":\"Age Groups Accepted\",\"f2\":\"AGE\",\"f3\":\"Young Adults; Adults; Seniors\" || only treats adults and young adults, not adolescents"
+    }
+   ],
    "organization_name": "Sandstone Care Detox Center",
    "organization_website": "https://www.sandstonecare.com/locations/virginia-detox-center/",
    "raw_eligibility_text": null,
@@ -1183,7 +1567,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Adolescents ages 11-17",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "3bbee50cb1b4704a",
    "location_name": null,
    "parking_notes": null,
@@ -1193,6 +1584,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.montenido.com/locations/clementine-virginia-fairfax",
+     "evidence_quote": "offers residential eating disorder treatment for adolescents ages 11-17 || ages 11-17."
+    }
+   ],
    "organization_name": "Monte Nido Clementine Fairfax",
    "organization_website": "https://www.montenido.com/locations/clementine-virginia-fairfax",
    "raw_eligibility_text": null,
@@ -1267,9 +1667,86 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 6,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Adults only",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Men and male-identifying individuals only",
+     "requirement_type": "other"
+    }
+   ],
    "external_id": "737aa186160cfbbf",
    "location_name": null,
    "parking_notes": null,
@@ -1279,6 +1756,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://amfmtreatment.com/virginia/inpatient-mental-health-treatment-fairfax-station",
+     "evidence_quote": "Open 24 Hours || Open 24 Hours"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://amfmtreatment.com/virginia/inpatient-mental-health-treatment-fairfax-station",
+     "evidence_quote": "adult men and male-identifying individuals || supports adult men and male-identifying individuals"
+    }
+   ],
    "organization_name": "AMFM Mental Health Treatment A Mission for Michael",
    "organization_website": "https://amfmtreatment.com/virginia/inpatient-mental-health-treatment-fairfax-station",
    "raw_eligibility_text": null,
@@ -1310,7 +1803,71 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 6,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
    "eligibility": [],
    "external_id": "369120f09d7337a1",
@@ -1322,6 +1879,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://amfmtreatment.com/locations/virginia/vienna-browns-mill-rd",
+     "evidence_quote": "Open 24 Hours || Open 24 Hours"
+    }
+   ],
    "organization_name": "AMFM Mental Health Treatment A Mission for Michael",
    "organization_website": "https://amfmtreatment.com/locations/virginia/vienna-browns-mill-rd",
    "raw_eligibility_text": null,
@@ -1350,6 +1916,16 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "domestic_violence_support"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "support_groups"
     }
    ],
    "languages": [],
@@ -1357,7 +1933,7 @@
    "source_url": "https://findtreatment.gov/",
    "eligibility": [],
    "external_id": "192bab6bbf047848",
-   "location_name": null,
+   "location_name": "The Women's Center",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "samhsa",
@@ -1365,6 +1941,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://thewomenscenter.org/",
+     "evidence_quote": "The Women's Center || The Women's Center"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://thewomenscenter.org/",
+     "evidence_quote": "Domestic violence and sexual assault services || Support and Therapy Group Sessions"
+    }
+   ],
    "organization_name": "Womens Center",
    "organization_website": "https://thewomenscenter.org/",
    "raw_eligibility_text": null,
@@ -1380,8 +1972,8 @@
    "phone": "(703) 333-3113",
    "state": "VA",
    "website": null,
-   "address1": "7008 Little River Turnpike, Suite G",
-   "address2": null,
+   "address1": "7008 Little River Turnpike",
+   "address2": "Suite G",
    "services": [
     {
      "frequency": null,
@@ -1398,9 +1990,16 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Adults only (opioid treatment program)",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "c7f06751bc449093",
-   "location_name": null,
+   "location_name": "Annandale Comprehensive Treatment Center",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "samhsa",
@@ -1408,6 +2007,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://carf.org/provider/sellati-co-inc-dba-annandale-comprehensive-treatment-center-39457/",
+     "evidence_quote": "Sellati & Co., Inc. DBA: ANNANDALE COMPREHENSIVE TREATMENT CENTER (FMTC) || Annandale Comprehensive Treatment Center"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://carf.org/provider/sellati-co-inc-dba-annandale-comprehensive-treatment-center-39457/",
+     "evidence_quote": "7008 Little River Turnpike, Suite G, Annandale, VA 22003, US || 7008 Little River Tpke, Suite G, Annandale, VA 22003"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://carf.org/provider/sellati-co-inc-dba-annandale-comprehensive-treatment-center-39457/",
+     "evidence_quote": "Age Group / Special Population: Adults || adults age 18 and older"
+    }
+   ],
    "organization_name": "Sellati & Co., Inc. ANNANDALE COMPREHENSIVE TREATMENT CENTER",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -1478,7 +2100,7 @@
    "state": "VA",
    "website": "https://www.calvarycounseling.com",
    "address1": "9300 Forest Point Circle",
-   "address2": "Suite 103",
+   "address2": "Suite 154",
    "services": [
     {
      "frequency": null,
@@ -1505,6 +2127,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.calvarycounseling.com",
+     "evidence_quote": "9300 Forest Point Circle, Suite 154, Manassas, VA 20110 || 9300 Forest Point Circle, Suite 154, Manassas, VA 20110"
+    }
+   ],
    "organization_name": "Calvary Counseling Center",
    "organization_website": "https://www.calvarycounseling.com",
    "raw_eligibility_text": null,
@@ -1521,7 +2152,7 @@
    "state": "VA",
    "website": "https://www.calvarycounseling.com",
    "address1": "9300 Forest Point Circle",
-   "address2": "Suite 103",
+   "address2": "Suite 154",
    "services": [
     {
      "frequency": null,
@@ -1559,6 +2190,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.calvarycounseling.com",
+     "evidence_quote": "9300 Forest Point Circle, Suite 154, Manassas, VA 20110 || 9300 Forest Point Circle, Suite 154, Manassas, VA 20110"
+    }
+   ],
    "organization_name": "Calvary Counseling Center",
    "organization_website": "https://www.calvarycounseling.com",
    "raw_eligibility_text": null,
@@ -1648,7 +2288,7 @@
    "source_url": "https://findtreatment.gov/",
    "eligibility": [],
    "external_id": "5ccdb50c1d299565",
-   "location_name": null,
+   "location_name": "Manassas Comprehensive Treatment Center",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "samhsa",
@@ -1656,6 +2296,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://findtreatment.gov/locator/exportsAsJson/v2?sAddr=38.7500,-77.4700&limitType=2&limitValue=5000&pageSize=200&page=1&sort=0",
+     "evidence_quote": "MANASSAS COMPREHENSIVE TREATMENT CENTER || Manassas Comprehensive Treatment Center"
+    }
+   ],
    "organization_name": "Sellati & Co., Inc. MANASSAS COMPREHENSIVE TREATMENT CENTER",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -2196,7 +2845,7 @@
    "city": "Falls Church",
    "email": null,
    "notes": "Type of Care: Mental health treatment; Service Setting: Outpatient; Payment/Insurance/Funding Accepted: County or local government funds; Federal Grants; Medicaid; Federal military insurance (e.g., TRICARE); Other State funds; Private or Community foundation; Cash or self-payment; Age Groups Accepted: Children/Adolescents; Young Adults; Adults; Seniors",
-   "phone": "(571) 748-2818",
+   "phone": "(571) 748-2800",
    "state": "VA",
    "website": "https://www.nvfs.org/multicultural",
    "address1": "6400 Arlington Boulevard",
@@ -2212,10 +2861,61 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "immigration_legal_help"
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
    "eligibility": [],
    "external_id": "d31407eb23f9af04",
@@ -2227,6 +2927,29 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.nvfs.org/multicultural",
+     "evidence_quote": "571.748.2800 || \"phone\":\"571-748-2800\" || 571.748.2800"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.nvfs.org/multicultural",
+     "evidence_quote": "Monday – Friday 9:00 AM – 5:00 PM || Monday – Friday 9:00 AM – 5:00 PM"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.nvfs.org/multicultural",
+     "evidence_quote": "Expert immigration consultations and low-cost legal representation for asylum seekers, refugees, and families ... Professional counseling, advocacy, and case management for immigrants who are experiencing, or are at risk of experiencing, domestic violence or sexual assault. || Expert immigration consultations and low-cost legal representation for asylum seekers"
+    }
+   ],
    "organization_name": "Northern Virginia Family Services Multicultural Center",
    "organization_website": "https://www.nvfs.org/multicultural",
    "raw_eligibility_text": null,
@@ -2258,7 +2981,71 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 6,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
    "eligibility": [],
    "external_id": "cdc2922d59ae6591",
@@ -2270,6 +3057,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://amfmtreatment.com/virginia/residential-treatment-center-in-great-falls-virginia",
+     "evidence_quote": "Open 24 Hours || Open 24 Hours"
+    }
+   ],
    "organization_name": "AMFM Mental Health Treatment A Mission for Michael",
    "organization_website": "https://amfmtreatment.com/virginia/residential-treatment-center-in-great-falls-virginia",
    "raw_eligibility_text": null,
@@ -2853,7 +3649,7 @@
    "city": "McLean",
    "email": null,
    "notes": "Type of Care: Substance use treatment; Mental health treatment; Service Setting: Residential/24-hour residential; Payment/Insurance/Funding Accepted: Federal military insurance (e.g., TRICARE); Private health insurance; Cash or self-payment; U.S. Department of VA funds; Age Groups Accepted: Children/Adolescents; Young Adults; Adults",
-   "phone": "(866) 944-9796",
+   "phone": "(800) 760-3934",
    "state": "VA",
    "website": "https://centerfordiscovery.com/locations/mclean/",
    "address1": "5949 Oakdale Road",
@@ -2866,17 +3662,6 @@
      "description": null,
      "eligibility": [],
      "service_type": "mental_health_counseling",
-     "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
-    },
-    {
-     "frequency": null,
-     "schedules": [],
-     "food_types": [],
-     "description": null,
-     "eligibility": [],
-     "service_type": "substance_use_treatment",
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
@@ -2895,6 +3680,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://centerfordiscovery.com/locations/mclean/",
+     "evidence_quote": "PH 800.760.3934 || 800.760.3934"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://centerfordiscovery.com/locations/mclean/",
+     "evidence_quote": "high level of care eating disorder treatment facility || Co-Occurring Disorders with Eating Disorders"
+    }
+   ],
    "organization_name": "Center for Discovery McLean",
    "organization_website": "https://centerfordiscovery.com/locations/mclean/",
    "raw_eligibility_text": null,
@@ -3478,7 +4279,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "Type of Care: Mental health treatment; Service Setting: Residential/24-hour residential; Payment/Insurance/Funding Accepted: Private health insurance; Cash or self-payment; Age Groups Accepted: Children/Adolescents; Young Adults; Adults",
-   "phone": "(703) 822-7885",
+   "phone": "(866) 833-1822",
    "state": "VA",
    "website": "https://missionconnectionhealthcare.com/locations/virginia/arlington/",
    "address1": "2900 South Quincy Street",
@@ -3509,6 +4310,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://missionconnectionhealthcare.com/locations/virginia/arlington/",
+     "evidence_quote": "866-833-1822 || 866-833-1822"
+    }
+   ],
    "organization_name": "Mission Connection Outpatient MH Treatment in Virginia",
    "organization_website": "https://missionconnectionhealthcare.com/locations/virginia/arlington/",
    "raw_eligibility_text": null,
@@ -3591,12 +4401,89 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "crisis_support"
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "00:00",
+     "closes": "23:59",
+     "weekday": 6,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Ages 12 and older",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "11f1fb5605ca103a",
    "location_name": null,
    "parking_notes": null,
@@ -3606,6 +4493,29 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://connectionshs.com/woodbridge",
+     "evidence_quote": "open 24/7/365 || is open 24/7/365"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/community-services",
+     "evidence_quote": "provides crisis services for behavioral health and substance use disorders || provides crisis services for behavioral health and substance use disorders || walk-in mental health services and stabilization units"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://connectionshs.com/woodbridge",
+     "evidence_quote": "adults and youth ages 12 and older who are experiencing a crisis || provides a range of services for adults and youth ages 12 and older who are experiencing a crisis"
+    }
+   ],
    "organization_name": "Connections Health Solutions",
    "organization_website": "https://connectionshs.com/woodbridge",
    "raw_eligibility_text": null,
@@ -3645,6 +4555,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "crisis_support"
     }
    ],
    "languages": [],
@@ -3660,6 +4575,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/Government/Departments/DHS/Behavioral-Healthcare",
+     "evidence_quote": "Provides 24/7 rapid assessment || Provides 24/7 rapid assessment"
+    }
+   ],
    "organization_name": "Arlington County Community Servs Board",
    "organization_website": "https://health.arlingtonva.us/behavioral-healthcare/",
    "raw_eligibility_text": null,
@@ -3703,6 +4627,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.arlingtonva.us/Government/Departments/DHS/Behavioral-Healthcare",
+     "evidence_quote": "Provides 24/7 rapid assessment || Provides 24/7 rapid assessment"
+    }
+   ],
    "organization_name": "Arlington County Community Servs Board",
    "organization_website": "https://health.arlingtonva.us/behavioral-healthcare/",
    "raw_eligibility_text": null,
@@ -3736,9 +4669,22 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Arlington County residents",
+     "requirement_type": "residency"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Adults 18+",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "97cbfd2be94d9ef1",
-   "location_name": null,
+   "location_name": "National Capital Treatment and Recovery - Independence House",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "samhsa",
@@ -3746,6 +4692,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.natcaptreatment.org",
+     "evidence_quote": "Less Intensive Residential Program for Arlington County Residents || Independence House"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.natcaptreatment.org/programs/independence-house",
+     "evidence_quote": "offers low-intensity residential treatment services for Arlington County adult men and women || Adults recovering from substance abuse. Must be employed, seeking employment or in vocational training. || Arlington County residents"
+    }
+   ],
    "organization_name": "National Capital Trt and Recovery Independence House",
    "organization_website": "https://www.natcaptreatment.org",
    "raw_eligibility_text": null,
@@ -3758,7 +4720,7 @@
    "city": "Arlington",
    "email": null,
    "notes": "Type of Care: Substance use treatment; Detoxification; Treatment for co-occurring disorders plus serious mental illness (SMI) in adults; Treatment for co-occurring disorders plus serious emotional disturbance (SED) in children; Service Setting: Outpatient; Outpatient detoxification; Outpatient day treatment or partial hospitalization; Intensive outpatient treatment; Regular outpatient treatment; Payment/Insurance/Funding Accepted: Federal military insurance (e.g., TRICARE); Private health insurance; Cash or self-payment; Age Groups Accepted: Young Adults; Adults; Seniors",
-   "phone": "(202) 400-3347",
+   "phone": "(866) 575-9040",
    "state": "VA",
    "website": "https://www.kolmac.com",
    "address1": "1701 Clarendon Boulevard",
@@ -3774,10 +4736,61 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "mental_health_counseling"
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "20:30",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "20:30",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "20:30",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "20:30",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "20:30",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
    "eligibility": [],
    "external_id": "a82ea657daffeb40",
@@ -3789,6 +4802,29 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.kolmac.com/locations/virginia/arlington-va/",
+     "evidence_quote": "866-575-9040 || (866) 575-9040"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.kolmac.com/locations/virginia/arlington-va/",
+     "evidence_quote": "9:00 AM – 8:30 PM || Monday through Friday, 9:00 AM to 8:30 PM"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.kolmac.com/locations/virginia/arlington-va/",
+     "evidence_quote": "Mental Health Intensive Outpatient Treatment || Mental Health IOP"
+    }
+   ],
    "organization_name": "Kolmac Integrated Behavioral Health",
    "organization_website": "https://www.kolmac.com",
    "raw_eligibility_text": null,
@@ -3822,9 +4858,16 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Arlington County residents",
+     "requirement_type": "residency"
+    }
+   ],
    "external_id": "95b11b0e925d2621",
-   "location_name": null,
+   "location_name": "National Capital Treatment and Recovery - Arlington Recovery Center",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "samhsa",
@@ -3832,6 +4875,22 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.natcaptreatment.org/programs/arlington-recovery-center",
+     "evidence_quote": "Intensive Residential Program for Arlington County Residents || Arlington Recovery Center"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.natcaptreatment.org/programs/arlington-recovery-center",
+     "evidence_quote": "Intensive Residential Program for Arlington County Residents || Arlington County residents"
+    }
+   ],
    "organization_name": "National Capital Trt and Recovery Arlington Recovery Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -3882,6 +4941,27 @@
      "reason": "Therapy practice office hours shown as food distribution times.",
      "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
      "evidence_quote": "Monday - Friday (9 AM - 6 PM)"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.rockrecoveryed.org/contact-us",
+     "evidence_quote": "Our main office is located at 1901 Fort Myer Drive, Suite 1104, Arlington, VA 22209. || 1901 Fort Myer Drive, Arlington VA, 22209"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.rockrecoveryed.org/",
+     "evidence_quote": "affordable group and individual therapy services || Rock Recovery also offers a free monthly virtual faith-based support group for parents and loved ones caring for someone in eating-disorder recovery. || affordable group and individual therapy services (available to DC, MD, and VA residents)"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.rockrecoveryed.org/",
+     "evidence_quote": "available to DC, MD, and VA residents || Provides outpatient eating-disorder and body-image therapy for individuals ages 10+ who live in Virginia, Maryland, or Washington, DC."
     }
    ],
    "organization_name": "Rock Recovery",
@@ -3915,7 +4995,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
    "eligibility": [],
    "external_id": "0fefad3621da9e4f",
@@ -3927,6 +5053,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.washingtonbehavioralhealth.com",
+     "evidence_quote": "Monday through Friday, 9:00 am to 5:00 pm || Monday to Friday: 9:00 am - 5:00 pm."
+    }
+   ],
    "organization_name": "Washington Behavioral Health",
    "organization_website": "https://www.washingtonbehavioralhealth.com",
    "raw_eligibility_text": null,
@@ -3981,6 +5116,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.washingtonbehavioralhealth.com",
+     "evidence_quote": "Monday through Friday, 9:00 am to 5:00 pm || Monday to Friday: 9:00 am - 5:00 pm."
+    }
+   ],
    "organization_name": "Washington Behavioral Health",
    "organization_website": "https://www.washingtonbehavioralhealth.com",
    "raw_eligibility_text": null,
@@ -3989,11 +5133,11 @@
   {
    "lat": 38.7314403,
    "lon": -77.1045582,
-   "zip": "22310",
+   "zip": "22309",
    "city": "Alexandria",
    "email": null,
    "notes": "Type of Care: Substance use treatment; Mental health treatment; Service Setting: Outpatient; Payment/Insurance/Funding Accepted: County or local government funds; Community Mental Health Block Grants; Community Service Block Grants; Medicaid; Federal military insurance (e.g., TRICARE); Other State funds; Private health insurance; Cash or self-payment; State mental health agency (or equivalent) funds; State welfare or child and family services funds; Age Groups Accepted: Children/Adolescents; Young Adults; Adults",
-   "phone": "(703) 383-8500",
+   "phone": "(703) 704-6707",
    "state": "VA",
    "website": "https://www.fairfaxcounty.gov/csb",
    "address1": "8350 Richmond Highway",
@@ -4035,6 +5179,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/community-services-board/about/locations",
+     "evidence_quote": "Youth Services: Suite 515, 703-704-6707 || Youth Services - Suite 515 703-704-6707"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/community-services-board/about/locations",
+     "evidence_quote": "8350 Richmond Highway, Alexandria, VA 22309 || 8350 Richmond Highway, Alexandria, VA 22309"
+    }
+   ],
    "organization_name": "South County Youth Services",
    "organization_website": "https://www.fairfaxcounty.gov/csb",
    "raw_eligibility_text": null,
@@ -4043,11 +5203,11 @@
   {
    "lat": 38.7314701,
    "lon": -77.104447,
-   "zip": "22310",
+   "zip": "22309",
    "city": "Alexandria",
    "email": null,
    "notes": "Type of Care: Substance use treatment; Service Setting: Outpatient; Outpatient methadone/buprenorphine or naltrexone treatment; Regular outpatient treatment; Payment/Insurance/Funding Accepted: Federal, or any government funding for substance use treatment programs; Medicare; Medicaid; Federal military insurance (e.g., TRICARE); Private health insurance; Cash or self-payment; SAMHSA funding/block grants; Age Groups Accepted: Children/Adolescents; Young Adults; Adults",
-   "phone": "(703) 383-8500",
+   "phone": "(703) 704-6707",
    "state": "VA",
    "website": "https://www.fairfaxcounty.gov/csb",
    "address1": "8350 Richmond Highway",
@@ -4078,6 +5238,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/community-services-board/about/locations",
+     "evidence_quote": "Youth Services: Suite 515, 703-704-6707 || Youth Services - Suite 515 703-704-6707"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/community-services-board/about/locations",
+     "evidence_quote": "8350 Richmond Highway, Alexandria, VA 22309 || 8350 Richmond Highway, Alexandria, VA 22309"
+    }
+   ],
    "organization_name": "South County Youth Services",
    "organization_website": "https://www.fairfaxcounty.gov/csb",
    "raw_eligibility_text": null,
@@ -4090,7 +5266,7 @@
    "city": "Ashburn",
    "email": null,
    "notes": "Type of Care: Mental health treatment; Service Setting: Outpatient; Partial hospitalization/day treatment; Payment/Insurance/Funding Accepted: Private health insurance; Cash or self-payment; Age Groups Accepted: Children/Adolescents; Young Adults; Adults",
-   "phone": "(571) 670-8425",
+   "phone": "(571) 934-3574",
    "state": "VA",
    "website": "https://www.embarkbh.com/location/embark-behavioral-health-in-ashburn-virginia/",
    "address1": "20116 Ashbrook Place",
@@ -4109,9 +5285,62 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "20:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "20:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "20:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "20:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "16:30",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Ages 12-28 (adolescents, teens, young adults)",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "27a4d7159e276fdf",
    "location_name": null,
    "parking_notes": null,
@@ -4121,6 +5350,29 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.embarkbh.com/location/embark-behavioral-health-in-ashburn-virginia/",
+     "evidence_quote": "571-934-3574 || 571-934-3574"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.embarkbh.com/location/embark-behavioral-health-in-ashburn-virginia/",
+     "evidence_quote": "Friday: 9AM - 4:30PM || Monday: \"9AM - 8PM\""
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.embarkbh.com/location/embark-behavioral-health-in-ashburn-virginia/",
+     "evidence_quote": "12-28 || 12-28"
+    }
+   ],
    "organization_name": "Embark Behavioral Health",
    "organization_website": "https://www.embarkbh.com/location/embark-behavioral-health-in-ashburn-virginia/",
    "raw_eligibility_text": null,
@@ -4348,9 +5600,16 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Women only",
+     "requirement_type": "other"
+    }
+   ],
    "external_id": "d898d8b16c234d94",
-   "location_name": null,
+   "location_name": "National Capital Treatment and Recovery - Recovery Haven",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "samhsa",
@@ -4358,6 +5617,22 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.natcaptreatment.org/programs/recovery-haven",
+     "evidence_quote": "a low-intensity residential treatment program for women || Recovery Haven"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.natcaptreatment.org/programs/recovery-haven",
+     "evidence_quote": "a low-intensity residential treatment program for women || {\"f1\":\"Sex Accepted\",\"f2\":\"SN\",\"f3\":\"Female\"} || Women"
+    }
+   ],
    "organization_name": "National Capital Treatment and Recover Recovery Haven",
    "organization_website": "https://natcaptreatment.org",
    "raw_eligibility_text": null,
@@ -4370,7 +5645,7 @@
    "city": "Alexandria",
    "email": null,
    "notes": "Type of Care: Mental health treatment; Service Setting: Residential/24-hour residential; Payment/Insurance/Funding Accepted: County or local government funds; Private health insurance; Cash or self-payment; Age Groups Accepted: Children/Adolescents",
-   "phone": "(855) 818-2029",
+   "phone": "(703) 540-1682",
    "state": "VA",
    "website": "https://www.embarkbh.com/locations/virginia/alexandria/",
    "address1": "7809 Schelhorn Road",
@@ -4391,7 +5666,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Teens ages 12-17",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "81cbf7c3f4b841e4",
    "location_name": null,
    "parking_notes": null,
@@ -4401,6 +5683,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.embarkbh.com/locations/virginia/alexandria/",
+     "evidence_quote": "703-540-1682 || 703-540-1682"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.embarkbh.com/locations/virginia/alexandria/",
+     "evidence_quote": "12-17 || {\"f1\":\"Age Groups Accepted\",\"f2\":\"AGE\",\"f3\":\"Children/Adolescents\"} || 12-17"
+    }
+   ],
    "organization_name": "Embark Behavioral Health Alexandria",
    "organization_website": "https://www.embarkbh.com/locations/virginia/alexandria/",
    "raw_eligibility_text": null,
@@ -4463,15 +5761,15 @@
   {
    "lat": 38.8127336,
    "lon": -77.0404166,
-   "zip": "22306",
+   "zip": "22314",
    "city": "Alexandria",
    "email": null,
    "notes": "Type of Care: Mental health treatment; Service Setting: Outpatient; Payment/Insurance/Funding Accepted: Federal military insurance (e.g., TRICARE); Private health insurance; Cash or self-payment; U.S. Department of VA funds; Age Groups Accepted: Children/Adolescents; Young Adults; Adults",
-   "phone": "(855) 818-2029",
+   "phone": "(800) 760-3934",
    "state": "VA",
    "website": "https://centerfordiscovery.com/locations/alexandria-outpatient/",
    "address1": "209 Madison Street",
-   "address2": "Suite 3-B",
+   "address2": "Suite 3B",
    "services": [
     {
      "frequency": null,
@@ -4486,7 +5784,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://findtreatment.gov/",
    "eligibility": [],
    "external_id": "5724185bf9047eb9",
@@ -4498,6 +5842,29 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://centerfordiscovery.com/locations/alexandria-outpatient/",
+     "evidence_quote": "800.760.3934 || 800.760.3934"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://centerfordiscovery.com/locations/alexandria-outpatient/",
+     "evidence_quote": "209 Madison Street, Suite 3B Alexandria, VA 22314 || 209 Madison Street, Suite 3B, Alexandria, VA 22314"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://centerfordiscovery.com/locations/alexandria-outpatient/",
+     "evidence_quote": "M-F 9:00am to 5:00pm || M-F 9:00am to 5:00pm"
+    }
+   ],
    "organization_name": "Center for Discovery Alexandria",
    "organization_website": "https://centerfordiscovery.com/locations/alexandria-outpatient/",
    "raw_eligibility_text": null,
@@ -4855,7 +6222,7 @@
    "city": "Leesburg",
    "email": null,
    "notes": "Type of Care: Substance use treatment; Service Setting: Outpatient; Intensive outpatient treatment; Payment/Insurance/Funding Accepted: Federal, or any government funding for substance use treatment programs; Medicare; Medicaid; Federal military insurance (e.g., TRICARE); Private health insurance; Cash or self-payment; State-financed health insurance plan other than Medicaid; Age Groups Accepted: Young Adults; Adults; Seniors",
-   "phone": "(571) 623-3500",
+   "phone": "(571) 472-2500",
    "state": "VA",
    "website": "https://www.inova.org",
    "address1": "19 Fort Evans Road NE",
@@ -4878,7 +6245,7 @@
    "source_url": "https://findtreatment.gov/",
    "eligibility": [],
    "external_id": "86299981d4246e4a",
-   "location_name": null,
+   "location_name": "Inova Behavioral Health - Fort Evans",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "samhsa",
@@ -4886,6 +6253,22 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree (values reconciled: Inova's official locations page lists this address (19 Fort Evans Road NE Ste C, Leesburg 20176) as 'Inova Behavioral Health - Fort Evans', which offers intensive outpatient addiction services. The operator's own current page is more authoritative than the internal program code that findtreatment.gov shows.)",
+     "evidence_url": "https://findtreatment.gov/locator/exportsAsJson/v2?sAddr=39.1157,-77.5636&limitType=2&limitValue=40000&pageSize=100&page=1&sort=0",
+     "evidence_quote": "\"name1\":\"Inova Behavioral Health CATS\",\"name2\":\"CATS/Loudoun/IOP\" || 19 Fort Evans Road NE Ste C Leesburg, VA 20176"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree (values reconciled: Inova's official locations page gives Phone: 571-472-2500 for the Fort Evans location. The current value, 571-623-3500, is the system-wide admissions or intake line, and the findtreatment 703-737-2110 number is older federal-directory data.)",
+     "evidence_url": "https://findtreatment.gov/locator/exportsAsJson/v2?sAddr=39.1157,-77.5636&limitType=2&limitValue=40000&pageSize=100&page=1&sort=0",
+     "evidence_quote": "\"phone\":\"703-737-2110\",\"intake1\":\"571-623-3500\" || 571-472-2500"
+    }
+   ],
    "organization_name": "Inova Behavioral Health CATS CATS/Loudoun/IOP",
    "organization_website": "https://www.inova.org",
    "raw_eligibility_text": null,

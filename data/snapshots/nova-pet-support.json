@@ -82,7 +82,7 @@
     {
      "status": "required",
      "values": {},
-     "details": "Arlington County or Falls Church City residents.",
+     "details": "Arlington County and Falls Church City residents",
      "requirement_type": "residency"
     },
     {
@@ -101,6 +101,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.awla.org/services/for-you/pet-support-pantry/",
+     "evidence_quote": "Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk. || Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk."
+    }
+   ],
    "organization_name": "Animal Welfare League of Arlington",
    "organization_website": "https://www.awla.org/",
    "raw_eligibility_text": "Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk. For Arlington County and Falls Church City residents who are homebound or physically unable to pick up supplies at the shelter, AWLA offers a select delivery day where supplies can be dropped off at your home.",
@@ -134,14 +143,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.awla.org/services/for-pets/clinics/",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "By reservation only; sign up in advance for a designated time.",
-     "requirement_type": "registration"
-    }
-   ],
+   "eligibility": [],
    "external_id": "nova-pet-awla-vaccine-microchip-clinics",
    "location_name": "Animal Welfare League of Arlington shelter",
    "parking_notes": null,
@@ -151,6 +153,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.awla.org/services/for-you/pet-support-pantry/",
+     "evidence_quote": "Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk. || Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk."
+    }
+   ],
    "organization_name": "Animal Welfare League of Arlington",
    "organization_website": "https://www.awla.org/",
    "raw_eligibility_text": "Clinics are held eight times a year for any and all pet owners in need of low-cost vaccines and microchips.",
@@ -205,6 +216,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.awla.org/services/for-you/pet-support-pantry/",
+     "evidence_quote": "Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk. || Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk."
+    }
+   ],
    "organization_name": "Animal Welfare League of Arlington",
    "organization_website": "https://www.awla.org/",
    "raw_eligibility_text": null,
@@ -238,26 +258,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.awla.org/services/for-pets/spay-neuter-vouchers/",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Annual household income of $60,000 or less; further income-based discounts available.",
-     "requirement_type": "income"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Some vouchers are available only to Arlington County residents.",
-     "requirement_type": "residency"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Must purchase and receive a voucher before calling the participating vet to schedule.",
-     "requirement_type": "appointment"
-    }
-   ],
+   "eligibility": [],
    "external_id": "nova-pet-awla-spay-neuter-vouchers",
    "location_name": "Animal Welfare League of Arlington shelter",
    "parking_notes": null,
@@ -267,6 +268,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.awla.org/services/for-you/pet-support-pantry/",
+     "evidence_quote": "Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk. || Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk."
+    }
+   ],
    "organization_name": "Animal Welfare League of Arlington",
    "organization_website": "https://www.awla.org/",
    "raw_eligibility_text": "Pet owners with an annual household income of $60,000 or less are eligible. There are further income-based discounts available, please email communitysupport@awla.org for more information. ... Some vouchers are available only to Arlington County residents.",
@@ -300,20 +310,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.awla.org/services/for-pets/veterinary-assistance/",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Must be residents of Arlington County, VA.",
-     "requirement_type": "residency"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Low-income pet owners who cannot afford the costs.",
-     "requirement_type": "income"
-    }
-   ],
+   "eligibility": [],
    "external_id": "nova-pet-awla-veterinary-assistance",
    "location_name": "Animal Welfare League of Arlington shelter",
    "parking_notes": null,
@@ -323,6 +320,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.awla.org/services/for-you/pet-support-pantry/",
+     "evidence_quote": "Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk. || Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk."
+    }
+   ],
    "organization_name": "Animal Welfare League of Arlington",
    "organization_website": "https://www.awla.org/",
    "raw_eligibility_text": "The League's Veterinary Assistance Program helps low-income Arlington County pet owners who need veterinary care for their pets' emergency or chronic conditions but cannot afford the costs. ... Pet owners must be residents of Arlington County, VA to qualify for this program.",
@@ -356,20 +362,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.awla.org/services/for-you/help-program/",
-   "eligibility": [
-    {
-     "status": "required",
-     "values": {},
-     "details": "Arlington County or Falls Church City residents facing a health or housing crisis.",
-     "requirement_type": "residency"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "All animals must be spayed or neutered; approval based on space and capacity.",
-     "requirement_type": "other"
-    }
-   ],
+   "eligibility": [],
    "external_id": "nova-pet-awla-help-program",
    "location_name": "Animal Welfare League of Arlington shelter",
    "parking_notes": null,
@@ -379,6 +372,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.awla.org/services/for-you/pet-support-pantry/",
+     "evidence_quote": "Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk. || Residents of Arlington County and Falls Church City may pick up items at our Animal Services desk."
+    }
+   ],
    "organization_name": "Animal Welfare League of Arlington",
    "organization_website": "https://www.awla.org/",
    "raw_eligibility_text": "The H.E.L.P. Program provides short-term pet housing for Arlington County or Falls Church City residents facing a health or housing crisis. Temporary housing is available for up to two weeks. Approval is based on space and capacity at the shelter. ... All animals in the H.E.L.P. Program must be spayed or neutered.",
@@ -416,14 +418,20 @@
     {
      "status": "required",
      "values": {},
-     "details": "All clinics are first-come, first-served.",
+     "details": "First-come, first-served; cash only",
      "requirement_type": "first_come_first_served"
     },
     {
      "status": "not_required",
      "values": {},
-     "details": "Walk-up; no pre-registration or appointment required.",
+     "details": "Walk-up, no appointments",
      "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Fairfax County residents",
+     "requirement_type": "residency"
     }
    ],
    "external_id": "nova-pet-fairfax-vaccine-clinic-station40",
@@ -435,6 +443,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/animalservices/petresources/vaccine-and-microchip-clinic",
+     "evidence_quote": "Clinics are walk‑up, and no pre‑registration or appointments are needed. || Clinics are walk-up, and no pre-registration or appointments are needed."
+    }
+   ],
    "organization_name": "Fairfax County Animal Services",
    "organization_website": "https://www.fairfaxcounty.gov/animalservices/",
    "raw_eligibility_text": "Our Pet Resource Center offers Fairfax County residents low-cost pet vaccinations and microchipping, without the added expense of a veterinary exam. All clinics are first-come, first-served and are cash only.",
@@ -696,6 +713,12 @@
      "values": {},
      "details": "Sashi's Fund: must qualify for Medicaid; proof of eligibility is required.",
      "requirement_type": "benefit_documentation"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Not accepting new patients; sick/wellness care for established clients only",
+     "requirement_type": "other"
     }
    ],
    "external_id": "nova-pet-anicira-manassas",
@@ -707,6 +730,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://anicira.org/locations/anicira-manassas/",
+     "evidence_quote": "We are unable to accept new patients at this time. Sick and wellness care is available for established clients only. || Sick and wellness care is available for established clients only"
+    }
+   ],
    "organization_name": "Anicira",
    "organization_website": "https://anicira.org/",
    "raw_eligibility_text": "Sashi's Fund provides assistance to pet families in Manassas, Manassas Park, and Prince William County who qualify for Medicaid in accessing veterinary care. Proof of eligibility is required. ... Pit Bull Terriers and Pit Bull mixes residing in Manassas, Manassas Park, and Prince William County are eligible to receive a $40 spay/neuter surgery through the Pit Fix program.",
@@ -738,7 +770,62 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "11:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "11:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "11:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "11:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "16:00",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "12:00",
+     "closes": "16:00",
+     "weekday": 6,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://pwspca.org/food/",
    "eligibility": [],
    "external_id": "nova-pet-pwc-animal-services-pet-pantry",
@@ -750,6 +837,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://pwspca.org/food/",
+     "evidence_quote": "Tuesday – Friday: 11 a.m. – 5 p.m.; Saturday: 10 a.m. – 4 p.m.; Sunday: 12 – 4 p.m.; Monday and Holidays: Closed || Monday: CLOSED* ... Tuesday through Friday: 11 a.m. to 5 p.m. ... Saturday: 10 a.m. to 4 p.m. ... Sunday: Noon to 4 p.m. || Tuesday to Friday 11 a.m. to 5 p.m.; Saturday 10 a.m. to 4 p.m.; Sunday 12 to 4 p.m.; closed Mondays and holidays. The pantry is in the shelter. Ask the front desk staff for information."
+    }
+   ],
    "organization_name": "Prince William County Animal Services",
    "organization_website": "https://www.pwcva.gov/department/animal-services/overview",
    "raw_eligibility_text": "The shelter accepts donations of pet food and supplies. What cannot be used at the shelter is donated to the community. The pantry is in the shelter. Ask the front desk staff for information. (Prince William SPCA)",
@@ -780,50 +876,56 @@
      "registration_required": "unknown"
     },
     {
-     "schedules": [],
+     "frequency": null,
+     "schedules": [
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "11:30",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "15:00",
+       "weekday": 1,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "11:30",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "13:00",
+       "closes": "15:00",
+       "weekday": 3,
+       "week_of_month": null,
+       "appointment_only": false
+      }
+     ],
      "food_types": [],
-     "service_type": "appointment_distribution"
+     "description": null,
+     "eligibility": [],
+     "service_type": "appointment_distribution",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
     }
    ],
    "languages": [],
-   "schedules": [
-    {
-     "kind": "operating_hours",
-     "notes": null,
-     "opens": "09:30",
-     "closes": "11:30",
-     "weekday": 1,
-     "week_of_month": null,
-     "appointment_only": false
-    },
-    {
-     "kind": "operating_hours",
-     "notes": null,
-     "opens": "13:00",
-     "closes": "15:00",
-     "weekday": 1,
-     "week_of_month": null,
-     "appointment_only": false
-    },
-    {
-     "kind": "operating_hours",
-     "notes": null,
-     "opens": "09:30",
-     "closes": "11:30",
-     "weekday": 3,
-     "week_of_month": null,
-     "appointment_only": false
-    },
-    {
-     "kind": "operating_hours",
-     "notes": null,
-     "opens": "13:00",
-     "closes": "15:00",
-     "weekday": 3,
-     "week_of_month": null,
-     "appointment_only": false
-    }
-   ],
+   "schedules": [],
    "source_url": "https://pwspca.org/food/",
    "eligibility": [
     {
@@ -831,6 +933,12 @@
      "values": {},
      "details": "Food assistance is provided by appointment only; call 571-748-2680.",
      "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Manassas Park, Manassas City, and western Prince William County",
+     "requirement_type": "service_area"
     }
    ],
    "external_id": "nova-pet-serve-campus-pet-food",
@@ -844,18 +952,18 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "hours",
-     "reason": "The Wednesday evening and Friday sessions happen only every other week, but the site shows them every week, so families could show up on a week with no distribution. An alternating-week schedule can't be written as a week_of_month value, so the corrected schedule keeps only the weekly Tue/Thu sessions. The every-other-Wednesday and every-other-Friday sessions should go in the description as text. Distribution is also by appointment only.",
+     "reason": "2 of 3 independent checkers agree",
      "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM"
+     "evidence_quote": "Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM || Tuesdays: 9:30 – 11:30 a.m. and 1 – 3 p.m. ... Every other Wednesday: 5 – 7:30 p.m. ... Thursdays: 9:30 – 11:30 a.m. and 1 – 3 p.m. ... Every other Friday: 9:30 – 11:30 a.m."
     },
     {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "SERVE's food assistance is by appointment only, so appointment_distribution should be added. pantry_pickup stays, because the vocabulary defines it as a general pantry pickup, not walk-in (walk-in is walk_up), and SERVE still runs a pantry; appointment is also recorded in eligibility.",
-     "evidence_url": "https://pwspca.org/food/",
-     "evidence_quote": "Food assistance is provided by appointment only. To schedule an appointment, please call 571.748.2680"
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "*Serving Manassas Park, Manassas City and West End Prince William County. || No income verification required. ... New client registration appointments are held every Wednesday & Friday 1:00 - 2:30 PM ... Valid photo ID ... Proof of Prince William County residency issued within the past 30 days"
     }
    ],
    "organization_name": "Northern Virginia Family Service - SERVE",
@@ -889,7 +997,98 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "13:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "16:00",
+     "closes": "18:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "13:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "16:00",
+     "closes": "18:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "17:00",
+     "closes": "19:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "13:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "16:00",
+     "closes": "18:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "13:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "16:00",
+     "closes": "18:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "10:00",
+     "closes": "13:00",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://pwspca.org/food/",
    "eligibility": [],
    "external_id": "nova-pet-manassas-city-animal-adoption-center",
@@ -901,6 +1100,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://pwspca.org/food/",
+     "evidence_quote": "Monday, Tuesday, Thursday and Friday: 10 a.m. – 1 p.m.; 4-6 p.m.; Wednesday: 5 – 7 p.m.; Saturday: 10 a.m. – 1 p.m.; Sunday and Holidays: Closed || Mon, Tue, Thu, Fri 10 a.m.–1 p.m. and 4–6 p.m.; Wed 5–7 p.m.; Sat 10 a.m.–1 p.m.; closed Sun and holidays || Monday, Tuesday, Thursday, and Friday 10 a.m. to 1 p.m. and 4 to 6 p.m.; Wednesday 5 to 7 p.m.; Saturday 10 a.m. to 1 p.m.; closed Sundays and holidays."
+    }
+   ],
    "organization_name": "Manassas City Animal Adoption Center",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -932,7 +1140,62 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "19:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "19:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "19:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "19:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "11:00",
+     "closes": "17:00",
+     "weekday": 5,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "11:00",
+     "closes": "17:00",
+     "weekday": 6,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://petsofthehomeless.org/get-help/find-locations/animal-welfare-league-of-alexandria/",
    "eligibility": [],
    "external_id": "nova-pet-awl-alexandria-pet-pantry",
@@ -944,6 +1207,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://alexandriaanimals.org/communitypetpantry/",
+     "evidence_quote": "Mon, Tue, Thu, and Fri: 9am-7pm. Sat and Sun: 11am-5pm. Closed Wed. || Monday: 9am - 7pm Tuesday: 9am - 7pm Wednesday: Closed Thursday: 9am - 7pm Friday: 9am - 7pm Saturday: 11am - 5pm Sunday: 11am - 5pm"
+    }
+   ],
    "organization_name": "Animal Welfare League of Alexandria",
    "organization_website": null,
    "raw_eligibility_text": null,

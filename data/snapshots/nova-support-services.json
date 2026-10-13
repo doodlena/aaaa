@@ -12,122 +12,14 @@
    "phone": "703-324-7500",
    "state": "VA",
    "website": null,
-   "address1": "12011 Government Center Parkway",
-   "address2": null,
+   "address1": "12011 Government Center Pkwy",
+   "address2": "Suite 708",
    "services": [
     {
-     "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
-     "description": "DFS Human Services Center with drop box for benefit documents; in-person application help not explicitly stated for this site.",
      "eligibility": [],
-     "service_type": "snap_application_help",
-     "offering_status": "unconfirmed",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
-    },
-    {
-     "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:00",
-       "closes": "16:30",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
-     "food_types": [],
-     "description": "DFS Human Services Center with drop box for benefit documents; in-person application help not explicitly stated for this site.",
-     "eligibility": [],
-     "service_type": "medicaid_enrollment_help",
-     "offering_status": "unconfirmed",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
+     "service_type": "other"
     }
    ],
    "languages": [],
@@ -150,6 +42,27 @@
      "reason": "This is a home-delivered meals program for homebound older adults, so senior_meals is missing.",
      "evidence_url": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
      "evidence_quote": "Adults over the age of 60, or adults with a disability, who are homebound"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
+     "evidence_quote": "12011 Government Center Parkway, Suite 708 || 12011 Government Center Parkway, Suite 708, Fairfax, VA 22035 || 12011 Government Center Parkway, Suite 708, Fairfax, VA 22035"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
+     "evidence_quote": "Each participant receives six frozen meals and five refrigerated meals per week. || SERVICE : Home Delivered Meals are provided to homebound adults, ages 60+ or adults with a disability, who are unable to prepare their own meals and have no able-bodied caregivers in the home. || Each participant receives six frozen meals and five refrigerated meals per week."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/familyservices/older-adults/fairfax-area-home-delivered-meals",
+     "evidence_quote": "Residents of Fairfax County, City of Fairfax, and City of Falls Church. || Residents of Fairfax County, City of Fairfax, and City of Falls Church. || Adults over the age of 60, or adults with a disability, who are homebound"
     }
    ],
    "organization_name": "Fairfax County Department of Family Services",
@@ -908,15 +821,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "Tuesday has two conflicting entries. The source gives only one Tuesday time, 8 a.m. to 6:30 p.m.",
-     "evidence_url": "https://www.fairfaxcounty.gov/health/clinics/herndon-reston-district-office",
-     "evidence_quote": "Business Hours: Monday 8 a.m.-4:30 p.m.; Tuesday 8 a.m.-6:30 p.m.; Wednesday-Friday 8 a.m.-4:30 p.m."
-    }
-   ],
    "organization_name": "Fairfax County Health Department",
    "organization_website": "https://www.fairfaxcounty.gov/health/",
    "raw_eligibility_text": "Fees and eligibility vary by service.",
@@ -1231,15 +1135,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "The source gives Workforce Center hours, but the listing shows none.",
-     "evidence_url": "https://www.fairfaxcounty.gov/familyservices/employment-and-training/services",
-     "evidence_quote": "Monday-Thursday 8:30 a.m.-4:30 p.m. Friday 10 a.m.-4:30 p.m."
-    }
-   ],
    "organization_name": "Fairfax County Department of Family Services",
    "organization_website": "https://www.fairfaxcounty.gov/familyservices/",
    "raw_eligibility_text": null,
@@ -1943,119 +1838,66 @@
    "address2": "Suites 100 & 101",
    "services": [
     {
-     "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
-     "description": "Family planning, pregnancy testing, immunizations, maternity care enrollment, school entry physicals, STI/HIV services, TB screening.",
      "eligibility": [],
-     "service_type": "health_clinic",
-     "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
-    },
-    {
-     "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "08:30",
-       "closes": "17:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
-     "food_types": [],
-     "description": "Dental Clinic (Suite 101).",
-     "eligibility": [],
-     "service_type": "dental_care",
-     "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
+     "service_type": "other"
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "14:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "14:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "14:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "14:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "14:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.loudoun.gov/1258/Health-Clinics",
    "eligibility": [
     {
-     "status": "required",
+     "status": "not_required",
      "values": {},
-     "details": "Appointments are required for services at the Health Department clinics.",
+     "details": "Walk-in; telehealth assessment by phone appointment",
      "requirement_type": "appointment"
     },
     {
@@ -2063,6 +1905,24 @@
      "values": {},
      "details": "Income eligibility screening determines a sliding scale discount; services may have age or income restrictions.",
      "requirement_type": "income"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "first_come_first_served"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": null,
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Proof of all forms of household income",
+     "requirement_type": "income_documentation"
     }
    ],
    "external_id": "nova-svc-loudoun-health-leesburg-clinic",
@@ -2074,6 +1934,29 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.loudoun.gov/6274/Same-Day-Access",
+     "evidence_quote": "Monday – Friday, 9:00 a.m. – 2:00 p.m. || Monday – Friday, 9:00 a.m. – 2:00 p.m."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.loudoun.gov/1258/Health-Clinics",
+     "evidence_quote": "Dental Clinic (Suite 101): 703-771-5979 || 102 Heritage Way NE, Suites 100 & 101 || 102 Heritage Way NE, Suites 100 & 101"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.loudoun.gov/6274/Same-Day-Access",
+     "evidence_quote": "No appointment is required || provided on a first-come, first-served basis || Services are provided on a first-come, first-served basis. No appointment is required."
+    }
+   ],
    "organization_name": "Loudoun County Health Department",
    "organization_website": "https://www.loudoun.gov/health",
    "raw_eligibility_text": "Appointments are required for services at the Health Department clinics. Services may have age or income restrictions. The Health Department offers an income eligibility screening to determine a sliding scale discount for services. Laboratory costs, immunizations and medications are not eligible for discount.",
@@ -2094,53 +1977,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "14:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "14:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "14:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "14:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "14:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Same Day Access walk-in assessment and referral for mental health, substance use or developmental/intellectual disabilities; outpatient services.",
      "eligibility": [],
@@ -2151,53 +1988,7 @@
     },
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "14:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "14:00",
-       "weekday": 1,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "14:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "14:00",
-       "weekday": 3,
-       "week_of_month": null,
-       "appointment_only": false
-      },
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "14:00",
-       "weekday": 4,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Same Day Access assessment and referral for substance use disorders.",
      "eligibility": [],
@@ -2221,32 +2012,7 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.loudoun.gov/6274/Same-Day-Access",
-   "eligibility": [
-    {
-     "status": "not_required",
-     "values": {},
-     "details": "No appointment is required for Same Day Access.",
-     "requirement_type": "appointment"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Services are provided on a first-come, first-served basis.",
-     "requirement_type": "first_come_first_served"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Listed under What to Bring.",
-     "requirement_type": "photo_id"
-    },
-    {
-     "status": "required",
-     "values": {},
-     "details": "Proof of all forms of household income (What to Bring).",
-     "requirement_type": "income_documentation"
-    }
-   ],
+   "eligibility": [],
    "external_id": "nova-svc-loudoun-mhsads-leesburg",
    "location_name": "MHSADS Leesburg Clinic (Shenandoah Building)",
    "parking_notes": null,
@@ -2256,6 +2022,29 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.loudoun.gov/6274/Same-Day-Access",
+     "evidence_quote": "Monday – Friday, 9:00 a.m. – 2:00 p.m. || Monday – Friday, 9:00 a.m. – 2:00 p.m."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.loudoun.gov/1258/Health-Clinics",
+     "evidence_quote": "Dental Clinic (Suite 101): 703-771-5979 || 102 Heritage Way NE, Suites 100 & 101 || 102 Heritage Way NE, Suites 100 & 101"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.loudoun.gov/6274/Same-Day-Access",
+     "evidence_quote": "No appointment is required || provided on a first-come, first-served basis || Services are provided on a first-come, first-served basis. No appointment is required."
+    }
+   ],
    "organization_name": "Loudoun County Department of Mental Health, Substance Abuse and Developmental Services (MHSADS)",
    "organization_website": "https://www.loudoun.gov/mhsads",
    "raw_eligibility_text": "There is no fee for the initial Same Day Access Comprehensive Needs Assessment. If you continue with services at MHSADS, a fee assessment will be completed ... no one is denied access to these services based upon an inability to pay. What to Bring: Photo ID; Insurance card; Proof of all forms of household income; Legal guardian and custody documentation (if applicable)",
@@ -2434,19 +2223,19 @@
     {
      "status": "required",
      "values": {},
-     "details": "Age 19+.",
+     "details": "Age 19+",
      "requirement_type": "age"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Living in Loudoun County for at least 3 months.",
+     "details": "Loudoun County resident 3+ months",
      "requirement_type": "residency"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Meet 2026 income guidelines (e.g., $47,880 for 1 person; 300% FPL or less).",
+     "details": "Income limits by household size; uninsured, not Medicaid/Medicare eligible",
      "requirement_type": "income"
     },
     {
@@ -2483,6 +2272,15 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://loudounfreeclinic.org/become-a-patient/",
+     "evidence_quote": "You are age 19+ || You are age 19+"
+    }
+   ],
    "organization_name": "Loudoun Free Clinic",
    "organization_website": "https://loudounfreeclinic.org/",
    "raw_eligibility_text": "You are age 19+ / You have been living in Loudoun County for at least 3 months / You do not have health insurance / You do not qualify for Medicaid or Medicare / You meet our income guidelines (2026: household of 1 $47,880; 2 $64,920; 3 $81,960; 4 $99,000; 5 $116,040; 6 $133,080 ... ). We are a member-only clinic, so patients must be financially eligible and pre-register for our services. We do not accept walk-in patients.",
@@ -2711,7 +2509,26 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "19:00",
+     "closes": "21:30",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "19:00",
+     "closes": "21:30",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.fcps.edu/academics/adult-and-community-education-ace/adult-esol",
    "eligibility": [
     {
@@ -2736,6 +2553,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fcps.edu/academics/adult-and-community-education-ace/adult-esol",
+     "evidence_quote": "Tues and Thurs, 7 to 9:30 p.m. || Chantilly High School 4201 Stringfellow Rd, Chantilly, VA 20151 Classes: Tues and Thurs, 7 to 9:30 p.m. || Tues and Thurs"
+    }
+   ],
    "organization_name": "Fairfax County Public Schools – Adult and Community Education (Adult ESOL)",
    "organization_website": "https://www.fcps.edu/school-center/adult-and-community-education-ace",
    "raw_eligibility_text": "All new students must take an intake test before registering for a class. ... Go to the testing for that location and class time. No appointment is necessary. You must attend testing at the location and time you want classes. Bring payment (credit card, money order, check) to complete registration. ... We do not accept cash. AM Classes: $340 + $45 (books) PM Classes: $175 + $45 (books)",
@@ -2767,7 +2593,71 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "12:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "12:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "12:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "12:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:00",
+     "closes": "12:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "19:00",
+     "closes": "21:30",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "19:00",
+     "closes": "21:30",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.fcps.edu/academics/adult-and-community-education-ace/adult-esol",
    "eligibility": [
     {
@@ -2792,6 +2682,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fcps.edu/academics/adult-and-community-education-ace/adult-esol",
+     "evidence_quote": "Mon–Fri, 9 a.m. to noon; Mon and Wed, 7 to 9:30 p.m. || Herndon Learning Center 465 Springpark Place, Herndon, VA 20170 Classes: Mon through Fri, 9 a.m. to noon; Mon and Wed, 7 to 9:30 p.m. || Mon, Tues, Wed, Thurs, and Fri"
+    }
+   ],
    "organization_name": "Fairfax County Public Schools – Adult and Community Education (Adult ESOL)",
    "organization_website": "https://www.fcps.edu/school-center/adult-and-community-education-ace",
    "raw_eligibility_text": "All new students must take an intake test before registering for a class. ... Go to the testing for that location and class time. No appointment is necessary. You must attend testing at the location and time you want classes. Bring payment (credit card, money order, check) to complete registration. ... We do not accept cash. AM Classes: $340 + $45 (books) PM Classes: $175 + $45 (books)",
@@ -2823,7 +2722,26 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "19:00",
+     "closes": "21:30",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "19:00",
+     "closes": "21:30",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.fcps.edu/academics/adult-and-community-education-ace/adult-esol",
    "eligibility": [
     {
@@ -2848,6 +2766,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fcps.edu/academics/adult-and-community-education-ace/adult-esol",
+     "evidence_quote": "Mon and Wed, 7 to 9:30 p.m. || Woodson High School 9525 Main St, Fairfax, VA 22031 Classes: Mon and Wed, 7 to 9:30 p.m. || Mon and Wed 7 to 9:30pm"
+    }
+   ],
    "organization_name": "Fairfax County Public Schools – Adult and Community Education (Adult ESOL)",
    "organization_website": "https://www.fcps.edu/school-center/adult-and-community-education-ace",
    "raw_eligibility_text": "All new students must take an intake test before registering for a class. ... Go to the testing for that location and class time. No appointment is necessary. You must attend testing at the location and time you want classes. Bring payment (credit card, money order, check) to complete registration. ... We do not accept cash. AM Classes: $340 + $45 (books) PM Classes: $175 + $45 (books)",
@@ -2868,17 +2795,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "operating_hours",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "16:00",
-       "weekday": 2,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": "Free civil legal aid (housing/eviction, family/protective orders, benefits, consumer/debt, elder law, etc.).",
      "eligibility": [],
@@ -2889,7 +2806,26 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:30",
+     "closes": "12:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "13:30",
+     "closes": "16:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.vplc.org/legal-services-of-northern-virginia/",
    "eligibility": [
     {
@@ -2914,6 +2850,15 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://lsnv.org/contact-us/loudoun-office/",
+     "evidence_quote": "Our Loudoun Office is open for walk-in applications on Wednesdays from 9:30 am to 4:00 pm. Please note that the office will be closed for lunch from 12:00 pm to 1:30 pm. || Please note that the office will be closed for lunch from 12:00 pm to 1:30 pm."
+    }
+   ],
    "organization_name": "Legal Services of Northern Virginia",
    "organization_website": "https://www.lsnv.org/",
    "raw_eligibility_text": "Must meet low-income eligibility requirements for elderly, disabled, or low-income residents. Services are completely free with no fees charged. Does not handle immigration cases or criminal matters",
@@ -2945,7 +2890,26 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "09:30",
+     "closes": "12:30",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "13:30",
+     "closes": "16:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://www.vplc.org/legal-services-of-northern-virginia/",
    "eligibility": [
     {
@@ -2970,6 +2934,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://lsnv.org/contact-us/prince-william-office/",
+     "evidence_quote": "Our Prince William Office is open for walk-in applications on Wednesdays from 9:30 am to 4:00 pm. Please note that the office will be closed for lunch from 12:30 pm to 1:30 pm. || Our Prince William Office is open for walk-in applications on Wednesdays from 9:30 am to 4:00 pm."
+    }
+   ],
    "organization_name": "Legal Services of Northern Virginia",
    "organization_website": "https://www.lsnv.org/",
    "raw_eligibility_text": "Must meet low-income eligibility requirements for elderly, disabled, or low-income residents. Services are completely free with no fees charged. Does not handle immigration cases or criminal matters",

@@ -86,6 +86,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://houseofmercyva.org/new-client-appointments/",
+     "evidence_quote": "must register for an in-person intake appointment to set up their Food Pantry account. || Idenitification: Each person in the household (spouse, children, parents, etc.) must provide ID that includes the individual’s date of birth. ... Proof of Address: Examples include current utility bill or some form of “official mail,” ... Food is distributed twice a month (every 15 days). ... New clients must register online first at houseofmercyva.org/food-pantry-service."
+    }
+   ],
    "organization_name": "House of Mercy",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -119,7 +128,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://www.arcgis.com/home/item.html?id=782d5f553535425091446bb904b3759b",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Prince William County residents",
+     "requirement_type": "residency"
+    }
+   ],
    "external_id": "2",
    "location_name": null,
    "parking_notes": null,
@@ -143,6 +159,20 @@
      "reason": "The address is garbled: the city is repeated in the street line and the street number is used as the ZIP.",
      "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
      "evidence_quote": "10058 Dean Drive Manassas 20110"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM || Food-Tuesday: 9:30-11:30AM/1-3PM, Every other Wednesday: 5-7:30 PM, Thursday: 9:30-11:30 AM/ 1-3 PM, Every other Friday: 9:30-11:30AM"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://nvfs.org/our-places/hunger-resource-center/",
+     "evidence_quote": "Proof of Prince William County residency issued within the past 30 days. || Proof of Prince William County residency issued within the past 30 days"
     }
    ],
    "organization_name": "NVFS Hunger Resource Center",
@@ -310,15 +340,6 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "eligibility",
-     "reason": "The regular Thursday 6-7 PM pantry needs no appointment. Appointments are only for other times.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=782d5f553535425091446bb904b3759b",
-     "evidence_quote": "Thursdays: 6-7 pm\nOther times by appointment."
-    }
-   ],
    "organization_name": "Nokesville United Methodist Church",
    "organization_website": null,
    "raw_eligibility_text": "No appointment needed Thursdays 6-7 PM. Other times by appointment.",
@@ -327,15 +348,15 @@
   {
    "lat": 38.8126350000001,
    "lon": -77.6352239999999,
-   "zip": "20169",
-   "city": "Haymarket",
+   "zip": "20155",
+   "city": "Gainesville",
    "email": null,
    "notes": null,
-   "phone": null,
+   "phone": "(703) 754-5990",
    "state": "VA",
    "website": null,
-   "address1": "6611 Jefferson St",
-   "address2": null,
+   "address1": "7669 Limestone Dr",
+   "address2": "#105",
    "services": [
     {
      "frequency": null,
@@ -343,7 +364,16 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "18:00",
+       "opens": "17:30",
+       "closes": "20:00",
+       "weekday": 0,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:30",
        "closes": "20:00",
        "weekday": 1,
        "week_of_month": null,
@@ -352,7 +382,16 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "18:00",
+       "opens": "17:30",
+       "closes": "20:00",
+       "weekday": 2,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "17:30",
        "closes": "20:00",
        "weekday": 3,
        "week_of_month": null,
@@ -375,12 +414,49 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "appointment_distribution"
     }
    ],
    "languages": [],
    "schedules": [],
    "source_url": "https://www.arcgis.com/home/item.html?id=782d5f553535425091446bb904b3759b",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Appointments required",
+     "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Government photo ID for each adult, every visit",
+     "requirement_type": "photo_id"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Utility bill, lease, insurance or tax statement",
+     "requirement_type": "proof_of_address"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Signed client application; renew yearly",
+     "requirement_type": "registration"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Haymarket, Gainesville, Catharpin, Bristow, Nokesville",
+     "requirement_type": "service_area"
+    }
+   ],
    "external_id": "7",
    "location_name": null,
    "parking_notes": null,
@@ -390,6 +466,43 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://haymarketfoodpantry.org/",
+     "evidence_quote": "(703) 754-5990 || Haymarket Regional Food Pantry 7669 Limestone Drive #105 Gainesville VA 20155 703. 754. 5990 || Make an Appointment: (703) 754-5990"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://haymarketfoodpantry.org/",
+     "evidence_quote": "7669 Limestone Drive, #105 Gainesville, VA 20155 || Haymarket Regional Food Pantry 7669 Limestone Drive #105 Gainesville VA 20155 || 7669 Limestone Drive, #105 Gainesville, VA 20155"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://haymarketfoodpantry.org/find-help/",
+     "evidence_quote": "By appointment between 5:30 pm and 8:00 pm || By appointment between 5:30 pm and 8:00 pm"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://haymarketfoodpantry.org/find-help/",
+     "evidence_quote": "Appointments are required. || Call us now to schedule an appointment or request an appointment online || Appointments are required."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://haymarketfoodpantry.org/find-help/",
+     "evidence_quote": "Our registered clients may visit the pantry only once every seven days. || *Serve residents of Prince William (Haymarket, Gainesville, Catharpin, Bristow, and Nokesville) || Present a government issued photo ID for each adult resident in your household."
+    }
+   ],
    "organization_name": "Haymarket Regional Food Pantry",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -453,17 +566,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:00",
-       "closes": "11:30",
-       "weekday": 5,
-       "week_of_month": null,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": null,
      "eligibility": [],
@@ -486,6 +589,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.stthomasumc.org/serveinthefoodpantry",
+     "evidence_quote": "The Food Pantry distributes food every Saturday morning from 9 - 11 am. || Every Saturday, 9:00–11:00 AM. Participants who are in line by 11:00 AM will receive food that day. || The Pantry is open every Saturday morning from 9 to 11 am for drive-thru distribution."
+    }
+   ],
    "organization_name": "St. Thomas UMC Pantry",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -568,26 +680,7 @@
    "services": [
     {
      "frequency": null,
-     "schedules": [
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "13:00",
-       "weekday": 1,
-       "week_of_month": 2,
-       "appointment_only": false
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "09:30",
-       "closes": "13:00",
-       "weekday": 1,
-       "week_of_month": 4,
-       "appointment_only": false
-      }
-     ],
+     "schedules": [],
      "food_types": [],
      "description": null,
      "eligibility": [],
@@ -610,6 +703,15 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "2 of 3 independent checkers agree (values reconciled: The official BRUU page says that distributions for both pantries now take place on the 2nd and 4th Tuesday from 9:30 to 11:30 am. This is the organization's own and most recent source, so it outranks the county ArcGIS 9-11 entry.)",
+     "evidence_url": "https://services.arcgis.com/oCjyzxNy34f0pJCV/arcgis/rest/services/Get_Help_Map_Source_Data/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
+     "evidence_quote": "\"Tuesday_Hours\":\"9:00 AM-11:00 AM (2nd and 4th of the Month)\" || Food distributions for both food pantries will take place on the 2nd and 4th Tuesday of each month from 9:30 am to 11:30 am."
+    }
+   ],
    "organization_name": "Bull Run Unitarian",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -711,6 +813,12 @@
      "values": {},
      "details": null,
      "requirement_type": "appointment"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Manassas Park, Manassas, Prince William County residents",
+     "requirement_type": "service_area"
     }
    ],
    "external_id": "23",
@@ -722,6 +830,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
+     "evidence_quote": "If assistance is needed, it will be necessary for you to call 703-361-8791 select option #3, and state what assistance is being requested. We will respond within 24 hours. ... *Serve residents of Manassas Park, Manassas, and Prince William County || *Serve residents of Manassas Park, Manassas, and Prince William County"
+    }
+   ],
    "organization_name": "First AME Church of Manassas - Food Pantry",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -774,32 +891,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The unit number is repeated twice.",
-     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
-    },
-    {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "hours",
-     "reason": "Each weekday shows two overlapping time blocks. The pantry's own site gives 5:30-8:00 PM, by appointment.",
+     "reason": "2 of 3 independent checkers agree",
      "evidence_url": "https://haymarketfoodpantry.org/find-help/",
-     "evidence_quote": "Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm Sat Mornings: By appointment between 9:00 am and 12:00 noon"
-    },
-    {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "The pantry's own site says food is distributed by appointment only, which contradicts walk_up.",
-     "evidence_url": "https://haymarketfoodpantry.org/find-help/",
-     "evidence_quote": "Our Hours - By Appointment Only"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The unit number is repeated twice.",
-     "evidence_url": "https://www.manassasparkva.gov/Social%20Services/Food%20Bank%20Resources.pdf",
-     "evidence_quote": "7669 Limestone Drive #105 Gainesville 20155"
+     "evidence_quote": "By appointment between 5:30 pm and 8:00 pm. || Mon-Thu Evenings: By appointment between 5:30 pm and 8:00 pm"
     }
    ],
    "organization_name": "Haymarket Regional Food Pantry",
@@ -888,6 +984,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.sacredheartmanassas.org/food-pantry",
+     "evidence_quote": "We are a drive-through pantry open to anyone in need. || Food Drive thru is every Saturday at 8:00 AM-9:30 AM, assistance during the week is available as by appointment. Call (703) 590-0030 Clothing Pantry Saturday 8:00 AM 9:30 AM"
+    }
+   ],
    "organization_name": "Sacred Heart Catholic Church",
    "organization_website": null,
    "raw_eligibility_text": null,
@@ -938,6 +1043,13 @@
      "reason": "The 3rd-Wednesday distribution is missing.",
      "evidence_url": "https://www.capitalareafoodbank.org/find-food-assistance/",
      "evidence_quote": "5:00 PM-8:00 PM (1st and 3rd of the Month)"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://mbcnova.org/serve",
+     "evidence_quote": "Guests are welcomed on a walk-in basis || 'Hours_of_Service': '1st and 3rd Wednesdays, 5:30–7:30 PM. Closed on holidays.' || Our Pantry is open for food distribution on the first and third Wednesdays"
     }
    ],
    "organization_name": "Manassas Baptist Church",
@@ -959,9 +1071,15 @@
    "address2": null,
    "services": [
     {
+     "frequency": null,
      "schedules": [],
      "food_types": [],
-     "service_type": "community_meal"
+     "description": null,
+     "eligibility": [],
+     "service_type": "community_meal",
+     "offering_status": "unconfirmed",
+     "appointment_required": "unknown",
+     "registration_required": "unknown"
     }
    ],
    "languages": [],
@@ -977,15 +1095,6 @@
    "jurisdiction_id": "manassas-city",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "categories",
-     "reason": "The only service in the source is a hot meal, which is community_meal, not grocery pantry pickup.",
-     "evidence_url": "https://www.arcgis.com/home/item.html?id=782d5f553535425091446bb904b3759b",
-     "evidence_quote": "Hot Lunch/Dinner Tuesday and Thursdays"
-    }
-   ],
    "organization_name": "Manassas First Baptist Church",
    "organization_website": null,
    "raw_eligibility_text": null,

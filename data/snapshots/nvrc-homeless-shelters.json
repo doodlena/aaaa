@@ -9,7 +9,7 @@
    "city": "Alexandria",
    "email": null,
    "notes": "Populations served: - Adults Over 18 - Families With Children",
-   "phone": "(703) 746-5700",
+   "phone": "(703) 548-7500",
    "state": "VA",
    "website": "https://carpentersshelter.org",
    "address1": "930 N Henry St",
@@ -40,6 +40,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://carpentersshelter.org/residential-shelters/",
+     "evidence_quote": "(703) 548-7500 || During the winter months, let them know about the City's Winter Shelter Program run by Carpenter's Shelter (703.548.7500) || (703) 548-7500"
+    }
+   ],
    "organization_name": "Carpenter's Shelter",
    "organization_website": "https://carpentersshelter.org",
    "raw_eligibility_text": "- Adults Over 18 - Families With Children Guests must participate In service planning and comply with a self-sufficiency plan. On-site morning drop-in program, David's Place, is available on a walk-in basis. - All Intake Through Alexandria Dchs (Dept. Of Community & Human Services) Homeless Services Assessment Center",
@@ -71,7 +80,53 @@
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:00",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:00",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:00",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:00",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "17:00",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
    "eligibility": [],
    "external_id": "nvrc-2",
@@ -83,6 +138,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/homeless-services/homeless-services",
+     "evidence_quote": "Hours of Operation: Monday through Friday 8 a.m. – 5 p.m. (Except holidays) || Monday through Friday 8 a.m. – 5 p.m. (Except holidays) || Hours of Operation: Monday through Friday 8 a.m. – 5 p.m. (Except holidays)"
+    }
+   ],
    "organization_name": "Homeless Services Assessment Center",
    "organization_website": "https://www.alexandriava.gov/homeless- services/homeless-services",
    "raw_eligibility_text": "- Individuals - Amilies Point of intake for all City of Alexandria shelters. - Self-Referral - Public Or Private Human Service Agencies",
@@ -111,6 +175,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "domestic_violence_support"
     }
    ],
    "languages": [],
@@ -126,6 +195,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
+     "evidence_quote": "- Victims Of Intimate Partner Violence (Men And Women) || Short-term individual and group counseling"
+    }
+   ],
    "organization_name": "Alexandria Domestic Violence Shelter",
    "organization_website": "https://www.alexandriava.gov/domesticviolence",
    "raw_eligibility_text": "- Victims Of Intimate Partner Violence (Men And Women) - Women With Children Must be a resident or employee of the City of Alexandria. Guests must participate in service planning. Maximum stay is 30 days depending on need and complying with service plan. - Self-Referral",
@@ -154,12 +232,31 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "housing_assistance"
     }
    ],
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "For women and families experiencing homelessness in Alexandria; application-based admission",
+     "requirement_type": "other"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Intake only through Alexandria DCHS Homeless Services Assessment Center",
+     "requirement_type": "referral"
+    }
+   ],
    "external_id": "nvrc-4",
    "location_name": "Alive House",
    "parking_notes": null,
@@ -169,6 +266,22 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alive-inc.org",
+     "evidence_quote": "Transitional housing and support services for women and families experiencing homelessness in Alexandria || Transitional housing and support services for women and families experiencing homelessness in Alexandria."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.alive-inc.org",
+     "evidence_quote": "Transitional housing and support services for women and families experiencing homelessness in Alexandria || - All Intake Through Alexandria Dchs (Dept. Of Community & Human Services) Homeless Services Assessment Center || Referrals are accepted on a case-by-case basis."
+    }
+   ],
    "organization_name": "Alive House",
    "organization_website": "https://www.alive-inc.org",
    "raw_eligibility_text": "- Women With Children Guests must participate in transitional housing program. Length of stay can be up to 24 months and depends on compliance with a self-sufficiency plan and program rules. - All Intake Through Alexandria Dchs (Dept. Of Community & Human Services) Homeless Services Assessment Center",
@@ -283,6 +396,21 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "domestic_violence_support"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "pet_friendly_shelter"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "crisis_support"
     }
    ],
    "languages": [],
@@ -298,6 +426,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.doorwaysva.org/get-help/",
+     "evidence_quote": "Safehousing for survivors and their families, including a Safe Kennel for your pets. || 703-237-0881 Domestic & Sexual Violence Hotline (24/7) || Safehousing for survivors and their families, including a Safe Kennel for your pets."
+    }
+   ],
    "organization_name": "Doorways for Women and Families- Domestic Violence",
    "organization_website": "https://www.doorwaysva.org/get-help/",
    "raw_eligibility_text": "- Arlington Residents - Families With Children - Adults Over 18 - Serves Women, Men, & Nonbinary Individuals Residents Must Participate In Service Planning. Length Of Stay Depends On Self- Sufficiency Plan Or Goal Planning - Call The Domestic & Sexual Violence Hotline",
@@ -374,7 +511,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Arlington residents",
+     "requirement_type": "residency"
+    }
+   ],
    "external_id": "nvrc-9",
    "location_name": "Sullivan House Family Shelter",
    "parking_notes": null,
@@ -384,6 +528,15 @@
    "jurisdiction_id": "arlington-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1/query?where=1%3D1&outFields=*&f=json&returnGeometry=false",
+     "evidence_quote": "Arlington Residents; Families (Men And/Or Women) With Children || - All shelter intake is"
+    }
+   ],
    "organization_name": "Sullivan House Family Shelter",
    "organization_website": "https://bridges2.org/what-we-do/our-work/",
    "raw_eligibility_text": "- Arlington Residents - Families (Men And/Or Women) With Children Residents participate in service planning. Length of stay depends on self-sufficiency plan/goal planning. - All Shelter Intake Is Through Arlington Dept. Of Human Services Centralized Access System",
@@ -392,7 +545,7 @@
   {
    "lat": 38.8415938785574,
    "lon": -77.3951068218341,
-   "zip": "22033",
+   "zip": "22030",
    "city": "Fairfax",
    "email": null,
    "notes": "Populations served: - Families With Children Under 18",
@@ -429,18 +582,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "address",
-     "reason": "The ZIP field holds the street number; the ZIP is 22033.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "12970 Katherine Hanley Ct Fairfax 12970"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP field holds the street number; the ZIP is 22033.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "12970 Katherine Hanley Ct Fairfax 12970"
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.shelterhouse.org/",
+     "evidence_quote": "12970 Katherine Hanley Court, Fairfax, VA 22030 || 12970 Katherine Hanley Court, Fairfax, VA 22030 || Fairfax, VA 22030"
     }
    ],
    "organization_name": "Katherine K. Hanley Family Shelter",
@@ -486,22 +632,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The ZIP field holds the street number; the Reston ZIP is 20190.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "11975 Bowman Towne Dr Reston 11975"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP field holds the street number; the Reston ZIP is 20190.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "11975 Bowman Towne Dr Reston 11975"
-    }
-   ],
    "organization_name": "Embry Rucker Community Shelter (ERCS)",
    "organization_website": "https://www.cornerstonesva.org/services/fo od-financial-or-urgent- assistance/emergency-shelter",
    "raw_eligibility_text": "- Adults 18 And Older - Families With Children All Fairfax County shelters operate through a low-barrier, housing-focused approach with the goal of keeping shelter stays as short as possible by wuickly moving people into permanent housing. Offers community case management to prevent homelessness, - Single Men And Women Call Shelter For Availability And Telephone Screening - Families Call Fairfax Coordinated Services Planning (Csp) At 703-222-0880 - Medical Respite Beds Require Additional Referral Through Fairfax County Health Dept.",
@@ -535,7 +665,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Adults without children",
+     "requirement_type": "age"
+    }
+   ],
    "external_id": "nvrc-13",
    "location_name": "Eleanor Kennedy Shelter",
    "parking_notes": null,
@@ -545,6 +682,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/homeless/emergency-shelters",
+     "evidence_quote": "50-bed shelter for adults without children. || - Call shelter for"
+    }
+   ],
    "organization_name": "Eleanor Kennedy Shelter",
    "organization_website": "http://www.newhopehousing.org/our-services/shelters/eleanor-u-kennedy-shelter/",
    "raw_eligibility_text": "- Adults 18 And Older All Fairfax County shelters operate through a low-barrier, housing-focused approach with the goal of keeping shelter stays as short as possible by wuickly moving people into permanent housing. Offers community case management to prevent homelessness, - Call Shelter For Availability And Telephone Screening",
@@ -578,7 +724,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Single adults who are chronically homeless with significant mental health needs",
+     "requirement_type": "other"
+    }
+   ],
    "external_id": "nvrc-14",
    "location_name": "Mondloch House I",
    "parking_notes": null,
@@ -588,6 +741,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.shelterhouse.org/shelters",
+     "evidence_quote": "provides shelter for 8 single adults who are chronically homeless and have significant mental health needs || Single Homeless Adults With Significant Mental Health Needs || - Referrals are through"
+    }
+   ],
    "organization_name": "Mondloch House I",
    "organization_website": "https://www.newhopehousing.org/our- services/shelters",
    "raw_eligibility_text": "- Single Homeless Adults With Significant Mental Health Needs Small temporary shelter in a home-like setting. - Referrals Are Through Local Community Services Boards (Csbs)",
@@ -621,7 +783,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Primarily families with children",
+     "requirement_type": "other"
+    }
+   ],
    "external_id": "nvrc-15",
    "location_name": "Next Steps Family Program",
    "parking_notes": null,
@@ -633,18 +802,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The ZIP field holds the street number; the ZIP is 22030.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "10700 Page Ave Fairfax 10700"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP field holds the street number; the ZIP is 22030.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "10700 Page Ave Fairfax 10700"
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/homeless/emergency-shelters",
+     "evidence_quote": "53-bed shelter primarily for families with children. || - Families should call"
     }
    ],
    "organization_name": "Next Steps Family Program",
@@ -659,7 +821,7 @@
    "city": "Leesburg",
    "email": null,
    "notes": "Populations served: - Individuals - Families",
-   "phone": "(703) 777-0420",
+   "phone": "(571) 258-3033",
    "state": "VA",
    "website": "https://www.loudoun.gov/1796/Homeless-Services",
    "address1": "19520 Meadowview Ct",
@@ -680,7 +842,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Call Coordinated Entry at 703-777-0420 to complete a referral",
+     "requirement_type": "referral"
+    }
+   ],
    "external_id": "nvrc-16",
    "location_name": "Loudoun County Homeless Services Center",
    "parking_notes": null,
@@ -692,18 +861,18 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The ZIP field holds the street number; the Leesburg ZIP is 20175.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "19520 Meadowview Ct Leesburg 19520"
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.loudoun.gov/1796/Homeless-Services",
+     "evidence_quote": "571-258-3033 || Phone: 571-258-3033"
     },
     {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP field holds the street number; the Leesburg ZIP is 20175.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "19520 Meadowview Ct Leesburg 19520"
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.loudoun.gov/1796/Homeless-Services",
+     "evidence_quote": "To access these programs, call Coordinated Entry at 703-777-0420 to complete a referral. || - all shelter intake is"
     }
    ],
    "organization_name": "Loudoun County Homeless Services Center",
@@ -739,7 +908,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Women with children",
+     "requirement_type": "other"
+    }
+   ],
    "external_id": "nvrc-17",
    "location_name": "Hebron/Bethel Emergency Shelter",
    "parking_notes": null,
@@ -751,18 +927,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The ZIP is a copy of the street number, a data error carried over from the source. 20684 is not an Ashburn ZIP. Ashburn Rd in Ashburn is 20147.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "20684 Ashburn Rd Ashburn 20684"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP is a copy of the street number, a data error carried over from the source. 20684 is not an Ashburn ZIP. Ashburn Rd in Ashburn is 20147.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "20684 Ashburn Rd Ashburn 20684"
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1/query?where=1%3D1&outFields=*&f=json&returnGeometry=false",
+     "evidence_quote": "Women With Children || - call to speak to a case"
     }
    ],
    "organization_name": "Hebron/Bethel Emergency Shelter",
@@ -798,7 +967,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Families with 5 or more members",
+     "requirement_type": "household_size"
+    }
+   ],
    "external_id": "nvrc-18",
    "location_name": "Patrick Henry Family Shelter",
    "parking_notes": null,
@@ -808,6 +984,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1/query?where=1%3D1&outFields=*&f=json&returnGeometry=false",
+     "evidence_quote": "Families With 5 Or More Members || - families with 5 or"
+    }
+   ],
    "organization_name": "Patrick Henry Family Shelter",
    "organization_website": "https://www.shelterhouse.org/programs-2",
    "raw_eligibility_text": "- Families With 5 Or More Members All Fairfax County shelters operate through a low-barrier, housing-focused approach with the goal of keeping Shelter stays as short as possible by quickly moving people into permanent housing. - Families Should Call Fairfax Coordinated Services Planning (Csp) At 703-222-0880",
@@ -843,7 +1028,7 @@
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
    "eligibility": [],
    "external_id": "nvrc-19",
-   "location_name": "Bailey's Crossroads Shelter and Supportive Housing",
+   "location_name": "Bailey's Shelter and Supportive Housing",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "nvrc",
@@ -851,6 +1036,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/homeless/emergency-shelters",
+     "evidence_quote": "Bailey's Shelter and Supportive Housing (Falls Church) || Bailey's Shelter and Supportive Housing || Bailey's Shelter and Supportive Housing (Falls Church)"
+    }
+   ],
    "organization_name": "Bailey's Crossroads Shelter and Supportive Housing",
    "organization_website": "https://www.newhopehousing.org/our- services/shelters",
    "raw_eligibility_text": "- Adults 18 And Older All Fairfax County shelters operate through a low-barrier, housing-focused approach with the goal of keeping shelter stays as short as possible by wuickly moving people into permanent housing. Offers community case management to prevent homelessness, - Non-Medical Male And Female Beds, Call Shelter For Availability And Telephone Screening - Medical Respite Beds Require Additional Referral Through Fairfax County Health Dept",
@@ -884,9 +1078,22 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Intake only via CES hotline 703-792-3366; no walk-ins",
+     "requirement_type": "referral"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Prince William County, Manassas, Manassas Park residents experiencing homelessness",
+     "requirement_type": "service_area"
+    }
+   ],
    "external_id": "nvrc-20",
-   "location_name": "Serve Family Shelter",
+   "location_name": "NVFS Family Shelter",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "nvrc",
@@ -896,18 +1103,18 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The ZIP is the street number repeated. The NVFS SERVE Campus is at 10056 Dean Drive, Manassas, VA 20110.",
-     "evidence_url": "https://nvfs.org/contact-us/",
-     "evidence_quote": "Manassas, VA 20110"
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.nvfs.org/our-places/nvfs-family-shelter/",
+     "evidence_quote": "NVFS Family Shelter || NVFS Family Shelter"
     },
     {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP is the street number repeated. The NVFS SERVE Campus is at 10056 Dean Drive, Manassas, VA 20110.",
-     "evidence_url": "https://nvfs.org/contact-us/",
-     "evidence_quote": "Manassas, VA 20110"
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.nvfs.org/our-places/nvfs-family-shelter/",
+     "evidence_quote": "All intake is handled through the CES — walk-ins and direct requests cannot be accommodated. || All intake is handled through the CES — walk-ins and direct requests cannot be accommodated."
     }
    ],
    "organization_name": "Serve Family Shelter",
@@ -943,7 +1150,20 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Access through PWC Coordinated Entry System (703-792-3366)",
+     "requirement_type": "referral"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Single women and adults with children",
+     "requirement_type": "other"
+    }
+   ],
    "external_id": "nvrc-21",
    "location_name": "ACTS Beverly Warren Shelter",
    "parking_notes": null,
@@ -955,18 +1175,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The ZIP is a copy of the street number. 17866 is a Pennsylvania ZIP, not Virginia. Dumfries is 22026.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "17866 Main St Dumfries 17866"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP is a copy of the street number. 17866 is a Pennsylvania ZIP, not Virginia. Dumfries is 22026.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "17866 Main St Dumfries 17866"
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.actspwc.org/get-help/housing",
+     "evidence_quote": "must go through the Coordinated Entry System || Intake through Coordinated Entry System || exclusively an Emergency Shelter with up to 18 beds available for single females and adults with children"
     }
    ],
    "organization_name": "ACTS Beverly Warren Shelter",
@@ -1045,7 +1258,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Referral via CES Hotline (703) 792-3366",
+     "requirement_type": "referral"
+    }
+   ],
    "external_id": "nvrc-23",
    "location_name": "Supportive Shelter",
    "parking_notes": null,
@@ -1057,18 +1277,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The ZIP is a copy of the street number. 14730 is a New York ZIP. Potomac Mills Rd in Woodbridge is 22192.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "14730 Potomac Mills Rd Woodbridge 14730"
-    },
-    {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP is a copy of the street number. 14730 is a New York ZIP. Potomac Mills Rd in Woodbridge is 22192.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "14730 Potomac Mills Rd Woodbridge 14730"
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/social-services/homeless-and-winter-shelters",
+     "evidence_quote": "designed to meet the needs of persons with medical challenges or other disabilities || Intake through Coordinated Entry System"
     }
    ],
    "organization_name": "Supportive Shelter",
@@ -1083,10 +1296,10 @@
    "city": "Alexandria",
    "email": null,
    "notes": "Populations served: - Adults Over 18 - Families With Children",
-   "phone": "(703) 746-5700",
+   "phone": "(703) 746-3660",
    "state": "VA",
    "website": "https://www.voachesapeake.org/acs",
-   "address1": "2355 Mill Rd",
+   "address1": "2355-B Mill Rd",
    "address2": null,
    "services": [
     {
@@ -1114,6 +1327,22 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/homeless-services/homeless-services",
+     "evidence_quote": "2355-B Mill Road, Alexandria, VA 22314 - 703.746.3660 || 2355-B Mill Road, Alexandria, VA 22314 - 703.746.3660 || 2355-B Mill Road, Alexandria, VA 22314; 703.746.3660"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/homeless-services/homeless-services",
+     "evidence_quote": "2355-B Mill Road, Alexandria, VA 22314 - 703.746.3660 || 2355-B Mill Road, Alexandria, VA 22314 - 703.746.3660 || 2355-B Mill Road, Alexandria, VA, 22314"
+    }
+   ],
    "organization_name": "Alexandria Community Shelter",
    "organization_website": "https://www.voachesapeake.org/acs",
    "raw_eligibility_text": "- Adults Over 18 - Families With Children Guests must participate in service planning. Length of stay depends on complying with self-sufficiency plan. - All Intake Through Alexandria Dchs (Dept. Of Community & Human Services) Homeless Services Assessment Center",
@@ -1130,24 +1359,72 @@
    "state": "VA",
    "website": "https://www.fairfaxcounty.gov/neighborhood-community- services/coordinated-services-planning",
    "address1": "12011 Government Center Pkwy",
-   "address2": null,
+   "address2": "10th Floor",
    "services": [
     {
-     "frequency": null,
      "schedules": [],
      "food_types": [],
-     "description": null,
      "eligibility": [],
-     "service_type": "shelter",
-     "offering_status": "regular",
-     "appointment_required": "unknown",
-     "registration_required": "unknown"
+     "service_type": "food_referral"
     }
    ],
    "languages": [],
-   "schedules": [],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:30",
+     "weekday": 0,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:30",
+     "weekday": 1,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:30",
+     "weekday": 2,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:30",
+     "weekday": 3,
+     "week_of_month": null,
+     "appointment_only": false
+    },
+    {
+     "kind": "operating_hours",
+     "notes": null,
+     "opens": "08:00",
+     "closes": "16:30",
+     "weekday": 4,
+     "week_of_month": null,
+     "appointment_only": false
+    }
+   ],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Fairfax County residents",
+     "requirement_type": "residency"
+    }
+   ],
    "external_id": "nvrc-25",
    "location_name": "Fairfax County Coordinated Services Planning",
    "parking_notes": null,
@@ -1159,18 +1436,32 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
+     "date": "2026-10-12-full-recheck",
      "field": "address",
-     "reason": "The ZIP is a copy of the street number. 12011 is a New York ZIP. The Fairfax County Government Center is in 22035.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "12011 Government Center Pkwy FAIRFAX 12011"
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/coordinated-services-planning",
+     "evidence_quote": "12011 Government Center Parkway, 10th Floor || 12011 Government Center Parkway, 10th Floor || 12011 Government Center Parkway, 10th Floor"
     },
     {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP is a copy of the street number. 12011 is a New York ZIP. The Fairfax County Government Center is in 22035.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "12011 Government Center Pkwy FAIRFAX 12011"
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/coordinated-services-planning",
+     "evidence_quote": "Monday - Friday, 8 a.m. - 4:30 p.m. || Monday - Friday, 8 a.m. - 4:30 p.m. || Monday - Friday, 8 a.m. - 4:30 p.m."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/coordinated-services-planning",
+     "evidence_quote": "connects Fairfax County residents to county- and community-based services || Screens and refers families with minor children to shelter. Refers singles and families to homelessness prevention and offers community service referrals. || emergency food, shelter, clothing, healthcare, employment, financial assistance and other foundational needs"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/neighborhood-community-services/coordinated-services-planning",
+     "evidence_quote": "connects Fairfax County residents to county- and community-based services || connects Fairfax County residents to county- and community-based services"
     }
    ],
    "organization_name": "Fairfax County Coordinated Services Planning",
@@ -1206,7 +1497,14 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Single homeless men willing and able to work; background check, assessment, interview",
+     "requirement_type": "other"
+    }
+   ],
    "external_id": "nvrc-26",
    "location_name": "Catholic Charities Christ House",
    "parking_notes": null,
@@ -1216,6 +1514,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.ccda.net/need-help/christ-house/",
+     "evidence_quote": "Eligibility for Christ House is limited to single homeless men who are willing and able to work. || Eligibility for Christ House is limited to single homeless men who are willing and able to work."
+    }
+   ],
    "organization_name": "Catholic Charities Christ House",
    "organization_website": "https://www.ccda.net",
    "raw_eligibility_text": "- Single Men Over 18 - Recovering Addicts - Employed Or Employable Or - No Registered Sex Offenders - No Violent Criminal History Guests must commit to a plan of self- sufficiency; Savings plan and signed case management agreement required. Pledge to a dry program. Credit and criminal background check at initial interview. (police record does not always preclude participation). - Referrals From Shelters, Csb, Institutions, Case Managers, Therapists, And/Or Social Workers - Call For Availability No Self-Referrals",
@@ -1228,7 +1535,7 @@
    "city": "Woodbridge",
    "email": null,
    "notes": "Populations served: ‐ Adults Over 18 ‐ Couples ‐ Families With Children",
-   "phone": null,
+   "phone": "(703) 792-8810",
    "state": "VA",
    "website": "https://www.pwcva.gov/department/social‐ services/homeless‐and‐winter‐shelters",
    "address1": "14945 Richmond Hwy",
@@ -1249,9 +1556,22 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Referral via CES Hotline (703) 792-3366; serves families",
+     "requirement_type": "referral"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Self-sufficiency and savings plan, case management agreement, dry program, credit and criminal background check",
+     "requirement_type": "other"
+    }
+   ],
    "external_id": "nvrc-27",
-   "location_name": "Hilda M. Barg Homeless Shelter",
+   "location_name": "Hilda Barg Homeless Prevention Center",
    "parking_notes": null,
    "transit_notes": null,
    "geocode_source": "nvrc",
@@ -1261,18 +1581,25 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "address",
-     "reason": "The ZIP is a copy of the street number. 14945 is not a Virginia ZIP. 14945 Richmond Hwy in Woodbridge is 22191.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "14945 Richmond Hwy Woodbridge 14945"
+     "date": "2026-10-12-full-recheck",
+     "field": "name",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/social-services/homeless-and-winter-shelters",
+     "evidence_quote": "HILDA BARG Homeless Prevention Center || HILDA BARG Homeless Prevention Center"
     },
     {
-     "date": "2026-10-12-addresses",
-     "field": "address",
-     "reason": "The ZIP is a copy of the street number. 14945 is not a Virginia ZIP. 14945 Richmond Hwy in Woodbridge is 22191.",
-     "evidence_url": "https://services5.arcgis.com/6MUPhDX27Ne3DNOw/arcgis/rest/services/NOVA_Homeless_Shelters/FeatureServer/1",
-     "evidence_quote": "14945 Richmond Hwy Woodbridge 14945"
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/social-services/homeless-and-winter-shelters",
+     "evidence_quote": "(703) 792-8810 (TTY: 711) || For more information call (703) 792-8810 (TTY: 711). || (703) 792-8810 (TTY: 711)"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/social-services/homeless-and-winter-shelters",
+     "evidence_quote": "(703) 792-3366 (TTY: 711) || Intake through Coordinated Entry System || This 30-bed year-round shelter for families"
     }
    ],
    "organization_name": "Hilda M. Barg Homeless Shelter",

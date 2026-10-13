@@ -213,6 +213,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "health_clinic"
     }
    ],
    "languages": [
@@ -238,6 +243,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "Behavioral Health || Family & Internal Medicine"
+    }
+   ],
    "organization_name": "Neighborhood Health",
    "organization_website": "https://neighborhoodhealthva.org/",
    "raw_eligibility_text": null,
@@ -469,6 +483,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "health_clinic"
     }
    ],
    "languages": [],
@@ -503,6 +522,15 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.loudoun.gov/1258/Health-Clinics",
+     "evidence_quote": "Dental Health || Immunizations"
+    }
+   ],
    "organization_name": "Loudoun County Health Department",
    "organization_website": "https://www.loudoun.gov/health",
    "raw_eligibility_text": "Appointments are required for services at the Health Department clinics. Services may have age or income restrictions. The Health Department offers an income eligibility screening to determine a sliding scale discount for services. Laboratory costs, immunizations and medications are not eligible for discount.",
@@ -634,6 +662,16 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "wic_services"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "health_clinic"
     }
    ],
    "languages": [],
@@ -668,6 +706,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.fairfaxcounty.gov/health/clinics/annandale-district-office",
+     "evidence_quote": "Women, Infant, and Children (WIC) Nutrition Program || Suite 301E for Women, Infants, and Children (WIC) nutrition program services || Suite 301E for Women, Infants, and Children (WIC) nutrition program services"
+    }
+   ],
    "organization_name": "Fairfax County Health Department",
    "organization_website": "https://www.fairfaxcounty.gov/health/",
    "raw_eligibility_text": "Fees and eligibility vary by service. Clinic walk-in service is limited and is on a first-come first-served basis. All clinic services are also available by appointment. Some insurance plans are accepted. For those without or choosing not to use their health insurance, we offer a sliding scale fee (based on your income eligibility) which may reduce or eliminate costs to you.",
@@ -743,11 +790,11 @@
    "registration_url": null,
    "audit_corrections": [
     {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "Tuesday appears twice with conflicting closing times; the health center is open until 6:30pm on Tuesday.",
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
      "evidence_url": "https://www.fairfaxcounty.gov/health/clinics/mount-vernon-district-office",
-     "evidence_quote": "Business Hours: Mon 8 a.m.-4:30 p.m.; Tue 8 a.m.-6:30 p.m.; Wed 8 a.m.-4:30 p.m.; Thu 8 a.m.-4:30 p.m.; Fri 8 a.m.-4:30 p.m."
+     "evidence_quote": "Women, Infant, and Children (WIC) Nutrition Program || Vital records, HIV testing, immunizations, maternity services, pregnancy testing, newcomer health screening, STI testing, speech and hearing, tuberculosis testing, and WIC nutrition || Women, Infant, and Children (WIC) Nutrition Program"
     }
    ],
    "organization_name": "Fairfax County Health Department",
@@ -823,15 +870,6 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12",
-     "field": "hours",
-     "reason": "Tuesday has two conflicting entries. The source gives only one Tuesday time, 8 a.m. to 6:30 p.m.",
-     "evidence_url": "https://www.fairfaxcounty.gov/health/clinics/herndon-reston-district-office",
-     "evidence_quote": "Business Hours: Monday 8 a.m.-4:30 p.m.; Tuesday 8 a.m.-6:30 p.m.; Wednesday-Friday 8 a.m.-4:30 p.m."
-    }
-   ],
    "organization_name": "Fairfax County Health Department",
    "organization_website": "https://www.fairfaxcounty.gov/health/",
    "raw_eligibility_text": "Fees and eligibility vary by service. Clinic walk-in service is limited and is on a first-come first-served basis. All clinic services are also available by appointment. Some insurance plans are accepted. For those without or choosing not to use their health insurance, we offer a sliding scale fee (based on your income eligibility) which may reduce or eliminate costs to you.",
@@ -1100,6 +1138,15 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://hwnova.org/locations/leesburg-location/",
+     "evidence_quote": "Dental Suite 1st Floor || Dental Suite 1st Floor"
+    }
+   ],
    "organization_name": "HealthWorks for Northern Virginia",
    "organization_website": "https://hwnova.org/",
    "raw_eligibility_text": null,
@@ -1344,6 +1391,12 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "health_clinic"
     }
    ],
    "languages": [],
@@ -1353,13 +1406,13 @@
     {
      "status": "required",
      "values": {},
-     "details": "Teens 12-19 years old.",
+     "details": "Teens ages 12-19",
      "requirement_type": "age"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Living in the City of Alexandria.",
+     "details": "City of Alexandria residents",
      "requirement_type": "residency"
     },
     {
@@ -1378,6 +1431,22 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/health-department/program/clinical-services",
+     "evidence_quote": "sports physicals, mental health screenings, and sexual health care || Accessible and confidential* health services including sports physicals, mental health screenings, and sexual health care."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/health-department/program/clinical-services",
+     "evidence_quote": "to any teen (12-19 years old) living in the City of Alexandria || any teen (12-19 years old) living in the City of Alexandria || any teen (12-19 years old) living in the City of Alexandria"
+    }
+   ],
    "organization_name": "Alexandria Health Department",
    "organization_website": "https://www.alexandriava.gov/health-department/program/clinical-services",
    "raw_eligibility_text": "Accessible and confidential* health services including sports physicals, mental health screenings, and sexual health care to any teen (12-19 years old) living in the City of Alexandria. Cost: Free",
@@ -1497,13 +1566,13 @@
     {
      "status": "required",
      "values": {},
-     "details": "Teens 12-19 years old.",
+     "details": "Teens ages 12-19",
      "requirement_type": "age"
     },
     {
      "status": "required",
      "values": {},
-     "details": "Living in the City of Alexandria.",
+     "details": "City of Alexandria residents",
      "requirement_type": "residency"
     },
     {
@@ -1522,6 +1591,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.alexandriava.gov/health-department/program/clinical-services",
+     "evidence_quote": "any teen (12-19 years old) living in the City of Alexandria || Teens ages 12–19 who live in the City of Alexandria"
+    }
+   ],
    "organization_name": "Alexandria Health Department",
    "organization_website": "https://www.alexandriava.gov/health-department/program/clinical-services",
    "raw_eligibility_text": "Accessible and confidential* health services including sports physicals, mental health screenings, and sexual health care to any teen (12-19 years old) living in the City of Alexandria. Cost: Free",
@@ -1809,6 +1887,11 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "service_type": "health_clinic"
     }
    ],
    "languages": [
@@ -1834,6 +1917,15 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://neighborhoodhealthva.org/our-locations/",
+     "evidence_quote": "Adult Medicine || Adult Medicine"
+    }
+   ],
    "organization_name": "Neighborhood Health",
    "organization_website": "https://neighborhoodhealthva.org/",
    "raw_eligibility_text": null,
@@ -2272,7 +2364,7 @@
    "state": "VA",
    "website": null,
    "address1": "4001 Prince William Parkway",
-   "address2": "Suite 101",
+   "address2": "Suite 10",
    "services": [
     {
      "frequency": null,
@@ -2415,6 +2507,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "address",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.vdh.virginia.gov/prince-william/clinical-services/",
+     "evidence_quote": "4001 Prince William Parkway Suite 10 || 4001 Prince William Parkway Suite 10"
+    }
+   ],
    "organization_name": "Virginia Department of Health - Prince William Health District",
    "organization_website": "https://www.vdh.virginia.gov/prince-william/",
    "raw_eligibility_text": "Please bring your health insurance information and proof of household income for the services you receive, if applicable.",
@@ -2427,7 +2528,7 @@
    "city": "Manassas",
    "email": "outreach@lunerahealth.org",
    "notes": "Page title on lunerahealth.org: 'Lunera Health (formerly GPW Health Center)'. Located in Prince William County (per locality polygon). Women's Care Team listed at this site. Site services: Family Medicine, OBGYN, Pediatrics, Behavioral Health, Dental, Pharmacy. Hours shown on the site were inconsistent across page sections, so none are recorded. Not listed in the OPA Title X locator.",
-   "phone": "703-680-7950",
+   "phone": "(703) 680-7950",
    "state": "VA",
    "website": null,
    "address1": "9705 Liberia Ave",
@@ -2483,6 +2584,27 @@
      "reason": "Health center hours shown as food distribution times.",
      "evidence_url": "https://www.arcgis.com/home/item.html?id=737e23fe59304148a2e36f4fc726b523",
      "evidence_quote": "Monday–Friday, 8:00 AM–5:30 PM; Saturday, 8:00 AM–1:00 PM; Sunday closed."
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "phone",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://lunerahealth.org/location/manassas/",
+     "evidence_quote": "703-680-7950 || Phone: 703-680-7950 || 703-680-7950"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://lunerahealth.org/location/manassas/",
+     "evidence_quote": "Mon – Fri: 7am – 5:30pm || Open: 7 AM – 5:30 PM, Monday – Friday || Mon – Fri: 7am – 5:30pm Sat – Sun: Closed"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://lunerahealth.org/location/manassas/",
+     "evidence_quote": "We provide Medical, Pediatric, Dental, OB/GYN and Behavioral Health services to all members of our community. || We provide Medical, Pediatric, Dental, OB/GYN and Behavioral Health services to all members of our community || Family Medicine, OBGYN, Pediatrics, Behavioral Health, Dental, and Pharmacy"
     }
    ],
    "organization_name": "Lunera Health (formerly GPW Health Center)",
@@ -2546,6 +2668,22 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://lunerahealth.org/location/woodbridge/",
+     "evidence_quote": "Mon – Fri: 7am – 5:30pm || Mon – Fri: 7am – 5:30pm || Mon – Fri: 7am – 5:30pm"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://lunerahealth.org/location/woodbridge/",
+     "evidence_quote": "We provide Medical, Pediatric, Dental, OB/GYN and Behavioral Health services to all members of our community. || Medical, Pediatric, Dental, OB/GYN and Behavioral Health services || Medical, Pediatric, Dental, OB/GYN and Behavioral Health services"
+    }
+   ],
    "organization_name": "Lunera Health (formerly GPW Health Center)",
    "organization_website": "https://lunerahealth.org/",
    "raw_eligibility_text": "The Center serves Prince William County and the Cities of Manassas and Manassas Park in Northern Virginia. We provide Medical, Pediatric, Dental, OB/GYN and Behavioral Health services to all members of our community, regardless of age, income or insurance status.",
@@ -2607,6 +2745,22 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "hours",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://lunerahealth.org/location/dumfries/",
+     "evidence_quote": "Mon – Fri: 7am – 5pm || Mon – Fri: 7am – 5pm || Mon – Fri: 7am – 5pm"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://lunerahealth.org/location/dumfries/",
+     "evidence_quote": "We provide Medical, Pediatric, Dental, OB/GYN and Behavioral Health services to all members of our community. || Medical, Pediatric, Dental, OB/GYN and Behavioral Health services || We provide Medical, Pediatric, Dental, OB/GYN and Behavioral Health services to all members of our community."
+    }
+   ],
    "organization_name": "Lunera Health (formerly GPW Health Center)",
    "organization_website": "https://lunerahealth.org/",
    "raw_eligibility_text": "The Center serves Prince William County and the Cities of Manassas and Manassas Park in Northern Virginia. We provide Medical, Pediatric, Dental, OB/GYN and Behavioral Health services to all members of our community, regardless of age, income or insurance status.",
@@ -2949,6 +3103,12 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "reproductive_health"
     }
    ],
    "languages": [],
@@ -2958,7 +3118,7 @@
     {
      "status": "required",
      "values": {},
-     "details": "Uninsured and low-income patients with household income up to 400 percent of the U.S. Federal Poverty Guidelines.",
+     "details": "Uninsured/low-income, household income up to 400% FPL",
      "requirement_type": "income"
     }
    ],
@@ -2971,6 +3131,22 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-cares-for-women",
+     "evidence_quote": "family planning || family planning and nutritional counseling || prenatal and gynecologic care for underserved communities"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-cares-for-women",
+     "evidence_quote": "up to 400 percent of the U.S. Federal Poverty Guidelines || uninsured and low-income patients with household income up to 400 percent of the U.S. Federal Poverty Guidelines || Uninsured or low-income patients with household income up to 400% of the Federal Poverty Guidelines"
+    }
+   ],
    "organization_name": "Inova Cares for Women",
    "organization_website": "https://www.inova.org/our-services/inova-cares-for-women",
    "raw_eligibility_text": "Serving the needs of our community with prenatal and gynecologic care for uninsured or low-income individuals in Northern Virginia. Serving uninsured and low-income patients with household income up to 400 percent of the U.S. Federal Poverty Guidelines.",
@@ -3045,6 +3221,12 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "reproductive_health"
     }
    ],
    "languages": [],
@@ -3054,7 +3236,7 @@
     {
      "status": "required",
      "values": {},
-     "details": "Uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
+     "details": "Uninsured/low-income, up to 400% FPL",
      "requirement_type": "income"
     }
    ],
@@ -3067,6 +3249,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-cares-for-women",
+     "evidence_quote": "family planning || family planning and nutritional counseling || provides obstetric and gynecologic (OB-GYN) care"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-cares-for-women",
+     "evidence_quote": "up to 400% of the Federal Poverty Guidelines (FPL) || serving uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL). || Uninsured or low-income patients up to 400% of the Federal Poverty Guidelines"
+    }
+   ],
    "organization_name": "Inova Cares for Women",
    "organization_website": "https://www.inova.org/our-services/inova-cares-for-women",
    "raw_eligibility_text": "Serving the needs of our community with prenatal and gynecologic care for uninsured or low-income individuals in Northern Virginia. Serving uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
@@ -3141,6 +3339,12 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "reproductive_health"
     }
    ],
    "languages": [],
@@ -3150,7 +3354,7 @@
     {
      "status": "required",
      "values": {},
-     "details": "Uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
+     "details": "Uninsured/low-income, up to 400% FPL",
      "requirement_type": "income"
     }
    ],
@@ -3163,6 +3367,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-cares-for-women",
+     "evidence_quote": "family planning || family planning and nutritional counseling || provides obstetric and gynecologic (OB-GYN) care for a culturally diverse population"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-cares-for-women",
+     "evidence_quote": "up to 400% of the Federal Poverty Guidelines (FPL) || serving uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL). || Uninsured or low-income patients up to 400% of the Federal Poverty Guidelines"
+    }
+   ],
    "organization_name": "Inova Cares for Women",
    "organization_website": "https://www.inova.org/our-services/inova-cares-for-women",
    "raw_eligibility_text": "Serving the needs of our community with prenatal and gynecologic care for uninsured or low-income individuals in Northern Virginia. Serving uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
@@ -3237,6 +3457,12 @@
      "offering_status": "regular",
      "appointment_required": "unknown",
      "registration_required": "unknown"
+    },
+    {
+     "schedules": [],
+     "food_types": [],
+     "eligibility": [],
+     "service_type": "reproductive_health"
     }
    ],
    "languages": [],
@@ -3246,7 +3472,7 @@
     {
      "status": "required",
      "values": {},
-     "details": "Uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
+     "details": "Uninsured/low-income, up to 400% FPL",
      "requirement_type": "income"
     }
    ],
@@ -3259,6 +3485,22 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "categories",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-cares-for-women",
+     "evidence_quote": "family planning || family planning and nutritional counseling || Obstetric and gynecologic (OB-GYN) care, including prenatal and gynecologic care"
+    },
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "3 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-cares-for-women",
+     "evidence_quote": "up to 400% of the Federal Poverty Guidelines (FPL) || serving uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL). || Uninsured or low-income patients up to 400% of the Federal Poverty Guidelines"
+    }
+   ],
    "organization_name": "Inova Cares for Women",
    "organization_website": "https://www.inova.org/our-services/inova-cares-for-women",
    "raw_eligibility_text": "Serving the needs of our community with prenatal and gynecologic care for uninsured or low-income individuals in Northern Virginia. Serving uninsured and low-income patients up to 400% of the Federal Poverty Guidelines (FPL).",
@@ -3347,6 +3589,12 @@
      "values": {},
      "details": "County residents who are uninsured, have limited resources, or are insured by Medicaid. Certain eligibility information is required.",
      "requirement_type": "other"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Uninsured, limited resources, or Medicaid",
+     "requirement_type": "income"
     }
    ],
    "external_id": "nova-rh-inova-cares-women-loudoun",
@@ -3358,6 +3606,15 @@
    "jurisdiction_id": "loudoun-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-full-recheck",
+     "field": "eligibility",
+     "reason": "2 of 3 independent checkers agree",
+     "evidence_url": "https://www.inova.org/our-services/inova-cares-for-women",
+     "evidence_quote": "uninsured, have limited resources, or are insured by Medicaid || Uninsured, limited resources, or insured by Medicaid. Certain eligibility information is required."
+    }
+   ],
    "organization_name": "Inova Cares for Women",
    "organization_website": "https://www.inova.org/our-services/inova-cares-for-women",
    "raw_eligibility_text": "Serving the needs of our community with prenatal and gynecologic care for uninsured or low-income individuals in Northern Virginia. Provides comprehensive obstetric care to county residents who are uninsured, have limited resources, or are insured by Medicaid. Certain eligibility information is required.",
