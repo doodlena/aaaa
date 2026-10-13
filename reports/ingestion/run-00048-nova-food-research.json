@@ -1,0 +1,318 @@
+{
+  "run_id": 48,
+  "source": {
+    "id": "nova-food-research",
+    "name": "Northern Virginia food assistance (Loudoun, western Fairfax, Prince William) \u2014 AI-assisted research (cited)",
+    "url": "snapshot://nova-food-research.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "AI-assisted research of pages fetched on the retrieval date; each record cites source_url. Not verified.",
+      "Blocked sites were skipped, not circumvented; see the matching research log in docs/pilot_research/."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T18:44:59.184258-04:00",
+  "finished_at": "2026-10-12T22:44:59.266195+00:00",
+  "counts": {
+    "discovered": 32,
+    "inserted": 0,
+    "updated": 3,
+    "unchanged": 29,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 493,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "nova-food-ffo-warehouse-prosperity",
+      "status": "linked",
+      "location_id": 49,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-tol-western-loudoun-pantry",
+      "status": "linked",
+      "location_id": 355,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-tol-dinner-purcellville",
+      "status": "linked",
+      "location_id": 513,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-tol-dinner-leesburg",
+      "status": "linked",
+      "location_id": 357,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-loudoun-hunger-relief-leesburg",
+      "status": "linked",
+      "location_id": 348,
+      "issues": []
+    },
+    {
+      "external_id": "nova-food-link-produce-holy-cross-herndon",
+      "status": "linked",
+      "location_id": 361,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-haymarket-regional-food-pantry",
+      "status": "linked",
+      "location_id": 71,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-ffo-burke-summit-oaks",
+      "status": "linked",
+      "location_id": 365,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-ffo-fairfax-yorkville",
+      "status": "linked",
+      "location_id": 366,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-ffo-springfield-chelsea-square",
+      "status": "linked",
+      "location_id": 368,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-house-of-mercy-manassas",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "nova-food-praise-center-dumfries",
+      "status": "linked",
+      "location_id": 370,
+      "issues": []
+    },
+    {
+      "external_id": "nova-food-triangle-baptist",
+      "status": "linked",
+      "location_id": 371,
+      "issues": []
+    },
+    {
+      "external_id": "nova-food-concordia-lutheran-triangle",
+      "status": "linked",
+      "location_id": 372,
+      "issues": []
+    },
+    {
+      "external_id": "nova-food-grace-church-bag-of-hope-dumfries",
+      "status": "linked",
+      "location_id": 373,
+      "issues": []
+    },
+    {
+      "external_id": "nova-food-grace-to-go-leesburg",
+      "status": "linked",
+      "location_id": 374,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-sterling-umc-grace-ministries",
+      "status": "linked",
+      "location_id": 376,
+      "issues": []
+    },
+    {
+      "external_id": "nova-food-link-mobile-pantry-sterling",
+      "status": "linked",
+      "location_id": 359,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-link-produce-trinity-presbyterian-herndon",
+      "status": "linked",
+      "location_id": 360,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-wfcm-chantilly",
+      "status": "linked",
+      "location_id": 88,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-wfcm-centreville",
+      "status": "linked",
+      "location_id": 89,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-freedom-community-pantry",
+      "status": "linked",
+      "location_id": 512,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-tol-eastern-loudoun-pantry",
+      "status": "linked",
+      "location_id": 356,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-tol-dinner-sterling",
+      "status": "linked",
+      "location_id": 514,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-round-hill-umc-pantry",
+      "status": "linked",
+      "location_id": 362,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-ffo-springfield-gardens",
+      "status": "linked",
+      "location_id": 367,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-streetlight-woodbridge",
+      "status": "linked",
+      "location_id": 369,
+      "issues": []
+    },
+    {
+      "external_id": "nova-food-cornerstones-asapp-reston",
+      "status": "linked",
+      "location_id": 50,
+      "issues": []
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}
