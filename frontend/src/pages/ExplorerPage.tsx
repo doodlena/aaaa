@@ -354,6 +354,10 @@ export default function ExplorerPage() {
                   · <Link to="/account">{t('explorer.prefsEdit')}</Link>
                 </p>
               )}
+              <p className="data-note" data-testid="data-note">
+                {t('explorer.dataNote')}{' '}
+                <a href="tel:211">{t('explorer.dataNoteCall')}</a>
+              </p>
               {loading && <p className="results__refreshing" role="status">{t('explorer.updating')}</p>}
               <ResultsList
                 data={data}

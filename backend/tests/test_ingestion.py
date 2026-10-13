@@ -379,3 +379,18 @@ def test_hold_hides_listing_publicly_and_is_replayed_from_snapshot(db, imported,
     assert cli._apply_holds(db) == 1
     db.expire_all()
     assert db.get(Location, loc.id).review_status == "on_hold"
+
+
+def test_apply_audit_refuses_a_finding_for_a_differently_named_listing(db, imported, tmp_path, capsys):
+    import json as _json
+
+    from app.cli import main
+
+    loc = db.scalars(select(Location).where(Location.is_synthetic.is_(True)).order_by(Location.id)).first()
+    f = tmp_path / "f.json"
+    f.write_text(_json.dumps([{"listing_id": loc.id, "listing_name": "Completely Different Clinic", "field": "phone", "current": "",
+                               "new_value": "(703) 555-0000", "evidence_url": "u", "evidence_quote": "q", "reason": "r", "confidence": "high"}]))
+    main(["apply-audit", str(f), "--date", "t", "--out", str(tmp_path)])
+    assert "name mismatch" in capsys.readouterr().out
+    db.expire_all()
+    assert db.get(Location, loc.id).phone != "(703) 555-0000"

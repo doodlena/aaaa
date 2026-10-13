@@ -34,7 +34,15 @@
     "call988": "Gọi 988",
     "text988": "Nhắn tin 988",
     "emergency": "Khẩn cấp:",
-    "contactLead": "Bạn điều hành kho thực phẩm hoặc dịch vụ? Câu hỏi, sửa thông tin hoặc quyền đăng cập nhật:"
+    "contactLead": "Bạn điều hành kho thực phẩm hoặc dịch vụ? Câu hỏi, sửa thông tin hoặc quyền đăng cập nhật:",
+    "dataWarning": "Thông tin có thể đã cũ: luôn gọi điện trước khi đến.",
+    "helpLead": "Hỗ trợ tìm dịch vụ:",
+    "helpLine": {
+      "va211": "Virginia 211",
+      "fairfax": "Quận Fairfax",
+      "arlington": "Arlington",
+      "alexandria": "Alexandria"
+    }
   },
   "common": {
     "loading": "Đang tải…",
@@ -360,7 +368,9 @@
     "regionCenter": "Bắc Virginia (trung tâm)",
     "prefsApplied": "Đang dùng tùy chọn đã lưu của bạn.",
     "prefsIgnore": "Bỏ qua cho lần tìm này",
-    "prefsEdit": "Thay đổi"
+    "prefsEdit": "Thay đổi",
+    "dataNote": "Thông tin có thể đã cũ. Luôn gọi điện trước khi đến. Không biết bắt đầu từ đâu?",
+    "dataNoteCall": "Gọi 2-1-1."
   },
   "filters": {
     "title": "Bộ lọc",
@@ -524,7 +534,8 @@
     "typicalNotToday": "Đây là những gì nơi cung cấp thường có, không phải lượng hàng hôm nay.",
     "sourceReportedExplain": "Thông tin lấy từ các nguồn bên dưới. Giờ và dịch vụ có thể thay đổi, hãy gọi trước nếu có thể.",
     "provenance": "Thông tin từ {{sources}}, kiểm tra lần cuối {{date}}.",
-    "notConfirmed": "Chưa được nhà cung cấp xác nhận: hãy gọi để xác nhận trước khi đến."
+    "notConfirmed": "Chưa được nhà cung cấp xác nhận: hãy gọi để xác nhận trước khi đến.",
+    "callToConfirm": "Gọi để xác nhận trước khi đến:"
   },
   "auth": {
     "signInTitle": "Đăng nhập",

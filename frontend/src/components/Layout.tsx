@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router';
 import { useAuth } from '../state/auth';
+import { HELP_LINES } from '../lib/helpLines';
 import { useContactEmail, useMeta } from '../state/meta';
 import { BrandLockup, LanternMark } from './Brand';
 import { Icon } from './Icon';
@@ -128,6 +129,15 @@ export function Layout() {
             </span>
           </p>
           <p>{t('footer.disclaimer')}</p>
+          <p className="site-footer__helplines" data-testid="help-lines">
+            <strong>{t('footer.dataWarning')}</strong> {t('footer.helpLead')}{' '}
+            {HELP_LINES.map((h, i) => (
+              <span key={h.key}>
+                {i > 0 && ' · '}
+                {t(`footer.helpLine.${h.key}`)} <a href={`tel:${h.tel}`}>{h.label}</a>
+              </span>
+            ))}
+          </p>
           {contactEmail && (
             <p className="site-footer__contact">
               {t('footer.contactLead')} <a href={`mailto:${contactEmail}`}>{contactEmail}</a>

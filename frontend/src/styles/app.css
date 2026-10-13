@@ -4047,3 +4047,6 @@ form.is-ai-drafted select {
 .provider-can li { display: flex; gap: var(--sp-2); align-items: flex-start; }
 .nav-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; padding: 0 6px; margin-left: 4px; border-radius: 10px; background: #b3261e; color: #fff; font-size: .75rem; font-weight: 700; }
 .contact-email { margin: var(--sp-2) 0; overflow-wrap: anywhere; }
+
+.data-note { margin: 0 0 var(--sp-3); padding: 6px 10px; font-size: .875rem; color: var(--ink-soft); border-left: 3px solid var(--line); }
+.site-footer__helplines { line-height: 1.6; }

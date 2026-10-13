@@ -34,7 +34,15 @@
     "call988": "拨打 988",
     "text988": "发短信到 988",
     "emergency": "紧急情况：",
-    "contactLead": "您运营食物银行或服务机构吗？如有问题、需要更正或申请发布更新权限，请联系："
+    "contactLead": "您运营食物银行或服务机构吗？如有问题、需要更正或申请发布更新权限，请联系：",
+    "dataWarning": "信息可能已过时：前往前请务必先致电。",
+    "helpLead": "寻找服务的帮助热线：",
+    "helpLine": {
+      "va211": "弗吉尼亚 211",
+      "fairfax": "费尔法克斯县",
+      "arlington": "阿灵顿",
+      "alexandria": "亚历山大市"
+    }
   },
   "common": {
     "loading": "加载中…",
@@ -360,7 +368,9 @@
     "regionCenter": "北弗吉尼亚（中心）",
     "prefsApplied": "正在使用您保存的偏好设置。",
     "prefsIgnore": "本次搜索忽略",
-    "prefsEdit": "更改"
+    "prefsEdit": "更改",
+    "dataNote": "信息可能已过时。前往前请务必先致电。不知从何开始？",
+    "dataNoteCall": "请拨打 2-1-1。"
   },
   "filters": {
     "title": "筛选",
@@ -524,7 +534,8 @@
     "typicalNotToday": "这是服务机构通常提供的内容，不是今天的库存。",
     "sourceReportedExplain": "信息来自下方列出的来源。时间和服务可能变化，如可能请先致电确认。",
     "provenance": "信息来源：{{sources}}，最后核对于 {{date}}。",
-    "notConfirmed": "尚未与服务机构确认：前往前请致电确认。"
+    "notConfirmed": "尚未与服务机构确认：前往前请致电确认。",
+    "callToConfirm": "前往前请致电确认："
   },
   "auth": {
     "signInTitle": "登录",

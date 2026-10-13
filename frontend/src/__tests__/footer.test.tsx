@@ -17,3 +17,14 @@ describe('footer contact email for services', () => {
     expect(screen.queryByText(/Run a food pantry or service/)).toBeNull();
   });
 });
+
+describe('data warning and help lines', () => {
+  it('footer warns that information may be out of date and lists verified help lines', async () => {
+    mockFetch([]);
+    renderApp(<Layout />, { route: '/', path: '/' });
+    const lines = await screen.findByTestId('help-lines');
+    expect(lines).toHaveTextContent('Information may be out of date');
+    expect(screen.getByRole('link', { name: '2-1-1' })).toHaveAttribute('href', 'tel:211');
+    expect(screen.getByRole('link', { name: '(703) 222-0880' })).toHaveAttribute('href', 'tel:7032220880');
+  });
+});

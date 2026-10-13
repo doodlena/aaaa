@@ -266,6 +266,12 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
                   date: formatDate(r.sources.map((s) => s.last_seen_at).sort().at(-1)!, lang, { dateStyle: 'medium' }),
                 })}
                 {r.verification_label === 'source_reported' && <> {t('detail.notConfirmed')}</>}
+                {r.phone && (
+                  <>
+                    {' '}
+                    {t('detail.callToConfirm')} <a href={telHref(r.phone)}>{r.phone}</a>.
+                  </>
+                )}
               </span>
             )}
           </span>

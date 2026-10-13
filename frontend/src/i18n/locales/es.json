@@ -34,7 +34,15 @@
     "call988": "Llame al 988",
     "text988": "Envíe un texto al 988",
     "emergency": "Emergencia:",
-    "contactLead": "¿Administra una despensa o servicio? Preguntas, correcciones o acceso para publicar novedades:"
+    "contactLead": "¿Administra una despensa o servicio? Preguntas, correcciones o acceso para publicar novedades:",
+    "dataWarning": "La información puede estar desactualizada: llame siempre antes de ir.",
+    "helpLead": "Ayuda para encontrar servicios:",
+    "helpLine": {
+      "va211": "Virginia 211",
+      "fairfax": "Condado de Fairfax",
+      "arlington": "Arlington",
+      "alexandria": "Alexandria"
+    }
   },
   "common": {
     "loading": "Cargando…",
@@ -360,7 +368,9 @@
     "regionCenter": "Norte de Virginia (centro)",
     "prefsApplied": "Usando tus preferencias guardadas.",
     "prefsIgnore": "Ignorar en esta búsqueda",
-    "prefsEdit": "Cambiarlas"
+    "prefsEdit": "Cambiarlas",
+    "dataNote": "La información puede estar desactualizada. Llame siempre antes de ir. ¿No sabe por dónde empezar?",
+    "dataNoteCall": "Llame al 2-1-1."
   },
   "filters": {
     "title": "Filtros",
@@ -524,7 +534,8 @@
     "typicalNotToday": "Esto es lo que el proveedor suele ofrecer, no las existencias de hoy.",
     "sourceReportedExplain": "La información proviene de las fuentes indicadas abajo. Los horarios y servicios pueden cambiar; llame antes si puede.",
     "provenance": "Información de {{sources}}, revisada por última vez el {{date}}.",
-    "notConfirmed": "Aún no confirmada con el proveedor: llame para confirmar antes de ir."
+    "notConfirmed": "Aún no confirmada con el proveedor: llame para confirmar antes de ir.",
+    "callToConfirm": "Llame para confirmar antes de ir:"
   },
   "auth": {
     "signInTitle": "Iniciar sesión",

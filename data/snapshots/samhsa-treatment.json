@@ -2769,7 +2769,20 @@
    "languages": [],
    "schedules": [],
    "source_url": "https://findtreatment.gov/",
-   "eligibility": [],
+   "eligibility": [
+    {
+     "status": "required",
+     "values": {},
+     "details": "Ages 13–35",
+     "requirement_type": "age"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Private insurance; Medicaid and Medicare not accepted",
+     "requirement_type": "other"
+    }
+   ],
    "external_id": "a9c484332ebb6dbe",
    "location_name": null,
    "parking_notes": null,
@@ -2779,6 +2792,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "eligibility",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "(see checker evidence)",
+     "evidence_quote": "Ages 13-35; private insurance; no Medicaid or Medicare"
+    }
+   ],
    "organization_name": "Sandstone Care Alexandria",
    "organization_website": "https://www.sandstonecare.com/locations/alexandria-treatment-center/",
    "raw_eligibility_text": null,
@@ -2833,6 +2855,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "eligibility",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "(see checker evidence)",
+     "evidence_quote": "Ages 13-35; private insurance; no Medicaid or Medicare"
+    }
+   ],
    "organization_name": "Sandstone Care Alexandria",
    "organization_website": "https://www.sandstonecare.com/locations/alexandria-treatment-center/",
    "raw_eligibility_text": null,

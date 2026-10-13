@@ -503,6 +503,8 @@ def cmd_apply_audit(a):
     from app.models import Location, SourceRecord
     from app.vocab import SERVICE_TYPES
 
+    from rapidfuzz import fuzz
+
     findings = json.loads(Path(a.file).read_text())
     applied, skipped = [], []
     with _db() as db:
@@ -510,6 +512,11 @@ def cmd_apply_audit(a):
             loc = db.get(Location, f["listing_id"])
             if not loc or loc.last_verified_at is not None:
                 skipped.append({**f, "skip": "verified or missing"})
+                continue
+            # IDs differ between databases (local vs live): a finding that names its listing must match this one.
+            want = (f.get("listing_name") or "").strip().lower()
+            if want and fuzz.token_set_ratio(want, (loc.name or "").lower()) < 70:
+                skipped.append({**f, "skip": f"name mismatch: finding is for {f['listing_name']!r}, id {loc.id} is {loc.name!r}"})
                 continue
             recs = db.scalars(select(SourceRecord).where(SourceRecord.location_id == loc.id, SourceRecord.status == "linked")
                               .order_by(SourceRecord.id)).all()

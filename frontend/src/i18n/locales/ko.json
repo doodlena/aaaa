@@ -34,7 +34,15 @@
     "call988": "988에 전화",
     "text988": "988에 문자",
     "emergency": "응급 상황:",
-    "contactLead": "푸드 팬트리나 서비스를 운영하시나요? 문의, 정정 또는 업데이트 게시 권한 요청:"
+    "contactLead": "푸드 팬트리나 서비스를 운영하시나요? 문의, 정정 또는 업데이트 게시 권한 요청:",
+    "dataWarning": "정보가 최신이 아닐 수 있습니다. 방문 전에 항상 전화하세요.",
+    "helpLead": "서비스 찾기 도움:",
+    "helpLine": {
+      "va211": "버지니아 211",
+      "fairfax": "페어팩스 카운티",
+      "arlington": "알링턴",
+      "alexandria": "알렉산드리아"
+    }
   },
   "common": {
     "loading": "불러오는 중…",
@@ -360,7 +368,9 @@
     "regionCenter": "북버지니아 (중심)",
     "prefsApplied": "저장된 설정을 사용하는 중입니다.",
     "prefsIgnore": "이번 검색에서는 무시",
-    "prefsEdit": "변경하기"
+    "prefsEdit": "변경하기",
+    "dataNote": "정보가 최신이 아닐 수 있습니다. 방문 전에 항상 전화로 확인하세요. 어디서 시작할지 모르겠다면",
+    "dataNoteCall": "2-1-1에 전화하세요."
   },
   "filters": {
     "title": "필터",
@@ -524,7 +534,8 @@
     "typicalNotToday": "제공 기관이 평소 제공하는 내용이며, 오늘의 재고가 아닙니다.",
     "sourceReportedExplain": "정보는 아래 출처에서 가져왔습니다. 시간과 서비스는 바뀔 수 있으니 가능하면 미리 전화하세요.",
     "provenance": "정보 출처: {{sources}}, 마지막 확인 {{date}}.",
-    "notConfirmed": "아직 제공 기관에 확인되지 않았습니다. 방문 전에 전화로 확인하세요."
+    "notConfirmed": "아직 제공 기관에 확인되지 않았습니다. 방문 전에 전화로 확인하세요.",
+    "callToConfirm": "방문 전에 전화로 확인하세요:"
   },
   "auth": {
     "signInTitle": "로그인",

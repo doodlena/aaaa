@@ -1389,6 +1389,13 @@
      "reason": "3 of 3 independent checkers agree",
      "evidence_url": "https://www.arlingtonva.us/files/sharedassets/public/v/2/departments/documents/dhs/food-security/2-pager/english-2026-food-assistance-2-page-flyer.pdf",
      "evidence_quote": "Clothing available. Visit once per week. || Visit once per week. || Visit once per week."
+    },
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "hours",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://www.missiondc.org/family-services/missionnova/",
+     "evidence_quote": "Food distribution: Tuesdays & Fridays, 12:00 - 3:00 pm"
     }
    ],
    "organization_name": "Mission: NOVA",

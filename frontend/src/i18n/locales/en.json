@@ -34,7 +34,15 @@
     "call988": "Call 988",
     "text988": "Text 988",
     "emergency": "Emergency:",
-    "contactLead": "Run a food pantry or service? Questions, corrections or access to post updates:"
+    "contactLead": "Run a food pantry or service? Questions, corrections or access to post updates:",
+    "dataWarning": "Information may be out of date: always call before you go.",
+    "helpLead": "Help finding services:",
+    "helpLine": {
+      "va211": "Virginia 211",
+      "fairfax": "Fairfax County",
+      "arlington": "Arlington",
+      "alexandria": "Alexandria"
+    }
   },
   "common": {
     "loading": "Loading…",
@@ -360,7 +368,9 @@
     "regionCenter": "Northern Virginia (center)",
     "prefsApplied": "Using your saved preferences.",
     "prefsIgnore": "Ignore for this search",
-    "prefsEdit": "Change them"
+    "prefsEdit": "Change them",
+    "dataNote": "Listings may be out of date. Always call before you go. Not sure where to start?",
+    "dataNoteCall": "Call 2-1-1."
   },
   "filters": {
     "title": "Filters",
@@ -524,7 +534,8 @@
     "typicalNotToday": "This is what the provider usually offers, not today's stock.",
     "sourceReportedExplain": "Information comes from the sources listed below. Hours and services can change, so call ahead if you can.",
     "provenance": "Information from {{sources}}, last checked {{date}}.",
-    "notConfirmed": "Not yet confirmed with the provider: call to confirm before you go."
+    "notConfirmed": "Not yet confirmed with the provider: call to confirm before you go.",
+    "callToConfirm": "Call to confirm before you go:"
   },
   "auth": {
     "signInTitle": "Sign in",

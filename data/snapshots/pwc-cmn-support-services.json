@@ -12,8 +12,8 @@
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
-   "address1": "8033 Ashton Ave",
-   "address2": "Suite 103",
+   "address1": "7969 Ashton Ave",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -93,6 +93,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/community-services/directions-manassas-sudley",
+     "evidence_quote": "Service Location: 7969 Ashton Avenue, Manassas, Virginia 20109"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "Begin through Same Day Access or call Community Services for an assessment and referral to the appropriate treatment program.",
@@ -108,8 +117,8 @@
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
-   "address1": "8033 Ashton Ave",
-   "address2": "Suite 103",
+   "address1": "7969 Ashton Ave",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -149,6 +158,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/community-services/directions-manassas-sudley",
+     "evidence_quote": "Service Location: 7969 Ashton Avenue, Manassas, Virginia 20109"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "Walk-in, Appointment required, Online / Virtual, Walk-in (where applicable) Same Day Access – Monday-Thursday 8am-2:30 pm Crisis Receiving Center operated by Connections Health Solutions (contracted by CS) accepts walk-in 24/7 or call 703/229-0066 PWC Emergency Services 703/792-2272- walk in hours Monday-Thursday 8-8 and Friday 8-5 Developmental Disability Case Management Services- 703/792-7800 Infant and Toddler Services- for appointments703/792-7879, Drop-In Peer Recovery Hub",
@@ -978,15 +996,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "22312",
-   "city": "Alexandria",
+   "zip": "22030",
+   "city": "Fairfax",
    "email": "info@thecaf.org",
    "notes": "Call or text 703-653-4221, visit the Recovery Community Center, or connect through CAF outreach programs.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
-   "address1": "5710A General Washington Drive",
-   "address2": null,
+   "address1": "10301 Democracy Lane",
+   "address2": "Suite 150",
    "services": [
     {
      "frequency": null,
@@ -1073,13 +1091,6 @@
      "reason": "2 of 3 independent checkers agree (values reconciled: I checked thecaf.org/contact-us, the organization's own page. It says 'Monday - Friday 9am - 5pm' for peer specialist calls, texts and appointments, at the listed Democracy Lane address. Vote B's 24/7 entry is the separate Peer Warm Line, so it isn't the office's hours.)",
      "evidence_url": "https://www.thecaf.org/contact-us",
      "evidence_quote": "Monday - Friday 9am - 5pm || Peer Warm Line: 24 hours a day, 7 days a week. Spanish-language peer support is also available Monday–Friday, 9:00 AM–4:00 PM."
-    },
-    {
-     "date": "2026-10-12-spot-check",
-     "field": "address",
-     "reason": "spot-check: 2+ of 3 independent checkers agree",
-     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
-     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
     }
    ],
    "organization_name": "The Chris Atwood Foundation",
@@ -1090,15 +1101,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "22312",
-   "city": "Alexandria",
+   "zip": "22030",
+   "city": "Fairfax",
    "email": "info@thecaf.org",
    "notes": "Call or text the Peer Warm Line, visit the Recovery Community Center, or access scheduled peer groups and programs.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
-   "address1": "5710A General Washington Drive",
-   "address2": null,
+   "address1": "10301 Democracy Lane",
+   "address2": "Suite 150",
    "services": [
     {
      "frequency": null,
@@ -1139,13 +1150,6 @@
      "reason": "2 of 3 independent checkers agree (values reconciled: I checked thecaf.org/contact-us, the organization's own page. It says 'Monday - Friday 9am - 5pm' for peer specialist calls, texts and appointments, at the listed Democracy Lane address. Vote B's 24/7 entry is the separate Peer Warm Line, so it isn't the office's hours.)",
      "evidence_url": "https://www.thecaf.org/contact-us",
      "evidence_quote": "Monday - Friday 9am - 5pm || Peer Warm Line: 24 hours a day, 7 days a week. Spanish-language peer support is also available Monday–Friday, 9:00 AM–4:00 PM."
-    },
-    {
-     "date": "2026-10-12-spot-check",
-     "field": "address",
-     "reason": "spot-check: 2+ of 3 independent checkers agree",
-     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
-     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
     }
    ],
    "organization_name": "The Chris Atwood Foundation",
@@ -1156,15 +1160,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "22312",
-   "city": "Alexandria",
+   "zip": "22030",
+   "city": "Fairfax",
    "email": "info@thecaf.org",
    "notes": "Apply through CAF’s recovery housing program or contact a Peer Recovery Specialist for assistance with housing resources and referrals.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
-   "address1": "5710A General Washington Drive",
-   "address2": null,
+   "address1": "10301 Democracy Lane",
+   "address2": "Suite 150",
    "services": [
     {
      "frequency": null,
@@ -1205,13 +1209,6 @@
      "reason": "2 of 3 independent checkers agree (values reconciled: I checked thecaf.org/contact-us, the organization's own page. It says 'Monday - Friday 9am - 5pm' for peer specialist calls, texts and appointments, at the listed Democracy Lane address. Vote B's 24/7 entry is the separate Peer Warm Line, so it isn't the office's hours.)",
      "evidence_url": "https://www.thecaf.org/contact-us",
      "evidence_quote": "Monday - Friday 9am - 5pm || Peer Warm Line: 24 hours a day, 7 days a week. Spanish-language peer support is also available Monday–Friday, 9:00 AM–4:00 PM."
-    },
-    {
-     "date": "2026-10-12-spot-check",
-     "field": "address",
-     "reason": "spot-check: 2+ of 3 independent checkers agree",
-     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
-     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
     }
    ],
    "organization_name": "The Chris Atwood Foundation",
@@ -1222,15 +1219,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "22312",
-   "city": "Alexandria",
+   "zip": "22030",
+   "city": "Fairfax",
    "email": "info@thecaf.org",
    "notes": "Contact a CAF Peer Recovery Specialist through the warmline to discuss transportation needs and eligibility.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
-   "address1": "5710A General Washington Drive",
-   "address2": null,
+   "address1": "10301 Democracy Lane",
+   "address2": "Suite 150",
    "services": [
     {
      "frequency": null,
@@ -1271,13 +1268,6 @@
      "reason": "2 of 3 independent checkers agree (values reconciled: I checked thecaf.org/contact-us, the organization's own page. It says 'Monday - Friday 9am - 5pm' for peer specialist calls, texts and appointments, at the listed Democracy Lane address. Vote B's 24/7 entry is the separate Peer Warm Line, so it isn't the office's hours.)",
      "evidence_url": "https://www.thecaf.org/contact-us",
      "evidence_quote": "Monday - Friday 9am - 5pm || Peer Warm Line: 24 hours a day, 7 days a week. Spanish-language peer support is also available Monday–Friday, 9:00 AM–4:00 PM."
-    },
-    {
-     "date": "2026-10-12-spot-check",
-     "field": "address",
-     "reason": "spot-check: 2+ of 3 independent checkers agree",
-     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
-     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
     }
    ],
    "organization_name": "The Chris Atwood Foundation",
@@ -1288,15 +1278,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "22312",
-   "city": "Alexandria",
+   "zip": "22030",
+   "city": "Fairfax",
    "email": "info@thecaf.org",
    "notes": "Walk-in/mobile outreach or call/text 703-653-4221. Enrollment in the Comprehensive Harm Reduction program is free, easy, and anonymous.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
-   "address1": "5710A General Washington Drive",
-   "address2": null,
+   "address1": "10301 Democracy Lane",
+   "address2": "Suite 150",
    "services": [
     {
      "frequency": null,
@@ -1337,13 +1327,6 @@
      "reason": "2 of 3 independent checkers agree (values reconciled: I checked thecaf.org/contact-us, the organization's own page. It says 'Monday - Friday 9am - 5pm' for peer specialist calls, texts and appointments, at the listed Democracy Lane address. Vote B's 24/7 entry is the separate Peer Warm Line, so it isn't the office's hours.)",
      "evidence_url": "https://www.thecaf.org/contact-us",
      "evidence_quote": "Monday - Friday 9am - 5pm || Peer Warm Line: 24 hours a day, 7 days a week. Spanish-language peer support is also available Monday–Friday, 9:00 AM–4:00 PM."
-    },
-    {
-     "date": "2026-10-12-spot-check",
-     "field": "address",
-     "reason": "spot-check: 2+ of 3 independent checkers agree",
-     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
-     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
     }
    ],
    "organization_name": "The Chris Atwood Foundation",
@@ -3939,7 +3922,7 @@
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "5710AGeneral Washington Drive",
+   "address1": "5710A General Washington Drive",
    "address2": null,
    "services": [
     {
@@ -3967,6 +3950,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Schedule an appointment through the Refugee and Immigrant Services program. Eligibility varies by immigration status, funding source, and program.",
@@ -4077,7 +4069,7 @@
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "5710AGeneral Washington Drive",
+   "address1": "5710A General Washington Drive",
    "address2": null,
    "services": [
     {
@@ -4105,6 +4097,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Consultation required. Schedule online or call 240-956-8157. The current published consultation fee is $90.",
@@ -4281,7 +4282,7 @@
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "5710AGeneral Washington Drive",
+   "address1": "5710A General Washington Drive",
    "address2": null,
    "services": [
     {
@@ -4312,6 +4313,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Complete the online intake/booking form. New patients receive an initial screening. Services are currently virtual.",
@@ -4432,7 +4442,7 @@
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "5710AGeneral Washington Drive",
+   "address1": "5710A General Washington Drive",
    "address2": null,
    "services": [
     {
@@ -4460,6 +4470,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Access generally occurs through LSSNCA refugee/immigrant program intake or referral into an employment program.",
@@ -4822,7 +4841,7 @@
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "5710AGeneral Washington Drive",
+   "address1": "5710A General Washington Drive",
    "address2": null,
    "services": [
     {
@@ -4850,6 +4869,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Enrollment or referral through the relevant LSSNCA program is generally required.",
@@ -4908,7 +4936,7 @@
    "phone": "(202) 723-3000",
    "state": "VA",
    "website": "https://lssnca.org",
-   "address1": "5710AGeneral Washington Drive",
+   "address1": "5710A General Washington Drive",
    "address2": null,
    "services": [
     {
@@ -4936,6 +4964,15 @@
    "jurisdiction_id": "fairfax-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
+    }
+   ],
    "organization_name": "Lutheran Social Services of the National Capital Area",
    "organization_website": "https://lssnca.org",
    "raw_eligibility_text": "Baltimore County Housing Stability referrals are through Coordinated Entry or LSSNCA resettlement programs. Other refugee housing assistance is accessed through resettlement case management.",
@@ -6150,8 +6187,8 @@
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
-   "address1": "8033 Ashton Ave",
-   "address2": "Suite 103",
+   "address1": "7969 Ashton Ave",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -6178,6 +6215,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/community-services/directions-manassas-sudley",
+     "evidence_quote": "Service Location: 7969 Ashton Avenue, Manassas, Virginia 20109"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "Contact Community Services or visit participating recovery-support programs. Some peer and recovery services may be available without a formal external referral.",
@@ -6193,8 +6239,8 @@
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
-   "address1": "8033 Ashton Ave",
-   "address2": "Suite 103",
+   "address1": "7969 Ashton Ave",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -6221,6 +6267,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/community-services/directions-manassas-sudley",
+     "evidence_quote": "Service Location: 7969 Ashton Avenue, Manassas, Virginia 20109"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "Eligibility and referral requirements vary. Supported Employment serves individuals meeting program criteria who are referred through the Virginia Department for Aging and Rehabilitative Services (DARS).",
@@ -6236,8 +6291,8 @@
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
-   "address1": "8033 Ashton Ave",
-   "address2": "Suite 103",
+   "address1": "7969 Ashton Ave",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -6271,6 +6326,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/community-services/directions-manassas-sudley",
+     "evidence_quote": "Service Location: 7969 Ashton Avenue, Manassas, Virginia 20109"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "No external referral is required to ask for help. Call Community Services or the MAT/recovery program directly. Current MAT information lists 703-792-2628 for assistance with opioid or alcohol recovery services.",
@@ -6286,8 +6350,8 @@
    "phone": "(703) 792-7800",
    "state": "VA",
    "website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
-   "address1": "8033 Ashton Ave",
-   "address2": "Suite 103",
+   "address1": "7969 Ashton Ave",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -6314,6 +6378,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://www.pwcva.gov/department/community-services/directions-manassas-sudley",
+     "evidence_quote": "Service Location: 7969 Ashton Avenue, Manassas, Virginia 20109"
+    }
+   ],
    "organization_name": "Prince William Community Services",
    "organization_website": "https://www.pwcva.gov/communityservices, https://www.linkedin.com/company/prince-william-county-community-service",
    "raw_eligibility_text": "Call 703-792-7800 in Manassas or 703-792-4900 in Woodbridge. The Crisis Receiving Center at 14011 Worth Ave, Woodbridge also accepts walk-ins 24/7.",

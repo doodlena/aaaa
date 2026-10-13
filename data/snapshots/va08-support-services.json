@@ -2037,14 +2037,14 @@
   {
    "lat": 38.830441,
    "lon": -77.116305,
-   "zip": "20109",
-   "city": "Manassas",
+   "zip": "22311",
+   "city": "Alexandria",
    "email": null,
    "notes": "DCHS Call Center 703.746.5700, Monday – Friday 8 a.m. – 5 p.m.; text 703.346.5599 (Del Pepper page). Benefits/Customer Relations on Floor 5. EBT card and mail pick-up Monday-Friday 1 p.m. – 3 p.m. Emergency shelter screening walk-in at 4850 Mark Center Drive per https://www.alexandriava.gov/homeless-services/homeless-services",
    "phone": "703.746.5700",
    "state": "VA",
    "website": null,
-   "address1": "7969 Ashton Ave",
+   "address1": "4850 Mark Center Drive",
    "address2": null,
    "services": [
     {
@@ -2311,15 +2311,6 @@
    "jurisdiction_id": "alexandria-city",
    "operating_status": "unknown",
    "registration_url": null,
-   "audit_corrections": [
-    {
-     "date": "2026-10-12-spot-check",
-     "field": "address",
-     "reason": "spot-check: 2+ of 3 independent checkers agree",
-     "evidence_url": "https://www.pwcva.gov/department/community-services/directions-manassas-sudley",
-     "evidence_quote": "Service Location: 7969 Ashton Avenue, Manassas, Virginia 20109"
-    }
-   ],
    "organization_name": "City of Alexandria Department of Community and Human Services (DCHS)",
    "organization_website": "https://www.alexandriava.gov/DCHS",
    "raw_eligibility_text": null,
