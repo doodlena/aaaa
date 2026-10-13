@@ -47,11 +47,12 @@ def location_sources(db: Session, location_id: int) -> list[dict]:
         select(SourceRecord, Source).join(Source).where(SourceRecord.location_id == location_id,
                                                         SourceRecord.status.notin_(("rejected", "invalid")))
     ).all()
-    return [
-        {"source_id": s.id, "name": s.name, "url": r.source_url or s.url, "last_seen_at": r.last_seen_at.isoformat(),
-         "is_synthetic": r.is_synthetic}
-        for r, s in rows
-    ]
+    # One entry per source (a source can contribute several records to one place); keep its most recent sighting.
+    by_source: dict[str, dict] = {}
+    for r, s in sorted(rows, key=lambda x: x[0].last_seen_at):
+        by_source[s.id] = {"source_id": s.id, "name": s.name, "url": r.source_url or s.url, "last_seen_at": r.last_seen_at.isoformat(),
+                           "is_synthetic": r.is_synthetic}
+    return list(by_source.values())
 
 
 def location_translations(db: Session, loc: Location, lang: str | None) -> dict:

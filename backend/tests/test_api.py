@@ -473,3 +473,33 @@ def test_name_search_and_map_pins(client, published):
     pins = client.get("/api/resources/search", params={**ARL, "radius_km": 60, "page_size": 3, "fields": "pins"}).json()
     assert len(pins["items"]) == pins["total"] == 8  # every match, not just one page
     assert set(pins["items"][0]) >= {"id", "name", "lat", "lon", "verification_label"}
+
+
+def test_paused_jurisdiction_is_hidden_from_public_search(client, db, published):
+    from sqlalchemy import update
+
+    from app.models import Jurisdiction
+
+    before = client.get("/api/resources/search?fields=pins").json()["items"]
+    assert before
+    j = db.get(Location, before[0]["id"]).jurisdiction_id
+    db.execute(update(Jurisdiction).where(Jurisdiction.id == j).values(status="planned"))
+    db.commit()
+    after = client.get("/api/resources/search?fields=pins").json()["items"]
+    hidden = [i for i in before if db.get(Location, i["id"]).jurisdiction_id == j]
+    assert hidden and not {i["id"] for i in hidden} & {i["id"] for i in after}
+    assert client.get(f"/api/resources/{hidden[0]['id']}").status_code == 404
+
+
+def test_each_source_listed_once_per_place(db, published):
+    from app.api.public import location_sources
+    from app.models import SourceRecord
+
+    rec = db.scalars(select(SourceRecord).where(SourceRecord.location_id.isnot(None)).order_by(SourceRecord.id)).first()
+    twin = SourceRecord(source_id=rec.source_id, external_id=rec.external_id + "-twin", location_id=rec.location_id, status=rec.status,
+                        normalized=rec.normalized, raw_hash="twin", is_synthetic=rec.is_synthetic, last_changed_at=rec.last_changed_at,
+                        first_seen_at=rec.first_seen_at, last_seen_at=rec.last_seen_at)
+    db.add(twin)
+    db.commit()
+    names = [s["source_id"] for s in location_sources(db, rec.location_id)]
+    assert names.count(rec.source_id) == 1

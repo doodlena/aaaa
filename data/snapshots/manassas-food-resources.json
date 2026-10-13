@@ -304,10 +304,37 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "18:00",
-       "closes": "19:00",
-       "weekday": 3,
+       "opens": "09:30",
+       "closes": "12:00",
+       "weekday": 2,
        "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "09:30",
+       "closes": "12:00",
+       "weekday": 5,
+       "week_of_month": null,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "12:30",
+       "weekday": 3,
+       "week_of_month": 1,
+       "appointment_only": false
+      },
+      {
+       "kind": "distribution",
+       "notes": null,
+       "opens": "10:30",
+       "closes": "12:30",
+       "weekday": 3,
+       "week_of_month": 3,
        "appointment_only": false
       }
      ],
@@ -340,6 +367,15 @@
    "jurisdiction_id": "prince-william-county",
    "operating_status": "unknown",
    "registration_url": null,
+   "audit_corrections": [
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "hours",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://www.shareofmclean.org/food-pantry-hours",
+     "evidence_quote": "Wednesday & Saturday: 9:30 am to 12:00 pm (noon). First & Third Thursdays (Senior Clients, 55+): 10:30 AM – 12:30 PM"
+    }
+   ],
    "organization_name": "Nokesville United Methodist Church",
    "organization_website": null,
    "raw_eligibility_text": "No appointment needed Thursdays 6-7 PM. Other times by appointment.",

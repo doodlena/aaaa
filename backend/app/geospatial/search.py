@@ -90,6 +90,8 @@ def public_visibility():
     sr = source_reported_condition()
     cond = [
         or_(verified, sr) if sr is not None else verified,
+        # Only places in jurisdictions that are switched on (pilot/expansion); others stay in the database, unshown.
+        Location.jurisdiction_id.in_(select(Jurisdiction.id).where(Jurisdiction.status.in_(("pilot", "expansion")))),
         Location.merged_into_id.is_(None),
         Location.operating_status != "permanently_closed",
         Location.geom.isnot(None),

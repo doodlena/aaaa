@@ -56,6 +56,14 @@ def clean(migrated_db, tmp_path, monkeypatch):
         lim.reset()
     with session_factory()() as db:
         sync_jurisdictions(db)
+        # Fixtures sit in several jurisdictions; tests run with every jurisdiction switched on (the public-area switch
+        # itself is covered by test_paused_jurisdiction_is_hidden_from_public_search).
+        from sqlalchemy import update
+
+        from app.models import Jurisdiction
+
+        db.execute(update(Jurisdiction).values(status="expansion"))
+        db.commit()
     yield
 
 

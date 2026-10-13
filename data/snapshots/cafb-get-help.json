@@ -5883,29 +5883,20 @@
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "15:00",
-       "closes": "18:00",
-       "weekday": 0,
-       "week_of_month": null,
-       "appointment_only": true
-      },
-      {
-       "kind": "distribution",
-       "notes": null,
-       "opens": "15:00",
-       "closes": "18:00",
-       "weekday": 2,
+       "opens": "12:00",
+       "closes": "15:00",
+       "weekday": 1,
        "week_of_month": null,
        "appointment_only": false
       },
       {
        "kind": "distribution",
        "notes": null,
-       "opens": "15:00",
-       "closes": "18:00",
-       "weekday": 3,
+       "opens": "12:00",
+       "closes": "15:00",
+       "weekday": 4,
        "week_of_month": null,
-       "appointment_only": true
+       "appointment_only": false
       }
      ],
      "food_types": [
@@ -5957,6 +5948,13 @@
      "reason": "2 of 3 independent checkers agree",
      "evidence_url": "https://cfhva.org/food-pantry/",
      "evidence_quote": "703.221.4510 || +1 (703) 221-4510"
+    },
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "hours",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://www.missiondc.org/family-services/missionnova/",
+     "evidence_quote": "Food distribution: Tuesdays & Fridays, 12:00 - 3:00 pm"
     }
    ],
    "organization_name": "CFH Inc.",

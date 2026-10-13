@@ -2,7 +2,7 @@ id: alexandria-city
 name: City of Alexandria
 kind: city
 county_fips: "510"
-status: expansion       # activated 2026-10-12
+status: expansion       # active (inner area)
 boundary: {source: tigerweb, geoid: "51510"}
 school_divisions: [{vdoe_number: 101, name: Alexandria City Public Schools, slug: alexandria}]
 center: [38.8048, -77.0469]

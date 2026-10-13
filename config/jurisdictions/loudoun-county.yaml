@@ -2,7 +2,7 @@ id: loudoun-county
 name: Loudoun County
 kind: county
 county_fips: "107"
-status: expansion       # activated 2026-10-12 for region-wide pre-population
+status: planned       # paused 2026-10-12 until inner-area data is solid
 boundary: {source: tigerweb, geoid: "51107"}
 school_divisions: [{vdoe_number: 53, name: Loudoun County Public Schools, slug: loudoun}]
 center: [39.0768, -77.6536]

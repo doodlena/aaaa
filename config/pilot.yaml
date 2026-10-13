@@ -6,4 +6,7 @@
 selection_status: evidence-based
 selected_on: "2026-10-12"
 pilot_divisions: [75, 143, 29]
-pilot_jurisdictions: [prince-william-county, manassas-city, fairfax-county, fairfax-city]
+# 2026-10-12 (project owner): narrowed to the inner jurisdictions (Fairfax, Arlington, Alexandria, plus the cities of
+# Fairfax and Falls Church inside that area) until their data quality is solid. Prince William, Manassas, Manassas Park
+# and Loudoun are "planned" again: their listings stay in the database but are not shown publicly.
+pilot_jurisdictions: [fairfax-county, fairfax-city]

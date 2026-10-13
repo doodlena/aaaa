@@ -1566,8 +1566,14 @@
     {
      "status": "required",
      "values": {},
-     "details": "Self-sufficiency and savings plan, case management agreement, dry program, credit and criminal background check",
+     "details": "Private insurance; Medicaid and Medicare not accepted",
      "requirement_type": "other"
+    },
+    {
+     "status": "required",
+     "values": {},
+     "details": "Ages 13–35",
+     "requirement_type": "age"
     }
    ],
    "external_id": "nvrc-27",
@@ -1600,6 +1606,13 @@
      "reason": "3 of 3 independent checkers agree",
      "evidence_url": "https://www.pwcva.gov/department/social-services/homeless-and-winter-shelters",
      "evidence_quote": "(703) 792-3366 (TTY: 711) || Intake through Coordinated Entry System || This 30-bed year-round shelter for families"
+    },
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "eligibility",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "(see checker evidence)",
+     "evidence_quote": "Ages 13-35; private insurance; no Medicaid or Medicare"
     }
    ],
    "organization_name": "Hilda M. Barg Homeless Shelter",

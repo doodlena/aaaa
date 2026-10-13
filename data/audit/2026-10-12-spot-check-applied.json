@@ -1,0 +1,122 @@
+[
+ {
+  "listing_id": 81,
+  "listing_name": "",
+  "field": "hours",
+  "current": "",
+  "evidence_url": "https://www.missiondc.org/family-services/missionnova/",
+  "evidence_quote": "Food distribution: Tuesdays & Fridays, 12:00 - 3:00 pm",
+  "reason": "spot-check: 2+ of 3 independent checkers agree",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 1,
+    "opens": "12:00",
+    "closes": "15:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 4,
+    "opens": "12:00",
+    "closes": "15:00",
+    "week_of_month": null
+   }
+  ]
+ },
+ {
+  "listing_id": 107,
+  "listing_name": "",
+  "field": "hours",
+  "current": "",
+  "evidence_url": "https://www.shareofmclean.org/food-pantry-hours",
+  "evidence_quote": "Wednesday & Saturday: 9:30 am to 12:00 pm (noon). First & Third Thursdays (Senior Clients, 55+): 10:30 AM – 12:30 PM",
+  "reason": "spot-check: 2+ of 3 independent checkers agree",
+  "confidence": "high",
+  "new_hours": [
+   {
+    "kind": "distribution",
+    "weekday": 2,
+    "opens": "09:30",
+    "closes": "12:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 5,
+    "opens": "09:30",
+    "closes": "12:00",
+    "week_of_month": null
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "10:30",
+    "closes": "12:30",
+    "week_of_month": 1
+   },
+   {
+    "kind": "distribution",
+    "weekday": 3,
+    "opens": "10:30",
+    "closes": "12:30",
+    "week_of_month": 3
+   }
+  ]
+ },
+ {
+  "listing_id": 200,
+  "listing_name": "",
+  "field": "address",
+  "current": "",
+  "evidence_url": "https://www.pwcva.gov/department/community-services/directions-manassas-sudley",
+  "evidence_quote": "Service Location: 7969 Ashton Avenue, Manassas, Virginia 20109",
+  "reason": "spot-check: 2+ of 3 independent checkers agree",
+  "confidence": "high",
+  "new_address": {
+   "address1": "7969 Ashton Ave",
+   "address2": null,
+   "city": "Manassas",
+   "zip": "20109"
+  }
+ },
+ {
+  "listing_id": 282,
+  "listing_name": "",
+  "field": "eligibility",
+  "current": "",
+  "evidence_url": "(see checker evidence)",
+  "evidence_quote": "Ages 13-35; private insurance; no Medicaid or Medicare",
+  "reason": "spot-check: 2+ of 3 independent checkers agree",
+  "confidence": "high",
+  "eligibility_set": [
+   {
+    "requirement_type": "age",
+    "status": "required",
+    "details": "Ages 13–35"
+   },
+   {
+    "requirement_type": "other",
+    "status": "required",
+    "details": "Private insurance; Medicaid and Medicare not accepted"
+   }
+  ]
+ },
+ {
+  "listing_id": 222,
+  "listing_name": "",
+  "field": "address",
+  "current": "",
+  "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+  "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312",
+  "reason": "spot-check: 2+ of 3 independent checkers agree",
+  "confidence": "high",
+  "new_address": {
+   "address1": "5710A General Washington Drive",
+   "address2": null,
+   "city": "Alexandria",
+   "zip": "22312"
+  }
+ }
+]

@@ -978,15 +978,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "22030",
-   "city": "Fairfax",
+   "zip": "22312",
+   "city": "Alexandria",
    "email": "info@thecaf.org",
    "notes": "Call or text 703-653-4221, visit the Recovery Community Center, or connect through CAF outreach programs.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
-   "address1": "10301 Democracy Lane",
-   "address2": "Suite 150",
+   "address1": "5710A General Washington Drive",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -1073,6 +1073,13 @@
      "reason": "2 of 3 independent checkers agree (values reconciled: I checked thecaf.org/contact-us, the organization's own page. It says 'Monday - Friday 9am - 5pm' for peer specialist calls, texts and appointments, at the listed Democracy Lane address. Vote B's 24/7 entry is the separate Peer Warm Line, so it isn't the office's hours.)",
      "evidence_url": "https://www.thecaf.org/contact-us",
      "evidence_quote": "Monday - Friday 9am - 5pm || Peer Warm Line: 24 hours a day, 7 days a week. Spanish-language peer support is also available Monday–Friday, 9:00 AM–4:00 PM."
+    },
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
     }
    ],
    "organization_name": "The Chris Atwood Foundation",
@@ -1083,15 +1090,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "22030",
-   "city": "Fairfax",
+   "zip": "22312",
+   "city": "Alexandria",
    "email": "info@thecaf.org",
    "notes": "Call or text the Peer Warm Line, visit the Recovery Community Center, or access scheduled peer groups and programs.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
-   "address1": "10301 Democracy Lane",
-   "address2": "Suite 150",
+   "address1": "5710A General Washington Drive",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -1132,6 +1139,13 @@
      "reason": "2 of 3 independent checkers agree (values reconciled: I checked thecaf.org/contact-us, the organization's own page. It says 'Monday - Friday 9am - 5pm' for peer specialist calls, texts and appointments, at the listed Democracy Lane address. Vote B's 24/7 entry is the separate Peer Warm Line, so it isn't the office's hours.)",
      "evidence_url": "https://www.thecaf.org/contact-us",
      "evidence_quote": "Monday - Friday 9am - 5pm || Peer Warm Line: 24 hours a day, 7 days a week. Spanish-language peer support is also available Monday–Friday, 9:00 AM–4:00 PM."
+    },
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
     }
    ],
    "organization_name": "The Chris Atwood Foundation",
@@ -1142,15 +1156,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "22030",
-   "city": "Fairfax",
+   "zip": "22312",
+   "city": "Alexandria",
    "email": "info@thecaf.org",
    "notes": "Apply through CAF’s recovery housing program or contact a Peer Recovery Specialist for assistance with housing resources and referrals.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
-   "address1": "10301 Democracy Lane",
-   "address2": "Suite 150",
+   "address1": "5710A General Washington Drive",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -1191,6 +1205,13 @@
      "reason": "2 of 3 independent checkers agree (values reconciled: I checked thecaf.org/contact-us, the organization's own page. It says 'Monday - Friday 9am - 5pm' for peer specialist calls, texts and appointments, at the listed Democracy Lane address. Vote B's 24/7 entry is the separate Peer Warm Line, so it isn't the office's hours.)",
      "evidence_url": "https://www.thecaf.org/contact-us",
      "evidence_quote": "Monday - Friday 9am - 5pm || Peer Warm Line: 24 hours a day, 7 days a week. Spanish-language peer support is also available Monday–Friday, 9:00 AM–4:00 PM."
+    },
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
     }
    ],
    "organization_name": "The Chris Atwood Foundation",
@@ -1201,15 +1222,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "22030",
-   "city": "Fairfax",
+   "zip": "22312",
+   "city": "Alexandria",
    "email": "info@thecaf.org",
    "notes": "Contact a CAF Peer Recovery Specialist through the warmline to discuss transportation needs and eligibility.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
-   "address1": "10301 Democracy Lane",
-   "address2": "Suite 150",
+   "address1": "5710A General Washington Drive",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -1250,6 +1271,13 @@
      "reason": "2 of 3 independent checkers agree (values reconciled: I checked thecaf.org/contact-us, the organization's own page. It says 'Monday - Friday 9am - 5pm' for peer specialist calls, texts and appointments, at the listed Democracy Lane address. Vote B's 24/7 entry is the separate Peer Warm Line, so it isn't the office's hours.)",
      "evidence_url": "https://www.thecaf.org/contact-us",
      "evidence_quote": "Monday - Friday 9am - 5pm || Peer Warm Line: 24 hours a day, 7 days a week. Spanish-language peer support is also available Monday–Friday, 9:00 AM–4:00 PM."
+    },
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
     }
    ],
    "organization_name": "The Chris Atwood Foundation",
@@ -1260,15 +1288,15 @@
   {
    "lat": 38.8497133964698,
    "lon": -77.3002605310152,
-   "zip": "22030",
-   "city": "Fairfax",
+   "zip": "22312",
+   "city": "Alexandria",
    "email": "info@thecaf.org",
    "notes": "Walk-in/mobile outreach or call/text 703-653-4221. Enrollment in the Comprehensive Harm Reduction program is free, easy, and anonymous.",
    "phone": "(703) 653-4221",
    "state": "VA",
    "website": "https://www.thecaf.org",
-   "address1": "10301 Democracy Lane",
-   "address2": "Suite 150",
+   "address1": "5710A General Washington Drive",
+   "address2": null,
    "services": [
     {
      "frequency": null,
@@ -1309,6 +1337,13 @@
      "reason": "2 of 3 independent checkers agree (values reconciled: I checked thecaf.org/contact-us, the organization's own page. It says 'Monday - Friday 9am - 5pm' for peer specialist calls, texts and appointments, at the listed Democracy Lane address. Vote B's 24/7 entry is the separate Peer Warm Line, so it isn't the office's hours.)",
      "evidence_url": "https://www.thecaf.org/contact-us",
      "evidence_quote": "Monday - Friday 9am - 5pm || Peer Warm Line: 24 hours a day, 7 days a week. Spanish-language peer support is also available Monday–Friday, 9:00 AM–4:00 PM."
+    },
+    {
+     "date": "2026-10-12-spot-check",
+     "field": "address",
+     "reason": "spot-check: 2+ of 3 independent checkers agree",
+     "evidence_url": "https://search.211virginia.org/search/fea3c5f6-7237-54c0-b834-d8cbef899f7d",
+     "evidence_quote": "5710A General Washington Drive, Alexandria, VA 22312"
     }
    ],
    "organization_name": "The Chris Atwood Foundation",
