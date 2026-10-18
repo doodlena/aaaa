@@ -1,9 +1,9 @@
 """Demo mode: fictional providers for demo videos and live demos (Admin → Site settings → Demo mode).
 
 The providers come from data/fixtures/demo_providers.json (source `demo-providers`, all `is_synthetic`). Loading them
-is idempotent. While demo mode is on, the public site shows only the published demo listings (all verified) with
-today's provider posts, and the admin dashboard counts and queues only demo data; real listings are hidden, never
-changed. Turning demo mode off hides the demo data again.
+is idempotent. While demo mode is on, the public site shows the real listings plus the published demo listings (all
+verified); only demo providers post live updates. The admin dashboard counts and queues only demo data; real listings
+are never changed. Turning demo mode off hides the demo data again.
 """
 import hashlib
 import json

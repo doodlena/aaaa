@@ -27,7 +27,7 @@ def test_site_settings_require_admin(client, db):
     assert client.patch("/api/admin/site-settings", json={"demo_mode": True}).status_code == 403
 
 
-def test_demo_mode_shows_only_verified_demo_providers_and_turns_off(admin_client, published, db):
+def test_demo_mode_adds_verified_demo_providers_to_real_listings_and_turns_off(admin_client, published, db):
     real_names = {i["name"] for i in _search(admin_client)["items"]}
     assert real_names and all(n.startswith("[TEST]") for n in real_names)
 
@@ -38,11 +38,18 @@ def test_demo_mode_shows_only_verified_demo_providers_and_turns_off(admin_client
 
     res = _search(admin_client)
     items = res["items"] + res["uncertain"]
-    assert len(items) == 18  # 3 demo listings wait unverified in the admin queue
-    assert not any(i["name"].startswith("[TEST]") for i in items)  # real/test listings hidden
-    assert all(i["verification_label"] == "verified" and not i["is_synthetic"] and "synthetic" not in i["warnings"] for i in items)
+    assert {i["name"] for i in items} >= real_names  # real listings stay on the map
+    demo_items = [i for i in items if i["name"] not in real_names]
+    assert len(demo_items) == 18  # 3 demo listings wait unverified in the admin queue
+    assert all(i["verification_label"] == "verified" and not i["is_synthetic"] and "synthetic" not in i["warnings"] for i in demo_items)
+    items = demo_items
     detail = admin_client.get(f"/api/resources/{items[0]['id']}").json()
     assert detail["verification_label"] == "verified" and not any(s["is_synthetic"] for s in detail["sources"])
+
+    # Places with a live update today come first
+    ordered = _search(admin_client)["items"]
+    flags = [i["live"] is not None for i in ordered]
+    assert any(flags) and flags == sorted(flags, reverse=True)
 
     # Provider-based filters work on today's demo posts
     live = _search(admin_client, live_open="true")["items"]

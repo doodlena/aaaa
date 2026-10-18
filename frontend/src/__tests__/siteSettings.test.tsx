@@ -67,10 +67,11 @@ describe('demo mode', () => {
     await waitFor(() => expect(screen.queryByTestId('synthetic-badge')).toBeNull());
   });
 
-  it('shows the site-wide demo banner', async () => {
-    mockFetch([], { features: { demo_mode: true } });
+  it('shows no demo banner, so demo mode looks like the real site on camera', async () => {
+    const { calls } = mockFetch([], { features: { demo_mode: true } });
     renderApp(<Layout />);
-    expect(await screen.findByRole('note')).toHaveTextContent('Demo mode: these are sample listings');
+    await waitFor(() => expect(calls.some((c) => c.url.pathname === '/api/meta/features')).toBe(true));
+    expect(screen.queryByText(/Demo mode/)).toBeNull();
   });
 
   it('listings never say they are unverified', async () => {

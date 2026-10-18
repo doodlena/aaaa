@@ -126,10 +126,13 @@ under the old number, was given the two provider-portal columns and stamped `001
     page live feed and "Today at this location" until providers are actually posting.
   - **Demo mode** (off by default): loads 21 fictional providers from `data/fixtures/demo_providers.json` on first use
     (`app/services/demo.py`), all inside VA-08 and verified, with today's posts, events, 3 access requests and 3 community
-    reports. Public site and admin dashboard show only demo data; it forces live provider updates on and hides the
-    "Test data" badge. A site-wide banner says the listings are samples. Tests: `test_site_settings.py`,
+    reports. The public site shows the real listings plus the demo ones (only the 10 demo providers with posts have live
+    updates); the admin dashboard shows only demo data. It forces live provider updates on and hides the
+    "Test data" badge. There is no demo banner (removed at the owner's request for filming), so keep it on only while
+    filming. Tests: `test_site_settings.py`,
     `siteSettings.test.tsx`.
   - On phones the admin menu is one horizontally swipeable row.
+  - Search results list places with a live provider update today first, then in the chosen order.
 - The staff portal is labelled "For services" and serves every kind of provider. `/api/provider/me` reports
   `offers_food` per listing; when false the portal hides the food-only controls ("Out of food", shelf items, event food
   offerings). The URL is still `/pantry`, and the surplus board remains food-only.

@@ -21,9 +21,6 @@
     "label": "Idioma",
     "more": "Más idiomas"
   },
-  "demo": {
-    "banner": "Modo de demostración: estos son ejemplos para una demostración, no lugares reales."
-  },
   "footer": {
     "disclaimer": "Las actualizaciones en vivo provienen de los proveedores de apoyo, pero la información aún puede cambiar. Este sitio no recopila datos personales para publicidad ni para ningún otro uso.",
     "about": "Acerca de este sitio",
@@ -1112,11 +1109,11 @@
       "saving": "Guardando…",
       "demo_mode": {
         "label": "Modo de demostración",
-        "help": "Muestra proveedores ficticios de demostración en lugar de los listados reales, todos verificados y con las publicaciones de hoy. El panel de administración también muestra los datos de demostración. Un pequeño aviso indica a los visitantes que es una demostración. Desactívelo al terminar de grabar.",
+        "help": "Agrega proveedores ficticios de demostración a los listados reales, todos verificados; algunos publican novedades de hoy. El panel de administración muestra solo los datos de demostración. Los visitantes no ven ningún aviso de que algunos lugares son ejemplos, así que desactívelo en cuanto termine de grabar.",
         "loaded_one": "Hay {{count}} listado de demostración cargado.",
         "loaded_other": "Hay {{count}} listados de demostración cargados.",
         "turnedOn": "El modo de demostración está activado. El sitio muestra proveedores de demostración.",
-        "turnedOff": "El modo de demostración está desactivado. Volvieron los listados reales."
+        "turnedOff": "El modo de demostración está desactivado. Los lugares de ejemplo están ocultos."
       },
       "provider_features": {
         "label": "Actualizaciones en vivo de proveedores",

@@ -187,19 +187,6 @@ svg {
   color: #fff;
 }
 
-.demo-banner {
-  display: flex;
-  gap: var(--sp-2);
-  align-items: center;
-  justify-content: center;
-  padding: var(--sp-2) var(--sp-4);
-  background: var(--plum);
-  color: #fff;
-  font-size: var(--fs-sm);
-  font-weight: 700;
-  text-align: center;
-}
-
 .app {
   min-height: 100vh;
   display: flex;
@@ -3427,8 +3414,7 @@ form.is-ai-drafted select {
     font-size: 9pt;
   }
   .site-header,
-  .site-footer,
-  .demo-banner {
+  .site-footer {
     display: none;
   }
 }

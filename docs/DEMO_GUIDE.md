@@ -8,11 +8,12 @@ it is verified.
 
 1. Sign in as an admin and open **Admin → Site settings**.
 2. Turn on **Demo mode**. The first time, it loads 21 fictional providers in Arlington, Alexandria, Falls Church and
-   the VA-08 part of Fairfax County (try ZIP 22204 or 22314). Every demo listing shows as verified, live provider
-   filters work, and the admin dashboard shows only demo access requests, reports and listings to verify.
-3. A purple banner at the top says these are sample listings. Keep it in the shot; real families may visit the site
-   while demo mode is on.
-4. When you're done, turn **Demo mode** off. Real listings come back unchanged.
+   the VA-08 part of Fairfax County (try ZIP 22204 or 22314). They appear alongside all the real listings. Every demo
+   listing shows as verified, and 10 of them post live updates today, so the live provider filters work. The admin
+   dashboard shows only demo access requests, reports and listings to verify.
+3. There is no demo banner, so visitors can't tell the demo places from real ones. Keep demo mode on only while you
+   film: real families may visit the site in the meantime. Places with a live update today are listed first.
+4. When you're done, turn **Demo mode** off. The demo places disappear; real listings are never changed.
 
 ## Setup with the command line (older flow)
 

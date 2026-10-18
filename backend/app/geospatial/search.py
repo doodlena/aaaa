@@ -85,11 +85,6 @@ def public_visibility():
     from app.geospatial import district
 
     area = [district.contains(Location.geom)] if site_flags.district_only() else []
-    if site_flags.demo_mode():
-        # Demo mode: only the published fictional demo providers; real listings are hidden while it is on.
-        return and_(demo.is_demo_location(), Location.published.is_(True), Location.review_status.in_(PUBLIC_REVIEW_STATUSES),
-                    Location.merged_into_id.is_(None), Location.operating_status != "permanently_closed", Location.geom.isnot(None),
-                    *area)
     s = get_settings()
     verified = and_(
         Location.published.is_(True),
@@ -111,7 +106,13 @@ def public_visibility():
         cond.append(Location.is_synthetic.is_(False))
     else:
         cond.append(not_(demo.is_demo_location()))
-    return and_(*cond)
+    real = and_(*cond)
+    if not site_flags.demo_mode():
+        return real
+    # Demo mode: the real listings as usual, plus the published fictional demo providers (the only ones posting live updates).
+    return or_(real, and_(demo.is_demo_location(), Location.published.is_(True), Location.review_status.in_(PUBLIC_REVIEW_STATUSES),
+                          Location.merged_into_id.is_(None), Location.operating_status != "permanently_closed",
+                          Location.geom.isnot(None), *area))
 
 
 def _point(lat: float, lon: float):
@@ -291,6 +292,7 @@ def _sort(items: list[dict], how: str) -> None:
         items.sort(key=lambda i: i["name"].lower())
     else:
         items.sort(key=lambda i: (i["distance_km"] if i["distance_km"] is not None else far, i["name"].lower()))
+    items.sort(key=lambda i: i["live"] is None)  # places with a live update today first; stable, so the order above holds within
 
 
 def coverage(db: Session, p: SearchParams) -> dict:

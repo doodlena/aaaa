@@ -1,7 +1,7 @@
 """Site-wide switches admins flip at runtime (Admin → Site settings), stored in app_settings.
 
-- demo_mode: the public site and the admin dashboard show only the fictional demo providers (app/services/demo.py),
-  for filming and live demos. Real listings are hidden while it is on, never altered.
+- demo_mode: the public site adds the fictional demo providers (app/services/demo.py) to the real listings and the admin
+  dashboard shows only demo data, for filming and live demos. Real listings are never altered.
 - district_only: the public site shows only listings inside Virginia's 8th congressional district (on by default).
 - provider_features: live provider updates (today's status, "on the shelf today" filters, the home page feed).
   Off until providers are actually posting; demo mode always turns them on.

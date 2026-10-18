@@ -21,9 +21,6 @@
     "label": "Language",
     "more": "More languages"
   },
-  "demo": {
-    "banner": "Demo mode: these are sample listings for a demonstration, not real places."
-  },
   "footer": {
     "disclaimer": "Live updates come from the support providers, but information can still change. This site does not collect personal data for advertising or any other usage.",
     "about": "About this site",
@@ -1112,11 +1109,11 @@
       "saving": "Saving…",
       "demo_mode": {
         "label": "Demo mode",
-        "help": "Shows fictional demo providers instead of real listings, all verified, with today's provider posts. The admin dashboard shows the demo data too. A small banner tells visitors it's a demo. Turn it off when you're done filming.",
+        "help": "Adds fictional demo providers to the real listings, all marked verified; a few of them post live updates today. The admin dashboard shows only the demo data. Visitors see no notice that some places are samples, so turn it off as soon as you're done filming.",
         "loaded_one": "{{count}} demo listing is loaded.",
         "loaded_other": "{{count}} demo listings are loaded.",
         "turnedOn": "Demo mode is on. The site now shows demo providers.",
-        "turnedOff": "Demo mode is off. Real listings are back."
+        "turnedOff": "Demo mode is off. The sample places are hidden."
       },
       "provider_features": {
         "label": "Live provider updates",

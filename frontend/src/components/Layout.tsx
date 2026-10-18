@@ -9,18 +9,6 @@ import { Icon } from './Icon';
 import { OfflineBanner } from './OfflineBanner';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
-export function DemoBanner() {
-  const { t } = useTranslation();
-  const { meta, features } = useMeta();
-  if (!meta?.demo_mode && !features?.demo_mode) return null;
-  return (
-    <div className="demo-banner" role="note">
-      <Icon name="flask" size={16} />
-      {t('demo.banner')}
-    </div>
-  );
-}
-
 export function Layout() {
   const { t } = useTranslation();
   const { user, logout } = useAuth();
@@ -53,7 +41,6 @@ export function Layout() {
       <a className="skip-link" href="#main">
         {t('nav.skip')}
       </a>
-      <DemoBanner />
       <header className="site-header">
         <div className="site-header__inner">
           <Link to="/" className="brand" aria-label={t('nav.home', { app: appName })}>
