@@ -1,0 +1,737 @@
+{
+ "_notice": "Owner curation, replayed by `load-data` on every database (keyed by stable source-record keys). 'hide': not free direct assistance (for-profit businesses; apartment-complex sites for their residents). 'merge': the same place listed more than once; 'drop' is merged into 'keep'.",
+ "hide": [
+  {
+   "record": [
+    "samhsa-treatment",
+    "7c48dfc1f53b1b91"
+   ],
+   "name": "AMFM Mental Health Treatment A Mission for Michael",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "e8e63b88a1ee37eb"
+   ],
+   "name": "AMFM Mental Health Treatment A Mission for Michael",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "e606558aaa8ff90a"
+   ],
+   "name": "AMFM Mental Health Treatment A Mission for Michael",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "369120f09d7337a1"
+   ],
+   "name": "AMFM Mental Health Treatment A Mission for Michael",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "737aa186160cfbbf"
+   ],
+   "name": "AMFM Mental Health Treatment A Mission for Michael",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "cdc2922d59ae6591"
+   ],
+   "name": "AMFM Mental Health Treatment A Mission for Michael",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "c7f06751bc449093"
+   ],
+   "name": "Annandale Comprehensive Treatment Center",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "9af04c26442d0089"
+   ],
+   "name": "Aquila Recovery of Virginia",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "5724185bf9047eb9"
+   ],
+   "name": "Center for Discovery Alexandria",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "36f73403dcb249d6"
+   ],
+   "name": "Center for Discovery Fairfax",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "cf412bc26a7b167f"
+   ],
+   "name": "Center for Discovery McLean",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "05944f369af881af"
+   ],
+   "name": "Discovery Mood and Anxiety Program Fairfax Station",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "f1fb51ad55396d6f"
+   ],
+   "name": "Dr Goldberg and Associates PLLC McLean Office",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "4f834327e3ff8657"
+   ],
+   "name": "Dr Goldberg and Associates PLLC Old Town Alexandria Office",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "eef9f9ed8f27ae93"
+   ],
+   "name": "Dr Goldberg and Associates PLLC Reston Office",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "22db21cdf7e6ac62"
+   ],
+   "name": "Dr Goldberg and Associates PLLC Stevenson Alexandria Office",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "80cb689ab86675b5"
+   ],
+   "name": "Dr Goldberg and Associates PLLC Vienna Office",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "81cbf7c3f4b841e4"
+   ],
+   "name": "Embark Behavioral Health Alexandria",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "a6976dca6a06f8aa"
+   ],
+   "name": "Encore Outpatient Services",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "44a6911daa163f59"
+   ],
+   "name": "Harrison House Recovery Unplugged Northern Virginia",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "8e75326dc688109b"
+   ],
+   "name": "Harrison House Recovery Unplugged Northern Virginia",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "a82ea657daffeb40"
+   ],
+   "name": "Kolmac Integrated Behavioral Health",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "7326355ee0304418"
+   ],
+   "name": "Lifebulb Counseling and Therapy",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "ff5138e456621f0b"
+   ],
+   "name": "Mission Connection Healthcare",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "3bbee50cb1b4704a"
+   ],
+   "name": "Monte Nido Clementine Fairfax",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "a46cd26ff21e36b3"
+   ],
+   "name": "Multicultural Clinical Center",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "4bc6262d1065069b"
+   ],
+   "name": "Multicultural Clinical Center",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "b18d566d8df8628c"
+   ],
+   "name": "Newport Academy Teen and Adolescent Outpatient",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "29ea731f94338b41"
+   ],
+   "name": "Newport Academy Teen and Adolescent Residential",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "5d4d2f7b8696f1b3"
+   ],
+   "name": "Newport Academy Teen and Adolescent Residential",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "a83d75ac72a9e00f"
+   ],
+   "name": "Novara Recovery Center Virginia Drug and Alcohol Rehab",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "ad9e82d1f3badc4b"
+   ],
+   "name": "Resova Health",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "a9c484332ebb6dbe"
+   ],
+   "name": "Sandstone Care Alexandria",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "12fada6c9dfcf263"
+   ],
+   "name": "Sandstone Care Alexandria",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "e59b1f68ec7c3567"
+   ],
+   "name": "Sandstone Care Detox Center",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "b9271c52e6125240"
+   ],
+   "name": "Sandstone Care Detox Center",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "4c1a388bb0cd827e"
+   ],
+   "name": "Sandstone Care Reston",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "e010e3000091f7a1"
+   ],
+   "name": "Sandstone Care Reston",
+   "reason": "for_profit"
+  },
+  {
+   "record": [
+    "cafb-get-help",
+    "22694-MOMK-01"
+   ],
+   "name": "Park Shirlington Apartments",
+   "reason": "apartment_site"
+  },
+  {
+   "record": [
+    "ai-manual-files",
+    "95476d9719341d11"
+   ],
+   "name": "Park Shirlington Apartments",
+   "reason": "apartment_site"
+  },
+  {
+   "record": [
+    "ai-manual-files",
+    "f25941ed73efe59d"
+   ],
+   "name": "Gilliam Place Apartments",
+   "reason": "apartment_site"
+  },
+  {
+   "record": [
+    "cafb-get-help",
+    "16840-MOMK-02"
+   ],
+   "name": "Fairmont Gardens Apartments",
+   "reason": "apartment_site"
+  },
+  {
+   "record": [
+    "fairfax-food-access",
+    "d2aabb48-e4ef-4553-8b48-55ba2b5d5c49"
+   ],
+   "name": "Fairmont Gardens Apartments",
+   "reason": "apartment_site"
+  },
+  {
+   "record": [
+    "afac-get-groceries",
+    "33c5599fe659d9ad"
+   ],
+   "name": "Westover at Fisher House",
+   "reason": "apartment_site"
+  },
+  {
+   "record": [
+    "ai-manual-files",
+    "1a0e7c680a273b5b"
+   ],
+   "name": "Westover at Fisher House",
+   "reason": "apartment_site"
+  },
+  {
+   "record": [
+    "ai-manual-files",
+    "37081c4ce8465f44"
+   ],
+   "name": "Gates of Ballston Community Center",
+   "reason": "apartment_site"
+  },
+  {
+   "record": [
+    "nova-food-research",
+    "nova-food-ffo-burke-summit-oaks"
+   ],
+   "name": "Food for Others Neighborhood Site - Burke (Summit Oaks)",
+   "reason": "apartment_site"
+  },
+  {
+   "record": [
+    "nova-food-research",
+    "nova-food-ffo-fairfax-yorkville"
+   ],
+   "name": "Food for Others Neighborhood Site - Fairfax (Yorkville Apartments)",
+   "reason": "apartment_site"
+  },
+  {
+   "record": [
+    "nova-food-research",
+    "nova-food-ffo-springfield-gardens"
+   ],
+   "name": "Food for Others Neighborhood Site - Springfield Gardens",
+   "reason": "apartment_site"
+  },
+  {
+   "record": [
+    "va08-gap-research",
+    "va08gap-ffo-hollywood"
+   ],
+   "name": "Food for Others Neighborhood Site – Hollywood (Wexford Manor Apartments)",
+   "reason": "apartment_site"
+  }
+ ],
+ "merge": [
+  {
+   "keep": [
+    "cafb-get-help",
+    "15830-PART-01"
+   ],
+   "drop": [
+    "va08-web-research",
+    "va08-united-community-cynthia-hull-pantry"
+   ],
+   "name": "Cynthia Hull Food Pantry -> Cynthia Hull Food Pantry"
+  },
+  {
+   "keep": [
+    "cafb-get-help",
+    "19402-PART-01"
+   ],
+   "drop": [
+    "fairfax-food-access",
+    "2e67ee5a-25b7-47ef-8a6b-13a331a6ed9c"
+   ],
+   "name": "St. Stephen's UMC -> St. Stephen's UMC"
+  },
+  {
+   "keep": [
+    "nova-food-research",
+    "nova-food-wfcm-chantilly"
+   ],
+   "drop": [
+    "cafb-get-help",
+    "16245-PART-01"
+   ],
+   "name": "WFCM Chantilly Free Food Market -> WFCM Chantilly Free Food Market"
+  },
+  {
+   "keep": [
+    "hrsa-health-centers",
+    "b8179812f687972d"
+   ],
+   "drop": [
+    "nova-reproductive-health",
+    "nova-rh-neighborhood-health-martha-custis"
+   ],
+   "name": "Neighborhood Health @ Martha Custis Drive -> Neighborhood Health at Martha Custis Drive"
+  },
+  {
+   "keep": [
+    "samhsa-treatment",
+    "ef4393f17a1626d2"
+   ],
+   "drop": [
+    "samhsa-treatment",
+    "467b8d0c882ee70a"
+   ],
+   "name": "South County Youth Services -> South County Youth Services"
+  },
+  {
+   "keep": [
+    "nova-support-services",
+    "nova-svc-fairfax-herndon-reston-phc"
+   ],
+   "drop": [
+    "nova-reproductive-health",
+    "nova-rh-fairfax-herndon-reston-phc"
+   ],
+   "name": "Herndon-Reston Public Health Center -> Herndon-Reston Public Health Center"
+  },
+  {
+   "keep": [
+    "fairfax-food-access",
+    "5842b469-dafc-4de4-8ef1-adb86cef0fd1"
+   ],
+   "drop": [
+    "cafb-get-help",
+    "223636-PART-01"
+   ],
+   "name": "Second Story Culmore -> Second Story - Culmore Family Resource Center"
+  },
+  {
+   "keep": [
+    "cafb-get-help",
+    "22633-PART-01"
+   ],
+   "drop": [
+    "fairfax-food-access",
+    "d208937d-f1ef-4044-8267-60c40e8109a1"
+   ],
+   "name": "Ken Jackson Food Pantry -> St. Matthews Ken Jackson Food Closet"
+  },
+  {
+   "keep": [
+    "pwc-cmn-support-services",
+    "bd3829c5-b4c5-40d2-adf7-afd0a6d7fadb"
+   ],
+   "drop": [
+    "pwc-cmn-support-services",
+    "45e53665-187b-44d5-8530-760d65729610"
+   ],
+   "name": "Lutheran Social Services of the National Capital Area -> Lutheran Social Services of the National Capital Area"
+  },
+  {
+   "keep": [
+    "pwc-cmn-support-services",
+    "bd3829c5-b4c5-40d2-adf7-afd0a6d7fadb"
+   ],
+   "drop": [
+    "pwc-cmn-support-services",
+    "45e53665-187b-44d5-8530-760d65729610"
+   ],
+   "name": "Lutheran Social Services of the National Capital Area -> Lutheran Social Services of the National Capital Area"
+  },
+  {
+   "keep": [
+    "pwc-cmn-support-services",
+    "bd3829c5-b4c5-40d2-adf7-afd0a6d7fadb"
+   ],
+   "drop": [
+    "pwc-cmn-support-services",
+    "45e53665-187b-44d5-8530-760d65729610"
+   ],
+   "name": "Lutheran Social Services of the National Capital Area -> Lutheran Social Services of the National Capital Area"
+  },
+  {
+   "keep": [
+    "pwc-cmn-support-services",
+    "bd3829c5-b4c5-40d2-adf7-afd0a6d7fadb"
+   ],
+   "drop": [
+    "pwc-cmn-support-services",
+    "45e53665-187b-44d5-8530-760d65729610"
+   ],
+   "name": "Lutheran Social Services of the National Capital Area -> Lutheran Social Services of the National Capital Area"
+  },
+  {
+   "keep": [
+    "pwc-cmn-support-services",
+    "bd3829c5-b4c5-40d2-adf7-afd0a6d7fadb"
+   ],
+   "drop": [
+    "pwc-cmn-support-services",
+    "45e53665-187b-44d5-8530-760d65729610"
+   ],
+   "name": "Lutheran Social Services of the National Capital Area -> Lutheran Social Services of the National Capital Area"
+  },
+  {
+   "keep": [
+    "va08-web-research",
+    "va08-alive-west-end-food-hub"
+   ],
+   "drop": [
+    "cafb-get-help",
+    "14570-PART-02"
+   ],
+   "name": "ALIVE! -> ALIVE! West End Food Hub"
+  },
+  {
+   "keep": [
+    "cafb-get-help",
+    "22293-MOMK-01"
+   ],
+   "drop": [
+    "fairfax-food-access",
+    "e1744ec9-2b8f-44f0-8d90-c16efda56757"
+   ],
+   "name": "CBC Blesses Mobile Market -> Chantilly Baptist Church"
+  },
+  {
+   "keep": [
+    "fairfax-food-access",
+    "a22e59b7-dc01-43ca-8a63-39c3ab38975a"
+   ],
+   "drop": [
+    "cafb-get-help",
+    "22249-PART-01"
+   ],
+   "name": "Buddhist Tzu Chi Foundation -> Tzu Chi Food Pantry- Reston, VA"
+  },
+  {
+   "keep": [
+    "cafb-get-help",
+    "22207-PART-01"
+   ],
+   "drop": [
+    "fairfax-food-access",
+    "c30bf32e-7ab2-407a-8f11-fe29e2fe01f6"
+   ],
+   "name": "Burke Gives Back Community Co-op -> Burke United Methodist Church"
+  },
+  {
+   "keep": [
+    "cafb-get-help",
+    "19652-MOMK-01"
+   ],
+   "drop": [
+    "fairfax-food-access",
+    "de222610-c45b-4d15-8370-45f24afe4cdb"
+   ],
+   "name": "CAFB Mobile Market -> Culmore UMC"
+  },
+  {
+   "keep": [
+    "cafb-get-help",
+    "19652-MOMK-01"
+   ],
+   "drop": [
+    "cafb-get-help",
+    "16840-MOMK-01"
+   ],
+   "name": "Culmore Community Library -> Culmore UMC"
+  },
+  {
+   "keep": [
+    "va08-gap-research",
+    "va08gap-ffx-james-lee-senior-center"
+   ],
+   "drop": [
+    "fairfax-food-access",
+    "34f0c749-3cdd-4104-8d36-7d4aa7d4e26c"
+   ],
+   "name": "CAFB Mobile Market -> James Lee Senior Center (James Lee Community Center)"
+  },
+  {
+   "keep": [
+    "cafb-get-help",
+    "21874-PART-01"
+   ],
+   "drop": [
+    "fairfax-food-access",
+    "55cbbd93-d63e-4e82-839c-1400afa6b3f4"
+   ],
+   "name": "Fairfax Circle Church - 3110 Chichester Ln -> DMV Food Justice Initiative"
+  },
+  {
+   "keep": [
+    "cafb-get-help",
+    "19261-PART-01"
+   ],
+   "drop": [
+    "fairfax-food-access",
+    "7a753305-8db0-4d06-8adb-8adabda71555"
+   ],
+   "name": "St Anthony Church -> St. Anthony of Padua Catholic Church"
+  },
+  {
+   "keep": [
+    "cafb-get-help",
+    "14065-PART-01"
+   ],
+   "drop": [
+    "nova-food-research",
+    "nova-food-lcac-lorton-pantry"
+   ],
+   "name": "LCAC Food Pantry (Lorton Community Center) -> Lorton Community Action Center"
+  },
+  {
+   "keep": [
+    "nova-reproductive-health",
+    "nova-rh-fairfax-annandale-phc"
+   ],
+   "drop": [
+    "va08-support-services",
+    "va08svc-fairfax-annandale-public-health-center-wic"
+   ],
+   "name": "Annandale Public Health Center (WIC) -> Annandale Public Health Center"
+  },
+  {
+   "keep": [
+    "cafb-get-help",
+    "21930-MOMK-01"
+   ],
+   "drop": [
+    "ai-manual-files",
+    "602582e30616fa24"
+   ],
+   "name": "Communities in Schools of NOVA & Barcroft School -> Barcroft Elementary School"
+  },
+  {
+   "keep": [
+    "cafb-get-help",
+    "22288-PART-01"
+   ],
+   "drop": [
+    "fairfax-food-access",
+    "36b92e65-765b-4b25-80b4-0b0077cff382"
+   ],
+   "name": "Mount Olive Baptist Church. Centreville -> Mount Olive Baptist Church"
+  },
+  {
+   "keep": [
+    "nova-reproductive-health",
+    "nova-rh-healthworks-herndon"
+   ],
+   "drop": [
+    "hrsa-health-centers",
+    "6fa7f7e85265530a"
+   ],
+   "name": "Herndon Dental -> HealthWorks Herndon Location"
+  },
+  {
+   "keep": [
+    "nova-reproductive-health",
+    "nova-rh-healthworks-herndon"
+   ],
+   "drop": [
+    "hrsa-health-centers",
+    "7219ebe267d643ce"
+   ],
+   "name": "Loudoun Community Health Center dba HealthWorks for Northern Virginia (Herndon) -> HealthWorks Herndon Location"
+  },
+  {
+   "keep": [
+    "nova-reproductive-health",
+    "nova-rh-healthworks-reston"
+   ],
+   "drop": [
+    "hrsa-health-centers",
+    "41b5270dcc31e71d"
+   ],
+   "name": "Reston -> HealthWorks Reston Location"
+  },
+  {
+   "keep": [
+    "samhsa-treatment",
+    "8a6388d253e6f055"
+   ],
+   "drop": [
+    "samhsa-treatment",
+    "c21961797758ec76"
+   ],
+   "name": "Alexandria Community Services Board -> Alexandria Community Services Board"
+  }
+ ]
+}

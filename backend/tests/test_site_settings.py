@@ -78,12 +78,15 @@ def test_demo_mode_is_only_for_the_browser_that_turned_it_on(admin_client, publi
     assert admin_client.cookies.get(site_flags.DEMO_COOKIE) == "1"
     demo_ids = {i["id"] for i in _search(admin_client)["items"]} - real_ids
     assert len(demo_ids) == 18
+    # The dashboard's "On Find help" total is exactly what search shows, in demo mode too
+    assert admin_client.get("/api/admin/overview").json()["public_listings"] == len(real_ids) + 18
     assert {i["id"] for i in _search(visitor)["items"]} == real_ids  # everyone else: the normal site
     assert visitor.get(f"/api/resources/{min(demo_ids)}").status_code == 404
     r = admin_client.get("/api/resources/search", params={"lat": ARLINGTON[0], "lon": ARLINGTON[1]})
     assert r.headers["cache-control"] == "private, no-store"
     _set(admin_client, demo_mode=False)
     assert not admin_client.cookies.get(site_flags.DEMO_COOKIE)
+    assert admin_client.get("/api/admin/overview").json()["public_listings"] == len(real_ids)
     assert {i["id"] for i in _search(admin_client)["items"]} == real_ids
 
 

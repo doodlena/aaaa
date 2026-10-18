@@ -394,3 +394,28 @@ def test_apply_audit_refuses_a_finding_for_a_differently_named_listing(db, impor
     assert "name mismatch" in capsys.readouterr().out
     db.expire_all()
     assert db.get(Location, loc.id).phone != "(703) 555-0000"
+
+
+def test_curation_hides_and_merges_listings_and_is_idempotent(db, imported, admin, tmp_path, monkeypatch):
+    import json as _json
+
+    from app import cli
+    from app.geospatial.search import public_visibility
+    from app.models import SourceRecord
+
+    locs = db.scalars(select(Location).where(Location.is_synthetic.is_(True)).order_by(Location.id)).all()
+    key = lambda loc: [[r.source_id, r.external_id] for r in db.scalars(  # noqa: E731
+        select(SourceRecord).where(SourceRecord.location_id == loc.id).order_by(SourceRecord.id))][0]
+    hide, keep, drop = locs[0], locs[1], locs[2]
+    (tmp_path / "curation.json").write_text(_json.dumps({
+        "hide": [{"record": key(hide), "name": hide.name, "reason": "for_profit"}],
+        "merge": [{"keep": key(keep), "drop": key(drop), "name": "dup"}],
+    }))
+    monkeypatch.setattr(cli, "SNAPSHOT_DIR", tmp_path)
+    assert cli._apply_curation(db) == (1, 1)
+    db.expire_all()
+    assert db.get(Location, hide.id).review_status == "rejected"
+    assert db.scalar(select(Location.id).where(public_visibility(), Location.id == hide.id)) is None
+    assert db.get(Location, drop.id).merged_into_id == keep.id
+    assert db.scalar(select(SourceRecord.id).where(SourceRecord.location_id == drop.id)) is None  # records moved to keep
+    assert cli._apply_curation(db) == (0, 0)  # replaying changes nothing

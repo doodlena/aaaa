@@ -52,9 +52,9 @@ export function AdminOverview() {
     { key: 'stale', value: num('stale'), to: '/admin?stale_only=true' },
   ];
   const totals = [
-    { key: 'listings', value: num('locations_total') },
-    { key: 'published', value: num('published') },
-    { key: 'organizations', value: num('organizations') },
+    { key: 'onFindHelp', value: ov.public_listings },
+    { key: 'listings', value: ov.all_listings },
+    { key: 'organizations', value: ov.organizations },
     { key: 'accounts', value: ov.accounts },
   ];
   const statusMax = Math.max(0, ...STATUSES.map((s) => byStatus[s] ?? 0));

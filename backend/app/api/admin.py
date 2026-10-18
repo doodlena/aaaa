@@ -2,7 +2,7 @@
 from datetime import UTC, datetime, timedelta
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Response
-from sqlalchemy import Integer, func, or_, select
+from sqlalchemy import Integer, and_, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.api.public import load_location, location_sources, location_translations
@@ -217,6 +217,20 @@ def quality(jurisdiction: str | None = None, db: Session = Depends(get_db)):
 OVERVIEW_WEEKS = 8
 
 
+def _listing_totals(db: Session, in_demo: bool) -> dict:
+    """Totals that match what visitors see: 'public_listings' uses the same visibility rule as Find help (in demo mode,
+    the real listings plus the demo ones), and 'all_listings' adds the hidden and unpublished ones."""
+    from app.geospatial.search import public_visibility
+
+    real = Location.is_synthetic.is_(False)
+    listed = and_(Location.merged_into_id.is_(None), or_(real, demo.is_demo_location()) if in_demo else real)
+    return {
+        "public_listings": db.scalar(select(func.count()).select_from(Location).where(public_visibility())) or 0,
+        "all_listings": db.scalar(select(func.count()).select_from(Location).where(listed)) or 0,
+        "organizations": db.scalar(select(func.count(func.distinct(Location.organization_id))).where(listed)) or 0,
+    }
+
+
 @router.get("/overview")
 def overview(db: Session = Depends(get_db)):
     """Dashboard numbers: what is waiting for a reviewer, and reviewer actions per week. Counted from the database;
@@ -245,6 +259,7 @@ def overview(db: Session = Depends(get_db)):
                                   .join(Location, Location.id == CommunityReport.location_id)
                                   .where(real, CommunityReport.status == "open")) or 0,
         "accounts": db.scalar(select(func.count()).select_from(User)) or 0,
+        **_listing_totals(db, in_demo),
         "weeks": list(weeks.values()),
     }
 

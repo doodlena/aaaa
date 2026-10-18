@@ -42,7 +42,7 @@ describe('admin', () => {
     mockFetch(
       [
         { path: '/api/admin/quality', body: { jurisdiction: null, generated_at: '2026-10-12T00:00:00Z', includes_synthetic: false, metrics: { locations_total: 40, by_review_status: { candidate: 30, needs_review: 2, verified: 8 }, published: 8, stale: 1, pending_conflicts: 3, pending_duplicates: 4, organizations: 12, valid_address_pct: 95.5, with_documented_eligibility_pct: null } } },
-        { path: '/api/admin/overview', body: { generated_at: '2026-10-12T00:00:00Z', includes_synthetic: false, pending_claims: 5, open_reports: 0, accounts: 9, weeks: [{ week_start: '2026-10-05', verified: 2, published: 1 }, { week_start: '2026-10-12', verified: 6, published: 0 }] } },
+        { path: '/api/admin/overview', body: { generated_at: '2026-10-12T00:00:00Z', includes_synthetic: false, pending_claims: 5, open_reports: 0, accounts: 9, public_listings: 31, all_listings: 40, organizations: 12, weeks: [{ week_start: '2026-10-05', verified: 2, published: 1 }, { week_start: '2026-10-12', verified: 6, published: 0 }] } },
       ],
       { user: admin },
     );
@@ -50,6 +50,9 @@ describe('admin', () => {
     expect(await screen.findByRole('link', { name: '5 Provider access requests' })).toHaveAttribute('href', '/admin/claims');
     expect(screen.getByRole('link', { name: '32 Listings not yet verified' })).toHaveAttribute('href', '/admin/unverified');
     expect(screen.getByRole('link', { name: '7 Conflicts and possible duplicates' })).toHaveAttribute('href', '/admin/conflicts');
+    // the "On Find help" total is the same number visitors see in search
+    expect(screen.getByText('On Find help').closest('.tile')).toHaveTextContent('31');
+    expect(screen.getByText('All listings').closest('.tile')).toHaveTextContent('40');
     expect(within(screen.getByRole('row', { name: /With a complete address/ })).getByText('95.5%')).toBeInTheDocument();
     // a metric the server could not compute is shown as missing, never as 0%
     expect(within(screen.getByRole('row', { name: /With documented eligibility/ })).getByText('—')).toBeInTheDocument();

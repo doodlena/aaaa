@@ -134,6 +134,11 @@ under the old number, was given the two provider-portal columns and stamped `001
     `siteSettings.test.tsx`.
   - On phones the admin menu is one horizontally swipeable row.
   - Search results list places with a live provider update today first, then in the chosen order.
+- Owner curation (2026-10-17): `data/snapshots/curation.json` hides listings that are not free direct assistance (33
+  for-profit treatment/therapy businesses from the SAMHSA directory; 10 apartment-complex distribution sites for their
+  residents) and merges 30 duplicate listings. Keyed by stable source-record keys and replayed by `load-data` on every
+  database (`cli._apply_curation`); hidden listings stay in Admin. The admin dashboard's "On Find help" total uses the
+  same visibility rule as search, so it always matches what visitors see (real + demo in demo mode).
 - The staff portal is labelled "For services" and serves every kind of provider. `/api/provider/me` reports
   `offers_food` per listing; when false the portal hides the food-only controls ("Out of food", shelf items, event food
   offerings). The URL is still `/pantry`, and the surplus board remains food-only.

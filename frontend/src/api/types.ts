@@ -378,6 +378,11 @@ export interface AdminOverview {
   /** Counts cover only the fictional demo providers (demo mode). */
   demo_mode?: boolean;
   pending_claims: number;
+  /** Listings visitors see on Find help (same rule as search; in demo mode real + demo). */
+  public_listings: number;
+  /** Every listing, including hidden and unpublished ones. */
+  all_listings: number;
+  organizations: number;
   open_reports: number;
   accounts: number;
   weeks: { week_start: string; verified: number; published: number }[];

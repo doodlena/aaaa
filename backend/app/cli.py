@@ -644,6 +644,53 @@ def _apply_holds(db) -> int:
     return n
 
 
+def _apply_curation(db) -> tuple[int, int]:
+    """Replay owner curation (data/snapshots/curation.json, keyed by stable source-record keys): hide listings that are
+    not free direct assistance (for-profit businesses, apartment-complex sites for their residents) by rejecting their
+    records, and merge listings that are the same place. Idempotent; verified listings are never touched."""
+    from app.ingestion.verification.workflow import audit, merge_locations
+    from app.models import Location, SourceRecord, User
+
+    path = SNAPSHOT_DIR / "curation.json"
+    if not path.exists():
+        return 0, 0
+    cur = json.loads(path.read_text())
+    recs = {(r.source_id, r.external_id): r for r in db.scalars(select(SourceRecord)).all()}
+
+    def live_loc(key):
+        rec = recs.get(tuple(key))
+        loc = db.get(Location, rec.location_id) if rec and rec.location_id else None
+        while loc is not None and loc.merged_into_id:
+            loc = db.get(Location, loc.merged_into_id)
+        return loc
+
+    hidden = 0
+    for h in cur.get("hide", []):
+        loc = live_loc(h["record"])
+        if loc is None or loc.last_verified_at is not None or loc.review_status == "rejected":
+            continue
+        for r in db.scalars(select(SourceRecord).where(SourceRecord.location_id == loc.id,
+                                                       SourceRecord.status.in_(("linked", "gone")))).all():
+            r.status = "rejected"
+        loc.review_status, loc.published = "rejected", False
+        audit(db, None, "location", loc.id, "curation_hidden", None, {"reason": h.get("reason")}, label="curation")
+        hidden += 1
+    db.flush()
+    actor = db.scalar(select(User).where(User.role == "admin").order_by(User.id).limit(1))
+    merged = 0
+    for m in cur.get("merge", []) if actor else []:
+        keep, drop = live_loc(m["keep"]), live_loc(m["drop"])
+        if keep is None or drop is None or keep.id == drop.id or drop.last_verified_at is not None \
+                or keep.review_status == "rejected" or drop.review_status == "rejected":
+            continue
+        merge_locations(db, keep, drop, actor)
+        if keep.last_verified_at is None:
+            _rebuild_from_linked(db, keep)  # services, schedules and eligibility from both
+        merged += 1
+    db.commit()
+    return hidden, merged
+
+
 def cmd_rebuild_rejected(_a):
     """Rebuild unverified listings that have rejected source records, so rejected services disappear."""
     from app.models import Location, SourceRecord
@@ -976,6 +1023,7 @@ def cmd_load_data(a):
         db.commit()
         print(f"rejected records replayed: {_apply_rejections(db)} listings rebuilt")
         print(f"held listings replayed: {_apply_holds(db)}")
+        print("curation replayed: {} hidden, {} merged".format(*_apply_curation(db)))
         for cfg in configs.values():
             if cfg.retracted:
                 print(f"{cfg.id}: retracted — {_retract(db, cfg.id)} listings rebuilt without it")
