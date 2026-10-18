@@ -74,6 +74,17 @@ describe('demo mode', () => {
     expect(screen.queryByText(/Demo mode/)).toBeNull();
   });
 
+  it('detail page lists who can get help with the provider\'s own wording', async () => {
+    mockFetch([
+      { path: '/api/resources/1', body: { ...detailFixture(), who_for: [{ type: 'residency', details: 'Arlington residents only' }] } },
+      { path: '/api/resources/1/visit-plan', body: visitPlan },
+    ]);
+    renderApp(<ResourcePage />, { route: '/resource/1', path: '/resource/:id' });
+    const note = await screen.findByTestId('who-for');
+    expect(note).toHaveTextContent('Who can get help here');
+    expect(note).toHaveTextContent('Residents only — Arlington residents only');
+  });
+
   it('listings never say they are unverified', async () => {
     mockFetch([
       { path: '/api/resources/1', body: detailFixture({ verification_label: 'source_reported', last_verified_at: null }) },

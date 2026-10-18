@@ -55,6 +55,23 @@ def food_types_of(loc: Location) -> list[str]:
     return sorted({f.food_type for s in loc.services for f in s.food_types})
 
 
+# Requirements about *who* can get help (not what to bring), shown on every card as "Who can get help here".
+WHO_FOR_TYPES = ("residency", "service_area", "zip_restriction", "student_affiliation", "age", "income", "household_size",
+                 "referral")
+
+
+def who_for(loc: Location) -> list[dict]:
+    """Documented restrictions on who is served (status 'required'), one per type, with the provider's own wording."""
+    out: dict[str, dict] = {}
+    for e in sorted(loc.eligibility, key=lambda e: (e.service_id is not None, e.id or 0)):
+        if e.status != "required" or e.requirement_type not in WHO_FOR_TYPES:
+            continue
+        cur = out.setdefault(e.requirement_type, {"type": e.requirement_type, "details": None})
+        if not cur["details"] and e.details:
+            cur["details"] = e.details
+    return [out[t] for t in WHO_FOR_TYPES if t in out]
+
+
 def summary(loc: Location, distance_m: float | None = None, now: datetime | None = None, on_date: date | None = None,
             live: dict | None = None, open_reports: int = 0) -> dict:
     now = now or datetime.now(UTC)
@@ -105,6 +122,7 @@ def summary(loc: Location, distance_m: float | None = None, now: datetime | None
         "distributing_on_date": (bool(windows_on(on_date, loc.schedules, loc.exceptions, loc.events)) if has_sched else None)
         if on_date else None,
         "eligibility": elig,
+        "who_for": who_for(loc),
         "wheelchair_accessible": loc.wheelchair_accessible,
         "languages": loc.languages or [],
         "warnings": warnings,

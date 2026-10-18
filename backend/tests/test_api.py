@@ -503,3 +503,24 @@ def test_each_source_listed_once_per_place(db, published):
     db.commit()
     names = [s["source_id"] for s in location_sources(db, rec.location_id)]
     assert names.count(rec.source_id) == 1
+
+
+def test_who_for_lists_documented_limits_on_who_is_served(client, published, db):
+    from sqlalchemy import delete
+
+    from app.models import EligibilityRequirement
+
+    loc = published[0]
+    db.execute(delete(EligibilityRequirement).where(EligibilityRequirement.location_id == loc.id))
+    db.add_all([
+        EligibilityRequirement(location_id=loc.id, requirement_type="residency", status="required", details="Arlington residents only"),
+        EligibilityRequirement(location_id=loc.id, requirement_type="referral", status="required"),
+        EligibilityRequirement(location_id=loc.id, requirement_type="photo_id", status="required"),  # what to bring, not who
+        EligibilityRequirement(location_id=loc.id, requirement_type="age", status="unknown"),  # unknown is never shown as a limit
+    ])
+    db.commit()
+    d = client.get(f"/api/resources/{loc.id}").json()
+    assert d["who_for"] == [{"type": "residency", "details": "Arlington residents only"}, {"type": "referral", "details": None}]
+    items = client.get("/api/resources/search", params={"lat": 38.86, "lon": -77.08, "any_distance": "true", "page_size": 100}).json()
+    card = next(i for i in items["items"] + items["uncertain"] if i["id"] == loc.id)
+    assert card["who_for"] == d["who_for"]  # search results carry it too

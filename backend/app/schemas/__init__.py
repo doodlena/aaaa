@@ -48,6 +48,7 @@ class ResourceSummary(BaseModel):
     next_distribution: NextWindow | None
     distributing_on_date: bool | None
     eligibility: dict[str, str]
+    who_for: list[dict] = []  # documented limits on who is served (presenter.who_for)
     wheelchair_accessible: str
     languages: list[str]
     warnings: list[str]

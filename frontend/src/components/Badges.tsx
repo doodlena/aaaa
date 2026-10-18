@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import type { MatchReason, Tristate } from '../api/types';
+import type { MatchReason, Tristate, WhoForItem } from '../api/types';
 import { formatDate, formatDistance } from '../lib/format';
 import { useMeta } from '../state/meta';
 import { Icon } from './Icon';
@@ -34,6 +34,37 @@ export function SyntheticBadge() {
       <Icon name="flask" size={14} />
       {t('badges.synthetic')}
     </span>
+  );
+}
+
+/** "Who can get help here": documented limits on who is served (residents, students, age, referral...). */
+export function WhoFor({ items, full }: { items?: WhoForItem[]; full?: boolean }) {
+  const { t } = useTranslation();
+  if (!items || items.length === 0) return null;
+  if (!full) {
+    return (
+      <p className="who-for" data-testid="who-for">
+        <Icon name="family" size={14} />
+        <span className="visually-hidden">{t('whoFor.title')}: </span>
+        {items.map((i) => t(`whoFor.${i.type}`)).join(' · ')}
+      </p>
+    );
+  }
+  return (
+    <section className="who-for who-for--full" data-testid="who-for" aria-label={t('whoFor.title')}>
+      <strong>
+        <Icon name="family" size={16} />
+        {t('whoFor.title')}
+      </strong>
+      <ul>
+        {items.map((i) => (
+          <li key={i.type}>
+            <span className="who-for__label">{t(`whoFor.${i.type}`)}</span>
+            {i.details && <span className="who-for__details"> — {i.details}</span>}
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 

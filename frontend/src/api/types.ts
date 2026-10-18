@@ -2,6 +2,11 @@
 export type Tristate = 'required' | 'not_required' | 'unknown';
 export type YesNoUnknown = 'yes' | 'no' | 'unknown';
 
+export interface WhoForItem {
+  type: string;
+  details: string | null;
+}
+
 export interface Address {
   address1: string | null;
   address2: string | null;
@@ -69,6 +74,8 @@ export interface ResourceSummary {
   next_distribution: Window | null;
   distributing_on_date: boolean | null;
   eligibility: Record<string, Tristate>;
+  /** Documented limits on who is served, e.g. residents only or referral needed (empty when none are documented). */
+  who_for?: WhoForItem[];
   wheelchair_accessible: string;
   languages: string[];
   warnings: string[];

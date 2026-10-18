@@ -139,6 +139,13 @@ under the old number, was given the two provider-portal columns and stamped `001
   residents) and merges 30 duplicate listings. Keyed by stable source-record keys and replayed by `load-data` on every
   database (`cli._apply_curation`); hidden listings stay in Admin. The admin dashboard's "On Find help" total uses the
   same visibility rule as search, so it always matches what visitors see (real + demo in demo mode).
+- "Who can get help here" (2026-10-17): every card and detail page lists documented limits on who is served
+  (residents only, students or school families, age, income, ZIP/service area, referral; `presenter.who_for`), with the
+  provider's own wording on the detail page. Only `required` limits are shown; unknown is never shown as open to all.
+- Stale pages after a deploy: lazily loaded files (Chinese/Vietnamese/Korean catalogs, explorer, admin) from an older
+  version no longer exist. Missing /assets/ files now 404 instead of returning index.html (vercel.json), the service
+  worker never caches HTML as an asset (cache version os-v3), and a failed load reloads once into the new version
+  (`reloadForNewVersion`, at most once a minute).
 - The staff portal is labelled "For services" and serves every kind of provider. `/api/provider/me` reports
   `offers_food` per listing; when false the portal hides the food-only controls ("Out of food", shelf items, event food
   offerings). The URL is still `/pantry`, and the surplus board remains food-only.

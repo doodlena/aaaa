@@ -21,6 +21,17 @@
     "label": "Idioma",
     "more": "Más idiomas"
   },
+  "whoFor": {
+    "title": "Quién puede recibir ayuda aquí",
+    "residency": "Solo residentes",
+    "service_area": "Solo su zona de servicio",
+    "zip_restriction": "Solo ciertos códigos postales",
+    "student_affiliation": "Solo estudiantes o familias de la escuela",
+    "age": "Límite de edad",
+    "income": "Límite de ingresos",
+    "household_size": "Límite por tamaño del hogar",
+    "referral": "Se necesita una remisión"
+  },
   "footer": {
     "disclaimer": "Las actualizaciones en vivo provienen de los proveedores de apoyo, pero la información aún puede cambiar. Este sitio no recopila datos personales para publicidad ni para ningún otro uso.",
     "about": "Acerca de este sitio",

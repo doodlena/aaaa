@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import type { ResourceSummary } from '../api/types';
 import { localeOf } from '../i18n';
 import { formatAddress, formatDate, formatDistance, formatTimeRange, parseDate, telHref } from '../lib/format';
-import { MatchReasons, OperatingBadge, SyntheticBadge, VerificationBadge, WarningList } from './Badges';
+import { MatchReasons, OperatingBadge, SyntheticBadge, VerificationBadge, WarningList, WhoFor } from './Badges';
 import { Icon } from './Icon';
 import { LiveSummary, ReportsNotice } from './Live';
 
@@ -98,6 +98,7 @@ export const ResultCard = forwardRef<HTMLLIElement, Props>(function ResultCard({
           {formatAddress(item.address)}
           {item.distance_km !== null && <span className="card__dist"> · {t('card.away', { distance: formatDistance(item.distance_km, i18n.language) })}</span>}
         </p>
+        <WhoFor items={item.who_for} />
         {item.live && <LiveSummary live={item.live} />}
         <ReportsNotice count={item.open_reports} />
         <NextDistribution item={item} />

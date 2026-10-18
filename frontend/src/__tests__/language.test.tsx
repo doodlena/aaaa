@@ -1,7 +1,7 @@
 import { screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useTranslation } from 'react-i18next';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi as vitest } from 'vitest';
 import { LanguageSwitcher } from '../components/LanguageSwitcher';
 import en from '../i18n/locales/en.json';
 import es from '../i18n/locales/es.json';
@@ -108,5 +108,23 @@ describe('language switching', () => {
     expect(b).toEqual(a);
     const empty = flatKeys(es).filter((k) => !k.split('.').reduce<unknown>((o, p) => (o as Record<string, unknown>)[p], es));
     expect(empty).toEqual([]);
+  });
+});
+
+describe('stale page after a deploy', () => {
+  it('reloads once into the new version, never in a loop', async () => {
+    const { reloadForNewVersion } = await import('../i18n');
+    const reload = vitest.fn();
+    const original = window.location;
+    Object.defineProperty(window, 'location', { configurable: true, value: { ...original, reload } });
+    try {
+      sessionStorage.removeItem('nfa_reloaded_at');
+      expect(reloadForNewVersion()).toBe(true);
+      expect(reloadForNewVersion()).toBe(false); // a second failure within a minute is a real outage: no reload loop
+      expect(reload).toHaveBeenCalledTimes(1);
+    } finally {
+      Object.defineProperty(window, 'location', { configurable: true, value: original });
+      sessionStorage.removeItem('nfa_reloaded_at');
+    }
   });
 });

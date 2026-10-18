@@ -21,6 +21,17 @@
     "label": "语言",
     "more": "更多语言"
   },
+  "whoFor": {
+    "title": "谁可以在这里获得帮助",
+    "residency": "仅限本地居民",
+    "service_area": "仅限其服务区域",
+    "zip_restriction": "仅限部分邮编",
+    "student_affiliation": "仅限学生或学校家庭",
+    "age": "有年龄限制",
+    "income": "有收入限制",
+    "household_size": "有家庭人数限制",
+    "referral": "需要转介"
+  },
   "footer": {
     "disclaimer": "实时更新来自提供支援的机构，但信息仍可能变化。本网站不会为广告或任何其他用途收集个人数据。",
     "about": "关于本网站",

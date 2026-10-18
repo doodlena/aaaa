@@ -7,7 +7,7 @@ import { formatAddress, formatDate, formatDateTime, formatTimeRange, safeUrl, te
 import { useAsync } from '../lib/useAsync';
 import { useAuth } from '../state/auth';
 import { useDocumentTitle, useProviderFeatures } from '../state/meta';
-import { OperatingBadge, SyntheticBadge, TriChip, VerificationBadge } from './Badges';
+import { OperatingBadge, SyntheticBadge, TriChip, VerificationBadge, WhoFor } from './Badges';
 import { AIFacts, AIInfoProvider } from './AIInfo';
 import { Icon } from './Icon';
 import { LiveStatusTag, PostedBy, ReportsNotice, ShelfTags } from './Live';
@@ -218,6 +218,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
           <Icon name="pin" size={16} />
           {formatAddress(r.address) || <Unknown />}
         </p>
+        <WhoFor items={r.who_for} full />
         <div className="detail__actions">
           {r.directions ? (
             <>

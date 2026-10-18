@@ -61,9 +61,32 @@ export async function loadLanguage(code: LangCode): Promise<void> {
   i18n.addResourceBundle(code, 'translation', catalog.default, true, true);
 }
 
+const RELOAD_KEY = 'nfa_reloaded_at';
+
+/** Reload once to pick up a newly deployed version (never twice within a minute, so a real outage can't loop). */
+export function reloadForNewVersion(): boolean {
+  try {
+    const last = Number(sessionStorage.getItem(RELOAD_KEY) || 0);
+    if (Date.now() - last < 60_000) return false;
+    sessionStorage.setItem(RELOAD_KEY, String(Date.now()));
+  } catch {
+    return false;
+  }
+  window.location.reload();
+  return true;
+}
+
 /** Switch the UI language (loading its catalog first) and remember the choice on this device. */
 export async function setLanguage(code: LangCode): Promise<void> {
-  await loadLanguage(code);
+  try {
+    await loadLanguage(code);
+  } catch (e) {
+    // A page left open across a deploy asks for the old version's catalog file, which no longer exists. Remember the
+    // choice and reload into the current version, which loads it.
+    persistLanguage(code);
+    if (reloadForNewVersion()) return;
+    throw e;
+  }
   await i18n.changeLanguage(code);
   persistLanguage(code);
 }

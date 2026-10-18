@@ -21,6 +21,17 @@
     "label": "Language",
     "more": "More languages"
   },
+  "whoFor": {
+    "title": "Who can get help here",
+    "residency": "Residents only",
+    "service_area": "Its service area only",
+    "zip_restriction": "Certain ZIP codes only",
+    "student_affiliation": "Students or school families only",
+    "age": "Age limit",
+    "income": "Income limit",
+    "household_size": "Household size limit",
+    "referral": "Referral needed"
+  },
   "footer": {
     "disclaimer": "Live updates come from the support providers, but information can still change. This site does not collect personal data for advertising or any other usage.",
     "about": "About this site",

@@ -34,6 +34,17 @@ describe('ResultsList', () => {
     expect(within(card).getByText(/0\.7 mi away/)).toBeInTheDocument();
   });
 
+  it('notes who can get help on the card when a listing serves only certain people', () => {
+    renderList(searchResponse({ items: [summary({ who_for: [{ type: 'student_affiliation', details: null }, { type: 'referral', details: 'From a school counselor' }] })] }));
+    const card = screen.getByRole('listitem', { name: /Maple Community Pantry/ });
+    expect(within(card).getByTestId('who-for')).toHaveTextContent('Who can get help here: Students or school families only · Referral needed');
+  });
+
+  it('shows no "who can get help" note when no limits are documented', () => {
+    renderList(searchResponse({ items: [summary({ who_for: [] })] }));
+    expect(screen.queryByTestId('who-for')).toBeNull();
+  });
+
   it('lists uncertain matches in a separate, labelled section with what is unconfirmed', () => {
     renderList(
       searchResponse({

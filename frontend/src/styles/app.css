@@ -4086,3 +4086,36 @@ form.is-ai-drafted select {
 .site-switch .fgroup__hint {
   margin: var(--sp-2) 0 0;
 }
+
+/* "Who can get help here": documented limits on who is served */
+.who-for {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px var(--sp-2);
+  margin: var(--sp-2) 0 0;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--ink);
+}
+.who-for--full {
+  display: block;
+  margin: var(--sp-3) 0;
+  padding: var(--sp-3) var(--sp-4);
+  border-left: 4px solid var(--plum);
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+.who-for--full strong {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.who-for--full ul {
+  margin: var(--sp-2) 0 0;
+  padding-left: var(--sp-5, 1.25rem);
+  font-weight: 400;
+}
+.who-for__label {
+  font-weight: 700;
+}

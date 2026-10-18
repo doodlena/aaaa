@@ -21,6 +21,17 @@
     "label": "Ngôn ngữ",
     "more": "Ngôn ngữ khác"
   },
+  "whoFor": {
+    "title": "Ai có thể nhận trợ giúp ở đây",
+    "residency": "Chỉ dành cho cư dân",
+    "service_area": "Chỉ trong khu vực phục vụ",
+    "zip_restriction": "Chỉ một số mã ZIP",
+    "student_affiliation": "Chỉ học sinh hoặc gia đình của trường",
+    "age": "Có giới hạn tuổi",
+    "income": "Có giới hạn thu nhập",
+    "household_size": "Có giới hạn số người trong hộ",
+    "referral": "Cần giấy giới thiệu"
+  },
   "footer": {
     "disclaimer": "Cập nhật trực tiếp đến từ các nơi cung cấp hỗ trợ, nhưng thông tin vẫn có thể thay đổi. Trang này không thu thập dữ liệu cá nhân để quảng cáo hay cho bất kỳ mục đích nào khác.",
     "about": "Giới thiệu về trang này",

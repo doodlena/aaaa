@@ -5,7 +5,7 @@
  *   are cached (network-first, cache fallback) so a saved / recently viewed pantry's visit card opens offline.
  * - Never cached: /api/admin, /api/provider, /api/auth, /api/me, search, reports, AI, any non-GET request.
  */
-const VERSION = 'os-v2';
+const VERSION = 'os-v3'; // bumped: drops any HTML page cached under an /assets/ URL by older versions
 const SHELL = `${VERSION}-shell`;
 const DATA = `${VERSION}-data`;
 const SHELL_URLS = ['/', '/index.html', '/manifest.webmanifest', '/favicon.svg'];
@@ -71,7 +71,8 @@ self.addEventListener('fetch', (event) => {
         (hit) =>
           hit ||
           fetch(req).then((res) => {
-            if (res.ok) {
+            // Only real asset files: never cache an HTML page served for a missing /assets/ file.
+            if (res.ok && !(res.headers.get('content-type') || '').includes('text/html')) {
               const copy = res.clone();
               caches.open(SHELL).then((c) => c.put(req, copy));
             }
