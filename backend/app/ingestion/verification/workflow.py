@@ -81,7 +81,10 @@ def apply_action(db: Session, loc: Location, user: User, action: str, method: st
         if not publication_allowed(db, loc):
             raise HTTPException(409, "Its sources do not permit republication. Verify directly with the provider "
                                      "(phone, email, in person, or provider submission) before publishing.")
-        if loc.is_synthetic and get_settings().environment == "production":
+        from app.services.site_flags import demo_mode
+
+        # Demo providers can be (re)published on camera while demo mode is on; they are hidden again when it is off.
+        if loc.is_synthetic and get_settings().environment == "production" and not demo_mode():
             raise HTTPException(409, "Synthetic fixtures can never be published in production")
         loc.published = True
     elif action == "unpublish":

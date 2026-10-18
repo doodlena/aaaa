@@ -1,0 +1,36 @@
+{
+  "run_id": 70,
+  "source": {
+    "id": "afac-get-groceries",
+    "name": "Arlington Food Assistance Center \u2014 Get Groceries (distribution sites)",
+    "url": "https://afac.org/get-groceries/",
+    "adapter": "afac_locations",
+    "is_synthetic": false,
+    "known_limitations": [
+      "Organization page lists 5 public sites; apartment-community pickup sites are text-only and not imported.",
+      "Day abbreviations (M, Tu, W, Th, F, Sat) are expanded before schedule parsing.",
+      "The residency requirement comes from the page introduction and applies to all sites."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-13T04:13:55.870747-04:00",
+  "finished_at": "2026-10-13T08:13:56.032581+00:00",
+  "counts": {
+    "discovered": 5,
+    "inserted": 0,
+    "updated": 0,
+    "unchanged": 5,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 493,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

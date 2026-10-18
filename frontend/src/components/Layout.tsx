@@ -11,8 +11,8 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function DemoBanner() {
   const { t } = useTranslation();
-  const { meta } = useMeta();
-  if (!meta?.demo_mode) return null;
+  const { meta, features } = useMeta();
+  if (!meta?.demo_mode && !features?.demo_mode) return null;
   return (
     <div className="demo-banner" role="note">
       <Icon name="flask" size={16} />

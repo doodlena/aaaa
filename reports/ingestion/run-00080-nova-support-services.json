@@ -1,0 +1,174 @@
+{
+  "run_id": 80,
+  "source": {
+    "id": "nova-support-services",
+    "name": "Northern Virginia support services (Fairfax, Loudoun, Prince William) \u2014 AI-assisted research (cited)",
+    "url": "file://data/sources/nova_support_services.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "AI-assisted research of pages fetched on the retrieval date; each record cites source_url. Not verified.",
+      "Blocked sites were skipped, not circumvented; see the matching research log in docs/pilot_research/."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-13T04:14:55.968167-04:00",
+  "finished_at": "2026-10-13T08:14:56.032090+00:00",
+  "counts": {
+    "discovered": 39,
+    "inserted": 0,
+    "updated": 2,
+    "unchanged": 21,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 529,
+    "out_of_scope": 16,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "nova-svc-fairfax-dfs-lake-anne",
+      "status": "linked",
+      "location_id": 377,
+      "issues": []
+    },
+    {
+      "external_id": "nova-svc-fairfax-csb-chantilly",
+      "status": "linked",
+      "location_id": 379,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-svc-fairfax-csb-reston-northwest",
+      "status": "linked",
+      "location_id": 380,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-svc-fairfax-herndon-reston-phc",
+      "status": "linked",
+      "location_id": 516,
+      "issues": []
+    },
+    {
+      "external_id": "nova-svc-fairfax-franconia-springfield-phc",
+      "status": "linked",
+      "location_id": 381,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-svc-fairfax-employment-resource-center-pennino",
+      "status": "linked",
+      "location_id": 518,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-svc-fairfax-burke-springfield-center-active-adults",
+      "status": "rejected",
+      "location_id": 396,
+      "issues": []
+    },
+    {
+      "external_id": "nova-svc-fairfax-arbor-row-center",
+      "status": "rejected",
+      "location_id": 397,
+      "issues": []
+    },
+    {
+      "external_id": "nova-svc-fcps-adult-esol-chantilly-hs",
+      "status": "linked",
+      "location_id": 398,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-svc-fcps-adult-esol-herndon-learning-center",
+      "status": "linked",
+      "location_id": 399,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-svc-fcps-adult-esol-woodson-hs",
+      "status": "linked",
+      "location_id": 400,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-svc-fairfax-dfs-pennino",
+      "status": "linked",
+      "location_id": 99,
+      "issues": []
+    },
+    {
+      "external_id": "nova-svc-fairfax-dsvs-pennino",
+      "status": "linked",
+      "location_id": 515,
+      "issues": []
+    },
+    {
+      "external_id": "nova-svc-fairfax-csb-sharon-bulova-center",
+      "status": "linked",
+      "location_id": 292,
+      "issues": []
+    },
+    {
+      "external_id": "nova-svc-fairfax-reston-employment-resource-center",
+      "status": "linked",
+      "location_id": 382,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

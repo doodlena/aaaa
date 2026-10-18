@@ -117,6 +117,19 @@ under the old number, was given the two provider-portal columns and stamped `001
 - The congressional-district view was removed: no `area` search parameter, `/api/coverage-areas` endpoint or
   `coverage_areas` table (migration `0007`). Source ids, data files and research logs keep their `va08` names because
   imported records reference them. The default search radius is 10 miles (frontend and API).
+- Site settings (2026-10-17): Admin → Site settings has three runtime switches stored in `app_settings`
+  (`app/services/site_flags.py`, no migration). None of them deletes or changes listings.
+  - **Only Virginia's 8th district** (on by default): the public site shows only listings inside VA-08 (Census TIGERweb
+    boundary, `data/boundaries/va08_cd119_tigerweb.geojson`, `app/geospatial/district.py`). This narrows the five-locality
+    pilot further: City of Fairfax and most of Fairfax County fall outside it.
+  - **Live provider updates** (off by default): hides "Open today (provider-confirmed)", "On the shelf today", the home
+    page live feed and "Today at this location" until providers are actually posting.
+  - **Demo mode** (off by default): loads 21 fictional providers from `data/fixtures/demo_providers.json` on first use
+    (`app/services/demo.py`), all inside VA-08 and verified, with today's posts, events, 3 access requests and 3 community
+    reports. Public site and admin dashboard show only demo data; it forces live provider updates on and hides the
+    "Test data" badge. A site-wide banner says the listings are samples. Tests: `test_site_settings.py`,
+    `siteSettings.test.tsx`.
+  - On phones the admin menu is one horizontally swipeable row.
 - The staff portal is labelled "For services" and serves every kind of provider. `/api/provider/me` reports
   `offers_food` per listing; when false the portal hides the food-only controls ("Out of food", shelf items, event food
   offerings). The URL is still `/pantry`, and the surplus board remains food-only.

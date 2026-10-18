@@ -1,0 +1,84 @@
+{
+  "run_id": 79,
+  "source": {
+    "id": "nova-reproductive-health",
+    "name": "Northern Virginia sexual & reproductive health (family planning, STI testing, prenatal care) \u2014 AI-assisted research (cited)",
+    "url": "file://data/sources/nova_reproductive_health.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "AI-assisted research of pages fetched on the retrieval date; each record cites source_url. Not verified.",
+      "Blocked sites were skipped, not circumvented; see the matching research log in docs/pilot_research/."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-13T04:14:55.901902-04:00",
+  "finished_at": "2026-10-13T08:14:55.964089+00:00",
+  "counts": {
+    "discovered": 29,
+    "inserted": 0,
+    "updated": 2,
+    "unchanged": 17,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 529,
+    "out_of_scope": 10,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "nova-rh-alexandria-health-dept-mark-center",
+      "status": "linked",
+      "location_id": 459,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-rh-arlington-public-health-sequoia",
+      "status": "linked",
+      "location_id": 456,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-rh-healthworks-reston",
+      "status": "linked",
+      "location_id": 485,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-neighborhood-health-richmond-highway",
+      "status": "linked",
+      "location_id": 194,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-healthworks-herndon",
+      "status": "linked",
+      "location_id": 484,
+      "issues": []
+    },
+    {
+      "external_id": "nova-rh-healthworks-sully-herndon",
+      "status": "linked",
+      "location_id": 260,
+      "issues": []
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

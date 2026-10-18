@@ -14,7 +14,7 @@ from app.models import DistributionEvent, Jurisdiction, Location, Service, Sourc
 from app.auth import oauth
 from app.auth.security import RateLimiter
 from app.schemas import AISearchIn, GeocodeResponse, ReportIn, SearchResponse
-from app.services import ai
+from app.services import ai, demo, site_flags
 from app.services.shelf import calendar_ics, current_shelf, file_report, open_report_counts, shelf_dict, visit_plan
 from app.services.presenter import detail
 from app.services.schedule import TZ, windows_on
@@ -51,7 +51,7 @@ def location_sources(db: Session, location_id: int) -> list[dict]:
     by_source: dict[str, dict] = {}
     for r, s in sorted(rows, key=lambda x: x[0].last_seen_at):
         by_source[s.id] = {"source_id": s.id, "name": s.name, "url": r.source_url or s.url, "last_seen_at": r.last_seen_at.isoformat(),
-                           "is_synthetic": r.is_synthetic}
+                           "is_synthetic": r.is_synthetic and not site_flags.demo_mode()}
     return list(by_source.values())
 
 
@@ -102,6 +102,7 @@ def search_resources(
 ):
     if (lat is None) != (lon is None):
         raise HTTPException(422, "lat and lon must be provided together")
+    demo.ensure_live(db)
     if radius_km > get_settings().max_search_radius_km:
         raise HTTPException(422, f"radius_km may not exceed {get_settings().max_search_radius_km}")
     box = None
@@ -136,12 +137,13 @@ def search_resources(
 
 @router.get("/resources/{location_id}")
 def resource_detail(location_id: int, lang: str | None = Query(None, max_length=8), db: Session = Depends(get_db)):
+    demo.ensure_live(db)
     loc = load_location(db, location_id)
     return detail_with_live(db, loc, lang)
 
 
 def detail_with_live(db: Session, loc: Location, lang: str | None) -> dict:
-    live = shelf_dict(current_shelf(db, [loc.id]).get(loc.id))
+    live = shelf_dict(current_shelf(db, [loc.id]).get(loc.id)) if site_flags.provider_features() else None
     return detail(loc, location_sources(db, loc.id), location_translations(db, loc, lang), live=live,
                   open_reports=open_report_counts(db, [loc.id]).get(loc.id, 0))
 
@@ -229,7 +231,8 @@ def resource_ai_info_generate(location_id: int, request: Request, db: Session = 
 def meta_features():
     s = get_settings()
     on = ai.enabled()
-    return {"app_name": s.app_name, "demo_mode": s.show_synthetic, "contact_email": s.contact_email or None,
+    return {"app_name": s.app_name, "demo_mode": site_flags.demo_mode() or s.show_synthetic,
+            "provider_features": site_flags.provider_features(), "district_only": site_flags.district_only(), "contact_email": s.contact_email or None,
             "oauth": {"enabled": oauth.enabled(), "provider": oauth.provider_name()},
             "ai": {"search": on, "listing_lookup": on, "announcement_drafts": on, "structure_suggestions": on,
                    "translation": on and s.translation_provider == "claude", "model": ai.model() if on else None}}
@@ -323,5 +326,5 @@ def meta_verification(db: Session = Depends(get_db)):
         "published_by_status": dict(labels),
         "sources": [{"id": x.id, "name": x.name, "url": x.url, "owner": x.owner,
                      "last_success_at": x.last_success_at.isoformat() if x.last_success_at else None} for x in sources],
-        "demo_mode": s.show_synthetic,
+        "demo_mode": site_flags.demo_mode() or s.show_synthetic,
     }

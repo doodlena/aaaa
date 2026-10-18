@@ -25,9 +25,9 @@ from app.models import (
     User,
     VerificationRecord,
 )
-from app.schemas import ActionIn, AIKeyIn, AISettingsIn, DecisionIn, DecisionSimpleIn, ResourceEditIn
+from app.schemas import ActionIn, AIKeyIn, AISettingsIn, DecisionIn, DecisionSimpleIn, ResourceEditIn, SiteSettingsIn
 from app.services.presenter import detail, verification_label
-from app.services import ai
+from app.services import ai, demo, site_flags
 from app.services.quality import quality_report
 from app.services.shelf import open_report_counts
 from app.vocab import REVIEW_STATUSES
@@ -53,7 +53,7 @@ def queue(
 ):
     if status and status not in REVIEW_STATUSES:
         raise HTTPException(422, "unknown status")
-    conds = [Location.merged_into_id.is_(None)]
+    conds = [Location.merged_into_id.is_(None), demo.admin_scope()]
     if unverified:  # everything no reviewer has confirmed yet
         conds.append(Location.review_status.in_(("candidate", "needs_review")))
     if status:
@@ -88,7 +88,7 @@ def queue(
             "verification_label": verification_label(loc), "published": loc.published, "operating_status": loc.operating_status,
             "has_coordinates": loc.geom is not None, "last_seen_at": _iso(loc.last_seen_at), "last_verified_at": _iso(loc.last_verified_at),
             "sources": sorted(set(srcs.get(loc.id, []))), "pending_changes": pc.get(loc.id, 0), "pending_duplicates": dc.get(loc.id, 0), "open_reports": rc.get(loc.id, 0),
-            "is_synthetic": loc.is_synthetic, "phone": loc.phone or loc.organization.phone,
+            "is_synthetic": loc.is_synthetic and not site_flags.demo_mode(), "phone": loc.phone or loc.organization.phone,
             "website": loc.website or loc.organization.website,
         } for loc in locs],
         "total": total, "page": page, "page_size": page_size, "counts_by_status": counts,
@@ -155,7 +155,8 @@ def resource_action(location_id: int, body: ActionIn, user: User = Depends(requi
 
 @router.get("/changes")
 def list_changes(status: str = "pending", db: Session = Depends(get_db)):
-    return {"items": [_cp(c) for c in db.scalars(select(ChangeProposal).where(ChangeProposal.status == status)
+    return {"items": [_cp(c) for c in db.scalars(select(ChangeProposal).join(Location, Location.id == ChangeProposal.location_id)
+                                                 .where(ChangeProposal.status == status, demo.admin_scope())
                                                  .order_by(ChangeProposal.created_at.desc()).limit(500)).all()]}
 
 
@@ -172,7 +173,8 @@ def change_decision(change_id: int, body: DecisionIn, user: User = Depends(requi
 
 @router.get("/duplicates")
 def list_duplicates(status: str = "pending", db: Session = Depends(get_db)):
-    return {"items": [_dup(db, d) for d in db.scalars(select(DuplicateCandidate).where(DuplicateCandidate.status == status)
+    return {"items": [_dup(db, d) for d in db.scalars(select(DuplicateCandidate).join(Location, Location.id == DuplicateCandidate.location_id)
+                                                      .where(DuplicateCandidate.status == status, demo.admin_scope())
                                                       .order_by(DuplicateCandidate.score.desc()).limit(500)).all()]}
 
 
@@ -207,7 +209,9 @@ def sources(db: Session = Depends(get_db)):
 
 @router.get("/quality")
 def quality(jurisdiction: str | None = None, db: Session = Depends(get_db)):
-    return quality_report(db, jurisdiction)
+    if demo.demo_mode_on():
+        return quality_report(db, jurisdiction, include_synthetic=True, scope=demo.is_demo_location())
+    return quality_report(db, jurisdiction, scope=demo.admin_scope())
 
 
 OVERVIEW_WEEKS = 8
@@ -216,8 +220,9 @@ OVERVIEW_WEEKS = 8
 @router.get("/overview")
 def overview(db: Session = Depends(get_db)):
     """Dashboard numbers: what is waiting for a reviewer, and reviewer actions per week. Counted from the database;
-    synthetic listings are left out, as in the quality report."""
-    real = Location.is_synthetic.is_(False)
+    synthetic listings are left out, as in the quality report. In demo mode it counts only the demo providers."""
+    in_demo = demo.demo_mode_on()
+    real = demo.is_demo_location() if in_demo else Location.is_synthetic.is_(False)
     today = datetime.now(UTC).date()
     this_week = today - timedelta(days=today.weekday())  # Monday, UTC
     starts = [this_week - timedelta(weeks=i) for i in range(OVERVIEW_WEEKS - 1, -1, -1)]
@@ -232,7 +237,7 @@ def overview(db: Session = Depends(get_db)):
         if week:
             week["verified" if action == "verify" else "published"] += 1
     return {
-        "generated_at": datetime.now(UTC).isoformat(), "includes_synthetic": False,
+        "generated_at": datetime.now(UTC).isoformat(), "includes_synthetic": in_demo, "demo_mode": in_demo,
         "pending_claims": db.scalar(select(func.count()).select_from(ProviderMembership)
                                     .join(Location, Location.id == ProviderMembership.location_id)
                                     .where(real, ProviderMembership.status == "pending")) or 0,
@@ -258,7 +263,7 @@ def organization(org_id: int, db: Session = Depends(get_db)):
 def list_claims(status: str = "pending", db: Session = Depends(get_db)):
     rows = db.execute(select(ProviderMembership, User, Location).join(User, User.id == ProviderMembership.user_id)
                       .join(Location, Location.id == ProviderMembership.location_id)
-                      .where(ProviderMembership.status == status).order_by(ProviderMembership.created_at)).all()
+                      .where(ProviderMembership.status == status, demo.admin_scope()).order_by(ProviderMembership.created_at)).all()
     return {"items": [{"id": m.id, "status": m.status, "role_title": m.role_title, "note": m.note, "user_email": u.email,
                        "location_id": loc.id, "location_name": loc.name, "location_phone": loc.phone or loc.organization.phone,
                        "created_at": _iso(m.created_at), "decision_note": m.decision_note,
@@ -268,7 +273,8 @@ def list_claims(status: str = "pending", db: Session = Depends(get_db)):
 @router.get("/claims/pending-count")
 def pending_claims_count(db: Session = Depends(get_db)):
     """For the admin menu badge (there is no email notification service)."""
-    return {"pending": db.query(ProviderMembership).filter_by(status="pending").count()}
+    return {"pending": db.scalar(select(func.count()).select_from(ProviderMembership).join(Location, Location.id == ProviderMembership.location_id)
+                                 .where(ProviderMembership.status == "pending", demo.admin_scope())) or 0}
 
 
 @router.post("/claims/{claim_id}/decision")
@@ -292,7 +298,7 @@ def decide_claim(claim_id: int, body: DecisionSimpleIn, user: User = Depends(req
 @router.get("/reports")
 def list_reports(status: str = "open", db: Session = Depends(get_db)):
     rows = db.execute(select(CommunityReport, Location).join(Location, Location.id == CommunityReport.location_id)
-                      .where(CommunityReport.status == status).order_by(CommunityReport.created_at.desc()).limit(500)).all()
+                      .where(CommunityReport.status == status, demo.admin_scope()).order_by(CommunityReport.created_at.desc()).limit(500)).all()
     return {"items": [{"id": r.id, "location_id": loc.id, "location_name": loc.name, "kind": r.kind, "note": r.note,
                        "status": r.status, "created_at": _iso(r.created_at), "provider_response": r.provider_response}
                       for r, loc in rows]}
@@ -483,3 +489,35 @@ def refresh_run():
     from app.services import scheduler
 
     return scheduler.refresh_now()
+
+
+# --- Site settings: demo mode, live provider features, VA-08 only (app/services/site_flags.py) -----------------------
+
+def _site_status(db: Session) -> dict:
+    f = site_flags.flags()
+    demo_listings = db.scalar(select(func.count()).select_from(Location).where(demo.is_demo_location())) or 0
+    return {**f, "provider_features_active": site_flags.provider_features(), "demo_listings": demo_listings}
+
+
+@router.get("/site-settings")
+def get_site_settings(db: Session = Depends(get_db)):
+    return _site_status(db)
+
+
+@router.patch("/site-settings")
+def patch_site_settings(body: SiteSettingsIn, user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    from app.ingestion.verification.workflow import audit
+
+    before = site_flags.flags()
+    changes = {k: v for k, v in body.model_dump().items() if v is not None and v != before.get(k)}
+    if changes.get("demo_mode"):
+        demo.load(db, user)  # idempotent: creates the fictional providers the first time
+    for key, value in changes.items():
+        _set(db, key, "true" if value else "false", user)
+    if changes:
+        audit(db, user, "app_setting", 0, "site_settings_changed", {k: before.get(k) for k in changes}, changes)
+    db.commit()
+    site_flags.invalidate()
+    demo.reset_live_cache()
+    demo.ensure_live(db)
+    return _site_status(db)

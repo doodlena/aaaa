@@ -44,7 +44,9 @@ export function MetaProvider({ children }: { children: ReactNode }) {
   }, []);
   const refreshFeatures = useCallback(async () => {
     try {
-      setFeatures(await api.features());
+      const [f, meta] = await Promise.all([api.features(), api.verificationMeta()]);
+      setFeatures(f);
+      setState({ meta, error: false });
     } catch {
       /* keep the previous switches */
     }
@@ -65,6 +67,11 @@ export function useContactEmail(): string | null {
 export function useOAuth(): { name: string } | null {
   const o = useContext(MetaContext).features?.oauth;
   return o?.enabled ? { name: o.provider } : null;
+}
+
+/** Live provider updates (today's status, "on the shelf today" filters, the home feed). Off until the server says so. */
+export function useProviderFeatures(): boolean {
+  return !!useContext(MetaContext).features?.provider_features;
 }
 
 export function useAI(): Features['ai'] {

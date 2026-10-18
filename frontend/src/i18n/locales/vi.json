@@ -22,7 +22,7 @@
     "more": "Ngôn ngữ khác"
   },
   "demo": {
-    "banner": "Dữ liệu minh họa: các mục có ghi [TEST] là không có thật."
+    "banner": "Chế độ trình diễn: đây là các danh sách mẫu để trình diễn, không phải địa điểm thật."
   },
   "footer": {
     "disclaimer": "Cập nhật trực tiếp đến từ các nơi cung cấp hỗ trợ, nhưng thông tin vẫn có thể thay đổi. Trang này không thu thập dữ liệu cá nhân để quảng cáo hay cho bất kỳ mục đích nào khác.",
@@ -1102,6 +1102,35 @@
       "add": "Thêm",
       "remove": "Bỏ",
       "none": "Không có"
+    },
+    "site": {
+      "nav": "Cài đặt trang",
+      "title": "Cài đặt trang",
+      "lead": "Các công tắc thay đổi nội dung trang công khai. Không có gì bị xóa: danh sách chỉ bị ẩn hoặc hiện lại.",
+      "on": "Bật",
+      "off": "Tắt",
+      "saving": "Đang lưu…",
+      "demo_mode": {
+        "label": "Chế độ trình diễn",
+        "help": "Hiển thị các nhà cung cấp mẫu hư cấu thay cho danh sách thật, tất cả đã xác minh, kèm cập nhật hôm nay. Bảng quản trị cũng hiển thị dữ liệu mẫu. Một biểu ngữ nhỏ cho khách biết đây là bản trình diễn. Hãy tắt khi quay xong.",
+        "loaded_one": "Đã tải {{count}} danh sách mẫu.",
+        "loaded_other": "Đã tải {{count}} danh sách mẫu.",
+        "turnedOn": "Đã bật chế độ trình diễn. Trang đang hiển thị nhà cung cấp mẫu.",
+        "turnedOff": "Đã tắt chế độ trình diễn. Danh sách thật đã trở lại."
+      },
+      "provider_features": {
+        "label": "Cập nhật trực tiếp từ nhà cung cấp",
+        "help": "Tình trạng hôm nay do nhà cung cấp đăng, bộ lọc “Có trên kệ hôm nay” và bảng tin trang chủ. Hãy tắt cho đến khi nhà cung cấp bắt đầu đăng.",
+        "forced": "Luôn bật trong chế độ trình diễn.",
+        "turnedOn": "Đang hiển thị cập nhật trực tiếp.",
+        "turnedOff": "Đã ẩn cập nhật trực tiếp."
+      },
+      "district_only": {
+        "label": "Chỉ khu vực 8 của Virginia",
+        "help": "Chỉ hiển thị danh sách trong khu vực bầu cử quốc hội số 8 của Virginia (Arlington, Alexandria, Falls Church và phía đông quận Fairfax). Danh sách bên ngoài bị ẩn, không bị xóa.",
+        "turnedOn": "Chỉ hiển thị danh sách trong khu vực 8.",
+        "turnedOff": "Danh sách ngoài khu vực 8 đã hiện lại."
+      }
     }
   },
   "offline": {

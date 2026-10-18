@@ -1,0 +1,495 @@
+{
+  "run_id": 74,
+  "source": {
+    "id": "cafb-get-help",
+    "name": "Capital Area Food Bank \u2014 Get Help map (partner sites)",
+    "url": "https://www.capitalareafoodbank.org/find-food-assistance/",
+    "adapter": "cafb_get_help",
+    "is_synthetic": false,
+    "known_limitations": [
+      "county_name values are inconsistent ('VA Manassas City' vs 'VA City of Manassas'); jurisdiction is re-derived from coordinates.",
+      "Unused day slots repeat slot-1 times; only slots with a Frequency value are read.",
+      "Non-weekly frequencies other than ordinal weeks (e.g. 'Every other week') are kept as notes, not schedules.",
+      "No website field: official provider websites must be added by reviewers.",
+      "CAFB advises calling ahead to confirm hours."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-13T04:14:55.299871-04:00",
+  "finished_at": "2026-10-13T08:14:55.589542+00:00",
+  "counts": {
+    "discovered": 83,
+    "inserted": 0,
+    "updated": 14,
+    "unchanged": 68,
+    "rejected": 0,
+    "duplicate_candidates": 1,
+    "conflicts": 0,
+    "needs_review": 529,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "22207-PART-01",
+      "status": "linked",
+      "location_id": 15,
+      "issues": []
+    },
+    {
+      "external_id": "16245-PART-01",
+      "status": "linked",
+      "location_id": 52,
+      "issues": []
+    },
+    {
+      "external_id": "19200-PART-01",
+      "status": "linked",
+      "location_id": 29,
+      "issues": []
+    },
+    {
+      "external_id": "19402-PART-01",
+      "status": "linked",
+      "location_id": 34,
+      "issues": []
+    },
+    {
+      "external_id": "19618-PART-01",
+      "status": "linked",
+      "location_id": 38,
+      "issues": []
+    },
+    {
+      "external_id": "19630-PUSH-01",
+      "status": "linked",
+      "location_id": 39,
+      "issues": []
+    },
+    {
+      "external_id": "19676-PART-01",
+      "status": "linked",
+      "location_id": 42,
+      "issues": []
+    },
+    {
+      "external_id": "22181-MOMK-01",
+      "status": "linked",
+      "location_id": 13,
+      "issues": []
+    },
+    {
+      "external_id": "14065-PART-01",
+      "status": "linked",
+      "location_id": 48,
+      "issues": []
+    },
+    {
+      "external_id": "14895-PART-01",
+      "status": "linked",
+      "location_id": 50,
+      "issues": []
+    },
+    {
+      "external_id": "15830-PART-01",
+      "status": "linked",
+      "location_id": 51,
+      "issues": []
+    },
+    {
+      "external_id": "16850-PART-01",
+      "status": "linked",
+      "location_id": 54,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "21930-MOMK-01",
+      "status": "linked",
+      "location_id": 122,
+      "issues": []
+    },
+    {
+      "external_id": "19240-PART-01",
+      "status": "linked",
+      "location_id": 30,
+      "issues": []
+    },
+    {
+      "external_id": "19661-PART-01",
+      "status": "linked",
+      "location_id": 127,
+      "issues": []
+    },
+    {
+      "external_id": "19002-PART-02",
+      "status": "linked",
+      "location_id": 142,
+      "issues": []
+    },
+    {
+      "external_id": "18134-COMK-02",
+      "status": "linked",
+      "location_id": 129,
+      "issues": []
+    },
+    {
+      "external_id": "19842-PART-01",
+      "status": "linked",
+      "location_id": 130,
+      "issues": []
+    },
+    {
+      "external_id": "19761-PART-01",
+      "status": "linked",
+      "location_id": 47,
+      "issues": []
+    },
+    {
+      "external_id": "22863-PART-01",
+      "status": "linked",
+      "location_id": 132,
+      "issues": []
+    },
+    {
+      "external_id": "19488-PART-01",
+      "status": "linked",
+      "location_id": 36,
+      "issues": []
+    },
+    {
+      "external_id": "14570-PART-01",
+      "status": "linked",
+      "location_id": 135,
+      "issues": []
+    },
+    {
+      "external_id": "14570-PUSH-07",
+      "status": "linked",
+      "location_id": 137,
+      "issues": []
+    },
+    {
+      "external_id": "21874-PART-01",
+      "status": "linked",
+      "location_id": 11,
+      "issues": []
+    },
+    {
+      "external_id": "21950-PART-01",
+      "status": "linked",
+      "location_id": 12,
+      "issues": []
+    },
+    {
+      "external_id": "22181-MOMK-02",
+      "status": "linked",
+      "location_id": 14,
+      "issues": []
+    },
+    {
+      "external_id": "22249-PART-01",
+      "status": "linked",
+      "location_id": 16,
+      "issues": []
+    },
+    {
+      "external_id": "22259-PART-01",
+      "status": "linked",
+      "location_id": 17,
+      "issues": []
+    },
+    {
+      "external_id": "22261-PART-01",
+      "status": "linked",
+      "location_id": 18,
+      "issues": []
+    },
+    {
+      "external_id": "22288-PART-01",
+      "status": "linked",
+      "location_id": 19,
+      "issues": []
+    },
+    {
+      "external_id": "223636-PART-02",
+      "status": "linked",
+      "location_id": 23,
+      "issues": []
+    },
+    {
+      "external_id": "223730-PART-01",
+      "status": "linked",
+      "location_id": 24,
+      "issues": []
+    },
+    {
+      "external_id": "22404-MOMK-01",
+      "status": "linked",
+      "location_id": 25,
+      "issues": []
+    },
+    {
+      "external_id": "22555-PART-02",
+      "status": "linked",
+      "location_id": 26,
+      "issues": []
+    },
+    {
+      "external_id": "22633-PART-01",
+      "status": "linked",
+      "location_id": 27,
+      "issues": []
+    },
+    {
+      "external_id": "19120-PART-01",
+      "status": "linked",
+      "location_id": 28,
+      "issues": []
+    },
+    {
+      "external_id": "19454-PART-01",
+      "status": "linked",
+      "location_id": 35,
+      "issues": []
+    },
+    {
+      "external_id": "19604-PART-01",
+      "status": "linked",
+      "location_id": 37,
+      "issues": []
+    },
+    {
+      "external_id": "19653-PART-01",
+      "status": "linked",
+      "location_id": 41,
+      "issues": []
+    },
+    {
+      "external_id": "19711-PART-01",
+      "status": "linked",
+      "location_id": 43,
+      "issues": []
+    },
+    {
+      "external_id": "19751-PART-01",
+      "status": "linked",
+      "location_id": 45,
+      "issues": []
+    },
+    {
+      "external_id": "16840-MOMK-02",
+      "status": "linked",
+      "location_id": 53,
+      "issues": []
+    },
+    {
+      "external_id": "18134-COMK-01",
+      "status": "rejected",
+      "location_id": 55,
+      "issues": []
+    },
+    {
+      "external_id": "22118-MOMK-01",
+      "status": "linked",
+      "location_id": 123,
+      "issues": []
+    },
+    {
+      "external_id": "22694-MOMK-01",
+      "status": "linked",
+      "location_id": 124,
+      "issues": []
+    },
+    {
+      "external_id": "19304-MOMK-01",
+      "status": "linked",
+      "location_id": 125,
+      "issues": []
+    },
+    {
+      "external_id": "14500-PART-03",
+      "status": "linked",
+      "location_id": 128,
+      "issues": []
+    },
+    {
+      "external_id": "15530-PART-01",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "21930-MOMK-02",
+      "status": "linked",
+      "location_id": 131,
+      "issues": []
+    },
+    {
+      "external_id": "19395-PART-01",
+      "status": "linked",
+      "location_id": 133,
+      "issues": []
+    },
+    {
+      "external_id": "14570-PUSH-06",
+      "status": "linked",
+      "location_id": 136,
+      "issues": []
+    },
+    {
+      "external_id": "14570-PUSH-08",
+      "status": "linked",
+      "location_id": 138,
+      "issues": []
+    },
+    {
+      "external_id": "15620-PART-01",
+      "status": "linked",
+      "location_id": 139,
+      "issues": []
+    },
+    {
+      "external_id": "16275-MOMK-01",
+      "status": "linked",
+      "location_id": 140,
+      "issues": []
+    },
+    {
+      "external_id": "17722-MOMK-01",
+      "status": "linked",
+      "location_id": 141,
+      "issues": []
+    },
+    {
+      "external_id": "21711-PART-01",
+      "status": "rejected",
+      "location_id": 9,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "21861-MOMK-01",
+      "status": "linked",
+      "location_id": 10,
+      "issues": []
+    },
+    {
+      "external_id": "223636-PART-01",
+      "status": "linked",
+      "location_id": 22,
+      "issues": []
+    },
+    {
+      "external_id": "19261-PART-01",
+      "status": "linked",
+      "location_id": 31,
+      "issues": []
+    },
+    {
+      "external_id": "19261-PUSH-01",
+      "status": "linked",
+      "location_id": 31,
+      "issues": []
+    },
+    {
+      "external_id": "19652-MOMK-01",
+      "status": "linked",
+      "location_id": 40,
+      "issues": []
+    },
+    {
+      "external_id": "19742-PART-01",
+      "status": "linked",
+      "location_id": 44,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "19104-PART-01",
+      "status": "linked",
+      "location_id": 56,
+      "issues": []
+    },
+    {
+      "external_id": "14570-PART-02",
+      "status": "linked",
+      "location_id": 453,
+      "issues": []
+    },
+    {
+      "external_id": "19357-PART-01",
+      "status": "rejected",
+      "location_id": 33,
+      "issues": []
+    },
+    {
+      "external_id": "22293-MOMK-01",
+      "status": "linked",
+      "location_id": 20,
+      "issues": []
+    },
+    {
+      "external_id": "223409-MOMK-01",
+      "status": "linked",
+      "location_id": 21,
+      "issues": []
+    },
+    {
+      "external_id": "19313-PART-01",
+      "status": "linked",
+      "location_id": 32,
+      "issues": []
+    },
+    {
+      "external_id": "19752-PART-01",
+      "status": "linked",
+      "location_id": 46,
+      "issues": []
+    },
+    {
+      "external_id": "14770-PART-01",
+      "status": "linked",
+      "location_id": 49,
+      "issues": []
+    },
+    {
+      "external_id": "16840-MOMK-01",
+      "status": "linked",
+      "location_id": 446,
+      "issues": []
+    },
+    {
+      "external_id": "19552-PART-01",
+      "status": "linked",
+      "location_id": 126,
+      "issues": []
+    },
+    {
+      "external_id": "19748-PART-01",
+      "status": "linked",
+      "location_id": 134,
+      "issues": []
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

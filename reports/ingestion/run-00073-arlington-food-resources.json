@@ -1,0 +1,666 @@
+{
+  "run_id": 73,
+  "source": {
+    "id": "arlington-food-resources",
+    "name": "Arlington County \u2014 Food Resources map",
+    "url": "https://my.arlingtonva.us/foodresources",
+    "adapter": "arlington_food_resources",
+    "is_synthetic": false,
+    "known_limitations": [
+      "The page is a JavaScript app; the adapter reads the JSON file it loads. The file was last modified 2026-01-09 and some rows look older (e.g. a farmers market season of 'May 5 - Oct. 27' with no year).",
+      "Flag columns are only trusted when 'True'. Several rows leave every flag 'False' although their text says otherwise.",
+      "Seasonal rows, multi-line times, single start times ('6:00:00 PM') and monthly rows without an ordinal keep hours as raw text only.",
+      "'Discount groceries' rows (farmers markets with SNAP matching, SHARE food boxes) are not free food; they are imported as service type 'other'.",
+      "'Delivery Available' is kept as a note only: the file does not say who qualifies.",
+      "The contact person's name column is not imported. Two rows (ZIP 22041, 22044) are just outside Arlington, in Fairfax County."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-13T04:14:54.235264-04:00",
+  "finished_at": "2026-10-13T08:14:55.294595+00:00",
+  "counts": {
+    "discovered": 69,
+    "inserted": 36,
+    "updated": 3,
+    "unchanged": 0,
+    "rejected": 0,
+    "duplicate_candidates": 30,
+    "conflicts": 0,
+    "needs_review": 529,
+    "out_of_scope": 0,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {
+      "auto_linked": 3
+    }
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "770cad9504980dbc",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "c0dc41eda2ccf197",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "b571cb531f2a816c",
+      "status": "linked",
+      "location_id": 563,
+      "issues": []
+    },
+    {
+      "external_id": "65f208c34c27c80c",
+      "status": "linked",
+      "location_id": 564,
+      "issues": []
+    },
+    {
+      "external_id": "58e7bbc1c6ab5396",
+      "status": "linked",
+      "location_id": 565,
+      "issues": []
+    },
+    {
+      "external_id": "0a7b776f626a1767",
+      "status": "linked",
+      "location_id": 566,
+      "issues": []
+    },
+    {
+      "external_id": "196fae721521c225",
+      "status": "linked",
+      "location_id": 567,
+      "issues": []
+    },
+    {
+      "external_id": "313bb7b7347dcaaf",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "89da1580cd3e5167",
+      "status": "linked",
+      "location_id": 568,
+      "issues": []
+    },
+    {
+      "external_id": "6ee87a34b2065f9a",
+      "status": "linked",
+      "location_id": 569,
+      "issues": []
+    },
+    {
+      "external_id": "89341742592fdbf3",
+      "status": "linked",
+      "location_id": 570,
+      "issues": []
+    },
+    {
+      "external_id": "bb1d30e68e67531e",
+      "status": "linked",
+      "location_id": 571,
+      "issues": []
+    },
+    {
+      "external_id": "d59918d2742f958d",
+      "status": "linked",
+      "location_id": 572,
+      "issues": []
+    },
+    {
+      "external_id": "376f7c66c79d6b2d",
+      "status": "linked",
+      "location_id": 573,
+      "issues": []
+    },
+    {
+      "external_id": "5fa766fa3b8632ec",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "be63b6529a1709f9",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "701021ce897dba02",
+      "status": "linked",
+      "location_id": 574,
+      "issues": []
+    },
+    {
+      "external_id": "560f37901e4f00f5",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "e25b8d414900dcae",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "2fbbde8a44c60019",
+      "status": "linked",
+      "location_id": 575,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "b9733a14f376ca1b",
+      "status": "linked",
+      "location_id": 127,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "454b8693d978ad46",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "da5a3484fce708f8",
+      "status": "linked",
+      "location_id": 576,
+      "issues": []
+    },
+    {
+      "external_id": "b0880b8dbca0a8bd",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "c9657c841478249c",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "a45c1de86f246bf4",
+      "status": "linked",
+      "location_id": 577,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "96bca5582cf473b1",
+      "status": "linked",
+      "location_id": 125,
+      "issues": []
+    },
+    {
+      "external_id": "f0a6ff3dbd57f660",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "9cca726d11cef78c",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "95e9b0b64e718569",
+      "status": "linked",
+      "location_id": 578,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "ff830dcd4b1cf289",
+      "status": "linked",
+      "location_id": 579,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "0412e14c26cb538e",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "bf7dc2ca53c8d278",
+      "status": "linked",
+      "location_id": 580,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "286a9a7d423f4d66",
+      "status": "linked",
+      "location_id": 581,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "debde351f794b8fe",
+      "status": "linked",
+      "location_id": 582,
+      "issues": []
+    },
+    {
+      "external_id": "a3bbf2e2e338aa52",
+      "status": "linked",
+      "location_id": 583,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "6343d55161966f11",
+      "status": "linked",
+      "location_id": 584,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "97ee5b4fdb8e375f",
+      "status": "linked",
+      "location_id": 585,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "08b9c57db9044b47",
+      "status": "linked",
+      "location_id": 586,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "f940a6d791232eab",
+      "status": "linked",
+      "location_id": 587,
+      "issues": []
+    },
+    {
+      "external_id": "2a3f7827310c34c2",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "dfcba09f53c4994e",
+      "status": "linked",
+      "location_id": 588,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "8509942724ccc944",
+      "status": "linked",
+      "location_id": 589,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "689fe273bb83011a",
+      "status": "linked",
+      "location_id": 590,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "76fdb947dcc0b408",
+      "status": "linked",
+      "location_id": 591,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "772fd7d7082f167b",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "3d9283bae8c3af17",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "4ac9c5b34084423e",
+      "status": "linked",
+      "location_id": 592,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "4f5bbfbeafe476e8",
+      "status": "linked",
+      "location_id": 593,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "98eb98f660dfed5c",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "6aedf25e5fd674db",
+      "status": "linked",
+      "location_id": 594,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "177db8e05bed4124",
+      "status": "linked",
+      "location_id": 595,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "43d488abcbd44ee9",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "61dd3102b0f3cddd",
+      "status": "linked",
+      "location_id": 596,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "26b3c7768ae895b5",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "b56d4ea542e40c9d",
+      "status": "linked",
+      "location_id": 597,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "3b8e7fa1509d2237",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "2a33c4c5b609cd2c",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "7aa2dea743a3cc57",
+      "status": "linked",
+      "location_id": 437,
+      "issues": []
+    },
+    {
+      "external_id": "2e1dd4f4514d2826",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "15126b88b4ed2ddc",
+      "status": "linked",
+      "location_id": 598,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "41c04fad8da20244",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "4e29a8baed153346",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "0562d55752ea82eb",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    },
+    {
+      "external_id": "362185902ca18899",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "a0b60f7f0f9d6b3f",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "e7538a3b0f14d60f",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "c8b0364a597dc890",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "7db2fbda4792b0c2",
+      "status": "duplicate_candidate",
+      "location_id": null,
+      "issues": []
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

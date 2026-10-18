@@ -22,7 +22,7 @@
     "more": "Más idiomas"
   },
   "demo": {
-    "banner": "Datos de demostración: los lugares marcados con [TEST] son ficticios."
+    "banner": "Modo de demostración: estos son ejemplos para una demostración, no lugares reales."
   },
   "footer": {
     "disclaimer": "Las actualizaciones en vivo provienen de los proveedores de apoyo, pero la información aún puede cambiar. Este sitio no recopila datos personales para publicidad ni para ningún otro uso.",
@@ -1102,6 +1102,35 @@
       "add": "Agregar",
       "remove": "Quitar",
       "none": "Ninguna"
+    },
+    "site": {
+      "nav": "Ajustes del sitio",
+      "title": "Ajustes del sitio",
+      "lead": "Interruptores que cambian lo que muestra el sitio público. No se borra nada: los listados solo se ocultan o se vuelven a mostrar.",
+      "on": "Activado",
+      "off": "Desactivado",
+      "saving": "Guardando…",
+      "demo_mode": {
+        "label": "Modo de demostración",
+        "help": "Muestra proveedores ficticios de demostración en lugar de los listados reales, todos verificados y con las publicaciones de hoy. El panel de administración también muestra los datos de demostración. Un pequeño aviso indica a los visitantes que es una demostración. Desactívelo al terminar de grabar.",
+        "loaded_one": "Hay {{count}} listado de demostración cargado.",
+        "loaded_other": "Hay {{count}} listados de demostración cargados.",
+        "turnedOn": "El modo de demostración está activado. El sitio muestra proveedores de demostración.",
+        "turnedOff": "El modo de demostración está desactivado. Volvieron los listados reales."
+      },
+      "provider_features": {
+        "label": "Actualizaciones en vivo de proveedores",
+        "help": "El estado de hoy publicado por los proveedores, los filtros “Disponible hoy” y las novedades de la página de inicio. Manténgalo desactivado hasta que los proveedores publiquen.",
+        "forced": "Siempre activado en modo de demostración.",
+        "turnedOn": "Se muestran las actualizaciones en vivo.",
+        "turnedOff": "Se ocultan las actualizaciones en vivo."
+      },
+      "district_only": {
+        "label": "Solo el distrito 8 de Virginia",
+        "help": "Muestra solo los listados dentro del distrito congresional 8 de Virginia (Arlington, Alexandria, Falls Church y el este del condado de Fairfax). Los demás se ocultan, no se borran.",
+        "turnedOn": "Solo se muestran listados del distrito 8 de Virginia.",
+        "turnedOff": "Se vuelven a mostrar los listados fuera del distrito 8."
+      }
     }
   },
   "offline": {

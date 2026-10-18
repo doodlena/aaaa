@@ -3,6 +3,7 @@ from datetime import UTC, date, datetime, timedelta
 
 from app.config import get_settings
 from app.models import Location
+from app.services import site_flags
 from app.services.schedule import TZ, has_any_distribution_info, next_distribution, windows_on
 from app.vocab import FOOD_TYPES
 
@@ -12,6 +13,8 @@ SUMMARY_ELIGIBILITY = ("photo_id", "proof_of_address", "income_documentation", "
 
 def verification_label(loc: Location, now: datetime | None = None) -> str:
     """verified | stale | source_reported | needs_review | rejected | candidate (public API only ever sees the first two)."""
+    if loc.is_synthetic and loc.published and site_flags.demo_mode():
+        return "verified"  # demo providers (fictional) are presented as verified while demo mode is on
     if loc.review_status == "needs_review" and loc.last_verified_at:
         return "stale"  # previously verified, being re-checked (new source data or community reports)
     if loc.review_status in ("verified", "stale"):
@@ -71,7 +74,8 @@ def summary(loc: Location, distance_m: float | None = None, now: datetime | None
         warnings.append("eligibility_unknown")
     if loc.operating_status in ("temporarily_closed", "permanently_closed"):
         warnings.append(loc.operating_status)
-    if loc.is_synthetic:
+    demo = loc.is_synthetic and site_flags.demo_mode()
+    if loc.is_synthetic and not demo:
         warnings.append("synthetic")
     lat = lon = None
     if loc.geom is not None:
@@ -104,7 +108,7 @@ def summary(loc: Location, distance_m: float | None = None, now: datetime | None
         "wheelchair_accessible": loc.wheelchair_accessible,
         "languages": loc.languages or [],
         "warnings": warnings,
-        "is_synthetic": loc.is_synthetic,
+        "is_synthetic": loc.is_synthetic and not demo,  # demo mode: one site-wide banner instead of a badge per listing
         "match_reasons": [],
         "live": live,  # pantry-posted status for today (None when nothing current)
         "open_reports": open_reports,

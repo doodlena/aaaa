@@ -64,7 +64,14 @@ def clean(migrated_db, tmp_path, monkeypatch):
 
         db.execute(update(Jurisdiction).values(status="expansion"))
         db.commit()
+    # Same for the VA-08 area switch (fixtures lie outside it); test_site_settings.py covers it and demo mode.
+    from app.services import demo, site_flags
+
+    monkeypatch.setattr(site_flags, "defaults", lambda: {"demo_mode": False, "provider_features": True, "district_only": False})
+    site_flags.invalidate()
+    demo.reset_live_cache()
     yield
+    site_flags.invalidate()
 
 
 @pytest.fixture

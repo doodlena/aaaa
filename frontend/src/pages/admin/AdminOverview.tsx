@@ -66,7 +66,8 @@ export function AdminOverview() {
     <div className="overview">
       <h1>{t('admin.overview.title')}</h1>
       <p className="muted">
-        {t('admin.generated')}: <When at={ov.generated_at} /> · {t('admin.excludesSynthetic')}
+        {t('admin.generated')}: <When at={ov.generated_at} />
+        {!ov.demo_mode && <> · {t('admin.excludesSynthetic')}</>}
       </p>
 
       <section aria-labelledby="ov-waiting">

@@ -21,8 +21,9 @@ def _pct(n: int, d: int) -> float | None:
     return round(100 * n / d, 1) if d else None
 
 
-def quality_report(db: Session, jurisdiction: str | None = None, include_synthetic: bool = False) -> dict:
-    conds = [Location.merged_into_id.is_(None)]
+def quality_report(db: Session, jurisdiction: str | None = None, include_synthetic: bool = False, scope=None) -> dict:
+    """`scope`: an extra condition on Location (the admin dashboard passes demo/real scoping)."""
+    conds = [Location.merged_into_id.is_(None)] + ([scope] if scope is not None else [])
     if jurisdiction:
         conds.append(Location.jurisdiction_id == jurisdiction)
     if not include_synthetic:
@@ -45,6 +46,8 @@ def quality_report(db: Session, jurisdiction: str | None = None, include_synthet
         return sum(1 for loc in locs if pred(loc))
 
     rec_conds = [SourceRecord.is_synthetic.is_(False)] if not include_synthetic else []
+    if scope is not None:
+        rec_conds.append(SourceRecord.location_id.in_(ids))
     per_source = dict(db.execute(select(SourceRecord.source_id, func.count()).where(*rec_conds).group_by(SourceRecord.source_id)).all())
     rec_status = dict(db.execute(select(SourceRecord.status, func.count()).where(*rec_conds).group_by(SourceRecord.status)).all())
     runs = db.execute(select(IngestionRun.status, func.count()).group_by(IngestionRun.status)).all()
@@ -67,11 +70,12 @@ def quality_report(db: Session, jurisdiction: str | None = None, include_synthet
         "pending_conflicts": db.scalar(select(func.count()).select_from(ChangeProposal).where(ChangeProposal.status == "pending",
                                                                                                 ChangeProposal.location_id.in_(ids))) or 0,
         "locations_with_conflicting_source_values": _conflicting(db, ids),
-        "pending_duplicates": db.scalar(select(func.count()).select_from(DuplicateCandidate).where(DuplicateCandidate.status == "pending")) or 0,
+        "pending_duplicates": db.scalar(select(func.count()).select_from(DuplicateCandidate).where(
+            DuplicateCandidate.status == "pending", *([DuplicateCandidate.location_id.in_(ids)] if scope is not None else []))) or 0,
         "source_records_by_source": per_source,
         "source_records_by_status": rec_status,
         "ingestion_runs_by_status": dict(runs),
-        "organizations": db.scalar(select(func.count()).select_from(Organization).where(*( [Organization.is_synthetic.is_(False)] if not include_synthetic else []))),
+        "organizations": len({loc.organization_id for loc in locs}) if scope is not None else db.scalar(select(func.count()).select_from(Organization).where(*( [Organization.is_synthetic.is_(False)] if not include_synthetic else []))),
     }
     return {"jurisdiction": jurisdiction, "generated_at": datetime.now(UTC).isoformat(), "includes_synthetic": include_synthetic,
             "metrics": metrics}

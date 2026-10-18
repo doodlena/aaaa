@@ -375,6 +375,8 @@ export interface QualityReport {
 export interface AdminOverview {
   generated_at: string;
   includes_synthetic: boolean;
+  /** Counts cover only the fictional demo providers (demo mode). */
+  demo_mode?: boolean;
   pending_claims: number;
   open_reports: number;
   accounts: number;
@@ -402,11 +404,23 @@ export interface AITestResult {
 }
 
 // ---------- features, visit plan, reports, pantry portal, AI ----------
+export interface SiteSettings {
+  demo_mode: boolean;
+  provider_features: boolean;
+  district_only: boolean;
+  provider_features_active: boolean;
+  demo_listings: number;
+}
+
 export interface Features {
   app_name: string;
   /** Public contact for services/providers; null hides it. */
   contact_email?: string | null;
   demo_mode: boolean;
+  /** Live provider updates (today's status, "on the shelf today"); off until providers post. Always on in demo mode. */
+  provider_features?: boolean;
+  /** Only listings inside Virginia's 8th congressional district are shown. */
+  district_only?: boolean;
   /** Optional sign-in with an OpenID Connect provider; `provider` is its display name (may be empty). */
   oauth?: { enabled: boolean; provider: string };
   ai: { search: boolean; listing_lookup?: boolean; announcement_drafts: boolean; structure_suggestions: boolean; translation: boolean; model: string | null };

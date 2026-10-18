@@ -7,11 +7,12 @@ import { Icon } from '../components/Icon';
 import { NeedsChooser } from '../components/NeedsChooser';
 import { SearchForm } from '../components/SearchForm';
 import { TodayShelves } from '../components/TodayShelves';
-import { useDocumentTitle, useMeta } from '../state/meta';
+import { useDocumentTitle, useMeta, useProviderFeatures } from '../state/meta';
 
 export function HomePage() {
   const { t } = useTranslation();
   const { appName } = useMeta();
+  const provider = useProviderFeatures();
   useDocumentTitle(null, t('app.tagline'));
   return (
     <div className="home">
@@ -49,9 +50,11 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="page page--wide home__feed" aria-labelledby="feed-title">
-        <TodayShelves headingId="feed-title" />
-      </section>
+      {provider && (
+        <section className="page page--wide home__feed" aria-labelledby="feed-title">
+          <TodayShelves headingId="feed-title" />
+        </section>
+      )}
 
       <section className="page page--wide home__legend" aria-labelledby="legend-title">
         <h2 id="legend-title" className="section-title">
@@ -78,7 +81,7 @@ export function HomePage() {
             <dd>{t('home.legend.unknown')}</dd>
           </div>
         </dl>
-        <p className="muted">{t('home.liveLegend')}</p>
+        {provider && <p className="muted">{t('home.liveLegend')}</p>}
         <p>
           <Link to="/about">{t('home.learnMore')}</Link>
         </p>

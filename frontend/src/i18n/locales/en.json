@@ -22,7 +22,7 @@
     "more": "More languages"
   },
   "demo": {
-    "banner": "Demo data: listings marked [TEST] are fictional."
+    "banner": "Demo mode: these are sample listings for a demonstration, not real places."
   },
   "footer": {
     "disclaimer": "Live updates come from the support providers, but information can still change. This site does not collect personal data for advertising or any other usage.",
@@ -1102,6 +1102,35 @@
       "add": "Add",
       "remove": "Remove",
       "none": "None"
+    },
+    "site": {
+      "nav": "Site settings",
+      "title": "Site settings",
+      "lead": "Switches that change what the public site shows. Nothing is deleted: listings are only hidden or shown again.",
+      "on": "On",
+      "off": "Off",
+      "saving": "Saving…",
+      "demo_mode": {
+        "label": "Demo mode",
+        "help": "Shows fictional demo providers instead of real listings, all verified, with today's provider posts. The admin dashboard shows the demo data too. A small banner tells visitors it's a demo. Turn it off when you're done filming.",
+        "loaded_one": "{{count}} demo listing is loaded.",
+        "loaded_other": "{{count}} demo listings are loaded.",
+        "turnedOn": "Demo mode is on. The site now shows demo providers.",
+        "turnedOff": "Demo mode is off. Real listings are back."
+      },
+      "provider_features": {
+        "label": "Live provider updates",
+        "help": "Today's status from providers, the “On the shelf today” filters and the home page feed. Keep this off until providers are posting.",
+        "forced": "Always on in demo mode.",
+        "turnedOn": "Live provider updates are shown.",
+        "turnedOff": "Live provider updates are hidden."
+      },
+      "district_only": {
+        "label": "Only Virginia's 8th district",
+        "help": "Shows only listings inside Virginia's 8th congressional district (Arlington, Alexandria, Falls Church and eastern Fairfax County). Listings outside it are hidden, not deleted.",
+        "turnedOn": "Only listings in Virginia's 8th district are shown.",
+        "turnedOff": "Listings outside Virginia's 8th district are shown again."
+      }
     }
   },
   "offline": {

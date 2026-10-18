@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import type { MatchReason, Tristate } from '../api/types';
 import { formatDate, formatDistance } from '../lib/format';
+import { useMeta } from '../state/meta';
 import { Icon } from './Icon';
 
 /**
@@ -26,6 +27,8 @@ export function VerificationBadge({ label, lastVerifiedAt }: { label: string; la
 
 export function SyntheticBadge() {
   const { t } = useTranslation();
+  const { meta, features } = useMeta();
+  if (meta?.demo_mode || features?.demo_mode) return null; // demo listings are all fictional; the site banner says so once
   return (
     <span className="badge badge--test" data-testid="synthetic-badge">
       <Icon name="flask" size={14} />

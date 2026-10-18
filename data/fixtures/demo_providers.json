@@ -1,0 +1,2654 @@
+{
+ "_notice": "FICTIONAL DEMO DATA for videos and live demos (Admin → Site settings → Demo mode). None of these organizations exist; phone numbers use the reserved 555-01xx range. Never shown unless demo mode is on.",
+ "records": [
+  {
+   "external_id": "demo-001",
+   "source_url": null,
+   "organization_name": "Columbia Pike Community Pantry",
+   "location_name": "Columbia Pike Community Pantry",
+   "address1": "3120 Columbia Pike",
+   "city": "Arlington",
+   "zip": "22204",
+   "lat": 38.8618,
+   "lon": -77.0866,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0101",
+   "languages": [
+    "en",
+    "es",
+    "am"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": "ART 41 and Metrobus 16 stop out front.",
+   "notes": "Bring your own bags if you can.",
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "Open to anyone in Northern Virginia."
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Choose your own groceries: fresh produce, dairy, eggs, bread and staples.",
+     "food_types": [
+      "general_groceries",
+      "fresh_vegetables",
+      "fresh_fruits",
+      "dairy",
+      "eggs",
+      "bread",
+      "pantry_staples"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 0,
+       "opens": "10:00",
+       "closes": "13:00"
+      },
+      {
+       "weekday": 2,
+       "opens": "16:00",
+       "closes": "19:00"
+      },
+      {
+       "weekday": 5,
+       "opens": "09:00",
+       "closes": "12:00"
+      }
+     ]
+    },
+    {
+     "service_type": "walk_up",
+     "description": "Walk-up window for quick grab-and-go bags.",
+     "food_types": [
+      "pantry_staples",
+      "bread"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 3,
+       "opens": "11:00",
+       "closes": "14:00"
+      }
+     ]
+    },
+    {
+     "service_type": "snap_application_help",
+     "description": "Help applying for SNAP on Wednesday evenings.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 2,
+       "opens": "16:00",
+       "closes": "19:00"
+      }
+     ]
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 5,
+     "opens": "09:00",
+     "closes": "17:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": {
+     "status": "open",
+     "message": "Fresh produce truck just arrived. Plenty of greens and apples!",
+     "minutes_ago": 25,
+     "items": [
+      [
+       "fresh_vegetables",
+       "plenty"
+      ],
+      [
+       "fresh_fruits",
+       "plenty"
+      ],
+      [
+       "eggs",
+       "some"
+      ],
+      [
+       "bread",
+       "some"
+      ],
+      [
+       "dairy",
+       "low"
+      ]
+     ]
+    },
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-002",
+   "source_url": null,
+   "organization_name": "Clarendon Neighbors Food Share",
+   "location_name": "Clarendon Neighbors Food Share — Drive-Thru",
+   "address1": "1015 N Highland St",
+   "city": "Arlington",
+   "zip": "22201",
+   "lat": 38.8873,
+   "lon": -77.0948,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0102",
+   "languages": [
+    "en",
+    "es"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": "Drive-thru lane in the rear lot.",
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "Open to anyone in Northern Virginia."
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "drive_through",
+     "description": "Stay in your car; volunteers load a box of protein and produce.",
+     "food_types": [
+      "meat",
+      "poultry",
+      "fresh_fruits",
+      "fresh_vegetables",
+      "frozen_foods"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 1,
+       "opens": "15:00",
+       "closes": "18:00"
+      },
+      {
+       "weekday": 4,
+       "opens": "15:00",
+       "closes": "18:00"
+      },
+      {
+       "weekday": 6,
+       "opens": "10:00",
+       "closes": "12:00"
+      }
+     ]
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "09:00",
+     "closes": "17:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": {
+     "status": "open",
+     "message": "Drive-thru is moving fast today. Chicken and frozen veggies in every box.",
+     "minutes_ago": 70,
+     "items": [
+      [
+       "poultry",
+       "plenty"
+      ],
+      [
+       "meat",
+       "some"
+      ],
+      [
+       "frozen_foods",
+       "plenty"
+      ],
+      [
+       "fresh_fruits",
+       "some"
+      ]
+     ]
+    },
+    "events": [
+     {
+      "title": "Saturday Produce Giveaway (drive-thru)",
+      "day_offset": 2,
+      "opens": "09:00",
+      "closes": "11:30",
+      "notes": "Extra fresh produce for the first 200 cars."
+     }
+    ]
+   }
+  },
+  {
+   "external_id": "demo-003",
+   "source_url": null,
+   "organization_name": "Shirlington Family Resource Center",
+   "location_name": "Shirlington Family Resource Center",
+   "address1": "4100 Campbell Ave",
+   "city": "Arlington",
+   "zip": "22206",
+   "lat": 38.8414,
+   "lon": -77.0882,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0103",
+   "languages": [
+    "en",
+    "es",
+    "ar"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "required",
+     "details": "Bring a photo ID for benefit applications."
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "wic_services",
+     "description": "WIC enrollment and nutrition visits.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": [
+      {
+       "weekday": 1,
+       "opens": "09:00",
+       "closes": "16:00"
+      },
+      {
+       "weekday": 3,
+       "opens": "09:00",
+       "closes": "16:00"
+      }
+     ]
+    },
+    {
+     "service_type": "snap_application_help",
+     "description": "Benefits help: SNAP, Medicaid and more.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 0,
+       "opens": "09:00",
+       "closes": "16:00"
+      }
+     ]
+    },
+    {
+     "service_type": "medicaid_enrollment_help",
+     "description": "Medicaid and FAMIS enrollment.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": []
+    },
+    {
+     "service_type": "childcare",
+     "description": "Free drop-in play group while you meet with staff.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": []
+    },
+    {
+     "service_type": "diapers",
+     "description": "Diapers and wipes, sizes newborn to 6.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 4,
+       "opens": "10:00",
+       "closes": "14:00"
+      }
+     ]
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "09:00",
+     "closes": "17:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": null,
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-004",
+   "source_url": null,
+   "organization_name": "Del Ray Community Kitchen",
+   "location_name": "Del Ray Community Kitchen",
+   "address1": "2300 Mount Vernon Ave",
+   "city": "Alexandria",
+   "zip": "22301",
+   "lat": 38.8248,
+   "lon": -77.058,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0104",
+   "languages": [
+    "en",
+    "es"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "Open to anyone in Northern Virginia."
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": "A free hot lunch, served at the table. Everyone welcome.",
+     "food_types": [
+      "prepared_meals",
+      "community_meals",
+      "vegetarian"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 0,
+       "opens": "11:30",
+       "closes": "13:30"
+      },
+      {
+       "weekday": 1,
+       "opens": "11:30",
+       "closes": "13:30"
+      },
+      {
+       "weekday": 2,
+       "opens": "11:30",
+       "closes": "13:30"
+      },
+      {
+       "weekday": 3,
+       "opens": "11:30",
+       "closes": "13:30"
+      },
+      {
+       "weekday": 4,
+       "opens": "11:30",
+       "closes": "13:30"
+      },
+      {
+       "weekday": 5,
+       "opens": "11:30",
+       "closes": "13:30"
+      },
+      {
+       "weekday": 6,
+       "opens": "11:30",
+       "closes": "13:30"
+      }
+     ]
+    },
+    {
+     "service_type": "senior_meals",
+     "description": "Seniors (60+) can take home an extra dinner.",
+     "food_types": [
+      "prepared_meals"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 2,
+       "opens": "11:30",
+       "closes": "13:30"
+      }
+     ]
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "10:30",
+     "closes": "14:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "10:30",
+     "closes": "14:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "10:30",
+     "closes": "14:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "10:30",
+     "closes": "14:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "10:30",
+     "closes": "14:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 5,
+     "opens": "10:30",
+     "closes": "14:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 6,
+     "opens": "10:30",
+     "closes": "14:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": {
+     "status": "open",
+     "message": "Today's lunch: chicken and rice with salad. Vegetarian option too.",
+     "minutes_ago": 50,
+     "items": [
+      [
+       "prepared_meals",
+       "plenty"
+      ],
+      [
+       "vegetarian",
+       "some"
+      ]
+     ]
+    },
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-005",
+   "source_url": null,
+   "organization_name": "West End Mobile Market",
+   "location_name": "West End Mobile Market — Landmark stop",
+   "address1": "5801 Duke St",
+   "city": "Alexandria",
+   "zip": "22304",
+   "lat": 38.8127,
+   "lon": -77.1285,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0105",
+   "languages": [
+    "en",
+    "es",
+    "am",
+    "fr"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "Open to anyone in Northern Virginia."
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "mobile_pantry",
+     "description": "Our market truck brings free fresh produce and dairy to the neighborhood.",
+     "food_types": [
+      "fresh_vegetables",
+      "fresh_fruits",
+      "dairy",
+      "eggs"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 1,
+       "opens": "16:00",
+       "closes": "18:30"
+      },
+      {
+       "weekday": 3,
+       "opens": "16:00",
+       "closes": "18:30"
+      },
+      {
+       "weekday": 5,
+       "opens": "10:00",
+       "closes": "12:00"
+      }
+     ]
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "16:00",
+     "closes": "18:30"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "16:00",
+     "closes": "18:30"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 5,
+     "opens": "16:00",
+     "closes": "18:30"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": {
+     "status": "limited",
+     "message": "Lots of produce today, but dairy is running low.",
+     "minutes_ago": 95,
+     "items": [
+      [
+       "fresh_vegetables",
+       "plenty"
+      ],
+      [
+       "fresh_fruits",
+       "some"
+      ],
+      [
+       "dairy",
+       "low"
+      ]
+     ]
+    },
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-006",
+   "source_url": null,
+   "organization_name": "Old Town Community Health Clinic",
+   "location_name": "Old Town Community Health Clinic",
+   "address1": "720 N Saint Asaph St",
+   "city": "Alexandria",
+   "zip": "22314",
+   "lat": 38.811,
+   "lon": -77.0455,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0106",
+   "languages": [
+    "en",
+    "es",
+    "fr",
+    "ar"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "required",
+     "details": "Bring a recent pay stub for the sliding scale."
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "health_clinic",
+     "description": "Sliding-scale primary care for adults and kids.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": [
+      {
+       "weekday": 0,
+       "opens": "08:30",
+       "closes": "17:00"
+      },
+      {
+       "weekday": 1,
+       "opens": "08:30",
+       "closes": "17:00"
+      },
+      {
+       "weekday": 2,
+       "opens": "08:30",
+       "closes": "17:00"
+      },
+      {
+       "weekday": 3,
+       "opens": "08:30",
+       "closes": "17:00"
+      },
+      {
+       "weekday": 4,
+       "opens": "08:30",
+       "closes": "17:00"
+      }
+     ]
+    },
+    {
+     "service_type": "dental_care",
+     "description": "Low-cost dental cleanings and fillings.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": []
+    },
+    {
+     "service_type": "prescription_help",
+     "description": "Help paying for prescriptions.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": []
+    },
+    {
+     "service_type": "prenatal_care",
+     "description": "Prenatal visits and new-parent support.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": []
+    },
+    {
+     "service_type": "reproductive_health",
+     "description": "Family planning and screenings.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": []
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "08:30",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "08:30",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "08:30",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "08:30",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "08:30",
+     "closes": "17:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": null,
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-007",
+   "source_url": null,
+   "organization_name": "Little Falls Food Closet",
+   "location_name": "Little Falls Food Closet",
+   "address1": "300 Park Ave",
+   "city": "Falls Church",
+   "zip": "22046",
+   "lat": 38.8826,
+   "lon": -77.1713,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0107",
+   "languages": [
+    "en",
+    "ar",
+    "ur",
+    "fa",
+    "es"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "Open to anyone in Northern Virginia."
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Halal, kosher and vegetarian foods, plus culturally familiar staples.",
+     "food_types": [
+      "halal",
+      "kosher",
+      "vegetarian",
+      "culturally_specific",
+      "pantry_staples",
+      "general_groceries"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 0,
+       "opens": "17:00",
+       "closes": "19:00"
+      },
+      {
+       "weekday": 3,
+       "opens": "10:00",
+       "closes": "13:00"
+      },
+      {
+       "weekday": 6,
+       "opens": "13:00",
+       "closes": "15:00"
+      }
+     ]
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 6,
+     "opens": "09:00",
+     "closes": "17:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": {
+     "status": "open",
+     "message": "Halal chicken and lentils in stock. Kosher shelf restocked this morning.",
+     "minutes_ago": 40,
+     "items": [
+      [
+       "halal",
+       "plenty"
+      ],
+      [
+       "kosher",
+       "some"
+      ],
+      [
+       "pantry_staples",
+       "plenty"
+      ]
+     ]
+    },
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-008",
+   "source_url": null,
+   "organization_name": "Mount Vernon Senior Meals & Delivery",
+   "location_name": "Mount Vernon Senior Meals & Delivery",
+   "address1": "8350 Richmond Hwy",
+   "city": "Alexandria",
+   "zip": "22309",
+   "lat": 38.719,
+   "lon": -77.105,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0108",
+   "languages": [
+    "en",
+    "ko"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "required",
+     "details": "Mount Vernon area residents for delivery."
+    }
+   ],
+   "services": [
+    {
+     "service_type": "home_delivery",
+     "description": "Weekly grocery delivery for seniors and homebound neighbors.",
+     "food_types": [
+      "general_groceries",
+      "fresh_fruits",
+      "dairy"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": [
+      {
+       "weekday": 2,
+       "opens": "10:00",
+       "closes": "14:00"
+      }
+     ]
+    },
+    {
+     "service_type": "senior_meals",
+     "description": "Hot lunch for adults 60+.",
+     "food_types": [
+      "prepared_meals"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 0,
+       "opens": "11:30",
+       "closes": "12:30"
+      },
+      {
+       "weekday": 1,
+       "opens": "11:30",
+       "closes": "12:30"
+      },
+      {
+       "weekday": 2,
+       "opens": "11:30",
+       "closes": "12:30"
+      },
+      {
+       "weekday": 3,
+       "opens": "11:30",
+       "closes": "12:30"
+      },
+      {
+       "weekday": 4,
+       "opens": "11:30",
+       "closes": "12:30"
+      }
+     ]
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "09:00",
+     "closes": "17:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": null,
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-009",
+   "source_url": null,
+   "organization_name": "Annandale Unity Pantry",
+   "location_name": "Annandale Unity Pantry",
+   "address1": "7200 Columbia Pike",
+   "city": "Annandale",
+   "zip": "22003",
+   "lat": 38.8318,
+   "lon": -77.197,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0109",
+   "languages": [
+    "en",
+    "ko",
+    "vi",
+    "es"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "Open to anyone in Northern Virginia."
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Groceries for the week, plus baby formula and baby food.",
+     "food_types": [
+      "general_groceries",
+      "baby_formula",
+      "infant_food",
+      "fresh_vegetables",
+      "dairy",
+      "eggs"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 1,
+       "opens": "10:00",
+       "closes": "14:00"
+      },
+      {
+       "weekday": 4,
+       "opens": "17:00",
+       "closes": "19:30"
+      },
+      {
+       "weekday": 5,
+       "opens": "09:00",
+       "closes": "12:00"
+      }
+     ]
+    },
+    {
+     "service_type": "diapers",
+     "description": "Diapers in every size.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 1,
+       "opens": "10:00",
+       "closes": "14:00"
+      }
+     ]
+    },
+    {
+     "service_type": "emergency_food",
+     "description": "Same-day emergency food bag, any time we're open.",
+     "food_types": [
+      "emergency_food_packages"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": []
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 5,
+     "opens": "09:00",
+     "closes": "17:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": {
+     "status": "open",
+     "message": "Formula and baby food available today. Diapers sizes 3-5.",
+     "minutes_ago": 15,
+     "items": [
+      [
+       "baby_formula",
+       "some"
+      ],
+      [
+       "infant_food",
+       "plenty"
+      ],
+      [
+       "general_groceries",
+       "plenty"
+      ],
+      [
+       "eggs",
+       "plenty"
+      ]
+     ]
+    },
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-010",
+   "source_url": null,
+   "organization_name": "Kingstowne Hope Center",
+   "location_name": "Kingstowne Hope Center",
+   "address1": "5900 Kingstowne Village Pkwy",
+   "city": "Alexandria",
+   "zip": "22315",
+   "lat": 38.77,
+   "lon": -77.14,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0110",
+   "languages": [
+    "en",
+    "es",
+    "vi"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "emergency_food",
+     "description": "Emergency food boxes, no questions asked.",
+     "food_types": [
+      "emergency_food_packages",
+      "pantry_staples"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 0,
+       "opens": "09:00",
+       "closes": "16:00"
+      },
+      {
+       "weekday": 1,
+       "opens": "09:00",
+       "closes": "16:00"
+      },
+      {
+       "weekday": 2,
+       "opens": "09:00",
+       "closes": "16:00"
+      },
+      {
+       "weekday": 3,
+       "opens": "09:00",
+       "closes": "16:00"
+      },
+      {
+       "weekday": 4,
+       "opens": "09:00",
+       "closes": "16:00"
+      }
+     ]
+    },
+    {
+     "service_type": "housing_assistance",
+     "description": "Rent help and eviction prevention.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": []
+    },
+    {
+     "service_type": "utility_assistance",
+     "description": "Help with electric and gas bills.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": []
+    },
+    {
+     "service_type": "financial_assistance",
+     "description": "One-time emergency grants.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": []
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "09:00",
+     "closes": "17:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": {
+     "status": "closed",
+     "message": "Closed today for volunteer training. Back tomorrow at 9!",
+     "minutes_ago": 180,
+     "items": []
+    },
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-011",
+   "source_url": null,
+   "organization_name": "Seven Corners Food Hub",
+   "location_name": "Seven Corners Food Hub",
+   "address1": "6201 Arlington Blvd",
+   "city": "Falls Church",
+   "zip": "22044",
+   "lat": 38.868,
+   "lon": -77.154,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0111",
+   "languages": [
+    "en",
+    "es",
+    "zh"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "Open to anyone in Northern Virginia."
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Market-style pantry with frozen foods and staples.",
+     "food_types": [
+      "pantry_staples",
+      "frozen_foods",
+      "bread",
+      "baked_goods",
+      "general_groceries"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 0,
+       "opens": "15:00",
+       "closes": "18:00"
+      },
+      {
+       "weekday": 2,
+       "opens": "10:00",
+       "closes": "13:00"
+      },
+      {
+       "weekday": 6,
+       "opens": "10:00",
+       "closes": "13:00"
+      }
+     ]
+    },
+    {
+     "service_type": "grocery_voucher",
+     "description": "Grocery store gift cards for families with kids.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 2,
+       "opens": "10:00",
+       "closes": "13:00"
+      }
+     ]
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 6,
+     "opens": "09:00",
+     "closes": "17:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": {
+     "status": "limited",
+     "message": "Frozen section is almost empty, but plenty of bread and staples.",
+     "minutes_ago": 120,
+     "items": [
+      [
+       "frozen_foods",
+       "low"
+      ],
+      [
+       "pantry_staples",
+       "plenty"
+      ],
+      [
+       "bread",
+       "plenty"
+      ],
+      [
+       "baked_goods",
+       "some"
+      ]
+     ]
+    },
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-012",
+   "source_url": null,
+   "organization_name": "Huntington Welcome Center",
+   "location_name": "Huntington Welcome Center",
+   "address1": "5900 N Kings Hwy",
+   "city": "Alexandria",
+   "zip": "22303",
+   "lat": 38.792,
+   "lon": -77.068,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0112",
+   "languages": [
+    "en",
+    "es",
+    "fa",
+    "ur"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "legal_aid",
+     "description": "Free legal clinic for housing and work problems.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": [
+      {
+       "weekday": 3,
+       "opens": "17:00",
+       "closes": "20:00"
+      }
+     ]
+    },
+    {
+     "service_type": "immigration_legal_help",
+     "description": "Immigration consultations with accredited staff.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": []
+    },
+    {
+     "service_type": "esl_classes",
+     "description": "English classes, all levels.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 1,
+       "opens": "18:00",
+       "closes": "20:00"
+      },
+      {
+       "weekday": 3,
+       "opens": "18:00",
+       "closes": "20:00"
+      }
+     ]
+    },
+    {
+     "service_type": "job_training",
+     "description": "Resume help and job readiness workshops.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 4,
+       "opens": "10:00",
+       "closes": "12:00"
+      }
+     ]
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "10:00",
+     "closes": "20:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "10:00",
+     "closes": "20:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "10:00",
+     "closes": "20:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "10:00",
+     "closes": "20:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "10:00",
+     "closes": "20:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": null,
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-013",
+   "source_url": null,
+   "organization_name": "Bailey's Crossroads Counseling Collective",
+   "location_name": "Bailey's Crossroads Counseling Collective",
+   "address1": "5800 Seminary Rd",
+   "city": "Falls Church",
+   "zip": "22041",
+   "lat": 38.8512,
+   "lon": -77.1298,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0113",
+   "languages": [
+    "en",
+    "es",
+    "am"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "mental_health_counseling",
+     "description": "Free and low-cost counseling, in person or by video.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": []
+    },
+    {
+     "service_type": "support_groups",
+     "description": "Weekly support groups for parents and caregivers.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 2,
+       "opens": "18:30",
+       "closes": "20:00"
+      }
+     ]
+    },
+    {
+     "service_type": "crisis_support",
+     "description": "Same-day walk-in crisis support.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 0,
+       "opens": "10:00",
+       "closes": "16:00"
+      },
+      {
+       "weekday": 1,
+       "opens": "10:00",
+       "closes": "16:00"
+      },
+      {
+       "weekday": 2,
+       "opens": "10:00",
+       "closes": "16:00"
+      },
+      {
+       "weekday": 3,
+       "opens": "10:00",
+       "closes": "16:00"
+      },
+      {
+       "weekday": 4,
+       "opens": "10:00",
+       "closes": "16:00"
+      }
+     ]
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "10:00",
+     "closes": "19:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "10:00",
+     "closes": "19:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "10:00",
+     "closes": "19:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "10:00",
+     "closes": "19:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "10:00",
+     "closes": "19:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": null,
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-014",
+   "source_url": null,
+   "organization_name": "Hybla Valley Kids Café",
+   "location_name": "Hybla Valley Kids Café",
+   "address1": "7900 Richmond Hwy",
+   "city": "Alexandria",
+   "zip": "22306",
+   "lat": 38.7465,
+   "lon": -77.0832,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0114",
+   "languages": [
+    "en",
+    "es"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "student_affiliation",
+     "status": "required",
+     "details": "For children and teens."
+    }
+   ],
+   "services": [
+    {
+     "service_type": "kids_meals",
+     "description": "Free after-school dinner for kids 18 and under.",
+     "food_types": [
+      "prepared_meals",
+      "fresh_fruits"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 0,
+       "opens": "16:00",
+       "closes": "17:30"
+      },
+      {
+       "weekday": 1,
+       "opens": "16:00",
+       "closes": "17:30"
+      },
+      {
+       "weekday": 2,
+       "opens": "16:00",
+       "closes": "17:30"
+      },
+      {
+       "weekday": 3,
+       "opens": "16:00",
+       "closes": "17:30"
+      },
+      {
+       "weekday": 4,
+       "opens": "16:00",
+       "closes": "17:30"
+      }
+     ]
+    },
+    {
+     "service_type": "school_based",
+     "description": "Weekend backpacks of kid-friendly food.",
+     "food_types": [
+      "pantry_staples"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 4,
+       "opens": "15:00",
+       "closes": "17:00"
+      }
+     ]
+    },
+    {
+     "service_type": "seasonal_program",
+     "description": "Summer meals while school is out.",
+     "food_types": [
+      "prepared_meals"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": []
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "15:00",
+     "closes": "18:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "15:00",
+     "closes": "18:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "15:00",
+     "closes": "18:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "15:00",
+     "closes": "18:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "15:00",
+     "closes": "18:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": {
+     "status": "open",
+     "message": "Tacos and fresh fruit for dinner tonight!",
+     "minutes_ago": 30,
+     "items": [
+      [
+       "prepared_meals",
+       "plenty"
+      ],
+      [
+       "fresh_fruits",
+       "some"
+      ]
+     ]
+    },
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-015",
+   "source_url": null,
+   "organization_name": "Groveton Clothing & Essentials Closet",
+   "location_name": "Groveton Clothing & Essentials Closet",
+   "address1": "2800 Groveton St",
+   "city": "Alexandria",
+   "zip": "22306",
+   "lat": 38.77,
+   "lon": -77.09,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0115",
+   "languages": [
+    "en",
+    "ko",
+    "es"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "Open to anyone in Northern Virginia."
+    },
+    {
+     "requirement_type": "appointment",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "clothing",
+     "description": "Free clothing and winter coats for all ages.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 1,
+       "opens": "10:00",
+       "closes": "14:00"
+      },
+      {
+       "weekday": 5,
+       "opens": "10:00",
+       "closes": "14:00"
+      }
+     ]
+    },
+    {
+     "service_type": "hygiene_supplies",
+     "description": "Soap, toothpaste, period products.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": []
+    },
+    {
+     "service_type": "household_essentials",
+     "description": "Cleaning supplies and toilet paper.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": []
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "10:00",
+     "closes": "14:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 5,
+     "opens": "10:00",
+     "closes": "14:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": null,
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-016",
+   "source_url": null,
+   "organization_name": "McLean Pet Pantry",
+   "location_name": "McLean Pet Pantry",
+   "address1": "1350 Chain Bridge Rd",
+   "city": "McLean",
+   "zip": "22101",
+   "lat": 38.934,
+   "lon": -77.177,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0116",
+   "languages": [
+    "en",
+    "es"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "Open to anyone in Northern Virginia."
+    }
+   ],
+   "services": [
+    {
+     "service_type": "pet_food",
+     "description": "Dog and cat food so no one has to choose between feeding themselves and their pets.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 5,
+       "opens": "09:00",
+       "closes": "12:00"
+      }
+     ]
+    },
+    {
+     "service_type": "pet_supplies",
+     "description": "Leashes, litter and flea treatment.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": []
+    },
+    {
+     "service_type": "veterinary_care",
+     "description": "Low-cost vaccine clinic once a month.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": []
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 5,
+     "opens": "09:00",
+     "closes": "12:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": null,
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-017",
+   "source_url": null,
+   "organization_name": "Rose Hill Community Connections",
+   "location_name": "Rose Hill Community Connections",
+   "address1": "6100 Rose Hill Dr",
+   "city": "Alexandria",
+   "zip": "22310",
+   "lat": 38.789,
+   "lon": -77.115,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0117",
+   "languages": [
+    "en",
+    "vi"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "transportation_help",
+     "description": "Free rides to medical appointments and the grocery store.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": []
+    },
+    {
+     "service_type": "tax_preparation",
+     "description": "Free tax filing help (January to April).",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": []
+    },
+    {
+     "service_type": "food_referral",
+     "description": "Not sure where to go? We'll connect you with a pantry near you.",
+     "food_types": [],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": []
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 0,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 1,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 3,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "09:00",
+     "closes": "17:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": null,
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-018",
+   "source_url": null,
+   "organization_name": "Woodlawn Neighborhood Pantry",
+   "location_name": "Woodlawn Neighborhood Pantry",
+   "address1": "8900 Richmond Hwy",
+   "city": "Alexandria",
+   "zip": "22309",
+   "lat": 38.72,
+   "lon": -77.14,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0118",
+   "languages": [
+    "en",
+    "es"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "proof_of_address",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "referral",
+     "status": "not_required"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "not_required",
+     "details": "Open to anyone in Northern Virginia."
+    }
+   ],
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Fish, eggs, bakery items and groceries every week.",
+     "food_types": [
+      "fish",
+      "eggs",
+      "baked_goods",
+      "bread",
+      "general_groceries"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 2,
+       "opens": "17:00",
+       "closes": "19:00"
+      },
+      {
+       "weekday": 4,
+       "opens": "10:00",
+       "closes": "13:00"
+      },
+      {
+       "weekday": 6,
+       "opens": "09:00",
+       "closes": "11:00"
+      }
+     ]
+    },
+    {
+     "service_type": "appointment_distribution",
+     "description": "Pick a time online for a pre-packed box.",
+     "food_types": [
+      "general_groceries"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "required",
+     "schedules": []
+    }
+   ],
+   "schedules": [
+    {
+     "kind": "operating_hours",
+     "weekday": 2,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 4,
+     "opens": "09:00",
+     "closes": "17:00"
+    },
+    {
+     "kind": "operating_hours",
+     "weekday": 6,
+     "opens": "09:00",
+     "closes": "17:00"
+    }
+   ],
+   "demo": {
+    "status": "verified",
+    "live": {
+     "status": "open",
+     "message": "Fresh bakery donation today, and frozen fish while it lasts.",
+     "minutes_ago": 55,
+     "items": [
+      [
+       "fish",
+       "some"
+      ],
+      [
+       "eggs",
+       "plenty"
+      ],
+      [
+       "baked_goods",
+       "plenty"
+      ],
+      [
+       "bread",
+       "plenty"
+      ]
+     ]
+    },
+    "events": [
+     {
+      "title": "Thanksgiving Turkey Distribution",
+      "day_offset": 5,
+      "opens": "10:00",
+      "closes": "13:00",
+      "notes": "One turkey per household while supplies last."
+     }
+    ]
+   }
+  },
+  {
+   "external_id": "demo-019",
+   "source_url": null,
+   "organization_name": "Lake Barcroft Community Fridge",
+   "location_name": "Lake Barcroft Community Fridge",
+   "address1": "3400 Charles St",
+   "city": "Falls Church",
+   "zip": "22041",
+   "lat": 38.847,
+   "lon": -77.155,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0119",
+   "languages": [
+    "en"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "photo_id",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "walk_up",
+     "description": "Take what you need, leave what you can. Open 24/7.",
+     "food_types": [
+      "fresh_vegetables",
+      "prepared_meals",
+      "dairy"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": []
+    }
+   ],
+   "schedules": [],
+   "demo": {
+    "status": "candidate",
+    "live": null,
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-020",
+   "source_url": null,
+   "organization_name": "Lincolnia Neighborhood Pantry",
+   "location_name": "Lincolnia Neighborhood Pantry",
+   "address1": "6200 Lincolnia Rd",
+   "city": "Alexandria",
+   "zip": "22312",
+   "lat": 38.818,
+   "lon": -77.149,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0120",
+   "languages": [
+    "en",
+    "es"
+   ],
+   "wheelchair_accessible": "unknown",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [],
+   "services": [
+    {
+     "service_type": "pantry_pickup",
+     "description": "Monthly grocery pickup.",
+     "food_types": [
+      "general_groceries"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 5,
+       "opens": "10:00",
+       "closes": "12:00",
+       "week_of_month": 1
+      }
+     ]
+    }
+   ],
+   "schedules": [],
+   "demo": {
+    "status": "candidate",
+    "live": null,
+    "events": []
+   }
+  },
+  {
+   "external_id": "demo-021",
+   "source_url": null,
+   "organization_name": "Mason District Meal Program",
+   "location_name": "Mason District Meal Program",
+   "address1": "6500 Little River Tpke",
+   "city": "Alexandria",
+   "zip": "22312",
+   "lat": 38.832,
+   "lon": -77.164,
+   "geocode_source": "demo",
+   "phone": "(703) 555-0121",
+   "languages": [
+    "en"
+   ],
+   "wheelchair_accessible": "yes",
+   "operating_status": "open",
+   "parking_notes": null,
+   "transit_notes": null,
+   "notes": null,
+   "eligibility": [
+    {
+     "requirement_type": "income_documentation",
+     "status": "not_required"
+    }
+   ],
+   "services": [
+    {
+     "service_type": "community_meal",
+     "description": "Community dinner on Thursdays.",
+     "food_types": [
+      "prepared_meals"
+     ],
+     "offering_status": "regular",
+     "appointment_required": "not_required",
+     "schedules": [
+      {
+       "weekday": 3,
+       "opens": "17:30",
+       "closes": "19:00"
+      }
+     ]
+    }
+   ],
+   "schedules": [],
+   "demo": {
+    "status": "candidate",
+    "live": null,
+    "events": []
+   }
+  }
+ ]
+}

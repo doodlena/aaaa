@@ -6,7 +6,7 @@ import type { ResourceDetail, Schedule, Translation, Tristate } from '../api/typ
 import { formatAddress, formatDate, formatDateTime, formatTimeRange, safeUrl, telHref, weekdayName } from '../lib/format';
 import { useAsync } from '../lib/useAsync';
 import { useAuth } from '../state/auth';
-import { useDocumentTitle } from '../state/meta';
+import { useDocumentTitle, useProviderFeatures } from '../state/meta';
 import { OperatingBadge, SyntheticBadge, TriChip, VerificationBadge } from './Badges';
 import { AIFacts, AIInfoProvider } from './AIInfo';
 import { Icon } from './Icon';
@@ -174,6 +174,7 @@ function languageName(code: string, uiLang: string) {
 
 export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?: Level }) {
   const { t, i18n } = useTranslation();
+  const provider = useProviderFeatures();
   const lang = i18n.language;
   const h2 = level + 1;
   const h3 = level + 2;
@@ -265,7 +266,6 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
                   sources: Array.from(new Set(r.sources.map((s) => s.name))).join(', '),
                   date: formatDate(r.sources.map((s) => s.last_seen_at).sort().at(-1)!, lang, { dateStyle: 'medium' }),
                 })}
-                {r.verification_label === 'source_reported' && <> {t('detail.notConfirmed')}</>}
                 {r.phone && (
                   <>
                     {' '}
@@ -278,7 +278,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
         </p>
       </header>
 
-      <TodayAtPantry r={r} level={h2} />
+      {provider && <TodayAtPantry r={r} level={h2} />}
 
       <VisitPlanner r={r} headingLevel={h2} />
 
@@ -383,11 +383,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
         <H level={h2} id={`s-sched-${r.id}`}>
           {t('detail.schedule')}
         </H>
-        {lastVerified ? (
-          <p className="muted">{t('detail.scheduleVerified', { date: lastVerified })}</p>
-        ) : (
-          <p className="muted">{t('detail.scheduleNeverVerified')}</p>
-        )}
+        {lastVerified && <p className="muted">{t('detail.scheduleVerified', { date: lastVerified })}</p>}
 
         <H level={h3}>{t('detail.distributionTimes')}</H>
         {r.schedules.distribution.length ? (

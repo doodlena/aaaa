@@ -4,7 +4,18 @@ Everything shown in the demo uses **fictional `[TEST]` pantries**, so you can de
 real organizations. Say this on camera. The real pilot data (113 imported listings) stays in the admin queue until
 it is verified.
 
-## Setup (once)
+## Filming with demo mode (quickest)
+
+1. Sign in as an admin and open **Admin → Site settings**.
+2. Turn on **Demo mode**. The first time, it loads 21 fictional providers in Arlington, Alexandria, Falls Church and
+   the VA-08 part of Fairfax County (try ZIP 22204 or 22314). Every demo listing shows as verified, live provider
+   filters work, and the admin dashboard shows only demo access requests, reports and listings to verify.
+3. A purple banner at the top says these are sample listings. Keep it in the shot; real families may visit the site
+   while demo mode is on.
+4. When you're done, turn **Demo mode** off. Real listings come back unchanged.
+
+## Setup with the command line (older flow)
+
 
 ```bash
 cd backend

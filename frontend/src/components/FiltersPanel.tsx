@@ -12,6 +12,7 @@ import {
   type ScheduleMode,
 } from '../lib/filters';
 import { todayISO } from '../lib/format';
+import { useProviderFeatures } from '../state/meta';
 
 interface Props {
   filters: Filters;
@@ -63,6 +64,7 @@ export function FiltersPanel({ filters, onChange, onClear }: Props) {
     onChange({ schedule, date: schedule === 'date' ? filters.date || todayISO() : filters.date });
 
   const food = isFoodContext(filters);
+  const provider = useProviderFeatures(); // "today" filters need live provider posts
   const toggleService = (v: string) => {
     const service_groups = toggle(filters.service_groups, v);
     // Leaving every food need behind drops the food-only filters too (they would silently narrow the results).
@@ -91,6 +93,7 @@ export function FiltersPanel({ filters, onChange, onClear }: Props) {
 
       {food ? (
       <>
+      {provider && (
       <fieldset className="fgroup fgroup--live">
         <legend>{t('filters.today')}</legend>
         <p className="fgroup__hint" id={`${id}-live-hint`}>
@@ -114,6 +117,7 @@ export function FiltersPanel({ filters, onChange, onClear }: Props) {
           onToggle={(v) => onChange({ live_food_groups: toggle(filters.live_food_groups, v) })}
         />
       </fieldset>
+      )}
 
       <CheckGroup
         legend={t('filters.foodGroups')}

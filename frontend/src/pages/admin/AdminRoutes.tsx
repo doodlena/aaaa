@@ -10,6 +10,7 @@ import { AdminQuality } from './AdminQuality';
 import { AdminQueue } from './AdminQueue';
 import { AdminReview } from './AdminReview';
 import { AdminRuns } from './AdminRuns';
+import { AdminSite } from './AdminSite';
 import { AdminSources } from './AdminSources';
 import { AdminUnverified } from './AdminUnverified';
 
@@ -69,6 +70,9 @@ export default function AdminRoutes() {
           <li>
             <NavLink to="/admin/ai">{t('admin.aiSettings.nav')}</NavLink>
           </li>
+          <li>
+            <NavLink to="/admin/site">{t('admin.site.nav')}</NavLink>
+          </li>
         </ul>
       </nav>
       <div className="admin__main">
@@ -84,6 +88,7 @@ export default function AdminRoutes() {
           <Route path="sources" element={<AdminSources />} />
           <Route path="quality" element={<AdminQuality />} />
           <Route path="ai" element={<AdminAI />} />
+          <Route path="site" element={<AdminSite />} />
           <Route path="*" element={<Navigate to="/admin" replace />} />
         </Routes>
       </div>

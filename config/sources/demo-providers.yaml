@@ -1,0 +1,17 @@
+# FICTIONAL DEMO DATA — the providers shown while an admin has Demo mode on (Admin → Site settings).
+# Loaded by app/services/demo.py, never by ingestion runs (disabled + synthetic). While demo mode is on the public site
+# and the admin dashboard show only these listings; real listings are hidden, not changed.
+id: demo-providers
+name: "Lantern demo data"
+owner: Lantern (fictional examples)
+url: file://data/fixtures/demo_providers.json
+adapter: structured_json
+retrieval: file
+formats: [json]
+jurisdictions: [arlington-county, alexandria-city, falls-church-city, fairfax-city, fairfax-county]
+enabled: false
+is_synthetic: true
+publication: permitted_with_attribution
+store_raw: false
+respect_robots: false
+known_limitations: ["Entirely fictional. Used only for demo videos and live demos."]

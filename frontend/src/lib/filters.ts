@@ -123,8 +123,8 @@ export const ELIGIBILITY_FILTERS = [
 export const SORTS = ['distance', 'next_distribution', 'relevance', 'name'] as const;
 /** Distance choices shown to people, in miles; the API takes kilometres. */
 export const RADII_MILES = [1, 3, 5, 10, 25, 50] as const;
-/** Used when someone picks a distance before entering an address: the middle of Northern Virginia. */
-export const REGION_CENTER = { lat: 38.85, lon: -77.3 };
+/** Used when someone picks a distance before entering an address: the middle of Virginia's 8th district. */
+export const REGION_CENTER = { lat: 38.83, lon: -77.12 };
 export const milesToKm = (mi: number) => Math.round(mi * 1.609344 * 100) / 100;
 export const kmToMiles = (km: number) => Math.round((km / 1.609344) * 10) / 10;
 export const RADII = RADII_MILES.map(milesToKm);

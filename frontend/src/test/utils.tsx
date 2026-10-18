@@ -133,6 +133,7 @@ export const testUser: User = { id: 7, email: 'person@example.com', role: 'user'
 export const testFeatures: Features = {
   app_name: 'Lantern',
   demo_mode: false,
+  provider_features: true, // most tests exercise the live features; siteSettings.test.tsx covers them switched off
   ai: { search: false, announcement_drafts: false, structure_suggestions: false, translation: false, model: null },
 };
 export const aiOn: Partial<Features> = {

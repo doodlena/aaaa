@@ -2,11 +2,13 @@ import { useTranslation } from 'react-i18next';
 import { api } from '../../api/client';
 import { ErrorMessage, Loading } from '../../components/Status';
 import { useAsync } from '../../lib/useAsync';
+import { useMeta } from '../../state/meta';
 import { When } from './shared';
 
 /** Data-quality metrics as a plain, accessible table (no charts by design). */
 export function AdminQuality() {
   const { t } = useTranslation();
+  const demoMode = !!useMeta().features?.demo_mode;
   const { data, error, loading, reload } = useAsync(() => api.admin.quality(), []);
   const fmt = (key: string, v: number | null) => (v === null || v === undefined ? '—' : key.endsWith('_pct') ? `${v}%` : String(v));
   return (
@@ -19,7 +21,8 @@ export function AdminQuality() {
       ) : data ? (
         <>
           <p className="muted">
-            {t('admin.generated')}: <When at={data.generated_at} /> · {data.includes_synthetic ? t('admin.includesSynthetic') : t('admin.excludesSynthetic')}
+            {t('admin.generated')}: <When at={data.generated_at} />
+            {!demoMode && <> · {data.includes_synthetic ? t('admin.includesSynthetic') : t('admin.excludesSynthetic')}</>}
           </p>
           <div className="table-wrap">
             <table className="table table--metrics">

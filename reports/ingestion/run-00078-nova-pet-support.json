@@ -1,0 +1,120 @@
+{
+  "run_id": 78,
+  "source": {
+    "id": "nova-pet-support",
+    "name": "Northern Virginia pet support (pet food, low-cost vet care, pet-friendly shelter) \u2014 AI-assisted research (cited)",
+    "url": "file://data/sources/nova_pet_support.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "AI-assisted research of pages fetched on the retrieval date; each record cites source_url. Not verified.",
+      "Blocked sites were skipped, not circumvented; see the matching research log in docs/pilot_research/."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-13T04:14:55.879644-04:00",
+  "finished_at": "2026-10-13T08:14:55.899169+00:00",
+  "counts": {
+    "discovered": 23,
+    "inserted": 0,
+    "updated": 0,
+    "unchanged": 8,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 529,
+    "out_of_scope": 15,
+    "gone": 1,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "nova-pet-awla-vaccine-microchip-clinics",
+      "status": "linked",
+      "location_id": 345,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-pet-awla-veterinary-assistance",
+      "status": "linked",
+      "location_id": 345,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-pet-awla-help-program",
+      "status": "linked",
+      "location_id": 345,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-pet-awl-alexandria-pet-pantry",
+      "status": "linked",
+      "location_id": 354,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-pet-awla-community-care-clinics",
+      "status": "linked",
+      "location_id": 345,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-pet-awla-spay-neuter-vouchers",
+      "status": "linked",
+      "location_id": 345,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-pet-hsfc-ani-meals",
+      "status": "linked",
+      "location_id": 347,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

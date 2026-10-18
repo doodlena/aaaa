@@ -1,0 +1,150 @@
+{
+  "run_id": 77,
+  "source": {
+    "id": "nova-food-research",
+    "name": "Northern Virginia food assistance (Loudoun, western Fairfax, Prince William) \u2014 AI-assisted research (cited)",
+    "url": "file://data/sources/nova_food_research.json",
+    "adapter": "structured_json",
+    "is_synthetic": false,
+    "known_limitations": [
+      "AI-assisted research of pages fetched on the retrieval date; each record cites source_url. Not verified.",
+      "Blocked sites were skipped, not circumvented; see the matching research log in docs/pilot_research/."
+    ]
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-13T04:14:55.837695-04:00",
+  "finished_at": "2026-10-13T08:14:55.876400+00:00",
+  "counts": {
+    "discovered": 33,
+    "inserted": 0,
+    "updated": 1,
+    "unchanged": 10,
+    "rejected": 0,
+    "duplicate_candidates": 0,
+    "conflicts": 0,
+    "needs_review": 529,
+    "out_of_scope": 22,
+    "gone": 0,
+    "fetch_errors": 0,
+    "parse_errors": 0,
+    "extra": {}
+  },
+  "errors": [],
+  "records_requiring_review": [
+    {
+      "external_id": "nova-food-cornerstones-asapp-reston",
+      "status": "linked",
+      "location_id": 50,
+      "issues": []
+    },
+    {
+      "external_id": "nova-food-ffo-warehouse-prosperity",
+      "status": "linked",
+      "location_id": 49,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-ffo-burke-summit-oaks",
+      "status": "linked",
+      "location_id": 365,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-ffo-fairfax-yorkville",
+      "status": "linked",
+      "location_id": 366,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-ffo-springfield-gardens",
+      "status": "linked",
+      "location_id": 367,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-ffo-springfield-chelsea-square",
+      "status": "linked",
+      "location_id": 368,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-link-produce-holy-cross-herndon",
+      "status": "linked",
+      "location_id": 361,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-link-produce-trinity-presbyterian-herndon",
+      "status": "linked",
+      "location_id": 360,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-wfcm-chantilly",
+      "status": "linked",
+      "location_id": 88,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "external_id": "nova-food-wfcm-centreville",
+      "status": "linked",
+      "location_id": 89,
+      "issues": [
+        {
+          "code": "missing_distribution_schedule",
+          "field": "schedules",
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+  "note": "Imported records are unverified candidates. Nothing in this run was published or marked verified."
+}

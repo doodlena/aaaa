@@ -35,6 +35,7 @@ import type { DuplicateAIOpinion,
   SearchResponse,
   User,
   VerificationMeta,
+  SiteSettings,
 } from './types';
 
 export const API_BASE: string = (import.meta.env.VITE_API_BASE as string | undefined)?.replace(/\/$/, '') || '/api';
@@ -215,6 +216,9 @@ export const api = {
     reports: (status = 'open') => request<{ items: AdminReport[] }>('GET', `/admin/reports${qs({ status })}`),
     decideReport: (id: number, decision: 'resolve' | 'dismiss', notes?: string) =>
       request<{ id: number; status: string }>('POST', `/admin/reports/${id}/decision`, { decision, notes: notes || null }),
+    siteSettings: () => request<SiteSettings>('GET', '/admin/site-settings'),
+    patchSiteSettings: (body: Partial<Pick<SiteSettings, 'demo_mode' | 'provider_features' | 'district_only'>>) =>
+      request<SiteSettings>('PATCH', '/admin/site-settings', body),
     aiSettings: () => request<AISettings>('GET', '/admin/ai-settings'),
     /** The key is sent once and never returned; the response only carries a hint like "…WXYZ" and a live test. */
     saveAIKey: (api_key: string) => request<AISettings & { test: AITestResult }>('PUT', '/admin/ai-settings/key', { api_key }),

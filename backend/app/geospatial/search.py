@@ -8,7 +8,7 @@ from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
 
 from geoalchemy2 import Geography
-from sqlalchemy import and_, cast, exists, func, or_, select
+from sqlalchemy import and_, cast, exists, func, not_, or_, select
 from sqlalchemy.orm import Session, selectinload
 
 from app.config import get_settings
@@ -80,6 +80,16 @@ def source_reported_condition():
 
 
 def public_visibility():
+    from app.services import demo, site_flags
+
+    from app.geospatial import district
+
+    area = [district.contains(Location.geom)] if site_flags.district_only() else []
+    if site_flags.demo_mode():
+        # Demo mode: only the published fictional demo providers; real listings are hidden while it is on.
+        return and_(demo.is_demo_location(), Location.published.is_(True), Location.review_status.in_(PUBLIC_REVIEW_STATUSES),
+                    Location.merged_into_id.is_(None), Location.operating_status != "permanently_closed", Location.geom.isnot(None),
+                    *area)
     s = get_settings()
     verified = and_(
         Location.published.is_(True),
@@ -95,9 +105,12 @@ def public_visibility():
         Location.merged_into_id.is_(None),
         Location.operating_status != "permanently_closed",
         Location.geom.isnot(None),
+        *area,  # e.g. only Virginia's 8th congressional district (Admin → Site settings)
     ]
     if not s.show_synthetic:
         cond.append(Location.is_synthetic.is_(False))
+    else:
+        cond.append(not_(demo.is_demo_location()))
     return and_(*cond)
 
 
@@ -173,7 +186,12 @@ def search(db: Session, p: SearchParams, now: datetime | None = None) -> dict:
 
     target_date = today if p.open_today else p.on_date
     ids = [row[0].id for row in rows]
-    shelves = current_shelf(db, ids, now)
+    from app.services.site_flags import provider_features
+
+    live_on = provider_features()  # live provider updates switched off: no posts shown, live filters ignored
+    shelves = current_shelf(db, ids, now) if live_on else {}
+    if not live_on:
+        p.live_open, p.live_food_groups = False, []
     reports = open_report_counts(db, ids)
     matched, uncertain = [], []
     for row in rows:
