@@ -42,7 +42,13 @@ def create_app() -> FastAPI:
 
     @app.middleware("http")
     async def security_headers(request: Request, call_next):
+        from app.services import site_flags
+
+        demo = request.cookies.get(site_flags.DEMO_COOKIE) == "1"
+        site_flags.set_demo_mode(demo)  # demo mode is per browser
         response = await call_next(request)
+        if demo:
+            response.headers["Cache-Control"] = "private, no-store"  # demo responses must never be shared by a cache
         response.headers.setdefault("X-Content-Type-Options", "nosniff")
         response.headers.setdefault("X-Frame-Options", "DENY")
         response.headers.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")

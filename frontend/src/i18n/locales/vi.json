@@ -1109,7 +1109,7 @@
       "saving": "Đang lưu…",
       "demo_mode": {
         "label": "Chế độ trình diễn",
-        "help": "Thêm các nhà cung cấp mẫu hư cấu vào danh sách thật, tất cả hiển thị đã xác minh; một vài nơi đăng cập nhật hôm nay. Bảng quản trị chỉ hiển thị dữ liệu mẫu. Khách sẽ không thấy thông báo nào rằng một số địa điểm là mẫu, vì vậy hãy tắt ngay khi quay xong.",
+        "help": "Thêm các nhà cung cấp mẫu hư cấu vào danh sách thật, tất cả hiển thị đã xác minh; một vài nơi đăng cập nhật hôm nay. Bảng quản trị chỉ hiển thị dữ liệu mẫu. Chỉ trình duyệt này thấy chế độ trình diễn; mọi người khác thấy trang bình thường. Để quay trên thiết bị khác, hãy bật ở đó nữa.",
         "loaded_one": "Đã tải {{count}} danh sách mẫu.",
         "loaded_other": "Đã tải {{count}} danh sách mẫu.",
         "turnedOn": "Đã bật chế độ trình diễn. Trang đang hiển thị nhà cung cấp mẫu.",

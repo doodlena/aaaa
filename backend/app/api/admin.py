@@ -1,7 +1,7 @@
 """Administrator API. Every route requires role=admin (server-side) and, for writes, a valid CSRF token."""
 from datetime import UTC, datetime, timedelta
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Response
 from sqlalchemy import Integer, func, or_, select
 from sqlalchemy.orm import Session
 
@@ -505,15 +505,24 @@ def get_site_settings(db: Session = Depends(get_db)):
 
 
 @router.patch("/site-settings")
-def patch_site_settings(body: SiteSettingsIn, user: User = Depends(require_admin), db: Session = Depends(get_db)):
+def patch_site_settings(body: SiteSettingsIn, response: Response, user: User = Depends(require_admin),
+                        db: Session = Depends(get_db)):
     from app.ingestion.verification.workflow import audit
 
     before = site_flags.flags()
     changes = {k: v for k, v in body.model_dump().items() if v is not None and v != before.get(k)}
-    if changes.get("demo_mode"):
-        demo.load(db, user)  # idempotent: creates the fictional providers the first time
+    if "demo_mode" in changes:
+        # Per browser: a cookie, not a site-wide setting, so visitors never see the demo providers.
+        if changes["demo_mode"]:
+            demo.load(db, user)  # idempotent: creates the fictional providers the first time
+            response.set_cookie(site_flags.DEMO_COOKIE, "1", max_age=7 * 24 * 3600, httponly=True,
+                                secure=get_settings().cookie_secure, samesite="lax", path="/")
+        else:
+            response.delete_cookie(site_flags.DEMO_COOKIE, path="/")
+        site_flags.set_demo_mode(changes["demo_mode"])
     for key, value in changes.items():
-        _set(db, key, "true" if value else "false", user)
+        if key != "demo_mode":
+            _set(db, key, "true" if value else "false", user)
     if changes:
         audit(db, user, "app_setting", 0, "site_settings_changed", {k: before.get(k) for k in changes}, changes)
     db.commit()

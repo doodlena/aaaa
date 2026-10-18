@@ -11,9 +11,9 @@ type Key = 'demo_mode' | 'provider_features' | 'district_only';
 const KEYS: Key[] = ['demo_mode', 'provider_features', 'district_only'];
 
 /**
- * /admin/site — site-wide switches: demo mode (fictional providers for videos), live provider features, and
- * "only Virginia's 8th district". Nothing is deleted by any switch; listings are only hidden or shown.
- * After every change the public meta is re-fetched so the banner, filters and feed update without a reload.
+ * /admin/site — switches: demo mode (fictional providers for videos; this browser only, via a cookie), and the
+ * site-wide live provider features and "only Virginia's 8th district". Nothing is deleted by any switch; listings are
+ * only hidden or shown. After every change the public meta is re-fetched so filters and feed update without a reload.
  */
 export function AdminSite() {
   const { t } = useTranslation();

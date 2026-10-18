@@ -1109,7 +1109,7 @@
       "saving": "Saving…",
       "demo_mode": {
         "label": "Demo mode",
-        "help": "Adds fictional demo providers to the real listings, all marked verified; a few of them post live updates today. The admin dashboard shows only the demo data. Visitors see no notice that some places are samples, so turn it off as soon as you're done filming.",
+        "help": "Adds fictional demo providers to the real listings, all marked verified; a few of them post live updates today. The admin dashboard shows only the demo data. Only this browser sees demo mode; everyone else sees the normal site. To film on another device, turn it on there too.",
         "loaded_one": "{{count}} demo listing is loaded.",
         "loaded_other": "{{count}} demo listings are loaded.",
         "turnedOn": "Demo mode is on. The site now shows demo providers.",

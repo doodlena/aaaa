@@ -11,8 +11,9 @@ it is verified.
    the VA-08 part of Fairfax County (try ZIP 22204 or 22314). They appear alongside all the real listings. Every demo
    listing shows as verified, and 10 of them post live updates today, so the live provider filters work. The admin
    dashboard shows only demo access requests, reports and listings to verify.
-3. There is no demo banner, so visitors can't tell the demo places from real ones. Keep demo mode on only while you
-   film: real families may visit the site in the meantime. Places with a live update today are listed first.
+3. Demo mode is only for the browser where you turned it on (a cookie); everyone else sees the normal site. To film
+   on a second device, sign in there and turn it on too. There is no demo banner. Places with a live update today are
+   listed first.
 4. When you're done, turn **Demo mode** off. The demo places disappear; real listings are never changed.
 
 ## Setup with the command line (older flow)

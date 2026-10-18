@@ -67,6 +67,26 @@ def test_demo_mode_adds_verified_demo_providers_to_real_listings_and_turns_off(a
     assert names == real_names
 
 
+def test_demo_mode_is_only_for_the_browser_that_turned_it_on(admin_client, published, db):
+    from fastapi.testclient import TestClient
+
+    from app.main import app
+
+    visitor = TestClient(app)
+    real_ids = {i["id"] for i in _search(visitor)["items"]}
+    _set(admin_client, demo_mode=True)
+    assert admin_client.cookies.get(site_flags.DEMO_COOKIE) == "1"
+    demo_ids = {i["id"] for i in _search(admin_client)["items"]} - real_ids
+    assert len(demo_ids) == 18
+    assert {i["id"] for i in _search(visitor)["items"]} == real_ids  # everyone else: the normal site
+    assert visitor.get(f"/api/resources/{min(demo_ids)}").status_code == 404
+    r = admin_client.get("/api/resources/search", params={"lat": ARLINGTON[0], "lon": ARLINGTON[1]})
+    assert r.headers["cache-control"] == "private, no-store"
+    _set(admin_client, demo_mode=False)
+    assert not admin_client.cookies.get(site_flags.DEMO_COOKIE)
+    assert {i["id"] for i in _search(admin_client)["items"]} == real_ids
+
+
 def test_demo_mode_scopes_admin_dashboard(admin_client, published, db):
     ov = admin_client.get("/api/admin/overview").json()
     assert ov["pending_claims"] == 0 and not ov["demo_mode"]

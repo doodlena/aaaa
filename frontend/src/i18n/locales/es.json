@@ -1109,7 +1109,7 @@
       "saving": "Guardando…",
       "demo_mode": {
         "label": "Modo de demostración",
-        "help": "Agrega proveedores ficticios de demostración a los listados reales, todos verificados; algunos publican novedades de hoy. El panel de administración muestra solo los datos de demostración. Los visitantes no ven ningún aviso de que algunos lugares son ejemplos, así que desactívelo en cuanto termine de grabar.",
+        "help": "Agrega proveedores ficticios de demostración a los listados reales, todos verificados; algunos publican novedades de hoy. El panel de administración muestra solo los datos de demostración. Solo este navegador ve el modo de demostración; los demás ven el sitio normal. Para grabar en otro dispositivo, actívelo también allí.",
         "loaded_one": "Hay {{count}} listado de demostración cargado.",
         "loaded_other": "Hay {{count}} listados de demostración cargados.",
         "turnedOn": "El modo de demostración está activado. El sitio muestra proveedores de demostración.",
