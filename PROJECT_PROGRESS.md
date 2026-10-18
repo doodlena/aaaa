@@ -107,8 +107,9 @@ under the old number, was given the two provider-portal columns and stamped `001
 - Loudoun, Falls Church, Arlington, Alexandria, and Manassas Park have no ingestion yet (planned status). Food-source
   research for Loudoun and Falls Church has not been done.
 - OpenStreetMap coverage of NoVA pantries is very sparse (3 features). The adapter exists but is not enabled.
-- UI languages: English and Spanish are bundled; Chinese (Simplified), Vietnamese and Korean sit behind the "+" button
-  in the language switcher and load on demand (`frontend/src/i18n/index.ts`). The three new catalogs were machine-written
+- UI languages: all five catalogs are bundled (2026-10-17; loading Chinese, Vietnamese and Korean on demand failed
+  silently on the owner's devices while working in fresh browsers). Chinese (Simplified), Vietnamese and Korean sit
+  behind the "+" button in the language switcher (`frontend/src/i18n/index.ts`). The three new catalogs were machine-written
   and have not been reviewed by native speakers. All five catalogs have identical keys, including the admin and
   pantry-portal screens (`language.test.tsx` enforces this). Right-to-left languages (Arabic, Urdu, Farsi) are not supported yet (layout uses physical left/right,
   and Arabic needs extra plural forms).

@@ -2,10 +2,14 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import en from './locales/en.json';
 import es from './locales/es.json';
+import ko from './locales/ko.json';
+import vi from './locales/vi.json';
+import zh from './locales/zh.json';
 
 /**
- * To add a language: add src/i18n/locales/<code>.json and register it here (and in LAZY_CATALOGS unless it is bundled).
- * `primary` languages are always-visible buttons; the rest sit behind the "+" menu and load on demand.
+ * To add a language: add src/i18n/locales/<code>.json, import it here and add it to `resources` below.
+ * `primary` languages are always-visible buttons; the rest sit behind the "+" menu. Every catalog is bundled (about
+ * 24 KB gzipped each): loading them on demand failed silently on devices running a cached older version.
  * Every catalog must have the same keys as en.json (language.test.tsx checks this); a missing key falls back to English.
  */
 export const SUPPORTED_LANGUAGES = [
@@ -18,11 +22,6 @@ export const SUPPORTED_LANGUAGES = [
 export type LangCode = (typeof SUPPORTED_LANGUAGES)[number]['code'];
 export const LANG_STORAGE_KEY = 'nfa_lang';
 
-const LAZY_CATALOGS: Partial<Record<LangCode, () => Promise<{ default: Record<string, unknown> }>>> = {
-  zh: () => import('./locales/zh.json'),
-  vi: () => import('./locales/vi.json'),
-  ko: () => import('./locales/ko.json'),
-};
 
 export function isSupported(code: string | null | undefined): code is LangCode {
   return !!code && SUPPORTED_LANGUAGES.some((l) => l.code === code);
@@ -53,13 +52,6 @@ export function persistLanguage(code: LangCode) {
   if (typeof document !== 'undefined') document.documentElement.lang = code;
 }
 
-/** Fetch a lazy catalog if it is not loaded yet. */
-export async function loadLanguage(code: LangCode): Promise<void> {
-  const loader = LAZY_CATALOGS[code];
-  if (!loader || i18n.hasResourceBundle(code, 'translation')) return;
-  const catalog = await loader();
-  i18n.addResourceBundle(code, 'translation', catalog.default, true, true);
-}
 
 const RELOAD_KEY = 'nfa_reloaded_at';
 
@@ -76,17 +68,8 @@ export function reloadForNewVersion(): boolean {
   return true;
 }
 
-/** Switch the UI language (loading its catalog first) and remember the choice on this device. */
+/** Switch the UI language and remember the choice on this device. */
 export async function setLanguage(code: LangCode): Promise<void> {
-  try {
-    await loadLanguage(code);
-  } catch (e) {
-    // A page left open across a deploy asks for the old version's catalog file, which no longer exists. Remember the
-    // choice and reload into the current version, which loads it.
-    persistLanguage(code);
-    if (reloadForNewVersion()) return;
-    throw e;
-  }
   await i18n.changeLanguage(code);
   persistLanguage(code);
 }
@@ -94,15 +77,13 @@ export async function setLanguage(code: LangCode): Promise<void> {
 const initial = initialLanguage();
 
 void i18n.use(initReactI18next).init({
-  resources: { en: { translation: en }, es: { translation: es } },
-  lng: initial in LAZY_CATALOGS ? 'en' : initial,
+  resources: { en: { translation: en }, es: { translation: es }, zh: { translation: zh }, vi: { translation: vi }, ko: { translation: ko } },
+  lng: initial,
   fallbackLng: 'en',
   interpolation: { escapeValue: false },
   returnNull: false,
 });
 
 if (typeof document !== 'undefined') document.documentElement.lang = i18n.language;
-// A lazy language starts in English and switches as soon as its catalog arrives; if that fails, English stays.
-if (initial in LAZY_CATALOGS) void setLanguage(initial).catch(() => undefined);
 
 export default i18n;
