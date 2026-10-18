@@ -5,7 +5,7 @@ from app.config import get_settings
 from app.models import Location
 from app.services import site_flags
 from app.services.schedule import TZ, has_any_distribution_info, next_distribution, windows_on
-from app.vocab import FOOD_TYPES
+from app.vocab import FOOD_TYPES, POPULATION_GROUPS
 
 SUMMARY_ELIGIBILITY = ("photo_id", "proof_of_address", "income_documentation", "appointment", "residency", "referral",
                        "registration", "student_affiliation")
@@ -56,8 +56,8 @@ def food_types_of(loc: Location) -> list[str]:
 
 
 # Requirements about *who* can get help (not what to bring), shown on every card as "Who can get help here".
-WHO_FOR_TYPES = ("residency", "service_area", "zip_restriction", "student_affiliation", "age", "income", "household_size",
-                 "referral")
+WHO_FOR_TYPES = ("population", "residency", "service_area", "zip_restriction", "student_affiliation", "age", "income",
+                 "household_size", "referral")
 
 
 def who_for(loc: Location) -> list[dict]:
@@ -69,6 +69,9 @@ def who_for(loc: Location) -> list[dict]:
         cur = out.setdefault(e.requirement_type, {"type": e.requirement_type, "details": None})
         if not cur["details"] and e.details:
             cur["details"] = e.details
+        if e.requirement_type == "population":
+            groups = cur.setdefault("groups", [])
+            groups += [g for g in (e.values or {}).get("groups", []) if g in POPULATION_GROUPS and g not in groups]
     return [out[t] for t in WHO_FOR_TYPES if t in out]
 
 

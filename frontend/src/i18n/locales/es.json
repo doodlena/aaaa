@@ -23,6 +23,7 @@
   },
   "whoFor": {
     "title": "Quién puede recibir ayuda aquí",
+    "population": "Solo un grupo específico",
     "residency": "Solo residentes",
     "service_area": "Solo su zona de servicio",
     "zip_restriction": "Solo ciertos códigos postales",
@@ -30,7 +31,18 @@
     "age": "Límite de edad",
     "income": "Límite de ingresos",
     "household_size": "Límite por tamaño del hogar",
-    "referral": "Se necesita una remisión"
+    "referral": "Se necesita una remisión",
+    "groups": {
+      "women": "Solo mujeres",
+      "men": "Solo hombres",
+      "families_with_children": "Familias con hijos",
+      "single_adults": "Adultos sin hijos",
+      "survivors": "Sobrevivientes de violencia",
+      "immigrants": "Inmigrantes",
+      "disability": "Personas con discapacidad",
+      "pregnant_postpartum": "Embarazadas, madres recientes y niños pequeños",
+      "homeless": "Personas sin hogar"
+    }
   },
   "footer": {
     "disclaimer": "Las actualizaciones en vivo provienen de los proveedores de apoyo, pero la información aún puede cambiar. Este sitio no recopila datos personales para publicidad ni para ningún otro uso.",

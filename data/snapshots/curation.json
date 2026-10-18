@@ -1,5 +1,5 @@
 {
- "_notice": "Owner curation, replayed by `load-data` on every database (keyed by stable source-record keys). 'hide': not free direct assistance (for-profit businesses; apartment-complex sites for their residents). 'merge': the same place listed more than once; 'drop' is merged into 'keep'.",
+ "_notice": "Owner curation, replayed by `load-data` on every database (keyed by stable source-record keys). 'hide': not free direct assistance (for-profit businesses; apartment-complex sites for their residents). 'merge': the same place listed more than once; 'drop' is merged into 'keep'. 'eligibility': documented limits on who is served (a group, age, residency, income), each with the quoted source evidence.",
  "hide": [
   {
    "record": [
@@ -743,6 +743,896 @@
     "66fad462-1e09-440d-b83f-fc549d12bb25"
    ],
    "name": "Lutheran Social Services (Fairfax office, one listing per program) -> one listing"
+  },
+  {
+   "keep": [
+    "hrsa-health-centers",
+    "17dc618b946d1d1f"
+   ],
+   "drop": [
+    "va08-support-services",
+    "va08svc-neighborhood-health-arlington-pediatric-center"
+   ],
+   "name": "Neighborhood Health Arlington Pediatric Center (old 2301 Columbia Pike address) -> 3401 Columbia Pike, Suite 200 (HRSA)"
+  }
+ ],
+ "eligibility": [
+  {
+   "record": [
+    "samhsa-treatment",
+    "7f20165efbfedd53"
+   ],
+   "name": "Fairfax/Falls Church Comm Servs Board A New Beginning",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults only (ages 18 and up)"
+    }
+   ],
+   "evidence": "Age Groups Accepted: Young Adults; Adults; Seniors"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "75905b227129a275"
+   ],
+   "name": "Connections Chantilly",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults only (ages 18 and up)"
+    }
+   ],
+   "evidence": "Age Groups Accepted: Young Adults; Adults; Seniors"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "ce1f10ac217f9337"
+   ],
+   "name": "Inova Behavioral Health CATS IOP/PHP Programs",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults only (ages 18 and up)"
+    }
+   ],
+   "evidence": "Age Groups Accepted: Young Adults; Adults; Seniors"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "2d7d94e33c169b97"
+   ],
+   "name": "Inova CATS Program Inpatient Detox",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults only (ages 18 and up)"
+    }
+   ],
+   "evidence": "Age Groups Accepted: Young Adults; Adults; Seniors"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "8ebef52cd035ce56"
+   ],
+   "name": "Virginia Hospital Center Recovery and Wellness",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults only (ages 18 and up)"
+    }
+   ],
+   "evidence": "Age Groups Accepted: Young Adults; Adults; Seniors"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "d2ebe071f0d9abc5"
+   ],
+   "name": "Fairfax/Falls Church Comm Servs Board Crossroads",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults only (ages 18 and up)"
+    }
+   ],
+   "evidence": "Age Groups Accepted: Young Adults; Adults; Seniors"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "5cd0c3bf776aa883"
+   ],
+   "name": "National Capital Treatment and Recover Phase II Mens Residential",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Men's residential program",
+     "values": {
+      "groups": [
+       "men"
+      ]
+     }
+    }
+   ],
+   "evidence": "National Capital Treatment and Recover Phase II Mens Residential"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "763d63724601a678"
+   ],
+   "name": "National Capital Trt and Recovery Counseling Center",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults only (ages 18 and up)"
+    }
+   ],
+   "evidence": "Age Groups Accepted: Young Adults; Adults; Seniors"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "97cbfd2be94d9ef1"
+   ],
+   "name": "National Capital Treatment and Recovery - Independence House",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults only (ages 18 and up)"
+    }
+   ],
+   "evidence": "Age Groups Accepted: Young Adults; Adults; Seniors"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "95b11b0e925d2621"
+   ],
+   "name": "National Capital Treatment and Recovery - Arlington Recovery Center",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults only (ages 18 and up)"
+    }
+   ],
+   "evidence": "Age Groups Accepted: Young Adults; Adults; Seniors"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "d898d8b16c234d94"
+   ],
+   "name": "National Capital Treatment and Recovery - Recovery Haven",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Women only",
+     "values": {
+      "groups": [
+       "women"
+      ]
+     }
+    }
+   ],
+   "evidence": "Women only"
+  },
+  {
+   "record": [
+    "samhsa-treatment",
+    "43542ca8b857fa0b"
+   ],
+   "name": "Inova Kellar Center",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Children, teens and young adults only"
+    }
+   ],
+   "evidence": "Age Groups Accepted: Children/Adolescents; Young Adults"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-22"
+   ],
+   "name": "Arlington Homeless Services Center",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Single adults experiencing homelessness",
+     "values": {
+      "groups": [
+       "single_adults",
+       "homeless"
+      ]
+     }
+    }
+   ],
+   "evidence": "Populations served: - Homeless Single Adults"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-6"
+   ],
+   "name": "Residential Program Center (RPC)",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Men or women 18 and older"
+    },
+    {
+     "requirement_type": "residency",
+     "status": "required",
+     "details": "Arlington residents"
+    }
+   ],
+   "evidence": "Populations served: - Arlington Residents - Men Or Women 18 And Older"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-1"
+   ],
+   "name": "Carpenter's Shelter",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults over 18, or families with children"
+    }
+   ],
+   "evidence": "Populations served: - Adults Over 18 - Families With Children"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-24"
+   ],
+   "name": "Alexandria Community Shelter",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults over 18, or families with children"
+    }
+   ],
+   "evidence": "Populations served: - Adults Over 18 - Families With Children"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-12"
+   ],
+   "name": "Embry Rucker Community Shelter (ERCS)",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults over 18, or families with children"
+    }
+   ],
+   "evidence": "Populations served: - Adults Over 18 - Families With Children"
+  },
+  {
+   "record": [
+    "va08-support-services",
+    "va08svc-baileys-shelter-supportive-housing"
+   ],
+   "name": "Bailey's Shelter and Supportive Housing",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Adults without children",
+     "values": {
+      "groups": [
+       "single_adults"
+      ]
+     }
+    }
+   ],
+   "evidence": "sheltering and supportive services program for adults without children"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-13"
+   ],
+   "name": "Eleanor Kennedy Shelter",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Adults 18 and older"
+    }
+   ],
+   "evidence": "Populations served: - Adults 18 And Older"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-3"
+   ],
+   "name": "Alexandria Domestic Violence Shelter",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Victims of intimate partner violence (men and women); women with children",
+     "values": {
+      "groups": [
+       "survivors"
+      ]
+     }
+    }
+   ],
+   "evidence": "Populations served: - Victims Of Intimate Partner Violence (Men And Women) - Women With Children"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-4"
+   ],
+   "name": "Alive House",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Women with children experiencing homelessness in Alexandria",
+     "values": {
+      "groups": [
+       "women",
+       "families_with_children",
+       "homeless"
+      ]
+     }
+    }
+   ],
+   "evidence": "For women and families experiencing homelessness in Alexandria; Populations served: - Women With Children"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-5"
+   ],
+   "name": "Doorways for Women and Families- Family Shelter",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Families (men and/or women) with children",
+     "values": {
+      "groups": [
+       "families_with_children"
+      ]
+     }
+    },
+    {
+     "requirement_type": "residency",
+     "status": "required",
+     "details": "Arlington residents"
+    }
+   ],
+   "evidence": "Populations served: - Arlington Residents - Families (Men And/Or Women) With Children"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-7"
+   ],
+   "name": "Doorways for Women and Families- Domestic Violence",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Survivors of domestic violence: families with children and adults over 18 (women, men and nonbinary people)",
+     "values": {
+      "groups": [
+       "survivors"
+      ]
+     }
+    },
+    {
+     "requirement_type": "residency",
+     "status": "required",
+     "details": "Arlington residents"
+    }
+   ],
+   "evidence": "Populations served: - Arlington Residents - Families With Children - Adults Over 18 - Serves Women, Men, & Nonbinary Individuals"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-9"
+   ],
+   "name": "Sullivan House Family Shelter",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Families (men and/or women) with children",
+     "values": {
+      "groups": [
+       "families_with_children"
+      ]
+     }
+    }
+   ],
+   "evidence": "Populations served: - Arlington Residents - Families (Men And/Or Women) With Children"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-11"
+   ],
+   "name": "Katherine K. Hanley Family Shelter",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Families with children under 18",
+     "values": {
+      "groups": [
+       "families_with_children"
+      ]
+     }
+    }
+   ],
+   "evidence": "Populations served: - Families With Children Under 18"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-14"
+   ],
+   "name": "Mondloch House I",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Single homeless adults with significant mental health needs",
+     "values": {
+      "groups": [
+       "single_adults",
+       "homeless"
+      ]
+     }
+    }
+   ],
+   "evidence": "Populations served: - Single Homeless Adults With Significant Mental Health Needs"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-15"
+   ],
+   "name": "Next Steps Family Program",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Primarily families with children",
+     "values": {
+      "groups": [
+       "families_with_children"
+      ]
+     }
+    }
+   ],
+   "evidence": "Primarily families with children"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-18"
+   ],
+   "name": "Patrick Henry Family Shelter",
+   "add": [
+    {
+     "requirement_type": "household_size",
+     "status": "required",
+     "details": "Families with 5 or more members"
+    }
+   ],
+   "evidence": "Populations served: - Families With 5 Or More Members"
+  },
+  {
+   "record": [
+    "nvrc-homeless-shelters",
+    "nvrc-26"
+   ],
+   "name": "Catholic Charities Christ House",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Single men over 18 who are employed or able to work",
+     "values": {
+      "groups": [
+       "men",
+       "single_adults"
+      ]
+     }
+    }
+   ],
+   "evidence": "Populations served: - Single Men Over 18 - Recovering Addicts - Employed Or Employable"
+  },
+  {
+   "record": [
+    "nova-support-services",
+    "nova-svc-fairfax-dvac"
+   ],
+   "name": "Domestic Violence Action Center (DVAC) – Historic Courthouse",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "For people affected by domestic violence",
+     "values": {
+      "groups": [
+       "survivors"
+      ]
+     }
+    }
+   ],
+   "evidence": "Domestic Violence Action Center (DVAC)"
+  },
+  {
+   "record": [
+    "nova-support-services",
+    "nova-svc-fairfax-dsvs-pennino"
+   ],
+   "name": "Domestic and Sexual Violence Services – Pennino Building",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "For survivors of domestic and sexual violence",
+     "values": {
+      "groups": [
+       "survivors"
+      ]
+     }
+    }
+   ],
+   "evidence": "Domestic and Sexual Violence Services"
+  },
+  {
+   "record": [
+    "va08-gap-research",
+    "va08gap-alexandria-cwa-victim-witness-vstop"
+   ],
+   "name": "Victim-Witness Assistance Program (VWAP) & VSTOP – Office of the Commonwealth's Attorney",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "For victims and witnesses of crime, including domestic violence and sexual assault",
+     "values": {
+      "groups": [
+       "survivors"
+      ]
+     }
+    }
+   ],
+   "evidence": "Victim-Witness Assistance Program (VWAP) & VSTOP; VSTOP domestic violence/sexual assault advocacy"
+  },
+  {
+   "record": [
+    "va08-gap-research",
+    "va08gap-tahirih-justice-center-greater-dc"
+   ],
+   "name": "Tahirih Justice Center – National and Greater DC Offices",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Immigrant survivors of gender-based violence",
+     "values": {
+      "groups": [
+       "immigrants",
+       "survivors"
+      ]
+     }
+    }
+   ],
+   "evidence": "Legal help for immigrant survivors of gender-based violence."
+  },
+  {
+   "record": [
+    "nova-reproductive-health",
+    "nova-rh-inova-cares-women-alexandria"
+   ],
+   "name": "Inova Cares for Women - Alexandria",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Women's health care (prenatal and reproductive)",
+     "values": {
+      "groups": [
+       "women"
+      ]
+     }
+    }
+   ],
+   "evidence": "Inova Cares for Women"
+  },
+  {
+   "record": [
+    "nova-reproductive-health",
+    "nova-rh-inova-cares-women-falls-church"
+   ],
+   "name": "Inova Cares for Women - Falls Church",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Women's health care (prenatal and reproductive)",
+     "values": {
+      "groups": [
+       "women"
+      ]
+     }
+    }
+   ],
+   "evidence": "Inova Cares for Women"
+  },
+  {
+   "record": [
+    "nova-reproductive-health",
+    "nova-rh-inova-cares-women-herndon"
+   ],
+   "name": "Inova Cares for Women - Herndon",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Women's health care (prenatal and reproductive)",
+     "values": {
+      "groups": [
+       "women"
+      ]
+     }
+    }
+   ],
+   "evidence": "Inova Cares for Women"
+  },
+  {
+   "record": [
+    "nova-reproductive-health",
+    "nova-rh-inova-cares-women-mount-vernon"
+   ],
+   "name": "Inova Cares for Women - Mount Vernon",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Women's health care (prenatal and reproductive)",
+     "values": {
+      "groups": [
+       "women"
+      ]
+     }
+    }
+   ],
+   "evidence": "Inova Cares for Women"
+  },
+  {
+   "record": [
+    "nova-support-services",
+    "nova-svc-fairfax-wic-sully-healthworks"
+   ],
+   "name": "WIC at HealthWorks at Sully Community Center",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Pregnant, breastfeeding or postpartum women; infants and children under 5",
+     "values": {
+      "groups": [
+       "pregnant_postpartum"
+      ]
+     }
+    }
+   ],
+   "evidence": "Pregnant, breastfeeding (up to 1 year) or postpartum (up to 6 months) women; infants and children up to five years"
+  },
+  {
+   "record": [
+    "nova-reproductive-health",
+    "nova-rh-alexandria-teen-wellness-minnie-howard"
+   ],
+   "name": "Alexandria Health Department Teen Wellness Center - Minnie Howard Campus",
+   "add": [
+    {
+     "requirement_type": "student_affiliation",
+     "status": "required",
+     "details": "Minnie Howard students only; Alexandria residents ages 12-19 can use the Teen Wellness Center on King Street"
+    }
+   ],
+   "evidence": "OPA facility note: 'Serving only Minnie Howard Students, Alexandria residents ages 12-19 years old can also attend Teen Wellness Center'"
+  },
+  {
+   "record": [
+    "va08-gap-research",
+    "va08gap-clothesline-arlington-kids"
+   ],
+   "name": "The Clothesline for Arlington Kids",
+   "add": [
+    {
+     "requirement_type": "income",
+     "status": "required",
+     "details": "Children from low-income families"
+    }
+   ],
+   "evidence": "Free clothing for school-aged children (K-12) from low-income families."
+  },
+  {
+   "record": [
+    "va08-gap-research",
+    "va08gap-ccda-clothing-closet-alexandria"
+   ],
+   "name": "Catholic Charities Clothing Closet (next to Christ House)",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Families with children (proof of children required)",
+     "values": {
+      "groups": [
+       "families_with_children"
+      ]
+     }
+    }
+   ],
+   "evidence": "Proof of children: photo ID or passport, school documentation, or birth certificate"
+  },
+  {
+   "record": [
+    "va08-gap-research",
+    "va08gap-senior-services-alexandria-transportation"
+   ],
+   "name": "Senior Services of Alexandria – Transportation Program (DOT Paratransit Call Center)",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "People who can't use public transit because of a disability",
+     "values": {
+      "groups": [
+       "disability"
+      ]
+     }
+    }
+   ],
+   "evidence": "find it difficult or are unable to use public transportation (disability)"
+  },
+  {
+   "record": [
+    "va08-gap-research",
+    "va08gap-alexandria-dot-paratransit"
+   ],
+   "name": "Alexandria DOT Paratransit (Paratransit Coordinator)",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "People who can't use fixed-route transit because of a disability (application required)",
+     "values": {
+      "groups": [
+       "disability"
+      ]
+     }
+    }
+   ],
+   "evidence": "residents and visitors who cannot use fixed-route transit due to disability; application to the Paratransit Coordinator required"
+  },
+  {
+   "record": [
+    "nova-support-services",
+    "nova-svc-fairfax-human-services-mobility-management"
+   ],
+   "name": "Human Services Mobility Management (TOPS / Fastran) – Pennino Building",
+   "add": [
+    {
+     "requirement_type": "income",
+     "status": "required",
+     "details": "TOPS: MetroAccess user, SSI/SSDI recipient, or income within 225% of the federal poverty level"
+    }
+   ],
+   "evidence": "MetroAccess user; SSI/SSDI recipient; income within 225% FPL"
+  },
+  {
+   "record": [
+    "pwc-cmn-support-services",
+    "5e2ee2ba-1754-462e-8519-0463683c6103"
+   ],
+   "name": "Formed Families Forward",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Families of children with disabilities or special needs",
+     "values": {
+      "groups": [
+       "families_with_children",
+       "disability"
+      ]
+     }
+    }
+   ],
+   "evidence": "families ... navigating special education, behavioral health, disabilities, and related services"
+  },
+  {
+   "record": [
+    "pwc-cmn-support-services",
+    "3fccddb4-6f3e-40cc-8e86-5ab91b8fff2d"
+   ],
+   "name": "Rock Recovery",
+   "add": [
+    {
+     "requirement_type": "age",
+     "status": "required",
+     "details": "Ages 10 and up"
+    }
+   ],
+   "evidence": "eating-disorder and body-image therapy for individuals ages 10+"
+  },
+  {
+   "record": [
+    "pwc-cmn-support-services",
+    "4d8d3b70-fc5c-4f5c-b2a3-dd8e60c3a9d7"
+   ],
+   "name": "Legal Aid Justice Center (LAJC) – Northern Virginia",
+   "add": [
+    {
+     "requirement_type": "income",
+     "status": "required",
+     "details": "Financially eligible low-income residents of Northern Virginia"
+    }
+   ],
+   "evidence": "free civil legal assistance to financially eligible low-income residents of Northern Virginia"
+  },
+  {
+   "record": [
+    "va08-web-research",
+    "va08-christ-house-evening-meal"
+   ],
+   "name": "Christ House Evening Meal",
+   "add": [
+    {
+     "requirement_type": "population",
+     "status": "required",
+     "details": "Evening meal for people experiencing homelessness and low-income individuals",
+     "values": {
+      "groups": [
+       "homeless"
+      ]
+     }
+    }
+   ],
+   "evidence": "Evening meal for homeless and low-income individuals"
   }
  ]
 }

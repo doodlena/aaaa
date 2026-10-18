@@ -5,6 +5,8 @@ export type YesNoUnknown = 'yes' | 'no' | 'unknown';
 export interface WhoForItem {
   type: string;
   details: string | null;
+  /** For type 'population': the groups served (women, families_with_children, survivors...). */
+  groups?: string[];
 }
 
 export interface Address {

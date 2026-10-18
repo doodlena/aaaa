@@ -143,6 +143,13 @@ under the old number, was given the two provider-portal columns and stamped `001
 - "Who can get help here" (2026-10-17): every card and detail page lists documented limits on who is served
   (residents only, students or school families, age, income, ZIP/service area, referral; `presenter.who_for`), with the
   provider's own wording on the detail page. Only `required` limits are shown; unknown is never shown as open to all.
+  Data quality pass (2026-10-17): 48 listings tagged from their own source text (curation.json "eligibility", with the
+  quoted evidence): adults-only treatment programs (SAMHSA "Age Groups Accepted"), shelters' populations served
+  (families with children, single adults, single men, survivors), women-only and men-only programs, WIC, paratransit
+  (disability), income limits. New eligibility type `population` (migration 0014) with `values.groups` from
+  `vocab.POPULATION_GROUPS`; cards show the group ("Women only", "Families with children"). Duplicate check over all
+  269 public listings found one more (Neighborhood Health Arlington Pediatric Center at an old address; merged into the
+  HRSA address, 3401 Columbia Pike Suite 200). School pantries have no documented limits and are left untagged.
 - Stale pages after a deploy: lazily loaded files (Chinese/Vietnamese/Korean catalogs, explorer, admin) from an older
   version no longer exist. Missing /assets/ files now 404 instead of returning index.html (vercel.json), the service
   worker never caches HTML as an asset (cache version os-v3), and a failed load reloads once into the new version

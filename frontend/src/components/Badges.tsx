@@ -41,12 +41,15 @@ export function SyntheticBadge() {
 export function WhoFor({ items, full }: { items?: WhoForItem[]; full?: boolean }) {
   const { t } = useTranslation();
   if (!items || items.length === 0) return null;
+  // A specific group reads as the group itself ("Women only", "Families with children"), not a generic label.
+  const label = (i: WhoForItem) =>
+    i.type === 'population' && i.groups?.length ? i.groups.map((g) => t(`whoFor.groups.${g}`)).join(', ') : t(`whoFor.${i.type}`);
   if (!full) {
     return (
       <p className="who-for" data-testid="who-for">
         <Icon name="family" size={14} />
         <span className="visually-hidden">{t('whoFor.title')}: </span>
-        {items.map((i) => t(`whoFor.${i.type}`)).join(' · ')}
+        {items.map(label).join(' · ')}
       </p>
     );
   }
@@ -59,7 +62,7 @@ export function WhoFor({ items, full }: { items?: WhoForItem[]; full?: boolean }
       <ul>
         {items.map((i) => (
           <li key={i.type}>
-            <span className="who-for__label">{t(`whoFor.${i.type}`)}</span>
+            <span className="who-for__label">{label(i)}</span>
             {i.details && <span className="who-for__details"> — {i.details}</span>}
           </li>
         ))}

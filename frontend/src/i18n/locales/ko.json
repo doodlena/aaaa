@@ -23,6 +23,7 @@
   },
   "whoFor": {
     "title": "이곳에서 도움을 받을 수 있는 사람",
+    "population": "특정 대상만",
     "residency": "거주자만",
     "service_area": "서비스 지역만",
     "zip_restriction": "일부 우편번호만",
@@ -30,7 +31,18 @@
     "age": "연령 제한",
     "income": "소득 제한",
     "household_size": "가구 규모 제한",
-    "referral": "추천서 필요"
+    "referral": "추천서 필요",
+    "groups": {
+      "women": "여성만",
+      "men": "남성만",
+      "families_with_children": "자녀가 있는 가정",
+      "single_adults": "독신 성인",
+      "survivors": "폭력 피해 생존자",
+      "immigrants": "이민자",
+      "disability": "장애인",
+      "pregnant_postpartum": "임산부, 산모 및 영유아",
+      "homeless": "노숙인"
+    }
   },
   "footer": {
     "disclaimer": "실시간 소식은 지원 제공 기관이 올리지만 정보는 바뀔 수 있습니다. 이 사이트는 광고나 그 밖의 어떤 용도로도 개인 정보를 수집하지 않습니다.",

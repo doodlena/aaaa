@@ -23,6 +23,7 @@
   },
   "whoFor": {
     "title": "Ai có thể nhận trợ giúp ở đây",
+    "population": "Chỉ dành cho một nhóm cụ thể",
     "residency": "Chỉ dành cho cư dân",
     "service_area": "Chỉ trong khu vực phục vụ",
     "zip_restriction": "Chỉ một số mã ZIP",
@@ -30,7 +31,18 @@
     "age": "Có giới hạn tuổi",
     "income": "Có giới hạn thu nhập",
     "household_size": "Có giới hạn số người trong hộ",
-    "referral": "Cần giấy giới thiệu"
+    "referral": "Cần giấy giới thiệu",
+    "groups": {
+      "women": "Chỉ dành cho phụ nữ",
+      "men": "Chỉ dành cho nam giới",
+      "families_with_children": "Gia đình có trẻ em",
+      "single_adults": "Người lớn độc thân",
+      "survivors": "Người sống sót sau bạo lực",
+      "immigrants": "Người nhập cư",
+      "disability": "Người khuyết tật",
+      "pregnant_postpartum": "Phụ nữ mang thai, mẹ mới sinh và trẻ nhỏ",
+      "homeless": "Người vô gia cư"
+    }
   },
   "footer": {
     "disclaimer": "Cập nhật trực tiếp đến từ các nơi cung cấp hỗ trợ, nhưng thông tin vẫn có thể thay đổi. Trang này không thu thập dữ liệu cá nhân để quảng cáo hay cho bất kỳ mục đích nào khác.",

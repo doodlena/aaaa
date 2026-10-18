@@ -644,16 +644,17 @@ def _apply_holds(db) -> int:
     return n
 
 
-def _apply_curation(db) -> tuple[int, int]:
+def _apply_curation(db) -> tuple[int, int, int]:
     """Replay owner curation (data/snapshots/curation.json, keyed by stable source-record keys): hide listings that are
     not free direct assistance (for-profit businesses, apartment-complex sites for their residents) by rejecting their
-    records, and merge listings that are the same place. Idempotent; verified listings are never touched."""
+    records, merge listings that are the same place, and add documented limits on who is served ("eligibility", each
+    with the quoted evidence). Idempotent; verified listings are never touched."""
     from app.ingestion.verification.workflow import audit, merge_locations
     from app.models import Location, SourceRecord, User
 
     path = SNAPSHOT_DIR / "curation.json"
     if not path.exists():
-        return 0, 0
+        return 0, 0, 0
     cur = json.loads(path.read_text())
     recs = {(r.source_id, r.external_id): r for r in db.scalars(select(SourceRecord)).all()}
 
@@ -687,8 +688,30 @@ def _apply_curation(db) -> tuple[int, int]:
         if keep.last_verified_at is None:
             _rebuild_from_linked(db, keep)  # services, schedules and eligibility from both
         merged += 1
+    db.flush()
+    tagged = 0
+    for t in cur.get("eligibility", []):
+        rec, loc = recs.get(tuple(t["record"])), live_loc(t["record"])
+        if rec is None or loc is None or loc.last_verified_at is not None or loc.review_status == "rejected":
+            continue
+        norm = dict(rec.normalized or {})
+        elig = [e for e in norm.get("eligibility") or []]
+        changed = False
+        for add in t["add"]:
+            have = next((e for e in elig if e.get("requirement_type") == add["requirement_type"]), None)
+            if have and have.get("status") == "required" and (have.get("details") or "") == (add.get("details") or "") \
+                    and (have.get("values") or {}) == (add.get("values") or {}):
+                continue
+            elig = [e for e in elig if e.get("requirement_type") != add["requirement_type"]] + [{"values": {}, **add}]
+            changed = True
+        if changed:
+            rec.normalized = {**norm, "eligibility": elig}
+            _rebuild_from_linked(db, loc)  # eligibility is the union over the listing's records
+            audit(db, None, "location", loc.id, "curation_eligibility", None,
+                  {"add": t["add"], "evidence": t.get("evidence")}, label="curation")
+            tagged += 1
     db.commit()
-    return hidden, merged
+    return hidden, merged, tagged
 
 
 def cmd_rebuild_rejected(_a):
@@ -1023,7 +1046,7 @@ def cmd_load_data(a):
         db.commit()
         print(f"rejected records replayed: {_apply_rejections(db)} listings rebuilt")
         print(f"held listings replayed: {_apply_holds(db)}")
-        print("curation replayed: {} hidden, {} merged".format(*_apply_curation(db)))
+        print("curation replayed: {} hidden, {} merged, {} tagged".format(*_apply_curation(db)))
         for cfg in configs.values():
             if cfg.retracted:
                 print(f"{cfg.id}: retracted — {_retract(db, cfg.id)} listings rebuilt without it")

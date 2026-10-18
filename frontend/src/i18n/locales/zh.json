@@ -23,6 +23,7 @@
   },
   "whoFor": {
     "title": "谁可以在这里获得帮助",
+    "population": "仅限特定群体",
     "residency": "仅限本地居民",
     "service_area": "仅限其服务区域",
     "zip_restriction": "仅限部分邮编",
@@ -30,7 +31,18 @@
     "age": "有年龄限制",
     "income": "有收入限制",
     "household_size": "有家庭人数限制",
-    "referral": "需要转介"
+    "referral": "需要转介",
+    "groups": {
+      "women": "仅限女性",
+      "men": "仅限男性",
+      "families_with_children": "有孩子的家庭",
+      "single_adults": "单身成人",
+      "survivors": "暴力幸存者",
+      "immigrants": "移民",
+      "disability": "残障人士",
+      "pregnant_postpartum": "孕妇、新手妈妈和幼儿",
+      "homeless": "无家可归者"
+    }
   },
   "footer": {
     "disclaimer": "实时更新来自提供支援的机构，但信息仍可能变化。本网站不会为广告或任何其他用途收集个人数据。",

@@ -412,10 +412,29 @@ def test_curation_hides_and_merges_listings_and_is_idempotent(db, imported, admi
         "merge": [{"keep": key(keep), "drop": key(drop), "name": "dup"}],
     }))
     monkeypatch.setattr(cli, "SNAPSHOT_DIR", tmp_path)
-    assert cli._apply_curation(db) == (1, 1)
+    assert cli._apply_curation(db) == (1, 1, 0)
     db.expire_all()
     assert db.get(Location, hide.id).review_status == "rejected"
     assert db.scalar(select(Location.id).where(public_visibility(), Location.id == hide.id)) is None
     assert db.get(Location, drop.id).merged_into_id == keep.id
     assert db.scalar(select(SourceRecord.id).where(SourceRecord.location_id == drop.id)) is None  # records moved to keep
-    assert cli._apply_curation(db) == (0, 0)  # replaying changes nothing
+    assert cli._apply_curation(db) == (0, 0, 0)  # replaying changes nothing
+
+
+def test_curation_adds_documented_limits_on_who_is_served(db, imported, tmp_path, monkeypatch):
+    import json as _json
+
+    from app import cli
+    from app.models import SourceRecord
+    from app.services.presenter import who_for
+
+    loc = db.scalars(select(Location).where(Location.is_synthetic.is_(True)).order_by(Location.id)).first()
+    rec = db.scalars(select(SourceRecord).where(SourceRecord.location_id == loc.id).order_by(SourceRecord.id)).first()
+    add = {"requirement_type": "population", "status": "required", "details": "Women only", "values": {"groups": ["women"]}}
+    (tmp_path / "curation.json").write_text(_json.dumps({"eligibility": [
+        {"record": [rec.source_id, rec.external_id], "name": loc.name, "add": [add], "evidence": "Women only"}]}))
+    monkeypatch.setattr(cli, "SNAPSHOT_DIR", tmp_path)
+    assert cli._apply_curation(db) == (0, 0, 1)
+    db.expire_all()
+    assert who_for(db.get(Location, loc.id))[0] == {"type": "population", "details": "Women only", "groups": ["women"]}
+    assert cli._apply_curation(db) == (0, 0, 0)  # replaying changes nothing

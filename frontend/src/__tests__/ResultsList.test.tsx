@@ -40,6 +40,11 @@ describe('ResultsList', () => {
     expect(within(card).getByTestId('who-for')).toHaveTextContent('Who can get help here: Students or school families only · Referral needed');
   });
 
+  it('names the group when a listing serves only a specific group', () => {
+    renderList(searchResponse({ items: [summary({ who_for: [{ type: 'population', details: 'Women only', groups: ['women'] }, { type: 'residency', details: null }] })] }));
+    expect(screen.getByTestId('who-for')).toHaveTextContent('Who can get help here: Women only · Residents only');
+  });
+
   it('shows no "who can get help" note when no limits are documented', () => {
     renderList(searchResponse({ items: [summary({ who_for: [] })] }));
     expect(screen.queryByTestId('who-for')).toBeNull();

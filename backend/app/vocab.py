@@ -31,8 +31,13 @@ ELIGIBILITY_TYPES = (
     "visit_limit",
     "quantity_limit",
     "first_come_first_served",
+    "population",  # serves only a specific group; values.groups uses POPULATION_GROUPS
     "other",
 )
+
+# Groups a listing can be limited to (eligibility type "population", values {"groups": [...]}).
+POPULATION_GROUPS = ("women", "men", "families_with_children", "single_adults", "survivors", "immigrants", "disability",
+                     "pregnant_postpartum", "homeless")
 
 # code -> parent filter group. Groups are what the public filter UI exposes.
 FOOD_TYPES = {
