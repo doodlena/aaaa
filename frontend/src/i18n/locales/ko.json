@@ -185,7 +185,9 @@
     "distributes_on": "{{date}}에 식품 배부",
     "upcoming": "다음 배부: {{date}}",
     "on_shelf_today": "오늘 진열대에 {{value}} 있음(제공 기관 확인)",
-    "open_today_by_pantry": "오늘 운영(제공 기관 확인)"
+    "open_today_by_pantry": "오늘 운영(제공 기관 확인)",
+    "wheelchair_confirmed": "휠체어 이용 가능(확인됨)",
+    "language": "직원이 {{value}} 사용(확인됨)"
   },
   "eligibilityFilter": {
     "no_id_required": "신분증 필요 없음(확인됨)",
@@ -204,7 +206,9 @@
     "no_appointment_required": "예약 필요 여부",
     "no_referral_required": "의뢰서 필요 여부",
     "no_residency_restriction": "이용 대상(거주 지역)",
-    "student_affiliation": "학생 대상 여부"
+    "student_affiliation": "학생 대상 여부",
+    "wheelchair": "휠체어 접근성",
+    "language": "사용 언어"
   },
   "foodGroup": {
     "groceries": "식료품",
@@ -485,7 +489,7 @@
     "loading": "상세 정보를 불러오는 중…",
     "errorTitle": "이 항목을 불러올 수 없습니다",
     "directions": "길 찾기",
-    "opensOsm": "OpenStreetMap이 열립니다",
+    "opensApp": "{{app}}에서 열기",
     "otherMaps": "또는 다음에서 열기:",
     "noCoordinates": "지도 위치 확인되지 않음",
     "call": "{{phone}}에 전화",

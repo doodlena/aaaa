@@ -89,8 +89,9 @@ def load(db: Session, admin: User) -> int:
         loc = create_location_from_record(db, rec)
         loc.operating_status = c.operating_status
         if demo.get("status") == "verified":
-            # Spread the demo verifications over the last 8 weeks so the dashboard's weekly chart has a shape.
-            at = now - timedelta(days=(i * 3) % 54 + 1, hours=i % 7)
+            # Spread the demo verifications over the last 7 weeks so the dashboard's weekly chart has a shape; the
+            # chart covers 8 weeks from a Monday, so on any day of the week every one of them stays inside it.
+            at = now - timedelta(days=(i * 3) % 46 + 1, hours=i % 7)
             method = ("phone", "provider_submission", "in_person", "email")[i % 4]
             db.add(VerificationRecord(location_id=loc.id, reviewer_id=admin.id, action="verify", method=method, notes=DEMO_NOTE, created_at=at))
             db.add(VerificationRecord(location_id=loc.id, reviewer_id=admin.id, action="publish", method="none", notes=DEMO_NOTE,

@@ -167,10 +167,11 @@ def search(db: Session, p: SearchParams, now: datetime | None = None) -> dict:
         conds.append(_food_filter([c]))
     for c in p.service_types:
         conds.append(_service_filter([c]))
+    # Only a documented "no" rules a place out; unknown access or languages go to the "not confirmed" list (_evaluate).
     if p.wheelchair:
-        conds.append(Location.wheelchair_accessible == "yes")
+        conds.append(Location.wheelchair_accessible != "no")
     if p.language:
-        conds.append(Location.languages.any(p.language))
+        conds.append(or_(Location.languages.any(p.language), func.coalesce(func.cardinality(Location.languages), 0) == 0))
     q = q.where(*conds).limit(MAX_CANDIDATES).options(
         selectinload(Location.organization),
         selectinload(Location.services).selectinload(Service.food_types),
@@ -268,6 +269,16 @@ def _evaluate(loc, item, p: SearchParams, target_date, today):
             reasons.append({"code": "upcoming", "date": nd["date"]})
         else:
             return reasons, unknowns, True
+    if p.wheelchair:
+        if loc.wheelchair_accessible == "yes":
+            reasons.append({"code": "wheelchair_confirmed"})
+        else:
+            unknowns.append("wheelchair")  # never treated as accessible
+    if p.language:
+        if p.language in (loc.languages or []):
+            reasons.append({"code": "language", "value": p.language})
+        else:
+            unknowns.append("language")
     for key in p.eligibility:
         req, wanted = ELIGIBILITY_FILTERS[key]
         state = eligibility_state(loc, req)

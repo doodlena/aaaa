@@ -185,7 +185,9 @@
     "distributes_on": "Reparte comida el {{date}}",
     "upcoming": "Próxima entrega: {{date}}",
     "on_shelf_today": "{{value}} en el estante hoy (confirmado por el proveedor)",
-    "open_today_by_pantry": "Abierto hoy (confirmado por el proveedor)"
+    "open_today_by_pantry": "Abierto hoy (confirmado por el proveedor)",
+    "wheelchair_confirmed": "Accesible en silla de ruedas (confirmado)",
+    "language": "El personal habla {{value}} (confirmado)"
   },
   "eligibilityFilter": {
     "no_id_required": "No se requiere identificación (confirmado)",
@@ -204,7 +206,9 @@
     "no_appointment_required": "Si se necesita cita",
     "no_referral_required": "Si se necesita referido",
     "no_residency_restriction": "Quién puede recibir ayuda (según dónde vive)",
-    "student_affiliation": "Si es solo para estudiantes"
+    "student_affiliation": "Si es solo para estudiantes",
+    "wheelchair": "Acceso para silla de ruedas",
+    "language": "Idiomas que se hablan"
   },
   "foodGroup": {
     "groceries": "Alimentos básicos",
@@ -485,7 +489,7 @@
     "loading": "Cargando detalles…",
     "errorTitle": "No pudimos cargar este lugar",
     "directions": "Cómo llegar",
-    "opensOsm": "abre OpenStreetMap",
+    "opensApp": "se abre en {{app}}",
     "otherMaps": "O abrir en:",
     "noCoordinates": "Ubicación en el mapa no confirmada",
     "call": "Llamar al {{phone}}",

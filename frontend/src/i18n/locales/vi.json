@@ -185,7 +185,9 @@
     "distributes_on": "Phát thực phẩm vào {{date}}",
     "upcoming": "Đợt phát tiếp theo {{date}}",
     "on_shelf_today": "{{value}} có trên kệ hôm nay (nơi cung cấp xác nhận)",
-    "open_today_by_pantry": "Mở cửa hôm nay (nơi cung cấp xác nhận)"
+    "open_today_by_pantry": "Mở cửa hôm nay (nơi cung cấp xác nhận)",
+    "wheelchair_confirmed": "Có lối đi cho xe lăn (đã xác nhận)",
+    "language": "Nhân viên nói {{value}} (đã xác nhận)"
   },
   "eligibilityFilter": {
     "no_id_required": "Không cần giấy tờ tùy thân (đã xác nhận)",
@@ -204,7 +206,9 @@
     "no_appointment_required": "Có cần hẹn trước hay không",
     "no_referral_required": "Có cần giấy giới thiệu hay không",
     "no_residency_restriction": "Ai được sử dụng (theo nơi bạn ở)",
-    "student_affiliation": "Có dành cho học sinh, sinh viên hay không"
+    "student_affiliation": "Có dành cho học sinh, sinh viên hay không",
+    "wheelchair": "Lối đi cho xe lăn",
+    "language": "Ngôn ngữ sử dụng"
   },
   "foodGroup": {
     "groceries": "Thực phẩm tạp hóa",
@@ -485,7 +489,7 @@
     "loading": "Đang tải chi tiết…",
     "errorTitle": "Chúng tôi không tải được mục này",
     "directions": "Chỉ đường",
-    "opensOsm": "mở OpenStreetMap",
+    "opensApp": "mở trong {{app}}",
     "otherMaps": "Hoặc mở bằng:",
     "noCoordinates": "Vị trí trên bản đồ chưa được xác nhận",
     "call": "Gọi {{phone}}",

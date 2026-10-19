@@ -185,7 +185,9 @@
     "distributes_on": "{{date}}发放食物",
     "upcoming": "下次发放：{{date}}",
     "on_shelf_today": "今天货架上有{{value}}（服务机构已确认）",
-    "open_today_by_pantry": "今天开放（服务机构已确认）"
+    "open_today_by_pantry": "今天开放（服务机构已确认）",
+    "wheelchair_confirmed": "可供轮椅出入（已确认）",
+    "language": "工作人员会说{{value}}（已确认）"
   },
   "eligibilityFilter": {
     "no_id_required": "不需要证件（已确认）",
@@ -204,7 +206,9 @@
     "no_appointment_required": "是否需要预约",
     "no_referral_required": "是否需要转介",
     "no_residency_restriction": "谁可以使用（按居住地）",
-    "student_affiliation": "是否面向学生"
+    "student_affiliation": "是否面向学生",
+    "wheelchair": "轮椅通道",
+    "language": "使用的语言"
   },
   "foodGroup": {
     "groceries": "食品杂货",
@@ -485,7 +489,7 @@
     "loading": "正在加载详情…",
     "errorTitle": "无法加载这个条目",
     "directions": "路线",
-    "opensOsm": "将打开 OpenStreetMap",
+    "opensApp": "在 {{app}} 中打开",
     "otherMaps": "或用以下方式打开：",
     "noCoordinates": "地图位置未确认",
     "call": "拨打 {{phone}}",

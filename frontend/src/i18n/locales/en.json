@@ -185,7 +185,9 @@
     "distributes_on": "Gives out food on {{date}}",
     "upcoming": "Next distribution {{date}}",
     "on_shelf_today": "{{value}} on the shelf today (provider-confirmed)",
-    "open_today_by_pantry": "Open today (provider-confirmed)"
+    "open_today_by_pantry": "Open today (provider-confirmed)",
+    "wheelchair_confirmed": "Wheelchair accessible (confirmed)",
+    "language": "Staff speak {{value}} (confirmed)"
   },
   "eligibilityFilter": {
     "no_id_required": "No ID required (confirmed)",
@@ -204,7 +206,9 @@
     "no_appointment_required": "Whether an appointment is needed",
     "no_referral_required": "Whether a referral is needed",
     "no_residency_restriction": "Who can use it (where you live)",
-    "student_affiliation": "Whether it is for students"
+    "student_affiliation": "Whether it is for students",
+    "wheelchair": "Wheelchair access",
+    "language": "Languages spoken"
   },
   "foodGroup": {
     "groceries": "Groceries",
@@ -485,7 +489,7 @@
     "loading": "Loading details…",
     "errorTitle": "We could not load this listing",
     "directions": "Directions",
-    "opensOsm": "opens OpenStreetMap",
+    "opensApp": "opens {{app}}",
     "otherMaps": "Or open in:",
     "noCoordinates": "Map location not confirmed",
     "call": "Call {{phone}}",

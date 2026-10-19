@@ -218,6 +218,7 @@ def directions(lat, lon) -> dict | None:
         "geo": f"geo:{lat},{lon}",
         "apple": f"https://maps.apple.com/?daddr={lat},{lon}",
         "apple_transit": f"https://maps.apple.com/?daddr={lat},{lon}&dirflg=r",
+        "apple_walk": f"https://maps.apple.com/?daddr={lat},{lon}&dirflg=w",
         "google": f"https://www.google.com/maps/dir/?api=1&destination={lat},{lon}",
         "google_transit": f"https://www.google.com/maps/dir/?api=1&destination={lat},{lon}&travelmode=transit",
         "google_walk": f"https://www.google.com/maps/dir/?api=1&destination={lat},{lon}&travelmode=walking",

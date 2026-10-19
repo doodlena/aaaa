@@ -524,3 +524,21 @@ def test_who_for_lists_documented_limits_on_who_is_served(client, published, db)
     items = client.get("/api/resources/search", params={"lat": 38.86, "lon": -77.08, "any_distance": "true", "page_size": 100}).json()
     card = next(i for i in items["items"] + items["uncertain"] if i["id"] == loc.id)
     assert card["who_for"] == d["who_for"]  # search results carry it too
+
+
+def test_wheelchair_and_language_filters_never_hide_unknowns_or_call_them_confirmed(client, published, db):
+    a, b, c = published[0], published[1], published[2]
+    a.wheelchair_accessible, b.wheelchair_accessible, c.wheelchair_accessible = "yes", "no", "unknown"
+    a.languages, b.languages, c.languages = ["es"], ["en"], []
+    db.commit()
+    q = {"lat": 38.86, "lon": -77.08, "any_distance": "true", "page_size": 100, "include_uncertain": "true"}
+
+    r = client.get("/api/resources/search", params={**q, "wheelchair": "true"}).json()
+    confirmed, unconfirmed = {i["id"] for i in r["items"]}, {i["id"]: i["unconfirmed"] for i in r["uncertain"]}
+    assert a.id in confirmed and b.id not in confirmed | set(unconfirmed)  # a documented "no" is ruled out
+    assert "wheelchair" in unconfirmed[c.id]  # unknown is listed, never as accessible
+
+    r = client.get("/api/resources/search", params={**q, "language": "es"}).json()
+    confirmed, unconfirmed = {i["id"] for i in r["items"]}, {i["id"]: i["unconfirmed"] for i in r["uncertain"]}
+    assert a.id in confirmed and b.id not in confirmed | set(unconfirmed)
+    assert "language" in unconfirmed[c.id]

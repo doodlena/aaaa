@@ -1,6 +1,6 @@
 import { screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import type { ResourceDetail } from '../api/types';
 import i18n from '../i18n';
 import { ResourcePage } from '../pages/ResourcePage';
@@ -63,6 +63,18 @@ function detail(overrides: Partial<ResourceDetail> = {}): ResourceDetail {
 }
 
 describe('Resource detail', () => {
+  it('Directions opens Apple Maps on Apple devices', async () => {
+    const ua = vi.spyOn(navigator, 'userAgent', 'get').mockReturnValue('Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)');
+    try {
+      mockFetch([{ path: '/api/resources/5', body: detail() }, { path: '/api/resources/5/visit-plan', body: { checklist: [], suggestions: [], next_windows: [] } }]);
+      renderApp(<ResourcePage />, { route: '/resource/5', path: '/resource/:id' });
+      expect(await screen.findByTestId('directions')).toHaveAttribute('href', expect.stringContaining('maps.apple.com'));
+      expect(screen.getByRole('link', { name: 'Google Maps' })).toBeInTheDocument();
+    } finally {
+      ua.mockRestore();
+    }
+  });
+
   it('renders unknown eligibility as "Not confirmed", never as not required', async () => {
     mockFetch([{ path: '/api/resources/5', body: detail() }, { path: '/api/resources/5/visit-plan', body: { checklist: [], suggestions: [], next_windows: [] } }]);
     renderApp(<ResourcePage />, { route: '/resource/5', path: '/resource/:id' });
@@ -81,9 +93,11 @@ describe('Resource detail', () => {
   it('shows directions, sources, unknown website, caveats, schedule rules and the test-data badge', async () => {
     mockFetch([{ path: '/api/resources/5', body: detail() }, { path: '/api/resources/5/visit-plan', body: { checklist: [], suggestions: [], next_windows: [] } }]);
     renderApp(<ResourcePage />, { route: '/resource/5', path: '/resource/:id' });
-    const osm = await screen.findByTestId('directions-osm');
-    expect(osm).toHaveAttribute('href', expect.stringContaining('openstreetmap.org/directions'));
+    // Not an Apple device in the test browser: Directions opens Google Maps; Apple Maps and OpenStreetMap stay one tap away
+    const dir = await screen.findByTestId('directions');
+    expect(dir).toHaveAttribute('href', expect.stringContaining('google.com/maps/dir'));
     expect(screen.getByRole('link', { name: 'Apple Maps' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'OpenStreetMap' })).toHaveAttribute('href', expect.stringContaining('openstreetmap.org/directions'));
     expect(screen.getAllByText('Official website not known').length).toBeGreaterThan(0);
     expect(screen.getByRole('link', { name: /Synthetic fixtures/ })).toHaveAttribute('href', 'https://example.org/syn');
     expect(screen.getByText('Food selection may vary.')).toBeInTheDocument();

@@ -195,6 +195,7 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
     return { type, state, details };
   });
   const allUnknown = eligRows.every((e) => e.state === 'unknown');
+  const maps = mapsApp(r.directions);
   const serviceName = (sid: number | null) => {
     const s = r.services.find((x) => x.id === sid);
     return s ? t(`serviceType.${s.service_type}`) : '';
@@ -222,10 +223,10 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
         <div className="detail__actions">
           {r.directions ? (
             <>
-              <a className="btn btn--primary" href={r.directions.osm} target="_blank" rel="noopener noreferrer" data-testid="directions-osm">
+              <a className="btn btn--primary" href={maps.drive} target="_blank" rel="noopener noreferrer" data-testid="directions">
                 <Icon name="route" />
                 {t('detail.directions')}
-                <span className="visually-hidden"> ({t('detail.opensOsm')})</span>
+                <span className="visually-hidden"> ({t('detail.opensApp', { app: maps.name })})</span>
               </a>
             </>
           ) : (
@@ -244,12 +245,12 @@ export function ResourceDetailBody({ r, level = 1 }: { r: ResourceDetail; level?
         {r.directions && (
           <p className="detail__alt-directions">
             {t('detail.otherMaps')}{' '}
-            <a href={r.directions.apple} target="_blank" rel="noopener noreferrer">
-              Apple Maps
+            <a href={maps.apple ? r.directions.google : r.directions.apple} target="_blank" rel="noopener noreferrer">
+              {maps.apple ? 'Google Maps' : 'Apple Maps'}
             </a>{' '}
             ·{' '}
-            <a href={r.directions.google} target="_blank" rel="noopener noreferrer">
-              Google Maps
+            <a href={r.directions.osm} target="_blank" rel="noopener noreferrer">
+              OpenStreetMap
             </a>
           </p>
         )}
@@ -648,12 +649,22 @@ export function ResourceDetailView({ id, headingLevel = 1 }: { id: number; headi
   return <ResourceDetailBody r={data} level={headingLevel} />;
 }
 
+/** Apple devices open Apple Maps (the built-in app); everything else opens Google Maps. */
+function mapsApp(d: ResourceDetail['directions']) {
+  const apple = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+  if (!d) return { apple, name: '', drive: '', transit: '', walk: '' };
+  return apple
+    ? { apple, name: 'Apple Maps', drive: d.apple, transit: d.apple_transit || d.apple, walk: d.apple_walk || d.apple }
+    : { apple, name: 'Google Maps', drive: d.google, transit: d.google_transit || d.google, walk: d.google_walk || d.google };
+}
+
 /** "Getting there": transit / walking / driving directions, nearest Metro or VRE, nearby bus stops, ride programs. */
 function GettingThereSection({ r }: { r: ResourceDetail }) {
   const { t } = useTranslation();
   const d = r.directions;
   const g = r.getting_there;
   if (!d) return null;
+  const maps = mapsApp(d);
   const mi = (km: number) => (km * 0.621371).toFixed(1);
   return (
     <section className="getting-there" aria-labelledby={`gt-${r.id}`}>
@@ -661,17 +672,13 @@ function GettingThereSection({ r }: { r: ResourceDetail }) {
         <Icon name="bus" size={18} /> {t('transit.title')}
       </h2>
       <div className="getting-there__modes">
-        {d.google_transit && (
-          <a className="btn btn--secondary btn--sm" href={d.google_transit} target="_blank" rel="noopener noreferrer">
-            <Icon name="bus" size={16} /> {t('transit.byTransit')}
-          </a>
-        )}
-        {(d.osm_walk || d.google_walk) && (
-          <a className="btn btn--secondary btn--sm" href={d.osm_walk || d.google_walk} target="_blank" rel="noopener noreferrer">
-            <Icon name="route" size={16} /> {t('transit.walking')}
-          </a>
-        )}
-        <a className="btn btn--secondary btn--sm" href={d.osm} target="_blank" rel="noopener noreferrer">
+        <a className="btn btn--secondary btn--sm" href={maps.transit} target="_blank" rel="noopener noreferrer">
+          <Icon name="bus" size={16} /> {t('transit.byTransit')}
+        </a>
+        <a className="btn btn--secondary btn--sm" href={maps.walk} target="_blank" rel="noopener noreferrer">
+          <Icon name="route" size={16} /> {t('transit.walking')}
+        </a>
+        <a className="btn btn--secondary btn--sm" href={maps.drive} target="_blank" rel="noopener noreferrer">
           <Icon name="pin" size={16} /> {t('transit.driving')}
         </a>
       </div>

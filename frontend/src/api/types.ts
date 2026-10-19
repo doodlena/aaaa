@@ -35,7 +35,9 @@ export type MatchReason =
   | { code: 'upcoming'; date: string }
   | { code: 'eligibility_confirmed'; value: string }
   | { code: 'on_shelf_today'; value: string }
-  | { code: 'open_today_by_pantry' };
+  | { code: 'open_today_by_pantry' }
+  | { code: 'wheelchair_confirmed' }
+  | { code: 'language'; value: string };
 
 // ---------- Live updates from providers (pantry posts) ----------
 export type LiveStatus = 'open' | 'limited' | 'out' | 'closed';
@@ -195,7 +197,7 @@ export interface ResourceDetail extends ResourceSummary {
   translations: Record<string, Translation>;
   directions: {
     osm: string; apple: string; google: string; geo: string;
-    osm_walk?: string; apple_transit?: string; google_transit?: string; google_walk?: string;
+    osm_walk?: string; apple_transit?: string; apple_walk?: string; google_transit?: string; google_walk?: string;
   } | null;
   getting_there?: GettingThere | null;
 }

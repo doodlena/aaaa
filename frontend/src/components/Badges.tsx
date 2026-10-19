@@ -110,6 +110,14 @@ export function WarningList({ warnings }: { warnings: string[] }) {
   );
 }
 
+function languageName(code: string, lang: string): string {
+  try {
+    return new Intl.DisplayNames([lang], { type: 'language' }).of(code) || code;
+  } catch {
+    return code;
+  }
+}
+
 export function matchReasonText(r: MatchReason, t: (k: string, o?: Record<string, unknown>) => string, lang: string): string {
   switch (r.code) {
     case 'distance':
@@ -128,6 +136,10 @@ export function matchReasonText(r: MatchReason, t: (k: string, o?: Record<string
       return t('matchReason.on_shelf_today', { value: t(`foodGroup.${r.value}`) });
     case 'open_today_by_pantry':
       return t('matchReason.open_today_by_pantry');
+    case 'wheelchair_confirmed':
+      return t('matchReason.wheelchair_confirmed');
+    case 'language':
+      return t('matchReason.language', { value: languageName(r.value, lang) });
     default:
       return '';
   }
