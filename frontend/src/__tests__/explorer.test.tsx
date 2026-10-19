@@ -27,6 +27,19 @@ describe('ExplorerPage', () => {
     expect(await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' })).toBeInTheDocument();
   });
 
+  it('on a phone the search options start folded so the results are on screen', async () => {
+    const original = window.matchMedia;
+    window.matchMedia = ((query: string) => ({ ...original(query), matches: query.includes('max-width') })) as typeof window.matchMedia;
+    try {
+      mockFetch([{ path: '/api/resources/search', body: searchResponse({ items: [summary()] }) }]);
+      renderApp(<ExplorerPage />, { route: '/find', path: '/find' });
+      await screen.findByRole('link', { name: '[TEST] Maple Community Pantry' });
+      expect(screen.getByRole('button', { name: 'Show search options' })).toHaveAttribute('aria-expanded', 'false');
+    } finally {
+      window.matchMedia = original;
+    }
+  });
+
   it('search options can be folded away to give the list and map more room, and the choice is remembered', async () => {
     mockFetch([{ path: '/api/resources/search', body: searchResponse({ items: [summary()] }) }]);
     const first = renderApp(<ExplorerPage />, { route: '/find?lat=38.86&lon=-77.099&label=ZIP%2022204', path: '/find' });

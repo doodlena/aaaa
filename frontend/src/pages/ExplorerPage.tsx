@@ -76,10 +76,14 @@ export default function ExplorerPage() {
   const [mobileView, setMobileView] = useState<'list' | 'map'>('list');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [barOpen, setBarOpen] = useState(() => {
+    // On phones the search options are taller than the screen and would hide the results, so they start folded
+    // until the visitor chooses; a saved choice wins everywhere.
+    const phone = typeof window !== 'undefined' && !!window.matchMedia?.('(max-width: 899px)').matches;
     try {
-      return localStorage.getItem(BAR_KEY) !== '0';
+      const saved = localStorage.getItem(BAR_KEY);
+      return saved === null ? !phone : saved !== '0';
     } catch {
-      return true;
+      return !phone;
     }
   });
   const filtersBtnRef = useRef<HTMLButtonElement>(null);
