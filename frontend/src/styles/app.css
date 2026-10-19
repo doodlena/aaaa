@@ -4119,3 +4119,10 @@ form.is-ai-drafted select {
 .who-for__label {
   font-weight: 700;
 }
+
+.status__slow {
+  display: block;
+  margin-top: var(--sp-2);
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}

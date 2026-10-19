@@ -1,13 +1,25 @@
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ApiError } from '../api/client';
 import { Icon } from './Icon';
 
+/** After this long, explain the wait: the API sleeps when idle and takes a while to wake. */
+export const SLOW_AFTER_MS = 6000;
+
 export function Loading({ label }: { label?: string }) {
   const { t } = useTranslation();
+  const [slow, setSlow] = useState(false);
+  useEffect(() => {
+    const id = setTimeout(() => setSlow(true), SLOW_AFTER_MS);
+    return () => clearTimeout(id);
+  }, []);
   return (
     <div className="status status--loading" role="status" aria-live="polite">
       <span className="spinner" aria-hidden="true" />
-      <span>{label || t('common.loading')}</span>
+      <span>
+        {label || t('common.loading')}
+        {slow && <span className="status__slow">{t('common.wakingUp')}</span>}
+      </span>
     </div>
   );
 }

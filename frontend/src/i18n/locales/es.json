@@ -66,6 +66,7 @@
   },
   "common": {
     "loading": "Cargando…",
+    "wakingUp": "El servidor se está activando. La primera búsqueda después de un rato sin uso puede tardar hasta un minuto.",
     "retry": "Intentar de nuevo",
     "close": "Cerrar",
     "notConfirmed": "No confirmado",
@@ -76,6 +77,7 @@
   },
   "errors": {
     "network": "No pudimos conectarnos. Revise su conexión a internet e intente de nuevo.",
+    "timeout": "El servidor tardó demasiado en responder. Puede que aún se esté activando; inténtelo de nuevo.",
     "unauthorized": "Inicie sesión para continuar.",
     "forbidden": "Su cuenta no tiene acceso a esta página.",
     "notFound": "No encontramos este lugar. Es posible que se haya eliminado o que ya no esté publicado.",

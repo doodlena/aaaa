@@ -40,6 +40,10 @@ import type { DuplicateAIOpinion,
 
 export const API_BASE: string = (import.meta.env.VITE_API_BASE as string | undefined)?.replace(/\/$/, '') || '/api';
 
+/** The API sleeps when idle (Render free plan) and can take about a minute to wake; past this, show an error and a retry. */
+export const REQUEST_TIMEOUT_MS = 90_000;
+const TIMEOUT = 'timeout';
+
 export class ApiError extends Error {
   status: number;
   detail: string;
@@ -50,6 +54,7 @@ export class ApiError extends Error {
   }
   /** i18n key describing the failure for the UI. */
   get i18nKey(): string {
+    if (this.status === 0 && this.detail === TIMEOUT) return 'errors.timeout';
     if (this.status === 0) return 'errors.network';
     if (this.status === 401) return 'errors.unauthorized';
     if (this.status === 403) return 'errors.forbidden';
@@ -76,6 +81,16 @@ export async function request<T>(method: Method, path: string, body?: unknown, s
     const csrf = readCookie('nfa_csrf');
     if (csrf) headers['X-CSRF-Token'] = csrf;
   }
+  // Our own controller: aborts when the caller's signal does, or when the request takes too long.
+  const ctrl = new AbortController();
+  let timedOut = false;
+  const onAbort = () => ctrl.abort();
+  if (signal?.aborted) ctrl.abort();
+  signal?.addEventListener('abort', onAbort);
+  const timer = setTimeout(() => {
+    timedOut = true;
+    ctrl.abort();
+  }, REQUEST_TIMEOUT_MS);
   let res: Response;
   try {
     res = await fetch(`${API_BASE}${path}`, {
@@ -83,11 +98,15 @@ export async function request<T>(method: Method, path: string, body?: unknown, s
       headers,
       body: body === undefined ? undefined : JSON.stringify(body),
       credentials: 'same-origin',
-      signal,
+      signal: ctrl.signal,
     });
   } catch (e) {
+    if (timedOut) throw new ApiError(0, TIMEOUT);
     if ((e as Error)?.name === 'AbortError') throw e;
     throw new ApiError(0, 'Network error');
+  } finally {
+    clearTimeout(timer);
+    signal?.removeEventListener('abort', onAbort);
   }
   if (res.status === 204) return undefined as T;
   let data: unknown = null;

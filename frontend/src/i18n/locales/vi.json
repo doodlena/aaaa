@@ -66,6 +66,7 @@
   },
   "common": {
     "loading": "Đang tải…",
+    "wakingUp": "Máy chủ đang khởi động. Lần tìm kiếm đầu tiên sau một thời gian không dùng có thể mất đến một phút.",
     "retry": "Thử lại",
     "close": "Đóng",
     "notConfirmed": "Chưa xác nhận",
@@ -76,6 +77,7 @@
   },
   "errors": {
     "network": "Chúng tôi không kết nối được. Hãy kiểm tra kết nối internet rồi thử lại.",
+    "timeout": "Máy chủ phản hồi quá lâu. Có thể máy chủ vẫn đang khởi động; vui lòng thử lại.",
     "unauthorized": "Vui lòng đăng nhập để tiếp tục.",
     "forbidden": "Tài khoản của bạn không có quyền truy cập trang này.",
     "notFound": "Chúng tôi không tìm thấy mục này. Có thể mục đã bị gỡ hoặc không còn được đăng.",

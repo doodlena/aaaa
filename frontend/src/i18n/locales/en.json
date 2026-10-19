@@ -66,6 +66,7 @@
   },
   "common": {
     "loading": "Loading…",
+    "wakingUp": "The server is waking up. The first search after a quiet spell can take up to a minute.",
     "retry": "Try again",
     "close": "Close",
     "notConfirmed": "Not confirmed",
@@ -76,6 +77,7 @@
   },
   "errors": {
     "network": "We could not connect. Check your internet connection and try again.",
+    "timeout": "The server took too long to answer. It may still be waking up; please try again.",
     "unauthorized": "Please sign in to continue.",
     "forbidden": "Your account does not have access to this page.",
     "notFound": "We could not find this listing. It may have been removed or is no longer published.",
